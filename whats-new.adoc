@@ -48,7 +48,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 NetApp はKeystone を*ストレージ* メニューに移動しました。ここで、 NetApp Keystone のサブスクリプションを管理し、使用状況を表示できます。
 
-image:https://docs.netapp.com/us-en/console-setup-admin/screenshot-storage-menu.png["ストレージ メニューのスクリーンショット。"]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-menu.png["ストレージ メニューのスクリーンショット。"]
 
 
 
