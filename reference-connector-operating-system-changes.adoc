@@ -1,0 +1,168 @@
+---
+sidebar: sidebar 
+permalink: reference-connector-operating-system-changes.html 
+keywords: connector, operating systems, connector operating systems, os support, supported operating systems, rhel 8, rhel 9, red hat, docker, podman, agent 
+summary: NetApp は、特定の Linux オペレーティング システム上のコンソール エージェントのサポートを追加または削除することがあります。このサポートが既存のコンソール エージェントにどのように影響するかを確認してください。 
+---
+= サポートされている Linux オペレーティング システムの変更
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp は、特定の Linux オペレーティング システム上のコンソール エージェントのサポートを追加または削除することがあります。このサポートが既存のコンソール エージェントにどのように影響するかを確認してください。
+
+
+
+== サポートされているオペレーティングシステム
+
+NetApp は、次の Linux オペレーティング システムでエージェントをサポートしています。
+
+[role="tabbed-block"]
+====
+.標準モード
+--
+手動インストール::
++
+--
+* Ubuntu 24.04 LTS
+* Ubuntu 22.04 LTS
+* Red Hat Enterprise Linux
++
+** 8.6～8.10
+** 9.1～9.4
+
+
+
+
+--
+NetAppコンソールからの導入:: Ubuntu 22.04 LTS
+AWS Marketplaceからのデプロイメント:: Ubuntu 22.04 LTS
+Azure Marketplace からのデプロイ:: Ubuntu 22.04 LTS
+
+
+--
+.制限モード
+--
+手動インストール::
++
+--
+* Ubuntu 24.04 LTS
+* Ubuntu 22.04 LTS
+* Red Hat Enterprise Linux
++
+** 8.6～8.10
+** 9.1～9.4
+
+
+
+
+--
+AWS Marketplaceからのデプロイメント:: Ubuntu 22.04 LTS
+Azure Marketplace からのデプロイ:: Ubuntu 22.04 LTS
+
+
+--
+.プライベートモード
+--
+手動インストール::
++
+--
+* Ubuntu 22.04 LTS
+* Red Hat Enterprise Linux
++
+** 8.6～8.10
+** 9.1～9.4
+
+
+
+
+--
+
+
+--
+====
+
+
+== RHEL 8および9のサポート
+
+RHEL 8 および 9 のサポートについては、次の点に注意してください。
+
+制限事項:: NetApp Data Classification は、オンプレミスにある RHEL 8 または 9 ホストにエージェントをインストールする場合にサポートされます。  RHEL 8 または 9 ホストが AWS、Azure、または Google Cloud に存在する場合はサポートされません。
+コンテナオーケストレーションツール:: RHEL 8 または 9 ホストにコンソール エージェントをインストールする場合は、コンテナ オーケストレーション ツールとして Podman ツールを使用する必要があります。  Docker Engine は RHEL 8 および 9 ではサポートされていません。
+展開モード:: コンソールを標準モードおよび制限モードで使用する場合、RHEL 8 および 9 がサポートされます。
+サポートされているコンソールエージェントのバージョン:: NetApp は、コンソール エージェントの次のバージョンから RHEL 8 および 9 をサポートしています。
++
+--
+* 3.9.40 コンソールを標準モードまたは制限モードで使用する場合
+
+
+--
+新規手動インストールのみ:: RHEL 8 および 9 は、オンプレミスまたはクラウドで実行されているホストにエージェントを手動でインストールする場合、_新しい_エージェントのインストールでサポートされます。
+RHELアップグレード:: RHEL 7 ホストで既存のエージェントが実行されている場合、 NetApp はRHEL 7 オペレーティング システムを RHEL 8 または 9 にアップグレードすることをサポートしません。<<rhel-7-agent,RHEL 7 または CentOS 7 の既存のコンソールエージェントの詳細>> 。
+
+
+
+
+== RHEL 7およびCentOS 7のサポート終了
+
+2024 年 6 月 30 日に、RHEL 7 はメンテナンス終了 (EOM) に達し、CentOS 7 はサポート終了 (EOL) に達しました。  NetApp は、2024 年 6 月 30 日にこれらの Linux ディストリビューション上のエージェントのサポートを終了しました。
+
+https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-end-of-maintenance["Red Hat: Red Hat Enterprise Linux 7 のメンテナンス終了について知っておくべきこと"^]
+
+
+
+=== RHEL 7 または CentOS 7 上の既存のコンソールエージェント
+
+RHEL 7 または CentOS 7 で既存のエージェントが実行されている場合、 NetApp はオペレーティング システムを RHEL 8 または 9 にアップグレードまたは変換することをサポートしていません。サポートされているオペレーティング システムで新しいエージェントを作成する必要があります。
+
+. RHEL 8 または 9 ホストをセットアップします。
+. Podman をインストールします。
+. 新しいエージェントをインストールします。
+. 以前のエージェントが管理していたシステムを検出するようにエージェントを構成します。
+
+
+
+
+== 関連情報
+
+
+
+=== RHEL 8と9を使い始める方法
+
+ホスト要件、Podman 要件、および Podman と Cagent をインストールする手順の詳細については、次のページを参照してください。
+
+[role="tabbed-block"]
+====
+.標準モード
+--
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["オンプレミスでコンソールエージェントをインストールしてセットアップする"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-manual.html["AWSにコンソールエージェントを手動でインストールする"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-manual.html["Azure にコンソール エージェントを手動でインストールする"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-google-manual.html["Google Cloud にコンソール エージェントを手動でインストールする"]
+
+
+--
+.制限モード
+--
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.html["制限モードでの展開の準備"]
+
+--
+====
+
+
+=== システムを再発見する方法
+
+新しいコンソール エージェントを展開した後、システムを再検出するには、次のページを参照してください。
+
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-adding-systems.html["既存のCloud Volumes ONTAPシステムを追加する"^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAPクラスタの検出"^]
+* https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html["FSx for ONTAPシステムを作成または検出する"^]
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-create-working-env.html["Azure NetApp Filesシステムを作成する"^]
+* https://docs.netapp.com/us-en/bluexp-e-series/task-discover-e-series.html["Eシリーズシステムの詳細"^]
+* https://docs.netapp.com/us-en/bluexp-storagegrid/task-discover-storagegrid.html["StorageGRIDシステムの詳細"^]
+

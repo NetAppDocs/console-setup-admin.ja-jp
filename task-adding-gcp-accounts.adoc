@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: task-adding-gcp-accounts.html 
+keywords: permissions, gcp, marketplace, gcp subscription, subscription, gcp marketplace, subscribe, data tiering, tiering, setup, requirements, account for data tiering, account for tiering, interoperable, interoperability, interoperable storage access keys, access keys, bluexp 
+summary: マーケットプレイス サブスクリプションを関連付け、サブスクリプション プロセスをトラブルシューティングすることで、コンソール エージェント VM インスタンスに関連付けられている Google Cloud 認証情報を管理できます。これら両方のタスクにより、マーケットプレイスのサブスクリプションを使用してデータ サービスの支払いができるようになります。 
+---
+= NetAppコンソールの Google Cloud 認証情報とサブスクリプションを管理する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+マーケットプレイス サブスクリプションを関連付け、サブスクリプション プロセスをトラブルシューティングすることで、コンソール エージェント VM インスタンスに関連付けられている Google Cloud 認証情報を管理できます。これら両方のタスクにより、マーケットプレイスのサブスクリプションを使用してデータ サービスの支払いができるようになります。
+
+
+
+== Marketplace サブスクリプションを Google Cloud 認証情報に関連付ける
+
+Google Cloud にコンソール エージェントをデプロイすると、コンソールによって、コンソール エージェント VM インスタンスに関連付けられたデフォルトの認証情報セットが作成されます。これらの認証情報に関連付けられている Google Cloud Marketplace サブスクリプションはいつでも変更できます。このサブスクリプションを使用すると、従量課金制のCloud Volumes ONTAPシステムを作成し、他のデータ サービスを使用できるようになります。
+
+現在のマーケットプレイス サブスクリプションを新しいサブスクリプションに置き換えると、既存のCloud Volumes ONTAPシステムとすべての新しいシステムのマーケットプレイス サブスクリプションが変更されます。
+
+.手順
+. *管理 > *資格情報*を選択します。
+. *組織の資格情報*を選択します。
+. コンソール エージェントに関連付けられている資格情報のセットのアクション メニューを選択し、[*サブスクリプションの構成*] を選択します。  +新しいスクリーンショットが必要です (TS)image:screenshot_gcp_add_subscription.png["既存の資格情報セットのアクション メニューのスクリーンショット。"]
+. 選択した認証情報を使用して既存のサブスクリプションを構成するには、ドロップダウン リストから Google Cloud プロジェクトとサブスクリプションを選択し、[構成] を選択します。
++
+image:screenshot_gcp_associate.gif["Google Cloud 認証情報用に選択された Google Cloud プロジェクトとサブスクリプションのスクリーンショット。"]
+
+. まだサブスクリプションをお持ちでない場合は、[サブスクリプションを追加] > [続行] を選択し、Google Cloud Marketplace の手順に従います。
++
+
+NOTE: 次の手順を完了する前に、Google Cloud アカウントの課金管理者権限とNetAppコンソールのログイン権限の両方があることを確認してください。
+
++
+.. リダイレクトされたら https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace のNetApp Intelligent Services ページ"^]上部のナビゲーション メニューで正しいプロジェクトが選択されていることを確認します。
++
+image:screenshot_gcp_cvo_marketplace.png["Google Cloud のCloud Volumes ONTAPマーケットプレイス ページのスクリーンショット。"]
+
+.. *購読*を選択します。
+.. 適切な請求先アカウントを選択し、利用規約に同意します。
+.. *購読*を選択します。
++
+この手順により、転送リクエストがNetAppに送信されます。
+
+.. ポップアップダイアログボックスで、* NetApp, Inc.に登録*を選択します。
++
+Google Cloud サブスクリプションをコンソールの組織またはアカウントにリンクするには、この手順を完了する必要があります。このページからリダイレクトされ、コンソールにサインインするまで、サブスクリプションをリンクするプロセスは完了しません。
+
++
+image:screenshot_gcp_marketplace_register.png["登録ポップアップのスクリーンショット。"]
+
+.. *サブスクリプションの割り当て* ページの手順を完了します。
++
+
+NOTE: 組織内の誰かが既に請求先アカウントからマーケットプレイスサブスクリプションを利用している場合は、次のページにリダイレクトされます。 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetAppコンソール内のCloud Volumes ONTAPページ"^]その代わり。予期しない事態が発生した場合は、 NetAppの営業チームにお問い合わせください。  Google では、Google 請求先アカウントごとに 1 つのサブスクリプションのみ有効になります。
+
++
+*** このサブスクリプションを関連付けるコンソール組織またはアカウントを選択します。
+*** *既存のサブスクリプションを置き換える* フィールドで、1 つの組織またはアカウントの既存のサブスクリプションをこの新しいサブスクリプションに自動的に置き換えるかどうかを選択します。
++
+コンソールは、組織またはアカウント内のすべての資格情報の既存のサブスクリプションをこの新しいサブスクリプションに置き換えます。資格情報のセットがサブスクリプションに関連付けられたことがない場合、この新しいサブスクリプションはそれらの資格情報に関連付けられません。
+
++
+他のすべての組織またはアカウントについては、これらの手順を繰り返して、サブスクリプションを手動で関連付ける必要があります。
+
+*** *保存*を選択します。
++
+次のビデオでは、Google Cloud Marketplace からサブスクライブする手順を示します。
+
++
+.Google Cloud Marketplace から登録する
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
+
+
+.. このプロセスが完了したら、コンソールの [資格情報] ページに戻り、この新しいサブスクリプションを選択します。
++
+image:screenshot_gcp_associate.gif["サブスクリプション割り当てページのスクリーンショット。"]
+
+
+
+
+
+
+
+== マーケットプレイスのサブスクリプションプロセスのトラブルシューティング
+
+Google Cloud Marketplace を通じてNetAppデータ サービスにサブスクライブすると、権限が間違っていたり、誤ってコンソールへのリダイレクトに従わなかったりしたために、断片化されることがあります。このような場合は、次の手順に従ってサブスクリプション プロセスを完了してください。
+
+.手順
+. に移動 https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace のNetAppページ"^]注文の状態を確認します。ページに「*プロバイダーで管理*」と表示されている場合は、下にスクロールして「*注文の管理*」を選択します。
++
+image:screenshot_gcp_manage_orders.png["サブスクリプション後のマーケットプレイス ページのスクリーンショット。"]
+
++
+** 注文に緑色のチェックマークが表示され、これが予期しない場合は、同じ請求アカウントを使用している組織内の他のユーザーがすでにサブスクライブしている可能性があります。これが予期しないものである場合、またはこのサブスクリプションの詳細が必要な場合は、 NetApp の営業チームにお問い合わせください。
++
+image:screenshot_gcp_green_marketplace.png["承認された権限のスクリーンショット。"]
+
+** 注文に時計と「保留中」ステータスが表示されている場合は、マーケットプレイス ページに戻り、「プロバイダーで管理」を選択して、上記に記載されているプロセスを完了します。
++
+image:screenshot_gcp_pending_marketplace.png["保留中のマーケットプレイス権限のスクリーンショット。"]
+
+
+
+

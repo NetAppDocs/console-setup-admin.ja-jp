@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-federation-ping.html 
+keywords: PingFederate, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, X.509 certificate, Audience/Entity ID, Reply URL, organization admin 
+summary: 'PingFederate IdP プロバイダーと連携して、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。' 
+---
+= PingFederateでNetAppコンソールを連携
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+PingFederate IdP プロバイダーと連携して、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。
+
+.必要な役割
+フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+
+
+NOTE: 企業の IdP またはNetAppサポート サイトと連携できます。  NetApp、両方ではなく、どちらか一方を選択することを推奨しています。
+
+NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成する必要があります。次に、コンソールで ID プロバイダーの構成を使用する接続を作成できます。
+
+PingFederate とのフェデレーション接続を設定して、コンソールのシングル サインオン (SSO) を有効にすることができます。このプロセスでは、コンソールをサービス プロバイダーとして信頼するように PingFederate サーバーを構成し、コンソールで接続を作成します。
+
+.開始する前に
+* 管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。
+* フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。link:task-federation-verify-domain.html["NetAppコンソールでドメインを確認する"]トピック。
+
+
+.手順
+. *管理 > IDとアクセス*を選択します。
+. *Federation* ページを表示するには、*Federation* を選択します。
+. *新しいフェデレーションの構成*を選択します。
+. ドメインの詳細を入力してください:
++
+.. 検証済みドメインを使用するか、メールドメインを使用するかを選択します。電子メール ドメインは、ログインしているアカウントに関連付けられているドメインです。
+.. 構成するフェデレーションの名前を入力します。
+.. 検証済みのドメインを選択する場合は、リストからドメインを選択します。
+
+
+. *次へ*を選択します。
+. 接続方法として、*プロバイダー*を選択し、次に*PingFederate*を選択します。
+. *次へ*を選択します。
+. PingFederate サーバーを構成して、 NetApp をサービス プロバイダーとして信頼するようにします。この手順は PingFederate サーバーで実行する必要があります。
++
+.. PingFederate を構成してNetAppコンソールを信頼する場合は、次の値を使用します。
++
+*** *返信URL*または*アサーションコンシューマーサービス（ACS）URL*の場合は、 `https://netapp-cloud-account.auth0.com/login/callback`
+*** *ログアウトURL*には、 `https://netapp-cloud-account.auth0.com/logout`
+*** *オーディエンス/エンティティID*には、 `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>`ここで、<fed-domain-name-pingfederate> はフェデレーションのドメイン名です。たとえば、ドメインが `example.com`オーディエンス/エンティティIDは次のようになります。 `urn:auth0:netappcloud-account:fed-example-com-pingfederate` 。
+
+
+.. PingFederate サーバーの URL をコピーします。コンソールで接続を作成するときに、この URL が必要になります。
+.. PingFederate サーバーから X.509 証明書をダウンロードします。  Base64 でエンコードされた PEM 形式 (.pem、.crt、.cer) である必要があります。
+
+
+. コンソールに戻り、[次へ] を選択して接続を作成します。
+. PingFederateで接続を作成する
++
+.. 前の手順でコピーした PingFederate サーバーの URL を入力します。
+.. X.509 署名証明書をアップロードします。証明書は PEM、CER、または CRT 形式である必要があります。
+
+
+. *接続を作成*を選択します。システムは数秒で接続を作成します。
+. *次へ*を選択します。
+. 接続をテストするには、[*接続テスト*] を選択します。  IdP サーバーのログイン ページに移動します。  IdP 資格情報を使用してログインし、テストを完了してコンソールに戻り、接続を有効にします。
+. *次へ*を選択します。
+. *フェデレーションの有効化*ページでフェデレーションの詳細を確認し、*フェデレーションの有効化*を選択します。
+. プロセスを完了するには、[完了] を選択します。
+
+
+フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetAppコンソールにログインできるようになります。

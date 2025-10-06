@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: task-ontap-access-connector.html 
+keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-premises, roles, permissions, console agent, agent 
+summary: 管理者は、ユーザーにONTAP資格情報の入力を求めるようにNetAppコンソールを設定できます。 
+---
+= ONTAP Advanced View（ONTAP System Manager）のONTAP権限を適用する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+デフォルトでは、コンソール エージェントの認証情報により、ユーザーは詳細ビュー (ONTAP System Manager) にアクセスできます。代わりに、ユーザーにONTAP認証情報の入力を求めることもできます。これにより、ユーザーが Cloud Volumes ONTAPとONTAPオンプレミス クラスターの両方でONTAPクラスターを操作するときに、ユーザーのONTAP権限が確実に適用されます。
+
+
+NOTE: コンソール エージェントの設定を編集するには、組織管理者のロールが必要です。
+
+.手順
+. *管理 > エージェント*を選択します。
+. *概要*ページで、コンソール エージェントのアクション メニューを選択し、*エージェントの編集*を選択します。
++
+編集するには、コンソール エージェントがアクティブである必要があります。
+
+. *資格情報の強制*オプションを展開します。
+. *資格情報の強制*オプションを有効にするにはチェックボックスをオンにして、*保存*を選択します。
+. *資格情報の強制*オプションが有効になっていることを確認します。
++
+image:screenshot-force-credentials-on.png["資格情報の強制がオンになっていることを示すスクリーンショット"]
+
+

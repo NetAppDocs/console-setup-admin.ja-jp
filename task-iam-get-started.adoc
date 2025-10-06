@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task-iam-get-started.html 
+keywords: iam, quick start, get started, get started with iam, identity and access management 
+summary: NetAppコンソールで ID およびアクセス管理を開始するには、組織の階層をカスタマイズし、メンバーを追加し、リソースを追加または検出し、それらのリソースをプロジェクトに関連付けます。 
+---
+= NetAppコンソールでIDとアクセスを開始する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールにサインアップすると、新しい組織を作成するように求められます。組織には、メンバー 1 人 (組織管理者) とデフォルト プロジェクト 1 つが含まれます。ビジネス ニーズを満たすように ID およびアクセス管理 (IAM) を設定するには、組織の階層をカスタマイズし、メンバーを追加し、リソースを追加または検出し、それらのリソースを階層全体に関連付ける必要があります。
+
+組織全体の ID とアクセスを管理するには、*組織管理者* 権限が必要です。  *フォルダーまたはプロジェクトの管理者*権限を持っている場合は、権限を持つフォルダーとプロジェクトのみを管理できます。
+
+新しい組織を設定するには、次の手順に従ってください。順序は組織のニーズに応じて異なる場合があります。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]デフォルトのプロジェクトを編集するか、組織の階層に追加します
+[role="quick-margin-para"]
+デフォルトのプロジェクトを使用するか、ビジネス階層に一致する追加のプロジェクトとフォルダーを作成します。
+
+[role="quick-margin-para"]
+link:task-iam-manage-folders-projects.html["フォルダとプロジェクトを使ってリソースを整理する方法を学びます"] 。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]メンバーを組織に関連付ける
+[role="quick-margin-para"]
+ユーザー アカウントを組織にリンクし、権限を割り当てます。組織にサービス アカウントを追加することもできます。
+
+[role="quick-margin-para"]
+link:task-iam-manage-members-permissions.html["メンバーとその権限を管理する方法を学ぶ"] 。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"]リソースを追加または発見する
+[role="quick-margin-para"]
+コンソールにリソース (システム) を追加または検出します。組織のメンバーはプロジェクト内からシステムを管理します。
+
+[role="quick-margin-para"]
+リソースを作成または検出する方法を学びます。
+
+[role="quick-margin-list"]
+* https://docs.netapp.com/us-en/bluexp-fsx-ontap/index.html["Amazon FSx for NetApp ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/index.html["Azure NetApp Files"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-e-series/index.html["Eシリーズシステム"^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/index.html["オンプレミスのONTAPクラスタ"^]
+* https://docs.netapp.com/us-en/bluexp-storagegrid/index.html["StorageGRID"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"]リソースを追加プロジェクトに関連付ける
+[role="quick-margin-para"]
+コンソールでシステムを追加または検出すると、リソースが現在選択されているプロジェクトに自動的に関連付けられます。そのリソースを組織内の別のプロジェクトで使用できるようにするには、それぞれのプロジェクトに関連付けます。リソースの管理にコンソール エージェントを使用する場合は、コンソール エージェントをそれぞれのプロジェクトに関連付けます。
+
+[role="quick-margin-list"]
+* link:task-iam-manage-resources.html["組織のリソース階層を管理する方法を学ぶ"] 。
+* link:task-iam-associate-connectors.html["コンソールエージェントをフォルダまたはプロジェクトに関連付ける方法を学びます"] 。
+
+
+.関連情報
+* link:concept-identity-and-access-management.html["NetAppコンソールのアイデンティティとアクセス管理について学ぶ"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["IDとアクセスのためのAPIについて学ぶ"^]
+

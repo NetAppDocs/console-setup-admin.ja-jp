@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start-private-mode.html 
+keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp 
+summary: 'プライベート モードは通常、インターネット接続がなく、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 などの安全なクラウド リージョンがあるオンプレミス環境で使用されます。プライベート モードは、 NetAppコンソールではまだ利用できません。  NetApp は、 BlueXPレガシー インターフェースを使用してこれらの環境を引き続きサポートします。リンク:<doc link to PDF>' 
+---
+= 開始ワークフロー（BlueXPプライベートモード）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXPプライベート モード (レガシーBlueXPインターフェイス) は通常、インターネット接続がなく、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 などの安全なクラウド領域があるオンプレミス環境で使用されます。  NetApp は、従来のBlueXPインターフェースを使用してこれらの環境を引き続きサポートします。
+
+link:media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXPプライベートモードの PDF ドキュメント"^]
+
+
+
+== プライベートモードでサポートされる機能とデータサービス
+
+次の表は、どのBlueXPサービスと機能がプライベート モードでサポートされているかをすぐに識別するのに役立ちます。
+
+一部のサービスは制限付きでサポートされる場合がありますのでご了承ください。
+
+[cols="19,27,27"]
+|===
+| 製品分野 | BlueXPのサービスまたは機能 | プライベートモード 
+
+
+.10+| *作業環境* 表のこの部分には、 BlueXPキャンバスからの作業環境管理のサポートがリストされています。  BlueXP backup and recoveryでサポートされているバックアップ先は示されません。 | Amazon FSx for ONTAP | いいえ 
+
+
+| Amazon S3 | いいえ 
+
+
+| Azure ブロブ | いいえ 
+
+
+| Azure NetApp Files | いいえ 
+
+
+| Cloud Volumes ONTAP | はい 
+
+
+| Google Cloud NetApp Volumes | いいえ 
+
+
+| Google Cloud Storage | いいえ 
+
+
+| オンプレミスのONTAPクラスタ | はい 
+
+
+| Eシリーズ | いいえ 
+
+
+| StorageGRID | いいえ 
+
+
+.15+| *サービス* | アラート | いいえ 
+
+
+| バックアップとリカバリ | はいhttps://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] 
+
+
+| 分類 | はい 
+
+
+| コピーと同期 | いいえ 
+
+
+| デジタルアドバイザー | いいえ 
+
+
+| デジタルウォレット | はい 
+
+
+| ディザスタ リカバリ | いいえ 
+
+
+| 経済効率 | いいえ 
+
+
+| ランサムウェア対策 | いいえ 
+
+
+| レプリケーション | はい 
+
+
+| ソフトウェアアップデート | いいえ 
+
+
+| 持続可能性 | いいえ 
+
+
+| 階層化 | いいえ 
+
+
+| ボリュームキャッシュ | いいえ 
+
+
+| ワークロードファクトリー | いいえ 
+
+
+.8+| *特徴* | アイデンティティとアクセス管理 | はい 
+
+
+| Credentials | はい 
+
+
+| フェデレーション | いいえ 
+
+
+| 多要素認証 | いいえ 
+
+
+| NSSアカウント | いいえ 
+
+
+| 通知 | いいえ 
+
+
+| 検索 | いいえ 
+
+
+| スケジュール | はい 
+|===

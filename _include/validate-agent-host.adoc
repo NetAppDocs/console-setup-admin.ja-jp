@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+次のディレクトリにあるコンソール エージェント ホストから、JSON 形式の検証レポートと構成ログに直接アクセスすることもできます。
+
+[source, cli]
+----
+/tmp/netapp-console-agents/logs
+
+/tmp/netapp-console-agents/results.json
+
+----

@@ -1,0 +1,49 @@
+= コネクタ 3.9.53
+:allow-uri-read: 
+
+
+
+
+=== コネクタ 3.9.53
+
+BlueXPコネクタのこのリリースには、セキュリティの改善とバグ修正が含まれています。
+
+3.9.53 リリースは、標準モードと制限モードで利用できます。
+
+
+
+=== ディスク容量使用状況アラート
+
+通知センターに、コネクタのディスク領域の使用状況に関するアラートが含まれるようになりました。link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#monitor-disk-space["詳細情報"^]
+
+
+
+=== 監査の改善
+
+タイムラインに、ユーザーのログイン イベントとログアウト イベントが含まれるようになりました。ログインアクティビティがいつ行われたかを確認できるため、監査やセキュリティ監視に役立ちます。組織管理者のロールを持つAPIユーザーは、次の情報を含めることでログインしたユーザーのメールアドレスを表示できます。 `includeUserData=true``パラメータは次のようになります。 `/audit/<account_id>?includeUserData=true` 。
+
+
+
+=== BlueXPでKeystoneサブスクリプション管理が利用可能
+
+BlueXPからNetApp Keystoneサブスクリプションを管理できます。
+
+link:https://docs.netapp.com/us-en/keystone-staas/index.html["BlueXPでのKeystoneサブスクリプション管理について学習します。"^]
+
+
+
+=== BlueXPアイデンティティおよびアクセス管理 (IAM)
+
+
+
+==== 多要素認証（MFA）
+
+非フェデレーション ユーザーは、 BlueXPアカウントに対して MFA を有効にしてセキュリティを強化できます。管理者は、必要に応じてユーザーの MFA をリセットまたは無効化するなど、MFA 設定を管理できます。これは標準モードでのみサポートされます。
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#task-user-mfa["自分自身に多要素認証を設定する方法について説明します。"^] link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#manage-mfa["ユーザーに対する多要素認証の管理について学習します。"^]
+
+
+
+=== ワークロード
+
+BlueXPの認証情報ページからAmazon FSx for NetApp ONTAP の認証情報を表示および削除できるようになりました。

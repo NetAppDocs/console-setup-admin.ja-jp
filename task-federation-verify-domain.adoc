@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-federation-verify-domain.html 
+keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: フェデレーションには検証済みのドメインのみを使用できます。電子メール ドメインとは異なるドメインとフェデレーションを行う場合は、まずそのドメインを所有していることを確認する必要があります。フェデレーションには検証済みのドメインのみを使用できます。 
+---
+= フェデレーション接続のメールドメインを確認する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+電子メール ドメインとは異なるドメインとフェデレーションを行う場合は、まずそのドメインを所有していることを確認する必要があります。フェデレーションには検証済みのドメインのみを使用できます。
+
+.必要な役割
+フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+
+ドメインを確認するには、ドメインの DNS 設定に TXT レコードを追加する必要があります。このレコードは、ドメインを所有していることを証明するために使用され、 NetAppコンソールがフェデレーションのためにドメインを信頼できるようにします。この手順を完了するには、IT またはネットワーク管理者との調整が必要になる場合があります。
+
+.手順
+. *管理 > IDとアクセス*を選択します。
+. *Federation* ページを表示するには、*Federation* を選択します。
+. *新しいフェデレーションの構成*を選択します。
+. *ドメインの所有権を確認*を選択します。
+. 検証するドメインを入力し、「続行」を選択します。
+. 提供された TXT レコードをコピーします。
+. ドメインの DNS 設定に移動し、ドメインの TXT レコードとして提供された TXT 値を設定します。必要に応じて、IT 管理者またはネットワーク管理者と協力してください。
+. TXT レコードが追加されたら、コンソールに戻り、[*検証*] を選択します。
+

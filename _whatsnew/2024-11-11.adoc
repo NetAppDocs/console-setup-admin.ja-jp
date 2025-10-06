@@ -1,0 +1,19 @@
+= コネクタ 3.9.46
+:allow-uri-read: 
+
+
+
+
+=== コネクタ 3.9.46
+
+BlueXPコネクタのこのリリースには、マイナーなセキュリティの改善とバグ修正が含まれています。
+
+現時点では、3.9.46 リリースは標準モードと制限モードで利用できます。
+
+
+
+=== IAM プロジェクトの ID
+
+BlueXP ID およびアクセス管理からプロジェクトの ID を表示できるようになりました。  API 呼び出しを行うときに ID を使用する必要がある場合があります。
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-rename-organization.html#project-id["プロジェクトのIDを取得する方法を学ぶ"] 。

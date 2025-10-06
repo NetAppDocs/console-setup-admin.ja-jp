@@ -1,0 +1,74 @@
+= 
+:allow-uri-read: 
+
+
+専用ホスト:: エージェントは、他のアプリケーションと共有されているホストではサポートされません。ホストは専用ホストである必要があります。
+
+
+VPCとサブネット:: コンソール エージェントを作成するときは、そのエージェントが存在する VPC とサブネットを指定する必要があります。
+
+
+VNetとサブネット:: コンソール エージェントを作成するときは、そのエージェントが存在する VNet とサブネットを指定する必要があります。
+
+
+ターゲットネットワークへの接続:: コンソール エージェントには、システムを作成および管理する予定の場所へのネットワーク接続が必要です。たとえば、オンプレミス環境にCloud Volumes ONTAPシステムまたはストレージ システムを作成する予定のネットワークなどです。
+
+
+アウトバウンドインターネットアクセス:: コンソール エージェントを展開するネットワークの場所には、特定のエンドポイントに接続するための送信インターネット接続が必要です。
+
+
+NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetAppコンソールを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
++
+--
+link:reference-networking-saas-console.html["NetAppコンソールから接続されたエンドポイントのリストを表示します"] 。
+
+--
+
+
+Azureリージョン:: Cloud Volumes ONTAPを使用する場合、コンソールエージェントは、管理するCloud Volumes ONTAPシステムと同じAzureリージョン、または https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure リージョン ペア"^]Cloud Volumes ONTAPシステム用。この要件により、 Cloud Volumes ONTAPとそれに関連付けられたストレージ アカウント間で Azure Private Link 接続が使用されるようになります。
++
+--
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Cloud Volumes ONTAP がAzure Private Link を使用する方法を学ぶ"^]
+
+--
+
+
+ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
++
+--
+* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
+* アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
++
+Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するためのアウトバウンド インターネット接続がない場合、コンソールは、コンソール エージェントに含まれているプロキシ サーバーを使用するようにそれらのシステムを自動的に構成します。唯一の要件は、コンソール エージェントのセキュリティ グループがポート 3128 経由の受信接続を許可していることを確認することです。コンソール エージェントを展開した後、このポートを開く必要があります。
+
+
+
+--
+
+
+プロキシ サーバ:: NetApp は明示的プロキシ構成と透過的プロキシ構成の両方をサポートしています。透過プロキシを使用している場合は、プロキシ サーバーの証明書のみを提供する必要があります。明示的なプロキシを使用している場合は、IP アドレスと資格情報も必要になります。
++
+--
+* IPアドレス
+* Credentials
+* HTTPS証明書
+
+
+--
+
+
+AzureのパブリックIPアドレス:: Azure のコンソール エージェント VM でパブリック IP アドレスを使用する場合は、コンソールがこのパブリック IP アドレスを使用するように、IP アドレスで Basic SKU を使用する必要があります。
++
+--
+image:screenshot-azure-sku.png["SKU フィールドで Basic を選択できる、Azure で新しい IP アドレスを作成するスクリーンショット。"]
+
+代わりに標準 SKU IP アドレスを使用する場合、コンソールはパブリック IP ではなく、コンソール エージェントのプライベート IP アドレスを使用します。コンソールにアクセスするために使用しているマシンがそのプライベート IP アドレスにアクセスできない場合、コンソールからのアクションは失敗します。
+
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure ドキュメント: パブリック IP SKU"^]
+
+--
+
+
+NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+

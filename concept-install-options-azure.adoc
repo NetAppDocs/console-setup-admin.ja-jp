@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: concept-install-options-azure.html 
+keywords: install connector azure, azure install connector, connector azure, azure connector, installation options, azure marketplace, manual install 
+summary: Azure でコンソール エージェントを作成するには、いくつかの方法があります。  NetAppコンソールから直接行うのが最も一般的な方法です。 
+---
+= Azure のコンソール エージェントのインストール オプション
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Azure でコンソール エージェントを作成するには、いくつかの方法があります。  NetAppコンソールから直接行うのが最も一般的な方法です。
+
+次のインストール オプションが利用可能です。
+
+* link:task-install-connector-azure-bluexp.html["NetAppコンソールから直接コンソールエージェントを作成する"]（これが標準オプションです）
++
+このアクションにより、選択した VNet で Linux とコンソール エージェント ソフトウェアを実行する VM が起動します。
+
+* link:task-install-connector-azure-marketplace.html["Azure Marketplace からコンソール エージェントを作成する"]
++
+このアクションでは、Linux とコンソール エージェント ソフトウェアを実行する VM も起動しますが、展開はコンソールからではなく、Azure Marketplace から直接開始されます。
+
+* link:task-install-connector-azure-manual.html["自分のLinuxホストにソフトウェアをダウンロードして手動でインストールする"]
+
+
+選択したインストール オプションは、インストールの準備方法に影響します。これには、Azure でリソースを認証および管理するために必要なアクセス許可をコンソール エージェントに付与する方法が含まれます。

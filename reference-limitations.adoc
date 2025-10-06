@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, BlueXP, Cloud Volumes ONTAP, days, running, Connectors should remain running, imdsv2, https tokens, agents should remain running, Console agent 
+summary: 今回のリリースでサポートされていない、または今回のリリースでは正常に機能しないプラットフォーム、デバイス、機能が記載されています。これらの制限事項をよく確認してください。 
+---
+= NetAppコンソールの既知の制限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+今回のリリースでサポートされていない、または今回のリリースでは正常に機能しないプラットフォーム、デバイス、機能が記載されています。これらの制限事項をよく確認してください。
+
+これらの制限は、NEtApp コンソールと管理（エージェント、サービスとしてのソフトウェア (SaaS) プラットフォームなど）のセットアップに固有のものです。
+
+
+
+== コンソールエージェントの制限
+
+
+
+=== 172番台のIPアドレスとの競合の可能性
+
+NetAppコンソールは、172.17.0.0/16 および 172.18.0.0/16 の範囲の IP アドレスを持つ 2 つのインターフェースを持つエージェントを展開します。
+
+ネットワークにこれらのいずれかの範囲で構成されたサブネットがある場合、コンソールからの接続エラーが発生する可能性があります。たとえば、コンソールでオンプレミスのONTAPクラスターを検出できない場合があります。
+
+ナレッジベースの記事を参照link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Manager/Cloud_Manager_shows_inactive_as_Connector_IP_range_in_172.x.x.x_conflict_with_docker_network["エージェントIPが既存のネットワークと競合する"]エージェントのインターフェースの IP アドレスを変更する方法については、こちらをご覧ください。
+
+
+
+=== SSL復号化はサポートされていません
+
+コンソールは、SSL 復号化が有効になっているファイアウォール構成をサポートしていません。  SSL 復号化が有効になっている場合、コンソールにエラー メッセージが表示され、エージェント インスタンスは非アクティブとして表示されます。
+
+セキュリティを強化するために、link:task-installing-https-cert.html["証明機関（CA）によって署名されたHTTPS証明書をインストールする"] 。
+
+
+
+=== ローカルUIを読み込むときに空白ページが表示される
+
+エージェント上で実行されている Web ベースのコンソールをロードすると、インターフェイスが表示されず、空白のページが表示される場合があります。
+
+この問題はキャッシュの問題に関連しています。回避策としては、シークレット モードまたはプライベート Web ブラウザ セッションを使用します。
+
+
+
+=== 共有Linuxホストはサポートされていません
+
+エージェントは、他のアプリケーションと共有されている VM ではサポートされません。  VM はエージェント ソフトウェア専用にする必要があります。
+
+
+
+=== サードパーティのエージェントと拡張機能
+
+エージェント VM では、サードパーティ エージェントまたは VM 拡張機能はサポートされません。

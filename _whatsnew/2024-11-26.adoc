@@ -1,0 +1,39 @@
+= プライベートモードリリース（3.9.46）
+:allow-uri-read: 
+
+
+
+
+=== プライベートモードリリース（3.9.46）
+
+新しいプライベートモードリリースがダウンロード可能になりました。 https://mysupport.netapp.com/site/downloads["NetAppサポート サイト"^]
+
+3.9.46 リリースには、次のBlueXPコンポーネントとサービスの更新が含まれています。
+
+[cols="3*"]
+|===
+| コンポーネントまたはサービス | このリリースに含まれるバージョン | 前回のプライベートモードリリース以降の変更点 
+
+
+| コネクタ | 3.9.46 | マイナーなセキュリティの改善とバグ修正 
+
+
+| バックアップとリカバリ | 2024年11月22日 | に行く https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2024年11月のリリースに含まれる変更点を参照してください 
+
+
+| 分類 | 2024年11月4日（バージョン1.37） | に行く https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationページの新機能"^]1.32から1.37リリースに含まれる変更点を参照してください 
+
+
+| Cloud Volumes ONTAP管理 | 2024年11月11日 | に行く https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP管理ページの新機能"^]2024年10月と2024年11月のリリースに含まれる変更点を参照してください。 
+
+
+| オンプレミスのONTAPクラスタ管理 | 2024年11月26日 | に行く https://docs.netapp.com/us-en/bluexp-ontap-onprem/whats-new.html["オンプレミスのONTAPクラスタ管理ページの新機能"^]2024年11月のリリースに含まれる変更点を参照してください 
+|===
+BlueXP digital walletとBlueXP replicationもプライベート モードに含まれていますが、以前のプライベート モード リリースから変更はありません。
+
+プライベート モードの詳細（アップグレード方法を含む）については、以下を参照してください。
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["プライベートモードについて学ぶ"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["プライベートモードでBlueXPを始める方法を学ぶ"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["プライベートモード使用時にコネクタをアップグレードする方法を学びます"]
+

@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start-restricted-mode.html 
+keywords: quick start, restricted mode quick start, govcloud, government, aws gov, azure gov 
+summary: 環境を準備し、コンソール エージェントを展開して、制限モードでNetAppコンソールの使用を開始します。 
+---
+= 開始ワークフロー（制限モード）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+環境を準備し、コンソール エージェントを展開して、制限モードでNetAppコンソールの使用を開始します。
+
+制限モードは通常、AWS GovCloud および Azure Government リージョンでの展開を含む、州政府や地方自治体、規制対象企業によって使用されます。始める前に、以下の点を理解しておいてください。link:concept-connectors.html["コンソールエージェント"]そしてlink:concept-modes.html["展開モード"]。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] link:task-prepare-restricted-mode.html["展開の準備"]
+https://raw.githubusercontent.com/NetAppDocs/console-setup-admin-internal/blob/main/media/screenshot-canvas.png[]
+
+[role="quick-margin-list"]
+. CPU、RAM、ディスク容量、コンテナ オーケストレーション ツールなどの要件を満たす専用の Linux ホストを準備します。
+. ターゲット ネットワークへのアクセス、手動インストール用のアウトバウンド インターネット アクセス、および日常的なアクセス用のアウトバウンド インターネットを提供するネットワークをセットアップします。
+. クラウド プロバイダーで権限を設定し、展開後にそれらの権限をコンソール エージェント インスタンスに関連付けることができるようにします。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"] link:task-install-restricted-mode.html["コンソールエージェントを展開する"]
+[role="quick-margin-list"]
+. クラウド プロバイダーのマーケットプレイスからコンソール エージェントをインストールするか、独自の Linux ホストにソフトウェアを手動でインストールします。
+. Web ブラウザを開き、Linux ホストの IP アドレスを入力して、 NetAppコンソールを設定します。
+. 以前に設定した権限をコンソール エージェントに提供します。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"] link:task-subscribe-restricted-mode.html["NetApp Intelligent Services に加入する（オプション）"]
+[role="quick-margin-para"]
+オプション: クラウド プロバイダーのマーケットプレイスからNetApp Intelligent Services にサブスクライブして、時間単位の料金 (PAYGO) または年間契約でデータ サービスの料金を支払います。  NetAppインテリジェント サービスには、 NetAppバックアップおよびリカバリ、 Cloud Volumes ONTAP、 NetAppクラウド階層化、 NetAppランサムウェア回復力、 NetAppディザスタ リカバリが含まれます。  NetApp Data Classification は追加料金なしでサブスクリプションに含まれています。

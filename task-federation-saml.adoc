@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: task-federation-saml.html 
+keywords: federation, SAML protocol, SAML, federation services,  federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: 'SAML 2.0 IdP プロバイダーと連携して、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。' 
+---
+= SAML ID プロバイダとの連携
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SAML 2.0 IdP プロバイダーと連携して、NEtApp コンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。
+
+.必要な役割
+フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+
+
+NOTE: 企業の IdP またはNetAppサポート サイトと連携できます。両方と連携することはできません。
+
+NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成する必要があります。次に、コンソールで ID プロバイダーの構成を使用する接続を作成できます。
+
+SAML 2.0 プロバイダーとのフェデレーション接続を設定して、コンソールのシングル サインオン (SSO) を有効にすることができます。このプロセスでは、プロバイダーがNetApp をサービス プロバイダーとして信頼するように構成し、コンソールで接続を作成します。
+
+.開始する前に
+* 管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。
+* フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。link:task-federation-verify-domain.html["NetAppコンソールでドメインを確認する"]トピック。
+
+
+.手順
+. *管理 > IDとアクセス*を選択します。
+. *Federation* ページを表示するには、*Federation* を選択します。
+. *新しいフェデレーションの構成*を選択します。
+. ドメインの詳細を入力してください:
++
+.. 検証済みドメインを使用するか、メールドメインを使用するかを選択します。電子メール ドメインは、ログインしているアカウントに関連付けられているドメインです。
+.. 構成するフェデレーションの名前を入力します。
+.. 検証済みのドメインを選択する場合は、リストからドメインを選択します。
+
+
+. *次へ*を選択します。
+. 接続方法として、*プロトコル*を選択し、*SAML ID プロバイダー*を選択します。
+. *次へ*を選択します。
+. SAML ID プロバイダーを構成して、 NetApp をサービス プロバイダーとして信頼します。この手順は SAML プロバイダー サーバーで実行する必要があります。
++
+.. IdPに属性があることを確認する `email`ユーザーのメールアドレスに設定されます。これは、コンソールがユーザーを正しく識別するために必要です。
++
+[source, xml]
+----
+<saml:AttributeStatement xmlns:x500="urn:oasis:names:tc:SAML:2.0:profiles:attribute:X500" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <saml:Attribute Name="email" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName">
+        <saml:AttributeValue xsi:type="xs:string">email@domain.com</saml:AttributeValue>
+    </saml:Attribute>
+</saml:AttributeStatement>
+----
+.. SAML アプリケーションをコンソールに登録するときは、次の値を使用します。
++
+*** *返信URL*または*アサーションコンシューマーサービス（ACS）URL*の場合は、 `https://netapp-cloud-account.auth0.com/login/callback`
+*** *ログアウトURL*には、 `https://netapp-cloud-account.auth0.com/logout`
+*** *オーディエンス/エンティティID*には、 `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>`ここで、<fed-domain-name-saml> はフェデレーションに使用するドメイン名です。たとえば、ドメインが `example.com`オーディエンス/エンティティIDは次のようになります。 `urn:auth0:netapp-cloud-account:fed-example-com-samlp` 。
+
+
+.. 信頼を作成したら、SAML プロバイダー サーバーから次の値をコピーします。
++
+*** サインインURL
+*** サインアウトURL（オプション）
+
+
+.. SAML プロバイダー サーバーから X.509 証明書をダウンロードします。  PEM、CER、または CRT 形式である必要があります。
+
+
+. コンソールに戻り、[次へ] を選択して接続を作成します。
+. SAML を使用して接続を作成します。
++
+.. SAML サーバーの *サインイン URL* を入力します。
+.. SAML プロバイダー サーバーからダウンロードした X.509 証明書をアップロードします。
+.. 必要に応じて、SAML サーバーの *サインアウト URL* を入力します。
+
+
+. *接続を作成*を選択します。システムは数秒で接続を作成します。
+. *次へ*を選択します。
+. 接続をテストするには、[*接続テスト*] を選択します。  IdP サーバーのログイン ページに移動します。  IdP 資格情報を使用してログインし、テストを完了してコンソールに戻り、接続を有効にします。
+. *次へ*を選択します。
+. *フェデレーションの有効化*ページでフェデレーションの詳細を確認し、*フェデレーションの有効化*を選択します。
+. プロセスを完了するには、[完了] を選択します。
+
+
+フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetAppコンソールにログインできるようになります。

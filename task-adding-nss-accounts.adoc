@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: task-adding-nss-accounts.html 
+keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
+summary: Cloud Volumes ONTAPの主要なワークフローを有効にするには、 NetAppサポート サイト アカウントをNetAppコンソール組織に関連付けます。これらの NSS 認証情報は組織全体に関連付けられています。 
+---
+= NetAppコンソールに関連付けられたNSS資格情報を管理する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ストレージ管理の主要なワークフローを有効にするには、 NetAppサポート サイト アカウントをコンソール組織に関連付けます。これらの NSS 認証情報は組織全体に関連付けられています。
+
+コンソールでは、ユーザー アカウントごとに 1 つの NSS アカウントを関連付けることもサポートされています。link:task-manage-user-credentials.html["ユーザーレベルの資格情報を管理する方法を学ぶ"] 。
+
+
+
+== 概要
+
+次のタスクを有効にするには、 NetAppサポート サイトの資格情報を特定のコンソール アカウントのシリアル番号に関連付ける必要があります。
+
+* BYOL（個人ライセンス使用）時にCloud Volumes ONTAP を導入する
++
+コンソールがライセンス キーをアップロードし、購入した期間のサブスクリプションを有効にするには、NSS アカウントを提供する必要があります。これには、期間更新の自動更新が含まれます。
+
+* 従量課金制のCloud Volumes ONTAPシステムの登録
++
+システムのサポートを有効にし、 NetAppテクニカル サポート リソースにアクセスするには、NSS アカウントを提供する必要があります。
+
+* Cloud Volumes ONTAPソフトウェアを最新リリースにアップグレードする
+
+
+これらの資格情報は、特定のコンソール アカウントのシリアル番号に関連付けられています。ユーザーは、*サポート > NSS 管理* からこれらの資格情報にアクセスできます。
+
+
+
+== NSSアカウントを追加する
+
+コンソール内のサポート ダッシュボードから、コンソールで使用するNetAppサポート サイト アカウントを追加および管理できます。
+
+NSS アカウントを追加すると、コンソールはライセンスのダウンロード、ソフトウェア アップグレードの検証、将来のサポート登録などにこの情報を使用します。
+
+組織に複数の NSS アカウントを関連付けることはできますが、同じ組織内に顧客アカウントとパートナー アカウントを持つことはできません。
+
+
+NOTE: NetApp は、サポートとライセンスに固有の認証サービスの ID プロバイダーとして Microsoft Entra ID を使用します。
+
+.手順
+. *管理 > サポート* で。
+. *NSS管理*を選択します。
+. *NSS アカウントの追加*を選択します。
+. *続行*を選択すると、Microsoft ログイン ページにリダイレクトされます。
+. ログイン ページで、 NetAppサポート サイトに登録した電子メール アドレスとパスワードを入力します。
++
+ログインが成功すると、 NetApp はNSS ユーザー名を保存します。
+
++
+これは、メールにマッピングされるシステム生成の ID です。*NSS管理*ページでは、image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["3つの水平の点のアイコン"]メニュー。
+
++
+** ログイン認証トークンを更新する必要がある場合は、image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["3つの水平の点のアイコン"]メニュー。
++
+このオプションを使用すると、再度ログインするよう求められます。これらのアカウントのトークンは 90 日後に期限切れになることに注意してください。これを知らせる通知が投稿されます。
+
+
+
+
+
+.次の手順
+ユーザーは、新しいCloud Volumes ONTAPシステムを作成するとき、および既存のCloud Volumes ONTAPシステムを登録するときにアカウントを選択できるようになりました。
+
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS でCloud Volumes ONTAP を起動"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure でCloud Volumes ONTAP を起動する"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["Google Cloud でCloud Volumes ONTAP を起動"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html["従量課金制システムの登録"^]
+
+
+
+
+== NSSクレデンシャルの更新
+
+セキュリティ上の理由から、NSS 認証情報は 90 日ごとに更新する必要があります。 NSS 認証情報の有効期限が切れた場合は、コンソールの通知センターで通知されます。link:task-monitor-cm-operations.html#notification-center["通知センターについて学ぶ"^] 。
+
+資格情報の有効期限が切れると、次のような問題が発生する可能性があります (ただし、これらに限定されません)。
+
+* ライセンスが更新され、新しく購入した容量を利用できなくなります。
+* サポートケースを送信および追跡する機能。
+
+
+さらに、組織に関連付けられている NSS アカウントを変更する場合は、組織に関連付けられている NSS 資格情報を更新することもできます。たとえば、NSS アカウントに関連付けられている人物が退職した場合などです。
+
+.手順
+. *管理 > サポート* で。
+. *NSS管理*を選択します。
+. 更新したいNSSアカウントについては、image:icon-action.png["3つの点が並んだアイコン"]次に、[*資格情報の更新*]を選択します。
+. プロンプトが表示されたら、[続行] を選択して、Microsoft ログイン ページにリダイレクトします。
++
+NetApp は、サポートおよびライセンスに関連する認証サービスの ID プロバイダーとして Microsoft Entra ID を使用します。
+
+. ログイン ページで、 NetAppサポート サイトに登録した電子メール アドレスとパスワードを入力します。
+
+
+
+
+== システムを別のNSSアカウントに接続する
+
+組織に複数のNetAppサポート サイト アカウントがある場合は、 Cloud Volumes ONTAPシステムに関連付けるアカウントを変更できます。
+
+まずアカウントをコンソールに関連付ける必要があります。
+
+.手順
+. *管理 > サポート* で。
+. *NSS管理*を選択します。
+. NSS アカウントを変更するには、次の手順を実行します。
++
+.. システムが現在関連付けられているNetAppサポート サイト アカウントの行を展開します。
+.. 関連付けを変更するシステムについては、image:icon-action.png["3つの点が並んだアイコン"]
+.. *別のNSSアカウントに変更*を選択します。
++
+image:screenshot-nss-change-account.png["NetAppサポート サイト アカウントに関連付けられているシステムのアクション メニューを示すスクリーンショット。"]
+
+.. アカウントを選択し、[保存] を選択します。
+
+
+
+
+
+
+== NSSアカウントのメールアドレスを表示する
+
+セキュリティ上の理由から、NSS アカウントに関連付けられた電子メール アドレスはデフォルトでは表示されません。  NSS アカウントの電子メール アドレスと関連付けられたユーザー名を表示できます。
+
+
+TIP: NSS 管理ページに移動すると、コンソールはテーブル内の各アカウントに対してトークンを生成します。そのトークンには、関連付けられた電子メール アドレスに関する情報が含まれます。ページを離れるとトークンは削除されます。情報はキャッシュされないため、プライバシーが保護されます。
+
+.手順
+. *管理 > サポート* で。
+. *NSS管理*を選択します。
+. 更新したいNSSアカウントについては、image:icon-action.png["3つの点が並んだアイコン"]次に、[*メールアドレスを表示*]を選択します。コピーボタンを使用してメールアドレスをコピーできます。
+
+
+
+
+== NSSアカウントを削除する
+
+コンソールで使用しなくなった NSS アカウントを削除します。
+
+現在Cloud Volumes ONTAPシステムに関連付けられているアカウントは削除できません。まず最初に<<attach-system-nss-account,これらのシステムを別のNSSアカウントに接続する>>。
+
+.手順
+. *管理 > サポート* で。
+. *NSS管理*を選択します。
+. 削除したいNSSアカウントについては、image:icon-action.png["3つの点が並んだアイコン"]次に、[削除] を選択します。
+. *削除*を選択して確認します。
+

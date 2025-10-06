@@ -1,0 +1,280 @@
+---
+sidebar: sidebar 
+permalink: task-troubleshoot-connector.html 
+keywords: troubleshoot, system id, system ID, autosupport, asup, troubleshoot connector, download failure, cloud volumes ontap download failure, agent 
+summary: コンソール エージェントに関する問題をトラブルシューティングするには、 NetAppサポートに問い合わせてください。サポートからシステム ID、エージェント バージョン、または最新のAutoSupportメッセージが求められる場合があります。  NetAppナレッジベースを参照して、自分で問題をトラブルシューティングすることもできます。 
+---
+= コンソールエージェントのトラブルシューティング
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+コンソール エージェントの問題をトラブルシューティングするには、自分で問題を確認するか、 NetAppサポートに問い合わせて、システム ID、エージェント バージョン、または最新のAutoSupportメッセージを尋ねられることがあります。
+
+NetAppサポートサイトのアカウントをお持ちの場合は、link:https://kb.netapp.com/Cloud/BlueXP["NetAppナレッジベース。"]
+
+
+
+== 一般的なエラーメッセージと解決策
+
+次の表に、一般的なエラー メッセージとその解決方法を示します。
+
+[cols="19,27,27"]
+|===
+| エラー メッセージ | 説明 | 何をするか 
+
+
+ a| 
+コンソールエージェントUIを読み込めません
+ a| 
+エージェントのインストールに失敗しました
+ a| 
+* Service Manager サービスがアクティブであることを確認します。
+* すべてのコンテナが実行されていることを確認します。
+* ファイアウォールがポート 8888 でのサービスへのアクセスを許可していることを確認してください。
+* 問題が解決しない場合は、サポートにお問い合わせください。
+
+
+
+
+ a| 
+NetAppエージェントUIにアクセスできません
+ a| 
+このメッセージは、エージェントの IP アドレスにアクセスしようとしたときに表示されます。エージェントに適切なネットワーク アクセスがない場合や不安定な場合は、初期化に失敗する可能性があります。
+ a| 
+* コンソール エージェントに接続します。
+* サービスマネージャサービスを確認する
+* エージェントに必要なネットワーク アクセス権があることを確認します。link:reference-networking-saas-console.html["必要なネットワーク アクセス エンドポイントの詳細について説明します。"]
+
+
+
+
+ a| 
+エージェント設定を読み込めません
+ a| 
+エージェント設定ページにアクセスしようとすると、コンソールにこのメッセージが表示されます。
+ a| 
+* OCCM コンテナが実行中であり、動作しているかどうかを確認します。
+* 問題が解決しない場合は、サポートにお問い合わせください。
+
+
+
+
+ a| 
+エージェントのサポート情報を読み込めません。
+ a| 
+エージェントがサポート アカウントにアクセスできない場合、このメッセージが表示されます。
+ a| 
+* *。
+
+|===
+
+
+== コンソールエージェントのステータスを確認する
+
+コンソール エージェントを確認するには、次のいずれかのコマンドを使用します。すべてのサービスのステータスは「実行中」になっている必要があります。そうでない場合は、 NetAppサポートにお問い合わせください。
+
+[NOTE]
+====
+コンソール エージェント診断へのアクセスの詳細については、次のトピックを参照してください。
+
+* link:task-maintain-connectors.html#connect-linux-host["コンソール エージェントのステータスを確認する (Linux ホスト展開の場合)"]
+* link:task-agent-vm-config.html#connect-vcenter-host["コンソール エージェントのステータスを確認する (VCenter 展開の場合)"]
+
+
+====
+Docker (Ubuntu および VCenter のデプロイメント用)::
++
+--
+[source, cli]
+----
+docker ps -a
+----
+--
+Podman (RedHat Enterprise Linux デプロイメント用)::
++
+--
+[source, cli]
+----
+podman ps -a
+----
+--
+
+
+
+
+== コンソールエージェントのバージョンを表示する
+
+コンソール エージェントのバージョンを表示してアップグレードを確認するか、 NetApp の担当者と共有してください。
+
+.手順
+. *管理 > サポート > エージェント*を選択します。
++
+コンソールのページ上部にバージョンが表示されます。
+
+
+
+
+
+== ネットワークアクセスを確認する
+
+コンソール エージェントに必要なネットワーク アクセスがあることを確認します。link:reference-networking-saas-console.html["必要なネットワーク アクセス ポイントの詳細について説明します。"]
+
+
+
+== コンソールエージェントのインストールに関する問題
+
+インストールに失敗した場合は、レポートとログを表示して問題を解決してください。
+
+次のディレクトリにあるコンソール エージェント ホストから、JSON 形式の検証レポートと構成ログに直接アクセスすることもできます。
+
+[source, cli]
+----
+/tmp/netapp-console-agents/logs
+
+/tmp/netapp-console-agents/results.json
+
+----
+[IMPORTANT]
+====
+* 新しいエージェントの展開の場合、 NetApp は次のエンドポイントをチェックします。link:reference-networking-saas-console.html["ここに記載"^] 。アップグレードに使用した以前のエンドポイントを使用している場合、この構成チェックはエラーで失敗します。link:reference-networking-saas-console-previous.html["ここに記載"] 。  NetAppは、現在のエンドポイントへのアクセスを許可し、以前のエンドポイントへのアクセスをブロックするようにファイアウォールルールを更新することを推奨します。link:reference-networking-saas-console-previous.html#update-endpoint-list["ネットワークをアップデートする方法を学ぶ"] 。
+* ファイアウォールのエンドポイントを更新しても、既存のエージェントは引き続き動作します。
+
+
+====
+
+
+=== 手動インストールの構成チェックを無効にする
+
+インストール中に送信接続を検証する構成チェックを無効にする必要がある場合があります。例えば：
+
+* Government Cloud 環境にエージェントを手動でインストールする場合は、構成チェックを無効にする必要があります。無効にしないと、インストールは失敗します。
+* エージェントのアップグレードに以前のエンドポイント リストを引き続き使用している場合は、これらのチェックを無効にすることもできます。
+
+
+.手順
+_com/opt/application/netapp/service-manager-2/config.json_ ファイルで _skipConfigCheck_ フラグを設定することで、構成チェックを無効にします。デフォルトでは、このフラグは false に設定されており、構成チェックによってエージェントの送信アクセスが検証されます。チェックを無効にするには、このフラグを true に設定します。この手順を完了する前に、JSON 構文を理解しておく必要があります。
+
+構成チェックを再度有効にするには、次の手順に従い、_skipConfigCheck_ フラグを false に設定します。
+
+.手順
+. コンソール エージェント ホストに root または sudo 権限でアクセスします。
+. 変更を元に戻せるように、_/opt/application/netapp/service-manager-2/config.json_ ファイルのバックアップ コピーを作成します。
+. 次のコマンドを実行して、サービス マネージャー 2 サービスを停止します。
+
+
+[source, cli]
+----
+systemctl stop netapp-service-manager.service
+----
+. _/opt/application/netapp/service-manager-2/config.json_ ファイルを編集し、_skipConfigCheck_ フラグの値を true に変更します。
++
+[source, json]
+----
+  "skipConfigCheck": true,
+----
+. ファイルを保存します。
+. 次のコマンドを実行して、サービス マネージャー 2 サービスを再起動します。
++
+[source, cli]
+----
+systemctl restart netapp-service-manager.service
+----
+
+
+
+
+=== アップグレードに使用されたエンドポイントでのインストールの失敗
+
+まだ使用している場合はlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、*検証エージェント構成* チェックボックスをオフにするか、VCenter にインストールするときに構成チェックをスキップします。
+
+NetAppは、ファイアウォールルールを更新して、link:reference-networking-saas-console.html["現在のエンドポイント"]ご都合の良い時に。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントを更新する方法を学ぶ"] 。
+
+唯一のエラーが以前のエンドポイントに関連していることを確認してください。
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+他にエラーがある場合は、続行する前に解決する必要があります。
+
+
+
+== NetAppサポートと連携する
+
+コンソール エージェントの問題を解決できない場合は、 NetAppサポートにお問い合わせください。  NetAppサポートでは、コンソール エージェント ID を要求したり、コンソール エージェント ログがまだない場合はそれを送信するよう要求したりすることがあります。
+
+
+
+=== コンソールエージェントIDを見つける
+
+作業を開始するには、コンソール エージェントのシステム ID が必要になる場合があります。  ID は通常、ライセンスとトラブルシューティングの目的で使用されます。
+
+.手順
+. *管理 > サポート > エージェント*を選択します。
++
+システム ID はページの上部にあります。
+
++
+*例*
+
++
+image:screenshot-system-id.png["サポート ダッシュボードに表示されるシステム ID を示すスクリーンショット。"]
+
+. ID にマウスを合わせてクリックするとコピーできます。
+
+
+
+
+=== AutoSupportメッセージをダウンロードまたは送信する
+
+問題が発生した場合、 NetApp はトラブルシューティングのためにAutoSupportメッセージをNetAppサポートに送信するように依頼することがあります。
+
+
+NOTE: NetAppコンソールは、負荷分散のため、 AutoSupportメッセージを送信するのに最大 5 時間かかります。緊急の場合は、ファイルをダウンロードして手動で送信してください。
+
+.手順
+. *管理 > サポート > エージェント*を選択します。
+. NetAppサポートに情報を送信する方法に応じて、次のいずれかのオプションを選択します。
++
+.. AutoSupportメッセージをローカル マシンにダウンロードするオプションを選択します。その後、優先する方法を使用してNetAppサポートに送信できます。
+.. *Send AutoSupport* を選択すると、メッセージがNetAppサポートに直接送信されます。
+
+
+
+
+
+
+== Google Cloud NAT ゲートウェイ使用時のダウンロード失敗を修正
+
+コンソール エージェントは、 Cloud Volumes ONTAPのソフトウェア アップデートを自動的にダウンロードします。 Google Cloud NAT ゲートウェイを使用している場合、設定によりダウンロードが失敗する可能性があります。ソフトウェア イメージを分割する部分の数を制限することで、この問題を修正できます。この手順は API を使用して完了する必要があります。
+
+.手順
+. 次の JSON を本文として、PUT リクエストを /occm/config に送信します。
++
+[source]
+----
+{
+  "maxDownloadSessions": 32
+}
+----
++
+_maxDownloadSessions_ の値は 1 または 1 より大きい任意の整数にすることができます。値が 1 の場合、ダウンロードされたイメージは分割されません。
+
++
+32 は例の値であることに注意してください。値は NAT 構成と同時セッションの数によって異なります。
+
+
+
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#occmconfig["/occm/config API呼び出しの詳細"^]
+
+
+
+== NetAppナレッジベースからヘルプを入手する
+
+https://kb.netapp.com/Special:Search?path=Cloud%2FBlueXP&query=connector&type=wiki["NetAppサポートチームが作成したトラブルシューティング情報を表示します"] 。

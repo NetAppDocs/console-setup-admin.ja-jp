@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: concept-install-options-google.html 
+keywords: install connector google cloud, google cloud install connector, connector google cloud, google cloud connector, install connector gcp, gcp install connector, connector gcp, gcp connector, installation options, manual install 
+summary: Google Cloud でコンソール エージェントを作成するには、いくつかの方法があります。  NetAppコンソールから直接行うのが最も一般的な方法です。 
+---
+= Google Cloud のコンソール エージェントのインストール オプション
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Google Cloud でコンソール エージェントを作成するには、いくつかの方法があります。 NetAppコンソールから直接行うのが最も一般的な方法です。---
+
+次のインストール オプションが利用可能です。
+
+* link:task-install-connector-google-bluexp-gcloud.html["コンソールから直接コンソールエージェントを作成する"]（これが標準オプションです）
++
+このアクションにより、選択した VPC で Linux とコンソール エージェント ソフトウェアを実行する VM インスタンスが起動します。
+
+* link:task-install-connector-google-bluexp-gcloud.html["Google プラットフォームを使用してコンソール エージェントを作成する"]
++
+このアクションでは、Linux とコンソール エージェント ソフトウェアを実行する VM インスタンスも起動しますが、デプロイはコンソールからではなく Google Cloud から直接開始されます。
+
+* link:task-install-connector-google-manual.html["自分のLinuxホストにソフトウェアをダウンロードして手動でインストールする"]
+
+
+選択したインストール オプションは、インストールの準備方法に影響します。これには、Google Cloud でリソースを認証および管理するために必要な権限をコンソールに付与する方法が含まれます。

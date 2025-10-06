@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: task-maintain-connectors.html 
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health 
+summary: エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、会社の標準的なオペレーティング システムの配布手順に従って、コンソール エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。 
+---
+= コンソールエージェントVMとオペレーティングシステムを保守する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+コンソール エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、お客様は、会社の標準的なオペレーティング システム配布手順に従って、エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。
+
+
+TIP: 既存のエージェントがいる場合は、次の点に注意してください。link:reference-connector-operating-system-changes.html["サポートされている Linux オペレーティングシステムの変更"] 。
+
+
+
+== オペレーティングシステムのパッチとエージェント
+
+エージェント ホスト サービスを停止せずに OS セキュリティ パッチを適用します。
+
+
+
+== VMまたはインスタンスタイプ
+
+コンソールからコンソール エージェントを作成すると、デフォルトの構成でクラウド プロバイダーに VM インスタンスがデプロイされます。エージェントを作成した後は、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。
+
+次の表に、CPU と RAM の要件を示します。
+
+CPU:: 8コアまたは8vCPU
+RAM:: 32 GB
+
+
+link:reference-connector-default-config.html["エージェントのデフォルト設定について学ぶ"] 。
+
+
+
+== エージェントを監視する
+
+コンソールは、ディスク容量、RAM、CPU の問題など、エージェント VM に異常がある場合に通知します。コンソール内の通知センターでこれらの通知を監視するか、電子メール通知を構成します。ディスク容量、メモリ、CPU 使用率が時々増加するのは正常ですが、頻繁に発生する場合は、解決するための手順を実行する必要があります。
+
+たとえば、エージェント リソース (CPU、RAM、またはディスク領域) が 30 分間連続して合計容量の 90% を超えると、コンソールから通知が届きます。その後、リソース使用量がそのしきい値を下回ると、通知センターに通知が解決済み (緑) として表示されます。
+
+
+NOTE: エージェント VM の変更について質問がある場合は、 NetAppサポートにお問い合わせください。
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#notification-center["詳細情報"^]
+
+[cols="47,47"]
+|===
+| 通知 | 必要な行動 
+
+
+| ディスク容量が多すぎる | link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Manager/How_to_resolve_disk_space_issues_on_BlueXP_connector_VM["NetAppナレッジベースの記事を確認する"^] 。 
+
+
+| CPU使用率が高すぎる | インストールした場所に応じて、クラウド プロバイダーまたはオンプレミスのエージェント VM の CPU サイズを増やします。または、追加のエージェントを作成し、ワークロードを複数のエージェントに分散します。  RAM の使用率は、環境、 ONTAPワークロード、 Cloud Volumes ONTAPシステムの数、および使用しているデータ サービスによって異なります。 
+
+
+| RAM使用量が高すぎる | インストールした場所に応じて、クラウド プロバイダーまたはオンプレミスのエージェント VM の RAM を増やします。または、追加のエージェントを作成し、ワークロードを複数のエージェントに分散します。  RAM の使用率は、環境、 ONTAPワークロード、 Cloud Volumes ONTAPシステムの数、および使用しているデータ サービスによって異なります。 
+|===
+
+
+== エージェントVMの停止と起動
+
+必要に応じて、クラウド プロバイダーのコンソールまたは標準のオンプレミス手順を使用して、エージェント VM を停止および起動します。
+
+link:concept-connectors.html#connectors-must-be-operational-at-all-times["コンソールエージェントは常に動作している必要があることに注意してください"] 。
+
+
+
+== Linux VMに接続する
+
+エージェントが実行される Linux VM に接続する必要がある場合は、クラウド プロバイダーの接続オプションを使用します。
+
+AWS:: AWS でエージェントインスタンスを作成するときは、AWS アクセスキーとシークレットキーを指定します。このキー ペアを使用してインスタンスに SSH 接続できます。  EC2 Linux インスタンスにはユーザー名「ubuntu」を使用します。  2023 年 5 月より前に作成されたエージェントの場合は、ユーザー名「ec2-user」を使用します。
++
+--
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html["AWS ドキュメント: Linux インスタンスに接続する"^]
+
+--
+Azure:: Azure でエージェント VM を作成するときは、ユーザー名を指定し、パスワードまたは SSH 公開キーで認証することを選択します。  VM に接続するために選択した認証方法を使用します。
++
+--
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys#ssh-into-your-vm["Azure ドキュメント: VM への SSH 接続"^]
+
+--
+Google Cloud:: Google Cloud でエージェントを作成するときに認証方法を指定することはできません。ただし、Google Cloud Console または Google Cloud CLI (gcloud) を使用して Linux VM インスタンスに接続できます。
++
+--
+https://cloud.google.com/compute/docs/instances/connecting-to-instance["Google Cloud ドキュメント: Linux VM への接続"^]
+
+--
+
+
+
+
+== エージェントのIPアドレスを変更する
+
+必要に応じて、クラウド プロバイダーによって割り当てられたエージェント インスタンスの内部 IP アドレスとパブリック IP アドレスを変更できます。
+
+.手順
+. クラウド プロバイダーの指示に従って、エージェント インスタンスのローカル IP アドレスまたはパブリック IP アドレス (あるいはその両方) を変更します。
+. エージェント インスタンスを再起動して、新しいパブリック IP アドレスをコンソールに登録します。
+. プライベート IP アドレスを変更した場合は、 Cloud Volumes ONTAP構成ファイルのバックアップ場所を更新して、バックアップがエージェントの新しいプライベート IP アドレスに送信されるようにします。
++
+各Cloud Volumes ONTAPシステムのバックアップ場所を更新します。
+
++
+.. Cloud Volumes ONTAP CLI から、権限レベルを高度に設定します。
++
+[source, cli]
+----
+set -privilege advanced
+----
+.. 現在のバックアップ ターゲットを表示するには、次のコマンドを実行します。
++
+[source, cli]
+----
+system configuration backup settings show
+----
+.. バックアップ ターゲットの IP アドレスを更新するには、次のコマンドを実行します。
++
+[source, cli]
+----
+system configuration backup settings modify -destination <target-location>
+----
+
+
+
+
+
+
+== エージェントのURIを編集する
+
+エージェントの Uniform Resource Identifier (URI) を追加および削除できます。
+
+.手順
+. *管理 > エージェント*を選択します。
+. *概要*ページで、コンソール エージェントのアクション メニューを選択し、*エージェントの編集*を選択します。
++
+編集するには、コンソール エージェントがアクティブである必要があります。
+
+. エージェント URI を表示するには、*エージェント URI* バーを展開します。
+. URI を追加および削除し、[適用] を選択します。
+

@@ -1,0 +1,822 @@
+---
+sidebar: sidebar 
+permalink: task-prepare-restricted-mode.html 
+keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
+summary: NetAppコンソールを制限モードで展開する前に、環境を準備します。ホストの要件を確認し、ネットワークを準備し、権限を設定するなどする必要があります。 
+---
+= 制限モードでの展開の準備
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールを制限モードで展開する前に、環境を準備します。ホストの要件を確認し、ネットワークを準備し、権限を設定するなどする必要があります。
+
+
+
+== ステップ1: 制限モードの仕組みを理解する
+
+開始する前に、 NetAppコンソールが制限モードでどのように動作するかを理解してください。
+
+インストールされたNetAppコンソール エージェントからローカルで利用できるブラウザベースのインターフェイスを使用します。  SaaS レイヤーを通じて提供される Web ベースのコンソールからNetAppコンソールにアクセスすることはできません。
+
+また、すべてのコンソール機能とNetAppデータ サービスが利用できるわけではありません。
+
+link:concept-modes.html["制限モードの仕組みを学ぶ"] 。
+
+
+
+== ステップ2: インストールオプションを確認する
+
+制限モードでは、コンソール エージェントをクラウドにのみインストールできます。次のインストール オプションが利用可能です。
+
+* AWSマーケットプレイスから
+* Azure Marketplaceから
+* AWS、Azure、または Google Cloud で実行されている独自の Linux ホストにコンソール エージェントを手動でインストールする
+
+
+
+
+== ステップ3: ホストの要件を確認する
+
+コンソール エージェントを実行するには、ホストが特定の OS、RAM、およびポートの要件を満たしている必要があります。
+
+AWS または Azure Marketplace からコンソールエージェントをデプロイする場合、イメージには必要な OS およびソフトウェア コンポーネントが含まれます。  CPU と RAM の要件を満たすインスタンス タイプを選択するだけです。
+
+専用ホスト:: コンソール エージェントは、他のアプリケーションと共有されているホストではサポートされません。ホストは専用ホストである必要があります。ホストは、次のサイズ要件を満たす任意のアーキテクチャにすることができます。
++
+--
+* CPU: 8コアまたは8vCPU
+* メモリ: 32 GB
+* ディスク容量: ホストには 165 GB が推奨され、パーティション要件は次のとおりです。
++
+** `/opt`: 120 GiBの空き容量が必要です
++
+エージェントは `/opt`インストールするには `/opt/application/netapp`ディレクトリとその内容。
+
+** `/var`: 40 GiBの空き容量が必要です
++
+コンソールエージェントにはこのスペースが必要です `/var`Docker または Podman は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリ。このスペースでは外部マウントまたはシンボリックリンクは機能しません。
+
+
+
+
+
+--
+ハイパーバイザー:: サポートされているオペレーティング システムを実行することが認定されているベア メタルまたはホスト型ハイパーバイザーが必要です。
+[[podman-versions]]オペレーティングシステムとコンテナの要件:: コンソールを標準モードまたは制限モードで使用する場合、コンソール エージェントは次のオペレーティング システムでサポートされます。エージェントをインストールする前に、コンテナ オーケストレーション ツールが必要です。
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| オペレーティング システム | サポートされるOSバージョン | サポートされているエージェントのバージョン | 必要なコンテナツール | SELinux は 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+9.1～9.4
+
+8.6～8.10
+
+* 英語版のみ。
+* ホストは Red Hat Subscription Management に登録されている必要があります。登録されていない場合、ホストはエージェントのインストール中に必要なサードパーティ製ソフトウェアを更新するためにリポジトリにアクセスできません。
+
+ a| 
+3.9.50 以降、コンソールが標準モードまたは制限モードの場合
+ a| 
+Podman バージョン 4.6.1 または 4.9.4
+
+<<podman-configuration,Podman の構成要件を表示する>> 。
+ a| 
+強制モードまたは許可モードでサポートされます
+
+* Cloud Volumes ONTAPシステムの管理は、オペレーティング システムで SELinux が有効になっているエージェントではサポートされません。
+
+
+
+
+ a| 
+Ubuntu
+ a| 
+24.04 LTS
+ a| 
+3.9.45 以降、 NetAppコンソールが標準モードまたは制限モード
+ a| 
+Docker エンジン 23.06 から 28.0.0。
+ a| 
+サポート対象外
+
+
+
+ a| 
+22.04 LTS
+ a| 
+3.9.50以降
+ a| 
+Docker エンジン 23.0.6 から 28.0.0。
+ a| 
+サポート対象外
+
+|===
+--
+AWS EC2インスタンスタイプ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  t3.2xlarge をお勧めします。
+Azure VM サイズ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  Standard_D8s_v3 をお勧めします。
+Google Cloud マシンタイプ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  n2-standard-8 をお勧めします。
++
+--
+コンソールエージェントは、Google Cloud の VM インスタンスで、以下の OS がサポートする環境でサポートされます。 https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["シールドされたVMの機能"^]
+
+--
+/optのディスク容量:: 100 GiBの空き容量が必要です
++
+--
+エージェントは `/opt`インストールするには `/opt/application/netapp`ディレクトリとその内容。
+
+--
+/varのディスク容量:: 20 GiBの空き容量が必要です
++
+--
+コンソールエージェントにはこのスペースが必要です `/var`Docker または Podman は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリ。このスペースでは外部マウントまたはシンボリックリンクは機能しません。
+
+--
+
+
+
+
+== ステップ4: PodmanまたはDocker Engineをインストールする
+
+コンソール エージェントを手動でインストールするには、Podman または Docker Engine をインストールしてホストを準備します。
+
+オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要です。
+
+* Red Hat Enterprise Linux 8 および 9 には Podman が必要です。
++
+<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
+* Ubuntu には Docker Engine が必要です。
++
+<<podman-versions,サポートされている Docker エンジンのバージョンを表示する>> 。
+
+
+
+.手順
+[role="tabbed-block"]
+====
+.ポッドマン
+--
+Podman をインストールして設定するには、次の手順に従います。
+
+* podman.socket サービスを有効にして起動します
+* Python3をインストールする
+* podman-compose パッケージ バージョン 1.0.6 をインストールします。
+* podman-composeをPATH環境変数に追加する
+* Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を使用していることを確認してください。
+
+
+
+NOTE: DNS ポートの競合を避けるために、エージェントをインストールした後、aardvark-dns ポート (デフォルト: 53) を調整します。指示に従ってポートを構成します。
+
+.手順
+. ホストに podman-docker パッケージがインストールされている場合は削除します。
++
+[source, cli]
+----
+dnf remove podman-docker
+rm /var/run/docker.sock
+----
+. Podman をインストールします。
++
+Podman は、公式の Red Hat Enterprise Linux リポジトリから入手できます。
+
++
+Red Hat Enterprise Linux 9 の場合:
+
++
+[source, cli]
+----
+sudo dnf install podman-2:<version>
+----
++
+<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
++
+Red Hat Enterprise Linux 8 の場合:
+
++
+[source, cli]
+----
+sudo dnf install podman-3:<version>
+----
++
+<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
+. podman.socket サービスを有効にして起動します。
++
+[source, cli]
+----
+sudo systemctl enable --now podman.socket
+----
+. python3 をインストールします。
++
+[source, cli]
+----
+sudo dnf install python3
+----
+. システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。
+. Red Hat Enterprise を使用している場合:
++
+podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。
+
++
+Red Hat Enterprise Linux 9 の場合:
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
++
+Red Hat Enterprise Linux 8 の場合:
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+----
+. podman-compose パッケージ 1.0.6 をインストールします。
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.0.6
+----
++
+
+NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-compose を追加するための要件を満たしています。インストールコマンドは、すでにインストールされているpodman-composeを/usr/binに追加します。 `secure_path`ホスト上のオプション。
+
+. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
++
+.. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+.. networkBackendが `CNI`、それを変更する必要があります `netavark`。
+.. インストール `netavark`そして `aardvark-dns`次のコマンドを使用します。
++
+[source, cli]
+----
+dnf install aardvark-dns netavark
+----
+.. 開く `/etc/containers/containers.conf`ファイルを編集し、network_backend オプションを変更して、「cni」の代わりに「netavark」を使用します。
+
+
++
+もし `/etc/containers/containers.conf`存在しない場合は、設定を変更してください `/usr/share/containers/containers.conf`。
+
+. podman を再起動します。
++
+[source, cli]
+----
+systemctl restart podman
+----
+. 次のコマンドを使用して、networkBackend が「netavark」に変更されていることを確認します。
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+
+
+--
+.Dockerエンジン
+--
+Docker のドキュメントに従って Docker Engine をインストールします。
+
+.手順
+. https://docs.docker.com/engine/install/["Dockerからのインストール手順を見る"^]
++
+サポートされている Docker エンジン バージョンをインストールするには、手順に従ってください。最新バージョンはコンソールでサポートされていないため、インストールしないでください。
+
+. Docker が有効になっていて実行されていることを確認します。
++
+[source, cli]
+----
+sudo systemctl enable docker && sudo systemctl start docker
+----
+
+
+--
+====
+
+
+== ステップ5: ネットワークアクセスを準備する
+
+コンソール エージェントがパブリック クラウド内のリソースを管理できるように、ネットワーク アクセスを設定します。コンソール エージェント用の仮想ネットワークとサブネットがあることに加えて、次の要件が満たされていることを確認する必要があります。
+
+ターゲットネットワークへの接続:: コンソール エージェントがストレージの場所へのネットワーク接続を持っていることを確認します。たとえば、 Cloud Volumes ONTAPをデプロイする予定の VPC または VNet、またはオンプレミスのONTAPクラスターが存在するデータセンターなどです。
+NetAppコンソールへのユーザーアクセスのためのネットワークを準備する:: 制限モードでは、ユーザーはコンソール エージェント VM からコンソールにアクセスします。コンソール エージェントは、データ管理タスクを完了するためにいくつかのエンドポイントに接続します。これらのエンドポイントは、コンソールから特定のアクションを完了するときに、ユーザーのコンピューターから接続されます。
+
+
+
+NOTE: バージョン 4.0.0 より前のコンソール エージェントには追加のエンドポイントが必要です。  4.0.0 以降にアップグレードした場合は、許可リストから古いエンドポイントを削除できます。link:reference-networking-saas-console-previous.html["4.0.0 より前のバージョンに必要なネットワーク アクセスの詳細について説明します。"]
+
++
+
+[cols="2*"]
+|===
+| エンドポイント | 目的 
+
+
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetAppコンソール内で機能とサービスを提供します。 
+
+
+| \https://cdn.auth0.com \https://services.cloud.netapp.com | Web ブラウザはこれらのエンドポイントに接続し、 NetAppコンソールを通じて集中的なユーザー認証を行います。 
+|===
+日常業務のためのアウトバウンドインターネットアクセス:: コンソール エージェントのネットワークの場所には、送信インターネット アクセスが必要です。  NetAppコンソールの SaaS サービスと、それぞれのパブリック クラウド環境内のエンドポイントにアクセスできる必要があります。
++
+--
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+*AWS 環境*
+
+
+
+ a| 
+AWS サービス (amazonaws.com):
+
+* クラウドフォーメーション
+* エラスティックコンピューティングクラウド (EC2)
+* アイデンティティとアクセス管理（IAM）
+* キー管理サービス (KMS)
+* セキュリティトークンサービス（STS）
+* シンプルストレージサービス（S3）
+
+ a| 
+AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細についてはAWSドキュメントを参照してください"^]
+
+
+
+ a| 
+*Azure 環境*
+
+
+
+ a| 
+\https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
+ a| 
+Azure パブリック リージョン内のリソースを管理します。
+
+
+
+ a| 
+\https://management.usgovcloudapi.net \https://login.microsoftonline.us \https://blob.core.usgovcloudapi.net \https://core.usgovcloudapi.net
+ a| 
+Azure Government リージョン内のリソースを管理します。
+
+
+
+ a| 
+\https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+ a| 
+Azure China リージョンのリソースを管理します。
+
+
+
+ a| 
+*Google Cloud 環境*
+
+
+
+ a| 
+\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+ a| 
+Google Cloud 内のリソースを管理します。
+
+
+
+ a| 
+* NetAppコンソール エンドポイント*
+
+
+
+ a| 
+\https://mysupport.netapp.com
+ a| 
+ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
+\https://signin.b2c.netapp.com
+ a| 
+NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+ a| 
+NetAppコンソール内で機能とサービスを提供します。
+
+
+
+ a| 
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+ a| 
+コンソール エージェントのアップグレード用のイメージを取得します。
+
+* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
++
+以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
+
+* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
+
+
+|===
+--
+
+
+AzureのパブリックIPアドレス:: Azure のコンソール エージェント VM でパブリック IP アドレスを使用する場合は、コンソールがこのパブリック IP アドレスを使用するように、IP アドレスで Basic SKU を使用する必要があります。
++
+--
+image:screenshot-azure-sku.png["SKU フィールドで Basic を選択できる、Azure で新しい IP アドレスを作成するスクリーンショット。"]
+
+代わりに標準 SKU IP アドレスを使用する場合、コンソールはパブリック IP ではなく、コンソール エージェントのプライベート IP アドレスを使用します。コンソールにアクセスするために使用しているマシンがそのプライベート IP アドレスにアクセスできない場合、コンソールからのアクションは失敗します。
+
+https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure ドキュメント: パブリック IP SKU"^]
+
+--
+
+
+プロキシ サーバ:: NetApp は明示的プロキシ構成と透過的プロキシ構成の両方をサポートしています。透過プロキシを使用している場合は、プロキシ サーバーの証明書のみを提供する必要があります。明示的なプロキシを使用している場合は、IP アドレスと資格情報も必要になります。
++
+--
+* IPアドレス
+* Credentials
+* HTTPS証明書
+
+
+--
+
+
+ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
++
+--
+* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
+* アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
++
+Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するためのアウトバウンド インターネット接続がない場合、コンソールは、コンソール エージェントに含まれているプロキシ サーバーを使用するようにそれらのシステムを自動的に構成します。唯一の要件は、コンソール エージェントのセキュリティ グループがポート 3128 経由の受信接続を許可していることを確認することです。コンソール エージェントを展開した後、このポートを開く必要があります。
+
+
+
+--
+
+
+NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
++
+--
+クラウド プロバイダーのマーケットプレイスからコンソール エージェントを作成する予定の場合は、コンソール エージェントを作成した後にこのネットワーク要件を実装します。
+
+--
+
+
+
+
+== ステップ6: クラウド権限を準備する
+
+コンソール エージェントには、仮想ネットワークにCloud Volumes ONTAPを展開し、 NetAppデータ サービスを使用するために、クラウド プロバイダーからの権限が必要です。クラウド プロバイダーで権限を設定し、それらの権限をコンソール エージェントに関連付ける必要があります。
+
+必要な手順を表示するには、クラウド プロバイダーで使用する認証オプションを選択します。
+
+[role="tabbed-block"]
+====
+.AWS IAM ロール
+--
+IAM ロールを使用して、コンソール エージェントに権限を付与します。
+
+AWS Marketplace からコンソールエージェントを作成している場合は、EC2 インスタンスを起動するときにその IAM ロールを選択するように求められます。
+
+独自の Linux ホストにコンソールエージェントを手動でインストールする場合は、ロールを EC2 インスタンスにアタッチします。
+
+.手順
+. AWS コンソールにログインし、IAM サービスに移動します。
+. ポリシーを作成します。
++
+.. *ポリシー > ポリシーの作成*を選択します。
+.. *JSON*を選択し、その内容をコピーして貼り付けます。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシー"] 。
+.. 残りの手順を完了してポリシーを作成します。
+
+
+. IAM ロールを作成します。
++
+.. *[ロール] > [ロールの作成]*を選択します。
+.. *AWS サービス > EC2* を選択します。
+.. 作成したポリシーを添付して権限を追加します。
+.. 残りの手順を完了してロールを作成します。
+
+
+
+
+.結果
+これで、コンソール エージェント EC2 インスタンスの IAM ロールが作成されました。
+
+--
+.AWS アクセスキー
+--
+IAM ユーザーの権限とアクセスキーを設定します。コンソールエージェントをインストールしてコンソールを設定した後、コンソールに AWS アクセスキーを提供する必要があります。
+
+.手順
+. AWS コンソールにログインし、IAM サービスに移動します。
+. ポリシーを作成します。
++
+.. *ポリシー > ポリシーの作成*を選択します。
+.. *JSON*を選択し、その内容をコピーして貼り付けます。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシー"] 。
+.. 残りの手順を完了してポリシーを作成します。
++
+使用する予定のNetAppデータ サービスによっては、2 番目のポリシーを作成する必要がある場合があります。
+
++
+標準リージョンの場合、権限は 2 つのポリシーに分散されます。 AWS の管理ポリシーの最大文字サイズ制限により、2 つのポリシーが必要になります。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシーの詳細"] 。
+
+
+
+. IAM ユーザーにポリシーをアタッチします。
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWSドキュメント: IAMロールの作成"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWSドキュメント: IAMポリシーの追加と削除"^]
+
+
+. コンソール エージェントをインストールした後、 NetAppコンソールに追加できるアクセス キーがユーザーにあることを確認します。
+
+
+--
+.Azure ロール
+--
+必要な権限を持つ Azure カスタム ロールを作成します。このロールをコンソール エージェント VM に割り当てます。
+
+Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して、Azure カスタム ロールを作成できます。次の手順は、Azure CLI を使用してロールを作成する方法を示しています。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]
+
+.手順
+. 独自のホストにソフトウェアを手動でインストールする予定の場合は、カスタム ロールを通じて必要な Azure アクセス許可を提供できるように、VM でシステム割り当てマネージド ID を有効にします。
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure ドキュメント: Azure ポータルを使用して VM 上の Azure リソースのマネージド ID を構成する"^]
+
+. の内容をコピーしますlink:reference-permissions-azure.html["コネクタのカスタムロール権限"]JSON ファイルに保存します。
+. 割り当て可能なスコープに Azure サブスクリプション ID を追加して、JSON ファイルを変更します。
++
+NetAppコンソールで使用する各 Azure サブスクリプションの ID を追加する必要があります。
+
++
+*例*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. JSON ファイルを使用して、Azure でカスタム ロールを作成します。
++
+次の手順では、Azure Cloud Shell で Bash を使用してロールを作成する方法について説明します。
+
++
+.. 始める https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure クラウド シェル"^]Bash 環境を選択します。
+.. JSON ファイルをアップロードします。
++
+image:screenshot_azure_shell_upload.png["ファイルをアップロードするオプションを選択できる Azure Cloud Shell のスクリーンショット。"]
+
+.. Azure CLI を使用してカスタム ロールを作成します。
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+
+
+--
+.Azure サービスプリンシパル
+--
+Microsoft Entra ID でサービス プリンシパルを作成して設定し、コンソールに必要な Azure 資格情報を取得します。コンソール エージェントをインストールした後、コンソールにこれらの資格情報を提供する必要があります。
+
+.ロールベースのアクセス制御用の Microsoft Entra アプリケーションを作成する
+. Azure で Active Directory アプリケーションを作成し、そのアプリケーションをロールに割り当てるためのアクセス許可があることを確認します。
++
+詳細については、 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure ドキュメント: 必要な権限"^]
+
+. Azure ポータルから、*Microsoft Entra ID* サービスを開きます。
++
+image:screenshot_azure_ad.png["Microsoft Azure の Active Directory サービスを表示します。"]
+
+. メニューで*アプリ登録*を選択します。
+. *新規登録*を選択します。
+. アプリケーションの詳細を指定します。
++
+** *名前*: アプリケーションの名前を入力します。
+** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプでもNetAppコンソールで使用できます)。
+** *リダイレクト URI*: このフィールドは空白のままにすることができます。
+
+
+. *登録*を選択します。
++
+AD アプリケーションとサービス プリンシパルを作成しました。
+
+
+
+.アプリケーションをロールに割り当てる
+. カスタム ロールを作成します。
++
+Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して、Azure カスタム ロールを作成できます。次の手順は、Azure CLI を使用してロールを作成する方法を示しています。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]
+
++
+.. の内容をコピーしますlink:reference-permissions-azure.html["コンソールエージェントのカスタムロール権限"]JSON ファイルに保存します。
+.. 割り当て可能なスコープに Azure サブスクリプション ID を追加して、JSON ファイルを変更します。
++
+ユーザーがCloud Volumes ONTAPシステムを作成する各 Azure サブスクリプションの ID を追加する必要があります。
+
++
+*例*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. JSON ファイルを使用して、Azure でカスタム ロールを作成します。
++
+次の手順では、Azure Cloud Shell で Bash を使用してロールを作成する方法について説明します。
+
++
+*** 始める https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure クラウド シェル"^]Bash 環境を選択します。
+*** JSON ファイルをアップロードします。
++
+image:screenshot_azure_shell_upload.png["ファイルをアップロードするオプションを選択できる Azure Cloud Shell のスクリーンショット。"]
+
+*** Azure CLI を使用してカスタム ロールを作成します。
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+これで、コンソール エージェント仮想マシンに割り当てることができる、コンソール オペレーターと呼ばれるカスタム ロールが作成されます。
+
+
+
+
+
+. アプリケーションをロールに割り当てます。
++
+.. Azure ポータルから、*サブスクリプション* サービスを開きます。
+.. サブスクリプションを選択します。
+.. *アクセス制御 (IAM) > 追加 > ロール割り当ての追加* を選択します。
+.. *役割*タブで、*コンソールオペレーター*役割を選択し、*次へ*を選択します。
+.. *メンバー*タブで、次の手順を実行します。
++
+*** *ユーザー、グループ、またはサービス プリンシパル*を選択したままにします。
+*** *メンバーを選択*を選択します。
++
+image:screenshot-azure-service-principal-role.png["アプリケーションにロールを追加するときにメンバー ページを表示する Azure ポータルのスクリーンショット。"]
+
+*** アプリケーションの名前を検索します。
++
+次に例を示します。
+
++
+image:screenshot_azure_service_principal_role.png["Azure ポータルの「ロールの割り当ての追加」フォームが表示された Azure ポータルのスクリーンショット。"]
+
+*** アプリケーションを選択し、[選択] を選択します。
+*** *次へ*を選択します。
+
+
+.. *レビュー + 割り当て*を選択します。
++
+これで、サービス プリンシパルに、コンソール エージェントをデプロイするために必要な Azure アクセス許可が付与されました。
+
++
+複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetAppコンソールでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
+
+
+
+
+
+.Windows Azure サービス管理 API 権限を追加する
+. *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
+. *API 権限 > 権限の追加* を選択します。
+. *Microsoft API* の下で、*Azure Service Management* を選択します。
++
+image:screenshot_azure_service_mgmt_apis.gif["Azure サービス管理 API のアクセス許可を示す Azure ポータルのスクリーンショット。"]
+
+. *組織ユーザーとして Azure サービス管理にアクセスする* を選択し、*権限の追加* を選択します。
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Azure サービス管理 API の追加を示す Azure ポータルのスクリーンショット。"]
+
+
+
+.アプリケーションのアプリケーションIDとディレクトリIDを取得します
+. *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
+. *アプリケーション (クライアント) ID* と *ディレクトリ (テナント) ID* をコピーします。
++
+image:screenshot_azure_app_ids.gif["Microsoft Entra IDy 内のアプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を示すスクリーンショット。"]
+
++
+Azure アカウントをコンソールに追加するときは、アプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を指定する必要があります。コンソールは ID を使用してプログラムでサインインします。
+
+
+
+.クライアントシークレットを作成する
+. *Microsoft Entra ID* サービスを開きます。
+. *アプリ登録*を選択し、アプリケーションを選択します。
+. *証明書とシークレット > 新しいクライアント シークレット*を選択します。
+. シークレットの説明と期間を指定します。
+. *追加*を選択します。
+. クライアント シークレットの値をコピーします。
++
+image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリンシパルのクライアント シークレットを表示する Azure ポータルのスクリーンショット。"]
+
+
+
+.結果
+これでサービス プリンシパルが設定され、アプリケーション (クライアント) ID、ディレクトリ (テナント) ID、およびクライアント シークレットの値がコピーされているはずです。  Azure アカウントを追加するときに、コンソールにこの情報を入力する必要があります。
+
+--
+.Google Cloud サービス アカウント
+--
+ロールを作成し、コンソール エージェント VM インスタンスに使用するサービス アカウントに適用します。
+
+.手順
+. Google Cloud でカスタムロールを作成します。
++
+.. 定義された権限を含むYAMLファイルを作成します。link:reference-permissions-gcp.html["Google Cloud のコンソール エージェント ポリシー"] 。
+.. Google Cloud から Cloud Shell を有効にします。
+.. コンソール エージェントに必要な権限を含む YAML ファイルをアップロードします。
+.. カスタムロールを作成するには、 `gcloud iam roles create`指示。
++
+次の例では、プロジェクト レベルで「connector」という名前のロールを作成します。
+
++
+[source, gcloud]
+----
+gcloud iam roles create connector --project=myproject --file=connector.yaml
+----
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud ドキュメント: カスタムロールの作成と管理"^]
+
+
+
+. Google Cloud でサービス アカウントを作成します。
++
+.. IAM & Admin サービスから、*サービス アカウント > サービス アカウントの作成* を選択します。
+.. サービス アカウントの詳細を入力し、[作成して続行] を選択します。
+.. 作成したロールを選択します。
+.. 残りの手順を完了してロールを作成します。
++
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud ドキュメント: サービス アカウントの作成"^]
+
+
+
+
+
+.結果
+これで、コンソール エージェント VM インスタンスに割り当てることができるサービス アカウントが作成されました。
+
+--
+====
+
+
+== ステップ7: Google Cloud APIを有効にする
+
+Google Cloud にCloud Volumes ONTAPをデプロイするには、いくつかの API が必要です。
+
+.手順
+. https://cloud.google.com/apis/docs/getting-started#enabling_apis["プロジェクトで次の Google Cloud API を有効にします"^]
++
+** クラウド デプロイメント マネージャー V2 API
+** クラウドロギングAPI
+** クラウド リソース マネージャー API
+** コンピューティングエンジン API
+** アイデンティティとアクセス管理 (IAM) API
+** クラウド キー管理サービス (KMS) API
++
+（顧客管理暗号化キー（CMEK）を使用したNetApp Backup and Recovery を使用する予定の場合のみ必要）
+
+
+
+

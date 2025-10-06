@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: concept-org-partnerships.html 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+summary: NetAppコンソールで組織間のパートナーシップを構築すると、組織のパートナーは組織の境界を越えてNetAppリソースを安全に管理できるようになり、コラボレーションが効率化され、セキュリティが強化されます。 
+---
+= NetAppコンソールのパートナーシップ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールを使用すると、組織間のパートナーシップを構築し、パートナーが組織の境界を越えてNetAppリソースを安全に管理し、コラボレーションを合理化し、セキュリティを強化できます。
+
+.必要な役割
+パートナーシップ管理者link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+
+パートナーシップにより、コンソールでロール主導の関係を使用して、組織全体のNetAppリソースを安全に管理できます。開始組織はリソースへのアクセスを許可し、受け入れ組織はアクセスを許可するユーザーまたはサービス アカウントを提供します。パートナーシップはセルフサービス ワークフローを通じて確立され、開始組織は共有されるリソース、割り当てられるロール、必要に応じてパートナー アクセスをオンボード、管理、または取り消す機能などを完全に制御できます。
+
+顧客は、複雑な設定を必要とせずに、MSP または再販業者にNetApp環境の管理を許可できます。お客様は、パートナーがアクセスできるクラスターとその役割を制御でき、セキュリティとコンプライアンスを維持するためにいつでもアクセスを取り消すことができます。
+
+パートナーとして、顧客環境全体の一元的な可視性と制御を実現できます。顧客の組織に簡単に切り替えて、定義された境界内でリソースを管理し、データ サービスを実行し、正常性を監視できるため、カスタム ツールが削減され、各顧客のポリシーとの整合性が確保されます。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]1人以上のユーザーにパートナーシップ管理者の役割を割り当てる
+パートナーシップを作成および管理するには、開始組織と受信組織の両方で 1 人以上のユーザーにパートナーシップ管理者ロールを割り当てます。パートナーシップの表示のみが必要で、管理は必要ないユーザーには、パートナーシップ閲覧者ロールを割り当てることができます。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]組織IDを開始組織と共有する
+[role="quick-margin-para"]
+パートナーシップを開始するには、イニシエーターがターゲット組織の組織 ID を知っている必要があります。この組織 ID にアクセスできるのは、それぞれの組織のみです。電子メールまたは別の方法で、 NetAppコンソールの外部にある開始組織と直接共有します。
+
+開始組織とは、そのリソースへのアクセスを許可する組織です。
+
+image:diagram-partnership-org-id.png["初期の組織を示す図"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"]NetAppコンソール内でパートナーシップを開始する
+[role="quick-margin-para"]
+パートナーシップを開始する組織は、 NetAppコンソール内からパートナーシップ要求を送信してパートナーシップを開始します。
+
+image:diagram-partnership-accept.png["パートナーシップの承認を示す図"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"]パートナーシップを承認する
+[role="quick-margin-para"]
+受信組織はリクエストを承認する必要があります。
+
+受信組織は、リソースへのアクセスを許可される組織です。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"]パートナーシップにユーザーを割り当てる
+[role="quick-margin-para"]
+受信側組織は、組織の特定のユーザーまたはサービス アカウントをパートナーシップに割り当てます。開始組織はこれらのユーザーにロールを割り当てます。
+
+image:diagram-partnership-add-user.png["ユーザーの割り当てを示す図"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"]割り当てられたユーザーにリソースへのアクセスを許可する
+[role="quick-margin-para"]
+開始組織の場合は、パートナーシップに割り当てられたユーザーに特定のリソースへのアクセス権を付与できます。いつでもアクセスを取り消すことができます。
+
+これは、組織内の特定のプロジェクトまたはフォルダーにロールを割り当てることによって行います。
+
+image:diagram-partnership-resources.png["リソースの共有を示す図"]

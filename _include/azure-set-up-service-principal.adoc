@@ -1,0 +1,138 @@
+= 
+:allow-uri-read: 
+
+
+. Azure で Active Directory アプリケーションを作成し、そのアプリケーションをロールに割り当てるためのアクセス許可があることを確認します。
++
+詳細については、 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure ドキュメント: 必要な権限"^]
+
+. Azure ポータルから、*Microsoft Entra ID* サービスを開きます。
++
+image:screenshot_azure_ad.png["Microsoft Azure の Active Directory サービスを表示します。"]
+
+. メニューで*アプリ登録*を選択します。
+. *新規登録*を選択します。
+. アプリケーションの詳細を指定します。
++
+** *名前*: アプリケーションの名前を入力します。
+** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプでもNetAppコンソールで使用できます)。
+** *リダイレクト URI*: このフィールドは空白のままにすることができます。
+
+
+. *登録*を選択します。
++
+AD アプリケーションとサービス プリンシパルを作成しました。
+
+
+
+. カスタム ロールを作成します。
++
+Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して、Azure カスタム ロールを作成できます。次の手順は、Azure CLI を使用してロールを作成する方法を示しています。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]
+
++
+.. の内容をコピーしますlink:reference-permissions-azure.html["コンソールエージェントのカスタムロール権限"]JSON ファイルに保存します。
+.. 割り当て可能なスコープに Azure サブスクリプション ID を追加して、JSON ファイルを変更します。
++
+ユーザーがCloud Volumes ONTAPシステムを作成する各 Azure サブスクリプションの ID を追加する必要があります。
+
++
+*例*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. JSON ファイルを使用して、Azure でカスタム ロールを作成します。
++
+次の手順では、Azure Cloud Shell で Bash を使用してロールを作成する方法について説明します。
+
++
+*** 始める https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure クラウド シェル"^]Bash 環境を選択します。
+*** JSON ファイルをアップロードします。
++
+image:screenshot_azure_shell_upload.png["ファイルをアップロードするオプションを選択できる Azure Cloud Shell のスクリーンショット。"]
+
+*** Azure CLI を使用してカスタム ロールを作成します。
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+これで、コンソール エージェント仮想マシンに割り当てることができる、コンソール オペレーターと呼ばれるカスタム ロールが作成されます。
+
+
+
+
+
+. アプリケーションをロールに割り当てます。
++
+.. Azure ポータルから、*サブスクリプション* サービスを開きます。
+.. サブスクリプションを選択します。
+.. *アクセス制御 (IAM) > 追加 > ロール割り当ての追加* を選択します。
+.. *役割*タブで、*コンソールオペレーター*役割を選択し、*次へ*を選択します。
+.. *メンバー*タブで、次の手順を実行します。
++
+*** *ユーザー、グループ、またはサービス プリンシパル*を選択したままにします。
+*** *メンバーを選択*を選択します。
++
+image:screenshot-azure-service-principal-role.png["アプリケーションにロールを追加するときにメンバー ページを表示する Azure ポータルのスクリーンショット。"]
+
+*** アプリケーションの名前を検索します。
++
+次に例を示します。
+
++
+image:screenshot_azure_service_principal_role.png["Azure ポータルの「ロールの割り当ての追加」フォームが表示された Azure ポータルのスクリーンショット。"]
+
+*** アプリケーションを選択し、[選択] を選択します。
+*** *次へ*を選択します。
+
+
+.. *レビュー + 割り当て*を選択します。
++
+これで、サービス プリンシパルに、コンソール エージェントをデプロイするために必要な Azure アクセス許可が付与されました。
+
++
+複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetAppコンソールでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
+
+
+
+
+
+. *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
+. *API 権限 > 権限の追加* を選択します。
+. *Microsoft API* の下で、*Azure Service Management* を選択します。
++
+image:screenshot_azure_service_mgmt_apis.gif["Azure サービス管理 API のアクセス許可を示す Azure ポータルのスクリーンショット。"]
+
+. *組織ユーザーとして Azure サービス管理にアクセスする* を選択し、*権限の追加* を選択します。
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Azure サービス管理 API の追加を示す Azure ポータルのスクリーンショット。"]
+
+
+
+. *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
+. *アプリケーション (クライアント) ID* と *ディレクトリ (テナント) ID* をコピーします。
++
+image:screenshot_azure_app_ids.gif["Microsoft Entra IDy 内のアプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を示すスクリーンショット。"]
+
++
+Azure アカウントをコンソールに追加するときは、アプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を指定する必要があります。コンソールは ID を使用してプログラムでサインインします。
+
+
+
+. *Microsoft Entra ID* サービスを開きます。
+. *アプリ登録*を選択し、アプリケーションを選択します。
+. *証明書とシークレット > 新しいクライアント シークレット*を選択します。
+. シークレットの説明と期間を指定します。
+. *追加*を選択します。
+. クライアント シークレットの値をコピーします。
++
+image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリンシパルのクライアント シークレットを表示する Azure ポータルのスクリーンショット。"]
+
+

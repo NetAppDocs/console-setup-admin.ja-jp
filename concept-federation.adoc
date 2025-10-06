@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: concept-federation.html 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+summary: アイデンティティ フェデレーションにより、 NetAppコンソールでのシングル サインオンが可能になり、ユーザーは企業アイデンティティの資格情報を使用してログインできるようになります。開始するには、セットアップ プロセスを確認してください。 
+---
+= NetAppコンソールでIDフェデレーションを使用してシングルサインオンを有効にする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+シングル サインオン (フェデレーション) により、ユーザーは企業の認証情報を使用してNetAppコンソールにログインできるため、ログイン プロセスが簡素化され、セキュリティが強化されます。アイデンティティ プロバイダー (IdP) またはNetAppサポート サイトを使用してシングル サインオン (SSO) を有効にできます。
+
+.必要な役割
+組織管理者、フェデレーション管理者、フェデレーション閲覧者。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+
+
+
+== NetAppサポート サイトとの ID 連携
+
+NetAppサポート サイトと連携すると、ユーザーは同じ資格情報を使用してコンソール、 Active IQ Digital Advisor、およびその他の関連アプリケーションにログインできるようになります。
+
+
+NOTE: NetAppサポート サイトと連携する場合、企業の ID 管理プロバイダーとも連携することはできません。組織に最適なものを選択してください。
+
+.手順
+. ダウンロードして完了 https://kb.netapp.com/@api/deki/files/98382/NetApp-B2C-Federation-Request-Form-April-2022.docx?revision=1["NetAppフェデレーション リクエスト フォーム"^]。
+. フォームに指定されたメールアドレスにフォームを送信します。
++
+NetAppサポート チームがお客様のリクエストを確認し、処理します。
+
+
+
+
+
+== IDプロバイダとのフェデレーション接続を設定する
+
+コンソールのシングル サインオン (SSO) を有効にするには、ID プロバイダーとのフェデレーション接続を設定できます。このプロセスでは、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成し、コンソールで接続を作成します。
+
+
+NOTE: 以前にNetApp Cloud Central (コンソールの外部アプリケーション) を使用してフェデレーションを構成した場合は、フェデレーション ページを使用してフェデレーションをインポートし、コンソール内で管理する必要があります。link:task-federation-import.html["フェデレーションをインポートする方法を学びます。"]
+
+
+
+=== サポートされているIDプロバイダー
+
+NetApp は、フェデレーション用に次のプロトコルと ID プロバイダーをサポートしています。
+
+.プロトコル
+* セキュリティアサーションマークアップ言語（SAML）IDプロバイダー
+* アクティブ ディレクトリ フェデレーション サービス (AD FS)
+
+
+.アイデンティティプロバイダー
+* Microsoft Entra ID
+* PingFederate
+
+
+
+
+=== NetAppコンソールワークフローとの連携
+
+NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成する必要があります。次に、コンソールで ID プロバイダーの構成を使用する接続を作成できます。
+
+自分のメールドメインまたは自分が所有する別のドメインと連携できます。メール ドメインとは異なるドメインとフェデレーションするには、まずそのドメインを所有していることを確認します。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]ドメインを確認する（メールドメインを使用していないとき）
+[role="quick-margin-para"]
+メール ドメインとは異なるドメインとフェデレーションするには、そのドメインを所有していることを確認します。追加の手順なしで電子メールドメインを統合できます。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]IdP を設定して、 NetApp をサービス プロバイダーとして信頼します。
+[role="quick-margin-para"]
+新しいアプリケーションを作成し、ACS URL、エンティティ ID、その他の資格情報などの詳細を指定して、 NetAppを信頼するように ID プロバイダーを構成します。サービス プロバイダー情報は ID プロバイダーによって異なるため、詳細については特定の ID プロバイダーのドキュメントを参照してください。この手順を完了するには、IdP 管理者と協力する必要があります。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"]コンソールでフェデレーション接続を作成する
+[role="quick-margin-para"]
+接続を作成するには、ID プロバイダーからの SAML メタデータ URL またはファイルを指定します。この情報は、コンソールと ID プロバイダー間の信頼関係を確立するために使用されます。提供する情報は、使用している IdP によって異なります。たとえば、Microsoft Entra ID を使用している場合は、クライアント ID、シークレット、ドメインを指定する必要があります。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["三つ"]コンソールでフェデレーションをテストする
+[role="quick-margin-para"]
+フェデレーション接続を有効にする前にテストしてください。コンソールのフェデレーション ページのテスト オプションを使用して、テスト ユーザーが正常に認証できることを確認します。テストが成功した場合は、接続を有効にできます。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["三つ"]コンソールで接続を有効にする
+[role="quick-margin-para"]
+接続を有効にすると、ユーザーは企業の資格情報を使用してコンソールにログインできるようになります。
+
+開始するには、それぞれのプロトコルまたは IdP のトピックを確認してください。
+
+* link:task-federation-adfs.html["AD FSとのフェデレーション接続を設定する"]
+* link:task-federation-entra-id.html["Microsoft Entra ID とのフェデレーション接続を設定する"]
+* link:task-federation-ping.html["PingFederateでフェデレーション接続を設定する"]
+* link:task-federation-saml.html["SAML ID プロバイダとのフェデレーション接続を設定する"]
+

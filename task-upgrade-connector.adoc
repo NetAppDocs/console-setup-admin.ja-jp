@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: task-upgrade-connector.html 
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
+summary: 標準モードまたは制限モードを使用する場合、コンソール エージェントがソフトウェア更新を取得するためのアウトバウンド インターネット アクセスを持っている限り、 NetAppコンソールはコンソール エージェントを最新リリースに自動的にアップグレードします。 
+---
+= コンソールエージェントのアップグレードを管理する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+標準モードまたは制限モードを使用する場合、コンソール エージェントがソフトウェア更新を取得するためのアウトバウンド インターネット アクセスを持っている限り、 NetAppコンソールはコンソール エージェントを最新リリースに自動的にアップグレードします。
+
+コンソール エージェントのアップグレードを手動で管理する必要がある場合は、標準モードまたは制限モードの自動アップグレードを無効にすることができます。
+
+
+
+== 自動アップグレードを無効にする
+
+コンソール エージェントの自動アップグレードを無効にするには、2 つの手順を実行します。まず、コンソール エージェントが正常で最新の状態であることを確認する必要があります。次に、構成ファイルを編集して自動アップグレードをオフにします。
+
+
+NOTE: 自動アップグレードを無効にできるのは、コンソール エージェント バージョン 3.9.48 以降を使用している場合のみです。
+
+
+
+=== エージェントの健全性を確認する
+
+エージェントが安定しており、エージェント VM 上で実行されているすべてのコンテナが正常に動作していることを確認する必要があります。自動アップグレードを無効にすると、エージェント VM は新しいサービスまたはアップグレード パッケージのチェックを停止します。
+
+コンソール エージェントを確認するには、次のいずれかのコマンドを使用します。すべてのサービスのステータスは「実行中」になっている必要があります。そうでない場合は、自動アップグレードを無効にする前にNetAppサポートにお問い合わせください。
+
+Docker (Ubuntu および VCenter のデプロイメント用)::
++
+--
+[source, cli]
+----
+docker ps -a
+----
+--
+ポッドマン::
++
+--
+[source, cli]
+----
+podman ps -a
+----
+--
+
+
+
+
+=== エージェントの自動アップグレードを無効にする
+
+自動アップグレードを無効にするには、_com/opt/application/netapp/service-manager-2/config.json_ ファイルで _isUpgradeDisabled_ フラグを設定します。デフォルトでは、このフラグは false に設定されており、エージェントは自動的にアップグレードされます。自動アップグレードを無効にするには、このフラグを true に設定できます。この手順を完了する前に、JSON 構文を理解しておく必要があります。
+
+自動アップグレードを再度有効にするには、次の手順に従い、_isUpgradeDisabled_ フラグを false に設定します。
+
+.手順
+. エージェントが最新かつ正常であることを確認してください。
+. 変更を元に戻せるように、_/opt/application/netapp/service-manager-2/config.json_ ファイルのバックアップ コピーを作成します。
+. _/opt/application/netapp/service-manager-2/config.json_ ファイルを編集し、_isUpgradeDisabled_ フラグの値を true に変更します。
++
+[source, json]
+----
+  "isUpgradeDisabled": true,
+----
+. ファイルを保存します。
+. 次のコマンドを実行して、サービス マネージャー 2 サービスを再起動します。
++
+[source, cli]
+----
+systemctl restart netapp-service-manager.service
+----
+. 次のコマンドを実行し、エージェントのステータスが _active(running)_ と表示されていることを確認します: _
++
+[source, cli]
+----
+systemctl status netapp-service-manager.service
+_
+----
+
+
+
+
+== コンソールエージェントをアップグレードする
+
+アップグレード プロセス中にコンソール エージェントを再起動する必要があるため、アップグレード中はNetAppコンソールは使用できません。
+
+.手順
+. コンソールエージェントソフトウェアを以下からダウンロードします。 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetAppサポート サイト"^] 。
+. インストーラーを Linux ホストにコピーします。
+. スクリプトを実行するための権限を割り当てます。
++
+[source, cli]
+----
+chmod +x /path/NetApp-Console-Agent-Offline-<version>
+----
++
+<version> は、ダウンロードしたコンソール エージェントのバージョンです。
+
+. インストール スクリプトを実行します。
++
+[source, cli]
+----
+sudo /path/NetApp-Console-Agent-Offline-<version>
+----
++
+ここで、<version> はダウンロードしたエージェントのバージョンです。
+
+. アップグレードが完了したら、*管理 > サポート > エージェント* に移動してエージェントのバージョンを確認できます。
+

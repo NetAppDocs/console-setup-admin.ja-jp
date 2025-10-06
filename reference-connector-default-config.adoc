@@ -1,0 +1,144 @@
+---
+sidebar: sidebar 
+permalink: reference-connector-default-config.html 
+keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
+summary: コンソール エージェントを展開する前に、コンソール エージェントの詳細を確認してください。 
+---
+= コンソールエージェントのデフォルト構成
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+コンソール エージェントを展開する前に、その構成について詳しく確認してください。
+
+
+
+== インターネットアクセスを備えたデフォルト構成
+
+次の構成の詳細は、 NetAppコンソールから、クラウド プロバイダーのマーケットプレイスからコンソール エージェントを展開した場合、またはインターネットにアクセスできるオンプレミスの Linux ホストにコンソール エージェントを手動でインストールした場合に適用されます。
+
+
+
+=== AWS の詳細
+
+コンソールまたはクラウド プロバイダーのマーケットプレイスからコンソール エージェントを展開した場合は、次の点に注意してください。
+
+* EC2 インスタンスタイプは t3.2xlarge です。
+* イメージのオペレーティング システムは Ubuntu 22.04 LTS です。
++
+オペレーティング システムには GUI が含まれていません。システムにアクセスするには端末を使用する必要があります。
+
+* インストールには、必要なコンテナ オーケストレーション ツールである Docker Engine が含まれます。
+* EC2 Linux インスタンスのユーザー名は ubuntu です (2023 年 5 月より前に作成されたエージェントの場合、ユーザー名は ec2-user でした)。
+* デフォルトのシステム ディスクは 100 GiB gp2 ディスクです。
+
+
+
+
+=== Azureの詳細
+
+コンソールまたはクラウド プロバイダーのマーケットプレイスからコンソール エージェントを展開した場合は、次の点に注意してください。
+
+* VM タイプは Standard_D8s_v3 です。
+* イメージのオペレーティング システムは Ubuntu 22.04 LTS です。
++
+オペレーティング システムには GUI が含まれていません。システムにアクセスするには端末を使用する必要があります。
+
+* インストールには、必要なコンテナ オーケストレーション ツールである Docker Engine が含まれます。
+* デフォルトのシステム ディスクは 100 GiB のプレミアム SSD ディスクです。
+
+
+
+
+=== Google Cloudの詳細
+
+コンソールからコンソール エージェントを展開した場合は、次の点に注意してください。
+
+* VM インスタンスは n2-standard-8 です。
+* イメージのオペレーティング システムは Ubuntu 22.04 LTS です。
++
+オペレーティング システムには GUI が含まれていません。システムにアクセスするには端末を使用する必要があります。
+
+* インストールには、必要なコンテナ オーケストレーション ツールである Docker Engine が含まれます。
+* デフォルトのシステム ディスクは 100 GiB SSD 永続ディスクです。
+
+
+
+
+=== インストールフォルダ
+
+エージェントのインストール フォルダーは次の場所にあります。
+
+/opt/application/netapp/cloudmanager
+
+
+
+=== ログ ファイル
+
+ログ ファイルは次のフォルダーに保存されます。
+
+* /opt/application/netapp/cloudmanager/log または
+* /opt/application/netapp/service-manager-2/logs (新しい 3.9.23 インストール以降)
++
+これらのフォルダー内のログには、コンソール エージェントに関する詳細が記録されます。
+
+* /opt/application/netapp/cloudmanager/docker_occm/data/log
++
+このフォルダー内のログには、クラウド サービスと、コンソール エージェントで実行されるコンソール サービスに関する詳細が記録されます。
+
+
+
+
+
+=== コンソールエージェントサービス
+
+* コンソール エージェント サービスの名前は occm です。
+* occm サービスは MySQL サービスに依存します。
++
+MySQL サービスがダウンしている場合は、occm サービスもダウンします。
+
+
+
+
+
+=== ポート
+
+エージェントは Linux ホスト上で次のポートを使用します。
+
+* HTTPアクセスの場合は80
+* HTTPSアクセスの場合は443
+
+
+
+
+== インターネットアクセスなしのデフォルト設定
+
+インターネットにアクセスできないオンプレミスの Linux ホストにコンソール エージェントを手動でインストールした場合は、次の構成が適用されます。link:task-quick-start-private-mode.html["このインストールオプションの詳細"] 。
+
+* エージェントのインストール フォルダーは次の場所にあります。
++
+/opt/application/netapp/ds
+
+* ログ ファイルは次のフォルダーに保存されます。
++
+/var/lib/docker/volumes/ds_occmdata/_data/log
+
++
+このフォルダー内のログには、コンソール エージェントと Docker イメージに関する詳細が記録されます。
+
+* すべてのサービスはDockerコンテナ内で実行されています
++
+サービスはdockerランタイムサービスの実行に依存しています
+
+* エージェントは Linux ホスト上で次のポートを使用します。
++
+** HTTPアクセスの場合は80
+** HTTPSアクセスの場合は443
+
+
+

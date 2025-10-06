@@ -1,0 +1,153 @@
+---
+sidebar: sidebar 
+permalink: concept-accounts-aws.html 
+keywords: cloud provider accounts, aws, aws accounts, keys, multiple accounts, permission, aws permissions, policy, policies, credentials, marketplace, subscription, replace subscription, subscription, amazon, bluexp, agent 
+summary: NetAppコンソールが AWS 認証情報を使用してユーザーに代わってアクションを実行する方法と、それらの認証情報がマーケットプレイスのサブスクリプションとどのように関連付けられるかについて説明します。これらの詳細を理解しておくと、コンソールで 1 つ以上の AWS アカウントの認証情報を管理するときに役立ちます。たとえば、コンソールに追加の AWS 認証情報を追加するタイミングについて学習したい場合があります。 
+---
+= NetAppコンソールの AWS 認証情報と権限について学習します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールが AWS 認証情報を使用してユーザーに代わってアクションを実行する方法と、それらの認証情報がマーケットプレイスのサブスクリプションとどのように関連付けられるかについて説明します。これらの詳細を理解しておくと、 NetAppコンソールで 1 つ以上の AWS アカウントの認証情報を管理するときに役立ちます。たとえば、追加の AWS 認証情報をいつ追加する必要があるかについて学習したい場合があります。
+
+
+
+== 初期AWS認証情報
+
+コンソールからコンソールエージェントをデプロイする場合は、IAM ロールの ARN または IAM ユーザーのアクセスキーを指定する必要があります。認証方法には、AWS にコンソールをデプロイするための権限が必要です。必要な権限は、link:task-install-connector-aws-the Console.html#console-permissions-aws[AWS のエージェント展開ポリシー]に記載されています。
+
+コンソールが AWS でコンソールエージェントインスタンスを起動すると、インスタンスの IAM ロールとインスタンスプロファイルが作成されます。また、コンソールエージェントにその AWS アカウント内のリソースとプロセスを管理するための権限を付与するポリシーも添付します。link:reference-permissions-aws.html["コンソールが権限をどのように使用するかを確認します"] 。
+
+image:diagram_permissions_initial_aws.png["コンソールが AWS アカウントにコンソールエージェントを展開する様子を示す概念図。  IAM ポリシーは IAM ロールに割り当てられ、コンソール インスタンスにアタッチされます。"]
+
+新しいCloud Volumes ONTAPシステムを追加すると、コンソールはデフォルトで次の AWS 認証情報を選択します。
+
+image:screenshot_accounts_select_aws.gif["詳細と資格情報ページのアカウントの切り替えオプションを示すスクリーンショット。"]
+
+初期の AWS 認証情報を使用してすべてのCloud Volumes ONTAPシステムを展開するか、追加の認証情報を追加することができます。
+
+
+
+== 追加のAWS認証情報
+
+次の場合には、コンソールに追加の AWS 認証情報を追加する必要があるかもしれません。
+
+* 既存のコンソールエージェントを追加のAWSアカウントで使用するには
+* 特定のAWSアカウントに新しいエージェントを作成するには
+* FSx for ONTAPファイルシステムを作成および管理するには
+
+
+詳細については、以下のセクションを確認してください。
+
+
+
+=== 別の AWS アカウントでコンソールエージェントを使用するには、AWS 認証情報を追加します。
+
+追加の AWS アカウントでコンソールを使用する場合は、IAM ユーザーの AWS キーまたは信頼できるアカウントのロールの ARN を提供できます。次の図は、信頼できるアカウントの IAM ロールを通じて権限を付与するアカウントと、IAM ユーザーの AWS キーを通じて権限を付与するアカウントの 2 つの追加アカウントを示しています。
+
+image:diagram_permissions_multiple_aws.png["2 つの追加アカウントを示す概念図。それぞれに IAM ポリシーがあり、1 つは IAM ユーザーに接続され、もう 1 つは IAM ロールに接続されます。"]
+
+次に、IAM ロールの Amazon リソースネーム (ARN) または IAM ユーザーの AWS キーを指定して、アカウント認証情報をコンソールに追加します。
+
+たとえば、新しいCloud Volumes ONTAPシステムを作成するときに、資格情報を切り替えることができます。
+
+image:screenshot_accounts_switch_aws.png["詳細と資格情報ページでアカウントの切り替えを選択した後、クラウド プロバイダー アカウントを選択する様子を示すスクリーンショット。"]
+
+link:task-adding-aws-accounts.html#add-credentials-agent-aws["既存のエージェントに AWS 認証情報を追加する方法を学びます。"]
+
+
+
+=== コンソールエージェントを作成するにはAWS認証情報を追加します
+
+コンソールに新しい AWS 認証情報を追加すると、コンソールエージェントを作成するために必要な権限が付与されます。
+
+link:task-adding-aws-accounts.html#add-credentials-agent-aws["コンソールエージェントを作成するためにコンソールにAWS認証情報を追加する方法を学びます"]
+
+
+
+=== FSx for ONTAPに AWS 認証情報を追加する
+
+FSx for ONTAPシステムを作成および管理するために必要な権限を付与するには、コンソールに AWS 認証情報を追加します。
+
+https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAPのコンソールに AWS 認証情報を追加する方法を学びます"^]
+
+
+
+== 資格情報とマーケットプレイスのサブスクリプション
+
+コンソールエージェントに追加する認証情報は、AWS Marketplace サブスクリプションに関連付ける必要があります。これにより、 Cloud Volumes ONTAPの料金を時間単位 (PAYGO) で支払うことができ、その他のNetAppデータ サービスに対しても、年間契約で支払うことができます。link:task-adding-aws-accounts.html#subscribe["AWSサブスクリプションを関連付ける方法を学ぶ"] 。
+
+AWS 認証情報とマーケットプレイスサブスクリプションについては、次の点に注意してください。
+
+* AWS 認証情報のセットに関連付けることができるのは、1 つの AWS Marketplace サブスクリプションのみです。
+* 既存のマーケットプレイスサブスクリプションを新しいサブスクリプションに置き換えることができます
+
+
+
+
+== FAQ
+
+次の質問は、資格情報とサブスクリプションに関連しています。
+
+
+
+=== AWS 認証情報を安全にローテーションするにはどうすればよいですか?
+
+上のセクションで説明したように、コンソールでは、コンソールエージェントインスタンスに関連付けられた IAM ロール、信頼できるアカウントでの IAM ロールの引き受け、または AWS アクセスキーの提供など、いくつかの方法で AWS 認証情報を提供できます。
+
+最初の 2 つのオプションでは、コンソールは AWS セキュリティ トークン サービスを使用して、常にローテーションする一時的な認証情報を取得します。このプロセスはベストプラクティスであり、自動かつ安全です。
+
+コンソールに AWS アクセスキーを提供する場合は、コンソールで定期的にキーを更新してキーをローテーションする必要があります。これは完全に手動のプロセスです。
+
+
+
+=== Cloud Volumes ONTAPシステムの AWS Marketplace サブスクリプションを変更できますか?
+
+はい、できます。認証情報セットに関連付けられている AWS Marketplace サブスクリプションを変更すると、既存および新規のすべてのCloud Volumes ONTAPシステムに新しいサブスクリプションの料金が課金されます。
+
+link:task-adding-aws-accounts.html#subscribe["AWSサブスクリプションを関連付ける方法を学ぶ"] 。
+
+
+
+=== それぞれ異なるマーケットプレイスサブスクリプションを持つ複数の AWS 認証情報を追加できますか?
+
+同じ AWS アカウントに属するすべての AWS 認証情報は、同じ AWS Marketplace サブスクリプションに関連付けられます。
+
+異なる AWS アカウントに属する複数の AWS 認証情報がある場合、それらの認証情報は、同じ AWS Marketplace サブスクリプションまたは異なるサブスクリプションに関連付けることができます。
+
+
+
+=== 既存のCloud Volumes ONTAPシステムを別の AWS アカウントに移動できますか?
+
+いいえ、 Cloud Volumes ONTAPシステムに関連付けられている AWS リソースを別の AWS アカウントに移動することはできません。
+
+
+
+=== マーケットプレイスの展開とオンプレミスの展開では資格情報はどのように機能しますか?
+
+上記のセクションでは、コンソールからのコンソール エージェントの推奨展開方法について説明しています。  AWS Marketplace から AWS にエージェントをデプロイし、独自の Linux ホストにコンソールエージェントソフトウェアを手動でインストールすることもできます。
+
+Marketplace を使用する場合も、同様の方法で権限が提供されます。  IAM ロールを手動で作成して設定し、追加のアカウントに権限を付与するだけです。
+
+オンプレミス展開の場合、コンソールに IAM ロールを設定することはできませんが、AWS アクセスキーを使用して権限を付与することはできます。
+
+権限の設定方法については、次のページを参照してください。
+
+* 標準モード
++
+** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["AWS Marketplace デプロイメントの権限を設定する"]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
+
+
+* 制限モード
++
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["制限モードの権限を設定する"]
+
+
+

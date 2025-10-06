@@ -1,0 +1,150 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-predefined-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, access roles, rbac, bluexp 
+summary: NetAppコンソールの ID およびアクセス管理には、組織のメンバーに割り当てることができる定義済みのロールが含まれています。 
+---
+= NetAppコンソールのアクセスロールについて学ぶ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールの ID およびアクセス管理 (IAM) では、リソース階層のさまざまなレベルにわたって組織のメンバーに割り当てることができる定義済みのロールが提供されます。これらのロールを割り当てる前に、各ロールに含まれる権限を理解しておく必要があります。ロールは、プラットフォーム、アプリケーション、データ サービスというカテゴリに分類されます。
+
+
+
+== プラットフォームの役割
+
+プラットフォーム ロールは、ロールの割り当てやユーザー管理などのNetAppコンソール管理権限を付与します。コンソールにはいくつかのプラットフォーム ロールがあります。
+
+[cols="1,2"]
+|===
+| プラットフォームの役割 | 責任 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["組織管理者"] | ユーザーは、組織内のすべてのプロジェクトとフォルダに無制限にアクセスでき、任意のプロジェクトまたはフォルダにメンバーを追加できるほか、任意のタスクを実行したり、明示的にロールが関連付けられていない任意のデータ サービスを使用したりできます。このロールを持つユーザーは、適切な資格情報を持っている場合、フォルダーとプロジェクトの作成、ロールの割り当て、ユーザーの追加、システムの管理を行うことで組織を管理します。これは、コンソール エージェントを作成できる唯一のアクセス ロールです。 
+
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["フォルダまたはプロジェクトの管理者"] | 割り当てられたプロジェクトとフォルダーへのユーザーの無制限アクセスを許可します。管理するフォルダーまたはプロジェクトにメンバーを追加できるほか、割り当てられたフォルダーまたはプロジェクト内のリソースに対して任意のタスクを実行したり、任意のデータ サービスやアプリケーションを使用したりすることもできます。フォルダーまたはプロジェクト管理者はコンソール エージェントを作成できません。 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["連盟管理者"] | ユーザーがコンソールを使用してフェデレーションを作成および管理し、シングル サインオン (SSO) を有効にすることを許可します。 
+
+
+| link:reference-iam-platform-roles.html#federation-roles["連盟ビューア"] | ユーザーがコンソールを使用して既存のフェデレーションを表示できるようにします。フェデレーションを作成または管理できません。 
+
+
+| link:reference-iam-platform-roles.html#partnership-roles["パートナーシップ管理者"] | ユーザーがパートナーシップを作成および管理できるようにします。 
+
+
+| link:reference-iam-platform-roles.html#partnership-roles["パートナーシップビューアー"] | ユーザーが既存のパートナーシップを表示できるようにします。パートナーシップを作成または管理することはできません。 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["スーパー管理者"] | ユーザーに管理者ロールのサブセットを付与します。この役割は、コンソールの責任を複数のユーザーに分散する必要がない小規模な組織向けに設計されています。 
+
+
+| link:reference-iam-platform-roles.html#super-admin-roles["スーパービューアー"] | ユーザーにサブセット閲覧者ロールを付与します。この役割は、コンソールの責任を複数のユーザーに分散する必要がない小規模な組織向けに設計されています。 
+|===
+
+
+== アプリケーションロール
+
+以下は、アプリケーション カテゴリ内のロールの一覧です。各ロールは、指定された範囲内で特定の権限を付与します。必要なアプリケーションまたはプラットフォームのロールを持たないユーザーは、それぞれのアプリケーションにアクセスできません。
+
+[cols="1,2"]
+|===
+| アプリケーションロール | 責任 
+
+
+| link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes管理者"] | Google Cloud NetApp Volumesロールを持つユーザーは、Google Cloud NetApp Volumes を検出して管理できます。 
+
+
+| link:reference-iam-keystone-roles.html["Keystone管理者"] | Keystone管理者ロールを持つユーザーは、サービス リクエストを作成できます。ユーザーがアクセスしているKeystoneテナント内の使用状況、リソース、および管理の詳細を監視および表示できるようにします。 
+
+
+| link:reference-iam-keystone-roles.html["Keystoneビューア"] | Keystoneビューア ロールを持つユーザーは、サービス リクエストを作成できません。ユーザーがアクセスしているKeystoneテナント内の消費量、資産、管理情報を監視および表示できるようにします。 
+
+
+| ONTAPメディエーターのセットアップロール | ONTAP Mediator セットアップ ロールを持つサービス アカウントは、サービス リクエストを作成できます。このロールは、サービスアカウントでインスタンスを構成するために必要です。link:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html["ONTAPクラウドメディエーター"^] 。 
+
+
+| link:reference-iam-analyst-roles.html["オペレーションサポートアナリスト"] | アラートおよび監視ツールへのアクセスと、サポートケースの入力および管理機能を提供します。 
+
+
+| link:reference-iam-storage-roles.html["Storage Admin"] | ストレージの健全性とガバナンス機能を管理し、ストレージ リソースを検出し、既存のシステムを変更および削除します。 
+
+
+| link:reference-iam-storage-roles.html["ストレージビューア"] | ストレージの健全性とガバナンス機能を表示し、以前に検出されたストレージ リソースも表示します。既存のストレージ システムを検出、変更、または削除することはできません。 
+
+
+| link:reference-iam-storage-roles.html["システムヘルススペシャリスト"] | ストレージとヘルスおよびガバナンス機能を管理します。ストレージ管理者のすべての権限がありますが、既存のシステムを変更または削除することはできません。 
+|===
+
+
+== データサービスの役割
+
+以下は、データ サービス カテゴリのロールの一覧です。各ロールは、指定された範囲内で特定の権限を付与します。必要なデータ サービス ロールまたはプラットフォーム ロールを持たないユーザーは、データ サービスにアクセスできません。
+
+[cols="10,24"]
+|===
+| データサービスの役割 | 責任 
+
+
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリのスーパー管理者"] | NetApp Backup and Recovery で任意のアクションを実行します。 
+
+
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリの管理者"] | ローカル スナップショットへのバックアップ、セカンダリ ストレージへの複製、オブジェクト ストレージへのバックアップを実行します。 
+
+
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリの復元管理者"] | バックアップとリカバリでワークロードを復元します。 
+
+
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリのクローン管理者"] | バックアップとリカバリでアプリケーションとデータを複製します。 
+
+
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリビューア"] | バックアップとリカバリの情報を表示します。 
+
+
+| link:reference-iam-disaster-rec-roles.html["災害復旧管理者"] | NetAppディザスタ リカバリ サービスで任意のアクションを実行します。 
+
+
+| link:reference-iam-disaster-rec-roles.html["災害復旧フェイルオーバー管理者"] | フェイルオーバーと移行を実行します。 
+
+
+| link:reference-iam-disaster-rec-roles.html["災害復旧アプリケーション管理者"] | レプリケーション プランを作成し、レプリケーション プランを変更し、テスト フェイルオーバーを開始します。 
+
+
+| link:reference-iam-disaster-rec-roles.html["災害復旧ビューア"] | 情報の表示のみ。 
+
+
+| 分類ビューア | ユーザーがNetAppデータ分類スキャン結果を表示できるようにします。このロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つリソースのレポートを生成できます。これらのユーザーは、ボリューム、バケット、またはデータベース スキーマのスキャンを有効または無効にすることはできません。分類には閲覧者の役割はありません。 
+
+
+| link:reference-iam-ransomware-roles.html["ランサムウェア耐性管理者"] | NetApp Ransomware Resilience の「保護」、「アラート」、「回復」、「設定」、「レポート」タブでアクションを管理します。 
+
+
+| link:reference-iam-ransomware-roles.html["ランサムウェア耐性ビューア"] | ランサムウェア耐性で、ワークロード データを表示し、アラート データを表示し、回復データをダウンロードし、レポートをダウンロードします。 
+
+
+| link:reference-iam-ransomware-roles.html["ランサムウェア耐性ユーザー行動管理者"] | Ransomware Resilience で、疑わしいユーザー行動の検出、アラート、監視を構成、管理、表示します。 
+
+
+| link:reference-iam-ransomware-roles.html["ランサムウェア耐性ユーザー行動ビューア"] | ランサムウェア耐性で疑わしいユーザー行動のアラートと分析情報を表示します。 
+
+
+| SnapCenter管理者 | NetApp Backup and Recovery for Applications を使用してオンプレミスのONTAPクラスターからスナップショットをバックアップする機能を提供します。このロールを持つメンバーは、次のアクションを実行できます。 * [バックアップとリカバリ] > [アプリケーション] から任意のアクションを実行する * 権限を持つプロジェクトおよびフォルダ内のすべてのシステムを管理する * すべてのNetAppコンソール サービスを使用するSnapCenterには、閲覧者ロールはありません。 
+|===
+
+
+== 関連リンク
+
+* link:concept-identity-and-access-management.html["NetAppコンソールのアイデンティティとアクセス管理について学ぶ"]
+* link:task-iam-get-started.html["NetAppコンソールIAMを使い始める"]
+* link:task-iam-manage-members-permissions.html["NetAppコンソールのメンバーとその権限を管理する"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["NetAppコンソールIAMのAPIについて学ぶ"^]
+

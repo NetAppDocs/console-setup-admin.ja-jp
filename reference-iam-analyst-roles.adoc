@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-analyst-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: NetAppコンソールの ID およびアクセス管理は、監視とサポート ケースを支援するサポート アナリストの役割を提供します。 
+---
+= NetAppコンソールの運用サポートアナリスト アクセス ロール
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+アラートと監視へのアクセスを提供するために、ユーザーに次のロールを割り当てることができます。この役割を持つユーザーはサポートケースを開くこともできます。
+
+
+
+== 運用サポートアナリスト
+
+[cols="1,2"]
+|===
+| Task | 実行できる 
+
+
+| 設定 > 資格情報から自分のユーザー資格情報を管理します | はい 
+
+
+| 発見されたリソースを表示する | はい 
+
+
+| コンソールからサポートに登録し、ケースを送信します | はい 
+
+
+| はい | 監査ページと通知を表示する 
+
+
+| はい | アラートの表示、ダウンロード、設定 
+|===

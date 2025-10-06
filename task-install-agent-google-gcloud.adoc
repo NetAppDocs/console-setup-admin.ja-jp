@@ -1,0 +1,472 @@
+---
+sidebar: sidebar 
+permalink: task-install-agent-google-gcloud.html 
+keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
+summary: Google Cloud を使用して Google Cloud にコンソール エージェントを作成するには、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。 
+---
+= Google Cloud からコンソール エージェントを作成する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Google Cloud を使用して Google Cloud にコンソール エージェントを作成するには、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。
+
+.開始する前に
+* あなたはlink:concept-connectors.html["コンソールエージェントの理解"]。
+* 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
+
+
+
+
+== ステップ1: ネットワークを設定する
+
+コンソール エージェントがリソースを管理し、ターゲット ネットワークおよびインターネットに接続できるようにネットワークを設定します。
+
+VPCとサブネット:: コンソール エージェントを作成するときは、そのエージェントが存在する VPC とサブネットを指定する必要があります。
+
+
+ターゲットネットワークへの接続:: コンソール エージェントには、システムを作成および管理する予定の場所へのネットワーク接続が必要です。たとえば、オンプレミス環境にCloud Volumes ONTAPシステムまたはストレージ システムを作成する予定のネットワークなどです。
+
+
+アウトバウンドインターネットアクセス:: コンソール エージェントを展開するネットワークの場所には、特定のエンドポイントに接続するための送信インターネット接続が必要です。
+
+
+コンソールエージェントから接続されたエンドポイント:: コンソール エージェントは、日常業務でパブリック クラウド環境内のリソースとプロセスを管理するために、次のエンドポイントに接続するために、送信インターネット アクセスを必要とします。
++
+--
+以下にリストされているエンドポイントはすべて CNAME エントリです。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+ a| 
+Google Cloud 内のリソースを管理します。
+
+
+
+ a| 
+\https://mysupport.netapp.com
+ a| 
+ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
+\https://signin.b2c.netapp.com
+ a| 
+NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+ a| 
+NetAppコンソール内で機能とサービスを提供します。
+
+
+
+ a| 
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+ a| 
+コンソール エージェントのアップグレード用のイメージを取得します。
+
+* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
++
+以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
+
+* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
+
+
+|===
+--
+
+
+NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetAppコンソールを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
++
+--
+link:reference-networking-saas-console.html["NetAppコンソールから接続されたエンドポイントのリストを表示します"] 。
+
+--
+
+
+プロキシ サーバ:: NetApp は明示的プロキシ構成と透過的プロキシ構成の両方をサポートしています。透過プロキシを使用している場合は、プロキシ サーバーの証明書のみを提供する必要があります。明示的なプロキシを使用している場合は、IP アドレスと資格情報も必要になります。
++
+--
+* IPアドレス
+* Credentials
+* HTTPS証明書
+
+
+--
+
+
+ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
++
+--
+* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
+* アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
++
+Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するためのアウトバウンド インターネット接続がない場合、コンソールは、コンソール エージェントに含まれているプロキシ サーバーを使用するようにそれらのシステムを自動的に構成します。唯一の要件は、コンソール エージェントのセキュリティ グループがポート 3128 経由の受信接続を許可していることを確認することです。コンソール エージェントを展開した後、このポートを開く必要があります。
+
+
+
+--
+
+
+NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
++
+--
+コンソール エージェントを作成した後、このネットワーク要件を実装します。
+
+--
+
+
+
+
+== ステップ2: コンソールエージェントを作成するための権限を設定する
+
+Google Cloud ユーザーが Google Cloud からコンソール エージェント VM をデプロイするための権限を設定します。
+
+.手順
+. Google プラットフォームでカスタムロールを作成します。
++
+.. 次の権限を含む YAML ファイルを作成します。
++
+[source, yaml]
+----
+title: Console agent deployment policy
+description: Permissions for the user who deploys the NetApp Console agent
+stage: GA
+includedPermissions:
+- compute.disks.create
+- compute.disks.get
+- compute.disks.list
+- compute.disks.setLabels
+- compute.disks.use
+- compute.firewalls.create
+- compute.firewalls.delete
+- compute.firewalls.get
+- compute.firewalls.list
+- compute.globalOperations.get
+- compute.images.get
+- compute.images.getFromFamily
+- compute.images.list
+- compute.images.useReadOnly
+- compute.instances.attachDisk
+- compute.instances.create
+- compute.instances.get
+- compute.instances.list
+- compute.instances.setDeletionProtection
+- compute.instances.setLabels
+- compute.instances.setMachineType
+- compute.instances.setMetadata
+- compute.instances.setTags
+- compute.instances.start
+- compute.instances.updateDisplayDevice
+- compute.machineTypes.get
+- compute.networks.get
+- compute.networks.list
+- compute.networks.updatePolicy
+- compute.projects.get
+- compute.regions.get
+- compute.regions.list
+- compute.subnetworks.get
+- compute.subnetworks.list
+- compute.zoneOperations.get
+- compute.zones.get
+- compute.zones.list
+- deploymentmanager.compositeTypes.get
+- deploymentmanager.compositeTypes.list
+- deploymentmanager.deployments.create
+- deploymentmanager.deployments.delete
+- deploymentmanager.deployments.get
+- deploymentmanager.deployments.list
+- deploymentmanager.manifests.get
+- deploymentmanager.manifests.list
+- deploymentmanager.operations.get
+- deploymentmanager.operations.list
+- deploymentmanager.resources.get
+- deploymentmanager.resources.list
+- deploymentmanager.typeProviders.get
+- deploymentmanager.typeProviders.list
+- deploymentmanager.types.get
+- deploymentmanager.types.list
+- resourcemanager.projects.get
+- compute.instances.setServiceAccount
+- iam.serviceAccounts.list
+----
+.. Google Cloud から Cloud Shell を有効にします。
+.. 必要な権限を含む YAML ファイルをアップロードします。
+.. カスタムロールを作成するには、 `gcloud iam roles create`指示。
++
+次の例では、プロジェクト レベルで「connectorDeployment」という名前のロールを作成します。
+
++
+gcloud iam ロール コネクタデプロイメントを作成 --project=myproject --file=connector-deployment.yaml
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud ドキュメント: カスタムロールの作成と管理"^]
+
+
+
+. このカスタムロールを、Google Cloud からコンソール エージェントをデプロイするユーザーに割り当てます。
++
+https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Google Cloud ドキュメント: 単一のロールを付与する"^]
+
+
+
+
+
+== ステップ3: コンソールエージェント操作の権限を設定する
+
+Google Cloud 内のリソースを管理するためにコンソールが必要とする権限をコンソール エージェントに付与するには、Google Cloud サービス アカウントが必要です。コンソール エージェントを作成するときは、このサービス アカウントをコンソール エージェント VM に関連付ける必要があります。
+
+以降のリリースで新しい権限が追加された場合、カスタム ロールを更新するのはお客様の責任となります。新しい権限が必要な場合は、リリース ノートに記載されます。
+
+.手順
+. Google Cloud でカスタムロールを作成します。
++
+.. 以下の内容を含むYAMLファイルを作成します。link:reference-permissions-gcp.html["コンソールエージェントのサービスアカウント権限"] 。
+.. Google Cloud から Cloud Shell を有効にします。
+.. 必要な権限を含む YAML ファイルをアップロードします。
+.. カスタムロールを作成するには、 `gcloud iam roles create`指示。
++
+次の例では、プロジェクト レベルで「connector」という名前のロールを作成します。
+
++
+`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud ドキュメント: カスタムロールの作成と管理"^]
+
+
+
+. Google Cloud でサービス アカウントを作成し、そのサービス アカウントにロールを割り当てます。
++
+.. IAM & Admin サービスから、*サービス アカウント > サービス アカウントの作成* を選択します。
+.. サービス アカウントの詳細を入力し、[作成して続行] を選択します。
+.. 作成したロールを選択します。
+.. 残りの手順を完了してロールを作成します。
++
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud ドキュメント: サービス アカウントの作成"^]
+
+
+
+. コンソール エージェントが存在するプロジェクトとは異なるプロジェクトにCloud Volumes ONTAPシステムを展開する予定の場合は、コンソール エージェントのサービス アカウントにそれらのプロジェクトへのアクセス権を付与する必要があります。
++
+たとえば、コンソール エージェントがプロジェクト 1 にあり、プロジェクト 2 にCloud Volumes ONTAPシステムを作成するとします。プロジェクト 2 のサービス アカウントにアクセス権を付与する必要があります。
+
++
+.. IAM & Admin サービスから、 Cloud Volumes ONTAPシステムを作成する Google Cloud プロジェクトを選択します。
+.. *IAM* ページで、*アクセスを許可* を選択し、必要な詳細を入力します。
++
+*** コンソール エージェントのサービス アカウントの電子メールを入力します。
+*** コンソール エージェントのカスタム ロールを選択します。
+*** *保存*を選択します。
+
+
+
+
++
+詳細については、 https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Google Cloud ドキュメント"^]
+
+
+
+
+
+== ステップ4: 共有VPC権限を設定する
+
+共有 VPC を使用してリソースをサービス プロジェクトにデプロイする場合は、権限を準備する必要があります。
+
+この表は参考用であり、IAM 構成が完了すると、環境に権限表が反映されるはずです。
+
+.共有 VPC 権限を表示する
+[%collapsible]
+====
+[cols="10,10,10,18,18,34"]
+|===
+| 身元 | クリエイター | 開催地 | サービスプロジェクトの権限 | ホストプロジェクトの権限 | 目的 
+
+
+| エージェントを展開するためのGoogleアカウント | カスタム | 奉仕プロジェクト  a| 
+link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["エージェント展開ポリシー"]
+ a| 
+compute.networkUser
+| サービスプロジェクトにエージェントをデプロイする 
+
+
+| エージェントサービスアカウント | カスタム | 奉仕プロジェクト  a| 
+link:reference-permissions-gcp.html["エージェントサービスアカウントポリシー"]
+| compute.networkUser デプロイメントマネージャー.エディター | サービス プロジェクトでCloud Volumes ONTAPとサービスをデプロイおよび保守する 
+
+
+| Cloud Volumes ONTAPサービス アカウント | カスタム | 奉仕プロジェクト | storage.admin メンバー: serviceAccount.user としてのNetAppコンソール サービス アカウント | 該当なし | （オプション） NetApp Cloud TieringおよびNetApp Backup and Recoveryの場合 
+
+
+| Google API サービス エージェント | Google Cloud | 奉仕プロジェクト  a| 
+(デフォルト) エディター
+ a| 
+compute.networkUser
+| デプロイメントに代わって Google Cloud API と対話します。コンソールが共有ネットワークを使用できるようにします。 
+
+
+| Google Compute Engine のデフォルトのサービス アカウント | Google Cloud | 奉仕プロジェクト  a| 
+(デフォルト) エディター
+ a| 
+compute.networkUser
+| デプロイメントに代わって、Google Cloud インスタンスとコンピューティング インフラストラクチャをデプロイします。コンソールが共有ネットワークを使用できるようにします。 
+|===
+注：
+
+. ファイアウォール ルールをデプロイメントに渡さず、コンソールで自動的に作成するように選択した場合にのみ、ホスト プロジェクトで deploymentmanager.editor が必要になります。ルールが指定されていない場合、 NetAppコンソールは、VPC0 ファイアウォール ルールを含むデプロイメントをホスト プロジェクトに作成します。
+. firewall.create と firewall.delete は、デプロイメントにファイアウォール ルールを渡さず、コンソールで自動的に作成するように選択した場合にのみ必要です。これらの権限は、コンソール アカウントの .yaml ファイルにあります。共有 VPC を使用して HA ペアを展開する場合、これらの権限は VPC1、2、3 のファイアウォール ルールを作成するために使用されます。他のすべてのデプロイメントでは、これらの権限は VPC0 のルールの作成にも使用されます。
+. クラウド階層化の場合、階層化サービス アカウントには、プロジェクト レベルだけでなく、サービス アカウントに対する serviceAccount.user ロールが必要です。現在、プロジェクト レベルで serviceAccount.user を割り当てると、getIAMPolicy を使用してサービス アカウントをクエリしても権限が表示されません。
+
+
+====
+
+
+== ステップ5: Google Cloud APIを有効にする
+
+Console エージェントとCloud Volumes ONTAP をデプロイする前に、いくつかの Google Cloud API を有効にします。
+
+.手順
+. プロジェクトで次の Google Cloud API を有効にします。
++
+** クラウド デプロイメント マネージャー V2 API
+** クラウドロギングAPI
+** クラウド リソース マネージャー API
+** コンピューティングエンジン API
+** アイデンティティとアクセス管理 (IAM) API
+** クラウド キー管理サービス (KMS) API
++
+（顧客管理暗号化キー（CMEK）を使用したNetApp Backup and Recovery を使用する予定の場合のみ必要）
+
+
+
+
+
+https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud ドキュメント: API の有効化"^]
+
+
+
+== ステップ6: コンソールエージェントを作成する
+
+Google Cloud を使用してコンソール エージェントを作成します。
+
+コンソール エージェントを作成すると、デフォルト構成で Google Cloud に VM インスタンスがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。link:reference-connector-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
+
+.開始する前に
+次のものが必要です:
+
+* コンソール エージェントとコンソール エージェント VM のサービス アカウントを作成するために必要な Google Cloud 権限。
+* ネットワーク要件を満たす VPC とサブネット。
+* VM インスタンスの要件を理解していること。
++
+** *CPU*: 8 コアまたは 8 vCPU
+** *RAM*: 32 GB
+** *マシンタイプ*: n2-standard-8 を推奨します。
++
+Console エージェントは、Shielded VM 機能をサポートする OS を搭載した VM インスタンス上の Google Cloud でサポートされます。
+
+
+
+
+
+.手順
+. お好みの方法で Google Cloud SDK にログインします。
++
+この例では、gcloud SDK がインストールされたローカル シェルを使用していますが、Google Cloud Shell を使用することもできます。
+
++
+Google Cloud SDKの詳細については、link:https://cloud.google.com/sdk["Google Cloud SDK ドキュメント ページ"^] 。
+
+. 上記のセクションで定義されている必要な権限を持つユーザーとしてログインしていることを確認します。
++
+[source, bash]
+----
+gcloud auth list
+----
++
+出力には次のように表示されます。* ユーザー アカウントは、ログインに使用するユーザー アカウントです。
+
++
+[listing]
+----
+Credentialed Accounts
+ACTIVE  ACCOUNT
+     some_user_account@domain.com
+*    desired_user_account@domain.com
+To set the active account, run:
+ $ gcloud config set account `ACCOUNT`
+Updates are available for some Cloud SDK components. To install them,
+please run:
+$ gcloud components update
+----
+. 実行 `gcloud compute instances create`指示：
++
+[source, bash]
+----
+gcloud compute instances create <instance-name>
+  --machine-type=n2-standard-8
+  --image-project=netapp-cloudmanager
+  --image-family=cloudmanager
+  --scopes=cloud-platform
+  --project=<project>
+  --service-account=<service-account>
+  --zone=<zone>
+  --no-address
+  --tags <network-tag>
+  --network <network-path>
+  --subnet <subnet-path>
+  --boot-disk-kms-key <kms-key-path>
+----
++
+インスタンス名:: VM インスタンスの希望するインスタンス名。
+プロジェクト:: (オプション) VM をデプロイするプロジェクト。
+サービスアカウント:: 手順 2 の出力で指定されたサービス アカウント。
+ゾーン:: VMを展開するゾーン
+住所なし:: (オプション) 外部 IP アドレスは使用されません (トラフィックをパブリック インターネットにルーティングするには、クラウド NAT またはプロキシが必要です)
+ネットワークタグ:: (オプション) ネットワーク タグ付けを追加して、タグを使用してファイアウォール ルールをコンソール エージェント インスタンスにリンクします。
+ネットワークパス:: (オプション) コンソールエージェントをデプロイするネットワークの名前を追加します (共有 VPC の場合はフルパスが必要です)
+サブネットパス:: (オプション) コンソールエージェントをデプロイするサブネットの名前を追加します (共有 VPC の場合はフルパスが必要です)
+kmsキーパス:: (オプション) コンソール エージェントのディスクを暗号化するための KMS キーを追加します (IAM 権限も適用する必要があります)
++
+--
+これらの旗の詳細については、link:https://cloud.google.com/sdk/gcloud/reference/compute/instances/create["Google Cloud Compute SDK ドキュメント"^] 。
+
+--
+
+
++
+コマンドを実行すると、コンソール エージェントがデプロイされます。コンソール エージェント インスタンスとソフトウェアは、約 5 分以内に実行されるはずです。
+
+. Web ブラウザを開き、コンソール エージェント ホストの URL を入力します。
++
+コンソール ホスト URL は、ホストの構成に応じて、ローカルホスト、プライベート IP アドレス、またはパブリック IP アドレスになります。たとえば、コンソール エージェントがパブリック IP アドレスのないパブリック クラウドにある場合は、コンソール エージェント ホストに接続しているホストのプライベート IP アドレスを入力する必要があります。
+
+. ログイン後、コンソール エージェントを設定します。
++
+.. コンソール エージェントに関連付けるコンソール組織を指定します。
++
+link:concept-identity-and-access-management.html["アイデンティティとアクセス管理について学ぶ"] 。
+
+.. システムの名前を入力します。
+
+
+
+
+.結果
+コンソール エージェントがインストールされ、コンソール組織に設定されました。
+
+ウェブブラウザを開いて、 https://console.netapp.com["NetAppコンソール"^]コンソール エージェントの使用を開始します。

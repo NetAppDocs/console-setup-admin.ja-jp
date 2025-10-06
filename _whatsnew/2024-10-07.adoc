@@ -1,0 +1,85 @@
+= BlueXPアイデンティティおよびアクセス管理
+:allow-uri-read: 
+
+
+
+
+=== BlueXPアイデンティティおよびアクセス管理
+
+BlueXP ID およびアクセス管理 (IAM) は、 BlueXP を標準モードで使用するときにBlueXPアカウントによって提供されていた以前の機能を置き換え、強化する新しいリソースおよびアクセス管理モデルです。
+
+BlueXP IAM は、リソースと権限のよりきめ細かな管理を提供します。
+
+* 最上位の組織を使用すると、さまざまなプロジェクト間のアクセスを管理できます。
+* _フォルダー_を使用すると、関連するプロジェクトをグループ化できます。
+* 強化されたリソース管理により、リソースを 1 つ以上のフォルダーまたはプロジェクトに関連付けることができます。
++
+たとえば、 Cloud Volumes ONTAPシステムを複数のプロジェクトに関連付けることができます。
+
+* 強化されたアクセス管理により、組織階層のさまざまなレベルのメンバーにロールを割り当てることができます。
+
+
+これらの機能強化により、ユーザーが実行できるアクションやアクセスできるリソースをより適切に制御できるようになります。
+
+.BlueXP IAMが既存のアカウントに与える影響
+BlueXPにログインすると、次の変更に気付くでしょう。
+
+* あなたの_アカウント_は_組織_と呼ばれるようになりました
+* _ワークスペース_は_プロジェクト_と呼ばれるようになりました
+* ユーザー ロールの名前が変更されました。
++
+** _アカウント管理者_ が _組織管理者_ になりました
+** _ワークスペース管理者_ が _フォルダーまたはプロジェクト管理者_ になりました
+** _コンプライアンス ビューア_ は _分類ビューア_ に変更されました
+
+
+* 設定からBlueXPのIDとアクセス管理にアクセスして、これらの拡張機能を活用できます。
+
+
+次の点に注意してください。
+
+* 既存のユーザーや作業環境に変更はありません。
+* ロールの名前は変更されていますが、権限の観点からは違いはありません。ユーザーは引き続き、以前と同じ作業環境にアクセスできます。
+* BlueXPへのログイン方法に変更はありません。  BlueXP IAM は、 BlueXPアカウントと同様に、 NetAppクラウド ログイン、 NetAppサポート サイトの資格情報、およびフェデレーション接続で動作します。
+* 複数のBlueXPアカウントをお持ちの場合は、複数のBlueXP組織が存在することになります。
+
+
+.BlueXP IAM の API
+この変更により、 BlueXP IAM の新しい API が導入されますが、以前のテナンシー API との下位互換性があります。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["BlueXP IAMのAPIについて学ぶ"^]
+
+.サポートされている展開モード
+BlueXP を標準モードで使用する場合、 BlueXP IAM がサポートされます。  BlueXP を制限モードまたはプライベート モードで使用している場合は、引き続きBlueXP _アカウント_を使用してワークスペース、ユーザー、およびリソースを管理します。
+
+.次はどこへ行くか
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-identity-and-access-management.html["BlueXP IAMについて学ぶ"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-get-started.html["BlueXP IAMを使い始める"]
+
+
+
+
+=== コネクタ 3.9.45
+
+このリリースには、拡張されたオペレーティング システムのサポートとバグ修正が含まれています。
+
+3.9.45 リリースは、標準モードと制限モードで利用できます。
+
+.Ubuntu 24.04 LTSのサポート
+3.9.45 リリース以降、 BlueXP は、標準モードまたは制限モードでBlueXP を使用する場合、Ubuntu 24.04 LTS ホスト上のコネクタの新規インストールをサポートするようになりました。
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["コネクタホストの要件を表示する"] 。
+
+
+
+=== RHELホストでのSELinuxのサポート
+
+BlueXP は、強制モードまたは許可モードのいずれかで SELinux が有効になっている Red Hat Enterprise Linux ホストでコネクタをサポートするようになりました。
+
+SELinux のサポートは、標準モードと制限モードでは 3.9.40 リリースから、プライベート モードでは 3.9.42 リリースから開始されます。
+
+次の制限に注意してください。
+
+* BlueXP は、Ubuntu ホストでの SELinux をサポートしていません。
+* Cloud Volumes ONTAPシステムの管理は、オペレーティング システムで SELinux が有効になっているコネクタではサポートされません。
+
+
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_selinux/getting-started-with-selinux_using-selinux["SELinuxについて詳しく知る"^]

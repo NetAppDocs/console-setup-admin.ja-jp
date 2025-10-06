@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task-iam-associate-connectors.html 
+keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
+summary: 組織のメンバーが別のプロジェクトでコンソール エージェントを使用する必要がある場合は、そのコンソール エージェントをそれぞれのプロジェクトに関連付ける必要があります。 
+---
+= コンソールエージェントを他のフォルダやプロジェクトに関連付ける
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+組織管理者がコンソール エージェントを作成すると、そのコンソール エージェントは組織内で現在選択されているプロジェクトに自動的に関連付けられます。ただし、_組織管理者_ ロールを持つユーザーは、組織内のどこからでもそのコンソール エージェントにアクセスできます。組織内の他のメンバーは、そのコンソール エージェントを他のプロジェクトに関連付けない限り、そのコンソール エージェントが作成されたプロジェクトからのみそのコンソール エージェントにアクセスできます。
+
+.開始する前に
+コンソール エージェントの関連付けの仕組みを確認します。link:concept-identity-and-access-management.html#associate-agents["Identity and Access でコンソール エージェントを使用する方法について学習します"] 。
+
+.タスク概要
+_フォルダーまたはプロジェクト管理者_ は、*エージェント* ページですべてのコンソール エージェントを表示できますが、コンソール エージェントを関連付けることができるのは、権限を持つフォルダーおよびプロジェクトのみです。link:reference-iam-predefined-roles.html["フォルダまたはプロジェクト管理者が実行できるアクションの詳細"] 。
+
+.手順
+. *管理 > IDとアクセス* > *エージェント*を選択します。
+. 表から、関連付けるコンソール エージェントを見つけます。
++
+特定のコンソール エージェントを検索するには、表の上にある検索機能を使用するか、リソース階層で表をフィルター処理します。
+
+. コンソールエージェントにリンクされたフォルダとプロジェクトを表示するには、image:icon-action.png["3つのドットアイコン"]次に、[詳細を表示] を選択します。
++
+このページには、コンソール エージェントに関連付けられているフォルダーとプロジェクトの詳細が表示されます。
+
+. *フォルダーまたはプロジェクトに関連付ける*を選択します。
+. フォルダーまたはプロジェクトを選択し、[承認] を選択します。
+. コンソール エージェントを追加のフォルダーまたはプロジェクトに関連付けるには、[*フォルダーまたはプロジェクトの追加*] を選択し、フォルダーまたはプロジェクトを選択します。
+. *Associate Agent*を選択します。
+
+
+.終了後の操作
+コンソール エージェントのリソースを、*リソース* ページの同じフォルダーおよびプロジェクトに関連付けます。
+
+link:task-iam-manage-resources.html#associate-resource["リソースをフォルダやプロジェクトに関連付ける方法を学びます"] 。
+
+.関連情報
+* link:concept-connectors.html["NetAppコンソールエージェントについて学ぶ"]
+* link:concept-identity-and-access-management.html["NetAppコンソールのアイデンティティとアクセス管理について学ぶ"]
+* link:task-iam-get-started.html["アイデンティティとアクセスを始める"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["IDとアクセス管理のためのAPIについて学ぶ"^]
+

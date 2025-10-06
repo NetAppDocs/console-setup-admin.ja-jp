@@ -1,0 +1,23 @@
+= コネクタ 3.9.50
+:allow-uri-read: 
+
+
+
+
+=== コネクタ 3.9.50
+
+BlueXPコネクタのこのリリースには、マイナーなセキュリティの改善とバグ修正が含まれています。
+
+* Cloud Volumes ONTAPシステムの管理は、オペレーティング システムで SELinux が有効になっているコネクタによってサポートされるようになりました。
++
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_selinux/getting-started-with-selinux_using-selinux["SELinuxについて詳しく知る"^]
+
+
+
+現時点では、3.9.50 リリースは標準モードと制限モードで利用できます。
+
+
+
+=== NetApp Keystoneベータ版がBlueXPで利用可能に
+
+NetApp Keystone はまもなくBlueXPから入手可能になり、現在はベータ版です。  BlueXPの左側のナビゲーション バーから、 NetApp Keystoneベータ版のサインアップ ページにアクセスできます。

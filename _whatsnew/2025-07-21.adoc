@@ -1,0 +1,24 @@
+= Google Cloud NetApp Volumesのサポート
+:allow-uri-read: 
+
+
+
+
+=== Google Cloud NetApp Volumesのサポート
+
+BlueXPでGoogle Cloud NetApp Volumes を表示できるようになりました。link:https://docs.netapp.com/us-en//bluexp-google-cloud-netapp-volumes/index.html["Google Cloud NetApp Volumesの詳細をご覧ください。"]
+
+
+
+=== BlueXPアイデンティティおよびアクセス管理 (IAM)
+
+
+
+==== Google Cloud NetApp Volumesの新しいアクセスロール
+
+BlueXPでは、次のストレージ システムへのアクセス ロールの使用がサポートされるようになりました。
+
+* Google Cloud NetApp Volumes
+
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["アクセス ロールの使用について詳しく学習します。"]

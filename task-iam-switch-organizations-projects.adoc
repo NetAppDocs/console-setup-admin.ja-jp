@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-iam-switch-organizations-projects.html 
+keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
+summary: 複数のコンソール組織に属している場合や、組織内の複数のプロジェクトまたはエージェントにアクセスする権限を持っている場合があります。必要に応じて、組織、プロジェクト、コンソール エージェント間を簡単に切り替えて、その組織、プロジェクト、またはエージェントに関連付けられているリソースにアクセスできます。 
+---
+= コンソールの組織、プロジェクト、エージェントを切り替える
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+複数のコンソール組織に属している場合や、組織内の複数のプロジェクトまたはエージェントにアクセスする権限を持っている場合があります。必要に応じて、組織、プロジェクト、コンソール エージェント間を簡単に切り替えて、その組織、プロジェクト、またはエージェントに関連付けられているリソースにアクセスできます。
+
+
+TIP: 別の組織から参加を招待された場合、または自分で組織を作成した場合は、複数の組織に所属する可能性があります。  API を使用して追加の組織を作成できます。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/post-organizations.html["新しい組織を作成する方法を学ぶ"^]
+
+
+
+== 組織間の切り替え
+
+複数の組織のメンバーである場合は、いつでも組織を切り替えることができます。
+
+.手順
+. コンソールの上部のヘッダーで、*組織*を選択します。
++
+image:screenshot-iam-switch-organizations.png["組織ドロップダウンを選択し、別の組織を選択できる上部バナーのスクリーンショット。"]
+
+. パートナーシップ組織がある場合は、「パートナーシップ」タブを選択して、利用可能なパートナー組織を表示します。
+
+
++ パートナー組織がない場合、「パートナーシップ」タブは表示されません。
+
+. 別の組織を選択し、[切り替え] を選択します。
+
+
++ パートナーシップ組織がある場合は、[パートナーシップ] タブを選択して、利用可能なパートナー組織を表示します。
+
+
+
+== プロジェクト間の切り替え
+
+組織に複数のプロジェクトが含まれており、それらのプロジェクトにアクセスできる場合は、いつでもプロジェクトを切り替えることができます。
+
+
+NOTE: *ID とアクセス* ページのいずれかを表示している間は、別のプロジェクトに切り替えることはできません。
+
+.手順
+. コンソールの上部のヘッダーで、*プロジェクト*を選択します。
+. 組織内のフォルダーとプロジェクトを参照し、必要なプロジェクトを選択して、[切り替え] を選択します。
++
+image:screenshot-iam-switch-projects-select.png["新しいプロジェクトを選択できるスコープ メニューのスクリーンショット。"]
+
+
+
+
+
+== コンソールエージェントを切り替える
+
+複数のコンソール エージェントがある場合は、それらを切り替えて、特定のエージェントに関連付けられているシステムを表示できます。
+
+.手順
+. コンソールの上部ヘッダーで、エージェント アイコンを選択します。
+. 別のエージェントを選択し、[切り替え] を選択します。
+
+
+.関連情報
+link:task-iam-associate-connectors.html["エージェントをフォルダとプロジェクトに関連付ける"] 。
+
+
+
+== 関連情報
+
+* link:concept-identity-and-access-management.html["NetAppコンソールのIDとアクセスについて学ぶ"]
+* link:task-iam-get-started.html["アイデンティティとアクセスを始める"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["IDとアクセスのためのAPIについて学ぶ"^]
+

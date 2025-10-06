@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task-federation-adfs.html 
+keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: 'Active Directory フェデレーション サービス (AD FS) と連携して、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。' 
+---
+= NetAppコンソールを Active Directory フェデレーション サービス (AD FS) と連携する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Active Directory フェデレーション サービス (AD FS) をNetAppコンソールと連携させて、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してコンソールにログインできるようになります。
+
+.必要な役割
+フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+
+
+NOTE: 企業の IdP またはNetAppサポート サイトと連携できます。  NetApp、両方ではなく、どちらか一方を選択することを推奨しています。
+
+NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetAppコンソールをサービス プロバイダーとして信頼するように ID プロバイダーを構成します。次に、ID プロバイダーの構成を使用してコンソールで接続を作成します。
+
+AD FS サーバーとのフェデレーションを設定して、 NetAppコンソールのシングル サインオン (SSO) を有効にすることができます。このプロセスでは、コンソールをサービス プロバイダーとして信頼するように AD FS を構成し、 NetAppコンソールで接続を作成します。
+
+.開始する前に
+* 管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。
+* フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。link:task-federation-verify-domain.html["NetAppコンソールでドメインを確認する"]トピック。
+
+
+.手順
+. *管理 > IDとアクセス*を選択します。
+. *Federation* ページを表示するには、*Federation* を選択します。
+. *新しいフェデレーションの構成*を選択します。
+. ドメインの詳細を入力してください:
++
+.. 検証済みドメインを使用するか、メールドメインを使用するかを選択します。電子メール ドメインは、ログインしているアカウントに関連付けられているドメインです。
+.. 構成するフェデレーションの名前を入力します。
+.. 検証済みのドメインを選択する場合は、リストからドメインを選択します。
+
+
+. *次へ*を選択します。
+. 接続方法として、[*プロトコル*] を選択し、[*Active Directory フェデレーション サービス (AD FS)*] を選択します。
+. *次へ*を選択します。
+. AD FS サーバーに証明書利用者信頼を作成します。 PowerShell を使用することも、AD FS サーバー上で手動で構成することもできます。証明書利用者信頼を作成する方法の詳細については、AD FS のドキュメントを参照してください。
++
+.. 次のスクリプトを使用して PowerShell を使用して信頼を作成します。
++
+[source, powershell]
+----
+(new-object Net.WebClient -property @{Encoding = [Text.Encoding]::UTF8}).DownloadString("https://raw.github.com/auth0/AD FS-auth0/master/AD FS.ps1") | iex
+AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.auth0.com/login/callback"
+----
+.. または、AD FS 管理コンソールで信頼を手動で作成することもできます。信頼を作成するときは、次のNetAppコンソールの値を使用します。
++
+*** 信頼信頼識別子を作成するときは、**YOUR_TENANT** 値を使用します。 `netapp-cloud-account`
+*** *WS-Federation のサポートを有効にする* を選択した場合は、**YOUR_AUTH0_DOMAIN** 値を使用します。 `netapp-cloud-account.auth0.com`
+
+
+.. 信頼を作成した後、AD FS サーバーからメタデータ URL をコピーするか、フェデレーション メタデータ ファイルをダウンロードします。コンソールで接続を完了するには、この URL またはファイルが必要になります。
+
+
++
+NetApp、メタデータ URL を使用してNetAppコンソールが最新の AD FS 構成を自動的に取得できるようにすることをお勧めします。フェデレーション メタデータ ファイルをダウンロードした場合は、AD FS 構成に変更があるたびに、 NetAppコンソールで手動で更新する必要があります。
+
+. コンソールに戻り、[次へ] を選択して接続を作成します。
+. AD FS との接続を作成します。
++
+.. 前の手順で AD FS サーバーからコピーした *AD FS URL* を入力するか、AD FS サーバーからダウンロードしたフェデレーション メタデータ ファイルをアップロードします。
+
+
+. *接続を作成*を選択します。接続の作成には数秒かかる場合があります。
+. *次へ*を選択します。
+. 接続をテストするには、[*接続テスト*] を選択します。  IdP サーバーのログイン ページに移動します。  IdP 資格情報を使用してログインし、テストを完了してコンソールに戻り、接続を有効にします。
+. *次へ*を選択します。
+. *フェデレーションの有効化*ページでフェデレーションの詳細を確認し、*フェデレーションの有効化*を選択します。
+. プロセスを完了するには、[完了] を選択します。
+
+
+フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetAppコンソールにログインできるようになります。

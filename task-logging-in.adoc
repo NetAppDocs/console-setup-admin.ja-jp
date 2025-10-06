@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-logging-in.html 
+keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login, login with netapp, log in with netapp, sign up, create account 
+summary: NetAppコンソールにログインする方法は、使用している展開モードによって異なります。 
+---
+= NetAppコンソールにログインする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールにログインする方法は、使用している展開モードによって異なります。
+
+24 時間経過またはブラウザを閉じると、自動的にログアウトされます。
+
+link:concept-modes.html["コンソールの展開モードについて学ぶ"] 。
+
+[role="tabbed-block"]
+====
+.標準モード
+--
+NetAppコンソールにサインアップすると、Web ベースのコンソールからログインして、データとストレージ インフラストラクチャの管理を開始できます。
+
+.タスク概要
+次のいずれかのオプションを使用してNetAppコンソールにログインできます。
+
+* 既存のNetAppサポートサイト（NSS）の認証情報
+* メールアドレスとパスワードを使用したNetAppコンソールアカウント
+* フェデレーション接続
++
+シングル サインオンを使用すると、企業ディレクトリ (フェデレーション ID) の資格情報を使用してログインできます。link:concept-federation.html["ID連携の設定方法を学ぶ"] 。
+
+
+
+.手順
+. ウェブブラウザを開いて、 https://console.netapp.com["NetAppコンソール"]
+. *ログイン*ページで、ログインに関連付けられているメールアドレスを入力します。
+. ログインに関連付けられた認証方法に応じて、資格情報を入力するよう求められます。
++
+** NetAppクラウド認証情報: パスワードを入力してください
+** フェデレーションユーザー: フェデレーションIDの資格情報を入力してください
+** NetAppサポートサイトアカウント: NetAppサポートサイトの認証情報を入力します
+
+
+
+
+.結果
+これでログインが完了し、ハイブリッド マルチクラウド インフラストラクチャの管理を開始できるようになりました。
+
+--
+.制限モード
+--
+コンソールを制限モードで使用する場合は、エージェント上でローカルに実行されるユーザー インターフェイスからコンソールにログインする必要があります。
+
+.タスク概要
+コンソールは、制限モードの場合、次のいずれかのオプションを使用してログインすることをサポートします。
+
+* メールアドレスとパスワードを使用したNetAppコンソールログイン
+* フェデレーション接続
++
+シングル サインオンを使用すると、企業ディレクトリ (フェデレーション ID) の資格情報を使用してログインできます。link:concept-federation.html["アイデンティティフェデレーションの使い方を学ぶ"] 。
+
+
+
+.手順
+. Web ブラウザを開き、エージェントがインストールされている IP アドレスを入力します。
+. ユーザー名とパスワードを入力してログインしてください。
+
+
+--
+====

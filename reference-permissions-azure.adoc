@@ -1,0 +1,810 @@
+---
+sidebar: sidebar 
+permalink: reference-permissions-azure.html 
+keywords: permissions, azure, azure permissions, bluexp 
+summary: NetAppコンソールが Azure でコンソール エージェントを起動すると、その Azure サブスクリプション内のリソースとプロセスを管理するための権限をエージェントに提供するカスタム ロールが VM にアタッチされます。エージェントは、アクセス許可を使用して、複数の Azure サービスへの API 呼び出しを実行します。 
+---
+= コンソールエージェントのAzure権限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールが Azure でコンソール エージェントを起動すると、その Azure サブスクリプション内のリソースとプロセスを管理するための権限をエージェントに提供するカスタム ロールが VM にアタッチされます。エージェントは、アクセス許可を使用して、複数の Azure サービスへの API 呼び出しを実行します。
+
+エージェントに対してこのカスタム ロールを作成する必要があるかどうかは、エージェントをどのように展開したかによって異なります。
+
+.NetAppコンソールからの導入
+コンソールを使用してAzureにエージェント仮想マシンを展開すると、 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["システム割り当てマネージドID"^]仮想マシン上でカスタム ロールを作成し、それを仮想マシンに割り当てます。このロールは、その Azure サブスクリプション内のリソースとプロセスを管理するために必要な権限をコンソールに提供します。エージェントがアップグレードされると、ロールの権限は最新の状態に保たれます。エージェントに対してこのロールを作成したり、更新を管理したりする必要はありません。
+
+.手動でのデプロイまたはAzure Marketplaceからのデプロイ
+Azure Marketplace からエージェントをデプロイする場合、または Linux ホストにエージェントを手動でインストールする場合は、カスタム ロールを自分で設定し、変更を加えてそのアクセス許可を維持する必要があります。
+
+以降のリリースで新しい権限が追加されるので、ロールが最新であることを確認する必要があります。新しい権限が必要な場合は、リリース ノートに記載されます。
+
+* これらのポリシーの使用方法の詳細な手順については、次のページを参照してください。
++
+** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Azure Marketplace のデプロイの権限を設定する"]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["制限モードの権限を設定する"]
+
+
+
+
+[source, json]
+----
+{
+    "Name": "Console Operator",
+    "Actions": [
+                    "Microsoft.Compute/disks/delete",
+                    "Microsoft.Compute/disks/read",
+                    "Microsoft.Compute/disks/write",
+                    "Microsoft.Compute/locations/operations/read",
+                    "Microsoft.Compute/locations/vmSizes/read",
+                    "Microsoft.Resources/subscriptions/locations/read",
+                    "Microsoft.Compute/operations/read",
+                    "Microsoft.Compute/virtualMachines/instanceView/read",
+                    "Microsoft.Compute/virtualMachines/powerOff/action",
+                    "Microsoft.Compute/virtualMachines/read",
+                    "Microsoft.Compute/virtualMachines/restart/action",
+                    "Microsoft.Compute/virtualMachines/deallocate/action",
+                    "Microsoft.Compute/virtualMachines/start/action",
+                    "Microsoft.Compute/virtualMachines/vmSizes/read",
+                    "Microsoft.Compute/virtualMachines/write",
+                    "Microsoft.Compute/images/read",
+                    "Microsoft.Network/locations/operationResults/read",
+                    "Microsoft.Network/locations/operations/read",
+                    "Microsoft.Network/networkInterfaces/read",
+                    "Microsoft.Network/networkInterfaces/write",
+                    "Microsoft.Network/networkInterfaces/join/action",
+                    "Microsoft.Network/networkSecurityGroups/read",
+                    "Microsoft.Network/networkSecurityGroups/write",
+                    "Microsoft.Network/networkSecurityGroups/join/action",
+                    "Microsoft.Network/virtualNetworks/read",
+                    "Microsoft.Network/virtualNetworks/checkIpAddressAvailability/read",
+                    "Microsoft.Network/virtualNetworks/subnets/read",
+                    "Microsoft.Network/virtualNetworks/subnets/write",
+                    "Microsoft.Network/virtualNetworks/subnets/virtualMachines/read",
+                    "Microsoft.Network/virtualNetworks/virtualMachines/read",
+                    "Microsoft.Network/virtualNetworks/subnets/join/action",
+                    "Microsoft.Resources/deployments/operations/read",
+                    "Microsoft.Resources/deployments/read",
+                    "Microsoft.Resources/deployments/write",
+                    "Microsoft.Resources/resources/read",
+                    "Microsoft.Resources/subscriptions/operationresults/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/delete",
+                    "Microsoft.Resources/subscriptions/resourceGroups/read",
+                    "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+                    "Microsoft.Resources/subscriptions/resourceGroups/write",
+                    "Microsoft.Storage/checknameavailability/read",
+                    "Microsoft.Storage/operations/read",
+                    "Microsoft.Storage/storageAccounts/listkeys/action",
+                    "Microsoft.Storage/storageAccounts/read",
+                    "Microsoft.Storage/storageAccounts/delete",
+                    "Microsoft.Storage/storageAccounts/write",
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/read",
+                    "Microsoft.Storage/storageAccounts/listAccountSas/action",
+                    "Microsoft.Storage/usages/read",
+                    "Microsoft.Compute/snapshots/write",
+                    "Microsoft.Compute/snapshots/read",
+                    "Microsoft.Compute/availabilitySets/write",
+                    "Microsoft.Compute/availabilitySets/read",
+                    "Microsoft.Compute/disks/beginGetAccess/action",
+                    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read",
+                    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write",
+                    "Microsoft.Network/loadBalancers/read",
+                    "Microsoft.Network/loadBalancers/write",
+                    "Microsoft.Network/loadBalancers/delete",
+                    "Microsoft.Network/loadBalancers/backendAddressPools/read",
+                    "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+                    "Microsoft.Network/loadBalancers/loadBalancingRules/read",
+                    "Microsoft.Network/loadBalancers/probes/read",
+                    "Microsoft.Network/loadBalancers/probes/join/action",
+                    "Microsoft.Authorization/locks/*",
+                    "Microsoft.Network/routeTables/join/action",
+                    "Microsoft.NetApp/netAppAccounts/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/write",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/read",
+                    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/delete",
+                    "Microsoft.Network/privateEndpoints/write",
+                    "Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action",
+                    "Microsoft.Storage/storageAccounts/privateEndpointConnections/read",
+                    "Microsoft.Storage/storageAccounts/managementPolicies/read",
+                    "Microsoft.Storage/storageAccounts/managementPolicies/write",
+                    "Microsoft.Network/privateEndpoints/read",
+                    "Microsoft.Network/privateDnsZones/write",
+                    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/write",
+                    "Microsoft.Network/virtualNetworks/join/action",
+                    "Microsoft.Network/privateDnsZones/A/write",
+                    "Microsoft.Network/privateDnsZones/read",
+                    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/read",
+                    "Microsoft.Resources/deployments/operationStatuses/read",
+                    "Microsoft.Insights/Metrics/Read",
+                    "Microsoft.Compute/virtualMachines/extensions/write",
+                    "Microsoft.Compute/virtualMachines/extensions/delete",
+                    "Microsoft.Compute/virtualMachines/extensions/read",
+                    "Microsoft.Compute/virtualMachines/delete",
+                    "Microsoft.Network/networkInterfaces/delete",
+                    "Microsoft.Network/networkSecurityGroups/delete",
+                    "Microsoft.Resources/deployments/delete",
+                    "Microsoft.Compute/diskEncryptionSets/read",
+                    "Microsoft.Compute/snapshots/delete",
+                    "Microsoft.Network/privateEndpoints/delete",
+                    "Microsoft.Compute/availabilitySets/delete",
+                    "Microsoft.KeyVault/vaults/read",
+                    "Microsoft.KeyVault/vaults/accessPolicies/write",
+                    "Microsoft.Compute/diskEncryptionSets/write",
+                    "Microsoft.KeyVault/vaults/deploy/action",
+                    "Microsoft.Compute/diskEncryptionSets/delete",
+                    "Microsoft.Resources/tags/read",
+                    "Microsoft.Resources/tags/write",
+                    "Microsoft.Resources/tags/delete",
+                    "Microsoft.Network/applicationSecurityGroups/write",
+                    "Microsoft.Network/applicationSecurityGroups/read",
+                    "Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/action",
+                    "Microsoft.Network/networkSecurityGroups/securityRules/write",
+                    "Microsoft.Network/applicationSecurityGroups/delete",
+                    "Microsoft.Network/networkSecurityGroups/securityRules/delete",
+                    "Microsoft.Synapse/workspaces/write",
+                    "Microsoft.Synapse/workspaces/read",
+                    "Microsoft.Synapse/workspaces/delete",
+                    "Microsoft.Synapse/register/action",
+                    "Microsoft.Synapse/checkNameAvailability/action",
+                    "Microsoft.Synapse/workspaces/operationStatuses/read",
+                    "Microsoft.Synapse/workspaces/firewallRules/read",
+                    "Microsoft.Synapse/workspaces/replaceAllIpFirewallRules/action",
+                    "Microsoft.Synapse/workspaces/operationResults/read",
+                    "Microsoft.Synapse/workspaces/privateEndpointConnectionsApproval/action",
+                    "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
+                    "Microsoft.Compute/images/write",
+                    "Microsoft.Network/loadBalancers/frontendIPConfigurations/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/write",
+                    "Microsoft.Compute/virtualMachineScaleSets/read",
+                    "Microsoft.Compute/virtualMachineScaleSets/delete"
+    ],
+    "NotActions": [],
+    "AssignableScopes": [],
+    "Description": "Console Permissions",
+    "IsCustom": "true"
+}
+----
+
+
+== Azure の権限の使用方法
+
+次のセクションでは、各NetAppストレージ システムおよびデータ サービスに対する権限の使用方法について説明します。この情報は、必要な場合にのみ権限を付与するように企業ポリシーで定められている場合に役立ちます。
+
+
+
+=== Azure NetApp Files
+
+NetApp Data Classification を使用してAzure NetApp Filesデータをスキャンすると、エージェントは次の API 要求を行います。
+
+* Microsoft. NetApp/netAppAccounts/read
+* Microsoft. NetApp/netAppAccounts/capacityPools/read
+* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/write
+* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/read
+* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/delete
+
+
+
+
+=== NetAppバックアップとリカバリ
+
+コンソール エージェントは、 NetApp Backup and Recovery に対して次の API 要求を行います。
+
+* Microsoft.Storage/storageAccounts/listkeys/アクション
+* Microsoft.Storage/storageAccounts/読み取り
+* Microsoft.Storage/ストレージアカウント/書き込み
+* Microsoft.Storage/storageAccounts/blobServices/containers/読み取り
+* Microsoft.Storage/storageAccounts/listAccountSas/アクション
+* Microsoft.KeyVault/vaults/読み取り
+* Microsoft.KeyVault/vaults/accessPolicies/書き込み
+* Microsoft.Network/ネットワークインターフェイス/読み取り
+* Microsoft.Resources/サブスクリプション/場所/読み取り
+* Microsoft.Network/仮想ネットワーク/読み取り
+* Microsoft.Network/virtualNetworks/サブネット/読み取り
+* Microsoft.Resources/サブスクリプション/リソースグループ/読み取り
+* Microsoft.Resources/サブスクリプション/リソースグループ/リソース/読み取り
+* Microsoft.Resources/サブスクリプション/リソースグループ/書き込み
+* Microsoft.Authorization/locks/*
+* Microsoft.Network/privateEndpoints/書き込み
+* Microsoft.Network/privateEndpoints/読み取り
+* Microsoft.Network/privateDnsZones/virtualNetworkLinks/書き込み
+* Microsoft.Network/仮想ネットワーク/参加/アクション
+* Microsoft.Network/privateDnsZones/A/書き込み
+* Microsoft.Network/privateDnsZones/読み取り
+* Microsoft.Network/privateDnsZones/virtualNetworkLinks/読み取り
+* Microsoft.Network/ネットワークインターフェイス/削除
+* Microsoft.Network/ネットワークセキュリティグループ/削除
+* Microsoft.Resources/デプロイメント/削除
+* Microsoft.ManagedIdentity/userAssignedIdentities/割り当て/アクション
+
+
+検索と復元機能を使用するとき、エージェントは次の API リクエストを行います。
+
+* Microsoft.Synapse/ワークスペース/書き込み
+* Microsoft.Synapse/ワークスペース/読み取り
+* Microsoft.Synapse/ワークスペース/削除
+* Microsoft.Synapse/登録/アクション
+* Microsoft.Synapse/checkNameAvailability/アクション
+* Microsoft.Synapse/ワークスペース/操作ステータス/読み取り
+* Microsoft.Synapse/ワークスペース/ファイアウォールルール/読み取り
+* Microsoft.Synapse/ワークスペース/replaceAllIpFirewallRules/アクション
+* Microsoft.Synapse/ワークスペース/操作結果/読み取り
+* Microsoft.Synapse/ワークスペース/プライベートエンドポイント接続承認/アクション
+
+
+
+
+=== NetAppデータ分類
+
+データ分類を使用する場合、エージェントは次の API リクエストを行います。
+
+[cols="3*"]
+|===
+| アクション | セットアップに使用しますか? | 日常業務に使用されますか? 
+
+
+| Microsoft.Compute/場所/操作/読み取り | はい | はい 
+
+
+| Microsoft.Compute/場所/vmSizes/読み取り | はい | はい 
+
+
+| Microsoft.Compute/操作/読み取り | はい | はい 
+
+
+| Microsoft.Compute/virtualMachines/instanceView/読み取り | はい | はい 
+
+
+| Microsoft.Compute/virtualMachines/電源オフ/アクション | はい | いいえ 
+
+
+| Microsoft.Compute/仮想マシン/読み取り | はい | はい 
+
+
+| Microsoft.Compute/virtualMachines/再起動/アクション | はい | いいえ 
+
+
+| Microsoft.Compute/virtualMachines/start/アクション | はい | いいえ 
+
+
+| Microsoft.Compute/virtualMachines/vmSizes/読み取り | いいえ | はい 
+
+
+| Microsoft.Compute/仮想マシン/書き込み | はい | いいえ 
+
+
+| Microsoft.Compute/images/読み取り | はい | はい 
+
+
+| Microsoft.Compute/ディスク/削除 | はい | いいえ 
+
+
+| Microsoft.Compute/ディスク/読み取り | はい | はい 
+
+
+| Microsoft.Compute/ディスク/書き込み | はい | いいえ 
+
+
+| Microsoft.Storage/checknameavailability/読み取り | はい | はい 
+
+
+| Microsoft.Storage/操作/読み取り | はい | はい 
+
+
+| Microsoft.Storage/storageAccounts/listkeys/アクション | はい | いいえ 
+
+
+| Microsoft.Storage/storageAccounts/読み取り | はい | はい 
+
+
+| Microsoft.Storage/ストレージアカウント/書き込み | はい | いいえ 
+
+
+| Microsoft.Storage/storageAccounts/blobServices/containers/読み取り | はい | はい 
+
+
+| Microsoft.Network/ネットワークインターフェイス/読み取り | はい | はい 
+
+
+| Microsoft.Network/ネットワークインターフェイス/書き込み | はい | いいえ 
+
+
+| Microsoft.Network/ネットワークインターフェイス/参加/アクション | はい | いいえ 
+
+
+| Microsoft.Network/ネットワークセキュリティグループ/読み取り | はい | はい 
+
+
+| Microsoft.Network/ネットワークセキュリティグループ/書き込み | はい | いいえ 
+
+
+| Microsoft.Resources/サブスクリプション/場所/読み取り | はい | はい 
+
+
+| Microsoft.Network/場所/操作結果/読み取り | はい | はい 
+
+
+| Microsoft.Network/場所/操作/読み取り | はい | はい 
+
+
+| Microsoft.Network/仮想ネットワーク/読み取り | はい | はい 
+
+
+| Microsoft.Network/virtualNetworks/checkIpAddressAvailability/読み取り | はい | はい 
+
+
+| Microsoft.Network/virtualNetworks/サブネット/読み取り | はい | はい 
+
+
+| Microsoft.Network/virtualNetworks/サブネット/virtualMachines/読み取り | はい | はい 
+
+
+| Microsoft.Network/virtualNetworks/virtualMachines/読み取り | はい | はい 
+
+
+| Microsoft.Network/virtualNetworks/サブネット/参加/アクション | はい | いいえ 
+
+
+| Microsoft.Network/virtualNetworks/サブネット/書き込み | はい | いいえ 
+
+
+| Microsoft.Network/routeTables/join/アクション | はい | いいえ 
+
+
+| Microsoft.Resources/デプロイメント/運用/読み取り | はい | はい 
+
+
+| Microsoft.Resources/デプロイメント/読み取り | はい | はい 
+
+
+| Microsoft.Resources/デプロイメント/書き込み | はい | いいえ 
+
+
+| Microsoft.Resources/リソース/読み取り | はい | はい 
+
+
+| Microsoft.Resources/サブスクリプション/操作結果/読み取り | はい | はい 
+
+
+| Microsoft.Resources/サブスクリプション/リソースグループ/削除 | はい | いいえ 
+
+
+| Microsoft.Resources/サブスクリプション/リソースグループ/読み取り | はい | はい 
+
+
+| Microsoft.Resources/サブスクリプション/リソースグループ/リソース/読み取り | はい | はい 
+
+
+| Microsoft.Resources/サブスクリプション/リソースグループ/書き込み | はい | いいえ 
+|===
+
+
+=== Cloud Volumes ONTAP
+
+エージェントは、Azure でCloud Volumes ONTAP をデプロイおよび管理するために、次の API 要求を行います。
+
+[cols="5*"]
+|===
+| 目的 | アクション | 展開に使用されますか? | 日常業務に使用されますか? | 削除に使用されますか? 
+
+
+.14+| VMの作成と管理 | Microsoft.Compute/場所/操作/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Compute/場所/vmSizes/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Resources/サブスクリプション/場所/読み取り | はい | いいえ | いいえ 
+
+
+| Microsoft.Compute/操作/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Compute/virtualMachines/instanceView/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Compute/virtualMachines/電源オフ/アクション | はい | はい | いいえ 
+
+
+| Microsoft.Compute/仮想マシン/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Compute/virtualMachines/再起動/アクション | はい | はい | いいえ 
+
+
+| Microsoft.Compute/virtualMachines/start/アクション | はい | はい | いいえ 
+
+
+| Microsoft.Compute/virtualMachines/割り当て解除/アクション | いいえ | はい | はい 
+
+
+| Microsoft.Compute/virtualMachines/vmSizes/読み取り | いいえ | はい | いいえ 
+
+
+| Microsoft.Compute/仮想マシン/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Compute/仮想マシン/削除 | はい | はい | はい 
+
+
+| Microsoft.Resources/デプロイメント/削除 | はい | いいえ | いいえ 
+
+
+.2+| VHDからの展開を有効にする | Microsoft.Compute/images/読み取り | はい | いいえ | いいえ 
+
+
+| Microsoft.Compute/images/書き込み | はい | いいえ | いいえ 
+
+
+.4+| ターゲットサブネット内のネットワークインターフェースの作成と管理 | Microsoft.Network/ネットワークインターフェイス/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Network/ネットワークインターフェイス/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Network/ネットワークインターフェイス/参加/アクション | はい | はい | いいえ 
+
+
+| Microsoft.Network/ネットワークインターフェイス/削除 | はい | はい | いいえ 
+
+
+.4+| ネットワーク セキュリティ グループの作成と管理 | Microsoft.Network/ネットワークセキュリティグループ/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Network/ネットワークセキュリティグループ/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Network/ネットワークセキュリティグループ/参加/アクション | はい | いいえ | いいえ 
+
+
+| Microsoft.Network/ネットワークセキュリティグループ/削除 | いいえ | はい | はい 
+
+
+.8+| リージョン、ターゲット VNet、サブネットに関するネットワーク情報を取得し、VM を VNet に追加します。 | Microsoft.Network/場所/操作結果/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Network/場所/操作/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Network/仮想ネットワーク/読み取り | はい | いいえ | いいえ 
+
+
+| Microsoft.Network/virtualNetworks/checkIpAddressAvailability/読み取り | はい | いいえ | いいえ 
+
+
+| Microsoft.Network/virtualNetworks/サブネット/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Network/virtualNetworks/サブネット/virtualMachines/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Network/virtualNetworks/virtualMachines/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Network/virtualNetworks/サブネット/参加/アクション | はい | はい | いいえ 
+
+
+.9+| リソース グループの作成と管理 | Microsoft.Resources/デプロイメント/運用/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Resources/デプロイメント/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Resources/デプロイメント/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Resources/リソース/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Resources/サブスクリプション/操作結果/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Resources/サブスクリプション/リソースグループ/削除 | はい | はい | はい 
+
+
+| Microsoft.Resources/サブスクリプション/リソースグループ/読み取り | いいえ | はい | いいえ 
+
+
+| Microsoft.Resources/サブスクリプション/リソースグループ/リソース/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Resources/サブスクリプション/リソースグループ/書き込み | はい | はい | いいえ 
+
+
+.10+| Azure ストレージ アカウントとディスクを管理する | Microsoft.Compute/ディスク/読み取り | はい | はい | はい 
+
+
+| Microsoft.Compute/ディスク/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Compute/ディスク/削除 | はい | はい | はい 
+
+
+| Microsoft.Storage/checknameavailability/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Storage/操作/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Storage/storageAccounts/listkeys/アクション | はい | はい | いいえ 
+
+
+| Microsoft.Storage/storageAccounts/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Storage/storageAccounts/削除 | いいえ | はい | はい 
+
+
+| Microsoft.Storage/ストレージアカウント/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Storage/使用状況/読み取り | いいえ | はい | いいえ 
+
+
+.3+| BLOB ストレージへのバックアップとストレージ アカウントの暗号化を有効にする | Microsoft.Storage/storageAccounts/blobServices/containers/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.KeyVault/vaults/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.KeyVault/vaults/accessPolicies/書き込み | はい | はい | いいえ 
+
+
+.2+| データ階層化のために VNet サービス エンドポイントを有効にする | Microsoft.Network/virtualNetworks/サブネット/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Network/routeTables/join/アクション | はい | はい | いいえ 
+
+
+.4+| Azure 管理スナップショットの作成と管理 | Microsoft.Compute/スナップショット/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Compute/スナップショット/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Compute/スナップショット/削除 | いいえ | はい | はい 
+
+
+| Microsoft.Compute/ディスク/beginGetAccess/アクション | いいえ | はい | いいえ 
+
+
+.2+| 可用性セットの作成と管理 | Microsoft.Compute/availabilitySets/書き込み | はい | いいえ | いいえ 
+
+
+| Microsoft.Compute/availabilitySets/読み取り | はい | いいえ | いいえ 
+
+
+.2+| マーケットプレイスからのプログラムによる展開を可能にする | Microsoft.MarketplaceOrdering/オファータイプ/発行者/オファー/プラン/契約/読み取り | はい | いいえ | いいえ 
+
+
+| Microsoft.MarketplaceOrdering/オファータイプ/パブリッシャー/オファー/プラン/契約/書き込み | はい | はい | いいえ 
+
+
+.9+| HAペアのロードバランサを管理する | Microsoft.Network/ロードバランサー/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Network/ロードバランサー/書き込み | はい | いいえ | いいえ 
+
+
+| Microsoft.Network/loadBalancers/削除 | いいえ | はい | はい 
+
+
+| Microsoft.Network/loadBalancers/backendAddressPools/読み取り | はい | いいえ | いいえ 
+
+
+| Microsoft.Network/loadBalancers/backendAddressPools/参加/アクション | はい | いいえ | いいえ 
+
+
+| Microsoft.Network/loadBalancers/frontendIPConfigurations/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Network/loadBalancers/loadBalancingRules/読み取り | はい | いいえ | いいえ 
+
+
+| Microsoft.Network/loadBalancers/プローブ/読み取り | はい | いいえ | いいえ 
+
+
+| Microsoft.Network/loadBalancers/プローブ/参加/アクション | はい | いいえ | いいえ 
+
+
+| Azure ディスクのロックの管理を有効にする | Microsoft.Authorization/locks/* | はい | はい | いいえ 
+
+
+.10+| サブネット外に接続できない場合にHAペアのプライベートエンドポイントを有効にする | Microsoft.Network/privateEndpoints/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/アクション | はい | いいえ | いいえ 
+
+
+| Microsoft.Storage/storageAccounts/privateEndpointConnections/読み取り | はい | はい | はい 
+
+
+| Microsoft.Network/privateEndpoints/読み取り | はい | はい | はい 
+
+
+| Microsoft.Network/privateDnsZones/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Network/privateDnsZones/virtualNetworkLinks/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Network/仮想ネットワーク/参加/アクション | はい | はい | いいえ 
+
+
+| Microsoft.Network/privateDnsZones/A/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Network/privateDnsZones/読み取り | はい | はい | いいえ 
+
+
+| Microsoft.Network/privateDnsZones/virtualNetworkLinks/読み取り | はい | はい | いいえ 
+
+
+| 基盤となる物理ハードウェアに応じて、一部の VM 展開に必要 | Microsoft.Resources/デプロイメント/操作ステータス/読み取り | はい | はい | いいえ 
+
+
+.2+| デプロイメントの失敗または削除の場合にリソース グループからリソースを削除する | Microsoft.Network/privateEndpoints/削除 | はい | はい | いいえ 
+
+
+| Microsoft.Compute/availabilitySets/削除 | はい | はい | いいえ 
+
+
+.4+| API を使用する際に顧客管理の暗号化キーの使用を有効にする | Microsoft.Compute/diskEncryptionSets/読み取り | はい | はい | はい 
+
+
+| Microsoft.Compute/diskEncryptionSets/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.KeyVault/vaults/deploy/action | はい | いいえ | いいえ 
+
+
+| Microsoft.Compute/diskEncryptionSets/削除 | はい | はい | はい 
+
+
+.6+| HA ペアのアプリケーション セキュリティ グループを構成して、HA インターコネクトとクラスタ ネットワーク NIC を分離します。 | Microsoft.Network/アプリケーションセキュリティグループ/書き込み | いいえ | はい | いいえ 
+
+
+| Microsoft.Network/applicationSecurityGroups/読み取り | いいえ | はい | いいえ 
+
+
+| Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/アクション | いいえ | はい | いいえ 
+
+
+| Microsoft.Network/ネットワークセキュリティグループ/セキュリティルール/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Network/applicationSecurityGroups/削除 | いいえ | はい | はい 
+
+
+| Microsoft.Network/ネットワークセキュリティグループ/セキュリティルール/削除 | いいえ | はい | はい 
+
+
+.3+| Cloud Volumes ONTAPリソースに関連付けられたタグの読み取り、書き込み、削除 | Microsoft.Resources/タグ/読み取り | いいえ | はい | いいえ 
+
+
+| Microsoft.Resources/タグ/書き込み | はい | はい | いいえ 
+
+
+| Microsoft.Resources/タグ/削除 | はい | いいえ | いいえ 
+
+
+| 作成時にストレージ アカウントを暗号化する | Microsoft.ManagedIdentity/userAssignedIdentities/割り当て/アクション | はい | はい | いいえ 
+
+
+.3+| Cloud Volumes ONTAPの特定のゾーンを指定するには、柔軟なオーケストレーション モードで仮想マシン スケール セットを使用します。 | Microsoft.Compute/仮想マシンスケールセット/書き込み | はい | いいえ | いいえ 
+
+
+| Microsoft.Compute/仮想マシンスケールセット/読み取り | はい | いいえ | いいえ 
+
+
+| Microsoft.Compute/virtualMachineScaleSets/削除 | いいえ | いいえ | はい 
+|===
+
+
+=== 階層化
+
+NetApp Cloud Tiering をセットアップすると、エージェントは次の API 要求を行います。
+
+* Microsoft.Storage/storageAccounts/listkeys/アクション
+* Microsoft.Resources/サブスクリプション/リソースグループ/読み取り
+* Microsoft.Resources/サブスクリプション/場所/読み取り
+
+
+コンソール エージェントは、日常の操作のために次の API 要求を行います。
+
+* Microsoft.Storage/storageAccounts/blobServices/containers/読み取り
+* Microsoft.Storage/storageAccounts/managementPolicies/読み取り
+* Microsoft.Storage/storageAccounts/managementPolicies/書き込み
+* Microsoft.Storage/storageAccounts/読み取り
+
+
+
+
+== 変更ログ
+
+権限が追加または削除されると、以下のセクションでその旨を記録します。
+
+
+
+=== 2024年9月9日
+
+コンソールでは Kubernetes クラスターの検出と管理がサポートされなくなったため、次の権限が JSON ポリシーから削除されました。
+
+* Microsoft.ContainerService/managedClusters/listClusterUserCredential/アクション
+* Microsoft.ContainerService/managedClusters/読み取り
+
+
+
+
+=== 2024年8月22日
+
+仮想マシン スケール セットのCloud Volumes ONTAPサポートに必要なため、次の権限が JSON ポリシーに追加されました。
+
+* Microsoft.Compute/仮想マシンスケールセット/書き込み
+* Microsoft.Compute/仮想マシンスケールセット/読み取り
+* Microsoft.Compute/virtualMachineScaleSets/削除
+
+
+
+
+=== 2023年12月5日
+
+ボリューム データを Azure Blob ストレージにバックアップする場合、 NetApp Backup and Recovery では次の権限は不要になりました。
+
+* Microsoft.Compute/仮想マシン/読み取り
+* Microsoft.Compute/virtualMachines/start/アクション
+* Microsoft.Compute/virtualMachines/割り当て解除/アクション
+* Microsoft.Compute/virtualMachines/拡張機能/削除
+* Microsoft.Compute/仮想マシン/削除
+
+
+これらの権限は他のコンソール ストレージ サービスに必要なので、他のストレージ サービスを使用している場合は、エージェントのカスタム ロールに引き続き残ります。
+
+
+
+=== 2023年5月12日
+
+Cloud Volumes ONTAP管理に必要なため、次の権限が JSON ポリシーに追加されました。
+
+* Microsoft.Compute/images/書き込み
+* Microsoft.Network/loadBalancers/frontendIPConfigurations/読み取り
+
+
+次の権限は不要になったため、JSON ポリシーから削除されました。
+
+* Microsoft.Storage/storageAccounts/blobServices/コンテナー/書き込み
+* Microsoft.Network/publicIPAddresses/削除
+
+
+
+
+=== 2023年3月23日
+
+データ分類には「Microsoft.Storage/storageAccounts/delete」アクセス許可は不要になりました。
+
+この権限は、Cloud Volumes ONTAPでも必要です。
+
+
+
+=== 2023年1月5日
+
+次の権限が JSON ポリシーに追加されました。
+
+* Microsoft.Storage/storageAccounts/listAccountSas/アクション
+* Microsoft.Synapse/ワークスペース/プライベートエンドポイント接続承認/アクション
++
+これらの権限は、 NetAppバックアップおよびリカバリに必要です。
+
+* Microsoft.Network/loadBalancers/backendAddressPools/参加/アクション
++
+この権限は、Cloud Volumes ONTAP のデプロイメントに必要です。
+
+

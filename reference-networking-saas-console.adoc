@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: reference-networking-saas-console.html 
+keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
+summary: NetAppコンソール、 NetAppコンソール エージェント、およびNetAppデータ サービスには、アウトバウンド インターネット アクセスと、必要なエンドポイントに接続する機能が必要です。 
+---
+= NetAppコンソールのネットワークアクセスを準備する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソール、 NetAppコンソール エージェント、およびNetAppデータ サービスには、アウトバウンド インターネット アクセスと、必要なエンドポイントに接続する機能が必要です。
+
+次のネットワーク アクセスを設定する必要があります。
+
+* NetAppコンソールに SaaS (Software as a Service) としてアクセスするコンピュータ
+* オンプレミスまたはクラウドにインストールしたコンソール エージェントを展開するネットワークの場所。
+* Cloud Volumes ONTAPを含む特定のNetAppデータ サービスの追加エンドポイント。
+
+
+
+NOTE: NetApp は、コンソールとコンソール エージェントに必要なネットワーク エンドポイントを削減し、セキュリティを強化して導入を簡素化しました。重要なのは、バージョン 4.0.0 より前のすべてのデプロイメントが引き続き完全にサポートされていることです。以前のエンドポイントは既存のエージェントで引き続き使用できますが、 NetApp、エージェントのアップグレードが成功したことを確認した後、ファイアウォール ルールを現在のエンドポイントに更新することを強くお勧めします。link:reference-networking-saas-console-previous.html["エンドポイント リストを更新する方法について説明します。"]
+
+
+
+== NetAppコンソールが接続するエンドポイント
+
+NetAppコンソールにアクセスする各コンピューターは、以下にリストされているエンドポイントに接続されている必要があります。
+
+システムは、次の 2 つのシナリオでこれらのエンドポイントに接続します。
+
+* アクセスしているコンピュータから https://console.netapp.com["NetAppコンソール"^]サービスとしてのソフトウェア (SaaS) として。
+* コンソール エージェント ホストに直接アクセスするコンピュータから、ログインして設定するか、エージェント ホストからコンソールにアクセスします。
+
+
+[cols="2*"]
+|===
+| エンドポイント | 目的 
+
+
+| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。 
+
+
+| \https://signin.b2c.netapp.com | NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。 
+
+
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetAppコンソール内で機能とサービスを提供します。 
+
+
+ a| 
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+ a| 
+コンソール エージェントのアップグレード用のイメージを取得します。
+
+* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
++
+以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
+
+* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
+
+
+|===
+
+
+== コンソールエージェントのネットワークを準備する
+
+コンソール エージェントをオンプレミスまたはクラウドにインストールし、エンドポイントに接続してコンソールによって開始されたアクションを完了します。
+
+コンソール エージェントは、 NetAppコンソールと同じエンドポイントに加え、エージェントのインストール場所に応じて追加のエンドポイントにもアクセスできる必要があります。
+
+コンソール エージェントをインストールする前に、ネットワーク エンドポイント アクセスを設定します。
+
+* link:task-install-connector-aws-bluexp.html#networking-aws-agent["コンソールエージェントの AWS ネットワークアクセスを設定する"]
+* link:task-install-connector-azure-bluexp.html#networking-azure-agent["コンソール エージェントの Azure ネットワーク アクセスを設定する"]
+* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["コンソール エージェントの Google Cloud ネットワーク アクセスを設定する"]
+* link:task-install-connector-on-prem.html#network-access-agent["コンソール エージェントのオンプレミス ネットワーク アクセスを設定する"]
+
+
+
+
+== Cloud Volumes ONTAPのネットワークを準備する
+
+一部のNetAppデータ サービスとCloud Volumes ONTAP、エージェントに追加のアウトバウンド インターネット アクセスが必要です。
+
+
+
+=== Cloud Volumes ONTAPのエンドポイント
+
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS のCloud Volumes ONTAPのエンドポイント"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Azure のCloud Volumes ONTAPのエンドポイント"]
+* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud のCloud Volumes ONTAPのエンドポイント"]
+
+
+https://docs.netapp.com/us-en/data-services-family/["それぞれのNetAppデータ サービスのドキュメントを参照してください。"^]

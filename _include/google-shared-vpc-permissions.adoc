@@ -1,0 +1,52 @@
+= 
+:allow-uri-read: 
+
+
+共有 VPC を使用してリソースをサービス プロジェクトにデプロイする場合は、権限を準備する必要があります。
+
+この表は参考用であり、IAM 構成が完了すると、環境に権限表が反映されるはずです。
+
+.共有 VPC 権限を表示する
+[%collapsible]
+====
+[cols="10,10,10,18,18,34"]
+|===
+| 身元 | クリエイター | 開催地 | サービスプロジェクトの権限 | ホストプロジェクトの権限 | 目的 
+
+
+| エージェントを展開するためのGoogleアカウント | カスタム | 奉仕プロジェクト  a| 
+link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["エージェント展開ポリシー"]
+ a| 
+compute.networkUser
+| サービスプロジェクトにエージェントをデプロイする 
+
+
+| エージェントサービスアカウント | カスタム | 奉仕プロジェクト  a| 
+link:reference-permissions-gcp.html["エージェントサービスアカウントポリシー"]
+| compute.networkUser デプロイメントマネージャー.エディター | サービス プロジェクトでCloud Volumes ONTAPとサービスをデプロイおよび保守する 
+
+
+| Cloud Volumes ONTAPサービス アカウント | カスタム | 奉仕プロジェクト | storage.admin メンバー: serviceAccount.user としてのNetAppコンソール サービス アカウント | 該当なし | （オプション） NetApp Cloud TieringおよびNetApp Backup and Recoveryの場合 
+
+
+| Google API サービス エージェント | Google Cloud | 奉仕プロジェクト  a| 
+(デフォルト) エディター
+ a| 
+compute.networkUser
+| デプロイメントに代わって Google Cloud API と対話します。コンソールが共有ネットワークを使用できるようにします。 
+
+
+| Google Compute Engine のデフォルトのサービス アカウント | Google Cloud | 奉仕プロジェクト  a| 
+(デフォルト) エディター
+ a| 
+compute.networkUser
+| デプロイメントに代わって、Google Cloud インスタンスとコンピューティング インフラストラクチャをデプロイします。コンソールが共有ネットワークを使用できるようにします。 
+|===
+注：
+
+. ファイアウォール ルールをデプロイメントに渡さず、コンソールで自動的に作成するように選択した場合にのみ、ホスト プロジェクトで deploymentmanager.editor が必要になります。ルールが指定されていない場合、 NetAppコンソールは、VPC0 ファイアウォール ルールを含むデプロイメントをホスト プロジェクトに作成します。
+. firewall.create と firewall.delete は、デプロイメントにファイアウォール ルールを渡さず、コンソールで自動的に作成するように選択した場合にのみ必要です。これらの権限は、コンソール アカウントの .yaml ファイルにあります。共有 VPC を使用して HA ペアを展開する場合、これらの権限は VPC1、2、3 のファイアウォール ルールを作成するために使用されます。他のすべてのデプロイメントでは、これらの権限は VPC0 のルールの作成にも使用されます。
+. クラウド階層化の場合、階層化サービス アカウントには、プロジェクト レベルだけでなく、サービス アカウントに対する serviceAccount.user ロールが必要です。現在、プロジェクト レベルで serviceAccount.user を割り当てると、getIAMPolicy を使用してサービス アカウントをクエリしても権限が表示されません。
+
+
+====

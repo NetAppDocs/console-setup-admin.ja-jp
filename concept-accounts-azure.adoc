@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: concept-accounts-azure.html 
+keywords: cloud provider accounts, azure, azure accounts, service principal, multiple accounts, permissions, policy, policies, subscriptions, credentials, marketplace subscription, replace subscription, subscription, bluexp 
+summary: NetAppコンソールが Azure 資格情報を使用してユーザーに代わってアクションを実行する方法と、それらの資格情報がマーケットプレイスのサブスクリプションと関連付けられる方法について説明します。これらの詳細を理解しておくと、1 つ以上の Azure サブスクリプションの資格情報を管理するときに役立ちます。たとえば、コンソールに追加の Azure 資格情報を追加するタイミングを知りたい場合があります。 
+---
+= NetAppコンソールの Azure 資格情報と権限について学習します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールが Azure 資格情報を使用してユーザーに代わってアクションを実行する方法と、それらの資格情報がマーケットプレイスのサブスクリプションと関連付けられる方法について説明します。これらの詳細を理解しておくと、1 つ以上の Azure サブスクリプションの資格情報を管理するときに役立ちます。たとえば、コンソールに追加の Azure 資格情報を追加するタイミングを知りたい場合があります。
+
+
+
+== 初期の Azure 資格情報
+
+コンソールからコンソール エージェントを展開する場合は、コンソール エージェント仮想マシンを展開する権限を持つ Azure アカウントまたはサービス プリンシパルを使用する必要があります。必要な権限は、link:task-install-connector-azure-bluexp.html#connector-custom-role["Azure のエージェント展開ポリシー"] 。
+
+コンソールがAzureにコンソールエージェント仮想マシンを展開すると、 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["システム割り当てマネージドID"^]仮想マシン上でカスタム ロールを作成し、それを仮想マシンに割り当てます。このロールは、その Azure サブスクリプション内のリソースとプロセスを管理するために必要な権限をコンソールに提供します。link:reference-permissions-azure.html["コンソールが権限をどのように使用するかを確認します"] 。
+
+image:diagram_permissions_initial_azure.png["コンソールが Azure アカウントとサブスクリプションにコンソール エージェントを展開する様子を示す概念図。システム割り当てマネージド ID が有効になり、コンソール エージェント仮想マシンにカスタム ロールが割り当てられます。"]
+
+Cloud Volumes ONTAP用に新しいシステムを作成する場合、コンソールはデフォルトで次の Azure 資格情報を選択します。
+
+image:screenshot_accounts_select_azure.gif["詳細と資格情報ページのアカウントの切り替えオプションを示すスクリーンショット。"]
+
+初期の Azure 資格情報を使用してすべてのCloud Volumes ONTAPシステムを展開することも、追加の資格情報を追加することもできます。
+
+
+
+== マネージド ID 用の追加の Azure サブスクリプション
+
+コンソール エージェント VM に割り当てられたシステム割り当てマネージド ID は、コンソール エージェントを起動したサブスクリプションに関連付けられています。別のAzureサブスクリプションを選択する場合は、link:task-adding-azure-accounts.html#associate-additional-azure-subscriptions-with-a-managed-identity["マネージドIDをそれらのサブスクリプションに関連付ける"] 。
+
+
+
+== 追加のAzure資格情報
+
+コンソールで異なるAzure資格情報を使用する場合は、必要な権限を付与する必要があります。link:task-adding-azure-accounts.html["Microsoft Entra ID でサービス プリンシパルを作成して設定する"] Azure アカウントごとに。次の図は、それぞれサービス プリンシパルと、アクセス許可を提供するカスタム ロールが設定された 2 つの追加アカウントを示しています。
+
+image:diagram_permissions_multiple_azure.png["カスタム ロールとマネージド ID を通じてアクセス許可を受け取る最初の Azure アカウントと、カスタム ロールとサービス プリンシパルを通じてアクセス許可を受け取る 2 つの追加アカウントを示す概念図。"]
+
+そうするとlink:task-adding-azure-accounts.html#add-credentials-azure["コンソールにアカウント資格情報を追加する"]AD サービス プリンシパルに関する詳細を提供します。
+
+たとえば、新しいCloud Volumes ONTAPシステムを作成するときに、資格情報を切り替えることができます。
+
+image:screenshot_accounts_switch_azure.gif["詳細と資格情報ページでアカウントの切り替えを選択した後、クラウド プロバイダー アカウントを選択する様子を示すスクリーンショット。"]
+
+
+
+== 資格情報とマーケットプレイスのサブスクリプション
+
+コンソール エージェントに追加する資格情報は、Azure Marketplace サブスクリプションに関連付ける必要があります。これにより、 Cloud Volumes ONTAPの料金を時間単位 (PAYGO) またはNetAppデータ サービス、あるいは年間契約で支払うことができます。
+
+link:task-adding-azure-accounts.html#subscribe["Azureサブスクリプションを関連付ける方法を学ぶ"] 。
+
+Azure 資格情報とマーケットプレース サブスクリプションについては、次の点に注意してください。
+
+* Azure 資格情報のセットに関連付けることができるのは、1 つの Azure Marketplace サブスクリプションのみです。
+* 既存のマーケットプレイスサブスクリプションを新しいサブスクリプションに置き換えることができます
+
+
+
+
+== FAQ
+
+次の質問は、資格情報とサブスクリプションに関連しています。
+
+
+
+=== Cloud Volumes ONTAPシステムの Azure Marketplace サブスクリプションを変更できますか?
+
+はい、できます。  Azure 資格情報のセットに関連付けられている Azure Marketplace サブスクリプションを変更すると、既存および新しいすべてのCloud Volumes ONTAPシステムに新しいサブスクリプションに対して課金されます。
+
+link:task-adding-azure-accounts.html#subscribe["Azureサブスクリプションを関連付ける方法を学ぶ"] 。
+
+
+
+=== それぞれ異なるマーケットプレイス サブスクリプションを持つ複数の Azure 資格情報を追加できますか?
+
+同じ Azure サブスクリプションに属するすべての Azure 資格情報は、同じ Azure Marketplace サブスクリプションに関連付けられます。
+
+異なる Azure サブスクリプションに属する複数の Azure 資格情報がある場合、それらの資格情報は、同じ Azure Marketplace サブスクリプションまたは異なるマーケットプレイス サブスクリプションに関連付けることができます。
+
+
+
+=== 既存のCloud Volumes ONTAPシステムを別の Azure サブスクリプションに移動できますか?
+
+いいえ、 Cloud Volumes ONTAPシステムに関連付けられている Azure リソースを別の Azure サブスクリプションに移動することはできません。
+
+
+
+=== マーケットプレイスの展開とオンプレミスの展開では資格情報はどのように機能しますか?
+
+上記のセクションでは、コンソールからのコンソール エージェントの推奨展開方法について説明しています。  Azure Marketplace から Azure にコンソール エージェントをデプロイし、独自の Linux ホストにコンソール エージェント ソフトウェアをインストールすることもできます。
+
+Marketplace を使用する場合は、コンソール エージェント VM とシステム割り当てマネージド ID にカスタム ロールを割り当てることでアクセス許可を付与することも、Microsoft Entra サービス プリンシパルを使用することもできます。
+
+オンプレミス展開の場合、コンソール エージェントのマネージド ID を設定することはできませんが、サービス プリンシパルを使用してアクセス許可を付与することはできます。
+
+権限の設定方法については、次のページを参照してください。
+
+* 標準モード
++
+** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Azure Marketplace のデプロイの権限を設定する"]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
+
+
+* 制限モード
++
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["制限モードの権限を設定する"]
+
+
+

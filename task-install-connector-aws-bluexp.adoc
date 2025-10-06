@@ -1,0 +1,342 @@
+---
+sidebar: sidebar 
+permalink: task-install-connector-aws-bluexp.html 
+keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
+summary: NetAppコンソールから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。 
+---
+= NetAppコンソールからAWSにコンソールエージェントを作成する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。
+
+.開始する前に
+* あなたはlink:concept-connectors.html["コンソールエージェントの理解"]。
+* 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
+
+
+
+
+== ステップ1: AWSにコンソールエージェントを展開するためのネットワークを設定する
+
+コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件により、コンソール エージェントはハイブリッド クラウド内のリソースとプロセスを管理できるようになります。
+
+VPCとサブネット:: コンソール エージェントを作成するときは、そのエージェントが存在する VPC とサブネットを指定する必要があります。
+
+
+ターゲットネットワークへの接続:: コンソール エージェントには、システムを作成および管理する予定の場所へのネットワーク接続が必要です。たとえば、オンプレミス環境にCloud Volumes ONTAPシステムまたはストレージ システムを作成する予定のネットワークなどです。
+
+
+アウトバウンドインターネットアクセス:: コンソール エージェントを展開するネットワークの場所には、特定のエンドポイントに接続するための送信インターネット接続が必要です。
+
+
+コンソールエージェントから接続されたエンドポイント:: コンソール エージェントは、日常業務でパブリック クラウド環境内のリソースとプロセスを管理するために、次のエンドポイントに接続するために、送信インターネット アクセスを必要とします。
++
+--
+以下にリストされているエンドポイントはすべて CNAME エントリです。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+AWS サービス (amazonaws.com):
+
+* クラウドフォーメーション
+* エラスティックコンピューティングクラウド (EC2)
+* アイデンティティとアクセス管理（IAM）
+* キー管理サービス (KMS)
+* セキュリティトークンサービス（STS）
+* シンプルストレージサービス（S3）
+
+ a| 
+AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細についてはAWSドキュメントを参照してください"^]
+
+
+
+ a| 
+\https://mysupport.netapp.com
+ a| 
+ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
+\https://signin.b2c.netapp.com
+ a| 
+NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+ a| 
+NetAppコンソール内で機能とサービスを提供します。
+
+
+
+ a| 
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+ a| 
+コンソール エージェントのアップグレード用のイメージを取得します。
+
+* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
++
+以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
+
+* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
+
+
+|===
+--
+
+
+NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetAppコンソールを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
++
+--
+link:reference-networking-saas-console.html["NetAppコンソールから接続されたエンドポイントのリストを表示します"] 。
+
+--
+
+
+プロキシ サーバ:: NetApp は明示的プロキシ構成と透過的プロキシ構成の両方をサポートしています。透過プロキシを使用している場合は、プロキシ サーバーの証明書のみを提供する必要があります。明示的なプロキシを使用している場合は、IP アドレスと資格情報も必要になります。
++
+--
+* IPアドレス
+* Credentials
+* HTTPS証明書
+
+
+--
+
+
+ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
++
+--
+* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
+* アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
++
+Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するためのアウトバウンド インターネット接続がない場合、コンソールは、コンソール エージェントに含まれているプロキシ サーバーを使用するようにそれらのシステムを自動的に構成します。唯一の要件は、コンソール エージェントのセキュリティ グループがポート 3128 経由の受信接続を許可していることを確認することです。コンソール エージェントを展開した後、このポートを開く必要があります。
+
+
+
+--
+
+
+NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
++
+--
+コンソール エージェントを作成した後、このネットワーク要件を実装する必要があります。
+
+--
+
+
+
+
+== ステップ2: コンソールエージェントのAWS権限を設定する
+
+コンソールは、VPC にコンソールエージェントインスタンスをデプロイする前に、AWS で認証する必要があります。次のいずれかの認証方法を選択できます。
+
+* コンソールに必要な権限を持つIAMロールを割り当てます
+* 必要な権限を持つIAMユーザーにAWSアクセスキーとシークレットキーを提供します
+
+
+どちらのオプションを使用する場合でも、最初のステップは IAM ポリシーを作成することです。このポリシーには、コンソールから AWS のコンソールエージェントインスタンスを起動するために必要な権限のみが含まれています。
+
+必要に応じて、IAMを使用してIAMポリシーを制限することができます。 `Condition`要素。 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["AWS ドキュメント: 条件要素"^]
+
+.手順
+. AWS IAM コンソールに移動します。
+. *ポリシー > ポリシーの作成*を選択します。
+. 「JSON」を選択します。
+. 次のポリシーをコピーして貼り付けます。
++
+このポリシーには、コンソールから AWS のコンソールエージェントインスタンスを起動するために必要な権限のみが含まれています。コンソールは、コンソールエージェントを作成すると、コンソールエージェントインスタンスに新しい権限セットを適用し、コンソールエージェントが AWS リソースを管理できるようにします。link:reference-permissions-aws.html["コンソールエージェントインスタンス自体に必要な権限を表示する"] 。
+
++
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:PutRolePolicy",
+        "iam:CreateInstanceProfile",
+        "iam:DeleteRolePolicy",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:DeleteInstanceProfile",
+        "iam:PassRole",
+        "iam:ListRoles",
+        "ec2:DescribeInstanceStatus",
+        "ec2:RunInstances",
+        "ec2:ModifyInstanceAttribute",
+        "ec2:CreateSecurityGroup",
+        "ec2:DeleteSecurityGroup",
+        "ec2:DescribeSecurityGroups",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:CreateNetworkInterface",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DeleteNetworkInterface",
+        "ec2:ModifyNetworkInterfaceAttribute",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeDhcpOptions",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeRegions",
+        "ec2:DescribeInstances",
+        "ec2:CreateTags",
+        "ec2:DescribeImages",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeLaunchTemplates",
+        "ec2:CreateLaunchTemplate",
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:ValidateTemplate",
+        "ec2:AssociateIamInstanceProfile",
+        "ec2:DescribeIamInstanceProfileAssociations",
+        "ec2:DisassociateIamInstanceProfile",
+        "iam:GetRole",
+        "iam:TagRole",
+        "kms:ListAliases",
+        "cloudformation:ListStacks"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:TerminateInstances"
+      ],
+      "Condition": {
+        "StringLike": {
+          "ec2:ResourceTag/OCCMInstance": "*"
+        }
+      },
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ]
+    }
+  ]
+}
+----
+. 必要に応じて、[次へ] を選択し、タグを追加します。
+. *次へ*を選択し、名前と説明を入力します。
+. *ポリシーの作成*を選択します。
+. コンソールが引き受けることができる IAM ロールまたは IAM ユーザーにポリシーをアタッチして、コンソールにアクセスキーを提供できるようにします。
++
+** (オプション 1) コンソールが引き受けることができる IAM ロールを設定します。
++
+... ターゲットアカウントの AWS IAM コンソールに移動します。
+... [アクセス管理] で、*[ロール] > [ロールの作成]* を選択し、手順に従ってロールを作成します。
+... *信頼されたエンティティタイプ*で、*AWS アカウント*を選択します。
+... *別のAWSアカウント*を選択し、コンソールSaaSアカウントのIDを入力します: 952013314444
+... 前のセクションで作成したポリシーを選択します。
+... ロールを作成したら、コンソール エージェントを作成するときにコンソールに貼り付けることができるように、ロール ARN をコピーします。
+
+
+** (オプション 2) コンソールにアクセスキーを提供できるように、IAM ユーザーの権限を設定します。
++
+... AWS IAM コンソールから [*ユーザー*] を選択し、ユーザー名を選択します。
+... *権限の追加 > 既存のポリシーを直接添付*を選択します。
+... 作成したポリシーを選択します。
+... *次へ*を選択し、*権限の追加*を選択します。
+... IAM ユーザーのアクセスキーとシークレットキーがあることを確認します。
+
+
+
+
+
+
+.結果
+これで、必要な権限を持つ IAM ロールまたは必要な権限を持つ IAM ユーザーが作成されているはずです。コンソールからコンソール エージェントを作成するときに、ロールまたはアクセス キーに関する情報を提供できます。
+
+
+
+== ステップ3: コンソールエージェントを作成する
+
+コンソールの Web ベースのコンソールから直接コンソール エージェントを作成します。
+
+.タスク概要
+* コンソールからコンソール エージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。コンソールエージェントを作成した後、CPU や RAM が少ない小さな EC2 インスタンスに切り替えないでください。link:reference-connector-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
+* コンソールがコンソール エージェントを作成すると、インスタンスの IAM ロールとインスタンス プロファイルが作成されます。このロールには、コンソールエージェントが AWS リソースを管理できるようにする権限が含まれています。将来のリリースで新しい権限が追加されたら、ロールが更新されるようにしてください。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシーの詳細"] 。
+
+
+.開始する前に
+次のものが必要です:
+
+* AWS 認証方法: 必要な権限を持つ IAM ユーザーの IAM ロールまたはアクセスキーのいずれか。
+* ネットワーク要件を満たす VPC とサブネット。
+* EC2 インスタンスのキーペア。
+* コンソール エージェントからのインターネット アクセスにプロキシが必要な場合のプロキシ サーバーの詳細。
+* 設定link:#networking-aws-agent["ネットワーク要件"]。
+* 設定link:#aws-permissions-agent["AWS 権限"]。
+
+
+.手順
+. *管理 > エージェント*を選択します。
+. *概要*ページで、*エージェントのデプロイ > AWS*を選択します。
+. ウィザードの手順に従ってコンソール エージェントを作成します。
+. *はじめに*ページではプロセスの概要を説明します
+. *AWS 認証情報* ページで、AWS リージョンを指定し、認証方法 (コンソールが引き受けることができる IAM ロール、または AWS アクセスキーとシークレットキーのいずれか) を選択します。
++
+
+TIP: *役割を引き受ける* を選択した場合は、コンソール エージェント展開ウィザードから最初の資格情報セットを作成できます。追加の資格情報セットは、「資格情報」ページから作成する必要があります。これらはウィザードのドロップダウン リストで利用できるようになります。link:task-adding-aws-accounts.html["追加の資格情報を追加する方法を学ぶ"] 。
+
+. *詳細*ページで、コンソール エージェントに関する詳細を入力します。
++
+** インスタンスの名前を入力します。
+** インスタンスにカスタム タグ (メタデータ) を追加します。
+** コンソールで必要な権限を持つ新しいロールを作成するか、または既存のロールを選択するかを選択します。link:reference-permissions-aws.html["必要な権限"] 。
+** コンソール エージェントの EBS ディスクを暗号化するかどうかを選択します。デフォルトの暗号化キーを使用するか、カスタム キーを使用するかを選択できます。
+
+
+. *ネットワーク* ページで、インスタンスの VPC、サブネット、キーペアを指定し、パブリック IP アドレスを有効にするかどうかを選択し、オプションでプロキシ設定を指定します。
++
+コンソール エージェント仮想マシンにアクセスするための正しいキー ペアがあることを確認します。キーペアがないとアクセスできません。
+
+. *セキュリティ グループ* ページで、新しいセキュリティ グループを作成するか、必要な受信ルールと送信ルールを許可する既存のセキュリティ グループを選択するかを選択します。
++
+link:reference-ports-aws.html["AWS のセキュリティグループルールを表示する"] 。
+
+. 選択内容を確認して、セットアップが正しいことを確認します。
++
+.. *エージェント構成の検証* チェック ボックスはデフォルトでオンになっており、展開時にコンソールによってネットワーク接続要件が検証されます。コンソールがエージェントの展開に失敗した場合、トラブルシューティングに役立つレポートが提供されます。デプロイメントが成功した場合、レポートは提供されません。
+
+
++
+[]
+====
+まだ使用している場合はlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、チェックボックスをオフにして検証チェックをスキップします。
+
+====
+. *追加*を選択します。
++
+コンソールは約 10 分でインスタンスを準備します。プロセスが完了するまでこのページに留まります。
+
+
+
+.結果
+プロセスが完了すると、コンソール エージェントはコンソールから使用できるようになります。
+
+
+NOTE: デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。link:task-troubleshoot-connector.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
+
+コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["NetAppコンソールから S3 バケットを管理する方法を学びます"^]

@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: task-federation-import.html 
+keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity, 
+summary: '以前にNetApp Cloud Central ( NetAppコンソールの外部アプリケーション) を介してフェデレーションを設定したことがある場合は、フェデレーション ページで、既存のフェデレーション接続をコンソールにインポートして、新しいインターフェイスで管理できるようにするように求められます。そうすれば、フェデレーション接続を再作成しなくても、最新の拡張機能を活用できるようになります。' 
+---
+= NetAppコンソールにフェデレーションをインポートする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+以前にNetApp Cloud Central ( NetAppコンソールの外部アプリケーション) を介してフェデレーションを設定したことがある場合は、フェデレーション ページで、既存のフェデレーション接続をコンソールにインポートして、新しいインターフェイスで管理できるようにするように求められます。そうすれば、フェデレーション接続を再作成しなくても、最新の拡張機能を活用できるようになります。
+
+
+NOTE: 既存のフェデレーションをインポートした後、*フェデレーション* ページからフェデレーションを管理できます。link:task-federation-manage.html["フェデレーションの管理について詳しく学びます。"]
+
+.必要な役割
+組織管理者またはフェデレーション管理者。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+
+.手順
+. *管理 > IDとアクセス*を選択します。
+. *Federation*タブを選択します。
+. *インポートフェデレーション*を選択します。
+

@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: reference-connector-maint-console.html 
+keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
+summary: コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。 
+---
+= コンソールエージェントメンテナンスコンソール
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。
+
+
+
+== エージェントメンテナンスコンソールにアクセスする
+
+コンソール エージェント ホストからメンテナンス コンソールにアクセスできます。次のディレクトリに移動します。
+
+[source, CLI]
+----
+/opt/application/netapp/service-manager-2/agent-maint-console
+----
+
+
+== 透過プロキシコマンド
+
+エージェント メンテナンス コンソールには、透過プロキシ サーバーを使用するようにエージェントを構成するコマンドが用意されています。
+
+
+
+=== 現在の透過プロキシ構成を表示する
+
+現在の透過プロキシ構成を表示するには、次のコマンドを使用します。
+
+[source, CLI]
+----
+./agent-maint-console proxy get
+----
+
+
+=== 透過プロキシサーバーを追加する
+
+透過プロキシサーバーを追加するには、次のコマンドを使用します。 `/home/ubuntu/myCA1.pem`プロキシ サーバーの証明書ファイルへのパスです。証明書ファイルは PEM 形式である必要があります。
+
+[source, CLI]
+----
+./agent-maint-console proxy add -c /home/ubuntu/myCA1.pem
+----
+証明書ファイルがコマンドと同じディレクトリにあることを確認するか、証明書ファイルへの完全パスを指定します。
+
+
+
+=== 透過プロキシサーバーの証明書を更新する
+
+透過プロキシサーバーの証明書を更新するには、次のコマンドを使用します。 `/home/ubuntu/myCA1.pem`プロキシ サーバーの新しい証明書ファイルへのパスです。証明書ファイルは PEM 形式である必要があります。
+
+[source, CLI]
+----
+./agent-maint-console proxy update -c /home/ubuntu/myCA1.pem
+----
+証明書ファイルがコマンドと同じディレクトリにあることを確認するか、証明書ファイルへの完全パスを指定します。
+
+
+
+=== 透過プロキシサーバーを削除する
+
+透過プロキシ サーバーを削除するには、次のコマンドを使用します。
+
+[source, CLI]
+----
+./agent-maint-console proxy remove
+----
+
+
+=== 任意のコマンドのヘルプを表示する
+
+コマンドのヘルプを表示するには、 `--help`コマンドに。たとえば、 `proxy add`コマンドを実行するには、次のコマンドを使用します。
+
+[source, CLI]
+----
+./agent-maint-console proxy add --help
+----

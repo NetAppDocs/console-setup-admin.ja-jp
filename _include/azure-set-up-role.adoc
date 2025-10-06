@@ -1,0 +1,39 @@
+= 
+:allow-uri-read: 
+
+
+. の内容をコピーしますlink:reference-permissions-azure.html["コネクタのカスタムロール権限"]JSON ファイルに保存します。
+. 割り当て可能なスコープに Azure サブスクリプション ID を追加して、JSON ファイルを変更します。
++
+NetAppコンソールで使用する各 Azure サブスクリプションの ID を追加する必要があります。
+
++
+*例*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. JSON ファイルを使用して、Azure でカスタム ロールを作成します。
++
+次の手順では、Azure Cloud Shell で Bash を使用してロールを作成する方法について説明します。
+
++
+.. 始める https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure クラウド シェル"^]Bash 環境を選択します。
+.. JSON ファイルをアップロードします。
++
+image:screenshot_azure_shell_upload.png["ファイルをアップロードするオプションを選択できる Azure Cloud Shell のスクリーンショット。"]
+
+.. Azure CLI を使用してカスタム ロールを作成します。
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+

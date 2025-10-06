@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-work.html 
+keywords: partner organizations, create partnership, MSPs, service provider access 
+summary: パートナー組織でロールが付与されると、その組織に切り替えて、実行権限があるアクションを実行できるようになります。 
+---
+= パートナー組織で働く
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+パートナー組織でロールが付与されると、その組織に切り替えて、実行権限があるアクションを実行できるようになります。
+
+組織メニューを使用して、自分の組織とアクセス権を持つパートナー組織を切り替えることができます。link:task-iam-switch-organizations-projects.html["組織とプロジェクトの切り替えについて詳しく学びます。"]
+
+パートナー組織内で共有されているリソースを確認し、割り当てられたロールに基づいてアクションを実行できるようになります。パートナーシップ管理者と協力して、アクセスする必要があるリソースに対して適切なロールがあることを確認してください。

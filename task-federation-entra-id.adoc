@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task-federation-entra-id.html 
+keywords: Microsoft Entra ID, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, domain verification, client secret, redirect URL, organization admin, 
+summary: 'Microsoft Entra ID IdP プロバイダーと連携して、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。' 
+---
+= NetAppコンソールを Microsoft Entra ID と連携する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Microsoft Entra ID IdP プロバイダーと連携して、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。
+
+.必要な役割
+フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+
+
+NOTE: 企業の IdP またはNetAppサポート サイトと連携できます。  NetApp、両方ではなく、どちらか一方を選択することを推奨しています。
+
+NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成する必要があります。次に、コンソールで ID プロバイダーの構成を使用する接続を作成できます。
+
+Microsoft Entra ID とのフェデレーション接続を設定して、コンソールのシングル サインオン (SSO) を有効にすることができます。このプロセスでは、コンソールをサービス プロバイダーとして信頼するように Microsoft Entra ID を構成し、コンソールで接続を作成します。
+
+.開始する前に
+* 管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。
+* フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。link:task-federation-verify-domain.html["NetAppコンソールでドメインを確認する"]トピック。
+
+
+.手順
+. *管理 > IDとアクセス*を選択します。
+. *Federation* ページを表示するには、*Federation* を選択します。
+. *新しいフェデレーションの構成*を選択します。
+
+
+[discrete]
+====== ドメインの詳細
+
+. ドメインの詳細を入力してください:
++
+.. 検証済みドメインを使用するか、メールドメインを使用するかを選択します。電子メール ドメインは、ログインしているアカウントに関連付けられているドメインです。
+.. 構成するフェデレーションの名前を入力します。
+.. 検証済みのドメインを選択する場合は、リストからドメインを選択します。
+
+
+. *次へ*を選択します。
+
+
+[discrete]
+====== 接続方法
+
+. 接続方法として、*プロバイダー*を選択し、*Microsoft Entra ID*を選択します。
+. *次へ*を選択します。
+
+
+[discrete]
+====== 設定手順
+
+. NetApp をサービス プロバイダーとして信頼するように Microsoft Entra ID を構成します。この手順は Microsoft Entra ID サーバーで実行する必要があります。
++
+.. コンソールを信頼するには、Microsoft Entra ID アプリを登録するときに次の値を使用します。
++
+*** *リダイレクトURL*には、 `https://services.cloud.netapp.com`
+*** *返信URL*には、 `https://netapp-cloud-account.auth0.com/login/callback`
+
+
+.. Microsoft Entra ID アプリのクライアント シークレットを作成します。フェデレーションを完了するには、クライアント ID、クライアント シークレット、Entra ID ドメイン名を提供する必要があります。
+
+
+. コンソールに戻り、[次へ] を選択して接続を作成します。
+
+
+[discrete]
+====== 接続を作成
+
+. Microsoft Entra IDで接続を作成する
++
+.. 前の手順で作成したクライアント ID とクライアント シークレットを入力します。
+.. Microsoft Entra ID ドメイン名を入力します。
+
+
+. *接続を作成*を選択します。システムは数秒で接続を作成します。
+
+
+[discrete]
+====== 接続をテストして有効にする
+
+. *次へ*を選択します。
+. 接続をテストするには、[*接続テスト*] を選択します。  IdP サーバーのログイン ページに移動します。  IdP 資格情報を使用してログインし、テストを完了してコンソールに戻り、接続を有効にします。
+. *次へ*を選択します。
+. *フェデレーションの有効化*ページでフェデレーションの詳細を確認し、*フェデレーションの有効化*を選択します。
+. プロセスを完了するには、[完了] を選択します。
+
+
+フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetAppコンソールにログインできるようになります。

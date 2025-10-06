@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: task-iam-rename-organization.html 
+keywords: rename organization, change organization name, name change, rename, change name, iam, ID, integration, project, organization, API, identity and access management 
+summary: 必要に応じて、 NetAppコンソール組織の名前を変更できます。 
+---
+= 組織IDとプロジェクトID
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソール組織には名前と ID があります。組織を識別しやすいように、組織の名前を選択できます。特定の統合では組織 ID を取得する必要がある場合もあります。
+
+
+
+== 組織名を変更する
+
+組織の名前を変更できます。複数の組織をサポートする場合に役立ちます。
+
+.手順
+. *管理 > IDとアクセス*を選択します。
+. *組織*を選択します。
+. *組織*ページで、表の最初の行に移動し、image:icon-action.png["3つの点が並んだアイコン"]次に、[組織の編集] を選択します。
++
+image:screenshot-iam-edit-organization.png["アクション アイコンと組織の編集オプションが表示されている概要ページのスクリーンショット。"]
+
+. 新しい組織名を入力し、「適用」を選択します。
+
+
+
+
+== 組織IDを取得する
+
+組織 ID は、コンソールとの特定の統合に使用されます。
+
+組織ページから組織 ID を表示し、必要に応じてクリップボードにコピーすることができます。
+
+.手順
+. *管理 > ID とアクセス* > *組織* を選択します。
+. *組織* ページの概要バーで組織 ID を探し、クリップボードにコピーします。これを後で使用するために保存することも、必要な場所に直接コピーすることもできます。
+
+
+
+
+== プロジェクトのIDを取得する
+
+API を使用している場合は、プロジェクトの ID を取得する必要があります。たとえば、 Cloud Volumes ONTAPシステムを作成する場合などです。
+
+.手順
+. *組織*ページで、表内のプロジェクトに移動し、image:icon-action.png["3つの点が並んだアイコン"]
++
+プロジェクト ID が表示されます。
+
+. ID をコピーするには、コピー ボタンを選択します。
++
+image:screenshot-iam-project-id.png["プロジェクトのアクション メニューを選択した後にプロジェクト ID を表示するフォルダーとプロジェクト テーブルのスクリーンショット。"]
+
+
+
+.関連情報
+* link:concept-identity-and-access-management.html["アイデンティティとアクセス管理について学ぶ"]
+* link:task-iam-get-started.html["アイデンティティとアクセスを始める"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["IDとアクセスのためのAPIについて学ぶ"^]
+

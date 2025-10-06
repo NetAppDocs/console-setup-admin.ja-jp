@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: concept-accounts-gcp.html 
+keywords: cloud provider accounts, gcp, gcp accounts, google cloud platform, google accounts, google cloud platform accounts, permissions, project, google cloud project, credential, bluexp 
+summary: NetAppコンソールが Google Cloud 認証情報を使用してユーザーに代わってアクションを実行する方法と、それらの認証情報がマーケットプレイスのサブスクリプションとどのように関連付けられるかについて説明します。これらの詳細を理解しておくと、1 つ以上の Google Cloud プロジェクトの認証情報を管理するときに役立ちます。たとえば、コンソール エージェント VM に関連付けられているサービス アカウントについて知りたい場合があります。 
+---
+= Google Cloud プロジェクトと権限について学ぶ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールが Google Cloud 認証情報を使用してユーザーに代わってアクションを実行する方法と、それらの認証情報がマーケットプレイスのサブスクリプションとどのように関連付けられるかについて説明します。これらの詳細を理解しておくと、1 つ以上の Google Cloud プロジェクトの認証情報を管理するときに役立ちます。たとえば、コンソール エージェント VM に関連付けられているサービス アカウントについて知りたい場合があります。
+
+
+
+== NetAppコンソールのプロジェクトと権限
+
+コンソールを使用して Google Cloud プロジェクト内のリソースを管理する前に、まずコンソール エージェントをデプロイする必要があります。エージェントは、オンプレミスまたは別のクラウド プロバイダーで実行することはできません。
+
+コンソール エージェントをコンソールから直接展開する前に、次の 2 セットの権限を設定する必要があります。
+
+. コンソールからコンソール エージェント VM インスタンスを起動する権限を持つ Google アカウントを使用して、コンソール エージェントを展開する必要があります。
+. コンソールエージェントを展開する際には、 https://cloud.google.com/iam/docs/service-accounts["サービスアカウント"^] VM インスタンス用。コンソールは、サービス アカウントから権限を取得して、 Cloud Volumes ONTAPシステムの作成と管理、 NetAppバックアップとリカバリを使用したバックアップの管理などを行います。権限は、サービス アカウントにカスタム ロールを添付することによって提供されます。
+
+
+次の図は、上記の 1 および 2 で説明した許可要件を示しています。
+
+image:diagram_permissions_gcp.png["Cloud Volumes ONTAPをデプロイするための Google アカウントとサービス アカウントの権限要件を示す概念図。"]
+
+権限の設定方法については、次のページを参照してください。
+
+* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["標準モードの Google Cloud 権限を設定する"]
+* link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["制限モードの権限を設定する"]
+
+
+
+
+== 資格情報とマーケットプレイスのサブスクリプション
+
+Google Cloud にコンソール エージェントをデプロイすると、コンソールは、コンソール エージェントが存在するプロジェクト内の Google Cloud サービス アカウントのデフォルトの認証情報セットを作成します。  Cloud Volumes ONTAPおよびNetAppデータサービスの料金を支払うには、これらの認証情報を Google Cloud Marketplace サブスクリプションに関連付ける必要があります。
+
+link:task-adding-gcp-accounts.html["Google Cloud Marketplace サブスクリプションを関連付ける方法を学びます"] 。
+
+Google Cloud の認証情報とマーケットプレイスのサブスクリプションについては、次の点に注意してください。
+
+* コンソール エージェントに関連付けることができるのは、Google Cloud 認証情報の 1 セットのみです。
+* 認証情報に関連付けることができるのは、Google Cloud Marketplace サブスクリプション 1 つだけです。
+* 既存のマーケットプレイスサブスクリプションを新しいサブスクリプションに置き換えることができます
+
+
+
+
+== Cloud Volumes ONTAPプロジェクト
+
+Cloud Volumes ONTAP は、コンソール エージェントと同じプロジェクトに存在することも、別のプロジェクトに存在することもできます。  Cloud Volumes ONTAP を別のプロジェクトにデプロイするには、まずそのプロジェクトにコンソール エージェントのサービス アカウントとロールを追加する必要があります。
+
+* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["サービスアカウントの設定方法を学ぶ"]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["Google Cloud でCloud Volumes ONTAPをデプロイし、プロジェクトを選択する方法を学びます"^]
+

@@ -1,0 +1,512 @@
+---
+sidebar: sidebar 
+permalink: task-install-connector-azure-bluexp.html 
+keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector 
+summary: NetAppコンソールから Azure にコンソール エージェントを作成するには、ネットワークを設定し、Azure 権限を準備してから、コンソール エージェントを作成する必要があります。 
+---
+= NetAppコンソールから Azure にコンソール エージェントを作成する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetAppコンソールから Azure にコンソール エージェントを作成するには、ネットワークを設定し、Azure 権限を準備してから、コンソール エージェントを作成する必要があります。
+
+.開始する前に
+* あなたはlink:concept-connectors.html["コンソールエージェントの理解"]。
+* 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
+
+
+
+
+== ステップ1: ネットワークを設定する
+
+コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件により、コンソール エージェントはハイブリッド クラウド リソースを管理できるようになります。
+
+Azureリージョン:: Cloud Volumes ONTAPを使用する場合、コンソールエージェントは、管理するCloud Volumes ONTAPシステムと同じAzureリージョン、または https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure リージョン ペア"^]Cloud Volumes ONTAPシステム用。この要件により、 Cloud Volumes ONTAPとそれに関連付けられたストレージ アカウント間で Azure Private Link 接続が使用されるようになります。
++
+--
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Cloud Volumes ONTAP がAzure Private Link を使用する方法を学ぶ"^]
+
+--
+
+
+VNetとサブネット:: コンソール エージェントを作成するときは、そのエージェントが存在する VNet とサブネットを指定する必要があります。
+
+
+ターゲットネットワークへの接続:: コンソール エージェントには、システムを作成および管理する予定の場所へのネットワーク接続が必要です。たとえば、オンプレミス環境にCloud Volumes ONTAPシステムまたはストレージ システムを作成する予定のネットワークなどです。
+
+
+アウトバウンドインターネットアクセス:: コンソール エージェントを展開するネットワークの場所には、特定のエンドポイントに接続するための送信インターネット接続が必要です。
+
+
+コンソールエージェントから接続されたエンドポイント:: コンソール エージェントは、日常業務でパブリック クラウド環境内のリソースとプロセスを管理するために、次のエンドポイントに接続するために、送信インターネット アクセスを必要とします。
++
+--
+以下にリストされているエンドポイントはすべて CNAME エントリです。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+\https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
+ a| 
+Azure パブリック リージョン内のリソースを管理します。
+
+
+
+ a| 
+\https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+ a| 
+Azure China リージョンのリソースを管理します。
+
+
+
+ a| 
+\https://mysupport.netapp.com
+ a| 
+ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
+\https://signin.b2c.netapp.com
+ a| 
+NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+ a| 
+NetAppコンソール内で機能とサービスを提供します。
+
+
+
+ a| 
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+ a| 
+コンソール エージェントのアップグレード用のイメージを取得します。
+
+* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
++
+以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
+
+* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
+
+
+|===
+--
+
+
+NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetAppコンソールを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
++
+--
+link:reference-networking-saas-console.html["NetAppコンソールから接続されたエンドポイントのリストを表示します"] 。
+
+--
+
+
+プロキシ サーバ:: NetApp は明示的プロキシ構成と透過的プロキシ構成の両方をサポートしています。透過プロキシを使用している場合は、プロキシ サーバーの証明書のみを提供する必要があります。明示的なプロキシを使用している場合は、IP アドレスと資格情報も必要になります。
++
+--
+* IPアドレス
+* Credentials
+* HTTPS証明書
+
+
+--
+
+
+ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
++
+--
+* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
+* アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
++
+Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するためのアウトバウンド インターネット接続がない場合、コンソールは、コンソール エージェントに含まれているプロキシ サーバーを使用するようにそれらのシステムを自動的に構成します。唯一の要件は、コンソール エージェントのセキュリティ グループがポート 3128 経由の受信接続を許可していることを確認することです。コンソール エージェントを展開した後、このポートを開く必要があります。
+
+
+
+--
+
+
+NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
++
+--
+コンソール エージェントを作成した後、このネットワーク要件を実装する必要があります。
+
+--
+
+
+
+
+== ステップ 2: コンソール エージェント展開ポリシー (カスタム ロール) を作成する
+
+Azure にコンソール エージェントをデプロイする権限を持つカスタム ロールを作成する必要があります。
+
+Azure アカウントまたは Microsoft Entra サービス プリンシパルに割り当てることができる Azure カスタム ロールを作成します。コンソールは Azure で認証し、これらのアクセス許可を使用してユーザーに代わってコンソール エージェント インスタンスを作成します。
+
+コンソールはAzureにコンソールエージェントVMを展開し、 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["システム割り当てマネージドID"^]必要なロールを作成し、それを VM に割り当てます。link:reference-permissions-azure.html["コンソールが権限をどのように使用するかを確認します"] 。
+
+Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して、Azure カスタム ロールを作成できます。次の手順は、Azure CLI を使用してロールを作成する方法を示しています。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]
+
+.手順
+. Azure の新しいカスタム ロールに必要なアクセス許可をコピーし、JSON ファイルに保存します。
++
+
+NOTE: このカスタム ロールには、コンソールから Azure のコンソール エージェント VM を起動するために必要なアクセス許可のみが含まれています。このポリシーを他の状況では使用しないでください。コンソールは、コンソール エージェントを作成するときに、コンソール エージェントが Azure リソースを管理できるようにする新しいアクセス許可セットをコンソール エージェント VM に適用します。
+
++
+[source, json]
+----
+{
+    "Name": "Azure SetupAsService",
+    "Actions": [
+        "Microsoft.Compute/disks/delete",
+        "Microsoft.Compute/disks/read",
+        "Microsoft.Compute/disks/write",
+        "Microsoft.Compute/locations/operations/read",
+        "Microsoft.Compute/operations/read",
+        "Microsoft.Compute/virtualMachines/instanceView/read",
+        "Microsoft.Compute/virtualMachines/read",
+        "Microsoft.Compute/virtualMachines/write",
+        "Microsoft.Compute/virtualMachines/delete",
+        "Microsoft.Compute/virtualMachines/extensions/write",
+        "Microsoft.Compute/virtualMachines/extensions/read",
+        "Microsoft.Compute/availabilitySets/read",
+        "Microsoft.Network/locations/operationResults/read",
+        "Microsoft.Network/locations/operations/read",
+        "Microsoft.Network/networkInterfaces/join/action",
+        "Microsoft.Network/networkInterfaces/read",
+        "Microsoft.Network/networkInterfaces/write",
+        "Microsoft.Network/networkInterfaces/delete",
+        "Microsoft.Network/networkSecurityGroups/join/action",
+        "Microsoft.Network/networkSecurityGroups/read",
+        "Microsoft.Network/networkSecurityGroups/write",
+        "Microsoft.Network/virtualNetworks/checkIpAddressAvailability/read",
+        "Microsoft.Network/virtualNetworks/read",
+        "Microsoft.Network/virtualNetworks/subnets/join/action",
+        "Microsoft.Network/virtualNetworks/subnets/read",
+        "Microsoft.Network/virtualNetworks/subnets/virtualMachines/read",
+        "Microsoft.Network/virtualNetworks/virtualMachines/read",
+        "Microsoft.Network/publicIPAddresses/write",
+        "Microsoft.Network/publicIPAddresses/read",
+        "Microsoft.Network/publicIPAddresses/delete",
+        "Microsoft.Network/networkSecurityGroups/securityRules/read",
+        "Microsoft.Network/networkSecurityGroups/securityRules/write",
+        "Microsoft.Network/networkSecurityGroups/securityRules/delete",
+        "Microsoft.Network/publicIPAddresses/join/action",
+        "Microsoft.Network/locations/virtualNetworkAvailableEndpointServices/read",
+        "Microsoft.Network/networkInterfaces/ipConfigurations/read",
+        "Microsoft.Resources/deployments/operations/read",
+        "Microsoft.Resources/deployments/read",
+        "Microsoft.Resources/deployments/delete",
+        "Microsoft.Resources/deployments/cancel/action",
+        "Microsoft.Resources/deployments/validate/action",
+        "Microsoft.Resources/resources/read",
+        "Microsoft.Resources/subscriptions/operationresults/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/delete",
+        "Microsoft.Resources/subscriptions/resourceGroups/read",
+        "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+        "Microsoft.Resources/subscriptions/resourceGroups/write",
+        "Microsoft.Authorization/roleDefinitions/write",
+        "Microsoft.Authorization/roleAssignments/write",
+        "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read",
+        "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write",
+        "Microsoft.Network/networkSecurityGroups/delete",
+        "Microsoft.Storage/storageAccounts/delete",
+        "Microsoft.Storage/storageAccounts/write",
+        "Microsoft.Resources/deployments/write",
+        "Microsoft.Resources/deployments/operationStatuses/read",
+        "Microsoft.Authorization/roleAssignments/read"
+    ],
+    "NotActions": [],
+    "AssignableScopes": [],
+    "Description": "Azure SetupAsService",
+    "IsCustom": "true"
+}
+----
+. 割り当て可能なスコープに Azure サブスクリプション ID を追加して JSON を変更します。
++
+*例*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz"
+],
+----
+. JSON ファイルを使用して、Azure でカスタム ロールを作成します。
++
+次の手順では、Azure Cloud Shell で Bash を使用してロールを作成する方法について説明します。
+
++
+.. 始める https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure クラウド シェル"^]Bash 環境を選択します。
+.. JSON ファイルをアップロードします。
++
+image:screenshot_azure_shell_upload.png["ファイルをアップロードするオプションを選択できる Azure Cloud Shell のスクリーンショット。"]
+
+.. 次の Azure CLI コマンドを入力します。
++
+[source, azurecli]
+----
+az role definition create --role-definition Policy_for_Setup_As_Service_Azure.json
+----
+
+
++
+これで、_Azure SetupAsService_ というカスタム ロールが作成されました。このカスタム ロールは、ユーザー アカウントまたはサービス プリンシパルに適用できます。
+
+
+
+
+
+== ステップ3: 認証を設定する
+
+コンソールからコンソール エージェントを作成するときは、コンソールが Azure で認証して VM をデプロイできるようにするためのログインを提供する必要があります。次の 2 つのオプションがあります。
+
+. プロンプトが表示されたら、Azure アカウントでSign in。このアカウントには特定の Azure 権限が必要です。これがデフォルトのオプションです。
+. Microsoft Entra サービス プリンシパルに関する詳細を提供します。このサービス プリンシパルには特定のアクセス許可も必要です。
+
+
+コンソールで使用するために、これらの認証方法のいずれかを準備するには、手順に従ってください。
+
+[role="tabbed-block"]
+====
+.Azureアカウント
+--
+コンソールからコンソール エージェントを展開するユーザーにカスタム ロールを割り当てます。
+
+.手順
+. Azure ポータルで、*サブスクリプション* サービスを開き、ユーザーのサブスクリプションを選択します。
+. *アクセス制御 (IAM)* をクリックします。
+. *追加* > *ロール割り当ての追加* をクリックし、権限を追加します。
++
+.. *Azure SetupAsService* ロールを選択し、*次へ* をクリックします。
++
+
+NOTE: Azure SetupAsService は、Azure のコンソール エージェント展開ポリシーで提供される既定の名前です。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
+
+.. *ユーザー、グループ、またはサービス プリンシパル*を選択したままにします。
+.. *メンバーを選択*をクリックし、ユーザーアカウントを選択して*選択*をクリックします。
+.. *次へ*をクリックします。
+.. *レビュー+割り当て*をクリックします。
+
+
+
+
+--
+.サービスプリンシパル
+--
+Azure アカウントでログインするのではなく、必要な権限を持つ Azure サービス プリンシパルの資格情報をコンソールに提供できます。
+
+Microsoft Entra ID でサービス プリンシパルを作成して設定し、コンソールに必要な Azure 資格情報を取得します。
+
+.ロールベースのアクセス制御用の Microsoft Entra アプリケーションを作成する
+. Azure で Active Directory アプリケーションを作成し、そのアプリケーションをロールに割り当てるためのアクセス許可があることを確認します。
++
+詳細については、 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure ドキュメント: 必要な権限"^]
+
+. Azure ポータルから、*Microsoft Entra ID* サービスを開きます。
++
+image:screenshot_azure_ad.png["Microsoft Azure の Active Directory サービスを表示します。"]
+
+. メニューで*アプリ登録*を選択します。
+. *新規登録*を選択します。
+. アプリケーションの詳細を指定します。
++
+** *名前*: アプリケーションの名前を入力します。
+** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプでもNetAppコンソールで使用できます)。
+** *リダイレクト URI*: このフィールドは空白のままにすることができます。
+
+
+. *登録*を選択します。
++
+AD アプリケーションとサービス プリンシパルを作成しました。
+
+
+
+.アプリケーションにカスタムロールを割り当てる
+. Azure ポータルから、*サブスクリプション* サービスを開きます。
+. サブスクリプションを選択します。
+. *アクセス制御 (IAM) > 追加 > ロール割り当ての追加* をクリックします。
+. *役割*タブで、*コンソールオペレーター*役割を選択し、*次へ*をクリックします。
+. *メンバー*タブで、次の手順を実行します。
++
+.. *ユーザー、グループ、またはサービス プリンシパル*を選択したままにします。
+.. *メンバーを選択*をクリックします。
++
+image:screenshot-azure-service-principal-role.png["アプリケーションにロールを追加するときにメンバー ページを表示する Azure ポータルのスクリーンショット。"]
+
+.. アプリケーションの名前を検索します。
++
+次に例を示します。
+
++
+image:screenshot_azure_service_principal_role.png["Azure ポータルの「ロールの割り当ての追加」フォームが表示された Azure ポータルのスクリーンショット。"]
+
+.. アプリケーションを選択し、「選択」をクリックします。
+.. *次へ*をクリックします。
+
+
+. *レビュー+割り当て*をクリックします。
++
+これで、サービス プリンシパルに、コンソール エージェントをデプロイするために必要な Azure アクセス許可が付与されました。
+
++
+複数の Azure サブスクリプションのリソースを管理する場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。たとえば、コンソールを使用すると、 Cloud Volumes ONTAPをデプロイするときに使用するサブスクリプションを選択できます。
+
+
+
+.Windows Azure サービス管理 API 権限を追加する
+. *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
+. *API 権限 > 権限の追加* を選択します。
+. *Microsoft API* の下で、*Azure Service Management* を選択します。
++
+image:screenshot_azure_service_mgmt_apis.gif["Azure サービス管理 API のアクセス許可を示す Azure ポータルのスクリーンショット。"]
+
+. *組織ユーザーとして Azure サービス管理にアクセスする* を選択し、*権限の追加* を選択します。
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Azure サービス管理 API の追加を示す Azure ポータルのスクリーンショット。"]
+
+
+
+.アプリケーションのアプリケーションIDとディレクトリIDを取得します
+. *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
+. *アプリケーション (クライアント) ID* と *ディレクトリ (テナント) ID* をコピーします。
++
+image:screenshot_azure_app_ids.gif["Microsoft Entra IDy 内のアプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を示すスクリーンショット。"]
+
++
+Azure アカウントをコンソールに追加するときは、アプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を指定する必要があります。コンソールは ID を使用してプログラムでサインインします。
+
+
+
+.クライアントシークレットを作成する
+. *Microsoft Entra ID* サービスを開きます。
+. *アプリ登録*を選択し、アプリケーションを選択します。
+. *証明書とシークレット > 新しいクライアント シークレット*を選択します。
+. シークレットの説明と期間を指定します。
+. *追加*を選択します。
+. クライアント シークレットの値をコピーします。
++
+image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリンシパルのクライアント シークレットを表示する Azure ポータルのスクリーンショット。"]
+
+
+
+.結果
+これでサービス プリンシパルが設定され、アプリケーション (クライアント) ID、ディレクトリ (テナント) ID、およびクライアント シークレットの値がコピーされているはずです。コンソール エージェントを作成するときに、この情報をコンソールに入力する必要があります。
+
+--
+====
+
+
+== ステップ4: コンソールエージェントを作成する
+
+NetAppコンソールから直接コンソール エージェントを作成します。
+
+.タスク概要
+* コンソールからコンソール エージェントを作成すると、既定の構成を使用して Azure に仮想マシンがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。link:reference-connector-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
+* コンソールはコンソール エージェントを展開するときに、カスタム ロールを作成し、それをコンソール エージェント VM に割り当てます。このロールには、コンソール エージェントが Azure リソースを管理できるようにする権限が含まれています。後続のリリースで新しい権限が追加されるので、ロールが最新の状態に保たれていることを確認する必要があります。link:reference-permissions-azure.html["コンソールエージェントのカスタムロールの詳細"] 。
+
+
+.開始する前に
+次のものが必要です:
+
+* Azure サブスクリプション。
+* 選択した Azure リージョン内の VNet とサブネット。
+* 組織ですべての送信インターネット トラフィックにプロキシが必要な場合のプロキシ サーバーの詳細:
++
+** IPアドレス
+** Credentials
+** HTTPS証明書
+
+
+* コンソール エージェント仮想マシンにその認証方法を使用する場合は、SSH 公開キー。認証方法のもう 1 つのオプションは、パスワードを使用することです。
++
+https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Azure の Linux VM への接続について学習します"^]
+
+* コンソールエージェント用のAzureロールをコンソールが自動的に作成しないようにするには、独自のロールを作成する必要があります。link:reference-permissions-azure.html["このページのポリシーを使用する"] 。
++
+これらの権限は、コンソール エージェント インスタンス自体に適用されます。これは、コンソール エージェント VM を展開するために以前に設定した権限セットとは異なります。
+
+
+
+.手順
+. *管理 > エージェント*を選択します。
+. *概要*ページで、*エージェントのデプロイ > Azure*を選択します。
+. *レビュー* ページで、エージェントを展開するための要件を確認します。これらの要件についてはこのページの上部にも詳しく記載されています。
+. *仮想マシン認証*ページで、Azure のアクセス許可の設定方法に一致する認証オプションを選択します。
++
+** *ログイン* を選択して、必要な権限を持つ Microsoft アカウントにログインします。
++
+このフォームは Microsoft によって所有およびホストされています。資格情報がNetAppに提供されていません。
+
++
+
+TIP: すでに Azure アカウントにログインしている場合は、コンソールは自動的にそのアカウントを使用します。複数のアカウントをお持ちの場合は、正しいアカウントを使用していることを確認するために、最初にログアウトする必要がある場合があります。
+
+** 必要な権限を付与する Microsoft Entra サービス プリンシパルに関する情報を入力するには、*Active Directory サービス プリンシパル* を選択します。
++
+*** アプリケーション（クライアント）ID
+*** ディレクトリ（テナント）ID
+*** クライアントシークレット
+
+
+
+
++
+<<ステップ3: 認証を設定する,サービスプリンシパルのこれらの値を取得する方法を学びます>> 。
+
+. *仮想マシン認証* ページで、Azure サブスクリプション、場所、新しいリソース グループまたは既存のリソース グループを選択し、作成するコンソール エージェント仮想マシンの認証方法を選択します。
++
+仮想マシンの認証方法は、パスワードまたは SSH 公開キーです。
+
++
+https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Azure の Linux VM への接続について学習します"^]
+
+. *詳細*ページで、インスタンスの名前を入力し、タグを指定して、コンソールで必要な権限を持つ新しいロールを作成するか、または既存のロールを選択するかを選択します。link:reference-permissions-azure.html["必要な権限"] 。
++
+このロールに関連付けられた Azure サブスクリプションを選択できることに注意してください。選択した各サブスクリプションは、そのサブスクリプション内のリソースを管理するためのコンソール エージェント権限を付与します (たとえば、 Cloud Volumes ONTAP)。
+
+. *ネットワーク* ページで、VNet とサブネットを選択し、パブリック IP アドレスを有効にするかどうかを選択し、必要に応じてプロキシ構成を指定します。
++
+** *セキュリティ グループ* ページで、新しいセキュリティ グループを作成するか、必要な受信ルールと送信ルールを許可する既存のセキュリティ グループを選択するかを選択します。
++
+link:reference-ports-azure.html["Azure のセキュリティ グループ ルールを表示する"] 。
+
+
+
+. 選択内容を確認して、セットアップが正しいことを確認します。
++
+.. *エージェント構成の検証* チェック ボックスはデフォルトでオンになっており、展開時にコンソールによってネットワーク接続要件が検証されます。コンソールがエージェントの展開に失敗した場合、トラブルシューティングに役立つレポートが提供されます。デプロイメントが成功した場合、レポートは提供されません。
+
+
++
+[]
+====
+まだ使用している場合はlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、チェックボックスをオフにして検証チェックをスキップします。
+
+====
+. *追加*を選択します。
++
+コンソールは約 10 分でインスタンスを準備します。プロセスが完了するまでこのページに留まります。
+
+
+
+.結果
+プロセスが完了すると、コンソール エージェントはコンソールから使用できるようになります。
+
+
+NOTE: デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。link:task-troubleshoot-connector.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
+
+コンソール エージェントを作成したのと同じ Azure サブスクリプションに Azure Blob ストレージがある場合は、*システム* ページに Azure Blob ストレージ システムが自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["NetAppコンソールから Azure Blob ストレージを管理する方法を学びます"^]

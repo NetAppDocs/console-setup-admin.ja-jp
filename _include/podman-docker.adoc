@@ -1,0 +1,165 @@
+= 
+:allow-uri-read: 
+
+
+オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要です。
+
+* Red Hat Enterprise Linux 8 および 9 には Podman が必要です。
++
+<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
+* Ubuntu には Docker Engine が必要です。
++
+<<podman-versions,サポートされている Docker エンジンのバージョンを表示する>> 。
+
+
+
+.手順
+[role="tabbed-block"]
+====
+.ポッドマン
+--
+Podman をインストールして設定するには、次の手順に従います。
+
+* podman.socket サービスを有効にして起動します
+* Python3をインストールする
+* podman-compose パッケージ バージョン 1.0.6 をインストールします。
+* podman-composeをPATH環境変数に追加する
+* Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を使用していることを確認してください。
+
+
+
+NOTE: DNS ポートの競合を避けるために、エージェントをインストールした後、aardvark-dns ポート (デフォルト: 53) を調整します。指示に従ってポートを構成します。
+
+.手順
+. ホストに podman-docker パッケージがインストールされている場合は削除します。
++
+[source, cli]
+----
+dnf remove podman-docker
+rm /var/run/docker.sock
+----
+. Podman をインストールします。
++
+Podman は、公式の Red Hat Enterprise Linux リポジトリから入手できます。
+
++
+Red Hat Enterprise Linux 9 の場合:
+
++
+[source, cli]
+----
+sudo dnf install podman-2:<version>
+----
++
+<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
++
+Red Hat Enterprise Linux 8 の場合:
+
++
+[source, cli]
+----
+sudo dnf install podman-3:<version>
+----
++
+<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
+. podman.socket サービスを有効にして起動します。
++
+[source, cli]
+----
+sudo systemctl enable --now podman.socket
+----
+. python3 をインストールします。
++
+[source, cli]
+----
+sudo dnf install python3
+----
+. システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。
+. Red Hat Enterprise を使用している場合:
++
+podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。
+
++
+Red Hat Enterprise Linux 9 の場合:
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
++
+Red Hat Enterprise Linux 8 の場合:
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+----
+. podman-compose パッケージ 1.0.6 をインストールします。
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.0.6
+----
++
+
+NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-compose を追加するための要件を満たしています。インストールコマンドは、すでにインストールされているpodman-composeを/usr/binに追加します。 `secure_path`ホスト上のオプション。
+
+. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
++
+.. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+.. networkBackendが `CNI`、それを変更する必要があります `netavark`。
+.. インストール `netavark`そして `aardvark-dns`次のコマンドを使用します。
++
+[source, cli]
+----
+dnf install aardvark-dns netavark
+----
+.. 開く `/etc/containers/containers.conf`ファイルを編集し、network_backend オプションを変更して、「cni」の代わりに「netavark」を使用します。
+
+
++
+もし `/etc/containers/containers.conf`存在しない場合は、設定を変更してください `/usr/share/containers/containers.conf`。
+
+. podman を再起動します。
++
+[source, cli]
+----
+systemctl restart podman
+----
+. 次のコマンドを使用して、networkBackend が「netavark」に変更されていることを確認します。
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+
+
+--
+.Dockerエンジン
+--
+Docker のドキュメントに従って Docker Engine をインストールします。
+
+.手順
+. https://docs.docker.com/engine/install/["Dockerからのインストール手順を見る"^]
++
+サポートされている Docker エンジン バージョンをインストールするには、手順に従ってください。最新バージョンはコンソールでサポートされていないため、インストールしないでください。
+
+. Docker が有効になっていて実行されていることを確認します。
++
+[source, cli]
+----
+sudo systemctl enable docker && sudo systemctl start docker
+----
+
+
+--
+====

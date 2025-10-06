@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: concept-install-options-aws.html 
+keywords: install connector aws, aws install connector, connector aws, aws connector, installation options, aws marketplace, manual install, deploy 
+summary: AWS でコンソールエージェントを作成する方法はいくつかあります。  NetAppコンソールから直接行うのが最も一般的な方法です。 
+---
+= AWS のコンソールエージェントのインストールオプション
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+AWS でコンソールエージェントを作成する方法はいくつかあります。  NetAppコンソールから直接行うのが最も一般的な方法です。
+
+次のインストール オプションが利用可能です。
+
+* link:task-install-connector-aws-bluexp.html["コンソールから直接コンソールエージェントを作成する"]（これが標準オプションです）
++
+このアクションにより、選択した VPC で Linux とコンソール エージェント ソフトウェアを実行する EC2 インスタンスが起動されます。
+
+* link:task-install-connector-aws-marketplace.html["AWS Marketplaceからコンソールエージェントを作成する"]
++
+このアクションでは、Linux とコンソールエージェントソフトウェアを実行する EC2 インスタンスも起動しますが、デプロイメントはコンソールからではなく AWS Marketplace から直接開始されます。
+
+* link:task-install-connector-aws-manual.html["自分のLinuxホストにソフトウェアをダウンロードして手動でインストールする"]
+
+
+選択したインストール オプションは、インストールの準備方法に影響します。これには、AWS でリソースを認証および管理するために必要な権限をコンソールに付与する方法が含まれます。

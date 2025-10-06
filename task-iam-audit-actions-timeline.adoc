@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: task-iam-audit-actions-timeline.html 
+keywords: iam, audit, monitor, audit iam actions, monitor iam actions 
+summary: 監査ページからNetAppコンソールの ID およびアクセス管理アクションを監視または監査します。 
+---
+= IAMアクティビティを監視または監査する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ID とアクセスに関連して完了したアクションを監視または監査する必要がある場合は、[監査] ページから詳細を表示できます。たとえば、誰が組織にメンバーを追加したか、またはプロジェクトが正常に削除されたかを確認したい場合があります。
+
+.手順
+. *管理 > 監査*を選択します。
+. *監査*ページで、フィルターを使用して結果を絞り込みます。  *サービス*を選択し、次に*テナンシー*を選択します。
+. 他のフィルターを使用して、テーブルに表示されるアクションを変更します。
++
+たとえば、*ユーザー* フィルターを使用して、特定のユーザー アカウントに関連するアクションを表示できます。
+
+

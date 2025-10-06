@@ -1,0 +1,143 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-keystone-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: NetAppコンソールの ID およびアクセス管理では、組織のメンバーに割り当てることができる 2 つのKeystoneロールが提供されます。 
+---
+= NetAppコンソールのKeystoneアクセスロール
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Keystoneロールは、 Keystoneダッシュボードへのアクセスを提供し、ユーザーがKeystoneサブスクリプションを表示および管理できるようにします。  Keystone の役割には、 Keystone管理者とKeystoneビューアーの 2 つがあります。  2 つのロールの主な違いは、 Keystoneで実行できるアクションです。  Keystone管理者ロールは、サービス リクエストの作成やサブスクリプションの変更が許可される唯一のロールです。
+
+.NetAppコンソールのKeystoneロールの例
+XYZ 社には、 Keystoneサブスクリプション情報を閲覧できる、さまざまな部門のストレージ エンジニアが 4 人います。これらのユーザー全員がKeystoneサブスクリプションを監視する必要がありますが、サービス リクエストを作成できるのはチーム リーダーのみです。チーム メンバーのうち 3 名に * Keystoneビューア* ロールが付与され、チーム リーダーには * Keystone管理者* ロールが付与されるため、会社のサービス リクエストを制御できるようになります。
+
+次の表は、各Keystoneロールが実行できるアクションを示しています。
+
+[cols="40,20a,20a"]
+|===
+| 特徴とアクション | Keystone管理者 | Keystoneビューア 
+
+
+| 次のタブを表示します: サブスクリプション、資産、モニター、管理  a| 
+はい
+ a| 
+はい
+
+
+
+3+| * Keystoneサブスクリプションページ*: 
+
+
+| サブスクリプションを表示  a| 
+はい
+ a| 
+はい
+
+
+
+| サブスクリプションの修正または更新  a| 
+はい
+ a| 
+いいえ
+
+
+
+3+| * Keystoneアセット ページ*: 
+
+
+| アセットを表示  a| 
+はい
+ a| 
+はい
+
+
+
+| 資産管理  a| 
+はい
+ a| 
+いいえ
+
+
+
+3+| * Keystoneアラートページ*: 
+
+
+| アラートを表示  a| 
+はい
+ a| 
+いいえ
+
+
+
+| アラートを管理する  a| 
+はい
+ a| 
+いいえ
+
+
+
+| 自分用のアラートを作成する  a| 
+はい
+ a| 
+はい
+
+
+
+3+| *ライセンスとサブスクリプション*: 
+
+
+| ライセンスとサブスクリプションを表示できます  a| 
+はい
+ a| 
+はい
+
+
+
+3+| * Keystoneレポートページ*: 
+
+
+| レポートをダウンロード  a| 
+はい
+ a| 
+はい
+
+
+
+| レポートを管理する  a| 
+はい
+ a| 
+はい
+
+
+
+| 自分用のレポートを作成する  a| 
+はい
+ a| 
+はい
+
+
+
+3+| *サービスリクエスト*: 
+
+
+| サービスリクエストを作成する  a| 
+はい
+ a| 
+いいえ
+
+
+
+| 組織内の任意のユーザーが作成したサービスリクエストを表示する  a| 
+はい
+ a| 
+はい
+
+|===
