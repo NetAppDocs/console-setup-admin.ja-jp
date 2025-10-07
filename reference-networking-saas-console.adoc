@@ -46,6 +46,9 @@ NetAppコンソールにアクセスする各コンピューターは、以下�
 | \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。 
 
 
+| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。 
+
+
 | \https://signin.b2c.netapp.com | NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。 
 
 

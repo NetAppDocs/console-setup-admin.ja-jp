@@ -339,6 +339,13 @@ Google Cloud 内のリソースを管理します。
 
 
  a| 
+\https://support.netapp.com
+ a| 
+ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
 \https://signin.b2c.netapp.com
  a| 
 NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
