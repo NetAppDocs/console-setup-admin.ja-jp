@@ -30,7 +30,7 @@ sidebar:
         url: "/concept-connectors.html"
       - title: 展開モード
         url: "/concept-modes.html"
-    - title: NetAppアシスタントを使い始める
+    - title: NetAppコンソールアシスタントを使い始める
       entries:
       - title: NetAppコンソールアシスタントを使用する
         url: "/task-console-assistant.html"
