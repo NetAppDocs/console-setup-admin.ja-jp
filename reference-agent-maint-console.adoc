@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: reference-connector-maint-console.html 
+permalink: reference-agent-maint-console.html 
 keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
 summary: コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。 
 ---

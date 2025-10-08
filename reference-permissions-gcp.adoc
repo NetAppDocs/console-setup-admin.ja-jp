@@ -24,7 +24,7 @@ NetAppコンソールには、Google Cloud でアクションを実行するた�
 
 このカスタム ロールを、コンソール エージェント VM に接続されるサービス アカウントに適用する必要があります。
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["標準モードの Google Cloud 権限を設定する"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["標準モードの Google Cloud 権限を設定する"]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["制限モードの権限を設定する"]
 
 

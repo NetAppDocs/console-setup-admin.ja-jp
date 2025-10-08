@@ -15,7 +15,7 @@
 
 
 | エージェントを展開するためのGoogleアカウント | カスタム | 奉仕プロジェクト  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["エージェント展開ポリシー"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["エージェント展開ポリシー"]
  a| 
 compute.networkUser
 | サービスプロジェクトにエージェントをデプロイする 

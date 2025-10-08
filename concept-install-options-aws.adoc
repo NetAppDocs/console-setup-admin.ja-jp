@@ -18,15 +18,15 @@ AWS でコンソールエージェントを作成する方法はいくつかあ�
 
 次のインストール オプションが利用可能です。
 
-* link:task-install-connector-aws-bluexp.html["コンソールから直接コンソールエージェントを作成する"]（これが標準オプションです）
+* link:task-install-agent-aws-console.html["コンソールから直接コンソールエージェントを作成する"]（これが標準オプションです）
 +
 このアクションにより、選択した VPC で Linux とコンソール エージェント ソフトウェアを実行する EC2 インスタンスが起動されます。
 
-* link:task-install-connector-aws-marketplace.html["AWS Marketplaceからコンソールエージェントを作成する"]
+* link:task-install-agent-aws-marketplace.html["AWS Marketplaceからコンソールエージェントを作成する"]
 +
 このアクションでは、Linux とコンソールエージェントソフトウェアを実行する EC2 インスタンスも起動しますが、デプロイメントはコンソールからではなく AWS Marketplace から直接開始されます。
 
-* link:task-install-connector-aws-manual.html["自分のLinuxホストにソフトウェアをダウンロードして手動でインストールする"]
+* link:task-install-agent-aws-manual.html["自分のLinuxホストにソフトウェアをダウンロードして手動でインストールする"]
 
 
 選択したインストール オプションは、インストールの準備方法に影響します。これには、AWS でリソースを認証および管理するために必要な権限をコンソールに付与する方法が含まれます。

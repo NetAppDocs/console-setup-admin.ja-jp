@@ -195,7 +195,7 @@ NetAppコンソールのソフトウェア サービス (SaaS) レイヤーが�
 ** コンソール エージェントを作成するために必要な権限を含むポリシーを作成します。
 +
 *** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["FSx for ONTAPに必要な権限を表示する"^]
-*** link:task-install-connector-aws-bluexp.html#aws-permissions-agent["エージェント展開ポリシーを表示する"]
+*** link:task-install-agent-aws-console.html#aws-permissions-agent["エージェント展開ポリシーを表示する"]
 
 
 
@@ -251,14 +251,14 @@ AWS 認証情報を追加したら、その認証情報を使用して AWS Marke
 
 
 .開始する前に
-サブスクリプションを構成する前に、コンソール エージェントを作成する必要があります。link:concept-connectors.html#connector-installation["コンソールエージェントの作成方法を学ぶ"] 。
+サブスクリプションを構成する前に、コンソール エージェントを作成する必要があります。link:concept-agents.html#agent-installation["コンソールエージェントの作成方法を学ぶ"] 。
 
 次のビデオは、AWS Marketplace からNetApp Intelligent Services をサブスクライブする手順を示しています。
 
 .AWS MarketplaceからNetApp Intelligent Servicesをサブスクライブする
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .手順
-. *管理 > *資格情報*を選択します。
+. *管理 > 資格情報*を選択します。
 . *組織の資格情報*を選択します。
 . コンソール エージェントに関連付けられている資格情報のセットのアクション メニューを選択し、[*サブスクリプションの構成*] を選択します。
 +

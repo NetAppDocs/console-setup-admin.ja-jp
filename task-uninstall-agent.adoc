@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-uninstall-connector.html 
+permalink: task-uninstall-agent.html 
 keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
 summary: 問題をトラブルシューティングしたり、ホストから完全に削除したりするには、コンソール エージェントをアンインストールします。実行する必要がある手順は、使用している展開モードによって異なります。環境からコンソール エージェントを削除したら、コンソールからも削除できます。 
 ---

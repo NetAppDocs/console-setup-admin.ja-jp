@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-aws-bluexp.html 
+permalink: task-install-agent-aws-console.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
 summary: NetAppコンソールから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。 
 ---
@@ -17,7 +17,7 @@ summary: NetAppコンソールから直接 AWS にコンソール エージェ�
 NetAppコンソールから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。
 
 .開始する前に
-* あなたはlink:concept-connectors.html["コンソールエージェントの理解"]。
+* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 
@@ -289,7 +289,7 @@ NTP を有効にする:: NetApp Data Classification を使用して企業のデ�
 コンソールの Web ベースのコンソールから直接コンソール エージェントを作成します。
 
 .タスク概要
-* コンソールからコンソール エージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。コンソールエージェントを作成した後、CPU や RAM が少ない小さな EC2 インスタンスに切り替えないでください。link:reference-connector-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
+* コンソールからコンソール エージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。コンソールエージェントを作成した後、CPU や RAM が少ない小さな EC2 インスタンスに切り替えないでください。link:reference-agent-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
 * コンソールがコンソール エージェントを作成すると、インスタンスの IAM ロールとインスタンス プロファイルが作成されます。このロールには、コンソールエージェントが AWS リソースを管理できるようにする権限が含まれています。将来のリリースで新しい権限が追加されたら、ロールが更新されるようにしてください。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシーの詳細"] 。
 
 

@@ -234,7 +234,7 @@ image:diagram-iam-example-hierarchy-advanced.png["3 つのフォルダー (各�
 * link:task-iam-manage-folders-projects.html["NetAppコンソールでフォルダとプロジェクトを使用してリソースを整理します"]
 * link:task-iam-manage-members-permissions.html["NetAppコンソールのメンバーとその権限を管理する"]
 * link:task-iam-manage-resources.html["NetAppコンソール組織内のリソース階層を管理する"]
-* link:task-iam-associate-connectors.html["エージェントをフォルダとプロジェクトに関連付ける"]
+* link:task-iam-associate-agents.html["エージェントをフォルダとプロジェクトに関連付ける"]
 * link:task-iam-switch-organizations-projects.html["NetAppコンソールのプロジェクトと組織を切り替える"]
 * link:task-iam-rename-organization.html["NetAppコンソール組織の名前を変更する"]
 * link:task-iam-audit-actions-timeline.html["IAMアクティビティを監視または監査する"]

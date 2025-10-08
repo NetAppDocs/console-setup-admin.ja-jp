@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-google-manual.html 
+permalink: task-install-agent-google-manual.html 
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, manual install, create connector, gcp installation, gcp connector 
 summary: 独自の Linux ホストに Console エージェントを手動でインストールするには、ホストの要件を確認し、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にし、Console をインストールして、準備した権限を付与する必要があります。 
 ---
@@ -17,7 +17,7 @@ summary: 独自の Linux ホストに Console エージェントを手動でイ�
 独自の Linux ホストに Console エージェントを手動でインストールするには、ホストの要件を確認し、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にし、Console をインストールして、準備した権限を付与する必要があります。
 
 .開始する前に
-* あなたはlink:concept-connectors.html["コンソールエージェントの理解"]。
+* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 
@@ -484,7 +484,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 
 | エージェントを展開するためのGoogleアカウント | カスタム | 奉仕プロジェクト  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["エージェント展開ポリシー"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["エージェント展開ポリシー"]
  a| 
 compute.networkUser
 | サービスプロジェクトにエージェントをデプロイする 
@@ -561,7 +561,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 
 
-NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちらlink:reference-connector-maint-console.html["エージェントメンテナンスコンソール"]。
+NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちらlink:reference-agent-maint-console.html["エージェントメンテナンスコンソール"]。
 
 .タスク概要
 NetAppサポート サイトで入手できるインストーラーは、以前のバージョンである可能性があります。インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。

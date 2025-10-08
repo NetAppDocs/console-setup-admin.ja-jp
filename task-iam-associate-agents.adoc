@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-iam-associate-connectors.html 
+permalink: task-iam-associate-agents.html 
 keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
 summary: 組織のメンバーが別のプロジェクトでコンソール エージェントを使用する必要がある場合は、そのコンソール エージェントをそれぞれのプロジェクトに関連付ける必要があります。 
 ---
@@ -44,7 +44,7 @@ _フォルダーまたはプロジェクト管理者_ は、*エージェント*
 link:task-iam-manage-resources.html#associate-resource["リソースをフォルダやプロジェクトに関連付ける方法を学びます"] 。
 
 .関連情報
-* link:concept-connectors.html["NetAppコンソールエージェントについて学ぶ"]
+* link:concept-agents.html["NetAppコンソールエージェントについて学ぶ"]
 * link:concept-identity-and-access-management.html["NetAppコンソールのアイデンティティとアクセス管理について学ぶ"]
 * link:task-iam-get-started.html["アイデンティティとアクセスを始める"]
 * https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["IDとアクセス管理のためのAPIについて学ぶ"^]

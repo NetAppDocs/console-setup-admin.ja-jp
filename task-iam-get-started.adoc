@@ -56,7 +56,7 @@ link:task-iam-manage-members-permissions.html["メンバーとその権限を管
 
 [role="quick-margin-list"]
 * link:task-iam-manage-resources.html["組織のリソース階層を管理する方法を学ぶ"] 。
-* link:task-iam-associate-connectors.html["コンソールエージェントをフォルダまたはプロジェクトに関連付ける方法を学びます"] 。
+* link:task-iam-associate-agents.html["コンソールエージェントをフォルダまたはプロジェクトに関連付ける方法を学びます"] 。
 
 
 .関連情報

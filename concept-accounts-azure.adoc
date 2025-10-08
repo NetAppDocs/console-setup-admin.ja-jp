@@ -20,7 +20,7 @@ NetAppコンソールが Azure 資格情報を使用してユーザーに代わ�
 
 == 初期の Azure 資格情報
 
-コンソールからコンソール エージェントを展開する場合は、コンソール エージェント仮想マシンを展開する権限を持つ Azure アカウントまたはサービス プリンシパルを使用する必要があります。必要な権限は、link:task-install-connector-azure-bluexp.html#connector-custom-role["Azure のエージェント展開ポリシー"] 。
+コンソールからコンソール エージェントを展開する場合は、コンソール エージェント仮想マシンを展開する権限を持つ Azure アカウントまたはサービス プリンシパルを使用する必要があります。必要な権限は、link:task-install-agent-azure-console.html#agent-custom-role["Azure のエージェント展開ポリシー"] 。
 
 コンソールがAzureにコンソールエージェント仮想マシンを展開すると、 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["システム割り当てマネージドID"^]仮想マシン上でカスタム ロールを作成し、それを仮想マシンに割り当てます。このロールは、その Azure サブスクリプション内のリソースとプロセスを管理するために必要な権限をコンソールに提供します。link:reference-permissions-azure.html["コンソールが権限をどのように使用するかを確認します"] 。
 
@@ -108,8 +108,8 @@ Marketplace を使用する場合は、コンソール エージェント VM と
 
 * 標準モード
 +
-** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Azure Marketplace のデプロイの権限を設定する"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
+** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["Azure Marketplace のデプロイの権限を設定する"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
 
 
 * 制限モード

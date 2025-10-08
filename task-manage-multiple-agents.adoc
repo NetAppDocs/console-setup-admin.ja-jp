@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-manage-multiple-connectors.html 
+permalink: task-manage-multiple-agents.html 
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
 summary: 複数のコンソール エージェントを使用する場合は、コンソールから直接エージェントを切り替えることができます。複数のコンソール エージェントを使用して単一のシステムを管理することもできます。 
 ---

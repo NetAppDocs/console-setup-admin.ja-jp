@@ -31,7 +31,7 @@ NetAppコンソールには、コンソールエージェントと個々のサ�
 | 目標 | 説明 | リンク 
 
 
-| コンソールからコンソールエージェントを展開する | コンソールからコンソールエージェントを作成するユーザーには、AWS にインスタンスをデプロイするための特定の権限が必要です。 | link:task-install-connector-aws-bluexp.html#aws-permissions-agent["AWS権限を設定する"] 
+| コンソールからコンソールエージェントを展開する | コンソールからコンソールエージェントを作成するユーザーには、AWS にインスタンスをデプロイするための特定の権限が必要です。 | link:task-install-agent-aws-console.html#aws-permissions-agent["AWS権限を設定する"] 
 
 
 | コンソールエージェントに権限を付与する | コンソールがコンソールエージェントをデプロイすると、AWS アカウント内のリソースとプロセスを管理するために必要なアクセス許可を提供するポリシーがインスタンスにアタッチされます。 AWS Marketplaceからコンソールエージェントをデプロイする場合、コンソールエージェントを手動でインストールする場合、またはlink:task-adding-aws-accounts.html#add-credentials-agent-aws["コンソールエージェントにAWS認証情報を追加する"]。また、後続のリリースで新しい権限が追加された場合、ポリシーが最新であることを確認する必要があります。 | link:reference-permissions-aws.html["コンソールエージェントのAWS権限"] 
@@ -112,7 +112,7 @@ NetAppコンソールには、コンソールエージェントと個々のサ�
 | 目標 | 説明 | リンク 
 
 
-| コンソールからコンソールエージェントを展開する | コンソールからコンソール エージェントを展開する場合は、Azure にコンソール エージェント VM を展開する権限を持つ Azure アカウントまたはサービス プリンシパルを使用する必要があります。 | link:task-install-connector-azure-bluexp.html#connector-custom-role["Azure の権限を設定する"] 
+| コンソールからコンソールエージェントを展開する | コンソールからコンソール エージェントを展開する場合は、Azure にコンソール エージェント VM を展開する権限を持つ Azure アカウントまたはサービス プリンシパルを使用する必要があります。 | link:task-install-agent-azure-console.html#agent-custom-role["Azure の権限を設定する"] 
 
 
 | コンソールエージェントに権限を付与する  a| 
@@ -174,10 +174,10 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 | 目標 | 説明 | リンク 
 
 
-| コンソールからコンソールエージェントを展開する | コンソールからコンソール エージェントをデプロイする Google Cloud ユーザーには、Google Cloud にコンソール エージェントをデプロイするための特定の権限が必要です。 | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["コンソールエージェントを作成するための権限を設定する"] 
+| コンソールからコンソールエージェントを展開する | コンソールからコンソール エージェントをデプロイする Google Cloud ユーザーには、Google Cloud にコンソール エージェントをデプロイするための特定の権限が必要です。 | link:task-install-agent-google-console-gcloud.html#console-permissions-google["コンソールエージェントを作成するための権限を設定する"] 
 
 
-| コンソールエージェントに権限を付与する | コンソール エージェント VM インスタンスのサービス アカウントには、日常的な操作のための特定の権限が必要です。展開中に、サービス アカウントをコンソール エージェントに関連付ける必要があります。また、後続のリリースで新しい権限が追加されるため、ポリシーが最新であることを確認する必要があります。 | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["コンソールエージェントの権限を設定する"] 
+| コンソールエージェントに権限を付与する | コンソール エージェント VM インスタンスのサービス アカウントには、日常的な操作のための特定の権限が必要です。展開中に、サービス アカウントをコンソール エージェントに関連付ける必要があります。また、後続のリリースで新しい権限が追加されるため、ポリシーが最新であることを確認する必要があります。 | link:task-install-agent-google-console-gcloud.html#console-permissions-google["コンソールエージェントの権限を設定する"] 
 |===
 
 

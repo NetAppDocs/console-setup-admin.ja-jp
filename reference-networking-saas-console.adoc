@@ -81,10 +81,10 @@ NetAppコンソールにアクセスする各コンピューターは、以下�
 
 コンソール エージェントをインストールする前に、ネットワーク エンドポイント アクセスを設定します。
 
-* link:task-install-connector-aws-bluexp.html#networking-aws-agent["コンソールエージェントの AWS ネットワークアクセスを設定する"]
-* link:task-install-connector-azure-bluexp.html#networking-azure-agent["コンソール エージェントの Azure ネットワーク アクセスを設定する"]
-* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["コンソール エージェントの Google Cloud ネットワーク アクセスを設定する"]
-* link:task-install-connector-on-prem.html#network-access-agent["コンソール エージェントのオンプレミス ネットワーク アクセスを設定する"]
+* link:task-install-agent-aws-console.html#networking-aws-agent["コンソールエージェントの AWS ネットワークアクセスを設定する"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["コンソール エージェントの Azure ネットワーク アクセスを設定する"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["コンソール エージェントの Google Cloud ネットワーク アクセスを設定する"]
+* link:task-install-agent-on-prem.html#network-access-agent["コンソール エージェントのオンプレミス ネットワーク アクセスを設定する"]
 
 
 

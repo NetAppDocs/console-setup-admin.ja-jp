@@ -18,15 +18,15 @@ Google Cloud でコンソール エージェントを作成するには、いく
 
 次のインストール オプションが利用可能です。
 
-* link:task-install-connector-google-bluexp-gcloud.html["コンソールから直接コンソールエージェントを作成する"]（これが標準オプションです）
+* link:task-install-agent-google-console-gcloud.html["コンソールから直接コンソールエージェントを作成する"]（これが標準オプションです）
 +
 このアクションにより、選択した VPC で Linux とコンソール エージェント ソフトウェアを実行する VM インスタンスが起動します。
 
-* link:task-install-connector-google-bluexp-gcloud.html["Google プラットフォームを使用してコンソール エージェントを作成する"]
+* link:task-install-agent-google-console-gcloud.html["Google プラットフォームを使用してコンソール エージェントを作成する"]
 +
 このアクションでは、Linux とコンソール エージェント ソフトウェアを実行する VM インスタンスも起動しますが、デプロイはコンソールからではなく Google Cloud から直接開始されます。
 
-* link:task-install-connector-google-manual.html["自分のLinuxホストにソフトウェアをダウンロードして手動でインストールする"]
+* link:task-install-agent-google-manual.html["自分のLinuxホストにソフトウェアをダウンロードして手動でインストールする"]
 
 
 選択したインストール オプションは、インストールの準備方法に影響します。これには、Google Cloud でリソースを認証および管理するために必要な権限をコンソールに付与する方法が含まれます。

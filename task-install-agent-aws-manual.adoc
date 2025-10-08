@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-azure-manual.html 
-keywords: install connector, azure connector installation, azure connector, install connector in azure, manual install 
-summary: 独自の Linux ホストにコンソール エージェントを手動でインストールするには、ホストの要件を確認し、ネットワークを設定し、Azure のアクセス許可を準備し、コンソール エージェントをインストールして、準備したアクセス許可を付与する必要があります。 
+permalink: task-install-agent-aws-manual.html 
+keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
+summary: AWS で実行されている Linux ホストにコンソールエージェントを手動でインストールできます。独自の Linux ホストにコンソールエージェントを手動でインストールするには、ホスト要件を確認し、ネットワークを設定し、AWS 権限を準備し、コンソールエージェントをインストールして、準備した権限を付与する必要があります。 
 ---
-= Azure にコンソール エージェントを手動でインストールする
+= AWSにコンソールエージェントを手動でインストールする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: 独自の Linux ホストにコンソール エージェントを手動
 
 
 [role="lead"]
-独自の Linux ホストにコンソール エージェントを手動でインストールするには、ホストの要件を確認し、ネットワークを設定し、Azure のアクセス許可を準備し、コンソール エージェントをインストールして、準備したアクセス許可を付与する必要があります。
+AWS で実行されている Linux ホストにコンソールエージェントを手動でインストールできます。独自の Linux ホストにコンソールエージェントを手動でインストールするには、ホスト要件を確認し、ネットワークを設定し、AWS 権限を準備し、コンソールエージェントをインストールして、準備した権限を付与する必要があります。
 
 .開始する前に
-* あなたはlink:concept-connectors.html["コンソールエージェントの理解"]。
+* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 
@@ -107,7 +107,16 @@ Docker エンジン 23.0.6 から 28.0.0。
 
 |===
 --
-Azure VM サイズ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  Standard_D8s_v3 をお勧めします。
+AWS EC2インスタンスタイプ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  t3.2xlarge をお勧めします。
+キーペア:: コンソールエージェントを作成するときは、インスタンスで使用する EC2 キーペアを選択する必要があります。
+IMDSv2 使用時の PUT 応答ホップ制限:: EC2 インスタンスで IMDSv2 が有効になっている場合 (これは新しい EC2 インスタンスのデフォルト設定です)、インスタンスの PUT 応答ホップ制限を 3 に変更する必要があります。  EC2 インスタンスの制限を変更しないと、エージェントを設定しようとすると UI 初期化エラーが発生します。
++
+--
+* link:task-require-imdsv2.html["Amazon EC2 インスタンスで IMDSv2 の使用を必須にする"]
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["AWSドキュメント: PUTレスポンスのホップ制限を変更する"^]
+
+
+--
 /optのディスク容量:: 100 GiBの空き容量が必要です
 +
 --
@@ -293,14 +302,6 @@ sudo systemctl enable docker && sudo systemctl start docker
 
 コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件を満たすことで、コンソール エージェントはハイブリッド クラウド環境内のリソースとプロセスを管理できるようになります。
 
-Azureリージョン:: Cloud Volumes ONTAPを使用する場合、コンソールエージェントは、管理するCloud Volumes ONTAPシステムと同じAzureリージョン、または https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure リージョン ペア"^]Cloud Volumes ONTAPシステム用。この要件により、 Cloud Volumes ONTAPとそれに関連付けられたストレージ アカウント間で Azure Private Link 接続が使用されるようになります。
-+
---
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Cloud Volumes ONTAP がAzure Private Link を使用する方法を学ぶ"^]
-
---
-
-
 ターゲットネットワークへの接続:: コンソール エージェントには、システムを作成および管理する予定の場所へのネットワーク接続が必要です。たとえば、オンプレミス環境にCloud Volumes ONTAPシステムまたはストレージ システムを作成する予定のネットワークなどです。
 
 
@@ -328,16 +329,17 @@ link:reference-networking-saas-console.html["NetAppコンソールのネット�
 
 
  a| 
-\https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
- a| 
-Azure パブリック リージョン内のリソースを管理します。
+AWS サービス (amazonaws.com):
 
-
+* クラウドフォーメーション
+* エラスティックコンピューティングクラウド (EC2)
+* アイデンティティとアクセス管理（IAM）
+* キー管理サービス (KMS)
+* セキュリティトークンサービス（STS）
+* シンプルストレージサービス（S3）
 
  a| 
-\https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
- a| 
-Azure China リージョンのリソースを管理します。
+AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細についてはAWSドキュメントを参照してください"^]
 
 
 
@@ -422,210 +424,74 @@ NTP を有効にする:: NetApp Data Classification を使用して企業のデ�
 
 
 
-== ステップ4: コンソールエージェントの展開権限を設定する
+== ステップ4: コンソールのAWS権限を設定する
 
-次のいずれかのオプションを使用して、コンソール エージェントに Azure 権限を付与する必要があります。
+次のいずれかのオプションを使用して、 NetAppコンソールに AWS 権限を付与する必要があります。
 
-* オプション 1: システム割り当てマネージド ID を使用して、Azure VM にカスタム ロールを割り当てます。
-* オプション 2: 必要なアクセス許可を持つ Azure サービス プリンシパルの資格情報をコンソール エージェントに提供します。
+* オプション 1: IAM ポリシーを作成し、EC2 インスタンスに関連付けることができる IAM ロールにポリシーをアタッチします。
+* オプション 2: 必要な権限を持つ IAM ユーザーの AWS アクセスキーをコンソールに提供します。
 
 
-手順に従って、コンソール エージェントの権限を準備します。
+コンソールの権限を準備するには、手順に従ってください。
 
 [role="tabbed-block"]
 ====
-.コンソールエージェントの展開用のカスタムロールを作成する
+.IAMのロール
 --
-Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して、Azure カスタム ロールを作成できます。次の手順は、Azure CLI を使用してロールを作成する方法を示しています。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]
-
 .手順
-. 独自のホストにソフトウェアを手動でインストールする予定の場合は、カスタム ロールを通じて必要な Azure アクセス許可を提供できるように、VM でシステム割り当てマネージド ID を有効にします。
+. AWS コンソールにログインし、IAM サービスに移動します。
+. ポリシーを作成します。
 +
-https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure ドキュメント: Azure ポータルを使用して VM 上の Azure リソースのマネージド ID を構成する"^]
-
-. の内容をコピーしますlink:reference-permissions-azure.html["コネクタのカスタムロール権限"]JSON ファイルに保存します。
-. 割り当て可能なスコープに Azure サブスクリプション ID を追加して、JSON ファイルを変更します。
+.. *ポリシー > ポリシーの作成*を選択します。
+.. *JSON*を選択し、その内容をコピーして貼り付けます。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシー"] 。
+.. 残りの手順を完了してポリシーを作成します。
 +
-NetAppコンソールで使用する各 Azure サブスクリプションの ID を追加する必要があります。
+使用する予定のNetAppデータ サービスによっては、2 番目のポリシーを作成する必要がある場合があります。標準リージョンの場合、権限は 2 つのポリシーに分散されます。 AWS の管理ポリシーの最大文字サイズ制限により、2 つのポリシーが必要になります。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシーの詳細"] 。
 
+
+
+. IAM ロールを作成します。
 +
-*例*
+.. *[ロール] > [ロールの作成]*を選択します。
+.. *AWS サービス > EC2* を選択します。
+.. 作成したポリシーを添付して権限を追加します。
+.. 残りの手順を完了してロールを作成します。
 
-+
-[source, json]
-----
-"AssignableScopes": [
-"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
-"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
-"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
-----
-. JSON ファイルを使用して、Azure でカスタム ロールを作成します。
-+
-次の手順では、Azure Cloud Shell で Bash を使用してロールを作成する方法について説明します。
-
-+
-.. 始める https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure クラウド シェル"^]Bash 環境を選択します。
-.. JSON ファイルをアップロードします。
-+
-image:screenshot_azure_shell_upload.png["ファイルをアップロードするオプションを選択できる Azure Cloud Shell のスクリーンショット。"]
-
-.. Azure CLI を使用してカスタム ロールを作成します。
-+
-[source, azurecli]
-----
-az role definition create --role-definition Connector_Policy.json
-----
-
-
-
-
---
-.サービスプリンシパル
---
-Microsoft Entra ID でサービス プリンシパルを作成して設定し、コンソール エージェントに必要な Azure 資格情報を取得します。
-
-.ロールベースのアクセス制御用の Microsoft Entra アプリケーションを作成する
-. Azure で Active Directory アプリケーションを作成し、そのアプリケーションをロールに割り当てるためのアクセス許可があることを確認します。
-+
-詳細については、 https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure ドキュメント: 必要な権限"^]
-
-. Azure ポータルから、*Microsoft Entra ID* サービスを開きます。
-+
-image:screenshot_azure_ad.png["Microsoft Azure の Active Directory サービスを表示します。"]
-
-. メニューで*アプリ登録*を選択します。
-. *新規登録*を選択します。
-. アプリケーションの詳細を指定します。
-+
-** *名前*: アプリケーションの名前を入力します。
-** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプでもNetAppコンソールで使用できます)。
-** *リダイレクト URI*: このフィールドは空白のままにすることができます。
-
-
-. *登録*を選択します。
-+
-AD アプリケーションとサービス プリンシパルを作成しました。
-
-
-
-.アプリケーションをロールに割り当てる
-. カスタム ロールを作成します。
-+
-Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して、Azure カスタム ロールを作成できます。次の手順は、Azure CLI を使用してロールを作成する方法を示しています。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]
-
-+
-.. の内容をコピーしますlink:reference-permissions-azure.html["コンソールエージェントのカスタムロール権限"]JSON ファイルに保存します。
-.. 割り当て可能なスコープに Azure サブスクリプション ID を追加して、JSON ファイルを変更します。
-+
-ユーザーがCloud Volumes ONTAPシステムを作成する各 Azure サブスクリプションの ID を追加する必要があります。
-
-+
-*例*
-
-+
-[source, json]
-----
-"AssignableScopes": [
-"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
-"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
-"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
-----
-.. JSON ファイルを使用して、Azure でカスタム ロールを作成します。
-+
-次の手順では、Azure Cloud Shell で Bash を使用してロールを作成する方法について説明します。
-
-+
-*** 始める https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure クラウド シェル"^]Bash 環境を選択します。
-*** JSON ファイルをアップロードします。
-+
-image:screenshot_azure_shell_upload.png["ファイルをアップロードするオプションを選択できる Azure Cloud Shell のスクリーンショット。"]
-
-*** Azure CLI を使用してカスタム ロールを作成します。
-+
-[source, azurecli]
-----
-az role definition create --role-definition Connector_Policy.json
-----
-+
-これで、コンソール エージェント仮想マシンに割り当てることができる、コンソール オペレーターと呼ばれるカスタム ロールが作成されます。
-
-
-
-
-
-. アプリケーションをロールに割り当てます。
-+
-.. Azure ポータルから、*サブスクリプション* サービスを開きます。
-.. サブスクリプションを選択します。
-.. *アクセス制御 (IAM) > 追加 > ロール割り当ての追加* を選択します。
-.. *役割*タブで、*コンソールオペレーター*役割を選択し、*次へ*を選択します。
-.. *メンバー*タブで、次の手順を実行します。
-+
-*** *ユーザー、グループ、またはサービス プリンシパル*を選択したままにします。
-*** *メンバーを選択*を選択します。
-+
-image:screenshot-azure-service-principal-role.png["アプリケーションにロールを追加するときにメンバー ページを表示する Azure ポータルのスクリーンショット。"]
-
-*** アプリケーションの名前を検索します。
-+
-次に例を示します。
-
-+
-image:screenshot_azure_service_principal_role.png["Azure ポータルの「ロールの割り当ての追加」フォームが表示された Azure ポータルのスクリーンショット。"]
-
-*** アプリケーションを選択し、[選択] を選択します。
-*** *次へ*を選択します。
-
-
-.. *レビュー + 割り当て*を選択します。
-+
-これで、サービス プリンシパルに、コンソール エージェントをデプロイするために必要な Azure アクセス許可が付与されました。
-
-+
-複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetAppコンソールでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
-
-
-
-
-
-.Windows Azure サービス管理 API 権限を追加する
-. *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
-. *API 権限 > 権限の追加* を選択します。
-. *Microsoft API* の下で、*Azure Service Management* を選択します。
-+
-image:screenshot_azure_service_mgmt_apis.gif["Azure サービス管理 API のアクセス許可を示す Azure ポータルのスクリーンショット。"]
-
-. *組織ユーザーとして Azure サービス管理にアクセスする* を選択し、*権限の追加* を選択します。
-+
-image:screenshot_azure_service_mgmt_apis_add.gif["Azure サービス管理 API の追加を示す Azure ポータルのスクリーンショット。"]
-
-
-
-.アプリケーションのアプリケーションIDとディレクトリIDを取得します
-. *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
-. *アプリケーション (クライアント) ID* と *ディレクトリ (テナント) ID* をコピーします。
-+
-image:screenshot_azure_app_ids.gif["Microsoft Entra IDy 内のアプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を示すスクリーンショット。"]
-
-+
-Azure アカウントをコンソールに追加するときは、アプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を指定する必要があります。コンソールは ID を使用してプログラムでサインインします。
-
-
-
-.クライアントシークレットを作成する
-. *Microsoft Entra ID* サービスを開きます。
-. *アプリ登録*を選択し、アプリケーションを選択します。
-. *証明書とシークレット > 新しいクライアント シークレット*を選択します。
-. シークレットの説明と期間を指定します。
-. *追加*を選択します。
-. クライアント シークレットの値をコピーします。
-+
-image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリンシパルのクライアント シークレットを表示する Azure ポータルのスクリーンショット。"]
 
 
 
 .結果
-これでサービス プリンシパルが設定され、アプリケーション (クライアント) ID、ディレクトリ (テナント) ID、およびクライアント シークレットの値がコピーされているはずです。  Azure アカウントを追加するときに、コンソールにこの情報を入力する必要があります。
+コンソールエージェントをインストールした後、EC2 インスタンスに関連付けることができる IAM ロールが作成されます。
+
+--
+.AWS アクセスキー
+--
+.手順
+. AWS コンソールにログインし、IAM サービスに移動します。
+. ポリシーを作成します。
++
+.. *ポリシー > ポリシーの作成*を選択します。
+.. *JSON*を選択し、その内容をコピーして貼り付けます。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシー"] 。
+.. 残りの手順を完了してポリシーを作成します。
++
+使用する予定のNetAppデータ サービスによっては、2 番目のポリシーを作成する必要がある場合があります。
+
++
+標準リージョンの場合、権限は 2 つのポリシーに分散されます。 AWS の管理ポリシーの最大文字サイズ制限により、2 つのポリシーが必要になります。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシーの詳細"] 。
+
+
+
+. IAM ユーザーにポリシーをアタッチします。
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWSドキュメント: IAMロールの作成"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWSドキュメント: IAMポリシーの追加と削除"^]
+
+
+. コンソール エージェントをインストールした後、 NetAppコンソールに追加できるアクセス キーがユーザーにあることを確認します。
+
+
+.結果
+これで、必要な権限を持つ IAM ユーザーと、コンソールに提供できるアクセス キーが作成されました。
 
 --
 ====
@@ -647,13 +513,7 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 
 
 
-NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちらlink:reference-connector-maint-console.html["エージェントメンテナンスコンソール"]。
-
-* カスタム ロールを通じて必要な Azure アクセス許可を提供できるように、Azure の VM で有効になっているマネージド ID。
-+
-https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure ドキュメント: Azure ポータルを使用して VM 上の Azure リソースのマネージド ID を構成する"^]
-
-
+NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちらlink:reference-agent-maint-console.html["エージェントメンテナンスコンソール"]。
 
 .タスク概要
 NetAppサポート サイトで入手できるインストーラーは、以前のバージョンである可能性があります。インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。
@@ -787,72 +647,50 @@ https://_ipaddress_[]
 
 
 
-コンソール エージェントを作成したのと同じ Azure サブスクリプションに Azure Blob ストレージがある場合は、*システム* ページに Azure Blob ストレージ システムが自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["NetAppコンソールから Azure Blob ストレージを管理する方法を学びます"^]
+コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、[システム] ページに Amazon S3 ストレージ システムが自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["NetApp ConsolePからS3バケットを管理する方法を学ぶ"^]
 
 
 
 == ステップ6: NetAppコンソールに権限を付与する
 
-コンソール エージェントをインストールしたので、以前に設定した Azure アクセス許可をコンソール エージェントに付与する必要があります。権限を付与すると、コンソールで Azure のデータとストレージ インフラストラクチャを管理できるようになります。
+コンソールエージェントをインストールしたので、以前に設定した AWS 権限をコンソールに提供する必要があります。権限を付与すると、コンソールエージェントは AWS 内のデータとストレージインフラストラクチャを管理できるようになります。
 
 [role="tabbed-block"]
 ====
-.カスタムロール
+.IAMのロール
 --
-Azure ポータルに移動し、1 つ以上のサブスクリプションのコンソール エージェント仮想マシンに Azure カスタム ロールを割り当てます。
+以前に作成した IAM ロールをコンソールエージェント EC2 インスタンスにアタッチします。
 
 .手順
-. Azure ポータルから *サブスクリプション* サービスを開き、サブスクリプションを選択します。
-+
-*サブスクリプション* サービスからロールを割り当てることが重要です。これは、サブスクリプション レベルでのロール割り当ての範囲を指定するためです。 _scope_ は、アクセスが適用されるリソースのセットを定義します。別のレベル (たとえば、仮想マシン レベル) でスコープを指定すると、 NetAppコンソール内からアクションを完了する機能に影響します。
-
-+
-https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure ドキュメント: Azure RBAC のスコープを理解する"^]
-
-. *アクセス制御 (IAM)* > *追加* > *ロール割り当ての追加* を選択します。
-. *役割*タブで、*コンソールオペレーター*役割を選択し、*次へ*を選択します。
-+
-
-NOTE: コンソール オペレーターは、ポリシーで提供されるデフォルト名です。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
-
-. *メンバー*タブで、次の手順を実行します。
-+
-.. *マネージド ID* へのアクセスを割り当てます。
-.. *メンバーの選択*を選択し、コンソール エージェント仮想マシンが作成されたサブスクリプションを選択し、*マネージド ID*の下で*仮想マシン*を選択して、コンソール エージェント仮想マシンを選択します。
-.. *選択*を選択します。
-.. *次へ*を選択します。
-.. *レビュー + 割り当て*を選択します。
-.. 追加の Azure サブスクリプションのリソースを管理する場合は、そのサブスクリプションに切り替えて、これらの手順を繰り返します。
+. Amazon EC2 コンソールに移動します。
+. *インスタンス*を選択します。
+. コンソール エージェント インスタンスを選択します。
+. *アクション > セキュリティ > IAM ロールの変更*を選択します。
+. IAM ロールを選択し、*IAM ロールの更新*を選択します。
 
 
-
-
-.次の手順
 に行く https://console.netapp.com["NetAppコンソール"^]コンソール エージェントの使用を開始します。
 
 --
-.サービスプリンシパル
+.AWS アクセスキー
 --
+必要な権限を持つ IAM ユーザーの AWS アクセスキーをコンソールに提供します。
+
 .手順
+. コンソールで正しいコンソール エージェントが現在選択されていることを確認します。
 . *管理 > 資格情報*を選択します。
+. *組織の資格情報*を選択します。
 . *資格情報の追加*を選択し、ウィザードの手順に従います。
 +
-.. *資格情報の場所*: *Microsoft Azure > エージェント* を選択します。
-.. *資格情報の定義*: 必要な権限を付与する Microsoft Entra サービス プリンシパルに関する情報を入力します。
-+
-*** アプリケーション（クライアント）ID
-*** ディレクトリ（テナント）ID
-*** クライアントシークレット
-
-
+.. *資格情報の場所*: *Amazon Web Services > エージェントを選択します。
+.. *資格情報の定義*: AWS アクセスキーとシークレットキーを入力します。
 .. *マーケットプレイス サブスクリプション*: 今すぐサブスクライブするか、既存のサブスクリプションを選択して、マーケットプレイス サブスクリプションをこれらの資格情報に関連付けます。
 .. *確認*: 新しい資格情報の詳細を確認し、[*追加*] を選択します。
 
 
 
 
-.結果
-これで、コンソール エージェントには、ユーザーに代わって Azure でアクションを実行するために必要なアクセス許可が付与されました。
+に行く https://console.netapp.com["NetAppコンソール"^]コンソール エージェントの使用を開始します。
 
 --
 ====

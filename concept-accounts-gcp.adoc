@@ -34,7 +34,7 @@ image:diagram_permissions_gcp.png["Cloud Volumes ONTAPをデプロイするた�
 
 権限の設定方法については、次のページを参照してください。
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["標準モードの Google Cloud 権限を設定する"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["標準モードの Google Cloud 権限を設定する"]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["制限モードの権限を設定する"]
 
 
@@ -59,6 +59,6 @@ Google Cloud の認証情報とマーケットプレイスのサブスクリプ�
 
 Cloud Volumes ONTAP は、コンソール エージェントと同じプロジェクトに存在することも、別のプロジェクトに存在することもできます。  Cloud Volumes ONTAP を別のプロジェクトにデプロイするには、まずそのプロジェクトにコンソール エージェントのサービス アカウントとロールを追加する必要があります。
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["サービスアカウントの設定方法を学ぶ"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["サービスアカウントの設定方法を学ぶ"]
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["Google Cloud でCloud Volumes ONTAPをデプロイし、プロジェクトを選択する方法を学びます"^]
 

@@ -97,9 +97,9 @@ image:diagram-standard-mode.png["Web ベースのコンソール、SaaS レイ�
 アウトバウンドコミュニケーション:: コンソール エージェントからコンソール SaaS レイヤー、クラウド プロバイダーの公開リソース、および日常の運用に不可欠なその他のコンポーネントへの接続が必要です。
 +
 --
-* link:task-install-connector-aws-bluexp.html#networking-aws-agent["AWS でエージェントが接続するエンドポイント"]
-* link:task-install-connector-azure-bluexp.html#networking-azure-agent["Azure でエージェントが接続するエンドポイント"]
-* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["Google Cloud でエージェントが接続するエンドポイント"]
+* link:task-install-agent-aws-console.html#networking-aws-agent["AWS でエージェントが接続するエンドポイント"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["Azure でエージェントが接続するエンドポイント"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["Google Cloud でエージェントが接続するエンドポイント"]
 
 
 --

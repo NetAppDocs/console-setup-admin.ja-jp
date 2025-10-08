@@ -28,8 +28,8 @@ Azure Marketplace からエージェントをデプロイする場合、また�
 
 * これらのポリシーの使用方法の詳細な手順については、次のページを参照してください。
 +
-** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Azure Marketplace のデプロイの権限を設定する"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
+** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["Azure Marketplace のデプロイの権限を設定する"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["制限モードの権限を設定する"]
 
 

@@ -83,7 +83,7 @@ NetAppエージェントUIにアクセスできません
 ====
 コンソール エージェント診断へのアクセスの詳細については、次のトピックを参照してください。
 
-* link:task-maintain-connectors.html#connect-linux-host["コンソール エージェントのステータスを確認する (Linux ホスト展開の場合)"]
+* link:task-maintain-agents.html#connect-linux-host["コンソール エージェントのステータスを確認する (Linux ホスト展開の場合)"]
 * link:task-agent-vm-config.html#connect-vcenter-host["コンソール エージェントのステータスを確認する (VCenter 展開の場合)"]
 
 

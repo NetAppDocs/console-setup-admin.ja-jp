@@ -304,7 +304,6 @@
   <block id="90589c47f06eb971d548591f23c285af" category="cell">カスタム</block>
   <block id="a546c9049428d60032b181f2f82657b4" category="cell">奉仕プロジェクト</block>
   <block id="35294f1b614d05324fe6824b9051c99c" category="inline-link-macro">エージェント展開ポリシー</block>
-  <block id="42d40e4952b856c8ace120d5f8583eee" category="paragraph"><block ref="42d40e4952b856c8ace120d5f8583eee" category="inline-link-macro-rx"></block></block>
   <block id="40f49838c90873745fc1b1382a2c4b68" category="paragraph">compute.networkUser</block>
   <block id="269096cfe4db81a130833f69a820cb46" category="cell">サービスプロジェクトにエージェントをデプロイする</block>
   <block id="14a07ec91e00fe2f922883e7ada7a6ca" category="cell">エージェントサービスアカウント</block>
@@ -333,7 +332,6 @@
   <block id="4417d966b724524a7dd995ebe740c6cb" category="paragraph">インストール後にプロキシ サーバーを構成するオプションがありますが、これを行うにはコンソール エージェントを再起動する必要があります。</block>
   <block id="a9f9e821b8a8692181584ef4520bb0f5" category="list-text">プロキシ サーバーが HTTPS を使用する場合、またはプロキシがインターセプト プロキシである場合は、CA 署名証明書。</block>
   <block id="f055093e2366ca02aea03df7cfb1248e" category="inline-link-macro">エージェントメンテナンスコンソール</block>
-  <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちら<block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block>。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">タスク概要</block>
   <block id="659f0b9a6a18db69662f4738cacedeb4" category="paragraph">NetAppサポート サイトで入手できるインストーラーは、以前のバージョンである可能性があります。インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。</block>
   <block id="16c184ab0a5376cef0ecef7f0da93ac2" category="list-text">ホストに _http_proxy_ または _https_proxy_ システム変数が設定されている場合は、それらを削除します。</block>
@@ -1125,7 +1123,6 @@
   <block id="e54158140168d6bfda7951dabc8a0468" category="doc">NetAppコンソールの AWS 認証情報と権限について学習します</block>
   <block id="64aa23be91006f71d837b2f3d1037b91" category="paragraph">NetAppコンソールが AWS 認証情報を使用してユーザーに代わってアクションを実行する方法と、それらの認証情報がマーケットプレイスのサブスクリプションとどのように関連付けられるかについて説明します。これらの詳細を理解しておくと、 NetAppコンソールで 1 つ以上の AWS アカウントの認証情報を管理するときに役立ちます。たとえば、追加の AWS 認証情報をいつ追加する必要があるかについて学習したい場合があります。</block>
   <block id="9ef43b020d41cab5808d78fdf855c429" category="section-title">初期AWS認証情報</block>
-  <block id="e6cdf78e0e957711d61016a5e5be0c8e" category="paragraph">コンソールからコンソールエージェントをデプロイする場合は、IAM ロールの ARN または IAM ユーザーのアクセスキーを指定する必要があります。認証方法には、AWS にコンソールをデプロイするための権限が必要です。必要な権限は、link:task-install-connector-aws-the Console.html#console-permissions-aws[AWS のエージェント展開ポリシー]に記載されています。</block>
   <block id="055263949ee2b6bf634a650444f9e58d" category="inline-link-macro">コンソールが権限をどのように使用するかを確認します</block>
   <block id="9578371ace149ffae484a1e8a558e65f" category="paragraph">コンソールが AWS でコンソールエージェントインスタンスを起動すると、インスタンスの IAM ロールとインスタンスプロファイルが作成されます。また、コンソールエージェントにその AWS アカウント内のリソースとプロセスを管理するための権限を付与するポリシーも添付します。<block ref="8e59a32a1f99b7e02222756f023f4cdb" category="inline-link-macro-rx"></block> 。</block>
   <block id="873c2fb7e6de1298736591dfc041a312" category="inline-image-macro">コンソールが AWS アカウントにコンソールエージェントを展開する様子を示す概念図。  IAM ポリシーは IAM ロールに割り当てられ、コンソール インスタンスにアタッチされます。</block>
@@ -1185,9 +1182,7 @@
   <block id="796c918f0fce99224fa4a1b54f518f96" category="paragraph">権限の設定方法については、次のページを参照してください。</block>
   <block id="53c512e9599c71e1a585d636a5229820" category="list-text">標準モード</block>
   <block id="3f85a7bdf40074d6d7c5e25de7a35f3a" category="inline-link-macro">AWS Marketplace デプロイメントの権限を設定する</block>
-  <block id="cd2bf2a9ec0f834a404adb2dff0bbe33" category="list-text"><block ref="cd2bf2a9ec0f834a404adb2dff0bbe33" category="inline-link-macro-rx"></block></block>
   <block id="ce811221f0cf50868c1d57fc933d7fc1" category="inline-link-macro">オンプレミス展開の権限を設定する</block>
-  <block id="6a20f7bea39d709e36e4109960a8e930" category="list-text"><block ref="6a20f7bea39d709e36e4109960a8e930" category="inline-link-macro-rx"></block></block>
   <block id="e429f30641aba9e1fc7f2090cc77ce40" category="list-text">制限モード</block>
   <block id="cb3ffce0d4b8f43b3d9f183b558cca41" category="inline-link-macro">制限モードの権限を設定する</block>
   <block id="9bf0216383a3ff083b86cdd433d2e65e" category="list-text"><block ref="9bf0216383a3ff083b86cdd433d2e65e" category="inline-link-macro-rx"></block></block>
@@ -1195,7 +1190,6 @@
   <block id="7192f06d0f10fc326466068ebdf43e86" category="doc">NetAppコンソールの Azure 資格情報と権限について学習します</block>
   <block id="08a6159f6d9d986210470d2ab6dff166" category="section-title">初期の Azure 資格情報</block>
   <block id="5c33ea5ded6381ee1c09e63b86ac25ed" category="inline-link-macro">Azure のエージェント展開ポリシー</block>
-  <block id="4fabf4035bcfca379eaa6831f4e3d010" category="paragraph">コンソールからコンソール エージェントを展開する場合は、コンソール エージェント仮想マシンを展開する権限を持つ Azure アカウントまたはサービス プリンシパルを使用する必要があります。必要な権限は、<block ref="24c609a9fdf68daa95529043263ead79" category="inline-link-macro-rx"></block> 。</block>
   <block id="1985b326c07cdcb2a260ae0c0c6fde8d" category="inline-link">システム割り当てマネージドID</block>
   <block id="fc811f4efa4402b5437649164ea2dbb3" category="paragraph">コンソールがAzureにコンソールエージェント仮想マシンを展開すると、<block ref="3b529d5441a4ea26741352247ca08bac" category="inline-link-rx"></block>仮想マシン上でカスタム ロールを作成し、それを仮想マシンに割り当てます。このロールは、その Azure サブスクリプション内のリソースとプロセスを管理するために必要な権限をコンソールに提供します。<block ref="4e8f46d45dc9a2f1f1b6f49a05e1acc0" category="inline-link-macro-rx"></block> 。</block>
   <block id="480ce9346b68cbae4cd2960b3765eb04" category="inline-image-macro">コンソールが Azure アカウントとサブスクリプションにコンソール エージェントを展開する様子を示す概念図。システム割り当てマネージド ID が有効になり、コンソール エージェント仮想マシンにカスタム ロールが割り当てられます。</block>
@@ -1231,7 +1225,6 @@
   <block id="c33ac28b474eaf103dc371d4dad649e5" category="paragraph">Marketplace を使用する場合は、コンソール エージェント VM とシステム割り当てマネージド ID にカスタム ロールを割り当てることでアクセス許可を付与することも、Microsoft Entra サービス プリンシパルを使用することもできます。</block>
   <block id="1f92e407b4c0475a97f268ddf5361a4c" category="paragraph">オンプレミス展開の場合、コンソール エージェントのマネージド ID を設定することはできませんが、サービス プリンシパルを使用してアクセス許可を付与することはできます。</block>
   <block id="f4426e4062930abb33465fb5b79b35dc" category="inline-link-macro">Azure Marketplace のデプロイの権限を設定する</block>
-  <block id="d16dc391acdc52d611958fdd5ca48d52" category="list-text"><block ref="d16dc391acdc52d611958fdd5ca48d52" category="inline-link-macro-rx"></block></block>
   <block id="480c97395bf73b1326ca0221bb84f0ab" category="summary">NetAppコンソールが Google Cloud 認証情報を使用してユーザーに代わってアクションを実行する方法と、それらの認証情報がマーケットプレイスのサブスクリプションとどのように関連付けられるかについて説明します。これらの詳細を理解しておくと、1 つ以上の Google Cloud プロジェクトの認証情報を管理するときに役立ちます。たとえば、コンソール エージェント VM に関連付けられているサービス アカウントについて知りたい場合があります。</block>
   <block id="1fd4a2295cad602ba9d73683db88e799" category="doc">Google Cloud プロジェクトと権限について学ぶ</block>
   <block id="7c592b218a390e7d1c8bdbae8fbc794a" category="section-title">NetAppコンソールのプロジェクトと権限</block>
@@ -1244,7 +1237,6 @@
   <block id="1b33affeaa41a09a9f3a99d38d14376f" category="inline-image-macro">Cloud Volumes ONTAPをデプロイするための Google アカウントとサービス アカウントの権限要件を示す概念図。</block>
   <block id="61ed3f7479580c6ad0ce86e9e6f3dd8d" category="paragraph"><block ref="61ed3f7479580c6ad0ce86e9e6f3dd8d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="392cce9be5aaba5ccc4ab6924ab91b7b" category="inline-link-macro">標準モードの Google Cloud 権限を設定する</block>
-  <block id="c82ff510c21e67f73b0d32d9f389a2c8" category="list-text"><block ref="c82ff510c21e67f73b0d32d9f389a2c8" category="inline-link-macro-rx"></block></block>
   <block id="f602ddacd315e97a55613d5d087915db" category="paragraph">Google Cloud にコンソール エージェントをデプロイすると、コンソールは、コンソール エージェントが存在するプロジェクト内の Google Cloud サービス アカウントのデフォルトの認証情報セットを作成します。  Cloud Volumes ONTAPおよびNetAppデータサービスの料金を支払うには、これらの認証情報を Google Cloud Marketplace サブスクリプションに関連付ける必要があります。</block>
   <block id="09287a1087bc09afb8b07a6d1a5eae1e" category="inline-link-macro">Google Cloud Marketplace サブスクリプションを関連付ける方法を学びます</block>
   <block id="7acdafee5614d2da4affd478462c535e" category="paragraph"><block ref="4394d3ef2937eb47839ebd4e9350c4a7" category="inline-link-macro-rx"></block> 。</block>
@@ -1254,7 +1246,6 @@
   <block id="ebd7d1e81a9a2891e260eecaa709adbf" category="section-title">Cloud Volumes ONTAPプロジェクト</block>
   <block id="baf581d10362cd2b4a862b9e83d0cfbb" category="paragraph">Cloud Volumes ONTAP は、コンソール エージェントと同じプロジェクトに存在することも、別のプロジェクトに存在することもできます。  Cloud Volumes ONTAP を別のプロジェクトにデプロイするには、まずそのプロジェクトにコンソール エージェントのサービス アカウントとロールを追加する必要があります。</block>
   <block id="8bee474fd085c11334ab13b9c1a78d9e" category="inline-link-macro">サービスアカウントの設定方法を学ぶ</block>
-  <block id="bbba4a0b31f6e371c1e1df3ffeaf2850" category="list-text"><block ref="bbba4a0b31f6e371c1e1df3ffeaf2850" category="inline-link-macro-rx"></block></block>
   <block id="4ec920ccbe2fc417ccd7dcd957eb9653" category="inline-link">Google Cloud でCloud Volumes ONTAPをデプロイし、プロジェクトを選択する方法を学びます</block>
   <block id="486db18d2aa67b603506d28b5425dc88" category="list-text"><block ref="486db18d2aa67b603506d28b5425dc88" category="inline-link-rx"></block></block>
   <block id="1ffac481825810aa6d8bc2bbd6e9f0d5" category="summary">_コンソール エージェント_ は、クラウド ネットワークまたはオンプレミス ネットワークで実行されるNetAppソフトウェアです。コンソール エージェントを使用して、 NetAppコンソール サービスをストレージ環境に接続します。</block>
@@ -1327,7 +1318,6 @@
   <block id="2c816b9bf7b9b3b6fa614eed25c47bad" category="inline-link-macro">Google Cloud のエージェントのインストール オプション</block>
   <block id="c25970a47753b09b5f368b1a825af136" category="list-text"><block ref="c25970a47753b09b5f368b1a825af136" category="inline-link-macro-rx"></block></block>
   <block id="57d93d5e81bafd40970707a32bf098e7" category="inline-link-macro">オンプレミス展開のクラウド権限を設定する</block>
-  <block id="4534d0aacb9b6c8187f921fbea9e7dcd" category="list-text"><block ref="4534d0aacb9b6c8187f921fbea9e7dcd" category="inline-link-macro-rx"></block></block>
   <block id="4b793f4b507e17e1b9daee24a7d317fe" category="paragraph">コンソール エージェントが日常の操作に必要な正確な権限を確認するには、次のページを参照してください。</block>
   <block id="6f78686bae0992fab2bb708dad824db4" category="inline-link-macro">コンソールエージェントがAWS権限を使用する方法を学ぶ</block>
   <block id="6800cfbf3754d2e1b8c68543cde59cb1" category="list-text"><block ref="6800cfbf3754d2e1b8c68543cde59cb1" category="inline-link-macro-rx"></block></block>
@@ -1341,7 +1331,6 @@
   <block id="5ae32585fa310b47843d2bd6a91b4832" category="paragraph">標準モードまたは制限モードでは、インターネットにアクセスできる場合、コンソール エージェントは自動的に更新されます。</block>
   <block id="28d40d49edc5d8557dfa8624f4921f55" category="section-title">オペレーティングシステムとVMのメンテナンス</block>
   <block id="09ecb112c1af6628255a4b08c6a7cbed" category="inline-xref">コンソールエージェントは常に動作している必要があります</block>
-  <block id="f8c11c92cf22fcb0495ffbb48fe3b0fb" category="paragraph"><block ref="ffd5178d533700d08d69d42b52b64f9a" category="inline-xref-macro-rx"></block> 。</block>
   <block id="7fcdcdc0f0f8f0d864eab57a6734f577" category="section-title">複数のシステムとエージェント</block>
   <block id="87e19ab0e91dd93d18077c642263f2d7" category="paragraph">エージェントは複数のシステムを管理し、コンソールでデータ サービスをサポートできます。展開サイズと使用するデータ サービスに基づいて、単一のエージェントを使用して複数のシステムを管理できます。</block>
   <block id="d8466ae7920d413f334ecbe2662940d7" category="paragraph">大規模な導入の場合は、 NetApp の担当者と協力して環境のサイズを決定してください。問題が発生した場合は、 NetAppサポートにお問い合わせください。</block>
@@ -1464,7 +1453,6 @@
   <block id="fd345e29cb62c01ba1d4171017902879" category="inline-link-macro">NetAppコンソール組織内のリソース階層を管理する</block>
   <block id="471aa63a508cd0a524e051c1eee8bb18" category="list-text"><block ref="471aa63a508cd0a524e051c1eee8bb18" category="inline-link-macro-rx"></block></block>
   <block id="15f73bdf087fb0fd54c4481d4dc02d6c" category="inline-link-macro">エージェントをフォルダとプロジェクトに関連付ける</block>
-  <block id="bef5472a56f278957492e0caa5daa6ee" category="list-text"><block ref="bef5472a56f278957492e0caa5daa6ee" category="inline-link-macro-rx"></block></block>
   <block id="fcf7f94bff9ad201c2ad67548361caa3" category="inline-link-macro">NetAppコンソールのプロジェクトと組織を切り替える</block>
   <block id="cb4c504866718434ac51aadba7ecd536" category="list-text"><block ref="cb4c504866718434ac51aadba7ecd536" category="inline-link-macro-rx"></block></block>
   <block id="b2e7e5223ec4cb6c91429bf7de09474b" category="inline-link-macro">NetAppコンソール組織の名前を変更する</block>
@@ -1479,33 +1467,24 @@
   <block id="7ff9f8e2467774df163161a38d2d5040" category="doc">AWS のコンソールエージェントのインストールオプション</block>
   <block id="b5afc81c4f24b143224e304b939a3f6c" category="paragraph">次のインストール オプションが利用可能です。</block>
   <block id="b9dd01a6aae803f666e75d60b5cc37fe" category="inline-link-macro">コンソールから直接コンソールエージェントを作成する</block>
-  <block id="dec60543b3c872bf4678e098bf8b34c0" category="list-text"><block ref="9836dd1a0e880b286ee17f24ef9b72d8" category="inline-link-macro-rx"></block>（これが標準オプションです）</block>
   <block id="f27c252d931beb3466d3231006b71803" category="paragraph">このアクションにより、選択した VPC で Linux とコンソール エージェント ソフトウェアを実行する EC2 インスタンスが起動されます。</block>
   <block id="1515391ee07716093ddb994cd9906006" category="inline-link-macro">AWS Marketplaceからコンソールエージェントを作成する</block>
-  <block id="63d16e50767121dfdb5571f31cc3fa2f" category="list-text"><block ref="63d16e50767121dfdb5571f31cc3fa2f" category="inline-link-macro-rx"></block></block>
   <block id="b839e2143764191ce8726714fcf0e54c" category="paragraph">このアクションでは、Linux とコンソールエージェントソフトウェアを実行する EC2 インスタンスも起動しますが、デプロイメントはコンソールからではなく AWS Marketplace から直接開始されます。</block>
   <block id="7ec389ef03b4378689ec8afd5b977499" category="inline-link-macro">自分のLinuxホストにソフトウェアをダウンロードして手動でインストールする</block>
-  <block id="a0d5fffa896034a79c127d53a34685b7" category="list-text"><block ref="a0d5fffa896034a79c127d53a34685b7" category="inline-link-macro-rx"></block></block>
   <block id="a189e78df125d3702fb17473d7a17faa" category="paragraph">選択したインストール オプションは、インストールの準備方法に影響します。これには、AWS でリソースを認証および管理するために必要な権限をコンソールに付与する方法が含まれます。</block>
   <block id="f67190f28c8f18c6676794f4acd943fc" category="summary">Azure でコンソール エージェントを作成するには、いくつかの方法があります。  NetAppコンソールから直接行うのが最も一般的な方法です。</block>
   <block id="dcd94e7f09b8c058ae8084e8e5730bbb" category="doc">Azure のコンソール エージェントのインストール オプション</block>
   <block id="f73d744dbe9e744eb8f73a3bab9f243e" category="inline-link-macro">NetAppコンソールから直接コンソールエージェントを作成する</block>
-  <block id="3319d8a73f7275d2b326379baa4639b4" category="list-text"><block ref="c1f731be1bc48db64e71cd8627c6e815" category="inline-link-macro-rx"></block>（これが標準オプションです）</block>
   <block id="079e5f76242a76ddceeb5ae46398071c" category="paragraph">このアクションにより、選択した VNet で Linux とコンソール エージェント ソフトウェアを実行する VM が起動します。</block>
   <block id="2dd5916ed68f963e9c5529d69a4de5fa" category="inline-link-macro">Azure Marketplace からコンソール エージェントを作成する</block>
-  <block id="cbfffbec2ccf124f45cb3bf55408a096" category="list-text"><block ref="cbfffbec2ccf124f45cb3bf55408a096" category="inline-link-macro-rx"></block></block>
   <block id="cea96889fec9e311da2265fdf2e92490" category="paragraph">このアクションでは、Linux とコンソール エージェント ソフトウェアを実行する VM も起動しますが、展開はコンソールからではなく、Azure Marketplace から直接開始されます。</block>
-  <block id="152e6840a2911cc120f143ff657bdc7e" category="list-text"><block ref="152e6840a2911cc120f143ff657bdc7e" category="inline-link-macro-rx"></block></block>
   <block id="320a91e2547bc28be93b76779dc849b4" category="paragraph">選択したインストール オプションは、インストールの準備方法に影響します。これには、Azure でリソースを認証および管理するために必要なアクセス許可をコンソール エージェントに付与する方法が含まれます。</block>
   <block id="011286419a3e5b900c9f64647edebdf7" category="summary">Google Cloud でコンソール エージェントを作成するには、いくつかの方法があります。  NetAppコンソールから直接行うのが最も一般的な方法です。</block>
   <block id="89facd2099770d471c8de70fdb5d0651" category="doc">Google Cloud のコンソール エージェントのインストール オプション</block>
   <block id="0e60cc3f489de1661d16a80c2219b147" category="paragraph">Google Cloud でコンソール エージェントを作成するには、いくつかの方法があります。 NetAppコンソールから直接行うのが最も一般的な方法です。---</block>
-  <block id="3a8fb6214df82cf0b456e76cbe8815f1" category="list-text"><block ref="da24dec5d5f3fc48efd4aac933839211" category="inline-link-macro-rx"></block>（これが標準オプションです）</block>
   <block id="efbe29648b3d8def21619f8bba35784f" category="paragraph">このアクションにより、選択した VPC で Linux とコンソール エージェント ソフトウェアを実行する VM インスタンスが起動します。</block>
   <block id="f47b616e0890c8a8507745d52fc62533" category="inline-link-macro">Google プラットフォームを使用してコンソール エージェントを作成する</block>
-  <block id="7e678f9f1364b817a01c001dcb793c65" category="list-text"><block ref="7e678f9f1364b817a01c001dcb793c65" category="inline-link-macro-rx"></block></block>
   <block id="9f0f4ef7b4fff87cc68ce1185ff944ce" category="paragraph">このアクションでは、Linux とコンソール エージェント ソフトウェアを実行する VM インスタンスも起動しますが、デプロイはコンソールからではなく Google Cloud から直接開始されます。</block>
-  <block id="ab98f632a22cf265a09e9110157eba1f" category="list-text"><block ref="ab98f632a22cf265a09e9110157eba1f" category="inline-link-macro-rx"></block></block>
   <block id="6ca5ab84f54829f432e3fc9d65f06d1c" category="paragraph">選択したインストール オプションは、インストールの準備方法に影響します。これには、Google Cloud でリソースを認証および管理するために必要な権限をコンソールに付与する方法が含まれます。</block>
   <block id="0899f83543ed0bdcc2e1e20f83558546" category="summary">NetAppコンソールは、ビジネス要件とセキュリティ要件を満たす複数の _導入モード_ を提供します。_標準モード_ では、サービスとしてのソフトウェア (SaaS) レイヤーを活用して完全な機能を提供しますが、接続制限がある組織では _制限モード_ と _プライベート モード_ が利用できます。</block>
   <block id="050bd8a4d093ad9b4ba1572b3fd77d0c" category="paragraph">NetAppコンソールは、ビジネス要件とセキュリティ要件を満たす複数の _導入モード_ を提供します。</block>
@@ -1559,11 +1538,8 @@
   <block id="7b0c55f247d6f53c6782615b53af4619" category="list-text">アウトバウンドコミュニケーション</block>
   <block id="c43c363ca98a3640bd064d1c0bd3a413" category="list-text">コンソール エージェントからコンソール SaaS レイヤー、クラウド プロバイダーの公開リソース、および日常の運用に不可欠なその他のコンポーネントへの接続が必要です。</block>
   <block id="9b5e57dc9b2aa6af73db773c627f993a" category="inline-link-macro">AWS でエージェントが接続するエンドポイント</block>
-  <block id="c42790e5213a82292976f5c521d384e5" category="list-text"><block ref="c42790e5213a82292976f5c521d384e5" category="inline-link-macro-rx"></block></block>
   <block id="4858f9548af45fc4af93b80950e02dbf" category="inline-link-macro">Azure でエージェントが接続するエンドポイント</block>
-  <block id="38aa2a3a75783061d308417558688769" category="list-text"><block ref="38aa2a3a75783061d308417558688769" category="inline-link-macro-rx"></block></block>
   <block id="01e5b09b5730088f2de0030cdb3a7862" category="inline-link-macro">Google Cloud でエージェントが接続するエンドポイント</block>
-  <block id="1ecf84a1ffb6f20d673d2ecabce3da96" category="list-text"><block ref="1ecf84a1ffb6f20d673d2ecabce3da96" category="inline-link-macro-rx"></block></block>
   <block id="d6ec275d37a7d519496b7320d23bf53b" category="list-text">エージェントがサポートされる場所</block>
   <block id="56818e4b6176dd9fb4526f26aabee766" category="list-text">標準モードでは、エージェントはクラウドまたはオンプレミスでサポートされます。</block>
   <block id="fbc27e60b0428f5d4d0abe0fcff4f75d" category="list-text">次のいずれかの方法でエージェントをインストールできます。</block>
@@ -1748,7 +1724,6 @@
   <block id="e386f797f1278a41cbdf60290772a272" category="list-text"><block ref="e386f797f1278a41cbdf60290772a272" category="inline-link-macro-rx"></block></block>
   <block id="b5d4f8f6ade5a4fbfeb3724b7bbc0b5e" category="paragraph">いくつかの追加機能およびデータ サービスには、コンソール エージェントが必要です。オンプレミスとクラウド環境全体のリソースとプロセスを管理できます。一部のシステム ( Cloud Volumes ONTAPなど) を管理し、一部のNetAppデータ サービスを使用するために必要です。</block>
   <block id="919907c49b488683fa1ddd5c9088c12b" category="inline-link-macro">コンソールエージェントの詳細</block>
-  <block id="a68642a7ade4333d4219aa580cea3a5c" category="paragraph"><block ref="4b4f0bafbdb20d9d8f8a468fa992856b" category="inline-link-macro-rx"></block> 。</block>
   <block id="05cb21b1c0958252effc11eb9d437f38" category="section-title">展開モード</block>
   <block id="189b4f6eadcbbd36f0feb8dc1b8e1caf" category="paragraph">NetApp は、 NetAppコンソールに 2 つの導入モードを提供しています。_標準モード_ では、完全な機能のためにソフトウェア アズ ア サービス (SaaS) レイヤーを使用し、_制限モード_ では、アウトバウンド接続を制限します。</block>
   <block id="93ed0ac1db1f6b5a46cfc5e5f9034f18" category="inline-link-macro">インターネットに接続できないサイト向けのBlueXP (プライベート モード) について説明します。</block>
@@ -1790,7 +1765,6 @@
   <block id="7c42c6e2f8295dada12f50f825327ddf" category="list-text">イメージのオペレーティング システムは Ubuntu 22.04 LTS です。</block>
   <block id="953e61420be6157aa122dfd3475d4070" category="paragraph">オペレーティング システムには GUI が含まれていません。システムにアクセスするには端末を使用する必要があります。</block>
   <block id="688aea6136f160e02c8d5bbec6894343" category="list-text">インストールには、必要なコンテナ オーケストレーション ツールである Docker Engine が含まれます。</block>
-  <block id="7f3b93b1ed83b943c21f5d8024ed1444" category="list-text">EC2 Linux インスタンスのユーザー名は ubuntu です (2023 年 5 月より前に作成されたエージェントの場合、ユーザー名は ec2-user でした)。</block>
   <block id="efabd80ebdd217a47d9be936e5f0b8aa" category="list-text">デフォルトのシステム ディスクは 100 GiB gp2 ディスクです。</block>
   <block id="b8c4a5bd8ed4eb470e80955a542dd4bf" category="section-title">Azureの詳細</block>
   <block id="f637fe372218bb6ee39fd481301dc99f" category="list-text">VM タイプは Standard_D8s_v3 です。</block>
@@ -2329,13 +2303,9 @@
   <block id="79ad55cf82aac1a039766a722bd36b49" category="paragraph">コンソール エージェントは、 NetAppコンソールと同じエンドポイントに加え、エージェントのインストール場所に応じて追加のエンドポイントにもアクセスできる必要があります。</block>
   <block id="8e67676c15ae2a94213bdd7971d44506" category="paragraph">コンソール エージェントをインストールする前に、ネットワーク エンドポイント アクセスを設定します。</block>
   <block id="5eda3a7f9f9788e7beae44ca11c3fca1" category="inline-link-macro">コンソールエージェントの AWS ネットワークアクセスを設定する</block>
-  <block id="e36ab6f1f66c90a8e643654e4229eea2" category="list-text"><block ref="e36ab6f1f66c90a8e643654e4229eea2" category="inline-link-macro-rx"></block></block>
   <block id="413296dfc7c1face41e185f79c4f8f7a" category="inline-link-macro">コンソール エージェントの Azure ネットワーク アクセスを設定する</block>
-  <block id="3dd2dea866a0ab6a5ae3b75ffb77d9c4" category="list-text"><block ref="3dd2dea866a0ab6a5ae3b75ffb77d9c4" category="inline-link-macro-rx"></block></block>
   <block id="6be29013501c644b088dfb30237d31df" category="inline-link-macro">コンソール エージェントの Google Cloud ネットワーク アクセスを設定する</block>
-  <block id="30dae547cc47aaa0019b4cb49e897579" category="list-text"><block ref="30dae547cc47aaa0019b4cb49e897579" category="inline-link-macro-rx"></block></block>
   <block id="f10bf17567a71d86b25d142d5d98b33b" category="inline-link-macro">コンソール エージェントのオンプレミス ネットワーク アクセスを設定する</block>
-  <block id="71c15c3836e6f6563e5ad9f1ff544d48" category="list-text"><block ref="71c15c3836e6f6563e5ad9f1ff544d48" category="inline-link-macro-rx"></block></block>
   <block id="627545d3fae412b9188d4c9140899c75" category="section-title">Cloud Volumes ONTAPのネットワークを準備する</block>
   <block id="fd6e08319e0931b5b5ca23214370bc11" category="paragraph">一部のNetAppデータ サービスとCloud Volumes ONTAP、エージェントに追加のアウトバウンド インターネット アクセスが必要です。</block>
   <block id="3a10984b52469b032ed6d718a9e2670f" category="section-title">Cloud Volumes ONTAPのエンドポイント</block>
@@ -2818,7 +2788,6 @@
   <block id="7c803320cfc8e4215d4d26a0151ba1d0" category="cell">コンソールからコンソールエージェントを展開する</block>
   <block id="6bdd632a69530bf24f9d888defc43d4c" category="cell">コンソールからコンソールエージェントを作成するユーザーには、AWS にインスタンスをデプロイするための特定の権限が必要です。</block>
   <block id="2d3fc94cd0898448a15e6e05f4098b6f" category="inline-link-macro">AWS権限を設定する</block>
-  <block id="95d81e2f68fb04fddeae50ba5e3cb6fc" category="cell"><block ref="95d81e2f68fb04fddeae50ba5e3cb6fc" category="inline-link-macro-rx"></block></block>
   <block id="78b382509bdd4a7b6a4640d195cfbf2a" category="cell">コンソールエージェントに権限を付与する</block>
   <block id="c9c719cb0217b958ec8c7414fa63880a" category="inline-link-macro">コンソールエージェントにAWS認証情報を追加する</block>
   <block id="188679009280735826c6ea749302c194" category="cell">コンソールがコンソールエージェントをデプロイすると、AWS アカウント内のリソースとプロセスを管理するために必要なアクセス許可を提供するポリシーがインスタンスにアタッチされます。 AWS Marketplaceからコンソールエージェントをデプロイする場合、コンソールエージェントを手動でインストールする場合、または<block ref="dd68e1e1425f1a2836915a8e7efa1f0a" category="inline-link-macro-rx"></block>。また、後続のリリースで新しい権限が追加された場合、ポリシーが最新であることを確認する必要があります。</block>
@@ -2858,7 +2827,6 @@
   <block id="e76758412e5a64841b8710e5fb81ab0c" category="section-title">コンソールエージェント</block>
   <block id="5477f97a59a394df9523ff9145698f5e" category="cell">コンソールからコンソール エージェントを展開する場合は、Azure にコンソール エージェント VM を展開する権限を持つ Azure アカウントまたはサービス プリンシパルを使用する必要があります。</block>
   <block id="4275ae61422c34253a59329bd20a0449" category="inline-link-macro">Azure の権限を設定する</block>
-  <block id="97d45041217492c3fe9ac0d49a0674a5" category="cell"><block ref="97d45041217492c3fe9ac0d49a0674a5" category="inline-link-macro-rx"></block></block>
   <block id="610a789ea69218ae2657ee289d3ea1ab" category="paragraph">コンソールが Azure にコンソール エージェント VM を展開すると、その Azure サブスクリプション内のリソースとプロセスを管理するために必要なアクセス許可を提供するカスタム ロールが作成されます。</block>
   <block id="410f33250f13598d6849ceba7b4120a3" category="inline-link-macro">コンソールエージェントにAzure資格情報を追加する</block>
   <block id="e1e6784eb91937369cc77d605f81165a" category="paragraph">マーケットプレイスからコンソールエージェントを起動する場合、コンソールエージェントを手動でインストールする場合、または<block ref="b386d5f716662b44565e96428cb16fbd" category="inline-link-macro-rx"></block>。</block>
@@ -2884,10 +2852,8 @@
   <block id="29979c57d65e0d9e92c7917a495cdb0b" category="paragraph">コンソールでは、コンソール エージェントと個々のサービスに対する Google Cloud 権限が必要です。</block>
   <block id="e31e5964808968a788e49e50220d6ef1" category="cell">コンソールからコンソール エージェントをデプロイする Google Cloud ユーザーには、Google Cloud にコンソール エージェントをデプロイするための特定の権限が必要です。</block>
   <block id="6ba3cdd92c12894a3d208241e1aa4f37" category="inline-link-macro">コンソールエージェントを作成するための権限を設定する</block>
-  <block id="fee2266ede7c0f9fc139c34347d8878f" category="cell"><block ref="fee2266ede7c0f9fc139c34347d8878f" category="inline-link-macro-rx"></block></block>
   <block id="fed7c7d3c9febb32111eed3404adf3f6" category="cell">コンソール エージェント VM インスタンスのサービス アカウントには、日常的な操作のための特定の権限が必要です。展開中に、サービス アカウントをコンソール エージェントに関連付ける必要があります。また、後続のリリースで新しい権限が追加されるため、ポリシーが最新であることを確認する必要があります。</block>
   <block id="1b29b6160eb822ba4beffa87a9ffbc2f" category="inline-link-macro">コンソールエージェントの権限を設定する</block>
-  <block id="e666580d0c3c9a065bf3d7a5ed78f42f" category="cell"><block ref="e666580d0c3c9a065bf3d7a5ed78f42f" category="inline-link-macro-rx"></block></block>
   <block id="b5b529e8dc821910caacb50b880d2487" category="cell">Cloud Volumes ONTAPをGoogle Cloudにバックアップする</block>
   <block id="cd84e76d2557bd459057089ba5e1385c" category="inline-link">バックアップとリカバリを使用して、 Cloud Volumes ONTAPデータを Google Cloud Storage にバックアップします。</block>
   <block id="3b5162ff96cd00bbd1b1ad424d59bd8f" category="list-text"><block ref="3b5162ff96cd00bbd1b1ad424d59bd8f" category="inline-link-rx"></block></block>
@@ -3072,7 +3038,6 @@
   <block id="3d35bba2e5ea6e739fb94736dc402017" category="inline-link">FSx for ONTAPに必要な権限を表示する</block>
   <block id="f36b248a3e4e722bcc9292d2e5151abc" category="list-text"><block ref="f36b248a3e4e722bcc9292d2e5151abc" category="inline-link-rx"></block></block>
   <block id="c19d1741d0fa79c8b012a7f8b068bc6c" category="inline-link-macro">エージェント展開ポリシーを表示する</block>
-  <block id="a554577f3ddd7cc055036191d9b710c3" category="list-text"><block ref="a554577f3ddd7cc055036191d9b710c3" category="inline-link-macro-rx"></block></block>
   <block id="884fd0826fb740e296bb4324a3742247" category="list-text">次のステップでコンソールに貼り付けることができるように、IAM ロールのロール ARN をコピーします。</block>
   <block id="d04fbc50c09432c35c0eb302581b70e6" category="inline-xref">コンソールに追加できるようになりました</block>
   <block id="74b04ca811de14aef84fa666cae52e42" category="paragraph">IAM ロールに必要な権限が付与されました。<block ref="22c8d50e24c1ac21193395087b881b55" category="inline-xref-macro-rx"></block> 。</block>
@@ -3093,7 +3058,6 @@
   <block id="1fa2cd673301895c14fbffad8568f063" category="list-text">AWS 認証情報に設定されている AWS Marketplace サブスクリプションを変更します。</block>
   <block id="891c56b3793d8bb2d83dc9db21c81e12" category="paragraph">現在のマーケットプレイス サブスクリプションを新しいサブスクリプションに置き換えると、既存のCloud Volumes ONTAPシステムとすべての新しいシステムのマーケットプレイス サブスクリプションが変更されます。</block>
   <block id="17e922bee62498071d0b520a708ce7bc" category="inline-link-macro">コンソールエージェントの作成方法を学ぶ</block>
-  <block id="29813baaaf23132ecd02e348d3c08087" category="paragraph">サブスクリプションを構成する前に、コンソール エージェントを作成する必要があります。<block ref="e389d302df8d551d4b7fea0593f15ba1" category="inline-link-macro-rx"></block> 。</block>
   <block id="d0ecf8e73b6ccfcf921b7f1d7a9f7aab" category="section-title">既存のサブスクリプションを組織またはアカウントに関連付ける</block>
   <block id="cfc7641b49b25d7474ae90431316dac4" category="paragraph">AWS Marketplace からサブスクライブする場合、プロセスの最後のステップは、サブスクリプションを組織に関連付けることです。この手順を完了しなかった場合、組織またはアカウントでサブスクリプションを使用できません。</block>
   <block id="de889eba177db53c06a02269626fde94" category="inline-link-macro">コンソールの展開モードについて学ぶ</block>
@@ -3188,7 +3152,6 @@
   <block id="dd713f3b590ab5bec2d22f7058e33ab6" category="section-title">コンソールに資格情報を追加する</block>
   <block id="55a1f4f70021eba45bccf8433f293097" category="paragraph">Azure アカウントに必要な権限を付与したら、そのアカウントの資格情報をコンソールに追加できます。この手順を完了すると、さまざまな Azure 資格情報を使用してCloud Volumes ONTAP を起動できるようになります。</block>
   <block id="2b2280c2ccd1fc263667012c605a13ff" category="paragraph">クラウド プロバイダーでこれらの資格情報を作成したばかりの場合は、使用できるようになるまでに数分かかることがあります。資格情報をコンソールに追加する前に、数分お待ちください。</block>
-  <block id="50009964278e49ea5cebe0363998055c" category="paragraph">コンソール設定を変更する前に、コンソール エージェントを作成する必要があります。<block ref="e389d302df8d551d4b7fea0593f15ba1" category="inline-link-macro-rx"></block> 。</block>
   <block id="973a970f1b0256e7e155b0658f96de09" category="inline-link">コンソールにシステムを追加するとき</block>
   <block id="dc626c8f4884c60a8a8e3e1710f896e4" category="paragraph">詳細と資格情報ページから別の資格情報セットに切り替えることができます<block ref="e81400213d37156540a01916c36ea9d7" category="inline-link-rx"></block></block>
   <block id="66f9b6c415f38768cbdd702260d9c7a4" category="inline-image-macro">「詳細と資格情報」ページで「資格情報の編集」を選択した後、資格情報を選択する様子を示すスクリーンショット。</block>
@@ -3382,7 +3345,6 @@
   <block id="b797d654931eeb3fd544b972b537bc1a" category="paragraph">証明書ファイルが PEM 形式であり、コマンドと同じディレクトリに存在することを確認するか、証明書ファイルへのフルパスを指定します。</block>
   <block id="76fe97fb8546b1f5923f0501c8e25ae0" category="section-title">コンソールエージェントの透過プロキシを変更する</block>
   <block id="92621940050d65fc4b47ade313d8f178" category="inline-link-macro">エージェントメンテナンスコンソール</block>
-  <block id="f57d507a93c9d29097b93fdd95c0ac8e" category="paragraph">コンソールエージェントの既存の透過プロキシサーバーを更新するには、<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>コマンドを使用して透過プロキシサーバーを削除するか、<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>指示。詳細については、次のドキュメントを参照してください。<block ref="eb13597c0b0df7081c8b813033be9948" category="inline-link-macro-rx"></block> 。</block>
   <block id="349027440539dc46278ee9e93260025d" category="section-title">インターネットへのアクセスが失われた場合は、コンソールエージェントプロキシを更新します。</block>
   <block id="71164e4bc7911ce651a366899f4f487b" category="paragraph">ネットワークのプロキシ構成が変更されると、エージェントはインターネットにアクセスできなくなる可能性があります。たとえば、誰かがプロキシ サーバーのパスワードを変更したり、証明書を更新したりした場合などです。この場合、コンソール エージェント ホストから直接 UI にアクセスし、設定を更新する必要があります。コンソール エージェント ホストへのネットワーク アクセスがあり、コンソールにログインできることを確認します。</block>
   <block id="54734e5bba3b83b2757e43d1ff24b2c4" category="section-title">直接APIトラフィックを有効にする</block>
@@ -3717,7 +3679,6 @@
   <block id="73b33e4d30bd646d12ad3465d1ae8b1b" category="paragraph">コンソール エージェントのリソースを、*リソース* ページの同じフォルダーおよびプロジェクトに関連付けます。</block>
   <block id="b8b0c6cf6f3f89235f0deb7b0c6b01e0" category="inline-link-macro">リソースをフォルダやプロジェクトに関連付ける方法を学びます</block>
   <block id="1d0aafa476757723426865415e3ee193" category="paragraph"><block ref="8a5d319849e62944ab4cf141ef41222a" category="inline-link-macro-rx"></block> 。</block>
-  <block id="31d3d82d397fc18c3aaa7057132c469d" category="list-text"><block ref="31d3d82d397fc18c3aaa7057132c469d" category="inline-link-macro-rx"></block></block>
   <block id="1a5a9a56e04bbba24a4b989d5017d535" category="inline-link-macro">アイデンティティとアクセスを始める</block>
   <block id="411ec776ef98d4c711a192a4fe599e3b" category="list-text"><block ref="411ec776ef98d4c711a192a4fe599e3b" category="inline-link-macro-rx"></block></block>
   <block id="3721423bab8a75aede6f2f51e549eaeb" category="inline-link">IDとアクセス管理のためのAPIについて学ぶ</block>
@@ -3755,7 +3716,6 @@
   <block id="4430cefb38674d70ef9b7fe67aee23c8" category="inline-link-macro">組織のリソース階層を管理する方法を学ぶ</block>
   <block id="8387c3b8e8cca04d38e2ed26ff0cf701" category="list-text"><block ref="c02aea27d6ba71f8c3e62cb351aaf61e" category="inline-link-macro-rx"></block> 。</block>
   <block id="b88780515e5cfdc8fbe51c7f44514c7a" category="inline-link-macro">コンソールエージェントをフォルダまたはプロジェクトに関連付ける方法を学びます</block>
-  <block id="8b1d2ab0552c5d7793153d9fda3b575d" category="list-text"><block ref="51298227862ac5270d9350ee1061138a" category="inline-link-macro-rx"></block> 。</block>
   <block id="0219628965579f3125a85333ababe4a8" category="inline-link-macro">NetAppコンソールのアイデンティティとアクセス管理について学ぶ</block>
   <block id="e2a0d9cb668e6b8456f193f9e7481e9e" category="list-text"><block ref="e2a0d9cb668e6b8456f193f9e7481e9e" category="inline-link-macro-rx"></block></block>
   <block id="d74a08d7ee858b57e9e95937c86453c6" category="inline-link">IDとアクセスのためのAPIについて学ぶ</block>
@@ -3999,11 +3959,9 @@
   <block id="731810cbc475f1eaf952db0bad3000b2" category="paragraph">複数のコンソール エージェントがある場合は、それらを切り替えて、特定のエージェントに関連付けられているシステムを表示できます。</block>
   <block id="cf1ee1ecf7dc1f5756e2468d5b602933" category="list-text">コンソールの上部ヘッダーで、エージェント アイコンを選択します。</block>
   <block id="798a2a9b64140e0f8f05fa5695aa1faf" category="list-text">別のエージェントを選択し、[切り替え] を選択します。</block>
-  <block id="0231bca7fd6141f7407cb9d9d560078a" category="paragraph"><block ref="bef5472a56f278957492e0caa5daa6ee" category="inline-link-macro-rx"></block> 。</block>
   <block id="4c2e9efea94172b6ed2675549b18aa3d" category="summary">Google Cloud を使用して Google Cloud にコンソール エージェントを作成するには、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。</block>
   <block id="133f87cfee7691c59e4aceff51289761" category="doc">Google Cloud からコンソール エージェントを作成する</block>
   <block id="29c7d79b8474c98bbf8600f925dfb317" category="inline-link-macro">コンソールエージェントの理解</block>
-  <block id="843066b0b26b01552aee81f7ba5290b4" category="list-text">あなたは<block ref="f7d8e9900b5c0fd4ac9f76399f6a4468" category="inline-link-macro-rx"></block>。</block>
   <block id="035f13f16b03eaaa0e6f9e50510bada8" category="list-text">確認すべき<block ref="2c29232fcf7d2d4af34b1c675a642823" category="inline-link-macro-rx"></block>。</block>
   <block id="70d8bd725ea77c6a4b800edb3d5b9f5f" category="section-title">ステップ1: ネットワークを設定する</block>
   <block id="eaf8526751222fae318894a8fef05e01" category="paragraph">コンソール エージェントがリソースを管理し、ターゲット ネットワークおよびインターネットに接続できるようにネットワークを設定します。</block>
@@ -4029,7 +3987,6 @@
   <block id="dcff4284c01f138cf8176af4247c8947" category="section-title">ステップ6: コンソールエージェントを作成する</block>
   <block id="3b5a2fd55c75af73b67a500b42f38800" category="paragraph">Google Cloud を使用してコンソール エージェントを作成します。</block>
   <block id="5f951668599865c2dd2220fcb0617434" category="inline-link-macro">コンソールエージェントのデフォルト構成について学習します</block>
-  <block id="14c367c6bf7eb4dba010d14b0b178429" category="paragraph">コンソール エージェントを作成すると、デフォルト構成で Google Cloud に VM インスタンスがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="5afba04db223b94ef6f22bee25e70fdc" category="list-text">コンソール エージェントとコンソール エージェント VM のサービス アカウントを作成するために必要な Google Cloud 権限。</block>
   <block id="482049a2c27830202c448327d329f378" category="list-text">ネットワーク要件を満たす VPC とサブネット。</block>
   <block id="ec2ce152b3b60e3721ae091911de473d" category="list-text">VM インスタンスの要件を理解していること。</block>
@@ -4144,7 +4101,6 @@
   <block id="24ec0b6e7c909c10633ec52c6523f771" category="section-title">コンソールにクラウドプロバイダーの資格情報を追加する</block>
   <block id="3812e8779179a58315ca409176c5ff21" category="summary">NetAppコンソールから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。</block>
   <block id="59451d5b1be51c2e522deb585360baaf" category="doc">NetAppコンソールからAWSにコンソールエージェントを作成する</block>
-  <block id="65fcedafc44bafe57ddc9dda9f3916e4" category="list-text">あなたは<block ref="f7d8e9900b5c0fd4ac9f76399f6a4468" category="inline-link-macro-rx"></block>。</block>
   <block id="ece2bb18919ce5ae01a5179cefd722b3" category="section-title">ステップ1: AWSにコンソールエージェントを展開するためのネットワークを設定する</block>
   <block id="3622d53137f09c5a1f41ab1c1500f461" category="paragraph">コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件により、コンソール エージェントはハイブリッド クラウド内のリソースとプロセスを管理できるようになります。</block>
   <block id="dc648d2a312f61564f5f6beb2e95a5cc" category="paragraph">コンソール エージェントを作成した後、このネットワーク要件を実装する必要があります。</block>
@@ -4177,7 +4133,6 @@
   <block id="bbba7638debc60d9989ee9d0b3f92713" category="paragraph">これで、必要な権限を持つ IAM ロールまたは必要な権限を持つ IAM ユーザーが作成されているはずです。コンソールからコンソール エージェントを作成するときに、ロールまたはアクセス キーに関する情報を提供できます。</block>
   <block id="a5d705a0b67c1b72cfaf22a7b055e724" category="section-title">ステップ3: コンソールエージェントを作成する</block>
   <block id="7b4df00b5341d82974a20ef2b057b05e" category="paragraph">コンソールの Web ベースのコンソールから直接コンソール エージェントを作成します。</block>
-  <block id="3a3ad28d80adde83edab00e55fcdf72b" category="list-text">コンソールからコンソール エージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。コンソールエージェントを作成した後、CPU や RAM が少ない小さな EC2 インスタンスに切り替えないでください。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="5b648a602c64391c13459b2242feaccf" category="inline-link-macro">コンソールエージェントのIAMポリシーの詳細</block>
   <block id="8cfa8205571c02f754f7ea3ea367085f" category="list-text">コンソールがコンソール エージェントを作成すると、インスタンスの IAM ロールとインスタンス プロファイルが作成されます。このロールには、コンソールエージェントが AWS リソースを管理できるようにする権限が含まれています。将来のリリースで新しい権限が追加されたら、ロールが更新されるようにしてください。<block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block> 。</block>
   <block id="aca02eea323174e41d57225a762eb959" category="list-text">AWS 認証方法: 必要な権限を持つ IAM ユーザーの IAM ロールまたはアクセスキーのいずれか。</block>
@@ -4242,7 +4197,6 @@
   <block id="7727085a11ad593ea85a877494c0300d" category="paragraph">コンソールエージェントを作成するときは、次の要件を満たす EC2 インスタンスタイプを選択する必要があります。</block>
   <block id="2f5d6361fbfb946bee7b93c607c82dbf" category="section-title">ステップ4: コンソールエージェントを作成する</block>
   <block id="7ce6d0fa19c62bc73b780577239dfa5c" category="paragraph">AWS Marketplace から直接コンソールエージェントを作成します。</block>
-  <block id="091db0baf055116249f5d476b68a65fe" category="paragraph">AWS Marketplace からコンソールエージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="d2b67faa3e0b0b15c349fce572e8015b" category="list-text">コンソール エージェントに必要な権限を含むポリシーがアタッチされた IAM ロール。</block>
   <block id="dfcbfa4ce7dbf520f2b737359dfbc591" category="list-text">IAM ユーザーが AWS Marketplace にサブスクライブしたり、サブスクライブ解除したりするための権限。</block>
   <block id="64f210f4d96dcba2f41cec7b537055f7" category="list-text">インスタンスの CPU および RAM 要件を理解すること。</block>
@@ -4291,7 +4245,6 @@
   <block id="7fd3a2f847442f1829a5feb65ce7371f" category="paragraph">複数の Azure サブスクリプションのリソースを管理する場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。たとえば、コンソールを使用すると、 Cloud Volumes ONTAPをデプロイするときに使用するサブスクリプションを選択できます。</block>
   <block id="83ca0f5121c5559891bda5c75bb2d780" category="paragraph">これでサービス プリンシパルが設定され、アプリケーション (クライアント) ID、ディレクトリ (テナント) ID、およびクライアント シークレットの値がコピーされているはずです。コンソール エージェントを作成するときに、この情報をコンソールに入力する必要があります。</block>
   <block id="01ca28b962699e0ada79cd7421185fc0" category="paragraph">NetAppコンソールから直接コンソール エージェントを作成します。</block>
-  <block id="498ccd410a5deaaf8222ace3b4e54701" category="list-text">コンソールからコンソール エージェントを作成すると、既定の構成を使用して Azure に仮想マシンがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="fa6a784a765b60a3f4d7ea2abcd313a9" category="inline-link-macro">コンソールエージェントのカスタムロールの詳細</block>
   <block id="1e9748fc886eb11aef3357bbc0ff9344" category="list-text">コンソールはコンソール エージェントを展開するときに、カスタム ロールを作成し、それをコンソール エージェント VM に割り当てます。このロールには、コンソール エージェントが Azure リソースを管理できるようにする権限が含まれています。後続のリリースで新しい権限が追加されるので、ロールが最新の状態に保たれていることを確認する必要があります。<block ref="4d87df92bbe36cebc9c881eff30738dd" category="inline-link-macro-rx"></block> 。</block>
   <block id="cec61994be2c9633fc4acb202e4b9c41" category="list-text">Azure サブスクリプション。</block>
@@ -4349,7 +4302,6 @@
   <block id="b4e73984d2c68b6a9184a535a057e186" category="list-text">オプション 2: 必要な権限を持つ Azure サービス プリンシパルの資格情報をコンソールに提供します。</block>
   <block id="b3f9ca2d8c527306b939437d5e906c93" category="paragraph">コンソールの権限を設定するには、次の手順に従います。</block>
   <block id="c3cfed29f34a317879c52ce038fd0be1" category="paragraph">Azure Marketplace からコンソール エージェントを直接起動します。</block>
-  <block id="c8e8313e02515879db4b39ba9ff2bc2d" category="paragraph">Azure Marketplace からコンソール エージェントを作成すると、既定の構成で仮想マシンが設定されます。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="2e3183c78635488e77f6125a1a2ebd13" category="list-text">Azure Marketplace のNetAppコンソール エージェント VM ページに移動します。</block>
   <block id="0c5f74a83e5cbc5c6c230dd0caf096f7" category="inline-link">商用リージョン向けの Azure Marketplace ページ</block>
   <block id="5fb9ace1b2fee444b848b1ad1c5d886c" category="paragraph"><block ref="5fb9ace1b2fee444b848b1ad1c5d886c" category="inline-link-rx"></block></block>
@@ -4381,7 +4333,6 @@
   <block id="f603ec935847895eb8636f656a2ae53f" category="list-text">このカスタムロールは、コンソールから、または gcloud を使用してコンソール エージェントをデプロイするユーザーに割り当てます。</block>
   <block id="c7a43cd5aa692ccab9fe9ec5162d50ad" category="paragraph">Console エージェントとCloud Volumes ONTAPをデプロイする前に、いくつかの Google Cloud API を有効にする必要があります。</block>
   <block id="061388a938fd64eb5c4e7136956bbd01" category="paragraph">コンソールから直接コンソール エージェントを作成します。</block>
-  <block id="a13efeac37bc729d1b9ca426b28462df" category="paragraph">コンソール エージェントを作成すると、デフォルト構成を使用して Google Cloud に仮想マシン インスタンスがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。<block ref="2047de3c536480efe35ce8e73257b12f" category="inline-link-macro-rx"></block> 。</block>
   <block id="ee011866b8623b71b582287613b814bc" category="list-text">*概要*ページで、*エージェントのデプロイ &gt; Google Cloud*を選択します。</block>
   <block id="cec29f07fe09b750feee9ec4b4ef3ca7" category="list-text">*エージェントのデプロイ*ページで、必要なものの詳細を確認します。次の 2 つのオプションがあります。</block>
   <block id="15de410cab5b286c0cff40620cbbc2f8" category="list-text">製品内ガイドを使用して展開の準備をするには、[*続行*] を選択します。製品内ガイドの各ステップには、ドキュメントのこのページに記載されている情報が含まれています。</block>
@@ -4569,14 +4520,12 @@
   <block id="6148da760abfb5167327e2dbd67b1724" category="doc">コンソールエージェントVMとオペレーティングシステムを保守する</block>
   <block id="5279ec16620bed638d689fb55a687bf8" category="paragraph">コンソール エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、お客様は、会社の標準的なオペレーティング システム配布手順に従って、エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。</block>
   <block id="32ecd7116f82d32fc86313604d074f12" category="inline-link-macro">サポートされている Linux オペレーティングシステムの変更</block>
-  <block id="27e4fc9f9a7de50489293effdbe1fa28" category="admonition">既存のエージェントがいる場合は、次の点に注意してください。<block ref="bd6e461b9eed09ced9eb75610086f8d1" category="inline-link-macro-rx"></block> 。</block>
   <block id="35379aa08313c0fa9274fecfc86b4cc0" category="section-title">オペレーティングシステムのパッチとエージェント</block>
   <block id="e841c125c9e210ed4ede7a3ae1c5ada8" category="paragraph">エージェント ホスト サービスを停止せずに OS セキュリティ パッチを適用します。</block>
   <block id="d54ab8a1d5dd0b1066137c76d5021844" category="section-title">VMまたはインスタンスタイプ</block>
   <block id="d69b367407abdea589b8942156f4e07a" category="paragraph">コンソールからコンソール エージェントを作成すると、デフォルトの構成でクラウド プロバイダーに VM インスタンスがデプロイされます。エージェントを作成した後は、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。</block>
   <block id="d6ca9eb671a9ff98d68b7f7acaf8ec88" category="paragraph">次の表に、CPU と RAM の要件を示します。</block>
   <block id="a97c9ede934c84f0e97d896b05cd1ae0" category="inline-link-macro">エージェントのデフォルト設定について学ぶ</block>
-  <block id="db5b25e2af4a6cbb3caeea7b25cbe8d1" category="paragraph"><block ref="aa3c75334683a941ae8b4c190e094f84" category="inline-link-macro-rx"></block> 。</block>
   <block id="3eecd3f04a3aed6d69a686b8c6860e44" category="section-title">エージェントを監視する</block>
   <block id="317906a769f89601a484794c64e9042d" category="paragraph">コンソールは、ディスク容量、RAM、CPU の問題など、エージェント VM に異常がある場合に通知します。コンソール内の通知センターでこれらの通知を監視するか、電子メール通知を構成します。ディスク容量、メモリ、CPU 使用率が時々増加するのは正常ですが、頻繁に発生する場合は、解決するための手順を実行する必要があります。</block>
   <block id="1ea31e4b3b5747148fd4f93da267694f" category="paragraph">たとえば、エージェント リソース (CPU、RAM、またはディスク領域) が 30 分間連続して合計容量の 90% を超えると、コンソールから通知が届きます。その後、リソース使用量がそのしきい値を下回ると、通知センターに通知が解決済み (緑) として表示されます。</block>
@@ -4594,7 +4543,6 @@
   <block id="0d75592eefb72eac4699a1f49bd7769a" category="section-title">エージェントVMの停止と起動</block>
   <block id="665e5fcb7c888a6273d0761790d05ed5" category="paragraph">必要に応じて、クラウド プロバイダーのコンソールまたは標準のオンプレミス手順を使用して、エージェント VM を停止および起動します。</block>
   <block id="fab2977be6b57a804b266fd2b7996179" category="inline-link-macro">コンソールエージェントは常に動作している必要があることに注意してください</block>
-  <block id="690945cd7ba0bbf602bcb532ed522e1e" category="paragraph"><block ref="c3124849c68d8fc946d5c43e8be73cee" category="inline-link-macro-rx"></block> 。</block>
   <block id="92ca244e2f6af5665f270d0017a9ee62" category="section-title">Linux VMに接続する</block>
   <block id="fa108fef79d6a7f6c45e6265a7c8ce18" category="paragraph">エージェントが実行される Linux VM に接続する必要がある場合は、クラウド プロバイダーの接続オプションを使用します。</block>
   <block id="31f62e7fcca679aa981e1ea0a7e5abfa" category="list-text">AWS でエージェントインスタンスを作成するときは、AWS アクセスキーとシークレットキーを指定します。このキー ペアを使用してインスタンスに SSH 接続できます。  EC2 Linux インスタンスにはユーザー名「ubuntu」を使用します。  2023 年 5 月より前に作成されたエージェントの場合は、ユーザー名「ec2-user」を使用します。</block>
@@ -4648,7 +4596,6 @@
   <block id="b38724d5be0fd1e27cb2f48b33b593fb" category="paragraph">ユーザーは、クラスタのONTAP System Manager にアクセスするために、 ONTAP認証情報を入力するよう求められます。ユーザーはこれらの資格情報をコンソールに保存することを選択できます。これにより、毎回資格情報を入力する必要がなくなります。ユーザー資格情報はそれぞれのユーザーのみに表示され、「ユーザー資格情報」ページから管理できます。</block>
   <block id="bbfd8836af38790512652680bc39a97e" category="paragraph-title">コンソールエージェントを使用</block>
   <block id="cad21b2f1f29d6af5059830617c87d42" category="paragraph">デフォルトでは、ユーザーはONTAP System Manager にアクセスするためにONTAP認証情報を入力するように求められません。ただし、コンソール管理者（組織管理者ロールを持つ）は、ユーザーにONTAP認証情報の入力を求めるようにコンソールを設定できます。この設定を有効にすると、ユーザーは毎回ONTAP認証情報を入力する必要があります。</block>
-  <block id="efd19a04c99c31329dfaad38a02c2181" category="paragraph"><block ref="efd19a04c99c31329dfaad38a02c2181" category="inline-link-macro-rx"></block></block>
   <block id="4cdcf6b8fd95bbaa7cf27e4443c7681b" category="section-title">NSS認証情報</block>
   <block id="8004db986a284e5dcad9f3e77eaac162" category="paragraph">NetAppコンソール ログインに関連付けられた NSS 資格情報により、サポート登録、ケース管理、およびDigital Advisorへのアクセスが可能になります。</block>
   <block id="87396783ee7caf6faefec85c9bb63c87" category="list-text">*サポート &gt; リソース* にアクセスしてサポートに登録すると、NSS 資格情報をログインに関連付けるように求められます。</block>
@@ -4909,7 +4856,6 @@
   <block id="920d0c5e78f6b6572b89d526a296d06b" category="summary">環境を準備し、コンソール エージェントを展開して、制限モードでNetAppコンソールの使用を開始します。</block>
   <block id="af2c4df7e8660cdabd8fc59a2aa0aaf1" category="doc">開始ワークフロー（制限モード）</block>
   <block id="c31816e89acef282910453c5620f26f4" category="inline-link-macro">展開モード</block>
-  <block id="463607e512069b418940a921afdec8b0" category="paragraph">制限モードは通常、AWS GovCloud および Azure Government リージョンでの展開を含む、州政府や地方自治体、規制対象企業によって使用されます。始める前に、以下の点を理解しておいてください。<block ref="f3ace5a930cbd0beeeadc55a7b354ad6" category="inline-link-macro-rx"></block>そして<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>。</block>
   <block id="27677c533249219197c5933410713055" category="inline-link-macro">展開の準備</block>
   <block id="1308ae14263d9629eb12e11bd10db155" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="f826f61970c0735d0b0624264426b512" category="inline-link-macro-rx"></block></block>
   <block id="eb762959fcc0cce31949abce6f8eb1c1" category="list-text">CPU、RAM、ディスク容量、コンテナ オーケストレーション ツールなどの要件を満たす専用の Linux ホストを準備します。</block>
@@ -4925,7 +4871,6 @@
   <block id="d1d624aaa80d4b95ecda4ca00906004a" category="paragraph">オプション: クラウド プロバイダーのマーケットプレイスからNetApp Intelligent Services にサブスクライブして、時間単位の料金 (PAYGO) または年間契約でデータ サービスの料金を支払います。  NetAppインテリジェント サービスには、 NetAppバックアップおよびリカバリ、 Cloud Volumes ONTAP、 NetAppクラウド階層化、 NetAppランサムウェア回復力、 NetAppディザスタ リカバリが含まれます。  NetApp Data Classification は追加料金なしでサブスクリプションに含まれています。</block>
   <block id="6d4ac1cbd4bd47313400a32115439002" category="summary">コンソールのネットワークを準備し、サインアップしてアカウントを作成し、オプションでコンソール エージェントを作成して、標準モードでNetAppコンソールの使用を開始します。</block>
   <block id="2c4bc70d5e888213a3bca35048028c96" category="doc">開始ワークフロー（標準モード）</block>
-  <block id="472f4090016d7915074142e6d5d460f4" category="paragraph">標準モードでは、 NetAppの Software-as-a-service (SaaS) 製品としてホストされている Web ベースのコンソールにアクセスします。始める前に、以下の点を理解しておいてください<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>そして<block ref="f3ace5a930cbd0beeeadc55a7b354ad6" category="inline-link-macro-rx"></block>。</block>
   <block id="4a5cd58a00c166a3e1b93ea2c38ae5db" category="inline-link-macro">NetAppコンソールを使用するためのネットワークの準備</block>
   <block id="4170442d537b0bcdcf26afecc0b46214" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="81434ae0997d25fd3bf3ebcd9de42f03" category="inline-link-macro-rx"></block></block>
   <block id="6c6992d5903cf814577c44cbe3ed58b0" category="paragraph">NetAppコンソールにアクセスするコンピューターは、特定のエンドポイントに接続する必要があります。ネットワークで送信アクセスが制限されている場合は、これらのエンドポイントが許可されていることを確認する必要があります。</block>
@@ -4934,12 +4879,10 @@
   <block id="8859695a85afcf4d196795433a572988" category="inline-link">NetAppコンソール</block>
   <block id="a40400c6f5bf51aa4e7aaaedbf791535" category="paragraph">に行く<block ref="193ae139051d487c450de046f6bd2645" category="inline-link-rx"></block>そしてサインアップしてください。組織を作成するオプションが提供されますが、会社に既に組織が存在する場合は、その手順をスキップする必要があります。</block>
   <block id="d1e788bf754c3b9d70eae673330792e2" category="inline-link-macro">コンソールエージェントなしで何ができるかを学ぶ</block>
-  <block id="a5c7973c0be27e7b56c02a85eb3be100" category="paragraph">この時点で、ログインしてストレージの管理や、 Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Filesなどのサービスの使用を開始できます。<block ref="af44a419176c69e173521af92c5d972c" category="inline-link-macro-rx"></block> 。</block>
   <block id="48700fa46e521cfa608d334472b68ef1" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>コンソールエージェントを作成する</block>
   <block id="8f012b04ed4896873993ff7252418ca4" category="paragraph">高度なストレージ管理機能と一部のNetAppデータ サービスを使用するには、コンソール エージェントをインストールする必要があります。コンソール エージェントにより、コンソールはハイブリッド クラウド環境内のリソースとプロセスを管理できるようになります。</block>
   <block id="ce207d705a8165045c7d26c1fa5fe273" category="paragraph">クラウドまたはオンプレミス ネットワークにコンソール エージェントを作成できます。</block>
   <block id="380e8dcf837dc4b4a9dfb71ed62ffe17" category="inline-link-macro">コンソールエージェントが必要な状況とその動作について詳しくは、</block>
-  <block id="b22dc2a1ee2f65dc4276f3451f89a5d2" category="list-text"><block ref="b22dc2a1ee2f65dc4276f3451f89a5d2" category="inline-link-macro-rx"></block></block>
   <block id="cf4709f0b7fac7a7e67b98f5cea5e8a8" category="inline-link-macro">AWS でコンソールエージェントを作成する方法を学ぶ</block>
   <block id="012b4e372603f0b395e9a87c7432c3b7" category="list-text"><block ref="012b4e372603f0b395e9a87c7432c3b7" category="inline-link-macro-rx"></block></block>
   <block id="60b9309b830edf5f54f76fa4664a972b" category="inline-link-macro">Azure でコンソール エージェントを作成する方法を学びます</block>
@@ -4947,7 +4890,6 @@
   <block id="bc618e169a194e52cf3cda45248d2233" category="inline-link-macro">Google Cloud でコンソール エージェントを作成する方法を学びます</block>
   <block id="b0a30fdadf738e65e6490f50bac8c5b1" category="list-text"><block ref="b0a30fdadf738e65e6490f50bac8c5b1" category="inline-link-macro-rx"></block></block>
   <block id="01539f3bb82319392680d2729edcc784" category="inline-link-macro">オンプレミスでコンソールエージェントを作成する方法を学ぶ</block>
-  <block id="222db7e15c2b2d0d532700022907f63a" category="list-text"><block ref="222db7e15c2b2d0d532700022907f63a" category="inline-link-macro-rx"></block></block>
   <block id="546d7695c99c2937a5bfae3cd6cf8da5" category="paragraph">Google Cloud でストレージとデータを管理するためNetApp Intelligent Data Services を使用するには、コンソール エージェントが Google Cloud で実行されていることを確認します。</block>
   <block id="f21c11580c94835481d6c035b85f4b79" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> <block ref="60a7e52b5f1dace8fe7cd5fadf089cd0" category="inline-link-macro-rx"></block></block>
   <block id="3a9162a1dd41f82eb4f6e7242b11328b" category="paragraph">クラウド プロバイダーを通じてNetApp Intelligent Services にサインアップし、時間単位 (PAYGO) または年間契約で支払います。  NetAppインテリジェント サービスには、 NetAppバックアップおよびリカバリ、 Cloud Volumes ONTAP、 NetAppクラウド階層化、 NetAppランサムウェア回復力、 NetAppディザスタ リカバリが含まれます。  NetApp Data Classification は追加料金なしでサブスクリプションに含まれています。</block>
@@ -5132,7 +5074,6 @@
   <block id="f1250585f9c248976b034c285b91672c" category="paragraph">コンソール エージェントを確認するには、次のいずれかのコマンドを使用します。すべてのサービスのステータスは「実行中」になっている必要があります。そうでない場合は、 NetAppサポートにお問い合わせください。</block>
   <block id="0960e06fac3e48e6403802fb4aa8fbde" category="paragraph">コンソール エージェント診断へのアクセスの詳細については、次のトピックを参照してください。</block>
   <block id="a25b82d4083e9054d77530a1b1771861" category="inline-link-macro">コンソール エージェントのステータスを確認する (Linux ホスト展開の場合)</block>
-  <block id="9d234fb83c9099ade4512a750ec868b2" category="list-text"><block ref="9d234fb83c9099ade4512a750ec868b2" category="inline-link-macro-rx"></block></block>
   <block id="bf25f8db77ad355d69bc02d42fae9f4d" category="inline-link-macro">コンソール エージェントのステータスを確認する (VCenter 展開の場合)</block>
   <block id="8775ad30be432ac72bc04b0163c4716f" category="list-text"><block ref="8775ad30be432ac72bc04b0163c4716f" category="inline-link-macro-rx"></block></block>
   <block id="22e75fa70d8a01a79302df0514996aee" category="list-text">Docker (Ubuntu および VCenter のデプロイメント用)</block>
@@ -5476,7 +5417,6 @@
   <block id="c8fa489b70f23c314b0b945db2384452" category="sidebar">VCenter にインストールされたエージェントを維持する</block>
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">Webコンソールへのアクセス用にCA署名証明書をインストールする</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">EC2インスタンスでIMDSv2の使用を必須にする</block>
-  <block id="71ae02c171873e7af0f7b72300d1da9b" category="sidebar">コネクタのアップグレードを管理する</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">コンソールエージェントをアンインストールして削除する</block>
   <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">デフォルト設定</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">NetAppコンソールでONTAP権限を適用する</block>
@@ -5569,4 +5509,64 @@
   <block id="d06ce875f1b2887cbc5d87b38e0d0d44" category="list-text">インストール中に送信接続を検証する構成チェックを無効にする必要があります。このチェックが無効になっていない場合、手動インストールは失敗します。<block ref="90428b1442632a8a73b6f9660fa083c4" category="inline-link-macro-rx"></block></block>
   <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="sidebar">NetAppコンソールアシスタントを使用する</block>
   <block id="14a5258ed6e53fde9968f99c48b5072e" category="sidebar">NetAppコンソールアシスタントを使い始める</block>
+  <block id="55b83b7bea13907c0b624a32a6799b79" category="paragraph"><block ref="55b83b7bea13907c0b624a32a6799b79" category="inline-link-macro-rx"></block></block>
+  <block id="4439aaaad475e34c70f12f09ad6165d9" category="admonition">コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちら<block ref="0f8b8c9e4ded9a5f5a72925670422347" category="inline-link-macro-rx"></block>。</block>
+  <block id="ba29ba5428e515700911cad0530da473" category="paragraph">コンソールからコンソールエージェントをデプロイする場合は、IAM ロールの ARN または IAM ユーザーのアクセスキーを指定する必要があります。認証方法には、AWS にコンソールをデプロイするための権限が必要です。必要な権限は、link:task-install-agent-aws-the Console.html#console-permissions-aws[AWS のエージェント展開ポリシー]に記載されています。</block>
+  <block id="a137f604e6a7f24aa4c6910a9cf84195" category="list-text"><block ref="a137f604e6a7f24aa4c6910a9cf84195" category="inline-link-macro-rx"></block></block>
+  <block id="245ff1ee18f9fd1fbf4af2b4a03d7c95" category="list-text"><block ref="245ff1ee18f9fd1fbf4af2b4a03d7c95" category="inline-link-macro-rx"></block></block>
+  <block id="bb3fc7e54cf135053eb820e0008efc8b" category="paragraph">コンソールからコンソール エージェントを展開する場合は、コンソール エージェント仮想マシンを展開する権限を持つ Azure アカウントまたはサービス プリンシパルを使用する必要があります。必要な権限は、<block ref="ab1809f94c72613cceb39967d5fc5be7" category="inline-link-macro-rx"></block> 。</block>
+  <block id="98faa0bd253708350eda28057b888356" category="list-text"><block ref="98faa0bd253708350eda28057b888356" category="inline-link-macro-rx"></block></block>
+  <block id="2565c19f0836899779db19a140e2fada" category="list-text"><block ref="2565c19f0836899779db19a140e2fada" category="inline-link-macro-rx"></block></block>
+  <block id="1833b862078dbb4dc1ea1c935b25b75f" category="list-text"><block ref="1833b862078dbb4dc1ea1c935b25b75f" category="inline-link-macro-rx"></block></block>
+  <block id="2dabf3ef50b23a394a532c8641ffbc97" category="list-text"><block ref="2dabf3ef50b23a394a532c8641ffbc97" category="inline-link-macro-rx"></block></block>
+  <block id="2686a2ef3c47d0e0eafe183d768a5487" category="paragraph"><block ref="f653f7d16df54a3c9e88f23235c315ba" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="list-text"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block></block>
+  <block id="22ca43ce5c5a872fcead2b9795d43ce4" category="list-text"><block ref="4cac40a6f38a644ae4e3211385f3144e" category="inline-link-macro-rx"></block>（これが標準オプションです）</block>
+  <block id="b0a755c889be10fff38496428b62e124" category="list-text"><block ref="b0a755c889be10fff38496428b62e124" category="inline-link-macro-rx"></block></block>
+  <block id="ce8b5514801557c28339a07e7885738d" category="list-text"><block ref="ce8b5514801557c28339a07e7885738d" category="inline-link-macro-rx"></block></block>
+  <block id="4d116474327ab97148d8a69fd11379ea" category="list-text"><block ref="e0fdd18000ece681beed8a0793eff329" category="inline-link-macro-rx"></block>（これが標準オプションです）</block>
+  <block id="b54d9f5a24d2e6b2b731b2862685ce97" category="list-text"><block ref="b54d9f5a24d2e6b2b731b2862685ce97" category="inline-link-macro-rx"></block></block>
+  <block id="9e0a66536136cc55db9b005faf3fa26e" category="list-text"><block ref="9e0a66536136cc55db9b005faf3fa26e" category="inline-link-macro-rx"></block></block>
+  <block id="1a208b984fe61bb9d1e4e6b026e30354" category="list-text"><block ref="84693cca73c9981e6b563eb4572174e7" category="inline-link-macro-rx"></block>（これが標準オプションです）</block>
+  <block id="952e50ce3636bd2393f109405c59b8c0" category="list-text"><block ref="952e50ce3636bd2393f109405c59b8c0" category="inline-link-macro-rx"></block></block>
+  <block id="0eef87956979cf6724fcf06a20f2e4eb" category="list-text"><block ref="0eef87956979cf6724fcf06a20f2e4eb" category="inline-link-macro-rx"></block></block>
+  <block id="8339e7865f160190422328b59c08ee1e" category="list-text"><block ref="8339e7865f160190422328b59c08ee1e" category="inline-link-macro-rx"></block></block>
+  <block id="ca2c93873fc0182f513cf7a270f04ef3" category="list-text"><block ref="ca2c93873fc0182f513cf7a270f04ef3" category="inline-link-macro-rx"></block></block>
+  <block id="982bddeed9f81544f50291e3d6a924ce" category="list-text"><block ref="982bddeed9f81544f50291e3d6a924ce" category="inline-link-macro-rx"></block></block>
+  <block id="9e97ec538c2df79d1e5e48262f80e2f3" category="paragraph"><block ref="a0861367aee4f711e39ff50c5df170be" category="inline-link-macro-rx"></block> 。</block>
+  <block id="8061654f55b31a1347dadde5417b3bbe" category="list-text">EC2 Linux インスタンスのユーザー名は ubuntu です (2023 年 5 月より前に作成されたエージェントの場合、ユーザー名は ec2-user です)。</block>
+  <block id="fe65e3a837dc9a3749e87481b67ff0fb" category="list-text"><block ref="fe65e3a837dc9a3749e87481b67ff0fb" category="inline-link-macro-rx"></block></block>
+  <block id="64594581e02e022dfc201735b71465f0" category="list-text"><block ref="64594581e02e022dfc201735b71465f0" category="inline-link-macro-rx"></block></block>
+  <block id="4b93f2e9726ccb43bb5df85b409d91b3" category="list-text"><block ref="4b93f2e9726ccb43bb5df85b409d91b3" category="inline-link-macro-rx"></block></block>
+  <block id="c918e5911e84e6725906f864a7cf4ed3" category="list-text"><block ref="c918e5911e84e6725906f864a7cf4ed3" category="inline-link-macro-rx"></block></block>
+  <block id="e1ab6ce5f78b6cffa4cb98b58c75ca74" category="cell"><block ref="e1ab6ce5f78b6cffa4cb98b58c75ca74" category="inline-link-macro-rx"></block></block>
+  <block id="7b4bc41ae2fa01b87cf543c93930cc32" category="cell"><block ref="7b4bc41ae2fa01b87cf543c93930cc32" category="inline-link-macro-rx"></block></block>
+  <block id="e33d05694ffbef46c07ae36b71e76f96" category="cell"><block ref="e33d05694ffbef46c07ae36b71e76f96" category="inline-link-macro-rx"></block></block>
+  <block id="ab7e7f2c26e8446e9290f7e7714458a2" category="cell"><block ref="ab7e7f2c26e8446e9290f7e7714458a2" category="inline-link-macro-rx"></block></block>
+  <block id="6acff1832d6612cd1afefaf53c386a82" category="list-text"><block ref="6acff1832d6612cd1afefaf53c386a82" category="inline-link-macro-rx"></block></block>
+  <block id="261ff42fc8f9c0d862eeaad9e733fb30" category="paragraph">サブスクリプションを構成する前に、コンソール エージェントを作成する必要があります。<block ref="5464fa3cf6630a16780c24b91f4e9a76" category="inline-link-macro-rx"></block> 。</block>
+  <block id="87cbeaae871cc7df1e298bd3bfa87377" category="paragraph">コンソール設定を変更する前に、コンソール エージェントを作成する必要があります。<block ref="5464fa3cf6630a16780c24b91f4e9a76" category="inline-link-macro-rx"></block> 。</block>
+  <block id="20257cdf81419bff017c7b16260ebb25" category="paragraph">コンソールエージェントの既存の透過プロキシサーバーを更新するには、<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>コマンドを使用して透過プロキシサーバーを削除するか、<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>指示。詳細については、次のドキュメントを参照してください。<block ref="9370e1eb4855e9767e8414447e836404" category="inline-link-macro-rx"></block> 。</block>
+  <block id="7e7a15f5baa7bdfc36453fafb5dc4deb" category="list-text"><block ref="7e7a15f5baa7bdfc36453fafb5dc4deb" category="inline-link-macro-rx"></block></block>
+  <block id="d612e8a0318223d9dd349c48eb63e0fc" category="list-text"><block ref="a6db5244ec8666b2e12c38c770923c31" category="inline-link-macro-rx"></block> 。</block>
+  <block id="52b5b2b5dbfa5254101b42416d1a8773" category="paragraph"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block> 。</block>
+  <block id="5f551ddf859b1d7525a5d87169b1c520" category="list-text">あなたは<block ref="d16111ab8ba33a1610fbb17fe340b992" category="inline-link-macro-rx"></block>。</block>
+  <block id="6b02626fac3ccb06150290f9d284c115" category="list-text">コンソールからコンソール エージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。コンソールエージェントを作成した後、CPU や RAM が少ない小さな EC2 インスタンスに切り替えないでください。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="7f7be9819517a18b53d1f2709c7bd3cd" category="paragraph">AWS Marketplace からコンソールエージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="8c14986031b117b1d7341aff8d3a3b3f" category="list-text">コンソールからコンソール エージェントを作成すると、既定の構成を使用して Azure に仮想マシンがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="8eef864079a40c4447df38dbce0d23d6" category="paragraph">Azure Marketplace からコンソール エージェントを作成すると、既定の構成で仮想マシンが設定されます。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d1f00850b9389d111947a36ca0d9068b" category="paragraph">コンソール エージェントを作成すると、デフォルト構成を使用して Google Cloud に仮想マシン インスタンスがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="59f043795dea8adedffde70f225f6c29" category="list-text">あなたは<block ref="d16111ab8ba33a1610fbb17fe340b992" category="inline-link-macro-rx"></block>。</block>
+  <block id="c3c58c9797adc5c532aba5f3dd5a1887" category="paragraph">コンソール エージェントを作成すると、デフォルト構成で Google Cloud に VM インスタンスがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
+  <block id="b1b07a21d749d47b74e5826a57b17eaf" category="admonition">既存のエージェントがいる場合は、次の点に注意してください。<block ref="8d716f5c1f2e0c5f076bb39a15dd1a47" category="inline-link-macro-rx"></block> 。</block>
+  <block id="4203742da4cdc7c1dd82452f22078923" category="paragraph"><block ref="6644ee05b73ff616838ce63980e80332" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d9ae58af06fdcaab9da3f43fe827c682" category="paragraph"><block ref="b4ea7ed3eae261783526e5f0a6706763" category="inline-link-macro-rx"></block> 。</block>
+  <block id="e6021c3af6909757e25569099fa4e00a" category="paragraph"><block ref="e6021c3af6909757e25569099fa4e00a" category="inline-link-macro-rx"></block></block>
+  <block id="73766a81edee1e1df062cc59ac68494e" category="paragraph">制限モードは通常、AWS GovCloud および Azure Government リージョンでの展開を含む、州政府や地方自治体、規制対象企業によって使用されます。始める前に、以下の点を理解しておいてください。<block ref="4beb4752043a55296423922b143dd023" category="inline-link-macro-rx"></block>そして<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>。</block>
+  <block id="f17ca32b513f955e12b0e36662eed21b" category="paragraph">標準モードでは、 NetAppの Software-as-a-service (SaaS) 製品としてホストされている Web ベースのコンソールにアクセスします。始める前に、以下の点を理解しておいてください<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>そして<block ref="4beb4752043a55296423922b143dd023" category="inline-link-macro-rx"></block>。</block>
+  <block id="6e4c4444e6f5b58ee31bcd6f7fcef10d" category="paragraph">この時点で、ログインしてストレージの管理や、 Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Filesなどのサービスの使用を開始できます。<block ref="d15147d8429817c45cc619fa49c43b04" category="inline-link-macro-rx"></block> 。</block>
+  <block id="098431f8f7d03f0246ab27988862dd14" category="list-text"><block ref="098431f8f7d03f0246ab27988862dd14" category="inline-link-macro-rx"></block></block>
+  <block id="bac5c4edb29e43518e1f2b0b721fb1d5" category="list-text"><block ref="bac5c4edb29e43518e1f2b0b721fb1d5" category="inline-link-macro-rx"></block></block>
+  <block id="fb418088b41b8e87851b52debc27d47c" category="list-text"><block ref="fb418088b41b8e87851b52debc27d47c" category="inline-link-macro-rx"></block></block>
+  <block id="c33d6b870a4603154aa9aca1e2bdc138" category="sidebar">エージェントのアップグレードを管理する</block>
 </blocks>

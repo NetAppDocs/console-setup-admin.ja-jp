@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-aws-marketplace.html 
+permalink: task-install-agent-aws-marketplace.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
 summary: AWS Marketplace からコンソールエージェントを作成するには、ネットワークを設定し、AWS のアクセス許可を準備し、インスタンスの要件を確認してから、コンソールエージェントを作成する必要があります。 
 ---
@@ -17,7 +17,7 @@ summary: AWS Marketplace からコンソールエージェントを作成する�
 AWS Marketplace から直接 AWS にコンソールエージェントを作成します。  AWS Marketplace からコンソールエージェントを作成するには、ネットワークを設定し、AWS のアクセス許可を準備し、インスタンスの要件を確認してから、コンソールエージェントを作成する必要があります。
 
 .開始する前に
-* あなたはlink:concept-connectors.html["コンソールエージェントの理解"]。
+* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 
@@ -194,7 +194,7 @@ AWS EC2インスタンスタイプ:: 上記の CPU および RAM の要件を満
 AWS Marketplace から直接コンソールエージェントを作成します。
 
 .タスク概要
-AWS Marketplace からコンソールエージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。link:reference-connector-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
+AWS Marketplace からコンソールエージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。link:reference-agent-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
 
 .開始する前に
 次のものが必要です:

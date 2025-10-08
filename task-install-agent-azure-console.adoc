@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-azure-bluexp.html 
+permalink: task-install-agent-azure-console.html 
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector 
 summary: NetAppコンソールから Azure にコンソール エージェントを作成するには、ネットワークを設定し、Azure 権限を準備してから、コンソール エージェントを作成する必要があります。 
 ---
@@ -17,7 +17,7 @@ summary: NetAppコンソールから Azure にコンソール エージェント
 NetAppコンソールから Azure にコンソール エージェントを作成するには、ネットワークを設定し、Azure 権限を準備してから、コンソール エージェントを作成する必要があります。
 
 .開始する前に
-* あなたはlink:concept-connectors.html["コンソールエージェントの理解"]。
+* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 
@@ -429,7 +429,7 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 NetAppコンソールから直接コンソール エージェントを作成します。
 
 .タスク概要
-* コンソールからコンソール エージェントを作成すると、既定の構成を使用して Azure に仮想マシンがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。link:reference-connector-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
+* コンソールからコンソール エージェントを作成すると、既定の構成を使用して Azure に仮想マシンがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。link:reference-agent-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
 * コンソールはコンソール エージェントを展開するときに、カスタム ロールを作成し、それをコンソール エージェント VM に割り当てます。このロールには、コンソール エージェントが Azure リソースを管理できるようにする権限が含まれています。後続のリリースで新しい権限が追加されるので、ロールが最新の状態に保たれていることを確認する必要があります。link:reference-permissions-azure.html["コンソールエージェントのカスタムロールの詳細"] 。
 
 

@@ -20,7 +20,7 @@ NetAppコンソールが AWS 認証情報を使用してユーザーに代わっ
 
 == 初期AWS認証情報
 
-コンソールからコンソールエージェントをデプロイする場合は、IAM ロールの ARN または IAM ユーザーのアクセスキーを指定する必要があります。認証方法には、AWS にコンソールをデプロイするための権限が必要です。必要な権限は、link:task-install-connector-aws-the Console.html#console-permissions-aws[AWS のエージェント展開ポリシー]に記載されています。
+コンソールからコンソールエージェントをデプロイする場合は、IAM ロールの ARN または IAM ユーザーのアクセスキーを指定する必要があります。認証方法には、AWS にコンソールをデプロイするための権限が必要です。必要な権限は、link:task-install-agent-aws-the Console.html#console-permissions-aws[AWS のエージェント展開ポリシー]に記載されています。
 
 コンソールが AWS でコンソールエージェントインスタンスを起動すると、インスタンスの IAM ロールとインスタンスプロファイルが作成されます。また、コンソールエージェントにその AWS アカウント内のリソースとプロセスを管理するための権限を付与するポリシーも添付します。link:reference-permissions-aws.html["コンソールが権限をどのように使用するかを確認します"] 。
 
@@ -141,8 +141,8 @@ Marketplace を使用する場合も、同様の方法で権限が提供され�
 
 * 標準モード
 +
-** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["AWS Marketplace デプロイメントの権限を設定する"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
+** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["AWS Marketplace デプロイメントの権限を設定する"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
 
 
 * 制限モード

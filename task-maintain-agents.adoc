@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-maintain-connectors.html 
+permalink: task-maintain-agents.html 
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health 
 summary: エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、会社の標準的なオペレーティング システムの配布手順に従って、コンソール エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。 
 ---
@@ -17,7 +17,7 @@ summary: エージェント ホスト上のオペレーティング システム
 コンソール エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、お客様は、会社の標準的なオペレーティング システム配布手順に従って、エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。
 
 
-TIP: 既存のエージェントがいる場合は、次の点に注意してください。link:reference-connector-operating-system-changes.html["サポートされている Linux オペレーティングシステムの変更"] 。
+TIP: 既存のエージェントがいる場合は、次の点に注意してください。link:reference-agent-operating-system-changes.html["サポートされている Linux オペレーティングシステムの変更"] 。
 
 
 
@@ -37,7 +37,7 @@ CPU:: 8コアまたは8vCPU
 RAM:: 32 GB
 
 
-link:reference-connector-default-config.html["エージェントのデフォルト設定について学ぶ"] 。
+link:reference-agent-default-config.html["エージェントのデフォルト設定について学ぶ"] 。
 
 
 
@@ -71,7 +71,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations
 
 必要に応じて、クラウド プロバイダーのコンソールまたは標準のオンプレミス手順を使用して、エージェント VM を停止および起動します。
 
-link:concept-connectors.html#connectors-must-be-operational-at-all-times["コンソールエージェントは常に動作している必要があることに注意してください"] 。
+link:concept-agents.html#agents-must-be-operational-at-all-times["コンソールエージェントは常に動作している必要があることに注意してください"] 。
 
 
 

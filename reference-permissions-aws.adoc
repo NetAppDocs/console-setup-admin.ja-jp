@@ -30,8 +30,8 @@ NetAppコンソールが AWS でコンソール エージェント インスタ�
 * 必要に応じて、IAMを使用してIAMポリシーを制限することができます。 `Condition`要素。 https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["AWS ドキュメント: 条件要素"^]
 * これらのポリシーの使用方法の詳細な手順については、次のページを参照してください。
 +
-** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["AWS Marketplace デプロイメントの権限を設定する"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
+** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["AWS Marketplace デプロイメントの権限を設定する"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["オンプレミス展開の権限を設定する"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["制限モードの権限を設定する"]
 
 

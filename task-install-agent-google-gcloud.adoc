@@ -17,7 +17,7 @@ summary: Google Cloud を使用して Google Cloud にコンソール エージ�
 Google Cloud を使用して Google Cloud にコンソール エージェントを作成するには、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。
 
 .開始する前に
-* あなたはlink:concept-connectors.html["コンソールエージェントの理解"]。
+* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 
@@ -313,7 +313,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 
 | エージェントを展開するためのGoogleアカウント | カスタム | 奉仕プロジェクト  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["エージェント展開ポリシー"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["エージェント展開ポリシー"]
  a| 
 compute.networkUser
 | サービスプロジェクトにエージェントをデプロイする 
@@ -378,7 +378,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 Google Cloud を使用してコンソール エージェントを作成します。
 
-コンソール エージェントを作成すると、デフォルト構成で Google Cloud に VM インスタンスがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。link:reference-connector-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
+コンソール エージェントを作成すると、デフォルト構成で Google Cloud に VM インスタンスがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。link:reference-agent-default-config.html["コンソールエージェントのデフォルト構成について学習します"] 。
 
 .開始する前に
 次のものが必要です:

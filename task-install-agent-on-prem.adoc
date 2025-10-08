@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-on-prem.html 
+permalink: task-install-agent-on-prem.html 
 keywords: install connector, on prem connector installation, on prem connector, install connector on prem, manual install 
 summary: オンプレミスにコンソール エージェントをインストールし、ログインして、コンソール組織で動作するように設定します。 
 ---
@@ -712,7 +712,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 
 
 
-NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちらlink:reference-connector-maint-console.html["エージェントメンテナンスコンソール"]。
+NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちらlink:reference-agent-maint-console.html["エージェントメンテナンスコンソール"]。
 
 .タスク概要
 NetAppサポート サイトで入手できるインストーラーは、以前のバージョンである可能性があります。インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。

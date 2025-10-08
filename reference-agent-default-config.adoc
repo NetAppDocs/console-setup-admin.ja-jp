@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: reference-connector-default-config.html 
+permalink: reference-agent-default-config.html 
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
 summary: コンソール エージェントを展開する前に、コンソール エージェントの詳細を確認してください。 
 ---
@@ -34,7 +34,7 @@ summary: コンソール エージェントを展開する前に、コンソー�
 オペレーティング システムには GUI が含まれていません。システムにアクセスするには端末を使用する必要があります。
 
 * インストールには、必要なコンテナ オーケストレーション ツールである Docker Engine が含まれます。
-* EC2 Linux インスタンスのユーザー名は ubuntu です (2023 年 5 月より前に作成されたエージェントの場合、ユーザー名は ec2-user でした)。
+* EC2 Linux インスタンスのユーザー名は ubuntu です (2023 年 5 月より前に作成されたエージェントの場合、ユーザー名は ec2-user です)。
 * デフォルトのシステム ディスクは 100 GiB gp2 ディスクです。
 
 

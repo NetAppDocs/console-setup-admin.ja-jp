@@ -69,7 +69,7 @@ image:screenshot-iam-switch-projects-select.png["新しいプロジェクトを�
 
 
 .関連情報
-link:task-iam-associate-connectors.html["エージェントをフォルダとプロジェクトに関連付ける"] 。
+link:task-iam-associate-agents.html["エージェントをフォルダとプロジェクトに関連付ける"] 。
 
 
 

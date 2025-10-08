@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-upgrade-connector.html 
+permalink: task-upgrade-agent.html 
 keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
 summary: 標準モードまたは制限モードを使用する場合、コンソール エージェントがソフトウェア更新を取得するためのアウトバウンド インターネット アクセスを持っている限り、 NetAppコンソールはコンソール エージェントを最新リリースに自動的にアップグレードします。 
 ---
