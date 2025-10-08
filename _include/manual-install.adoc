@@ -43,7 +43,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 <version> は、ダウンロードしたコンソール エージェントのバージョンです。
 
-. Government Cloud 環境にインストールする場合は、構成チェックを無効にします。link:task-troubleshoot-connector.html#disable-config-check["手動インストールの構成チェックを無効にする方法を説明します。"]
+. Government Cloud 環境にインストールする場合は、構成チェックを無効にします。link:task-troubleshoot-agent.html#disable-config-check["手動インストールの構成チェックを無効にする方法を説明します。"]
 . インストール スクリプトを実行します。
 +
 [source, cli]
@@ -131,7 +131,7 @@ Esc:wq
 
 
 
-NOTE: インストールが失敗した場合は、インストール レポートとログを表示して問題の解決に役立てることができます。link:task-troubleshoot-connector.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
+NOTE: インストールが失敗した場合は、インストール レポートとログを表示して問題の解決に役立てることができます。link:task-troubleshoot-agent.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
 
 . コンソール エージェント仮想マシンに接続しているホストから Web ブラウザを開き、次の URL を入力します。
 +

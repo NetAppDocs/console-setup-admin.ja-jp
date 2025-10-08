@@ -344,7 +344,6 @@
   <block id="e9b5bbe1e4c19139761534abb688155a" category="list-text">スクリプトを実行するための権限を割り当てます。</block>
   <block id="096edbdd03f35ea016cfaab3b88a91ae" category="paragraph">&lt;version&gt; は、ダウンロードしたコンソール エージェントのバージョンです。</block>
   <block id="68ff18cb109d61d9e97d66c63cadf9e7" category="inline-link-macro">手動インストールの構成チェックを無効にする方法を説明します。</block>
-  <block id="8acaf9db7ba8cc88abac10f45ce89d6f" category="list-text">Government Cloud 環境にインストールする場合は、構成チェックを無効にします。<block ref="e24e26b3a5e2be9d4abc30199a402dae" category="inline-link-macro-rx"></block></block>
   <block id="325740f998865be7879e32048d406868" category="list-text">インストール スクリプトを実行します。</block>
   <block id="95df10d2ac630ff125b089e1f8e0e67f" category="paragraph">ネットワークでインターネット アクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。透過プロキシまたは明示プロキシのいずれかを追加できます。 --proxy および --cacert パラメータはオプションであり、追加するように要求されることはありません。プロキシ サーバーがある場合は、示されているようにパラメータを入力する必要があります。</block>
   <block id="5f4022bf0d27f22f4c44ac2e617ae12d" category="paragraph">CA 署名証明書を使用して明示的なプロキシ サーバーを構成する例を次に示します。</block>
@@ -371,7 +370,6 @@
   <block id="f5f31bd671c0968ba09c8eb577f95629" category="list-text">インストールが完了するまでお待ちください。</block>
   <block id="c326395610c1efc77fc99f199c08d4a2" category="paragraph">プロキシ サーバーを指定した場合、インストールの最後に、コンソール エージェント サービス (occm) が 2 回再起動します。</block>
   <block id="01a0d9e02c5f2599095642d2dd9a1f1b" category="inline-link-macro">インストールの問題をトラブルシューティングする方法を学びます。</block>
-  <block id="73e1f84e521a44157c904244430b1346" category="admonition">インストールが失敗した場合は、インストール レポートとログを表示して問題の解決に役立てることができます。<block ref="fc52137037dfd53208fe22fff987f36a" category="inline-link-macro-rx"></block></block>
   <block id="749d806ac6f7868946ca8f9cc91af192" category="list-text">コンソール エージェント仮想マシンに接続しているホストから Web ブラウザを開き、次の URL を入力します。</block>
   <block id="0594b17c3f6f94eb28b63eec7d7d3841" category="paragraph"><block ref="0594b17c3f6f94eb28b63eec7d7d3841" category="inline-link-rx"></block></block>
   <block id="3e6472e78749cf6f2531c943c33f71ea" category="list-text">ログイン後、コンソール エージェントを設定します。</block>
@@ -439,7 +437,6 @@
   <block id="dd911b1740a43ff59aad324bd3d90ae3" category="paragraph"><block ref="dd911b1740a43ff59aad324bd3d90ae3" category="inline-link-rx"></block></block>
   <block id="9c0e62a86b9fe558cad9c4d280ea439d" category="list-text">NTP を有効にする</block>
   <block id="62286fee1b0c285ac291bc232fe7f74f" category="inline-link">NetAppデータ分類の詳細</block>
-  <block id="f1ae8ff0a2356d9423833210592133cb" category="list-text">NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。<block ref="e224e5052fedfe25b39387d61b9face5" category="inline-link-rx"></block></block>
   <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy は、次のいずれかの形式を使用して、コンソール エージェントが HTTP または HTTPS プロキシ サーバーを使用するように構成します。</block>
   <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert は、コンソール エージェントとプロキシ サーバー間の HTTPS アクセスに使用する CA 署名付き証明書を指定します。このパラメータは、HTTPS プロキシ サーバー、インターセプト プロキシ サーバー、および透過プロキシ サーバーに必須です。</block>
   <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">透過プロキシ サーバーを構成する例を次に示します。透過プロキシを構成する場合、プロキシ サーバーを定義する必要はありません。コンソール エージェント ホストには、CA 署名付き証明書のみを追加します。</block>
@@ -1032,7 +1029,6 @@
   <block id="1f07edf6ae5cccdb5dacb637fe693758" category="paragraph">NetAppコンソールからコンソール エージェントを展開するときに、エージェント構成を検証するオプションが追加されました。コンソールがエージェントの展開に失敗した場合、トラブルシューティングに役立つダウンロード可能なレポートが提供されます。</block>
   <block id="4303212e6f242fe0a301876fa89b9f0b" category="section-title">コンソールエージェントのトラブルシューティングの改善</block>
   <block id="b9b61d414c60733fb8a9d314eec6960a" category="inline-link-macro">コンソール エージェントのトラブルシューティング方法を学習します。</block>
-  <block id="79ab7cf55c7d04c02a94981a9a1b7b29" category="paragraph">コンソール エージェントでは、問題をよりよく理解するのに役立つエラー メッセージが改善されました。<block ref="32afeb8eb0f9a2e606975b6efca2856e" category="inline-link-macro-rx"></block></block>
   <block id="8fa7eaeb8daf07d8832ec17187b7b40c" category="paragraph">NetAppコンソール管理には、次の新機能が含まれています。</block>
   <block id="bbd516543defb57b86168970a68bacbc" category="section-title">ホームページダッシュボード</block>
   <block id="7b8cf2fedf3cca7ede322904788b0cae" category="inline-link-macro">ホーム ページの詳細をご覧ください。</block>
@@ -1902,7 +1898,6 @@
   <block id="504f5f6c5adc93609131b644e3f8c2a9" category="inline-link">FSx for ONTAPシステムを作成または検出する</block>
   <block id="c2a442cc7e270f03492b03623a59bddb" category="list-text"><block ref="c2a442cc7e270f03492b03623a59bddb" category="inline-link-rx"></block></block>
   <block id="8111d5a0f80f0b3c708f77dc1b05dc00" category="inline-link">Azure NetApp Filesシステムを作成する</block>
-  <block id="30ba58ed811e056e8ec725c80444b736" category="list-text"><block ref="30ba58ed811e056e8ec725c80444b736" category="inline-link-rx"></block></block>
   <block id="e4a9dd1c7d750241fad0d52a3bc7903b" category="inline-link">Eシリーズシステムの詳細</block>
   <block id="90a582acc370affa7fa401384859e582" category="list-text"><block ref="90a582acc370affa7fa401384859e582" category="inline-link-rx"></block></block>
   <block id="d85b01f001ee16ebd8eb1917c739d824" category="inline-link">StorageGRIDシステムの詳細</block>
@@ -3340,7 +3335,6 @@
   <block id="0ad1fc23b853416c03454d7493973064" category="paragraph">コンソール エージェントの問題をトラブルシューティングするための診断ツールにアクセスします。  NetAppサポートは、問題のトラブルシューティング時にこれを実行するように依頼する場合があります。</block>
   <block id="c11707912206d93c089b6bec8129f6a2" category="list-text">入力<block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block>サポートと診断メニューを表示します。</block>
   <block id="ea55290239a2ac8340463b02aec81aca" category="inline-link-macro">コンソールエージェントのステータスを確認する</block>
-  <block id="2cb97cca54bddb4910dbbcde33e9f63d" category="list-text">入力<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>診断ツールにアクセスし、画面上の指示に従います。 + たとえば、すべてのエージェント サービスが実行されていることを確認できます。<block ref="8aac32cf7b9059cbe4a7c91815a8e5dc" category="inline-link-macro-rx"></block> 。</block>
   <block id="e627757f3c8ea2c508610ccbcdd4117e" category="section-title">エージェント診断ツールにリモートでアクセスする</block>
   <block id="3b886268b0c6e5d6922ef5ea806e5987" category="paragraph">Putty などのツールを使用して、診断ツールにリモートでアクセスできます。ワンタイム パスワードを割り当てて、エージェント VM への SSH アクセスを有効にします。</block>
   <block id="e4b79049874503e851b45867e8c43928" category="paragraph">SSH アクセスにより、コピー アンド ペーストなどの高度なターミナル機能が有効になります。</block>
@@ -3398,24 +3392,11 @@
   <block id="6143580a5ae490efe32d3c566650ad6c" category="paragraph"><block ref="6143580a5ae490efe32d3c566650ad6c" category="inline-link-rx"></block></block>
   <block id="f5d22e387d3dd91dbc45f16de7949a06" category="list-text">*直接 API トラフィックのサポート*を選択します。</block>
   <block id="c569dd49f93a05d537d61130ed43e6e9" category="list-text">チェックボックスを選択してオプションを有効にし、[保存] を選択します。</block>
-  <block id="3a8eeebc89d9a465a5174d42af5cbc7d" category="summary">NetAppコンソールを初めて使用する場合は、コンソール アシスタントが初期セットアップ プロセスをガイドします。アシスタントを使用すると、 NetAppサポート サイト (NSS) アカウントの追加、コンソール エージェントの追加、クラスターの追加、ライセンスまたはサブスクリプションの追加が可能になり、データの管理を簡単に開始できるようになります。</block>
-  <block id="c01372c9f1b22e5c48b2dd2618b1db7c" category="doc">NetAppコンソールアシスタントの使用を開始する</block>
-  <block id="727605c2ca57a1773b7b1e5760e8faf8" category="paragraph">組織管理者ロールを持つNetAppコンソールを初めて使用する場合は、コンソール アシスタントを使用して初期セットアップ プロセスをガイドできます。アシスタントを使用すると、 NetAppサポート サイト (NSS) アカウントの追加、コンソール エージェントの追加、クラスターの追加、ライセンスまたはサブスクリプションの追加が可能になり、データの管理を簡単に開始できるようになります。</block>
-  <block id="2afde8ca8cdacfbe776c425bf18be8f7" category="section-title">コンソールアシスタントにアクセスするために必要な役割</block>
-  <block id="604fe5148b856c1f70c93b02dd3b4b78" category="paragraph">コンソール アシスタントは、組織管理者の役割を持つユーザーのみが利用できます。</block>
-  <block id="d1b5aa618777a6025bbb8af6da92da6b" category="section-title">コンソール アシスタントはいつ表示されますか?</block>
-  <block id="86900a8a60b76457f1e6fd5485663052" category="paragraph">必須のセットアップ タスクが完了するまで、コンソール アシスタントはNetAppコンソール ホーム ページで利用できます。</block>
-  <block id="4e0fdeb55bc3c4c71a155246b3205b66" category="paragraph">アシスタントを使用して、次のタスクを完了します。一部のタスクは必須です。</block>
   <block id="63cc3bd9a1d39c996544d35459a3e83f" category="list-text">NetAppサポート サイト (NSS) アカウントを追加します。</block>
   <block id="9a1d2c3a232f3692f2db1f53e2ff513f" category="list-text">コンソール エージェントを展開してストレージ エステートに接続します (必須の手順)。</block>
   <block id="2999351f71503eb3b6d48edab88260fd" category="list-text">クラスターを追加または検出してシステムを管理します (必須の手順)。</block>
   <block id="eda3fd992dc421b5ecf21b005442d1e7" category="list-text">マーケットプレイスのサブスクリプションまたは PAYGO ライセンスを追加します。</block>
   <block id="54b1f34b39c971ce20ffd13604bb074c" category="list-text">オープンデータサービスリンク。</block>
-  <block id="53a1c56d6735a06d49554eac3c4a0364" category="section-title">コンソールアシスタントを有効にする</block>
-  <block id="9d8eb7c3f2b1bc993fba688dd7d0efc3" category="paragraph">デフォルトでは、 NetAppコンソールは、組織管理者ロールを持つ初めてのユーザーのホームページにコンソール アシスタントを表示します。</block>
-  <block id="8199bfed29a77faf6ca37cbfb1b7282c" category="admonition">自分または他のユーザーが必須項目を完了した後にのみ、アシスタントを自分自身に対して終了することができます。必須項目を完了すると、アシスタントは組織内のすべてのユーザーに対して終了し、再び表示されなくなります。</block>
-  <block id="ae765b59bd40a71edf1620ddf4f66c9a" category="section-title">コンソールアシスタントを使用して開始します</block>
-  <block id="7147a3ddf08647a0d6fe4c8949af44f3" category="paragraph">コンソール アシスタントは、次のタスクを実行してNetAppコンソール環境のセットアップをガイドします。</block>
   <block id="0f2d8c8746eb76dda55a87c37bf8f14a" category="list-text">オンプレミスまたはクラウドにコンソール エージェントを展開して、ストレージ資産に接続します。手動で展開するか、OVA をダウンロードして展開できます。この手順は必須です。</block>
   <block id="c257e840ff1ccd2003959f24bf40a4d2" category="list-text">クラスターを追加または検出してシステムを管理します。この手順は必須です。</block>
   <block id="97f1d4158178271a52111e6b3daa25f3" category="list-text">NetAppデータ サービスの詳細をご覧ください。</block>
@@ -3431,7 +3412,6 @@
   <block id="d5306448683653381de91511b8c55e1b" category="list-text">* ONTAPアラート ペイン*: フォルダまたはプロジェクト管理者、運用サポート アナリスト、組織管理者、組織閲覧者、スーパー管理者、スーパー閲覧者</block>
   <block id="e151fa38e66e51bb09fbb6eb63083197" category="list-text">*ストレージパフォーマンス容量ペイン*: NetAppコンソールシステムページを表示する機能</block>
   <block id="3392f0d20666a779d503d1ecdd475ffc" category="list-text">*ライセンスとサブスクリプション ペイン*: フォルダーまたはプロジェクト管理者、組織管理者、組織閲覧者、スーパー管理者、スーパー閲覧者</block>
-  <block id="3d1b0e48553c19ac53cc05011e627824" category="list-text">*ランサムウェア耐性ペイン*: フォルダまたはプロジェクト管理者、組織管理者、ランサムウェア保護管理者、ランサムウェア保護閲覧者、スーパー管理者、スーパー閲覧者</block>
   <block id="36ca9cd27ee162c45eb4f0d11a5bedf1" category="list-text">*バックアップとリカバリ ペイン*: バックアップとリカバリ バックアップ管理者、バックアップとリカバリ スーパー管理者、バックアップとリカバリ バックアップ ビューアー、バックアップとリカバリ クローン管理者、フォルダーまたはプロジェクト管理者、組織管理者、バックアップとリカバリ リストア管理者、スーパー管理者、スーパー ビューアー</block>
   <block id="5bf7104590078e66848b59d3abfaf393" category="paragraph">ペインにアクセスする権限がない場合は、そのペインを使用する権限がないことを示すメッセージが表示されます。</block>
   <block id="dbbc09735940a2a21109b74dc600b92b" category="inline-link">NetAppコンソールのアクセス ロールについて学習します。</block>
@@ -3509,7 +3489,6 @@
   <block id="897c3b1ae39b50295a52dcaca00fa99d" category="paragraph">NetApp Ransomware Resilience データ サービスを使用して、ワークロードがランサムウェア攻撃のリスクにさらされているかどうか、または保護されているかどうかを確認します。保護されているデータの合計量を確認したり、推奨されるアクションの数を表示したり、ランサムウェア保護に関連するアラートの数を表示したりできます。</block>
   <block id="17565ce7eceda01f941c44247b052236" category="paragraph">データは 5 分ごとに更新され、 NetApp Ransomware Resilience Dashboard に表示されるデータと一致します。</block>
   <block id="e1303fde203d17c93a36144831175152" category="inline-link">NetAppのランサムウェア耐性について学ぶ</block>
-  <block id="25b9cfcade6c472ec4144237e67a7d62" category="paragraph"><block ref="8bcf9ea3fc2e64b26a0c91875a6419eb" category="inline-link-rx"></block> 。</block>
   <block id="c3ecd5a019581be952b7e478466f0cfc" category="list-text">NetAppコンソール メニューから、ランサムウェア耐性ペインを確認します。</block>
   <block id="8c3c718749afd86a59b68786f22641b6" category="list-text">ランサムウェア耐性ペインで次のいずれかを実行します。</block>
   <block id="7f176789d86d465c8df04184cd91e82b" category="inline-link">NetAppランサムウェア耐性ダッシュボードを使用してワークロードの健全性を監視する</block>
@@ -4161,7 +4140,6 @@
   <block id="310f705969896b4d59368edab71d1d87" category="list-text">*完了準備完了*ウィンドウで詳細を確認し、*完了*を選択します。</block>
   <block id="533cb358048cec10b9364d5d776a39b1" category="paragraph">vSphere タスク バーには、コンソール エージェントの展開の進行状況が表示されます。</block>
   <block id="54453e0b33b1c136b904d49d40e5584f" category="list-text">VMの電源をオンにします。</block>
-  <block id="bc6df5330a40a6601c383a672e7417ea" category="admonition">デプロイメントが失敗した場合は、エージェント ホストから検証レポートとログにアクセスできます。<block ref="fc52137037dfd53208fe22fff987f36a" category="inline-link-macro-rx"></block></block>
   <block id="9ef04a4b8a28bfcf784c72eeace644a2" category="section-title">NetAppコンソールにコンソールエージェントを登録する</block>
   <block id="24ec0b6e7c909c10633ec52c6523f771" category="section-title">コンソールにクラウドプロバイダーの資格情報を追加する</block>
   <block id="3812e8779179a58315ca409176c5ff21" category="summary">NetAppコンソールから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。</block>
@@ -4224,7 +4202,6 @@
   <block id="7d94cf454f2eac26ff84a8d1c8a89d1e" category="list-text">*セキュリティ グループ* ページで、新しいセキュリティ グループを作成するか、必要な受信ルールと送信ルールを許可する既存のセキュリティ グループを選択するかを選択します。</block>
   <block id="a60b1115783600a21eb41ae13935fdc8" category="paragraph">コンソールは約 10 分でインスタンスを準備します。プロセスが完了するまでこのページに留まります。</block>
   <block id="39dbd35a18bfa38cac810c0be826b561" category="paragraph">プロセスが完了すると、コンソール エージェントはコンソールから使用できるようになります。</block>
-  <block id="bb0f9ce335979002cd2400c1e9df1874" category="admonition">デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。<block ref="fc52137037dfd53208fe22fff987f36a" category="inline-link-macro-rx"></block></block>
   <block id="510a2d4afe6727bcdbafc74a103f9f16" category="inline-link">NetAppコンソールから S3 バケットを管理する方法を学びます</block>
   <block id="af2cca04ee665c389d737de3e58b6615" category="paragraph">コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。<block ref="b005331392e349a72b0688cce0d673cf" category="inline-link-rx"></block></block>
   <block id="3b46ada3c2c8fc9685f33a61ccf996e6" category="summary">AWS で実行されている Linux ホストにコンソールエージェントを手動でインストールできます。独自の Linux ホストにコンソールエージェントを手動でインストールするには、ホスト要件を確認し、ネットワークを設定し、AWS 権限を準備し、コンソールエージェントをインストールして、準備した権限を付与する必要があります。</block>
@@ -4270,7 +4247,6 @@
   <block id="dfcbfa4ce7dbf520f2b737359dfbc591" category="list-text">IAM ユーザーが AWS Marketplace にサブスクライブしたり、サブスクライブ解除したりするための権限。</block>
   <block id="64f210f4d96dcba2f41cec7b537055f7" category="list-text">インスタンスの CPU および RAM 要件を理解すること。</block>
   <block id="e61d51539df3e3e85f74cb25bd105084" category="paragraph">AWS は指定された設定でコンソールエージェントを起動し、コンソールエージェントは約 10 分で実行されます。</block>
-  <block id="ff6f43944fe68f6f9466637ceff3f37e" category="admonition">インストールが失敗した場合は、トラブルシューティングに役立つログとレポートを表示できます。<block ref="fc52137037dfd53208fe22fff987f36a" category="inline-link-macro-rx"></block></block>
   <block id="e8cd161bebb938efc7055b8fa73c88c0" category="list-text">コンソール エージェント仮想マシンに接続しているホストとコンソール エージェントの URL から Web ブラウザーを開きます。</block>
   <block id="4f5fd09b0fecd121d7890d5fcdd126ea" category="inline-link-macro">NetAppコンソールを制限モードで使い始めるための手順</block>
   <block id="797bbe628ec1fb17e30cf7efe960c970" category="paragraph">コンソールを標準モードで使用するには、制限モードを無効にしておきます。安全な環境があり、このアカウントをコンソールのバックエンド サービスから切断する場合にのみ、制限モードを有効にする必要があります。もしそうなら、<block ref="a92127338ae53d774985c3d6a7c5b7c1" category="inline-link-macro-rx"></block> 。</block>
@@ -4503,7 +4479,6 @@
   <block id="92fa0fc1299e55c066d0a19cd22b4e7b" category="list-text">*ID*: *管理* の下で、*システム割り当てマネージド ID を有効にする* を選択します。</block>
   <block id="b99469b29b000bd070b5f230caa3b887" category="paragraph">Azure は指定された設定で仮想マシンをデプロイします。仮想マシンとコンソール エージェント ソフトウェアは約 5 分以内に実行されるはずです。</block>
   <block id="8f40f6b9cda905fc9a83217435e6b940" category="open-title">手動インストール</block>
-  <block id="8d99df925d96aff04328145571f87339" category="list-text">インストール中に送信接続を検証する構成チェックを無効にする必要があります。このチェックが無効になっていない場合、手動インストールは失敗します。<block ref="78a0b28d10c9034d7e8ac8b7c62d236d" category="inline-link-macro-rx"></block></block>
   <block id="2866ea542642e0051f06f0462f4f5e80" category="list-text">オペレーティング システムに応じて、コンソール エージェントをインストールする前に Podman または Docker Engine のいずれかが必要です。</block>
   <block id="4a5aa670ff7341f391971ddd6994ac6d" category="paragraph">コンソール エージェントがインストールされました。プロキシ サーバーを指定した場合、インストールの最後に、コンソール エージェント サービス (occm) が 2 回再起動します。</block>
   <block id="dff3d2b179cc5b62a2e772cc8404f515" category="section-title">ステップ2: NetAppコンソールをセットアップする</block>
@@ -4937,7 +4912,6 @@
   <block id="463607e512069b418940a921afdec8b0" category="paragraph">制限モードは通常、AWS GovCloud および Azure Government リージョンでの展開を含む、州政府や地方自治体、規制対象企業によって使用されます。始める前に、以下の点を理解しておいてください。<block ref="f3ace5a930cbd0beeeadc55a7b354ad6" category="inline-link-macro-rx"></block>そして<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>。</block>
   <block id="27677c533249219197c5933410713055" category="inline-link-macro">展開の準備</block>
   <block id="1308ae14263d9629eb12e11bd10db155" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="f826f61970c0735d0b0624264426b512" category="inline-link-macro-rx"></block></block>
-  <block id="97b64edf91ee5b23d7be166b37661a91" category="paragraph"><block ref="97b64edf91ee5b23d7be166b37661a91" category="inline-link-rx"></block></block>
   <block id="eb762959fcc0cce31949abce6f8eb1c1" category="list-text">CPU、RAM、ディスク容量、コンテナ オーケストレーション ツールなどの要件を満たす専用の Linux ホストを準備します。</block>
   <block id="b6ff2c8bfe1c4f67a13521ec6fe0231d" category="list-text">ターゲット ネットワークへのアクセス、手動インストール用のアウトバウンド インターネット アクセス、および日常的なアクセス用のアウトバウンド インターネットを提供するネットワークをセットアップします。</block>
   <block id="a890d698a19e93638bdfa0906dc8d80a" category="list-text">クラウド プロバイダーで権限を設定し、展開後にそれらの権限をコンソール エージェント インスタンスに関連付けることができるようにします。</block>
@@ -5457,7 +5431,6 @@
   <block id="482723983a4f2af954e36ff41e567451" category="sidebar">既知の制限事項</block>
   <block id="e4c53684ddd66ee4898db459d57514e8" category="sidebar">基本を学ぶ</block>
   <block id="bcb004c01b250a259c11d3d9406d9f6f" category="sidebar">NetAppアシスタントを使い始める</block>
-  <block id="89600e20a8904656a9df99bbfa311f3a" category="sidebar">NetAppアシスタントを使用する</block>
   <block id="65ce4dce26160be29539699c6623e379" category="sidebar">開始ワークフロー</block>
   <block id="1434a6bb482886cf18491c3161371a87" category="sidebar">NetAppコンソールにサインアップ</block>
   <block id="f3aee30a3a487c746572616e3f53dc9d" category="sidebar">コンソールエージェントを作成する</block>
@@ -5522,7 +5495,6 @@
   <block id="56ed5396ea479b4ed31e75f97a4377c7" category="paragraph">NetAppコンソールは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetAppデータ サービスの集中管理を提供し、リアルタイムの分析情報、より高速なワークフロー、安全性とコンプライアンスが確保された簡素化された管理を実現します。</block>
   <block id="e4374974e911590511a1add55932606e" category="paragraph">*ストレージ* メニューには、 ONTAPシステムのアラートを表示するための *アラート* と、未使用または十分に活用されていないリソースを識別するための *ライフサイクル プランニング* (旧 *経済効率*) が含まれています。</block>
   <block id="b3289075ae80ce2a2ae0b68cf8c95606" category="paragraph">NetApp はKeystone を*ストレージ* メニューに移動しました。ここで、 NetApp Keystoneサブスクリプションを管理し、使用状況を表示できます。</block>
-  <block id="e54f451349319459dd1f9900aebfc23e" category="paragraph">| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新するか、 NetAppコンソールに新しいNSS資格情報を追加します。</block>
   <block id="8963387394e2ee3e2a5a9ba160566a58" category="cell">\https://support.netapp.com</block>
   <block id="451228b79a76a54f6c3a4a5d5af0ec52" category="paragraph">このサービスは、 NetApp Backup and Recovery に固有の次のロールを使用します。</block>
   <block id="8522e2f14782589c21835c86cf65bebb" category="list-text">*バックアップおよびリカバリのスーパー管理者*: NetAppバックアップおよびリカバリであらゆるアクションを実行します。</block>
@@ -5568,4 +5540,33 @@
   <block id="1dcb606a3a707c345cb54b5c3113d621" category="cell">実行フックテンプレートを削除する</block>
   <block id="386bacb41d61c7b8e46cd3e9198743cd" category="cell">ワークロードの概要と分析ダッシュボードを表示する</block>
   <block id="8bbffbb59e50612d870c42d2db4880dc" category="cell">StorageGRIDバケットとストレージターゲットを表示する</block>
+  <block id="c969e31f72edfcf168ffdd268986844a" category="paragraph">| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新するか、 NetAppコンソールに新しいNSS資格情報を追加します。| \https:\\support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。</block>
+  <block id="067f3ef114756cdabe76467602ca9b2e" category="list-text">Government Cloud 環境にインストールする場合は、構成チェックを無効にします。<block ref="9b8bf974e42c4282e3da7fa6c59f1dce" category="inline-link-macro-rx"></block></block>
+  <block id="42c16a43066627b293306439eb1732f6" category="admonition">インストールが失敗した場合は、インストール レポートとログを表示して問題の解決に役立てることができます。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="c2fc633e22b03955b13beee2049ac471" category="list-text">NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。<block ref="95ad16386ae4ac759ff3f180dcafce84" category="inline-link-rx"></block></block>
+  <block id="12ad8fdc380a2754e74763c6ec3dd093" category="paragraph">コンソール エージェントでは、問題をよりよく理解するのに役立つエラー メッセージが改善されました。<block ref="af6db24ea837f8b9ee9738ec7c58a997" category="inline-link-macro-rx"></block></block>
+  <block id="ee2dcfcc83687ed3d92f8b7d687f1f05" category="list-text"><block ref="ee2dcfcc83687ed3d92f8b7d687f1f05" category="inline-link-rx"></block></block>
+  <block id="c9c92f70006bb92009b6cd8f9b6b80f7" category="cell">\https:\\support.netapp.com</block>
+  <block id="f092dc53062418401abf8d7b17161fcb" category="cell">ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。</block>
+  <block id="02220399c28525a1c857a5784cf96eca" category="list-text">入力<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>診断ツールにアクセスし、画面上の指示に従います。+ たとえば、すべてのエージェント サービスが実行されていることを確認できます。<block ref="50f10aae18a0502372770b812f684d46" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d03af09bc0729475142a25d2101f89cb" category="summary">NetAppコンソールを初めて使用する場合は、コンソール アシスタントが初期セットアップ プロセスを案内します。アシスタントを使用すると、 NetAppサポート サイト (NSS) アカウントの追加、コンソール エージェントの追加、クラスターの追加、ライセンスまたはサブスクリプションの追加が可能になり、データの管理を簡単に開始できるようになります。</block>
+  <block id="d87d84551cb844b0885926102e010a21" category="doc">NetAppコンソールアシスタントの使用を開始する</block>
+  <block id="353de4ac300e65b2fec1e023d43775e8" category="paragraph">組織管理者ロールを持つNetAppコンソールを初めて使用する場合は、コンソール アシスタントを使用して初期セットアップ プロセスをガイドできます。アシスタントを使用すると、 NetAppサポート サイト (NSS) アカウントの追加、コンソール エージェントの追加、クラスターの追加、ライセンスまたはサブスクリプションの追加が可能になり、データの管理を簡単に開始できるようになります。</block>
+  <block id="8cef8f584fd9250404884341b9d1faf9" category="section-title">コンソールアシスタントにアクセスするために必要な役割</block>
+  <block id="62e7589e6fbf937c65e401243a7b18fc" category="paragraph">コンソール アシスタントは、組織管理者の役割を持つユーザーのみが利用できます。</block>
+  <block id="3f8d156ec79d1ba58a6edcc11b513c8f" category="section-title">コンソール アシスタントはいつ表示されますか?</block>
+  <block id="b849ed2934d21e42ae7ade5deab5eb71" category="paragraph">必須のセットアップ タスクが完了するまで、コンソール アシスタントはNetAppコンソール ホーム ページで利用できます。</block>
+  <block id="66e107092fbbaa7674c253527698105d" category="paragraph">アシスタントを使用して、次のタスクを完了します。一部のタスクは必須です。</block>
+  <block id="e2109b57fa6348f346526f55a48f78ba" category="section-title">コンソールアシスタントを有効にする</block>
+  <block id="1d4f06583c930c65d01139af412243e9" category="paragraph">デフォルトでは、 NetAppコンソールは、組織管理者ロールを持つ初めてのユーザーのホーム ページにコンソール アシスタントを表示します。</block>
+  <block id="0261c21f37275db55da37598552a89dc" category="admonition">自分または他の誰かが必須項目を完了した後にのみ、アシスタントを解任することができます。必須項目を完了すると、アシスタントは組織内のすべてのユーザーに対して終了し、再び表示されなくなります。</block>
+  <block id="beb8b9e8503d0cddbe7c900d24ead8cd" category="section-title">コンソールアシスタントを使用して開始します</block>
+  <block id="67cd761b7682bdb0c49c488e0f4f66f5" category="paragraph">コンソール アシスタントは、次のタスクを実行してNetAppコンソール環境のセットアップをガイドします。</block>
+  <block id="7a6b8361cf669546010faac41df80823" category="list-text">*ランサムウェア耐性ペイン*: フォルダまたはプロジェクト管理者、組織管理者、ランサムウェア耐性管理者、ランサムウェア耐性閲覧者、スーパー管理者、スーパー閲覧者</block>
+  <block id="b0222afe7e5fe02f5ecf6f18206c0756" category="paragraph"><block ref="a8fcff039851ffc5bb3edfa9a8cce2e8" category="inline-link-rx"></block> 。</block>
+  <block id="54a3b32628f9142d15de42359d5a4ab9" category="admonition">デプロイメントが失敗した場合は、エージェント ホストから検証レポートとログにアクセスできます。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="1cc84d19a969a49be773baf953e6565c" category="admonition">デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="61ee3fc74079e98a59bc55949818a0a9" category="admonition">インストールが失敗した場合は、トラブルシューティングに役立つログとレポートを表示できます。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="d06ce875f1b2887cbc5d87b38e0d0d44" category="list-text">インストール中に送信接続を検証する構成チェックを無効にする必要があります。このチェックが無効になっていない場合、手動インストールは失敗します。<block ref="90428b1442632a8a73b6f9660fa083c4" category="inline-link-macro-rx"></block></block>
+  <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="sidebar">NetAppコンソールアシスタントを使用する</block>
 </blocks>

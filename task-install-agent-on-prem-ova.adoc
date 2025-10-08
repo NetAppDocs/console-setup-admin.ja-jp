@@ -127,6 +127,13 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。
+
+
+
+ a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
 NetAppコンソール内で機能とサービスを提供します。
@@ -195,6 +202,13 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
 
 
  a| 
+\https:\\support.netapp.com
+ a| 
+ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。
+
+
+
+ a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
 NetAppコンソール内で機能とサービスを提供します。
@@ -241,7 +255,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
 
 
 
@@ -516,7 +530,7 @@ vSphere タスク バーには、コンソール エージェントの展開の�
 
 
 
-NOTE: デプロイメントが失敗した場合は、エージェント ホストから検証レポートとログにアクセスできます。link:task-troubleshoot-connector.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
+NOTE: デプロイメントが失敗した場合は、エージェント ホストから検証レポートとログにアクセスできます。link:task-troubleshoot-agent.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
 
 
 

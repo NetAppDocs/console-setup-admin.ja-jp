@@ -174,7 +174,7 @@ NetAppコンソールからコンソール エージェントを展開すると�
 
 === コンソールエージェントのトラブルシューティングの改善
 
-コンソール エージェントでは、問題をよりよく理解するのに役立つエラー メッセージが改善されました。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-connector.html["コンソール エージェントのトラブルシューティング方法を学習します。"]
+コンソール エージェントでは、問題をよりよく理解するのに役立つエラー メッセージが改善されました。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["コンソール エージェントのトラブルシューティング方法を学習します。"]
 
 
 

@@ -42,7 +42,7 @@
 
 | Google Cloud 内のリソースを管理します。
 
-| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新するか、 NetAppコンソールに新しいNSS資格情報を追加します。
+| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新するか、 NetAppコンソールに新しいNSS資格情報を追加します。| \https:\\support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。
 
 | \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetAppコンソール内で機能とサービスを提供するため。
 

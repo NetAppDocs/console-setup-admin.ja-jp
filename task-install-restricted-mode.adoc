@@ -221,7 +221,7 @@ NetAppコンソールをセットアップします。
 
 NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちらlink:reference-connector-maint-console.html["エージェントメンテナンスコンソール"]。
 
-* インストール中に送信接続を検証する構成チェックを無効にする必要があります。このチェックが無効になっていない場合、手動インストールは失敗します。link:task-troubleshoot-connector.html["手動インストールの構成チェックを無効にする方法を説明します。"]
+* インストール中に送信接続を検証する構成チェックを無効にする必要があります。このチェックが無効になっていない場合、手動インストールは失敗します。link:task-troubleshoot-agent.html["手動インストールの構成チェックを無効にする方法を説明します。"]
 * オペレーティング システムに応じて、コンソール エージェントをインストールする前に Podman または Docker Engine のいずれかが必要です。
 
 
@@ -252,7 +252,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 <version> は、ダウンロードしたコンソール エージェントのバージョンです。
 
-. Government Cloud 環境にインストールする場合は、構成チェックを無効にします。link:task-troubleshoot-connector.html#disable-config-check["手動インストールの構成チェックを無効にする方法を説明します。"]
+. Government Cloud 環境にインストールする場合は、構成チェックを無効にします。link:task-troubleshoot-agent.html#disable-config-check["手動インストールの構成チェックを無効にする方法を説明します。"]
 . インストール スクリプトを実行します。
 +
 [source, cli]

@@ -32,7 +32,7 @@ sidebar:
         url: "/concept-modes.html"
     - title: NetAppアシスタントを使い始める
       entries:
-      - title: NetAppアシスタントを使用する
+      - title: NetAppコンソールアシスタントを使用する
         url: "/task-console-assistant.html"
     - title: 標準モードを始める
       entries:
@@ -207,7 +207,7 @@ sidebar:
       - title: 複数のコンソールエージェントを操作する
         url: "/task-manage-multiple-connectors.html"
       - title: コンソールエージェントのトラブルシューティング
-        url: "/task-troubleshoot-connector.html"
+        url: "/task-troubleshoot-agent.html"
       - title: コンソールエージェントをアンインストールして削除する
         url: "/task-uninstall-connector.html"
       - title: デフォルト設定
