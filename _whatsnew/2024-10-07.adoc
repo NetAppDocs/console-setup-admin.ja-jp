@@ -45,7 +45,7 @@ BlueXPにログインすると、次の変更に気付くでしょう。
 
 
 .BlueXP IAM の API
-この変更により、 BlueXP IAM の新しい API が導入されますが、以前のテナンシー API との下位互換性があります。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["BlueXP IAMのAPIについて学ぶ"^]
+この変更により、 BlueXP IAM の新しい API が導入されますが、以前のテナンシー API との下位互換性があります。 https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["BlueXP IAMのAPIについて学ぶ"^]
 
 .サポートされている展開モード
 BlueXP を標準モードで使用する場合、 BlueXP IAM がサポートされます。  BlueXP を制限モードまたはプライベート モードで使用している場合は、引き続きBlueXP _アカウント_を使用してワークスペース、ユーザー、およびリソースを管理します。

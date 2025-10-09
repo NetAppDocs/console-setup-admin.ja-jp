@@ -185,8 +185,8 @@ image:screenshot_gcp_associate.gif["サブスクリプション割り当てペ�
 --
 ====
 .関連情報
-* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-capacity-licenses.html["Cloud Volumes ONTAPのBYOL容量ベースライセンスを管理する"^]
-* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["データサービスのBYOLライセンスを管理する"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-capacity-licenses.html["Cloud Volumes ONTAPのBYOL容量ベースライセンスを管理する"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["データサービスのBYOLライセンスを管理する"^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["AWS の認証情報とサブスクリプションを管理する"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Azure の資格情報とサブスクリプションを管理する"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Google Cloud の認証情報とサブスクリプションを管理する"]

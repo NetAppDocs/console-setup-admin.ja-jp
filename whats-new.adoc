@@ -288,10 +288,10 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 | コネクタ | 3.9.54、3.9.53 | に行く https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["BlueXPページの新着情報"^]バージョン 3.9.54 および 3.9.53 に含まれる変更を参照してください。 
 
 
-| バックアップとリカバリ | 2025年7月28日 | に行く https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2025 年 7 月のリリースに含まれる変更点を参照してください。 
+| バックアップとリカバリ | 2025年7月28日 | に行く https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2025 年 7 月のリリースに含まれる変更点を参照してください。 
 
 
-| 分類 | 2025年7月14日（バージョン1.45） | に行く https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationページの新機能"^]。 
+| 分類 | 2025年7月14日（バージョン1.45） | に行く https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationページの新機能"^]。 
 |===
 プライベート モードの詳細（アップグレード方法を含む）については、以下を参照してください。
 
@@ -463,10 +463,10 @@ BlueXPの認証情報ページからAmazon FSx for NetApp ONTAP の認証情報�
 | コネクタ | 3.9.52、3.9.51 | に行く https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["BlueXPコネクタページの新機能"]バージョン 3.9.52 および 3.9.50 に含まれる変更を参照してください。 
 
 
-| バックアップとリカバリ | 2025年5月12日 | に行く https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2025 年 5 月のリリースに含まれる変更点を参照してください。 
+| バックアップとリカバリ | 2025年5月12日 | に行く https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2025 年 5 月のリリースに含まれる変更点を参照してください。 
 
 
-| 分類 | 2025年5月12日（バージョン1.43） | に行く https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationページの新機能"^]1.38 から 1.371.41 リリースに含まれる変更を参照してください。 
+| 分類 | 2025年5月12日（バージョン1.43） | に行く https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationページの新機能"^]1.38 から 1.371.41 リリースに含まれる変更を参照してください。 
 |===
 プライベート モードの詳細（アップグレード方法を含む）については、以下を参照してください。
 
@@ -602,10 +602,10 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-r
 | コネクタ | 3.9.50、3.9.49 | に行く https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["BlueXPコネクタページの新機能"]バージョン 3.9.50 および 3.9.49 に含まれる変更を参照してください。 
 
 
-| バックアップとリカバリ | 2025年3月17日 | に行く https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2024 年 3 月のリリースに含まれる変更点を参照してください。 
+| バックアップとリカバリ | 2025年3月17日 | に行く https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2024 年 3 月のリリースに含まれる変更点を参照してください。 
 
 
-| 分類 | 2025年3月10日（バージョン1.41） | に行く https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationページの新機能"^]1.38 から 1.371.41 リリースに含まれる変更を参照してください。 
+| 分類 | 2025年3月10日（バージョン1.41） | に行く https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationページの新機能"^]1.38 から 1.371.41 リリースに含まれる変更を参照してください。 
 |===
 プライベート モードの詳細（アップグレード方法を含む）については、以下を参照してください。
 
@@ -693,10 +693,10 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.htm
 | コネクタ | 3.9.48 | に行く https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["BlueXPコネクタページの新機能"]バージョン 3.9.48 に含まれる変更を参照してください。 
 
 
-| バックアップとリカバリ | 2025年2月21日 | に行く https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2025 年 2 月のリリースに含まれる変更点を参照してください。 
+| バックアップとリカバリ | 2025年2月21日 | に行く https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2025 年 2 月のリリースに含まれる変更点を参照してください。 
 
 
-| 分類 | 2025年1月22日（バージョン1.39） | に行く https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationページの新機能"^]1.39 リリースに含まれる変更点を参照してください。 
+| 分類 | 2025年1月22日（バージョン1.39） | に行く https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationページの新機能"^]1.39 リリースに含まれる変更点を参照してください。 
 |===
 
 
@@ -769,7 +769,7 @@ BlueXPにログインすると、次の変更に気付くでしょう。
 
 
 .BlueXP IAM の API
-この変更により、 BlueXP IAM の新しい API が導入されますが、以前のテナンシー API との下位互換性があります。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["BlueXP IAMのAPIについて学ぶ"^]
+この変更により、 BlueXP IAM の新しい API が導入されますが、以前のテナンシー API との下位互換性があります。 https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["BlueXP IAMのAPIについて学ぶ"^]
 
 .サポートされている展開モード
 BlueXP IAM は、 BlueXP を標準モードおよび制限モードで使用する場合にサポートされます。  BlueXP をプライベート モードで使用している場合は、引き続きBlueXP _アカウント_を使用してワークスペース、ユーザー、およびリソースを管理します。
@@ -790,10 +790,10 @@ BlueXP IAM は、 BlueXP を標準モードおよび制限モードで使用す�
 | コネクタ | 3.9.48 | に行く https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["BlueXPコネクタページの新機能"]バージョン 3.9.48 に含まれる変更を参照してください。 
 
 
-| バックアップとリカバリ | 2025年2月21日 | に行く https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2025 年 2 月のリリースに含まれる変更点を参照してください。 
+| バックアップとリカバリ | 2025年2月21日 | に行く https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2025 年 2 月のリリースに含まれる変更点を参照してください。 
 
 
-| 分類 | 2025年1月22日（バージョン1.39） | に行く https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationページの新機能"^]1.39 リリースに含まれる変更点を参照してください。 
+| 分類 | 2025年1月22日（バージョン1.39） | に行く https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationページの新機能"^]1.39 リリースに含まれる変更点を参照してください。 
 |===
 
 
@@ -913,16 +913,16 @@ BlueXPコネクタのこのリリースには、バグ修正と、コネクタ�
 | コネクタ | 3.9.46 | マイナーなセキュリティの改善とバグ修正 
 
 
-| バックアップとリカバリ | 2024年11月22日 | に行く https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2024年11月のリリースに含まれる変更点を参照してください 
+| バックアップとリカバリ | 2024年11月22日 | に行く https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2024年11月のリリースに含まれる変更点を参照してください 
 
 
-| 分類 | 2024年11月4日（バージョン1.37） | に行く https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationページの新機能"^]1.32から1.37リリースに含まれる変更点を参照してください 
+| 分類 | 2024年11月4日（バージョン1.37） | に行く https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationページの新機能"^]1.32から1.37リリースに含まれる変更点を参照してください 
 
 
-| Cloud Volumes ONTAP管理 | 2024年11月11日 | に行く https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP管理ページの新機能"^]2024年10月と2024年11月のリリースに含まれる変更点を参照してください。 
+| Cloud Volumes ONTAP管理 | 2024年11月11日 | に行く https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Cloud Volumes ONTAP管理ページの新機能"^]2024年10月と2024年11月のリリースに含まれる変更点を参照してください。 
 
 
-| オンプレミスのONTAPクラスタ管理 | 2024年11月26日 | に行く https://docs.netapp.com/us-en/bluexp-ontap-onprem/whats-new.html["オンプレミスのONTAPクラスタ管理ページの新機能"^]2024年11月のリリースに含まれる変更点を参照してください 
+| オンプレミスのONTAPクラスタ管理 | 2024年11月26日 | に行く https://docs.netapp.com/us-en/storage-management-ontap-onprem/whats-new.html["オンプレミスのONTAPクラスタ管理ページの新機能"^]2024年11月のリリースに含まれる変更点を参照してください 
 |===
 BlueXP digital walletとBlueXP replicationもプライベート モードに含まれていますが、以前のプライベート モード リリースから変更はありません。
 
@@ -1010,7 +1010,7 @@ BlueXPにログインすると、次の変更に気付くでしょう。
 
 
 .BlueXP IAM の API
-この変更により、 BlueXP IAM の新しい API が導入されますが、以前のテナンシー API との下位互換性があります。 https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["BlueXP IAMのAPIについて学ぶ"^]
+この変更により、 BlueXP IAM の新しい API が導入されますが、以前のテナンシー API との下位互換性があります。 https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["BlueXP IAMのAPIについて学ぶ"^]
 
 .サポートされている展開モード
 BlueXP を標準モードで使用する場合、 BlueXP IAM がサポートされます。  BlueXP を制限モードまたはプライベート モードで使用している場合は、引き続きBlueXP _アカウント_を使用してワークスペース、ユーザー、およびリソースを管理します。
@@ -1092,9 +1092,9 @@ https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_s
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#9-september-2024["コネクタの2024年9月リリースの新機能"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#8-august-2024["コネクタの2024年8月リリースの新機能"]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryの新機能"^]
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationの新機能"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["BlueXPのCloud Volumes ONTAP管理の新機能"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryの新機能"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationの新機能"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["BlueXPのCloud Volumes ONTAP管理の新機能"^]
 
 
 プライベート モードの詳細（アップグレード方法を含む）については、以下を参照してください。
@@ -1293,9 +1293,9 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 * https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["プライベートモードについて学ぶ"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["プライベートモードでBlueXPを始める方法を学ぶ"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["プライベートモード使用時にコネクタをアップグレードする方法を学びます"]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryの新機能について"^]
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationの新機能について学ぶ"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["BlueXPのCloud Volumes ONTAP管理の新機能について学ぶ"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryの新機能について"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationの新機能について学ぶ"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["BlueXPのCloud Volumes ONTAP管理の新機能について学ぶ"^]
 
 
 
@@ -1394,9 +1394,9 @@ BlueXPコネクタのこのリリースには、マイナーなセキュリテ�
 * https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["プライベートモードについて学ぶ"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["プライベートモードでBlueXPを始める方法を学ぶ"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["プライベートモード使用時にコネクタをアップグレードする方法を学びます"]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryの新機能について"^]
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationの新機能について学ぶ"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["BlueXPのCloud Volumes ONTAP管理の新機能について学ぶ"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryの新機能について"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationの新機能について学ぶ"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["BlueXPのCloud Volumes ONTAP管理の新機能について学ぶ"^]
 
 
 
@@ -1433,5 +1433,5 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 3.9.38 リリースでは、AWS のコネクタ ポリシーを更新し、「ec2:DescribeAvailabilityZones」権限を追加しました。Cloud Volumes ONTAPで AWS Local Zones をサポートするには、この権限が必要になりました。
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["コネクタの AWS 権限を表示する"] 。
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["AWS Local Zonesのサポートについて詳しくはこちら"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["AWS Local Zonesのサポートについて詳しくはこちら"^]
 

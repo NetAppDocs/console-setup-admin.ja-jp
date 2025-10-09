@@ -99,7 +99,7 @@ NetAppコンソールにアクセスする各コンピューターは、以下�
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS のCloud Volumes ONTAPのエンドポイント"]
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Azure のCloud Volumes ONTAPのエンドポイント"]
-* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud のCloud Volumes ONTAPのエンドポイント"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud のCloud Volumes ONTAPのエンドポイント"]
 
 
 https://docs.netapp.com/us-en/data-services-family/["それぞれのNetAppデータ サービスのドキュメントを参照してください。"^]

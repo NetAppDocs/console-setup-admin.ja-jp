@@ -161,5 +161,5 @@ link:concept-identity-and-access-management.html#role-inheritance["ロール継�
 
 * link:concept-identity-and-access-management.html["NetAppコンソールのIDとアクセスについて学ぶ"]
 * link:task-iam-get-started.html["アイデンティティとアクセスを始める"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["アイデンティティとアクセスAPIについて学ぶ"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["アイデンティティとアクセスAPIについて学ぶ"]
 

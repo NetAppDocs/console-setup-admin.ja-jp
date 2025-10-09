@@ -18,10 +18,10 @@
 | コネクタ | 3.9.54、3.9.53 | に行く https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["BlueXPページの新着情報"^]バージョン 3.9.54 および 3.9.53 に含まれる変更を参照してください。 
 
 
-| バックアップとリカバリ | 2025年7月28日 | に行く https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2025 年 7 月のリリースに含まれる変更点を参照してください。 
+| バックアップとリカバリ | 2025年7月28日 | に行く https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryページの新機能"^]2025 年 7 月のリリースに含まれる変更点を参照してください。 
 
 
-| 分類 | 2025年7月14日（バージョン1.45） | に行く https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationページの新機能"^]。 
+| 分類 | 2025年7月14日（バージョン1.45） | に行く https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationページの新機能"^]。 
 |===
 プライベート モードの詳細（アップグレード方法を含む）については、以下を参照してください。
 

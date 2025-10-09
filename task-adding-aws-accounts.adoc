@@ -32,7 +32,7 @@ AWS 認証情報を既存のコンソールエージェントに追加するこ�
 
 * FSx for ONTAPのコンソールに AWS 認証情報を追加する
 +
-FSx for ONTAPを作成および管理するには、コンソールに新しい AWS 認証情報を追加します。 https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["FSx for ONTAPの権限を設定する方法を学びます"^]
+FSx for ONTAPを作成および管理するには、コンソールに新しい AWS 認証情報を追加します。 https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["FSx for ONTAPの権限を設定する方法を学びます"^]
 
 
 
@@ -194,7 +194,7 @@ NetAppコンソールのソフトウェア サービス (SaaS) レイヤーが�
 
 ** コンソール エージェントを作成するために必要な権限を含むポリシーを作成します。
 +
-*** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["FSx for ONTAPに必要な権限を表示する"^]
+*** https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["FSx for ONTAPに必要な権限を表示する"^]
 *** link:task-install-agent-aws-console.html#aws-permissions-agent["エージェント展開ポリシーを表示する"]
 
 
@@ -233,7 +233,7 @@ image:screenshot-settings-icon-organization.png["コンソールの右上にあ�
 
 == Amazon FSx for ONTAPのコンソールに認証情報を追加する
 
-詳細については、 https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAPのコンソールドキュメント"^]
+詳細については、 https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAPのコンソールドキュメント"^]
 
 
 

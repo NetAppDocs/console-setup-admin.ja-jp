@@ -45,7 +45,7 @@ NetAppコンソールには、コンソールエージェントと個々のサ�
 | 目標 | 説明 | リンク 
 
 
-| NetApp Backup and Recovery を使用してオンプレミスのONTAPクラスターを Amazon S3 にバックアップする | ONTAPボリュームでバックアップをアクティブ化するときに、 NetApp Backup and Recovery では、特定の権限を持つ IAM ユーザーのアクセス キーとシークレットを入力するように求められます。 | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-aws.html["バックアップ用のS3権限を設定する"^] 
+| NetApp Backup and Recovery を使用してオンプレミスのONTAPクラスターを Amazon S3 にバックアップする | ONTAPボリュームでバックアップをアクティブ化するときに、 NetApp Backup and Recovery では、特定の権限を持つ IAM ユーザーのアクセス キーとシークレットを入力するように求められます。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-aws.html["バックアップ用のS3権限を設定する"^] 
 |===
 
 
@@ -56,7 +56,7 @@ NetAppコンソールには、コンソールエージェントと個々のサ�
 | 目標 | 説明 | リンク 
 
 
-| Cloud Volumes ONTAPノードに権限を付与する | AWS の各Cloud Volumes ONTAPノードに IAM ロールを添付する必要があります。 HA メディエーターについても同様です。デフォルトのオプションでは、コンソールで IAM ロールが自動的に作成されますが、コンソールでシステムを作成するときに独自のロールを使用することもできます。 | https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-iam-roles.html["IAMロールを自分で設定する方法を学ぶ"^] 
+| Cloud Volumes ONTAPノードに権限を付与する | AWS の各Cloud Volumes ONTAPノードに IAM ロールを添付する必要があります。 HA メディエーターについても同様です。デフォルトのオプションでは、コンソールで IAM ロールが自動的に作成されますが、コンソールでシステムを作成するときに独自のロールを使用することもできます。 | https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-set-up-iam-roles.html["IAMロールを自分で設定する方法を学ぶ"^] 
 |===
 
 
@@ -67,13 +67,13 @@ NetAppコンソールには、コンソールエージェントと個々のサ�
 | 目標 | 説明 | リンク 
 
 
-| AWSにデータブローカーをデプロイする | データブローカーをデプロイするために使用する AWS ユーザーアカウントには、特定の権限が必要です。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["AWS にデータブローカーをデプロイするために必要な権限"^] 
+| AWSにデータブローカーをデプロイする | データブローカーをデプロイするために使用する AWS ユーザーアカウントには、特定の権限が必要です。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["AWS にデータブローカーをデプロイするために必要な権限"^] 
 
 
-| データブローカーに権限を付与する | NetApp Copy and Sync がデータ ブローカーを展開すると、データ ブローカー インスタンスの IAM ロールが作成されます。必要に応じて、独自の IAM ロールを使用してデータ ブローカーをデプロイすることもできます。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["AWS データブローカーで独自の IAM ロールを使用するための要件"^] 
+| データブローカーに権限を付与する | NetApp Copy and Sync がデータ ブローカーを展開すると、データ ブローカー インスタンスの IAM ロールが作成されます。必要に応じて、独自の IAM ロールを使用してデータ ブローカーをデプロイすることもできます。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["AWS データブローカーで独自の IAM ロールを使用するための要件"^] 
 
 
-| 手動でインストールされたデータブローカーの AWS アクセスを有効にする | S3 バケットを含む同期関係でデータ ブローカーを使用する場合は、AWS アクセス用に Linux ホストを準備する必要があります。データブローカーをインストールするときは、プログラムによるアクセスと特定の権限を持つ IAM ユーザーに AWS キーを提供する必要があります。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-aws["AWSへのアクセスを有効にする"^] 
+| 手動でインストールされたデータブローカーの AWS アクセスを有効にする | S3 バケットを含む同期関係でデータ ブローカーを使用する場合は、AWS アクセス用に Linux ホストを準備する必要があります。データブローカーをインストールするときは、プログラムによるアクセスと特定の権限を持つ IAM ユーザーに AWS キーを提供する必要があります。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-linux.html#enabling-access-to-aws["AWSへのアクセスを有効にする"^] 
 |===
 
 
@@ -84,7 +84,7 @@ NetAppコンソールには、コンソールエージェントと個々のサ�
 | 目標 | 説明 | リンク 
 
 
-| FSx for ONTAP の作成と管理 | Amazon FSx for NetApp ONTAPシステムを作成または管理するには、コンソールに必要な権限を付与する IAM ロールの ARN を指定して、AWS 認証情報をコンソールに追加する必要があります。 | https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["FSx 用の AWS 認証情報を設定する方法を学ぶ"^] 
+| FSx for ONTAP の作成と管理 | Amazon FSx for NetApp ONTAPシステムを作成または管理するには、コンソールに必要な権限を付与する IAM ロールの ARN を指定して、AWS 認証情報をコンソールに追加する必要があります。 | https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["FSx 用の AWS 認証情報を設定する方法を学ぶ"^] 
 |===
 
 
@@ -141,12 +141,12 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 * 顧客管理暗号鍵（CMEK）を使用したい
 
  a| 
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-azure.html["バックアップとリカバリを使用して、 Cloud Volumes ONTAPデータを Azure Blob ストレージにバックアップします。"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-cvo-azure.html["バックアップとリカバリを使用して、 Cloud Volumes ONTAPデータを Azure Blob ストレージにバックアップします。"^]
 
 
 
 
-| オンプレミスのONTAPクラスターを Azure BLOB ストレージにバックアップする | NetApp Backup and Recovery を使用してオンプレミスの ONTAP クラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-azure.html["バックアップとリカバリを使用してオンプレミスの ONTAPデータを Azure Blob ストレージにバックアップする"^] 
+| オンプレミスのONTAPクラスターを Azure BLOB ストレージにバックアップする | NetApp Backup and Recovery を使用してオンプレミスの ONTAP クラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html["バックアップとリカバリを使用してオンプレミスの ONTAPデータを Azure Blob ストレージにバックアップする"^] 
 |===
 
 
@@ -157,7 +157,7 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 | 目標 | 説明 | リンク 
 
 
-| Azureにデータブローカーをデプロイする | データ ブローカーをデプロイするために使用する Azure ユーザー アカウントには、必要なアクセス許可が必要です。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-azure.html#permissions-required-to-deploy-the-data-broker-in-azure["Azure にデータ ブローカーをデプロイするために必要な権限"^] 
+| Azureにデータブローカーをデプロイする | データ ブローカーをデプロイするために使用する Azure ユーザー アカウントには、必要なアクセス許可が必要です。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-azure.html#permissions-required-to-deploy-the-data-broker-in-azure["Azure にデータ ブローカーをデプロイするために必要な権限"^] 
 |===
 
 
@@ -195,13 +195,13 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 * 顧客管理暗号鍵（CMEK）を使用したい
 
  a| 
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html["バックアップとリカバリを使用して、 Cloud Volumes ONTAPデータを Google Cloud Storage にバックアップします。"^]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html["CMEK の権限"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-cvo-gcp.html["バックアップとリカバリを使用して、 Cloud Volumes ONTAPデータを Google Cloud Storage にバックアップします。"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-cvo-gcp.html["CMEK の権限"^]
 
 
 
 
-| オンプレミスのONTAPクラスタを Google Cloud にバックアップする | NetApp Backup and Recovery を使用してオンプレミスの ONTAP クラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-gcp.html["バックアップとリカバリを使用してオンプレミスのONTAPデータを Google Cloud Storage にバックアップする"^] 
+| オンプレミスのONTAPクラスタを Google Cloud にバックアップする | NetApp Backup and Recovery を使用してオンプレミスの ONTAP クラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html["バックアップとリカバリを使用してオンプレミスのONTAPデータを Google Cloud Storage にバックアップする"^] 
 |===
 
 
@@ -212,10 +212,10 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 | 目標 | 説明 | リンク 
 
 
-| Google Cloud にデータブローカーをデプロイする | データ ブローカーをデプロイする Google Cloud ユーザーに必要な権限があることを確認します。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-gcp.html#permissions-required-to-deploy-the-data-broker-in-google-cloud["Google Cloud にデータブローカーをデプロイするために必要な権限"^] 
+| Google Cloud にデータブローカーをデプロイする | データ ブローカーをデプロイする Google Cloud ユーザーに必要な権限があることを確認します。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-gcp.html#permissions-required-to-deploy-the-data-broker-in-google-cloud["Google Cloud にデータブローカーをデプロイするために必要な権限"^] 
 
 
-| 手動でインストールされたデータブローカーの Google Cloud アクセスを有効にする | Google Cloud Storage バケットを含む同期関係でデータ ブローカーを使用する予定の場合は、Google Cloud アクセス用に Linux ホストを準備する必要があります。データ ブローカーをインストールするときは、特定の権限を持つサービス アカウントのキーを指定する必要があります。 | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-google-cloud["Google Cloudへのアクセスを有効にする"^] 
+| 手動でインストールされたデータブローカーの Google Cloud アクセスを有効にする | Google Cloud Storage バケットを含む同期関係でデータ ブローカーを使用する予定の場合は、Google Cloud アクセス用に Linux ホストを準備する必要があります。データ ブローカーをインストールするときは、特定の権限を持つサービス アカウントのキーを指定する必要があります。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-linux.html#enabling-access-to-google-cloud["Google Cloudへのアクセスを有効にする"^] 
 |===
 
 
@@ -232,7 +232,7 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 | 目標 | 説明 | リンク 
 
 
-| オンプレミスのONTAPクラスターをStorageGRIDにバックアップする | StorageGRID をONTAPクラスターのバックアップ ターゲットとして準備する場合、 NetApp Backup and Recovery によって、特定の権限を持つ IAM ユーザーのアクセス キーとシークレットを入力するように求められます。 | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["StorageGRIDをバックアップターゲットとして準備する"^] 
+| オンプレミスのONTAPクラスターをStorageGRIDにバックアップする | StorageGRID をONTAPクラスターのバックアップ ターゲットとして準備する場合、 NetApp Backup and Recovery によって、特定の権限を持つ IAM ユーザーのアクセス キーとシークレットを入力するように求められます。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["StorageGRIDをバックアップターゲットとして準備する"^] 
 |===
 
 
@@ -243,5 +243,5 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 | 目標 | 説明 | リンク 
 
 
-| オンプレミスのONTAPクラスターをStorageGRIDに階層化 | NetApp Cloud Tiering をStorageGRIDに設定する場合は、Cloud Tiering に S3 アクセス キーと秘密キーを提供する必要があります。クラウド階層化では、キーを使用してバケットにアクセスします。 | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["StorageGRIDへの階層化を準備する"^] 
+| オンプレミスのONTAPクラスターをStorageGRIDに階層化 | NetApp Cloud Tiering をStorageGRIDに設定する場合は、Cloud Tiering に S3 アクセス キーと秘密キーを提供する必要があります。クラウド階層化では、キーを使用してバケットにアクセスします。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["StorageGRIDへの階層化を準備する"^] 
 |===

@@ -65,5 +65,5 @@ image:screenshot-iam-project-id.png["プロジェクトのアクション メニ
 .関連情報
 * link:concept-identity-and-access-management.html["アイデンティティとアクセス管理について学ぶ"]
 * link:task-iam-get-started.html["アイデンティティとアクセスを始める"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["IDとアクセスのためのAPIについて学ぶ"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["IDとアクセスのためのAPIについて学ぶ"^]
 

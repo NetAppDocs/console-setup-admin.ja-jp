@@ -18,13 +18,13 @@ NetAppコンソールを制限モードで起動して実行すると、制限�
 
 ヘルプについては、次のサービスのドキュメントを参照してください。
 
-* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/index.html["Azure NetApp Filesドキュメント"^]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["バックアップとリカバリのドキュメント"^]
-* https://docs.netapp.com/us-en/bluexp-classification/index.html["分類ドキュメント"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/index.html["Cloud Volumes ONTAPドキュメント"^]
-* https://docs.netapp.com/us-en/bluexp-digital-wallet/index.html["デジタルウォレットのドキュメント"^]
-* https://docs.netapp.com/us-en/bluexp-ontap-onprem/index.html["オンプレミスのONTAPクラスタのドキュメント"^]
-* https://docs.netapp.com/us-en/bluexp-replication/index.html["レプリケーションドキュメント"^]
+* https://docs.netapp.com/us-en/storage-management-azure-netapp-files/index.html["Azure NetApp Filesドキュメント"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["バックアップとリカバリのドキュメント"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/index.html["分類ドキュメント"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html["Cloud Volumes ONTAPドキュメント"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html["デジタルウォレットのドキュメント"^]
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html["オンプレミスのONTAPクラスタのドキュメント"^]
+* https://docs.netapp.com/us-en/data-services-replication/index.html["レプリケーションドキュメント"^]
 
 
 .関連情報

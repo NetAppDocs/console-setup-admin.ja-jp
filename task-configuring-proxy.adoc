@@ -131,7 +131,7 @@ IMPORTANT: プロキシを設定したら、プロキシの種類を変更する
 
 Cloud Volumes ONTAPで Azure Private Links を無効にしてサービス エンドポイントを使用する場合は、直接 API トラフィックを有効にします。そうしないと、トラフィックは適切にルーティングされません。
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Cloud Volumes ONTAPで Azure Private Link またはサービス エンドポイントを使用する方法の詳細"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["Cloud Volumes ONTAPで Azure Private Link またはサービス エンドポイントを使用する方法の詳細"^]
 
 .手順
 . *管理 > エージェント*を選択します。

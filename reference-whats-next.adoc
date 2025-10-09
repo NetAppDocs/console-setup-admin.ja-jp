@@ -19,7 +19,7 @@ NetAppコンソールを標準モードでログインしてセットアップ�
 
 TIP: AWS、Microsoft Azure、または Google Cloud にコンソール エージェントをインストールした場合、コンソールは、エージェントがインストールされている場所にある Amazon S3 バケット、Azure Blob ストレージ、または Google Cloud Storage バケットに関する情報を自動的に検出します。これらのシステムは自動的に *システム* ページに追加されます。
 
-ヘルプが必要な場合は、 https://docs.netapp.com/us-en/bluexp-family/["NetAppコンソールドキュメントのホームページ"^] NetAppコンソールのドキュメントを表示します。
+ヘルプが必要な場合は、 https://docs.netapp.com/us-en/console-family/["NetAppコンソールドキュメントのホームページ"^] NetAppコンソールのドキュメントを表示します。
 
 .関連情報
 link:concept-modes.html["NetAppコンソールの展開モード"]

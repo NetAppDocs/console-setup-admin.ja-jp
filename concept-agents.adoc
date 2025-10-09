@@ -24,7 +24,7 @@ _コンソール エージェント_ は、クラウド ネットワークまた
 
 * Amazon FSx for NetApp ONTAP
 +
-一部のアクションには、コンソール エージェントまたはNetAppワークロード リンクが必要です。 https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html["コンソールエージェントまたはリンクが必要なアクションを確認する"^]
+一部のアクションには、コンソール エージェントまたはNetAppワークロード リンクが必要です。 https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fsx-aws.html["コンソールエージェントまたはリンクが必要なアクションを確認する"^]
 
 * 自動化ハブ
 * Azure NetApp Files
@@ -46,7 +46,7 @@ Azure NetApp Files を管理するためにコンソール エージェントは
 オンプレミスのONTAPクラスターをコンソールに追加するためにコンソール エージェントは必要ありませんが、追加のコンソール機能とデータ サービスにはコンソール エージェントが必要です。
 
 +
-https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAPクラスタの検出および管理オプションの詳細"^]
+https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAPクラスタの検出および管理オプションの詳細"^]
 
 * ソフトウェアアップデート
 * 持続可能性
@@ -98,7 +98,7 @@ https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["�
 * Amazon Web Services
 * Microsoft Azure
 +
-管理対象のCloud Volumes ONTAPシステムと同じリージョンの Azure にコンソール エージェントをデプロイします。あるいは、 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure リージョン ペア"^] 。これにより、 Cloud Volumes ONTAPとそれに関連付けられたストレージ アカウント間で Azure Private Link 接続が使用されるようになります。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Cloud Volumes ONTAP がAzure Private Link を使用する方法を学ぶ"^]
+管理対象のCloud Volumes ONTAPシステムと同じリージョンの Azure にコンソール エージェントをデプロイします。あるいは、 https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure リージョン ペア"^] 。これにより、 Cloud Volumes ONTAPとそれに関連付けられたストレージ アカウント間で Azure Private Link 接続が使用されるようになります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["Cloud Volumes ONTAP がAzure Private Link を使用する方法を学ぶ"^]
 
 * Google Cloud
 +

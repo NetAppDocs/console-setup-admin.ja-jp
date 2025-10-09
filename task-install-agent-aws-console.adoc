@@ -353,4 +353,4 @@ link:reference-ports-aws.html["AWS のセキュリティグループルールを
 
 NOTE: デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。link:task-troubleshoot-agent.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
 
-コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["NetAppコンソールから S3 バケットを管理する方法を学びます"^]
+コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["NetAppコンソールから S3 バケットを管理する方法を学びます"^]

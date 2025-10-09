@@ -699,7 +699,7 @@ NOTE: インストールが失敗した場合は、トラブルシューティ�
 
 
 
-コンソール エージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合は、[システム] ページに Google Cloud Storage システムが自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["NetAppコンソールから Google Cloud Storage を管理する方法を学びます"^]
+コンソール エージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合は、[システム] ページに Google Cloud Storage システムが自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["NetAppコンソールから Google Cloud Storage を管理する方法を学びます"^]
 
 
 

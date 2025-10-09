@@ -34,7 +34,7 @@ IMDSv2 は脆弱性に対する保護を強化します。 https://aws.amazon.co
 
 インスタンス メタデータ サービス (IMDS) は、EC2 インスタンスで次のように有効化されます。
 
-* コンソールから、またはコンソールを使用して新しいコンソールエージェントを展開する場合 https://docs.netapp.com/us-en/bluexp-automation/automate/overview.html["Terraformスクリプト"^]、IMDSv2 は EC2 インスタンスでデフォルトで有効になっています。
+* コンソールから、またはコンソールを使用して新しいコンソールエージェントを展開する場合 https://docs.netapp.com/us-en/console-automation/automate/overview.html["Terraformスクリプト"^]、IMDSv2 は EC2 インスタンスでデフォルトで有効になっています。
 * AWS で新しい EC2 インスタンスを起動し、コンソールエージェントソフトウェアを手動でインストールすると、IMDSv2 もデフォルトで有効になります。
 * AWS Marketplace からコンソールエージェントを起動すると、IMDSv1 がデフォルトで有効になります。  EC2 インスタンスで IMDSv2 を手動で設定できます。
 * 既存のコンソールエージェントの場合、IMDSv1 は引き続きサポートされますが、必要に応じて EC2 インスタンスで IMDSv2 を手動で設定することもできます。
@@ -88,7 +88,7 @@ NOTE: その `http-tokens`パラメータは IMDSv2 を必須に設定します�
 
 
 .. HA メディエーターを含む他のCloud Volumes ONTAPインスタンスに対しても、これらの手順を繰り返します。
-.. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-state.html["Cloud Volumes ONTAPインスタンスを停止して起動する"^]
+.. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-managing-state.html["Cloud Volumes ONTAPインスタンスを停止して起動する"^]
 
 
 

@@ -41,9 +41,9 @@
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#9-september-2024["コネクタの2024年9月リリースの新機能"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#8-august-2024["コネクタの2024年8月リリースの新機能"]
-* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["BlueXP backup and recoveryの新機能"^]
-* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["BlueXP classificationの新機能"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["BlueXPのCloud Volumes ONTAP管理の新機能"^]
+* https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryの新機能"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationの新機能"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["BlueXPのCloud Volumes ONTAP管理の新機能"^]
 
 
 プライベート モードの詳細（アップグレード方法を含む）については、以下を参照してください。

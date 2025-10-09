@@ -164,7 +164,7 @@ APIエンドポイント:: API 呼び出しはエージェント仮想マシン�
 | Azure NetApp Files | 完全サポート 
 
 
-| バックアップとリカバリ | 制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、 NetApp Backup and Recovery はONTAPボリューム データのみのバックアップと復元をサポートします。 https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPデータのサポートされているバックアップ先のリストを表示します"^]アプリケーション データおよび仮想マシン データのバックアップと復元はサポートされていません。 
+| バックアップとリカバリ | 制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、 NetApp Backup and Recovery はONTAPボリューム データのみのバックアップと復元をサポートします。 https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPデータのサポートされているバックアップ先のリストを表示します"^]アプリケーション データおよび仮想マシン データのバックアップと復元はサポートされていません。 
 
 
 | NetAppデータ分類  a| 
@@ -256,7 +256,7 @@ link:task-quick-start-restricted-mode.html["制限モードの開始方法を学
 | StorageGRID | いいえ 
 
 
-.9+| *データサービス* | NetAppバックアップとリカバリ | はいhttps://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] 
+.9+| *データサービス* | NetAppバックアップとリカバリ | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] 
 
 
 | NetAppデータ分類 | はい 

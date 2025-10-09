@@ -110,5 +110,5 @@ NOTE: 検出されたリソースを組織全体から削除するには、*シ�
 
 * link:concept-identity-and-access-management.html["NetAppコンソールのIDとアクセスについて学ぶ"]
 * link:task-iam-get-started.html["NetAppコンソールでIDとアクセスを開始する"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["IDとアクセスのためのAPIについて学ぶ"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["IDとアクセスのためのAPIについて学ぶ"^]
 

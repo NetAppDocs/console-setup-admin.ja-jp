@@ -271,7 +271,7 @@ _maxDownloadSessions_ の値は 1 または 1 より大きい任意の整数に�
 
 
 
-https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#occmconfig["/occm/config API呼び出しの詳細"^]
+https://docs.netapp.com/us-en/console-automation/cm/api_ref_resources.html#occmconfig["/occm/config API呼び出しの詳細"^]
 
 
 

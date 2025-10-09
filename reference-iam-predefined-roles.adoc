@@ -146,5 +146,5 @@ NetAppコンソールの ID およびアクセス管理 (IAM) では、リソー
 * link:concept-identity-and-access-management.html["NetAppコンソールのアイデンティティとアクセス管理について学ぶ"]
 * link:task-iam-get-started.html["NetAppコンソールIAMを使い始める"]
 * link:task-iam-manage-members-permissions.html["NetAppコンソールのメンバーとその権限を管理する"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["NetAppコンソールIAMのAPIについて学ぶ"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["NetAppコンソールIAMのAPIについて学ぶ"^]
 

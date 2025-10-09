@@ -137,9 +137,9 @@ TIP: キャッシュによりパフォーマンスが最適化されますが、
 
 ONTAPで発生する特定のイベントに関するアラートを表示します。これらは、EMS とメトリックベースのアラートの組み合わせです。
 
-ONTAPアラートの詳細については、 https://docs.netapp.com/us-en/bluexp-alerts/index.html["ONTAPアラートについて"^] 。
+ONTAPアラートの詳細については、 https://docs.netapp.com/us-en/console-alerts/index.html["ONTAPアラートについて"^] 。
 
-表示される可能性のあるアラートのリストについては、以下を参照してください。 https://docs.netapp.com/us-en/bluexp-alerts/alerts-use-dashboard.html["ONTAPストレージの潜在的なリスクを表示する"^] 。
+表示される可能性のあるアラートのリストについては、以下を参照してください。 https://docs.netapp.com/us-en/console-alerts/alerts-use-dashboard.html["ONTAPストレージの潜在的なリスクを表示する"^] 。
 
 .手順
 . NetAppコンソール メニューから、 ONTAPアラート ペインを確認します。
@@ -200,9 +200,9 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 . NetAppコンソール メニューから、ランサムウェア耐性ペインを確認します。
 . ランサムウェア耐性ペインで次のいずれかを実行します。
 +
-** *表示* を選択して、 NetAppランサムウェア耐性ダッシュボードに移動します。詳細については、 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["NetAppランサムウェア耐性ダッシュボードを使用してワークロードの健全性を監視する"^] 。
-** NetAppランサムウェア耐性ダッシュボードの「推奨アクション」を確認します。詳細については、 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["NetAppランサムウェア耐性ダッシュボードで保護推奨事項を確認する"^] 。
-** アラート リンクを選択して、 NetApp Ransomware Resilience Alerts ページでアラートを確認します。詳細については、 https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["NetApp Ransomware Resilience で検出されたランサムウェアアラートを処理する"^] 。
+** *表示* を選択して、 NetAppランサムウェア耐性ダッシュボードに移動します。詳細については、 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["NetAppランサムウェア耐性ダッシュボードを使用してワークロードの健全性を監視する"^] 。
+** NetAppランサムウェア耐性ダッシュボードの「推奨アクション」を確認します。詳細については、 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["NetAppランサムウェア耐性ダッシュボードで保護推奨事項を確認する"^] 。
+** アラート リンクを選択して、 NetApp Ransomware Resilience Alerts ページでアラートを確認します。詳細については、 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["NetApp Ransomware Resilience で検出されたランサムウェアアラートを処理する"^] 。
 
 
 
@@ -220,5 +220,5 @@ TIP: キャッシュによりパフォーマンスが最適化されますが、
 
 .手順
 . NetAppコンソール メニューから、[バックアップとリカバリ] ペインを確認します。
-. *表示* を選択して、 NetAppバックアップおよびリカバリ ダッシュボードに移動します。詳細については、 https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["NetAppバックアップおよびリカバリのドキュメント"^] 。
+. *表示* を選択して、 NetAppバックアップおよびリカバリ ダッシュボードに移動します。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetAppバックアップおよびリカバリのドキュメント"^] 。
 

@@ -56,6 +56,6 @@ image:screenshot-connector-switch.png["ヘッダーのエージェント アイ�
 競合の問題を回避するには、メインのコンソール エージェントのみを *自動モード* に設定する必要があります。
 
 +
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-settings.html["容量管理モードの詳細"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-capacity-settings.html["容量管理モードの詳細"^]
 
 

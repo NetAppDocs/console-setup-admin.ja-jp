@@ -82,7 +82,7 @@ summary: コンソールが実行している操作のステータスを監視�
 
 通知センターを使用すると、開始した操作のステータスを表示したり、特定の種類のシステム アクティビティに関するアラート通知を設定したりできます。一方、アラートを使用すると、容量、可用性、パフォーマンス、保護、セキュリティに関連するONTAPストレージ環境の問題や潜在的なリスクを確認できます。
 
-https://docs.netapp.com/us-en/bluexp-alerts/index.html["NetAppコンソールアラートの詳細"^]
+https://docs.netapp.com/us-en/console-alerts/index.html["NetAppコンソールアラートの詳細"^]
 
 
 

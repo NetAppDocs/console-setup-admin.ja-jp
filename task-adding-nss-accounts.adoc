@@ -60,10 +60,10 @@ NOTE: NetApp は、サポートとライセンスに固有の認証サービス�
 ログインが成功すると、 NetApp はNSS ユーザー名を保存します。
 
 +
-これは、メールにマッピングされるシステム生成の ID です。*NSS管理*ページでは、image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["3つの水平の点のアイコン"]メニュー。
+これは、メールにマッピングされるシステム生成の ID です。*NSS管理*ページでは、image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["3つの水平の点のアイコン"]メニュー。
 
 +
-** ログイン認証トークンを更新する必要がある場合は、image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/icon-nss-menu.png["3つの水平の点のアイコン"]メニュー。
+** ログイン認証トークンを更新する必要がある場合は、image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["3つの水平の点のアイコン"]メニュー。
 +
 このオプションを使用すると、再度ログインするよう求められます。これらのアカウントのトークンは 90 日後に期限切れになることに注意してください。これを知らせる通知が投稿されます。
 
@@ -74,10 +74,10 @@ NOTE: NetApp は、サポートとライセンスに固有の認証サービス�
 .次の手順
 ユーザーは、新しいCloud Volumes ONTAPシステムを作成するとき、および既存のCloud Volumes ONTAPシステムを登録するときにアカウントを選択できるようになりました。
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS でCloud Volumes ONTAP を起動"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure でCloud Volumes ONTAP を起動する"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["Google Cloud でCloud Volumes ONTAP を起動"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-registering.html["従量課金制システムの登録"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS でCloud Volumes ONTAP を起動"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure でCloud Volumes ONTAP を起動する"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["Google Cloud でCloud Volumes ONTAP を起動"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-registering.html["従量課金制システムの登録"^]
 
 
 

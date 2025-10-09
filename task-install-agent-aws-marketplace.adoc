@@ -269,4 +269,4 @@ NOTE: インストールが失敗した場合は、トラブルシューティ�
 
 ウェブブラウザを開いて、 https://console.netapp.com["NetAppコンソール"^]コンソールでコンソール エージェントの使用を開始します。
 
-コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["NetAppコンソールから S3 バケットを管理する方法を学びます"^]
+コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["NetAppコンソールから S3 バケットを管理する方法を学びます"^]

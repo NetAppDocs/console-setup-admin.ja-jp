@@ -239,5 +239,5 @@ image:diagram-iam-example-hierarchy-advanced.png["3 つのフォルダー (各�
 * link:task-iam-rename-organization.html["NetAppコンソール組織の名前を変更する"]
 * link:task-iam-audit-actions-timeline.html["IAMアクティビティを監視または監査する"]
 * link:reference-iam-predefined-roles.html["NetAppコンソールアクセスロール"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["NetAppコンソールIAMのAPIについて学ぶ"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["NetAppコンソールIAMのAPIについて学ぶ"^]
 

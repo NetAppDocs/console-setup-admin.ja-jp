@@ -437,4 +437,4 @@ link:reference-ports-gcp.html["Google Cloud のファイアウォール ルー�
 
 NOTE: デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。link:task-troubleshoot-agent.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
 
-コンソール エージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合は、[システム] ページに Google Cloud Storage システムが自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["コンソールから Google Cloud Storage を管理する方法を学びます"]
+コンソール エージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合は、[システム] ページに Google Cloud Storage システムが自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["コンソールから Google Cloud Storage を管理する方法を学びます"]
