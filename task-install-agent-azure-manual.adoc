@@ -363,7 +363,7 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
 
 
  a| 
-\https:\\support.netapp.com
+\https://support.netapp.com
  a| 
 ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。
 

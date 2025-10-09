@@ -5355,13 +5355,11 @@
   <block id="1dcb606a3a707c345cb54b5c3113d621" category="cell">実行フックテンプレートを削除する</block>
   <block id="386bacb41d61c7b8e46cd3e9198743cd" category="cell">ワークロードの概要と分析ダッシュボードを表示する</block>
   <block id="8bbffbb59e50612d870c42d2db4880dc" category="cell">StorageGRIDバケットとストレージターゲットを表示する</block>
-  <block id="c969e31f72edfcf168ffdd268986844a" category="paragraph">| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新するか、 NetAppコンソールに新しいNSS資格情報を追加します。| \https:\\support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。</block>
   <block id="067f3ef114756cdabe76467602ca9b2e" category="list-text">Government Cloud 環境にインストールする場合は、構成チェックを無効にします。<block ref="9b8bf974e42c4282e3da7fa6c59f1dce" category="inline-link-macro-rx"></block></block>
   <block id="42c16a43066627b293306439eb1732f6" category="admonition">インストールが失敗した場合は、インストール レポートとログを表示して問題の解決に役立てることができます。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="c2fc633e22b03955b13beee2049ac471" category="list-text">NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。<block ref="95ad16386ae4ac759ff3f180dcafce84" category="inline-link-rx"></block></block>
   <block id="12ad8fdc380a2754e74763c6ec3dd093" category="paragraph">コンソール エージェントでは、問題をよりよく理解するのに役立つエラー メッセージが改善されました。<block ref="af6db24ea837f8b9ee9738ec7c58a997" category="inline-link-macro-rx"></block></block>
   <block id="ee2dcfcc83687ed3d92f8b7d687f1f05" category="list-text"><block ref="ee2dcfcc83687ed3d92f8b7d687f1f05" category="inline-link-rx"></block></block>
-  <block id="c9c92f70006bb92009b6cd8f9b6b80f7" category="cell">\https:\\support.netapp.com</block>
   <block id="f092dc53062418401abf8d7b17161fcb" category="cell">ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。</block>
   <block id="02220399c28525a1c857a5784cf96eca" category="list-text">入力<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>診断ツールにアクセスし、画面上の指示に従います。+ たとえば、すべてのエージェント サービスが実行されていることを確認できます。<block ref="50f10aae18a0502372770b812f684d46" category="inline-link-macro-rx"></block> 。</block>
   <block id="d03af09bc0729475142a25d2101f89cb" category="summary">NetAppコンソールを初めて使用する場合は、コンソール アシスタントが初期セットアップ プロセスを案内します。アシスタントを使用すると、 NetAppサポート サイト (NSS) アカウントの追加、コンソール エージェントの追加、クラスターの追加、ライセンスまたはサブスクリプションの追加が可能になり、データの管理を簡単に開始できるようになります。</block>
@@ -5565,4 +5563,5 @@
   <block id="26323547bd680fab40f920c84c862857" category="list-text"><block ref="26323547bd680fab40f920c84c862857" category="inline-link-rx"></block></block>
   <block id="7c9136bab44834c94b08c608870f1fd1" category="list-text"><block ref="7c9136bab44834c94b08c608870f1fd1" category="inline-link-rx"></block></block>
   <block id="d3cdb39411bce89027162422ffb460a4" category="list-text"><block ref="d3cdb39411bce89027162422ffb460a4" category="inline-link-rx"></block></block>
+  <block id="1edf01eab3b295d8836c4716654a90aa" category="paragraph">| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。  | \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。  | \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新したり、 NetApp Consoleに新しいNSS資格情報を追加したりします。  | \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェアアップデートを受信します。</block>
 </blocks>
