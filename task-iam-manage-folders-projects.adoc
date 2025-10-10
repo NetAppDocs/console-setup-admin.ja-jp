@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-manage-folders-projects.html 
 keywords: folders, projects, resource hierarchy, create folders, create projects, iam, identity and access management, project id 
-summary: NetAppコンソール内で ID およびアクセス管理を使用すると、フォルダとプロジェクトを使用して完全なリソース階層を表すことができます。 
+summary: NetApp Console内で、アイデンティティおよびアクセス管理を使用すると、フォルダとプロジェクトを使用して完全なリソース階層を表すことができます。 
 ---
-= NetAppコンソールのリソースをフォルダとプロジェクトで整理する
+= NetApp Consoleのリソースをフォルダとプロジェクトで整理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetAppコンソール内で ID およびアクセス管理を使用す�
 
 
 [role="lead"]
-NetAppコンソール内で、プロジェクトとフォルダを使用してNetAppリソースを整理します。  _プロジェクト_ は、組織のメンバーが _リソース_ (たとえば、 Cloud Volumes ONTAPシステム) を管理するためにアクセスするコンソールのワークスペースを表します。 _フォルダー_ は関連するプロジェクトをグループ化します。リソースをフォルダーとプロジェクトに整理した後、組織のメンバーに特定のフォルダーとプロジェクトへの権限を付与することで、リソースへのきめ細かなアクセスを許可できます。
+NetApp Console内で、プロジェクトとフォルダを使用してNetAppリソースを整理します。  _プロジェクト_ は、組織のメンバーが _リソース_ (たとえば、 Cloud Volumes ONTAPシステム) を管理するためにアクセスするコンソールのワークスペースを表します。 _フォルダー_ は関連するプロジェクトをグループ化します。リソースをフォルダーとプロジェクトに整理したら、組織のメンバーに特定のフォルダーとプロジェクトへの権限を付与することで、リソースへのきめ細かなアクセスを許可できます。
 
 
 
@@ -112,7 +112,7 @@ link:concept-identity-and-access-management.html#associate-resource-folder["リ�
 . *組織*ページで、テーブル内のプロジェクトまたはフォルダに移動し、image:icon-action.png["3つの点が並んだアイコン"]次に、*フォルダーの編集*または*プロジェクトの編集*を選択します。
 . *編集*ページで*リソース*を選択します。
 +
-表の *ステータス* 列には、フォルダーまたはプロジェクトに関連付けられているリソースが示されます。
+表の *ステータス* 列には、フォルダーまたはプロジェクトに関連付けられているリソースが識別されます。
 
 . 関連付けまたは関連付けを解除するリソースを選択します。
 . 選択したリソースに応じて、*プロジェクトに関連付ける*または*プロジェクトとの関連付けを解除する*のいずれかを選択します。
@@ -128,7 +128,7 @@ image:screenshot-iam-associate-resources.png["現在関連付けられていな�
 
 * フォルダーまたはプロジェクトにアクセスできるメンバーを表示するには、「*アクセス*」を選択します。
 +
-image:screenshot-iam-member-access.png["プロジェクトにアクセスできるメンバーを表示する「プロジェクト編集」ページのスクリーンショット。"]
+image:screenshot-iam-member-access.png["プロジェクトにアクセスできるメンバーを表示する「プロジェクトの編集」ページのスクリーンショット。"]
 
 
 
@@ -159,7 +159,7 @@ link:concept-identity-and-access-management.html#role-inheritance["ロール継�
 
 == 関連情報
 
-* link:concept-identity-and-access-management.html["NetAppコンソールのIDとアクセスについて学ぶ"]
+* link:concept-identity-and-access-management.html["NetApp ConsoleのIDとアクセスについて学ぶ"]
 * link:task-iam-get-started.html["アイデンティティとアクセスを始める"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["アイデンティティとアクセスAPIについて学ぶ"]
 

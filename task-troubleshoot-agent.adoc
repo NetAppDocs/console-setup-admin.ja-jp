@@ -142,7 +142,7 @@ podman ps -a
 ----
 [IMPORTANT]
 ====
-* 新しいエージェントの展開の場合、 NetApp は次のエンドポイントをチェックします。link:reference-networking-saas-console.html["ここに記載"^] 。アップグレードに使用した以前のエンドポイントを使用している場合、この構成チェックはエラーで失敗します。link:reference-networking-saas-console-previous.html["ここに記載"] 。  NetAppは、現在のエンドポイントへのアクセスを許可し、以前のエンドポイントへのアクセスをブロックするようにファイアウォールルールを更新することを推奨します。link:reference-networking-saas-console-previous.html#update-endpoint-list["ネットワークをアップデートする方法を学ぶ"] 。
+* 新しいエージェントの展開では、 NetApp は次のエンドポイントをチェックします。link:reference-networking-saas-console.html["ここに記載"^] 。アップグレードに使用した以前のエンドポイントを使用している場合、この構成チェックはエラーで失敗します。link:reference-networking-saas-console-previous.html["ここに記載"] 。  NetAppは、現在のエンドポイントへのアクセスを許可し、以前のエンドポイントへのアクセスをブロックするようにファイアウォールルールを更新することを推奨します。link:reference-networking-saas-console-previous.html#update-endpoint-list["ネットワークをアップデートする方法を学ぶ"] 。
 * ファイアウォールのエンドポイントを更新しても、既存のエージェントは引き続き動作します。
 
 
@@ -236,7 +236,7 @@ image:screenshot-system-id.png["サポート ダッシュボードに表示さ�
 問題が発生した場合、 NetApp はトラブルシューティングのためにAutoSupportメッセージをNetAppサポートに送信するように依頼することがあります。
 
 
-NOTE: NetAppコンソールは、負荷分散のため、 AutoSupportメッセージを送信するのに最大 5 時間かかります。緊急の場合は、ファイルをダウンロードして手動で送信してください。
+NOTE: NetApp Consoleは、負荷分散のため、 AutoSupportメッセージを送信するのに最大 5 時間かかります。緊急の場合は、ファイルをダウンロードして手動で送信してください。
 
 .手順
 . *管理 > サポート > エージェント*を選択します。

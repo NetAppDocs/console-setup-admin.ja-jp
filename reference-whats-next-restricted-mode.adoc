@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-whats-next-restricted-mode.html 
 keywords: restricted mode, what you can do 
-summary: NetAppコンソールを制限モードで起動して実行すると、制限モードでサポートされているサービスの使用を開始できます。 
+summary: NetApp Consoleを制限モードで起動して実行すると、制限モードでサポートされているサービスの使用を開始できます。 
 ---
 = 次にできること（制限モード）
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetAppコンソールを制限モードで起動して実行すると�
 
 
 [role="lead"]
-NetAppコンソールを制限モードで起動して実行すると、制限モードでサポートされているサービスの使用を開始できます。
+NetApp Consoleを制限モードで起動して実行すると、制限モードでサポートされているサービスの使用を開始できます。
 
 ヘルプについては、次のサービスのドキュメントを参照してください。
 
@@ -28,4 +28,4 @@ NetAppコンソールを制限モードで起動して実行すると、制限�
 
 
 .関連情報
-link:concept-modes.html["NetAppコンソールの展開モード"]
+link:concept-modes.html["NetApp Consoleの展開モード"]

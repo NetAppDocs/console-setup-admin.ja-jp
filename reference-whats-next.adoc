@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-whats-next.html 
 keywords: standard mode, what you can do 
-summary: NetAppコンソールを標準モードでログインしてセットアップしたので、ユーザーはストレージ システムを作成および検出し、 NetAppデータ サービスを使用できるようになります。 
+summary: NetApp Consoleを標準モードでログインしてセットアップしたので、ユーザーはストレージ システムを作成および検出し、 NetAppデータ サービスを使用できるようになります。 
 ---
 = 次にできること（標準モード）
 :hardbreaks:
@@ -14,12 +14,12 @@ summary: NetAppコンソールを標準モードでログインしてセット�
 
 
 [role="lead"]
-NetAppコンソールを標準モードでログインしてセットアップしたので、ユーザーはストレージ システムを作成および検出し、 NetAppデータ サービスを使用できるようになります。
+NetApp Consoleを標準モードでログインしてセットアップしたので、ユーザーはストレージ システムを作成および検出し、 NetAppデータ サービスを使用できるようになります。
 
 
 TIP: AWS、Microsoft Azure、または Google Cloud にコンソール エージェントをインストールした場合、コンソールは、エージェントがインストールされている場所にある Amazon S3 バケット、Azure Blob ストレージ、または Google Cloud Storage バケットに関する情報を自動的に検出します。これらのシステムは自動的に *システム* ページに追加されます。
 
-ヘルプが必要な場合は、 https://docs.netapp.com/us-en/console-family/["NetAppコンソールドキュメントのホームページ"^] NetAppコンソールのドキュメントを表示します。
+ヘルプが必要な場合は、 https://docs.netapp.com/us-en/console-family/["NetApp Consoleドキュメントのホームページ"^] NetApp Consoleのドキュメントを表示します。
 
 .関連情報
-link:concept-modes.html["NetAppコンソールの展開モード"]
+link:concept-modes.html["NetApp Consoleの展開モード"]

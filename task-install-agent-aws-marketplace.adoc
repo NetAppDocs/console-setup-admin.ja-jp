@@ -78,7 +78,7 @@ AWS リソースを管理します。エンドポイントは AWS リージョ�
  a| 
 \https://signin.b2c.netapp.com
  a| 
-NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
 
 
 
@@ -92,7 +92,7 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-NetAppコンソール内で機能とサービスを提供します。
+NetApp Console内で機能とサービスを提供します。
 
 
 
@@ -126,7 +126,7 @@ NetAppコンソール内で機能とサービスを提供します。
 ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
 +
 --
-* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
 * SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
 * アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
 +
@@ -137,7 +137,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
 +
 --
 コンソール エージェントを作成した後、このネットワーク アクセスを実装します。
@@ -207,7 +207,7 @@ AWS Marketplace からコンソールエージェントを作成すると、デ�
 
 
 .手順
-. に行く https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace でのNetAppコンソールエージェントのリスト"^]
+. に行く https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace でのNetApp Consoleエージェントのリスト"^]
 . マーケットプレイス ページで、[サブスクリプションを続行] を選択します。
 . ソフトウェアをサブスクライブするには、「*利用規約に同意*」を選択します。
 +
@@ -257,7 +257,7 @@ NOTE: インストールが失敗した場合は、トラブルシューティ�
 .. システムの名前を入力します。
 .. *安全な環境で実行していますか?* の下で、制限モードを無効のままにします。
 +
-コンソールを標準モードで使用するには、制限モードを無効にしておきます。安全な環境があり、このアカウントをコンソールのバックエンド サービスから切断する場合にのみ、制限モードを有効にする必要があります。もしそうなら、link:task-quick-start-restricted-mode.html["NetAppコンソールを制限モードで使い始めるための手順"] 。
+コンソールを標準モードで使用するには、制限モードを無効にしておきます。安全な環境があり、このアカウントをコンソールのバックエンド サービスから切断する場合にのみ、制限モードを有効にする必要があります。もしそうなら、link:task-quick-start-restricted-mode.html["NetApp Consoleを制限モードで使い始めるための手順"] 。
 
 .. *始めましょう*を選択します。
 
@@ -267,6 +267,6 @@ NOTE: インストールが失敗した場合は、トラブルシューティ�
 .結果
 コンソール エージェントがインストールされ、コンソール組織に設定されました。
 
-ウェブブラウザを開いて、 https://console.netapp.com["NetAppコンソール"^]コンソールでコンソール エージェントの使用を開始します。
+ウェブブラウザを開いて、 https://console.netapp.com["NetApp Console"^]コンソールでコンソール エージェントの使用を開始します。
 
-コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["NetAppコンソールから S3 バケットを管理する方法を学びます"^]
+コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["NetApp Consoleから S3 バケットを管理する方法を学びます"^]

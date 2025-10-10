@@ -3,7 +3,7 @@
 
 
 .手順
-. に行く https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace でのNetAppコンソールエージェントのリスト"^]
+. に行く https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace でのNetApp Consoleエージェントのリスト"^]
 . マーケットプレイス ページで、[サブスクリプションを続行] を選択します。
 . ソフトウェアをサブスクライブするには、「*利用規約に同意*」を選択します。
 +

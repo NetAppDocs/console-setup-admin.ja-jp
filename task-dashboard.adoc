@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-dashboard.html 
 keywords: bluexp, dashboard, console, home page 
-summary: NetAppコンソール内では、ホーム ページでメトリックを表示できます。 
+summary: NetApp Console内では、ホーム ページでメトリックを表示できます。 
 ---
-= NetAppコンソールのホームページでメトリックを表示する
+= NetApp Consoleのホームページでメトリックを表示する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetAppコンソール内では、ホーム ページでメトリック�
 
 
 [role="lead"]
-ストレージ資産の健全性を監視することで、ストレージ保護に関する問題を認識し、解決するための手順を実行できるようになります。 NetAppコンソールのホーム ページを使用して、 NetApp Backup and Recovery からのバックアップとリストアのステータスと、ランサムウェア攻撃のリスクがあるワークロードの数、またはNetApp Ransomware Resilience によって保護されているワークロードの数を表示します。個々のクラスターとCloud Volumes ONTAPのストレージ容量、 ONTAPアラート、クラスターまたはCloud Volumes ONTAPシステムごとのストレージ パフォーマンス容量、保有しているさまざまな種類のライセンスなどを確認できます。
+ストレージ資産の健全性を監視することで、ストレージ保護に関する問題を認識し、解決するための手順を実行できるようになります。 NetApp Consoleのホーム ページを使用して、 NetApp Backup and Recoveryからのバックアップとリストアのステータスと、 NetApp Ransomware Resilienceによって示されるようにランサムウェア攻撃のリスクがあるワークロードや保護されているワークロードの数を表示します。個々のクラスターとCloud Volumes ONTAPのストレージ容量、 ONTAPアラート、クラスターまたはCloud Volumes ONTAPシステムごとのストレージ パフォーマンス容量、保有しているさまざまな種類のライセンスなどを確認できます。
 
 ホーム ページのすべてのペインには、組織レベルのデータが表示されます。ストレージ容量とストレージ パフォーマンス ペインには、IAM 権限に基づいてユーザーがアクセスできるプロジェクトに関連付けられたシステムが表示されます。
 
@@ -25,35 +25,35 @@ NOTE: ホーム ページで正確なメトリックを得るには、適切な�
 
 
 
-== 必要なNetAppコンソールのロール
+== 必要なNetApp Consoleのロール
 
 ホーム ページの各ペインには、異なるユーザー ロールが必要です。
 
-* *ストレージ容量ペイン*: NetAppコンソールシステムページを表示する機能
+* *ストレージ容量ペイン*: NetApp Consoleシステムページを表示する機能
 * * ONTAPアラート ペイン*: フォルダまたはプロジェクト管理者、運用サポート アナリスト、組織管理者、組織閲覧者、スーパー管理者、スーパー閲覧者
-* *ストレージパフォーマンス容量ペイン*: NetAppコンソールシステムページを表示する機能
-* *ライセンスとサブスクリプション ペイン*: フォルダーまたはプロジェクト管理者、組織管理者、組織閲覧者、スーパー管理者、スーパー閲覧者
+* *ストレージパフォーマンス容量ペイン*: NetApp Consoleシステムページを表示する機能
+* *Licenses and subscriptionsペイン*: フォルダーまたはプロジェクト管理者、組織管理者、組織閲覧者、スーパー管理者、スーパー閲覧者
 * *ランサムウェア耐性ペイン*: フォルダまたはプロジェクト管理者、組織管理者、ランサムウェア耐性管理者、ランサムウェア耐性閲覧者、スーパー管理者、スーパー閲覧者
 * *バックアップとリカバリ ペイン*: バックアップとリカバリ バックアップ管理者、バックアップとリカバリ スーパー管理者、バックアップとリカバリ バックアップ ビューアー、バックアップとリカバリ クローン管理者、フォルダーまたはプロジェクト管理者、組織管理者、バックアップとリカバリ リストア管理者、スーパー管理者、スーパー ビューアー
 
 
 ペインにアクセスする権限がない場合は、そのペインを使用する権限がないことを示すメッセージが表示されます。
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["NetAppコンソールのアクセス ロールについて学習します。"] 。
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["NetApp Consoleのアクセス ロールについて学習します。"] 。
 
 .手順
-. NetAppコンソール メニューから、[*ホーム*] を選択します。
+. NetApp Consoleメニューから、[*ホーム*] を選択します。
 +
 組織管理者のロールがあり、エージェントまたはストレージ システムが設定されていない場合は、ホーム ページに開始方法の情報が表示されます。
 
 +
-image:screenshot-home-greenfield.png["NetAppコンソールのホームページで新規ユーザーを歓迎"]
+image:screenshot-home-greenfield.png["NetApp Consoleのホームページで新規ユーザーを歓迎"]
 
 +
-NetAppコンソールがすでに設定されていて、少なくとも 1 つのコンソール エージェントが有効になっていて、そのエージェントに少なくとも 1 つのクラスタまたはCloud Volumes ONTAPシステムが追加されている場合は、ホーム ページにストレージ環境に関するメトリックが表示されます。
+NetApp Consoleがすでに設定されていて、少なくとも 1 つのコンソール エージェントが有効になっていて、そのエージェントに少なくとも 1 つのクラスタまたはCloud Volumes ONTAPシステムが追加されている場合は、ホーム ページにストレージ環境に関するメトリックが表示されます。
 
 +
-image:screenshot-home-metrics.png["NetAppコンソールのホームページにメトリックが表示される"]
+image:screenshot-home-metrics.png["NetApp Consoleのホームページにメトリックが表示される"]
 
 
 
@@ -63,7 +63,7 @@ image:screenshot-home-metrics.png["NetAppコンソールのホームページに
 
 次の条件が満たされると、ホーム ページでメトリックを表示できます。
 
-* NetAppコンソールの SaaS インスタンスにログインしています。
+* NetApp Consoleの SaaS インスタンスにログインしています。
 * 既存のストレージ リソース (エージェントとクラスター、またはCloud Volumes ONTAPシステム) を持つ組織に属している。
 * 少なくとも 1 つのコンソール エージェントが有効になっています。
 * そのエージェントに少なくとも 1 つのクラスターまたはCloud Volumes ONTAPシステムが追加されています。
@@ -94,7 +94,7 @@ image:screenshot-home-metrics.png["NetAppコンソールのホームページに
 TIP: 複数のプロジェクトがある場合、システム ページと比較して、ストレージ容量ペインに異なるデータが表示されることがあります。これは、システム ページにはプロジェクト レベルに基づいて情報が表示されるのに対し、ストレージ容量ペインには組織レベルの情報が表示されるためです。また、パフォーマンスを最適化するためにデータがその期間キャッシュされるため、このペインのデータは最大 15 分間、実際の値と異なる場合があります。
 
 .手順
-. NetAppコンソール メニューから、ストレージ容量ペインを確認します。
+. NetApp Consoleメニューから、ストレージ容量ペインを確認します。
 . ストレージ容量ペインで、*表示* を選択して、コンソール システム ページに移動します。
 . 「システム」ページで、表示するクラスターを含むプロジェクトを選択します。
 . 「システム」ページでクラスターを選択すると、そのクラスターの詳細が表示されます。
@@ -104,7 +104,7 @@ TIP: 複数のプロジェクトがある場合、システム ページと比�
 
 == ONTAPアラートを表示する
 
-NetAppオンプレミスONTAP環境における問題または潜在的なリスクを表示します。EMS 以外のアラートと EMS アラートがいくつか表示されます。
+NetAppオンプレミスONTAP環境における問題または潜在的なリスクを表示します。  EMS 以外のアラートと EMS アラートがいくつか表示されます。
 
 データは5分ごとに更新されます。
 
@@ -142,7 +142,7 @@ ONTAPアラートの詳細については、 https://docs.netapp.com/us-en/conso
 表示される可能性のあるアラートのリストについては、以下を参照してください。 https://docs.netapp.com/us-en/console-alerts/alerts-use-dashboard.html["ONTAPストレージの潜在的なリスクを表示する"^] 。
 
 .手順
-. NetAppコンソール メニューから、 ONTAPアラート ペインを確認します。
+. NetApp Consoleメニューから、 ONTAPアラート ペインを確認します。
 . 必要に応じて、重大度レベルを選択してアラートをフィルタリングするか、影響領域に基づいてアラートを表示するようにフィルターを変更します。
 . ONTAPアラート ペインで [*表示*] を選択して、コンソール アラート ページに移動します。
 
@@ -159,7 +159,7 @@ ONTAPアラートの詳細については、 https://docs.netapp.com/us-en/conso
 TIP: キャッシュによりパフォーマンスが最適化されますが、このペインのデータが実際の値と最大 15 分間異なる可能性があります。
 
 .手順
-. NetAppコンソール メニューから、ストレージ パフォーマンス ペインを確認します。
+. NetApp Consoleメニューから、ストレージ パフォーマンス ペインを確認します。
 . ストレージ パフォーマンス ペインで [*表示*] を選択すると、パフォーマンス容量、IOPS、レイテンシに関するすべてのクラスターとCloud Volumes ONTAPシステム データが一覧表示される [パフォーマンス] ページに移動します。
 . クラスターを選択すると、System Manager でその詳細が表示されます。
 
@@ -168,7 +168,7 @@ TIP: キャッシュによりパフォーマンスが最適化されますが、
 
 == 所有しているライセンスとサブスクリプションを表示する
 
-[ライセンスとサブスクリプション] ペインで次の情報を確認します。
+[Licenses and subscriptions]ペインで次の情報を確認します。
 
 * 保有しているライセンスとサブスクリプションの合計数。
 * 保有しているライセンスおよびサブスクリプションの種類ごとの数 (直接ライセンス、年間契約、または PAYGO)。
@@ -182,27 +182,27 @@ TIP: キャッシュによりパフォーマンスが最適化されますが、
 TIP: キャッシュによりパフォーマンスが最適化されますが、このペインのデータが実際の値と最大 15 分間異なる可能性があります。
 
 .手順
-. NetAppコンソール メニューから、[ライセンスとサブスクリプション] ペインを確認します。
-. [ライセンスとサブスクリプション] ペインで [*表示*] を選択して、コンソールの [ライセンスとサブスクリプション] ページに移動します。
+. NetApp Consoleメニューから、 [Licenses and subscriptions]ペインを確認します。
+. [Licenses and subscriptions]ペインで [*表示*] を選択して、コンソールの[Licenses and subscriptions]ページに移動します。
 
 
 
 
 == ランサムウェア耐性ステータスの表示
 
-NetApp Ransomware Resilience データ サービスを使用して、ワークロードがランサムウェア攻撃のリスクにさらされているかどうか、または保護されているかどうかを確認します。保護されているデータの合計量を確認したり、推奨されるアクションの数を表示したり、ランサムウェア保護に関連するアラートの数を表示したりできます。
+NetApp Ransomware Resilienceデータ サービスを使用して、ワークロードがランサムウェア攻撃のリスクにさらされているかどうか、または保護されているかどうかを確認します。保護されているデータの合計量を確認したり、推奨されるアクションの数を表示したり、ランサムウェア保護に関連するアラートの数を表示したりできます。
 
 データは 5 分ごとに更新され、 NetApp Ransomware Resilience Dashboard に表示されるデータと一致します。
 
-https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["NetAppのランサムウェア耐性について学ぶ"^] 。
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["NetApp Ransomware Resilienceについて学ぶ"^] 。
 
 .手順
-. NetAppコンソール メニューから、ランサムウェア耐性ペインを確認します。
+. NetApp Consoleメニューから、ランサムウェア耐性ペインを確認します。
 . ランサムウェア耐性ペインで次のいずれかを実行します。
 +
-** *表示* を選択して、 NetAppランサムウェア耐性ダッシュボードに移動します。詳細については、 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["NetAppランサムウェア耐性ダッシュボードを使用してワークロードの健全性を監視する"^] 。
-** NetAppランサムウェア耐性ダッシュボードの「推奨アクション」を確認します。詳細については、 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["NetAppランサムウェア耐性ダッシュボードで保護推奨事項を確認する"^] 。
-** アラート リンクを選択して、 NetApp Ransomware Resilience Alerts ページでアラートを確認します。詳細については、 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["NetApp Ransomware Resilience で検出されたランサムウェアアラートを処理する"^] 。
+** *表示* を選択して、 NetApp Ransomware Resilienceダッシュボードに移動します。詳細については、 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["NetApp Ransomware Resilienceダッシュボードを使用してワークロードの健全性を監視する"^] 。
+** NetApp Ransomware Resilienceダッシュボードの「推奨アクション」を確認します。詳細については、 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["NetApp Ransomware Resilienceダッシュボードで保護推奨事項を確認する"^] 。
+** アラート リンクを選択して、 NetApp Ransomware Resilience Alerts ページでアラートを確認します。詳細については、 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["NetApp Ransomware Resilienceで検出されたランサムウェアアラートを処理する"^] 。
 
 
 
@@ -211,7 +211,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 
 == バックアップとリカバリのステータスを表示する
 
-NetApp Backup and Recovery からのバックアップと復元の全体的なステータスを確認します。保護されているリソースと保護されていないリソースの数を確認できます。ワークロードの保護のためのバックアップと復元操作の割合を確認することもできます。パーセンテージが高いほど、データ保護が強化されていることを示します。
+NetApp Backup and Recoveryからのバックアップと復元の全体的なステータスを確認します。保護されているリソースと保護されていないリソースの数を確認できます。ワークロードの保護のためのバックアップと復元操作の割合を確認することもできます。パーセンテージが高いほど、データ保護が強化されていることを示します。
 
 データは5分ごとに更新されます。
 
@@ -219,6 +219,6 @@ NetApp Backup and Recovery からのバックアップと復元の全体的な�
 TIP: キャッシュによりパフォーマンスが最適化されますが、このペインのデータが実際の値と最大 15 分間異なる可能性があります。
 
 .手順
-. NetAppコンソール メニューから、[バックアップとリカバリ] ペインを確認します。
-. *表示* を選択して、 NetAppバックアップおよびリカバリ ダッシュボードに移動します。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetAppバックアップおよびリカバリのドキュメント"^] 。
+. NetApp Consoleメニューから、[バックアップとリカバリ] ペインを確認します。
+. *表示* を選択して、 NetApp Backup and Recoveryダッシュボードに移動します。詳細については、 https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetApp Backup and Recoveryのドキュメント"^] 。
 

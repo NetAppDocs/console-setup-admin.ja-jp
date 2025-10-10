@@ -40,7 +40,7 @@ NetApp は、次の Linux オペレーティング システムでエージェ�
 
 
 --
-NetAppコンソールからの導入:: Ubuntu 22.04 LTS
+NetApp Consoleからの導入:: Ubuntu 22.04 LTS
 AWS Marketplaceからのデプロイメント:: Ubuntu 22.04 LTS
 Azure Marketplace からのデプロイ:: Ubuntu 22.04 LTS
 

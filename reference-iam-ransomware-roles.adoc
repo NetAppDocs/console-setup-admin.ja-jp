@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: NetAppコンソール内で、ユーザーにNetApp Ransomware Resilience へのアクセスを提供するロールを付与できます。 
+summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供する役割を付与できます。 
 ---
-= NetAppコンソールのランサムウェア耐性アクセス ロール
+= NetApp Consoleのランサムウェア耐性アクセス ロール
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetAppコンソール内で、ユーザーにNetApp Ransomware Resilien
 
 
 [role="lead"]
-ランサムウェア レジリエンス ロールは、ユーザーにNetAppランサムウェア レジリエンスへのアクセスを提供します。  2 つの役割は、ランサムウェア保護管理者とランサムウェア保護閲覧者です。  2 つの役割の主な違いは、ランサムウェア耐性において実行できるアクションです。
+ランサムウェア レジリエンス ロールは、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供します。  2 つの役割は、ランサムウェア保護管理者とランサムウェア保護閲覧者です。  2 つの役割の主な違いは、ランサムウェア耐性において実行できるアクションです。
 
 次の表は、各ロールが実行できるアクションを示しています。
 

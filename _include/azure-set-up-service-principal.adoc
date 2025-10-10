@@ -15,7 +15,7 @@ image:screenshot_azure_ad.png["Microsoft Azure の Active Directory サービス
 . アプリケーションの詳細を指定します。
 +
 ** *名前*: アプリケーションの名前を入力します。
-** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプでもNetAppコンソールで使用できます)。
+** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプもNetApp Consoleで使用できます)。
 ** *リダイレクト URI*: このフィールドは空白のままにすることができます。
 
 
@@ -98,7 +98,7 @@ image:screenshot_azure_service_principal_role.png["Azure ポータルの「ロ�
 これで、サービス プリンシパルに、コンソール エージェントをデプロイするために必要な Azure アクセス許可が付与されました。
 
 +
-複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetAppコンソールでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
+複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetApp Consoleでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
 
 
 

@@ -4,7 +4,7 @@ permalink: task-iam-manage-resources.html
 keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management 
 summary: リソースを特定のプロジェクトやフォルダーに関連付けることで、組織のリソース階層を管理します。 
 ---
-= NetAppコンソール組織内のリソース階層を管理する
+= NetApp Console組織内のリソース階層を管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -108,7 +108,7 @@ NOTE: 検出されたリソースを組織全体から削除するには、*シ�
 
 == 関連情報
 
-* link:concept-identity-and-access-management.html["NetAppコンソールのIDとアクセスについて学ぶ"]
-* link:task-iam-get-started.html["NetAppコンソールでIDとアクセスを開始する"]
+* link:concept-identity-and-access-management.html["NetApp ConsoleのIDとアクセスについて学ぶ"]
+* link:task-iam-get-started.html["NetApp ConsoleでIDとアクセスを開始する"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["IDとアクセスのためのAPIについて学ぶ"^]
 

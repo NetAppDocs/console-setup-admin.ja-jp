@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-overview.html 
 keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
-summary: NetAppコンソールは、オンプレミスおよびクラウド環境全体にわたるエンタープライズ規模のNetAppストレージおよびデータ サービスの集中管理を提供します。 
+summary: NetApp Consoleは、オンプレミスおよびクラウド環境全体にわたるエンタープライズ規模のNetAppストレージおよびデータ サービスの集中管理を提供します。 
 ---
-= NetAppコンソールについて学ぶ
+= NetApp Consoleについて学ぶ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetAppコンソールは、オンプレミスおよびクラウド環�
 
 
 [role="lead"]
-NetAppコンソールは、オンプレミスとクラウド環境全体にわたるNetAppストレージとNetAppデータ サービスをエンタープライズ グレードで集中管理し、リアルタイムの分析情報、ワークフローの高速化、管理の簡素化を実現し、安全性とコンプライアンスを高く維持します。
+NetApp Consoleは、オンプレミスとクラウド環境全体にわたるNetAppストレージとNetApp Data Servicesをエンタープライズ グレードで集中管理し、リアルタイムの分析情報、ワークフローの高速化、管理の簡素化を実現し、安全性とコンプライアンスを高く維持します。
 
 ストレージ管理、データ モビリティ、データ保護、データ分析と制御を提供するサービス (SaaS) プラットフォームとして利用できます。管理機能は、Web ベースのコンソールと API を通じて提供されます。
 
@@ -82,23 +82,23 @@ image:screenshot-canvas.png["複数のシステムを表示するコンソール
 
 ストレージアラート:: ONTAP環境の容量、可用性、パフォーマンス、保護、セキュリティに関連する問題を表示します。
 自動化ハブ:: スクリプト ソリューションを使用して、 NetApp製品とサービスの導入と統合を自動化します。
-NetAppバックアップとリカバリ:: クラウドとオンプレミスのデータをバックアップおよび復元します。
-NetAppデータ分類:: アプリケーション データとクラウド環境のプライバシーを準備します。
-NetAppコピーと同期:: オンプレミスとクラウド データ ストア間でデータを同期します。
+NetApp Backup and Recovery:: クラウドとオンプレミスのデータをバックアップおよび復元します。
+NetApp Data Classification:: アプリケーション データとクラウド環境のプライバシーを準備します。
+NetApp Copy and Sync:: オンプレミスとクラウド データ ストア間でデータを同期します。
 NetAppデジタルアドバイザー (Active IQ):: 予測分析とプロアクティブなサポートを使用して、データ インフラストラクチャを最適化します。
-ライセンスとサブスクリプション:: ライセンスとサブスクリプションを管理および監視します。
-NetAppディザスタリカバリ:: VMware Cloud on Amazon FSx for ONTAPを災害復旧サイトとして使用して、オンプレミスの VMware ワークロードを保護します。
+Licenses and subscriptions:: ライセンスとサブスクリプションを管理および監視します。
+NetApp Disaster Recovery:: VMware Cloud on Amazon FSx for ONTAPを災害復旧サイトとして使用して、オンプレミスの VMware ワークロードを保護します。
 ライフサイクルプランニング:: 現在または予測される容量が低いクラスターを特定し、データ階層化または追加容量の推奨事項を実装します。
-NetAppランサムウェア耐性:: ランサムウェア攻撃につながる可能性のある異常を検出します。ワークロードを保護および回復します。
-NetAppレプリケーション:: バックアップと災害復旧をサポートするために、ストレージ システム間でデータを複製します。
+NetApp Ransomware Resilience:: ランサムウェア攻撃につながる可能性のある異常を検出します。ワークロードを保護および回復します。
+NetApp Replication:: バックアップと災害復旧をサポートするために、ストレージ システム間でデータを複製します。
 ソフトウェアアップデート:: ONTAPアップグレードの評価、計画、実行を自動化します。
 サステナビリティダッシュボード:: ストレージ システムの持続可能性を分析します。
-NetAppクラウド階層化:: オンプレミスのONTAPストレージをクラウドに拡張します。
-NetAppボリューム キャッシング:: 書き込み可能なキャッシュ ボリュームを作成して、データへのアクセスを高速化したり、頻繁にアクセスされるボリュームのトラフィックを軽減したりします。
+NetApp Cloud Tiering:: オンプレミスのONTAPストレージをクラウドに拡張します。
+NetApp Volume Caching:: 書き込み可能なキャッシュ ボリュームを作成して、データへのアクセスを高速化したり、頻繁にアクセスされるボリュームのトラフィックを軽減したりします。
 NetAppワークロード:: Amazon FSx for NetApp ONTAPを使用して主要なワークロードを設計、セットアップ、運用します。
 
 
-https://www.netapp.com/bluexp/["NetAppコンソールと利用可能なデータサービスの詳細"^]
+https://www.netapp.com/bluexp/["NetApp Consoleと利用可能なデータサービスの詳細"^]
 
 
 
@@ -110,13 +110,13 @@ https://www.netapp.com/bluexp/["NetAppコンソールと利用可能なデータ
 
 == 料金
 
-NetAppコンソールは無料です。クラウドにコンソール エージェントを展開したり、クラウドに展開された制限モードを使用したりする場合は、コストが発生します。一部のNetAppデータ サービスにはコストがかかります。https://bluexp.netapp.com/pricing["NetAppデータサービスの価格について"^]
+NetApp Consoleは無料です。クラウドにコンソール エージェントを展開したり、クラウドに展開された制限モードを使用したりする場合は、コストが発生します。一部のNetAppデータ サービスにはコストがかかります。https://bluexp.netapp.com/pricing["NetAppデータサービスの価格について"^]
 
 
 
-== NetAppコンソールの仕組み
+== NetApp Consoleの仕組み
 
-NetAppコンソールは、SaaS レイヤー、リソースおよびアクセス管理システム、ストレージ システムを管理してNetAppデータ サービスを有効にするコンソール エージェント、およびビジネス要件を満たすさまざまな導入モードを通じて提供される Web ベースのコンソールです。
+NetApp Consoleは、SaaS レイヤー、リソースおよびアクセス管理システム、ストレージ システムを管理してNetAppデータ サービスを有効にするコンソール エージェント、およびビジネス要件を満たすさまざまな導入モードを通じて提供される Web ベースのコンソールです。
 
 
 
@@ -134,7 +134,7 @@ NetAppコンソールは、SaaS レイヤー、リソースおよびアクセス
 * _フォルダ_を使用すると、関連するプロジェクトをグループ化できます
 * リソース管理では、リソースを1つ以上のフォルダまたはプロジェクトに関連付けることができます。
 * アクセス管理により、組織階層のさまざまなレベルのメンバーに役割を割り当てることができます。
-* link:concept-identity-and-access-management.html["NetAppコンソールのIAMの詳細"]
+* link:concept-identity-and-access-management.html["NetApp ConsoleのIAMの詳細"]
 
 
 
@@ -149,7 +149,7 @@ link:concept-agents.html["コンソールエージェントの詳細"] 。
 
 === 展開モード
 
-NetApp は、 NetAppコンソールに 2 つの導入モードを提供しています。_標準モード_ では、完全な機能のためにソフトウェア アズ ア サービス (SaaS) レイヤーを使用し、_制限モード_ では、アウトバウンド接続を制限します。
+NetApp は、NetApp Consoleに 2 つの導入モードを提供しています。_標準モード_ では、完全な機能のためにソフトウェア アズ ア サービス (SaaS) レイヤーを使用し、_制限モード_ では、アウトバウンド接続が制限されます。
 
 NetApp は、アウトバウンド接続を必要としないサイト向けにBlueXP を引き続き提供します。  BlueXP はプライベート モードでのみ利用できます。link:task-quick-start-private-mode.html["インターネットに接続できないサイト向けのBlueXP (プライベート モード) について説明します。"]
 

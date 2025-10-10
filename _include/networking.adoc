@@ -17,7 +17,7 @@ VNetとサブネット:: コンソール エージェントを作成するとき
 アウトバウンドインターネットアクセス:: コンソール エージェントを展開するネットワークの場所には、特定のエンドポイントに接続するための送信インターネット接続が必要です。
 
 
-NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetAppコンソールを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
+NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetApp Consoleを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
 +
 --
 link:reference-networking-saas-console.html["NetAppコンソールから接続されたエンドポイントのリストを表示します"] 。
@@ -36,7 +36,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabli
 ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
 +
 --
-* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
 * SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
 * アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
 +
@@ -70,5 +70,5 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 
 
-NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
 

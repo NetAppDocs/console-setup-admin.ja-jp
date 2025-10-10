@@ -85,7 +85,7 @@ Azure China リージョンのリソースを管理します。
  a| 
 \https://signin.b2c.netapp.com
  a| 
-NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
 
 
 
@@ -99,7 +99,7 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-NetAppコンソール内で機能とサービスを提供します。
+NetApp Console内で機能とサービスを提供します。
 
 
 
@@ -133,7 +133,7 @@ NetAppコンソール内で機能とサービスを提供します。
 ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
 +
 --
-* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
 * SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
 * アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
 +
@@ -144,7 +144,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
 +
 --
 コンソール エージェントを作成した後、ネットワーク要件を実装します。
@@ -189,7 +189,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azur
 . の内容をコピーしますlink:reference-permissions-azure.html["コネクタのカスタムロール権限"]JSON ファイルに保存します。
 . 割り当て可能なスコープに Azure サブスクリプション ID を追加して、JSON ファイルを変更します。
 +
-NetAppコンソールで使用する各 Azure サブスクリプションの ID を追加する必要があります。
+NetApp Consoleで使用する各 Azure サブスクリプションの ID を追加する必要があります。
 
 +
 *例*
@@ -241,7 +241,7 @@ image:screenshot_azure_ad.png["Microsoft Azure の Active Directory サービス
 . アプリケーションの詳細を指定します。
 +
 ** *名前*: アプリケーションの名前を入力します。
-** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプでもNetAppコンソールで使用できます)。
+** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプもNetApp Consoleで使用できます)。
 ** *リダイレクト URI*: このフィールドは空白のままにすることができます。
 
 
@@ -325,7 +325,7 @@ image:screenshot_azure_service_principal_role.png["Azure ポータルの「ロ�
 これで、サービス プリンシパルに、コンソール エージェントをデプロイするために必要な Azure アクセス許可が付与されました。
 
 +
-複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetAppコンソールでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
+複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetApp Consoleでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
 
 
 
@@ -401,7 +401,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 
 .手順
-. Azure Marketplace のNetAppコンソール エージェント VM ページに移動します。
+. Azure Marketplace のNetApp Consoleエージェント VM ページに移動します。
 +
 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["商用リージョン向けの Azure Marketplace ページ"^]
 
@@ -468,7 +468,7 @@ Azure ポータルに移動し、1 つ以上のサブスクリプションのコ
 .手順
 . Azure ポータルから *サブスクリプション* サービスを開き、サブスクリプションを選択します。
 +
-*サブスクリプション* サービスからロールを割り当てることが重要です。これは、サブスクリプション レベルでのロール割り当ての範囲を指定するためです。 _scope_ は、アクセスが適用されるリソースのセットを定義します。別のレベル (たとえば、仮想マシン レベル) でスコープを指定すると、 NetAppコンソール内からアクションを完了する機能に影響します。
+*サブスクリプション* サービスからロールを割り当てることが重要です。これは、サブスクリプション レベルでのロール割り当ての範囲を指定するためです。 _scope_ は、アクセスが適用されるリソースのセットを定義します。別のレベル (たとえば、仮想マシン レベル) でスコープを指定すると、 NetApp Console内からアクションを完了する機能に影響します。
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure ドキュメント: Azure RBAC のスコープを理解する"^]
@@ -492,7 +492,7 @@ NOTE: コンソール オペレーターは、ポリシーで提供されるデ�
 
 
 .次の手順
-に行く https://console.netapp.com["NetAppコンソール"^]コンソール エージェントの使用を開始します。
+に行く https://console.netapp.com["NetApp Console"^]コンソール エージェントの使用を開始します。
 
 --
 .サービスプリンシパル

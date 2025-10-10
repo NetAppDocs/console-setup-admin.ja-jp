@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-adfs.html 
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: 'Active Directory フェデレーション サービス (AD FS) と連携して、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。' 
+summary: 'Active Directory フェデレーション サービス (AD FS) と連携して、 NetApp Consoleのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。' 
 ---
-= NetAppコンソールを Active Directory フェデレーション サービス (AD FS) と連携する
+= NetApp ConsoleをActive Directory フェデレーション サービス (AD FS) と連携する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Active Directory フェデレーション サービス (AD FS) と連�
 
 
 [role="lead"]
-Active Directory フェデレーション サービス (AD FS) をNetAppコンソールと連携させて、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してコンソールにログインできるようになります。
+Active Directory フェデレーション サービス (AD FS) をNetApp Consoleと連携させて、 NetApp Consoleのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してコンソールにログインできるようになります。
 
 .必要な役割
 フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
@@ -22,13 +22,13 @@ Active Directory フェデレーション サービス (AD FS) をNetAppコン�
 
 NOTE: 企業の IdP またはNetAppサポート サイトと連携できます。  NetApp、両方ではなく、どちらか一方を選択することを推奨しています。
 
-NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetAppコンソールをサービス プロバイダーとして信頼するように ID プロバイダーを構成します。次に、ID プロバイダーの構成を使用してコンソールで接続を作成します。
+NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetApp Consoleをサービス プロバイダーとして信頼するように ID プロバイダーを構成します。次に、ID プロバイダーの構成を使用してコンソールで接続を作成します。
 
-AD FS サーバーとのフェデレーションを設定して、 NetAppコンソールのシングル サインオン (SSO) を有効にすることができます。このプロセスでは、コンソールをサービス プロバイダーとして信頼するように AD FS を構成し、 NetAppコンソールで接続を作成します。
+AD FS サーバーとのフェデレーションを設定して、 NetApp Consoleのシングル サインオン (SSO) を有効にすることができます。このプロセスでは、コンソールをサービス プロバイダーとして信頼するように AD FS を構成し、 NetApp Consoleで接続を作成します。
 
 .開始する前に
 * 管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。
-* フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。link:task-federation-verify-domain.html["NetAppコンソールでドメインを確認する"]トピック。
+* フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。link:task-federation-verify-domain.html["NetApp Consoleでドメインを確認する"]トピック。
 
 
 .手順
@@ -54,7 +54,7 @@ AD FS サーバーとのフェデレーションを設定して、 NetAppコン�
 (new-object Net.WebClient -property @{Encoding = [Text.Encoding]::UTF8}).DownloadString("https://raw.github.com/auth0/AD FS-auth0/master/AD FS.ps1") | iex
 AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.auth0.com/login/callback"
 ----
-.. または、AD FS 管理コンソールで信頼を手動で作成することもできます。信頼を作成するときは、次のNetAppコンソールの値を使用します。
+.. または、AD FS 管理コンソールで信頼を手動で作成することもできます。信頼を作成するときは、次のNetApp Consoleの値を使用します。
 +
 *** 信頼信頼識別子を作成するときは、**YOUR_TENANT** 値を使用します。 `netapp-cloud-account`
 *** *WS-Federation のサポートを有効にする* を選択した場合は、**YOUR_AUTH0_DOMAIN** 値を使用します。 `netapp-cloud-account.auth0.com`
@@ -64,7 +64,7 @@ AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.a
 
 
 +
-NetApp、メタデータ URL を使用してNetAppコンソールが最新の AD FS 構成を自動的に取得できるようにすることをお勧めします。フェデレーション メタデータ ファイルをダウンロードした場合は、AD FS 構成に変更があるたびに、 NetAppコンソールで手動で更新する必要があります。
+NetApp、メタデータ URL を使用してNetApp Consoleが最新の AD FS 構成を自動的に取得できるようにすることをお勧めします。フェデレーション メタデータ ファイルをダウンロードした場合は、AD FS 構成に変更があるたびに、 NetApp Consoleで手動で更新する必要があります。
 
 . コンソールに戻り、[次へ] を選択して接続を作成します。
 . AD FS との接続を作成します。
@@ -80,4 +80,4 @@ NetApp、メタデータ URL を使用してNetAppコンソールが最新の AD
 . プロセスを完了するには、[完了] を選択します。
 
 
-フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetAppコンソールにログインできるようになります。
+フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetApp Consoleにログインできるようになります。

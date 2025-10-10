@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-install-options-aws.html 
 keywords: install connector aws, aws install connector, connector aws, aws connector, installation options, aws marketplace, manual install, deploy 
-summary: AWS でコンソールエージェントを作成する方法はいくつかあります。  NetAppコンソールから直接行うのが最も一般的な方法です。 
+summary: AWS でコンソールエージェントを作成する方法はいくつかあります。  NetApp Consoleから直接行うのが最も一般的な方法です。 
 ---
 = AWS のコンソールエージェントのインストールオプション
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: AWS でコンソールエージェントを作成する方法はいく�
 
 
 [role="lead"]
-AWS でコンソールエージェントを作成する方法はいくつかあります。  NetAppコンソールから直接行うのが最も一般的な方法です。
+AWS でコンソールエージェントを作成する方法はいくつかあります。  NetApp Consoleから直接行うのが最も一般的な方法です。
 
 次のインストール オプションが利用可能です。
 

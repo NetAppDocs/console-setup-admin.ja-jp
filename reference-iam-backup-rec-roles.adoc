@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-backup-rec-roles.html 
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, role-based access 
-summary: コンソール内でNetApp Backup and Recovery にアクセスできるように、ユーザーに次のロールを割り当てることができます。バックアップとリカバリのロールにより、組織内でユーザーが実行する必要があるタスクに固有のロールを柔軟に割り当てることができます。ロールの割り当て方法は、独自のビジネスおよびストレージ管理の実践によって異なります。 
+summary: コンソール内でNetApp Backup and Recoveryにアクセスできるように、ユーザーに次のロールを割り当てることができます。バックアップとリカバリのロールにより、組織内でユーザーが実行する必要があるタスクに固有のロールを柔軟に割り当てることができます。ロールの割り当て方法は、独自のビジネスおよびストレージ管理の実践によって異なります。 
 ---
-= NetAppコンソールのNetAppバックアップおよびリカバリの役割
+= NetApp ConsoleのNetApp Backup and Recoveryの役割
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,24 +14,24 @@ summary: コンソール内でNetApp Backup and Recovery にアクセスでき�
 
 
 [role="lead"]
-コンソール内でNetApp Backup and Recovery にアクセスできるように、ユーザーに次のロールを割り当てることができます。バックアップとリカバリのロールにより、組織内でユーザーが実行する必要があるタスクに固有のロールを柔軟に割り当てることができます。ロールの割り当て方法は、独自のビジネスおよびストレージ管理の実践によって異なります。
+コンソール内でNetApp Backup and Recoveryにアクセスできるように、ユーザーに次のロールを割り当てることができます。バックアップとリカバリのロールにより、組織内でユーザーが実行する必要があるタスクに固有のロールを柔軟に割り当てることができます。ロールの割り当て方法は、独自のビジネスおよびストレージ管理の実践によって異なります。
 
-このサービスは、 NetApp Backup and Recovery に固有の次のロールを使用します。
+このサービスは、NetApp Backup and Recoveryに固有の次のロールを使用します。
 
-* *バックアップおよびリカバリのスーパー管理者*: NetAppバックアップおよびリカバリであらゆるアクションを実行します。
-* *バックアップとリカバリ バックアップ管理者*: NetAppバックアップとリカバリで、ローカル スナップショットへのバックアップ、セカンダリ ストレージへの複製、オブジェクト ストレージへのバックアップ アクションを実行します。
-* *バックアップおよびリカバリの復元管理者*: NetAppバックアップおよびリカバリを使用してワークロードを復元します。
-* *バックアップおよびリカバリ クローン管理者*: NetAppバックアップおよびリカバリを使用してアプリケーションとデータをクローンします。
-* *バックアップおよびリカバリ ビューア*: NetAppバックアップおよびリカバリの情報を表示しますが、アクションは実行しません。
+* *バックアップおよびリカバリ スーパー管理者*: NetApp Backup and Recoveryであらゆるアクションを実行します。
+* *バックアップとリカバリ バックアップ管理者*: NetApp Backup and Recoveryで、ローカル スナップショットへのバックアップ、セカンダリ ストレージへの複製、オブジェクト ストレージへのバックアップ アクションを実行します。
+* *バックアップおよびリカバリの復元管理者*: NetApp Backup and Recoveryを使用してワークロードを復元します。
+* *バックアップおよびリカバリ クローン管理者*: NetApp Backup and Recoveryを使用してアプリケーションとデータをクローンします。
+* *バックアップおよびリカバリ ビューア*: NetApp Backup and Recoveryの情報を表示しますが、アクションは実行しません。
 
 
-NetAppコンソールのアクセスロールの詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["コンソールのセットアップと管理に関するドキュメント"^] 。
+NetApp Consoleのアクセスロールの詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["コンソールのセットアップと管理に関するドキュメント"^] 。
 
 
 
 == 一般的なアクションに使用されるロール
 
-次の表は、すべてのワークロードに対して各NetAppバックアップおよびリカバリ ロールが実行できるアクションを示しています。
+次の表は、すべてのワークロードに対して各NetApp Backup and Recoveryロールが実行できるアクションを示しています。
 
 [cols="20,20,15,15a,15a,15a"]
 |===
@@ -293,13 +293,13 @@ NetAppコンソールのアクセスロールの詳細については、 https:/
 
 == ワークロード固有のアクションに使用されるロール
 
-次の表は、各NetAppバックアップおよびリカバリ ロールが特定のワークロードに対して実行できるアクションを示しています。
+次の表は、各NetApp Backup and Recoveryロールが特定のワークロードに対して実行できるアクションを示しています。
 
 
 
 === Kubernetes ワークロード
 
-この表は、Kubernetes ワークロードに固有のアクションに対して各NetAppバックアップおよびリカバリ ロールが実行できるアクションを示しています。
+この表は、Kubernetes ワークロードに固有のアクションに対して各NetApp Backup and Recoveryロールが実行できるアクションを示しています。
 
 [cols="20,20,15,15a,15a"]
 |===

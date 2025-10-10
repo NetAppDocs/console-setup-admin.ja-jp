@@ -4,7 +4,7 @@ permalink: task-monitor-cm-operations.html
 keywords: administer, monitor, timeline, notifications, alerts, events, notification center, email, audit page, audit action 
 summary: コンソールが実行している操作のステータスを監視して、対処する必要がある問題があるかどうかを確認できます。監査ページや通知センターからステータスを確認したり、電子メールに通知を送信したりすることができます。 
 ---
-= NetAppコンソールの操作を監視する
+= NetApp Consoleの操作を監視する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -82,7 +82,7 @@ summary: コンソールが実行している操作のステータスを監視�
 
 通知センターを使用すると、開始した操作のステータスを表示したり、特定の種類のシステム アクティビティに関するアラート通知を設定したりできます。一方、アラートを使用すると、容量、可用性、パフォーマンス、保護、セキュリティに関連するONTAPストレージ環境の問題や潜在的なリスクを確認できます。
 
-https://docs.netapp.com/us-en/console-alerts/index.html["NetAppコンソールアラートの詳細"^]
+https://docs.netapp.com/us-en/console-alerts/index.html["NetApp Consoleアラートの詳細"^]
 
 
 
@@ -140,12 +140,12 @@ image:screenshot_notification_filters.png["通知センターで使用できる 
 
 [NOTE]
 ====
-* コンソールは、エージェント、ライセンスとサブスクリプション、 NetApp Copy and Sync、およびNetApp Backup and Recovery に関する電子メール通知を送信します。
+* コンソールは、エージェント、ライセンスとサブスクリプション、 NetApp Copy and Sync、およびNetApp Backup and Recoveryに関する電子メール通知を送信します。
 * コンソール エージェントがインターネットにアクセスできないサイトにインストールされている場合、電子メール通知の送信はサポートされません。
 
 
 ====
-通知センターで設定したフィルターによって、電子メールで受信する通知の種類が決まるわけではありません。デフォルトでは、すべての組織管理者はすべての「重要」および「推奨事項」通知のメールを受信します。これらの通知はすべてのサービスに渡されるため、エージェントやNetApp Backup and Recovery などの特定のサービスについてのみ通知を受信するように選択することはできません。
+通知センターで設定したフィルターによって、電子メールで受信する通知の種類が決まるわけではありません。デフォルトでは、すべての組織管理者はすべての「重要」および「推奨事項」通知のメールを受信します。これらの通知はすべてのサービスに渡されるため、エージェントやNetApp Backup and Recoveryなどの特定のサービスについてのみ通知を受信するように選択することはできません。
 
 他のすべてのユーザーと受信者は通知メールを受信しないように設定されているため、追加のユーザーに対して通知設定を構成する必要があります。
 

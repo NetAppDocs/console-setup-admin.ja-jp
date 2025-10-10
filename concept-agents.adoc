@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-agents.html 
 keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
-summary: _コンソール エージェント_ は、クラウド ネットワークまたはオンプレミス ネットワークで実行されるNetAppソフトウェアです。コンソール エージェントを使用して、 NetAppコンソール サービスをストレージ環境に接続します。 
+summary: _コンソール エージェント_ は、クラウド ネットワークまたはオンプレミス ネットワークで実行されるNetAppソフトウェアです。コンソール エージェントを使用して、 NetApp Consoleサービスをストレージ環境に接続します。 
 ---
-= NetAppコンソールエージェントについて学ぶ
+= NetApp Consoleエージェントについて学ぶ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: _コンソール エージェント_ は、クラウド ネットワー
 
 
 [role="lead"]
-_コンソール エージェント_ は、クラウド ネットワークまたはオンプレミス ネットワークで実行されます。コンソール エージェントを使用して、 NetAppコンソール サービスをストレージ環境に接続します。
+_コンソール エージェント_ は、クラウド ネットワークまたはオンプレミス ネットワークで実行されます。コンソール エージェントを使用して、 NetApp Consoleサービスをストレージ環境に接続します。
 
 
 
@@ -29,14 +29,14 @@ _コンソール エージェント_ は、クラウド ネットワークまた
 * 自動化ハブ
 * Azure NetApp Files
 +
-Azure NetApp Files を管理するためにコンソール エージェントは必要ありませんが、 NetApp Data Classification を使用してAzure NetApp Files をスキャンするにはコンソール エージェントが必要です。
+Azure NetApp Files を管理するためにコンソール エージェントは必要ありませんが、 NetApp Data Classificationを使用してAzure NetApp Files をスキャンするにはコンソール エージェントが必要です。
 
 * Google Cloud NetApp Volumes
-* NetAppコピーと同期
+* NetApp Copy and Sync
 * デジタルアドバイザー
 * ライセンスの使用状況を監視します。サブスクリプションの監視にはコンソールエージェントが必要です。
 +
-通常、コンソール エージェントなしでNetAppコンソールにライセンスを追加できます。
+通常、コンソール エージェントなしでNetApp Consoleにライセンスを追加できます。
 
 +
 データは Cloud Cloud Volumes ONTAP Cloud Volumes ONTAP のノードベースのライセンスを追加するにはエージェントが必要です。
@@ -63,18 +63,18 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 * Amazon FSx for ONTAP の管理機能
 * Amazon S3 ストレージ
 * Azure BLOB ストレージ
-* NetAppバックアップとリカバリ
+* NetApp Backup and Recovery
 * データ分類
 * Cloud Volumes ONTAP
-* NetAppディザスタリカバリ
+* NetApp Disaster Recovery
 * Eシリーズシステム
 * 経済効率^1^
 * Google Cloud Storage バケット
 * オンプレミスのONTAPクラスタとNetAppデータ サービスの統合
 * NetAppランサムウェア耐性
 * StorageGRIDシステム
-* NetAppクラウド階層化
-* NetAppボリューム キャッシング
+* NetApp Cloud Tiering
+* NetApp Volume Caching
 
 
 ^1^ コンソール エージェントがなくてもこれらのサービスにアクセスできますが、アクションを開始するにはコンソール エージェントが必要です。
@@ -85,7 +85,7 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 
 == コンソールエージェントは常に動作している必要があります
 
-コンソール エージェントは、 NetAppコンソールの基本的な部分です。関連するエージェントが常に稼働し、動作し、アクセス可能であることを確認するのはお客様側の責任です。コンソールはエージェントの短時間の停止に対処できますが、インフラストラクチャの障害は迅速に修正する必要があります。
+コンソール エージェントは、 NetApp Consoleの基本的な部分です。関連するエージェントが常に稼働し、動作し、アクセス可能であることを確認するのはお客様側の責任です。コンソールはエージェントの短時間の停止に対処できますが、インフラストラクチャの障害は迅速に修正する必要があります。
 
 このドキュメントは EULA によって管理されます。ドキュメントの指示に従わずに製品を操作すると、製品の機能や EULA の権利に影響する可能性があります。
 
@@ -119,7 +119,7 @@ Google Cloud でコンソールとデータサービスを使用するには、G
 
 コンソールを制限モードで使用するには、コンソール エージェントをインストールし、コンソール エージェント上でローカルに実行されているコンソール インターフェイスにアクセスします。
 
-link:concept-modes.html["NetAppコンソールの導入モードについて学ぶ"] 。
+link:concept-modes.html["NetApp Consoleの導入モードについて学ぶ"] 。
 
 
 
@@ -127,16 +127,16 @@ link:concept-modes.html["NetAppコンソールの導入モードについて学�
 
 コンソール エージェントは、コンソールから直接インストールすることも、クラウド プロバイダーのマーケットプレイスからインストールすることも、独自の Linux ホストまたは VCenter 環境にソフトウェアを手動でインストールすることもできます。開始方法は、コンソールを標準モードで使用するか、制限モードで使用するかによって異なります。
 
-* link:concept-modes.html["NetAppコンソールの導入モードについて学ぶ"]
-* link:task-quick-start-standard-mode.html["NetAppコンソールを標準モードで使い始める"]
-* link:task-quick-start-restricted-mode.html["制限モードでNetAppコンソールを使い始める"]
+* link:concept-modes.html["NetApp Consoleの導入モードについて学ぶ"]
+* link:task-quick-start-standard-mode.html["NetApp Consoleを標準モードで使い始める"]
+* link:task-quick-start-restricted-mode.html["制限モードでNetApp Consoleを使い始める"]
 
 
 
 
 == クラウド権限
 
-NetAppコンソールからコンソール エージェントを直接作成するには特定の権限が必要であり、コンソール エージェント インスタンス自体には別の権限セットが必要です。コンソールから直接 AWS または Azure にコンソールエージェントを作成すると、コンソールは必要な権限を持つコンソールエージェントを作成します。
+NetApp Consoleからコンソール エージェントを直接作成するには特定の権限が必要であり、コンソール エージェント インスタンス自体には別の権限セットが必要です。コンソールから直接 AWS または Azure にコンソールエージェントを作成すると、コンソールは必要な権限を持つコンソールエージェントを作成します。
 
 コンソールを標準モードで使用する場合、権限を付与する方法は、コンソール エージェントを作成する方法によって異なります。
 
@@ -147,7 +147,7 @@ NetAppコンソールからコンソール エージェントを直接作成す�
 ** link:concept-install-options-aws.html["AWS でのエージェントのインストールオプション"]
 ** link:concept-install-options-azure.html["Azure のエージェントのインストール オプション"]
 ** link:concept-install-options-google.html["Google Cloud のエージェントのインストール オプション"]
-** link:task-install-agent-on-prem.html#agent-permission-aws-azure["オンプレミス展開のクラウド権限を設定する"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["オンプレミス展開用のクラウド権限を設定する"]
 
 
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["制限モードの権限を設定する"]
@@ -156,7 +156,7 @@ NetAppコンソールからコンソール エージェントを直接作成す�
 コンソール エージェントが日常の操作に必要な正確な権限を確認するには、次のページを参照してください。
 
 * link:reference-permissions-aws.html["コンソールエージェントがAWS権限を使用する方法を学ぶ"]
-* link:reference-permissions-azure.html["コンソールエージェントがAzure権限を使用する方法を学ぶ"]
+* link:reference-permissions-azure.html["コンソールエージェントがAzureの権限を使用する方法を学ぶ"]
 * link:reference-permissions-gcp.html["コンソール エージェントが Google Cloud 権限を使用する方法を説明します。"]
 
 
@@ -192,6 +192,6 @@ NetApp は、機能の追加と安定性の向上のためにエージェント 
 
 エージェントの展開の例をいくつか示します。
 
-* マルチクラウド環境 (AWS と Azure など) があり、AWS にエージェントを 1 つ、Azure に別のエージェントを配置することを希望しています。それぞれが、それらの環境で実行されているCloud Volumes ONTAPシステムを管理します。
+* マルチクラウド環境 (AWS と Azure など) があり、AWS に 1 つのエージェントを配置し、Azure に別のエージェントを配置することを希望しています。それぞれが、それらの環境で実行されているCloud Volumes ONTAPシステムを管理します。
 * サービス プロバイダーは、1 つのコンソール組織を使用して顧客にサービスを提供しながら、別の組織を使用してビジネス ユニットの 1 つに災害復旧サービスを提供する場合があります。各組織には独自のエージェントが必要です。
 

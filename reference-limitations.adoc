@@ -4,7 +4,7 @@ permalink: reference-limitations.html
 keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, BlueXP, Cloud Volumes ONTAP, days, running, Connectors should remain running, imdsv2, https tokens, agents should remain running, Console agent 
 summary: 今回のリリースでサポートされていない、または今回のリリースでは正常に機能しないプラットフォーム、デバイス、機能が記載されています。これらの制限事項をよく確認してください。 
 ---
-= NetAppコンソールの既知の制限
+= NetApp Consoleの既知の制限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -26,7 +26,7 @@ summary: 今回のリリースでサポートされていない、または今�
 
 === 172番台のIPアドレスとの競合の可能性
 
-NetAppコンソールは、172.17.0.0/16 および 172.18.0.0/16 の範囲の IP アドレスを持つ 2 つのインターフェースを持つエージェントを展開します。
+NetApp Consoleは、172.17.0.0/16 および 172.18.0.0/16 の範囲の IP アドレスを持つ 2 つのインターフェースを持つエージェントを展開します。
 
 ネットワークにこれらのいずれかの範囲で構成されたサブネットがある場合、コンソールからの接続エラーが発生する可能性があります。たとえば、コンソールでオンプレミスのONTAPクラスターを検出できない場合があります。
 

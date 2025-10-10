@@ -28,5 +28,5 @@
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWSドキュメント: IAMポリシーの追加と削除"^]
 
 
-. コンソール エージェントをインストールした後、 NetAppコンソールに追加できるアクセス キーがユーザーにあることを確認します。
+. コンソール エージェントをインストールした後、 NetApp Consoleに追加できるアクセス キーがユーザーにあることを確認します。
 

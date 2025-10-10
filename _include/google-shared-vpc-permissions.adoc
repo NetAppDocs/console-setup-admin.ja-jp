@@ -22,11 +22,11 @@ compute.networkUser
 
 
 | エージェントサービスアカウント | カスタム | 奉仕プロジェクト  a| 
-link:reference-permissions-gcp.html["エージェントサービスアカウントポリシー"]
+link:reference-permissions-gcp.html["エージェント サービス アカウント ポリシー"]
 | compute.networkUser デプロイメントマネージャー.エディター | サービス プロジェクトでCloud Volumes ONTAPとサービスをデプロイおよび保守する 
 
 
-| Cloud Volumes ONTAPサービス アカウント | カスタム | 奉仕プロジェクト | storage.admin メンバー: serviceAccount.user としてのNetAppコンソール サービス アカウント | 該当なし | （オプション） NetApp Cloud TieringおよびNetApp Backup and Recoveryの場合 
+| Cloud Volumes ONTAPサービス アカウント | カスタム | 奉仕プロジェクト | storage.admin メンバー: serviceAccount.user としてのNetApp Consoleサービス アカウント | 該当なし | （オプション） NetApp Cloud TieringおよびNetApp Backup and Recoveryの場合 
 
 
 | Google API サービス エージェント | Google Cloud | 奉仕プロジェクト  a| 
@@ -44,7 +44,7 @@ compute.networkUser
 |===
 注：
 
-. ファイアウォール ルールをデプロイメントに渡さず、コンソールで自動的に作成するように選択した場合にのみ、ホスト プロジェクトで deploymentmanager.editor が必要になります。ルールが指定されていない場合、 NetAppコンソールは、VPC0 ファイアウォール ルールを含むデプロイメントをホスト プロジェクトに作成します。
+. ファイアウォール ルールをデプロイメントに渡さず、コンソールで自動的に作成するように選択した場合にのみ、ホスト プロジェクトで deploymentmanager.editor が必要になります。ルールが指定されていない場合、 NetApp Consoleは、VPC0 ファイアウォール ルールを含むデプロイメントをホスト プロジェクトに作成します。
 . firewall.create と firewall.delete は、デプロイメントにファイアウォール ルールを渡さず、コンソールで自動的に作成するように選択した場合にのみ必要です。これらの権限は、コンソール アカウントの .yaml ファイルにあります。共有 VPC を使用して HA ペアを展開する場合、これらの権限は VPC1、2、3 のファイアウォール ルールを作成するために使用されます。他のすべてのデプロイメントでは、これらの権限は VPC0 のルールの作成にも使用されます。
 . クラウド階層化の場合、階層化サービス アカウントには、プロジェクト レベルだけでなく、サービス アカウントに対する serviceAccount.user ロールが必要です。現在、プロジェクト レベルで serviceAccount.user を割り当てると、getIAMPolicy を使用してサービス アカウントをクエリしても権限が表示されません。
 

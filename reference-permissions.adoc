@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-permissions.html 
 keywords: permissions, actions 
-summary: NetAppコンソールの機能とサービスを使用するには、コンソールがクラウド環境で操作を実行できるように権限を付与する必要があります。このページのリンクを使用して、目標に応じて必要な権限にすばやくアクセスします。 
+summary: NetApp Consoleの機能とサービスを使用するには、コンソールがクラウド環境で操作を実行できるように権限を付与する必要があります。このページのリンクを使用して、目標に応じて必要な権限にすばやくアクセスします。 
 ---
-= NetAppコンソールの権限の概要
+= NetApp Consoleの権限の概要
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: NetAppコンソールの機能とサービスを使用するには、�
 
 
 [role="lead"]
-NetAppコンソールの機能とサービスを使用するには、コンソールがクラウド環境で操作を実行できるように権限を付与する必要があります。このページのリンクを使用して、目標に応じて必要な権限にすばやくアクセスします。
+NetApp Consoleの機能とサービスを使用するには、コンソールがクラウド環境で操作を実行できるように権限を付与する必要があります。このページのリンクを使用して、目標に応じて必要な権限にすばやくアクセスします。
 
 
 
 == AWS 権限
 
-NetAppコンソールには、コンソールエージェントと個々のサービスに対する AWS 権限が必要です。
+NetApp Consoleには、コンソールエージェントと個々のサービスに対する AWS 権限が必要です。
 
 
 
@@ -38,14 +38,14 @@ NetAppコンソールには、コンソールエージェントと個々のサ�
 |===
 
 
-=== NetAppバックアップとリカバリ
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
 | 目標 | 説明 | リンク 
 
 
-| NetApp Backup and Recovery を使用してオンプレミスのONTAPクラスターを Amazon S3 にバックアップする | ONTAPボリュームでバックアップをアクティブ化するときに、 NetApp Backup and Recovery では、特定の権限を持つ IAM ユーザーのアクセス キーとシークレットを入力するように求められます。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-aws.html["バックアップ用のS3権限を設定する"^] 
+| NetApp Backup and Recoveryを使用してオンプレミスのONTAPクラスターを Amazon S3 にバックアップする | ONTAPボリュームでバックアップをアクティブ化するときに、 NetApp Backup and Recovery、特定の権限を持つ IAM ユーザーのアクセス キーとシークレットを入力するように求められます。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-aws.html["バックアップ用のS3権限を設定する"^] 
 |===
 
 
@@ -60,7 +60,7 @@ NetAppコンソールには、コンソールエージェントと個々のサ�
 |===
 
 
-=== NetAppコピーと同期
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===
@@ -88,7 +88,7 @@ NetAppコンソールには、コンソールエージェントと個々のサ�
 |===
 
 
-=== NetAppクラウド階層化
+=== NetApp Cloud Tiering
 
 [cols="20,60,20"]
 |===
@@ -127,7 +127,7 @@ link:reference-permissions-azure.html["コンソールエージェントの Azur
 |===
 
 
-=== NetAppバックアップとリカバリ
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -135,7 +135,7 @@ link:reference-permissions-azure.html["コンソールエージェントの Azur
 
 
 | Cloud Volumes ONTAP をAzure BLOB ストレージにバックアップする  a| 
-NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアップする場合、次のシナリオでコンソール エージェントに権限を追加する必要があります。
+NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアップする場合、次のシナリオでコンソール エージェントに権限を追加する必要があります。
 
 * 「検索と復元」機能を使用したい
 * 顧客管理暗号鍵（CMEK）を使用したい
@@ -146,7 +146,7 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 
 
 
-| オンプレミスのONTAPクラスターを Azure BLOB ストレージにバックアップする | NetApp Backup and Recovery を使用してオンプレミスの ONTAP クラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html["バックアップとリカバリを使用してオンプレミスの ONTAPデータを Azure Blob ストレージにバックアップする"^] 
+| オンプレミスのONTAPクラスターを Azure BLOB ストレージにバックアップする | NetApp Backup and Recoveryを使用してオンプレミスの ONTAP クラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html["バックアップとリカバリを使用してオンプレミスの ONTAPデータを Azure Blob ストレージにバックアップする"^] 
 |===
 
 
@@ -177,11 +177,11 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 | コンソールからコンソールエージェントを展開する | コンソールからコンソール エージェントをデプロイする Google Cloud ユーザーには、Google Cloud にコンソール エージェントをデプロイするための特定の権限が必要です。 | link:task-install-agent-google-console-gcloud.html#console-permissions-google["コンソールエージェントを作成するための権限を設定する"] 
 
 
-| コンソールエージェントに権限を付与する | コンソール エージェント VM インスタンスのサービス アカウントには、日常的な操作のための特定の権限が必要です。展開中に、サービス アカウントをコンソール エージェントに関連付ける必要があります。また、後続のリリースで新しい権限が追加されるため、ポリシーが最新であることを確認する必要があります。 | link:task-install-agent-google-console-gcloud.html#console-permissions-google["コンソールエージェントの権限を設定する"] 
+| コンソールエージェントに権限を付与する | コンソール エージェント VM インスタンスのサービス アカウントには、日常的な操作のための特定の権限が必要です。展開中に、サービス アカウントをコンソール エージェントに関連付ける必要があります。また、後続のリリースで新しい権限が追加された場合、ポリシーが最新であることを確認する必要があります。 | link:task-install-agent-google-console-gcloud.html#console-permissions-google["コンソールエージェントの権限を設定する"] 
 |===
 
 
-=== NetAppバックアップとリカバリ
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -189,7 +189,7 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 
 
 | Cloud Volumes ONTAPをGoogle Cloudにバックアップする  a| 
-NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアップする場合、次のシナリオでコンソール エージェントに権限を追加する必要があります。
+NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアップする場合、次のシナリオでコンソール エージェントに権限を追加する必要があります。
 
 * 「検索と復元」機能を使用したい
 * 顧客管理暗号鍵（CMEK）を使用したい
@@ -201,11 +201,11 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 
 
 
-| オンプレミスのONTAPクラスタを Google Cloud にバックアップする | NetApp Backup and Recovery を使用してオンプレミスの ONTAP クラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html["バックアップとリカバリを使用してオンプレミスのONTAPデータを Google Cloud Storage にバックアップする"^] 
+| オンプレミスのONTAPクラスタを Google Cloud にバックアップする | NetApp Backup and Recoveryを使用してオンプレミスの ONTAP クラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html["バックアップとリカバリを使用してオンプレミスのONTAPデータを Google Cloud Storage にバックアップする"^] 
 |===
 
 
-=== NetAppコピーと同期
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===
@@ -225,18 +225,18 @@ NetApp Backup and Recovery を使用してCloud Volumes ONTAPをバックアッ�
 
 
 
-=== NetAppバックアップとリカバリ
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
 | 目標 | 説明 | リンク 
 
 
-| オンプレミスのONTAPクラスターをStorageGRIDにバックアップする | StorageGRID をONTAPクラスターのバックアップ ターゲットとして準備する場合、 NetApp Backup and Recovery によって、特定の権限を持つ IAM ユーザーのアクセス キーとシークレットを入力するように求められます。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["StorageGRIDをバックアップターゲットとして準備する"^] 
+| オンプレミスのONTAPクラスターをStorageGRIDにバックアップする | StorageGRID をONTAPクラスターのバックアップ ターゲットとして準備する場合、 NetApp Backup and Recovery、特定の権限を持つ IAM ユーザーのアクセス キーとシークレットを入力するように求められます。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["StorageGRIDをバックアップターゲットとして準備する"^] 
 |===
 
 
-=== NetAppクラウド階層化
+=== NetApp Cloud Tiering
 
 [cols="20,60,20"]
 |===

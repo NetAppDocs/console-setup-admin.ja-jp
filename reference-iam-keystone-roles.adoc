@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-keystone-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
-summary: NetAppコンソールの ID およびアクセス管理では、組織のメンバーに割り当てることができる 2 つのKeystoneロールが提供されます。 
+summary: NetApp ConsoleのID およびアクセス管理では、組織のメンバーに割り当てることができる 2 つのKeystoneロールが提供されます。 
 ---
-= NetAppコンソールのKeystoneアクセスロール
+= NetApp ConsoleのKeystoneアクセス ロール
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: NetAppコンソールの ID およびアクセス管理では、組織�
 [role="lead"]
 Keystoneロールは、 Keystoneダッシュボードへのアクセスを提供し、ユーザーがKeystoneサブスクリプションを表示および管理できるようにします。  Keystone の役割には、 Keystone管理者とKeystoneビューアーの 2 つがあります。  2 つのロールの主な違いは、 Keystoneで実行できるアクションです。  Keystone管理者ロールは、サービス リクエストの作成やサブスクリプションの変更が許可される唯一のロールです。
 
-.NetAppコンソールのKeystoneロールの例
+.NetApp ConsoleのKeystoneロールの例
 XYZ 社には、 Keystoneサブスクリプション情報を閲覧できる、さまざまな部門のストレージ エンジニアが 4 人います。これらのユーザー全員がKeystoneサブスクリプションを監視する必要がありますが、サービス リクエストを作成できるのはチーム リーダーのみです。チーム メンバーのうち 3 名に * Keystoneビューア* ロールが付与され、チーム リーダーには * Keystone管理者* ロールが付与されるため、会社のサービス リクエストを制御できるようになります。
 
 次の表は、各Keystoneロールが実行できるアクションを示しています。
@@ -91,7 +91,7 @@ XYZ 社には、 Keystoneサブスクリプション情報を閲覧できる、�
 
 
 
-3+| *ライセンスとサブスクリプション*: 
+3+| *Licenses and subscriptions*: 
 
 
 | ライセンスとサブスクリプションを表示できます  a| 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-agent-on-prem-ova.html 
 keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install 
-summary: VMWare ユーザーの場合は、OVA を使用して VCenter にコンソール エージェントをインストールできます。  OVA のダウンロードまたは URL は、 NetAppコンソールから入手できます。 
+summary: VMWare ユーザーの場合は、OVA を使用して VCenter にコンソール エージェントをインストールできます。  OVA のダウンロードまたは URL は、NetApp Consoleから入手できます。 
 ---
 = VCenter を使用してオンプレミスにコンソール エージェントをインストールする
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: VMWare ユーザーの場合は、OVA を使用して VCenter にコン
 
 
 [role="lead"]
-VMWare ユーザーの場合は、OVA を使用して VCenter にコンソール エージェントをインストールできます。  OVA のダウンロードまたは URL は、 NetAppコンソールから入手できます。
+VMWare ユーザーの場合は、OVA を使用して VCenter にコンソール エージェントをインストールできます。  OVA のダウンロードまたは URL は、NetApp Consoleから入手できます。
 
 
 NOTE: VCenter ツールと共にコンソール エージェントをインストールすると、VM Web コンソールを使用してメンテナンス タスクを実行できます。link:task-agent-vm-config.html["エージェントの VM コンソールの詳細について説明します。"]
@@ -53,7 +53,7 @@ NOTE: エージェントを ESXi ホストに直接インストールするの�
 アウトバウンドインターネットアクセス:: コンソール エージェントを展開するネットワークの場所には、特定のエンドポイントに接続するための送信インターネット接続が必要です。
 
 
-WebベースのNetAppコンソールを使用する際にコンピュータから接続されるエンドポイント::
+WebベースのNetApp Consoleを使用する際にコンピュータから接続されるエンドポイント::
 +
 --
 Web ブラウザからコンソールにアクセスするコンピュータは、複数のエンドポイントに接続できる必要があります。コンソール エージェントを設定し、コンソールを日常的に使用するには、コンソールを使用する必要があります。
@@ -122,7 +122,7 @@ AWS リソースを管理します。エンドポイントは AWS リージョ�
  a| 
 \https://signin.b2c.netapp.com
  a| 
-NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
 
 
 
@@ -136,7 +136,7 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-NetAppコンソール内で機能とサービスを提供します。
+NetApp Console内で機能とサービスを提供します。
 
 
 
@@ -197,7 +197,7 @@ Azure China リージョンのリソースを管理します。
  a| 
 \https://signin.b2c.netapp.com
  a| 
-NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
 
 
 
@@ -211,7 +211,7 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-NetAppコンソール内で機能とサービスを提供します。
+NetApp Console内で機能とサービスを提供します。
 
 
 
@@ -244,7 +244,7 @@ NetAppコンソール内で機能とサービスを提供します。
 ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
 +
 --
-* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
 * SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
 * アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
 +
@@ -255,7 +255,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
 
 
 
@@ -296,7 +296,7 @@ NOTE: オンプレミスにコンソール エージェントがインストー�
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWSドキュメント: IAMポリシーの追加と削除"^]
 
 
-. コンソール エージェントをインストールした後、 NetAppコンソールに追加できるアクセス キーがユーザーにあることを確認します。
+. コンソール エージェントをインストールした後、 NetApp Consoleに追加できるアクセス キーがユーザーにあることを確認します。
 
 
 .結果
@@ -321,7 +321,7 @@ image:screenshot_azure_ad.png["Microsoft Azure の Active Directory サービス
 . アプリケーションの詳細を指定します。
 +
 ** *名前*: アプリケーションの名前を入力します。
-** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプでもNetAppコンソールで使用できます)。
+** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプもNetApp Consoleで使用できます)。
 ** *リダイレクト URI*: このフィールドは空白のままにすることができます。
 
 
@@ -405,7 +405,7 @@ image:screenshot_azure_service_principal_role.png["Azure ポータルの「ロ�
 これで、サービス プリンシパルに、コンソール エージェントをデプロイするために必要な Azure アクセス許可が付与されました。
 
 +
-複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetAppコンソールでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
+複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetApp Consoleでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
 
 
 
@@ -453,13 +453,13 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 
 == VCenter環境にコンソールエージェントをインストールする
 
-NetApp は、VCenter 環境へのコンソール エージェントのインストールをサポートしています。 OVA ファイルには、VMware 環境に展開できる事前構成済みの VM イメージが含まれています。ファイルのダウンロードまたは URL の展開は、 NetAppコンソールから直接行えます。コンソール エージェント ソフトウェアと自己署名証明書が含まれています。
+NetApp は、VCenter 環境へのコンソール エージェントのインストールをサポートしています。 OVA ファイルには、VMware 環境に展開できる事前構成済みの VM イメージが含まれています。ファイルのダウンロードまたは URL の展開は、 NetApp Consoleから直接行えます。コンソール エージェント ソフトウェアと自己署名証明書が含まれています。
 
 
 
 === OVAをダウンロードするかURLをコピーしてください
 
-OVA をダウンロードするか、 NetAppコンソールから OVA URL を直接コピーします。
+OVA をダウンロードするか、 NetApp Consoleから OVA URL を直接コピーします。
 
 . *管理 > エージェント*を選択します。
 . *概要*ページで、*エージェントのデプロイ > オンプレミス*を選択します。
@@ -534,7 +534,7 @@ NOTE: デプロイメントが失敗した場合は、エージェント ホス�
 
 
 
-== NetAppコンソールにコンソールエージェントを登録する
+== NetApp Consoleにコンソールエージェントを登録する
 
 コンソールにログインし、コンソール エージェントを組織に関連付けます。ログイン方法は、コンソールを使用しているモードによって異なります。コンソールを標準モードで使用している場合は、SaaS Web サイトからログインします。コンソールを制限モードまたはプライベート モードで使用している場合は、コンソール エージェント ホストからローカルにログインします。
 
@@ -568,7 +568,7 @@ NOTE: デプロイメントが失敗した場合は、エージェント ホス�
 .AWS
 --
 .開始する前に
-これらの AWS 認証情報を作成したばかりの場合は、使用可能になるまでに数分かかることがあります。資格情報をコンソールに追加する前に、数分お待ちください。
+これらの AWS 認証情報を作成したばかりの場合は、使用可能になるまでに数分かかることがあります。資格情報をコンソールに追加する前に、数分待ってください。
 
 .手順
 . *管理 > 資格情報*を選択します。
@@ -583,7 +583,7 @@ NOTE: デプロイメントが失敗した場合は、エージェント ホス�
 
 
 
-これで、 https://console.netapp.com["NetAppコンソール"^]コンソール エージェントの使用を開始します。
+これで、 https://console.netapp.com["NetApp Console"^]コンソール エージェントの使用を開始します。
 
 --
 .Azure
@@ -610,7 +610,7 @@ NOTE: デプロイメントが失敗した場合は、エージェント ホス�
 
 
 .結果
-これで、コンソール エージェントに、ユーザーに代わって Azure でアクションを実行するために必要なアクセス許可が付与されました。これで、 https://console.netapp.com["NetAppコンソール"^]コンソール エージェントの使用を開始します。
+これで、コンソール エージェントに、ユーザーに代わって Azure でアクションを実行するために必要なアクセス許可が付与されました。これで、 https://console.netapp.com["NetApp Console"^]コンソール エージェントの使用を開始します。
 
 --
 ====

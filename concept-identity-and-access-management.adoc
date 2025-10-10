@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-identity-and-access-management.html 
 keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM 
-summary: 'NetAppコンソールの ID およびアクセス管理 (IAM) を使用すると、組織のリソースへのアクセスを制御できます。' 
+summary: 'NetApp Consoleの ID およびアクセス管理 (IAM) を使用すると、組織のリソースへのアクセスを制御できます。' 
 ---
-= NetAppコンソールのアイデンティティとアクセス管理について学ぶ
+= NetApp Consoleのアイデンティティとアクセス管理について学ぶ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'NetAppコンソールの ID およびアクセス管理 (IAM) を使�
 
 
 [role="lead"]
-NetAppコンソール内の ID およびアクセス管理 (IAM) を使用すると、 NetAppリソースへのアクセスを整理および制御できます。組織の階層に従ってリソースを整理できます。たとえば、地理的な場所、サイト、またはビジネス ユニット別にリソースを整理できます。その後、階層の特定の部分のメンバーに IAM ロールを割り当てて、階層の他の部分にあるリソースへのアクセスを防ぐことができます。
+NetApp Console内の ID およびアクセス管理 (IAM) を使用すると、 NetAppリソースへのアクセスを整理および制御できます。組織の階層に従ってリソースを整理できます。たとえば、地理的な場所、サイト、またはビジネス ユニット別にリソースを整理できます。その後、階層の特定の部分のメンバーに IAM ロールを割り当てて、階層の他の部分にあるリソースへのアクセスを防ぐことができます。
 
 * link:concept-modes.html["コンソールの展開モードについて学ぶ"]
 
@@ -230,14 +230,14 @@ image:diagram-iam-example-hierarchy-advanced.png["3 つのフォルダー (各�
 
 == 次はどこへ行くか
 
-* link:task-iam-get-started.html["NetAppコンソールでIAMを使い始める"]
-* link:task-iam-manage-folders-projects.html["NetAppコンソールでフォルダとプロジェクトを使用してリソースを整理します"]
-* link:task-iam-manage-members-permissions.html["NetAppコンソールのメンバーとその権限を管理する"]
-* link:task-iam-manage-resources.html["NetAppコンソール組織内のリソース階層を管理する"]
+* link:task-iam-get-started.html["NetApp ConsoleでIAMを使い始める"]
+* link:task-iam-manage-folders-projects.html["NetApp Consoleでフォルダとプロジェクトを使用してリソースを整理します"]
+* link:task-iam-manage-members-permissions.html["NetApp Consoleのメンバーとその権限を管理する"]
+* link:task-iam-manage-resources.html["NetApp Console組織内のリソース階層を管理する"]
 * link:task-iam-associate-agents.html["エージェントをフォルダとプロジェクトに関連付ける"]
-* link:task-iam-switch-organizations-projects.html["NetAppコンソールのプロジェクトと組織を切り替える"]
-* link:task-iam-rename-organization.html["NetAppコンソール組織の名前を変更する"]
+* link:task-iam-switch-organizations-projects.html["NetApp Consoleのプロジェクトと組織を切り替える"]
+* link:task-iam-rename-organization.html["NetApp Console組織の名前を変更する"]
 * link:task-iam-audit-actions-timeline.html["IAMアクティビティを監視または監査する"]
-* link:reference-iam-predefined-roles.html["NetAppコンソールアクセスロール"]
-* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["NetAppコンソールIAMのAPIについて学ぶ"^]
+* link:reference-iam-predefined-roles.html["NetApp Consoleアクセスロール"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["NetApp ConsoleIAMのAPIについて学ぶ"^]
 

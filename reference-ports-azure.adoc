@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-ports-azure.html 
 keywords: ports, security group, http, https, inbound, outbound 
-summary: エージェントの Azure セキュリティ グループには、受信規則と送信規則の両方が必要です。  NetAppコンソールは、コンソールからコンソール エージェントを作成すると、このセキュリティ グループを自動的に作成します。その他のインストール オプションについては、このセキュリティ グループを手動で設定する必要があります。 
+summary: エージェントの Azure セキュリティ グループには、受信規則と送信規則の両方が必要です。  NetApp Consoleは、コンソールからコンソール エージェントを作成すると、このセキュリティ グループを自動的に作成します。その他のインストール オプションについては、このセキュリティ グループを手動で設定する必要があります。 
 ---
 = Azure のコンソール エージェント セキュリティ グループ ルール
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: エージェントの Azure セキュリティ グループには、受
 
 
 [role="lead"]
-エージェントの Azure セキュリティ グループには、受信規則と送信規則の両方が必要です。  NetAppコンソールは、コンソールからコンソール エージェントを作成すると、このセキュリティ グループを自動的に作成します。その他のインストール オプションについては、このセキュリティ グループを手動で設定する必要があります。
+エージェントの Azure セキュリティ グループには、受信規則と送信規則の両方が必要です。  NetApp Consoleは、コンソールからコンソール エージェントを作成すると、このセキュリティ グループを自動的に作成します。その他のインストール オプションについては、このセキュリティ グループを手動で設定する必要があります。
 
 
 
@@ -38,7 +38,7 @@ summary: エージェントの Azure セキュリティ グループには、受
 | HTTPS | 443 | クライアントのWebブラウザからローカルユーザーインターフェースへのHTTPSアクセスと、 NetApp Data Classificationインスタンスからの接続を提供します。 
 
 
-| TCP | 3128 | Cloud Volumes ONTAPにインターネット アクセスを提供し、 AutoSupportメッセージをNetAppサポートに送信します。デプロイ後にこのポートを手動で開く必要があります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-verify-autosupport.html["エージェントがAutoSupportメッセージのプロキシとしてどのように使用されるかを説明します。"^] 
+| TCP | 3128 | Cloud Volumes ONTAPにインターネット アクセスを提供し、 AutoSupportメッセージをNetAppサポートに送信します。デプロイ後にこのポートを手動で開く必要があります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-verify-autosupport.html["エージェントがAutoSupportメッセージのプロキシとしてどのように使用されるかを学びます"^] 
 |===
 
 

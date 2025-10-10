@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-azure.html 
 keywords: permissions, azure, azure permissions, bluexp 
-summary: NetAppコンソールが Azure でコンソール エージェントを起動すると、その Azure サブスクリプション内のリソースとプロセスを管理するための権限をエージェントに提供するカスタム ロールが VM にアタッチされます。エージェントは、アクセス許可を使用して、複数の Azure サービスへの API 呼び出しを実行します。 
+summary: NetApp ConsoleがAzure でコンソール エージェントを起動すると、その Azure サブスクリプション内のリソースとプロセスを管理するための権限をエージェントに提供するカスタム ロールが VM にアタッチされます。エージェントは、アクセス許可を使用して、複数の Azure サービスへの API 呼び出しを実行します。 
 ---
 = コンソールエージェントのAzure権限
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: NetAppコンソールが Azure でコンソール エージェントを
 
 
 [role="lead"]
-NetAppコンソールが Azure でコンソール エージェントを起動すると、その Azure サブスクリプション内のリソースとプロセスを管理するための権限をエージェントに提供するカスタム ロールが VM にアタッチされます。エージェントは、アクセス許可を使用して、複数の Azure サービスへの API 呼び出しを実行します。
+NetApp ConsoleがAzure でコンソール エージェントを起動すると、その Azure サブスクリプション内のリソースとプロセスを管理するための権限をエージェントに提供するカスタム ロールが VM にアタッチされます。エージェントは、アクセス許可を使用して、複数の Azure サービスへの API 呼び出しを実行します。
 
 エージェントに対してこのカスタム ロールを作成する必要があるかどうかは、エージェントをどのように展開したかによって異なります。
 
-.NetAppコンソールからの導入
+.NetApp Consoleからの導入
 コンソールを使用してAzureにエージェント仮想マシンを展開すると、 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["システム割り当てマネージドID"^]仮想マシン上でカスタム ロールを作成し、それを仮想マシンに割り当てます。このロールは、その Azure サブスクリプション内のリソースとプロセスを管理するために必要な権限をコンソールに提供します。エージェントがアップグレードされると、ロールの権限は最新の状態に保たれます。エージェントに対してこのロールを作成したり、更新を管理したりする必要はありません。
 
 .手動でのデプロイまたはAzure Marketplaceからのデプロイ
@@ -194,9 +194,9 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 
 
 
-=== NetAppバックアップとリカバリ
+=== NetApp Backup and Recovery
 
-コンソール エージェントは、 NetApp Backup and Recovery に対して次の API 要求を行います。
+コンソール エージェントは、NetApp Backup and Recoveryに対して次の API 要求を行います。
 
 * Microsoft.Storage/storageAccounts/listkeys/アクション
 * Microsoft.Storage/storageAccounts/読み取り
@@ -242,7 +242,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 
 
 
-=== NetAppデータ分類
+=== NetApp Data Classification
 
 データ分類を使用する場合、エージェントは次の API リクエストを行います。
 
@@ -263,7 +263,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 | Microsoft.Compute/virtualMachines/instanceView/読み取り | はい | はい 
 
 
-| Microsoft.Compute/virtualMachines/電源オフ/アクション | はい | いいえ 
+| Microsoft.Compute/virtualMachines/powerOff/アクション | はい | いいえ 
 
 
 | Microsoft.Compute/仮想マシン/読み取り | はい | はい 
@@ -272,7 +272,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 | Microsoft.Compute/virtualMachines/再起動/アクション | はい | いいえ 
 
 
-| Microsoft.Compute/virtualMachines/start/アクション | はい | いいえ 
+| Microsoft.Compute/virtualMachines/start/action | はい | いいえ 
 
 
 | Microsoft.Compute/virtualMachines/vmSizes/読み取り | いいえ | はい 
@@ -411,7 +411,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 | Microsoft.Compute/virtualMachines/instanceView/読み取り | はい | はい | いいえ 
 
 
-| Microsoft.Compute/virtualMachines/電源オフ/アクション | はい | はい | いいえ 
+| Microsoft.Compute/virtualMachines/powerOff/アクション | はい | はい | いいえ 
 
 
 | Microsoft.Compute/仮想マシン/読み取り | はい | はい | いいえ 
@@ -420,7 +420,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 | Microsoft.Compute/virtualMachines/再起動/アクション | はい | はい | いいえ 
 
 
-| Microsoft.Compute/virtualMachines/start/アクション | はい | はい | いいえ 
+| Microsoft.Compute/virtualMachines/start/action | はい | はい | いいえ 
 
 
 | Microsoft.Compute/virtualMachines/割り当て解除/アクション | いいえ | はい | はい 
@@ -711,7 +711,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 
 === 階層化
 
-NetApp Cloud Tiering をセットアップすると、エージェントは次の API 要求を行います。
+NetApp Cloud Tieringをセットアップすると、エージェントは次の API 要求を行います。
 
 * Microsoft.Storage/storageAccounts/listkeys/アクション
 * Microsoft.Resources/サブスクリプション/リソースグループ/読み取り
@@ -757,10 +757,10 @@ NetApp Cloud Tiering をセットアップすると、エージェントは次�
 
 === 2023年12月5日
 
-ボリューム データを Azure Blob ストレージにバックアップする場合、 NetApp Backup and Recovery では次の権限は不要になりました。
+ボリューム データを Azure Blob ストレージにバックアップする場合、 NetApp Backup and Recoveryでは次の権限は不要になりました。
 
 * Microsoft.Compute/仮想マシン/読み取り
-* Microsoft.Compute/virtualMachines/start/アクション
+* Microsoft.Compute/virtualMachines/start/action
 * Microsoft.Compute/virtualMachines/割り当て解除/アクション
 * Microsoft.Compute/virtualMachines/拡張機能/削除
 * Microsoft.Compute/仮想マシン/削除
@@ -801,7 +801,7 @@ Cloud Volumes ONTAP管理に必要なため、次の権限が JSON ポリシー�
 * Microsoft.Storage/storageAccounts/listAccountSas/アクション
 * Microsoft.Synapse/ワークスペース/プライベートエンドポイント接続承認/アクション
 +
-これらの権限は、 NetAppバックアップおよびリカバリに必要です。
+これらの権限は、NetApp Backup and Recoveryに必要です。
 
 * Microsoft.Network/loadBalancers/backendAddressPools/参加/アクション
 +

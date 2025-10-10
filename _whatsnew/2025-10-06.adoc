@@ -1,18 +1,18 @@
-= BlueXPはNetAppコンソールになりました
+= BlueXPはNetApp Consoleになりました
 :allow-uri-read: 
 
 
 
 
-== BlueXPはNetAppコンソールになりました
+== BlueXPはNetApp Consoleになりました
 
-NetAppコンソールは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetAppデータ サービスの集中管理を提供し、リアルタイムの分析情報、より高速なワークフロー、安全性とコンプライアンスが確保された簡素化された管理を実現します。
+NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetApp Data Servicesの集中管理を提供し、リアルタイムの分析情報、より高速なワークフロー、および高度に安全でコンプライアンスに準拠した簡素化された管理を実現します。
 
 
 
 === ナビゲーションメニューとページ
 
-NetApp は、ほとんどのメニュー オプションを左側のナビゲーション ペインに移動し、メニューを再編成して、 NetAppコンソールでのナビゲーションを容易にしました。
+NetApp は、ほとんどのメニュー オプションを左側のナビゲーション ペインに移動し、メニューを再編成して、 NetApp Consoleでのナビゲーションを容易にしました。
 
 
 
@@ -36,7 +36,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 ==== 管理メニュー
 
-一元化された *管理* メニューを使用して、 NetAppコンソール、サポート ケース、ライセンス、サブスクリプション (以前はデジタル ウォレットと呼ばれていました) を管理します。
+一元化された *管理* メニューを使用して、 NetApp Console、サポート ケース、ライセンス、サブスクリプション (以前はデジタル ウォレットと呼ばれていました) を管理します。
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-admin-menu.png["管理メニューのスクリーンショット。"]
 
@@ -44,7 +44,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-admin-m
 
 ==== 健康メニュー
 
-効率的な *Health* メニューには、 ONTAPソフトウェアの更新を管理できる *Software updates*、環境への影響を監視できる *Sustainability*、ストレージ環境を最適化するためのプロアクティブな推奨事項を入手できる * Digital Advisor* が含まれます。
+効率的な *Health* メニューには、 ONTAPソフトウェアの更新を管理できる *Software updates*、環境への影響を監視できる *Sustainability*、ストレージ環境を最適化するためのプロアクティブな推奨事項を得られる * Digital Advisor* が含まれます。
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-health-menu.png["健康メニューのスクリーンショット。"]
 
@@ -64,7 +64,7 @@ NetApp は、目的を明確にするために、いくつかの要素、デー�
 
 [cols="10,24"]
 |===
-| *以前の名前* | * NetAppコンソール名* 
+| *以前の名前* | * NetApp Console名* 
 
 
 | コネクタ  a| 
@@ -89,7 +89,7 @@ NetApp は、目的を明確にするために、いくつかの要素、デー�
 
 
 | BlueXPランサムウェア対策  a| 
-NetAppランサムウェア耐性。
+NetApp Ransomware Resilience。
 
 ランサムウェア耐性は、データを保護し、ランサムウェア攻撃から迅速に回復するのに役立ちます。
 
@@ -105,9 +105,9 @@ NetAppランサムウェア耐性。
 
 
 | BlueXP digital wallet  a| 
-ライセンスとサブスクリプション
+Licenses and subscriptions
 
-*管理 > ライセンスとサブスクリプション* メニューからライセンスとサブスクリプションにアクセスします。
+*管理 >Licenses and subscriptions* メニューからライセンスとサブスクリプションにアクセスします。
 
 |===
 
@@ -132,7 +132,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-agent-i
 
 === 必要なネットワークエンドポイントの統合と削減
 
-NetApp は、コンソールとコンソール エージェントに必要なネットワーク エンドポイントを削減し、セキュリティを強化して導入を簡素化しました。重要なのは、バージョン 4.0.0 より前のすべてのデプロイメントが引き続き完全にサポートされることです。以前のエンドポイントは既存のエージェントで引き続き使用できますが、 NetApp、エージェントのアップグレードが成功したことを確認した後、ファイアウォール ルールを現在のエンドポイントに更新することを強くお勧めします。
+NetApp は、コンソールとコンソール エージェントに必要なネットワーク エンドポイントを削減し、セキュリティを強化して導入を簡素化しました。重要なのは、バージョン 4.0.0 より前のすべてのデプロイメントが引き続き完全にサポートされていることです。以前のエンドポイントは既存のエージェントで引き続き使用できますが、 NetApp、エージェントのアップグレードが成功したことを確認した後、ファイアウォール ルールを現在のエンドポイントに更新することを強くお勧めします。
 
 * link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
 * link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html["必要なエンドポイントの詳細について説明します。"]
@@ -142,7 +142,7 @@ NetApp は、コンソールとコンソール エージェントに必要なネ
 
 === コンソールエージェントの VCenter 展開のサポート
 
-OVA ファイルを使用して、VMware 環境にコンソール エージェントを展開できます。 OVA ファイルには、コンソール エージェント ソフトウェアとNetAppコンソールに接続するための設定が含まれた、事前構成された VM イメージが含まれています。ファイルのダウンロードまたは URL の展開は、 NetAppコンソールから直接行うことができます。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["VMware 環境にコンソール エージェントを展開する方法を学習します。"]
+OVA ファイルを使用して、VMware 環境にコンソール エージェントを展開できます。 OVA ファイルには、コンソール エージェント ソフトウェアとNetApp Consoleに接続するための設定が含まれた、事前構成された VM イメージが含まれています。ファイルのダウンロードまたは URL の展開は、 NetApp Consoleから直接行えます。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["VMware 環境にコンソール エージェントを展開する方法を学習します。"]
 
 VMware 用コンソール エージェント OVA は、迅速な展開のために事前構成された VM イメージを提供します。
 
@@ -150,7 +150,7 @@ VMware 用コンソール エージェント OVA は、迅速な展開のため�
 
 === 失敗したエージェントの展開に関する検証レポート
 
-NetAppコンソールからコンソール エージェントを展開するときに、エージェント構成を検証するオプションが追加されました。コンソールがエージェントの展開に失敗した場合、トラブルシューティングに役立つダウンロード可能なレポートが提供されます。
+NetApp Consoleからコンソール エージェントを展開するときに、エージェント構成を検証するオプションが追加されました。コンソールがエージェントの展開に失敗した場合、トラブルシューティングに役立つダウンロード可能なレポートが提供されます。
 
 
 
@@ -160,9 +160,9 @@ NetAppコンソールからコンソール エージェントを展開すると�
 
 
 
-== NetAppコンソール
+== NetApp Console
 
-NetAppコンソール管理には、次の新機能が含まれています。
+NetApp Console管理には、次の新機能が含まれています。
 
 
 
@@ -180,7 +180,7 @@ NetAppコンソールのホーム ページ ダッシュボードでは、ヘル
 
 === サービスアカウント認証
 
-NetAppコンソールは、システム生成のクライアント ID とシークレット、または顧客管理の JWT を使用したサービス アカウント認証をサポートしているため、組織はセキュリティ要件と統合ワークフローに最適なアプローチを選択できます。秘密鍵 JWT クライアント認証では非対称暗号化が使用され、従来のクライアント ID や秘密方式よりも強力なセキュリティが提供されます。秘密鍵 JWT クライアント認証では非対称暗号化が使用され、顧客の環境で秘密鍵が安全に保持され、資格情報の盗難リスクが軽減され、自動化スタックとクライアント アプリケーションのセキュリティが向上します。link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["サービス アカウントを追加する方法について説明します。"]
+NetApp Consoleは、システム生成のクライアント ID とシークレット、または顧客管理の JWT を使用したサービス アカウント認証をサポートしているため、組織はセキュリティ要件と統合ワークフローに最適なアプローチを選択できます。秘密鍵 JWT クライアント認証では非対称暗号化が使用され、従来のクライアント ID や秘密方式よりも強力なセキュリティが提供されます。秘密鍵 JWT クライアント認証では非対称暗号化が使用され、顧客の環境で秘密鍵が安全に保たれ、資格情報の盗難リスクが軽減され、自動化スタックとクライアント アプリケーションのセキュリティが向上します。link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["サービス アカウントを追加する方法について説明します。"]
 
 
 
@@ -192,7 +192,7 @@ NetAppコンソールは、システム生成のクライアント ID とシー�
 
 === 組織間のパートナーシップのサポート
 
-NetAppコンソールでパートナーシップを作成すると、パートナーは組織の境界を越えてNetAppリソースを安全に管理できるため、コラボレーションが容易になり、セキュリティが強化されます。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["パートナーシップの管理方法を学ぶ"] 。
+NetApp Consoleでパートナーシップを作成すると、パートナーは組織の境界を越えてNetAppリソースを安全に管理できるため、コラボレーションが容易になり、セキュリティが強化されます。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["パートナーシップの管理方法を学ぶ"] 。
 
 
 
@@ -210,4 +210,4 @@ NetAppコンソールでパートナーシップを作成すると、パート�
 
 === サポートチャットを削除しました
 
-NetApp は、NetAppコンソールからサポート チャット機能を削除しました。  *管理 > サポート* ページを使用して、サポート ケースを作成および管理します。
+NetApp は、NetApp Consoleからサポート チャット機能を削除しました。  *管理 > サポート* ページを使用して、サポート ケースを作成および管理します。

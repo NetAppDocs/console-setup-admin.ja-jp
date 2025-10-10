@@ -70,7 +70,7 @@ Red Hat Enterprise Linux
 * ホストは Red Hat Subscription Management に登録されている必要があります。登録されていない場合、ホストはエージェントのインストール中に必要なサードパーティ製ソフトウェアを更新するためにリポジトリにアクセスできません。
 
  a| 
-3.9.50 以降、コンソールが標準モードまたは制限モードの場合
+3.9.50 以降、コンソールが標準モードまたは制限モード
  a| 
 Podman バージョン 4.6.1 または 4.9.4
 
@@ -88,7 +88,7 @@ Ubuntu
  a| 
 24.04 LTS
  a| 
-3.9.45 以降、 NetAppコンソールが標準モードまたは制限モード
+3.9.45 以降、 NetApp Consoleが標準モードまたは制限モード
  a| 
 Docker エンジン 23.06 から 28.0.0。
  a| 
@@ -108,7 +108,7 @@ Docker エンジン 23.0.6 から 28.0.0。
 |===
 --
 AWS EC2インスタンスタイプ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  t3.2xlarge をお勧めします。
-キーペア:: コンソールエージェントを作成するときは、インスタンスで使用する EC2 キーペアを選択する必要があります。
+鍵ペア:: コンソールエージェントを作成するときは、インスタンスで使用する EC2 キーペアを選択する必要があります。
 IMDSv2 使用時の PUT 応答ホップ制限:: EC2 インスタンスで IMDSv2 が有効になっている場合 (これは新しい EC2 インスタンスのデフォルト設定です)、インスタンスの PUT 応答ホップ制限を 3 に変更する必要があります。  EC2 インスタンスの制限を変更しないと、エージェントを設定しようとすると UI 初期化エラーが発生します。
 +
 --
@@ -135,7 +135,7 @@ IMDSv2 使用時の PUT 応答ホップ制限:: EC2 インスタンスで IMDSv2
 
 == ステップ2: PodmanまたはDocker Engineをインストールする
 
-オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要です。
+オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要になります。
 
 * Red Hat Enterprise Linux 8 および 9 には Podman が必要です。
 +
@@ -308,7 +308,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 アウトバウンドインターネットアクセス:: コンソール エージェントを展開するネットワークの場所には、特定のエンドポイントに接続するための送信インターネット接続が必要です。
 
 
-WebベースのNetAppコンソールを使用する際にコンピュータから接続されるエンドポイント::
+WebベースのNetApp Consoleを使用する際にコンピュータから接続されるエンドポイント::
 +
 --
 Web ブラウザからコンソールにアクセスするコンピュータは、複数のエンドポイントに接続できる必要があります。コンソール エージェントを設定し、コンソールを日常的に使用するには、コンソールを使用する必要があります。
@@ -360,7 +360,7 @@ AWS リソースを管理します。エンドポイントは AWS リージョ�
  a| 
 \https://signin.b2c.netapp.com
  a| 
-NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
 
 
 
@@ -374,7 +374,7 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-NetAppコンソール内で機能とサービスを提供します。
+NetApp Console内で機能とサービスを提供します。
 
 
 
@@ -408,7 +408,7 @@ NetAppコンソール内で機能とサービスを提供します。
 ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
 +
 --
-* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
 * SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
 * アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
 +
@@ -419,14 +419,14 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
 
 
 
 
 == ステップ4: コンソールのAWS権限を設定する
 
-次のいずれかのオプションを使用して、 NetAppコンソールに AWS 権限を付与する必要があります。
+次のいずれかのオプションを使用して、 NetApp Consoleに AWS 権限を付与する必要があります。
 
 * オプション 1: IAM ポリシーを作成し、EC2 インスタンスに関連付けることができる IAM ロールにポリシーをアタッチします。
 * オプション 2: 必要な権限を持つ IAM ユーザーの AWS アクセスキーをコンソールに提供します。
@@ -487,7 +487,7 @@ NTP を有効にする:: NetApp Data Classification を使用して企業のデ�
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWSドキュメント: IAMポリシーの追加と削除"^]
 
 
-. コンソール エージェントをインストールした後、 NetAppコンソールに追加できるアクセス キーがユーザーにあることを確認します。
+. コンソール エージェントをインストールした後、 NetApp Consoleに追加できるアクセス キーがユーザーにあることを確認します。
 
 
 .結果
@@ -640,7 +640,7 @@ https://_ipaddress_[]
 .. システムの名前を入力します。
 .. *安全な環境で実行していますか?* の下で、制限モードを無効のままにします。
 +
-以下の手順ではコンソールを標準モードで使用する方法について説明しているため、制限モードは無効にしておく必要があります。安全な環境があり、このアカウントをバックエンド サービスから切断する場合にのみ、制限モードを有効にする必要があります。もしそうなら、link:task-quick-start-restricted-mode.html["NetAppコンソールを制限モードで使い始めるための手順に従います"] 。
+以下の手順ではコンソールを標準モードで使用する方法について説明しているため、制限モードは無効にしておく必要があります。安全な環境があり、このアカウントをバックエンド サービスから切断する場合にのみ、制限モードを有効にする必要があります。もしそうなら、link:task-quick-start-restricted-mode.html["NetApp Consoleを制限モードで使い始めるための手順に従います"] 。
 
 .. *始めましょう*を選択します。
 
@@ -651,7 +651,7 @@ https://_ipaddress_[]
 
 
 
-== ステップ6: NetAppコンソールに権限を付与する
+== ステップ6: NetApp Consoleに権限を付与する
 
 コンソールエージェントをインストールしたので、以前に設定した AWS 権限をコンソールに提供する必要があります。権限を付与すると、コンソールエージェントは AWS 内のデータとストレージインフラストラクチャを管理できるようになります。
 
@@ -669,7 +669,7 @@ https://_ipaddress_[]
 . IAM ロールを選択し、*IAM ロールの更新*を選択します。
 
 
-に行く https://console.netapp.com["NetAppコンソール"^]コンソール エージェントの使用を開始します。
+に行く https://console.netapp.com["NetApp Console"^]コンソール エージェントの使用を開始します。
 
 --
 .AWS アクセスキー
@@ -690,7 +690,7 @@ https://_ipaddress_[]
 
 
 
-に行く https://console.netapp.com["NetAppコンソール"^]コンソール エージェントの使用を開始します。
+に行く https://console.netapp.com["NetApp Console"^]コンソール エージェントの使用を開始します。
 
 --
 ====

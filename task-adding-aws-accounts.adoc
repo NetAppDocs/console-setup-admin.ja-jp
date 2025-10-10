@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-aws-accounts.html 
 keywords: permissions, aws, policy, iam, iam role, role, granting, policy, iam policy, iam user, access keys, arn, cloud provider accounts, aws, cloud provider profile, json, iam, credentials, adding credentials, add credentials, bluexp 
-summary: 'AWS 認証情報を追加および管理して、 NetAppコンソールに AWS アカウント内のクラウド リソースを展開および管理するために必要な権限が付与されるようにします。複数の AWS サブスクリプションを管理する場合は、[認証情報] ページから各サブスクリプションを異なる AWS 認証情報に割り当てることができます。' 
+summary: 'AWS 認証情報を追加および管理して、 NetApp Consoleに AWS アカウント内のクラウド リソースを展開および管理するために必要な権限が付与されるようにします。複数の AWS サブスクリプションを管理する場合は、[認証情報] ページから各サブスクリプションを異なる AWS 認証情報に割り当てることができます。' 
 ---
-= NetAppコンソールの AWS 認証情報とマーケットプレイス サブスクリプションを管理する
+= NetApp Consoleの AWS 認証情報とマーケットプレイス サブスクリプションを管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'AWS 認証情報を追加および管理して、 NetAppコンソー�
 
 
 [role="lead"]
-AWS 認証情報を追加および管理して、 NetAppコンソールから AWS アカウントのクラウド リソースを展開および管理できるようにします。複数の AWS Marketplace サブスクリプションを管理する場合は、[認証情報] ページから各サブスクリプションを異なる AWS 認証情報に割り当てることができます。
+AWS 認証情報を追加および管理して、 NetApp Consoleから AWS アカウント内のクラウド リソースを展開および管理できるようにします。複数の AWS Marketplace サブスクリプションを管理する場合は、[認証情報] ページから各サブスクリプションを異なる AWS 認証情報に割り当てることができます。
 
 
 
@@ -28,7 +28,7 @@ AWS 認証情報を既存のコンソールエージェントに追加するこ�
 
 * コンソールエージェントを作成するためにコンソールにAWS認証情報を追加する
 +
-コンソールに新しい AWS 認証情報を追加すると、コンソールエージェントを作成するために必要な権限が付与されます。<<add-aws-credentials-agent-creation,NetAppコンソールにAWS認証情報を追加する方法を学びます>> 。
+コンソールに新しい AWS 認証情報を追加すると、コンソールエージェントを作成するために必要な権限が付与されます。<<add-aws-credentials-agent-creation,NetApp ConsoleにAWS認証情報を追加する方法を学びます>> 。
 
 * FSx for ONTAPのコンソールに AWS 認証情報を追加する
 +
@@ -40,7 +40,7 @@ FSx for ONTAPを作成および管理するには、コンソールに新しい 
 
 == 資格情報をローテーションする方法
 
-NetAppコンソールを使用すると、エージェント インスタンスに関連付けられた IAM ロール、信頼できるアカウントでの IAM ロールの引き受け、または AWS アクセス キーの提供など、いくつかの方法で AWS 認証情報を提供できます。link:concept-accounts-aws.html["AWS の認証情報と権限について詳しく見る"] 。
+NetApp Consoleを使用すると、エージェント インスタンスに関連付けられた IAM ロール、信頼できるアカウントでの IAM ロールの引き受け、または AWS アクセス キーの提供など、いくつかの方法で AWS 認証情報を提供できます。link:concept-accounts-aws.html["AWS の認証情報と権限について詳しく見る"] 。
 
 最初の 2 つのオプションでは、コンソールは AWS セキュリティ トークン サービスを使用して、常にローテーションする一時的な認証情報を取得します。このプロセスは自動かつ安全であるため、ベストプラクティスです。
 
@@ -52,7 +52,7 @@ NetAppコンソールを使用すると、エージェント インスタンス�
 
 コンソールエージェントに追加の AWS 認証情報を追加して、パブリッククラウド環境内のリソースとプロセスを管理するために必要な権限を付与します。別のアカウントの IAM ロールの ARN を提供するか、AWS アクセスキーを提供することができます。
 
-コンソールを使い始めたばかりの方は、link:concept-accounts-aws.html["NetAppコンソールがAWS認証情報と権限を使用する方法を学ぶ"] 。
+コンソールを使い始めたばかりの方は、link:concept-accounts-aws.html["NetApp ConsoleがAWS認証情報と権限を使用する方法を学ぶ"] 。
 
 
 
@@ -157,7 +157,7 @@ image:screenshot_accounts_switch_aws.png["詳細と資格情報ページでア�
 
 === IAMロールを設定する
 
-NetAppコンソールのソフトウェア サービス (SaaS) レイヤーがロールを引き受けることができる IAM ロールを設定します。
+NetApp Consoleのソフトウェア サービス (SaaS) レイヤーがロールを引き受けることができる IAM ロールを設定します。
 
 .手順
 . ターゲットアカウントの IAM コンソールに移動します。
@@ -167,7 +167,7 @@ NetAppコンソールのソフトウェア サービス (SaaS) レイヤーが�
 
 +
 ** *信頼されたエンティティタイプ*で、*AWS アカウント*を選択します。
-** *別のAWSアカウント*を選択し、 NetAppコンソールSaaSのIDを入力します：952013314444
+** *別のAWSアカウント*を選択し、 NetApp ConsoleSaaSのIDを入力します：952013314444
 ** 特にAmazon FSx for NetApp ONTAPの場合は、*信頼関係* ポリシーを編集して "AWS": "arn:aws:iam::952013314444:root" を含めます。
 +
 たとえば、ポリシーは次のようになります。
@@ -222,7 +222,7 @@ image:screenshot-settings-icon-organization.png["コンソールの右上にあ�
 
 . *組織の資格情報* または *アカウントの資格情報* ページで、*資格情報の追加* を選択し、ウィザードの手順に従います。
 +
-.. *資格情報の場所*: *Amazon Web Services > NetAppコンソール* を選択します。
+.. *資格情報の場所*: *Amazon Web Services > NetApp Console*を選択します。
 .. *認証情報の定義*: IAM ロールの ARN (Amazon リソース名) を指定します。
 .. *確認*: 新しい資格情報の詳細を確認し、[*追加*] を選択します。
 
@@ -253,7 +253,7 @@ AWS 認証情報を追加したら、その認証情報を使用して AWS Marke
 .開始する前に
 サブスクリプションを構成する前に、コンソール エージェントを作成する必要があります。link:concept-agents.html#agent-installation["コンソールエージェントの作成方法を学ぶ"] 。
 
-次のビデオは、AWS Marketplace からNetApp Intelligent Services をサブスクライブする手順を示しています。
+次のビデオは、AWS Marketplace からNetApp Intelligent Servicesをサブスクライブする手順を示しています。
 
 .AWS MarketplaceからNetApp Intelligent Servicesをサブスクライブする
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
@@ -262,7 +262,7 @@ video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 . *組織の資格情報*を選択します。
 . コンソール エージェントに関連付けられている資格情報のセットのアクション メニューを選択し、[*サブスクリプションの構成*] を選択します。
 +
-コンソール エージェントに関連付けられている資格情報を選択する必要があります。  NetAppコンソールに関連付けられている資格情報にマーケットプレイス サブスクリプションを関連付けることはできません。
+コンソール エージェントに関連付けられている資格情報を選択する必要があります。マーケットプレイス サブスクリプションを、 NetApp Consoleに関連付けられている資格情報に関連付けることはできません。
 
 +
 image:screenshot_aws_configure_subscription.png["既存の資格情報セットのアクション メニューのスクリーンショット。"]
@@ -274,7 +274,7 @@ image:screenshot_aws_configure_subscription.png["既存の資格情報セット�
 .. *購読*を選択します。
 .. *アカウントを設定*を選択します。
 +
-NetAppコンソールにリダイレクトされます。
+NetApp Consoleにリダイレクトされます。
 
 .. *サブスクリプションの割り当て*ページから:
 +
@@ -308,7 +308,7 @@ AWS Marketplace からNetAppインテリジェント データ サービスに�
 .手順
 . サブスクリプションをコンソールの組織またはアカウントに関連付けていないことを確認します。
 +
-.. ナビゲーション メニューから、*管理 > ライセンスとサブスクリプション*を選択します。
+.. ナビゲーション メニューから、*管理 >Licenses and subscriptions*を選択します。
 .. *サブスクリプション*を選択します。
 .. サブスクリプションが表示されていないことを確認します。
 +

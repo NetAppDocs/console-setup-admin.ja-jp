@@ -4,7 +4,7 @@ permalink: task-user-settings.html
 keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode 
 summary: コンソール内では、各ユーザーにはユーザーとその設定に関する情報が含まれるプロファイルがあります。プロフィール設定を表示および編集できます。 
 ---
-= NetAppコンソールのユーザー設定を管理する
+= NetApp Consoleのユーザー設定を管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

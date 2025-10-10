@@ -5,7 +5,7 @@
 . の内容をコピーしますlink:reference-permissions-azure.html["コネクタのカスタムロール権限"]JSON ファイルに保存します。
 . 割り当て可能なスコープに Azure サブスクリプション ID を追加して、JSON ファイルを変更します。
 +
-NetAppコンソールで使用する各 Azure サブスクリプションの ID を追加する必要があります。
+NetApp Consoleで使用する各 Azure サブスクリプションの ID を追加する必要があります。
 
 +
 *例*

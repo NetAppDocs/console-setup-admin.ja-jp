@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-restricted-mode.html 
 keywords: government region, gov, govcloud, connector, sovereign cloud 
-summary: 制限されたアウトバウンド接続でNetAppコンソールを使用できるように、コンソール エージェントを制限モードで展開します。開始するには、コンソール エージェントをインストールし、コンソール エージェントで実行されているユーザー インターフェイスにアクセスしてコンソールをセットアップし、以前に設定したクラウド権限を提供します。 
+summary: 制限されたアウトバウンド接続でNetApp Consoleを使用できるように、コンソール エージェントを制限モードで展開します。開始するには、コンソール エージェントをインストールし、コンソール エージェントで実行されているユーザー インターフェイスにアクセスしてコンソールをセットアップし、以前に設定したクラウド権限を提供します。 
 ---
 = 制限モードでコンソールエージェントを展開する
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 制限されたアウトバウンド接続でNetAppコンソールを�
 
 
 [role="lead"]
-制限されたアウトバウンド接続でNetAppコンソールを使用できるように、コンソール エージェントを制限モードで展開します。開始するには、コンソール エージェントをインストールし、コンソール エージェントで実行されているユーザー インターフェイスにアクセスしてコンソールをセットアップし、以前に設定したクラウド権限を提供します。
+制限されたアウトバウンド接続でNetApp Consoleを使用できるように、コンソール エージェントを制限モードで展開します。開始するには、コンソール エージェントをインストールし、コンソール エージェントで実行されているユーザー インターフェイスにアクセスしてコンソールをセットアップし、以前に設定したクラウド権限を提供します。
 
 
 
@@ -46,7 +46,7 @@ link:task-prepare-restricted-mode.html#step-3-review-host-requirements["イン�
 
 
 .手順
-. に行く https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace でのNetAppコンソールエージェントのリスト"^]
+. に行く https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace でのNetApp Consoleエージェントのリスト"^]
 . マーケットプレイス ページで、[サブスクリプションを続行] を選択します。
 . ソフトウェアをサブスクライブするには、「*利用規約に同意*」を選択します。
 +
@@ -88,7 +88,7 @@ link:reference-ports-aws.html["AWS のセキュリティグループルールを
 AWS は指定された設定でソフトウェアを起動します。コンソール エージェント インスタンスとソフトウェアは約 5 分で実行されます。
 
 .次の手順
-NetAppコンソールをセットアップします。
+NetApp Consoleをセットアップします。
 
 --
 .AWS Gov マーケットプレイス
@@ -109,13 +109,13 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["AWS権�
 
 
 .手順
-. AWS Marketplace で提供されているNetAppコンソールエージェントにアクセスします。
+. AWS Marketplace で提供されているNetApp Consoleエージェントにアクセスします。
 +
 .. EC2 サービスを開き、*インスタンスの起動*を選択します。
 .. *AWS Marketplace*を選択します。
-.. NetAppコンソールを検索し、オファリングを選択します。
+.. NetApp Consoleを検索し、オファリングを選択します。
 +
-image:screenshot-gov-cloud-mktp.png["AWS Marketplaceで検索した後のNetAppコンソールの提供を示すスクリーンショット"]
+image:screenshot-gov-cloud-mktp.png["AWS Marketplaceで検索した後のNetApp Consoleの提供を示すスクリーンショット"]
 
 .. *続行*を選択します。
 
@@ -161,7 +161,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Azure �
 
 
 .手順
-. Azure Marketplace のNetAppコンソール エージェント VM ページに移動します。
+. Azure Marketplace のNetApp Consoleエージェント VM ページに移動します。
 +
 ** https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["商用リージョン向けの Azure Marketplace ページ"^]
 ** https://portal.azure.us/#create/netapp.netapp-oncommand-cloud-manageroccm-byol["Azure Government リージョンの Azure Marketplace ページ"^]
@@ -202,7 +202,7 @@ link:reference-ports-azure.html["Azure のセキュリティ グループ ルー
 Azure は指定された設定で仮想マシンをデプロイします。仮想マシンとコンソール エージェント ソフトウェアは約 5 分以内に実行されるはずです。
 
 .次の手順
-NetAppコンソールをセットアップします。
+NetApp Consoleをセットアップします。
 
 --
 .手動インストール
@@ -337,13 +337,13 @@ Esc:wq
 コンソール エージェントがインストールされました。プロキシ サーバーを指定した場合、インストールの最後に、コンソール エージェント サービス (occm) が 2 回再起動します。
 
 .次の手順
-NetAppコンソールをセットアップします。
+NetApp Consoleをセットアップします。
 
 --
 ====
 
 
-== ステップ2: NetAppコンソールをセットアップする
+== ステップ2: NetApp Consoleをセットアップする
 
 コンソールに初めてアクセスすると、コンソール エージェントの組織を選択するように求められ、制限モードを有効にする必要があります。
 
@@ -354,7 +354,7 @@ NetAppコンソールをセットアップします。
 
 .手順
 . コンソール エージェント インスタンスに接続しているホストから Web ブラウザを開き、インストールしたコンソール エージェントの次の URL を入力します。
-. NetAppコンソールにサインアップまたはログインします。
+. NetApp Consoleにサインアップまたはログインします。
 . ログインしたら、コンソールを設定します。
 +
 .. コンソール エージェントの名前を入力します。
@@ -380,7 +380,7 @@ NetAppコンソールをセットアップします。
 
 
 
-== ステップ3: NetAppコンソールに権限を付与する
+== ステップ3: NetApp Consoleに権限を付与する
 
 Azure Marketplace からコンソール エージェントを展開した場合、またはコンソール エージェント ソフトウェアを手動でインストールした場合は、以前に設定したアクセス許可を提供する必要があります。
 
@@ -407,7 +407,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["クラ�
 --
 .AWS アクセスキー
 --
-必要な権限を持つ IAM ユーザーの AWS アクセス キーをNetAppコンソールに提供します。
+必要な権限を持つ IAM ユーザーの AWS アクセス キーをNetApp Consoleに提供します。
 
 .手順
 . *管理 > 資格情報*を選択します。
@@ -430,7 +430,7 @@ Azure ポータルに移動し、1 つ以上のサブスクリプションのコ
 .手順
 . Azure ポータルから *サブスクリプション* サービスを開き、サブスクリプションを選択します。
 +
-*サブスクリプション* サービスからロールを割り当てることが重要です。これは、サブスクリプション レベルでのロール割り当ての範囲を指定するためです。 _scope_ は、アクセスが適用されるリソースのセットを定義します。別のレベル (たとえば、仮想マシン レベル) でスコープを指定すると、 NetAppコンソール内からアクションを完了する機能に影響します。
+*サブスクリプション* サービスからロールを割り当てることが重要です。これは、サブスクリプション レベルでのロール割り当ての範囲を指定するためです。 _scope_ は、アクセスが適用されるリソースのセットを定義します。別のレベル (たとえば、仮想マシン レベル) でスコープを指定すると、 NetApp Console内からアクションを完了する機能に影響します。
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure ドキュメント: Azure RBAC のスコープを理解する"^]
@@ -456,7 +456,7 @@ NOTE: コンソール オペレーターは、ポリシーで提供されるデ�
 --
 .Azure サービスプリンシパル
 --
-以前に設定した Azure サービス プリンシパルの資格情報をNetAppコンソールに提供します。
+以前に設定した Azure サービス プリンシパルの資格情報をNetApp Consoleに提供します。
 
 .手順
 . *管理 > 資格情報*を選択します。
@@ -477,7 +477,7 @@ NOTE: コンソール オペレーターは、ポリシーで提供されるデ�
 
 
 .結果
-NetAppコンソールに、ユーザーに代わって Azure でアクションを実行するために必要な権限が付与されました。
+NetApp Consoleに、ユーザーに代わって Azure でアクションを実行するために必要な権限が付与されました。
 
 --
 .Google Cloud サービス アカウント

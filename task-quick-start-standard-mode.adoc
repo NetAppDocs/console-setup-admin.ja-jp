@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-quick-start-standard-mode.html 
 keywords: quick start, standard mode quick start 
-summary: コンソールのネットワークを準備し、サインアップしてアカウントを作成し、オプションでコンソール エージェントを作成して、標準モードでNetAppコンソールの使用を開始します。 
+summary: コンソールのネットワークを準備し、サインアップしてアカウントを作成し、オプションでコンソール エージェントを作成して、標準モードでNetApp Consoleの使用を開始します。 
 ---
 = 開始ワークフロー（標準モード）
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: コンソールのネットワークを準備し、サインアップ�
 
 
 [role="lead"]
-コンソールのネットワークを準備し、サインアップしてアカウントを作成し、オプションでコンソール エージェントを作成して、標準モードでNetAppコンソールの使用を開始します。
+コンソールのネットワークを準備し、サインアップしてアカウントを作成し、オプションでコンソール エージェントを作成して、標準モードでNetApp Consoleの使用を開始します。
 
 標準モードでは、 NetAppの Software-as-a-service (SaaS) 製品としてホストされている Web ベースのコンソールにアクセスします。始める前に、以下の点を理解しておいてくださいlink:concept-modes.html["展開モード"]そしてlink:concept-agents.html["コンソールエージェント"]。
 
@@ -47,6 +47,6 @@ NetAppコンソールにアクセスするコンピューターは、特定の�
 [role="quick-margin-para"]
 Google Cloud でストレージとデータを管理するためNetApp Intelligent Data Services を使用するには、コンソール エージェントが Google Cloud で実行されていることを確認します。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"] link:task-subscribe-standard-mode.html["NetApp Intelligent Services に加入する（オプション）"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"] link:task-subscribe-standard-mode.html["NetApp Intelligent Servicesに加入する（オプション）"]
 [role="quick-margin-para"]
-クラウド プロバイダーを通じてNetApp Intelligent Services にサインアップし、時間単位 (PAYGO) または年間契約で支払います。  NetAppインテリジェント サービスには、 NetAppバックアップおよびリカバリ、 Cloud Volumes ONTAP、 NetAppクラウド階層化、 NetAppランサムウェア回復力、 NetAppディザスタ リカバリが含まれます。  NetApp Data Classification は追加料金なしでサブスクリプションに含まれています。
+クラウド プロバイダーを通じてNetApp Intelligent Servicesにサインアップし、時間単位 (PAYGO) または年間契約で支払います。  NetApp Intelligent Servicesには、 NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience 、 NetApp Disaster Recovery が含まれます。  NetApp Data Classification は追加料金なしでサブスクリプションに含まれています。

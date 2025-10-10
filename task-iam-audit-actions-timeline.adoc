@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-iam-audit-actions-timeline.html 
 keywords: iam, audit, monitor, audit iam actions, monitor iam actions 
-summary: 監査ページからNetAppコンソールの ID およびアクセス管理アクションを監視または監査します。 
+summary: 監査ページから、 NetApp ConsoleのID およびアクセス管理アクションを監視または監査します。 
 ---
 = IAMアクティビティを監視または監査する
 :hardbreaks:

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-manage.html 
 keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
-summary: フェデレーション接続を追加したら、 NetAppコンソールで管理できます。接続のステータスを表示し、必要に応じて有効または無効にすることができます。 
+summary: フェデレーション接続を追加したら、 NetApp Consoleでそれを管理できます。接続のステータスを表示し、必要に応じて有効または無効にすることができます。 
 ---
-= NetAppコンソールでフェデレーションを管理する
+= NetApp Consoleでフェデレーションを管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: フェデレーション接続を追加したら、 NetAppコンソー�
 
 
 [role="lead"]
-NetAppコンソールでフェデレーションを管理できます。無効にしたり、期限切れの資格情報を更新したり、不要になった場合に無効にしたりすることができます。
+NetApp Consoleでフェデレーションを管理できます。無効にしたり、期限切れの資格情報を更新したり、不要になった場合に無効にしたりすることができます。
 
 
 NOTE: NetApp Cloud Central を使用してフェデレーションを構成した場合は、*フェデレーション* ページからインポートして、コンソールで管理します。link:task-federation-import.html["フェデレーションをインポートする方法を学ぶ"]
@@ -22,7 +22,7 @@ NOTE: NetApp Cloud Central を使用してフェデレーションを構成し�
 検証済みのドメインを既存のフェデレーションに追加することもできます。これにより、フェデレーション接続に複数のドメインを使用できるようになります。
 
 
-NOTE: フェデレーションの有効化、無効化、更新などのフェデレーション管理イベントがタイムラインに表示されます。link:task-monitor-cm-operations.html["NetAppコンソールでの監視操作の詳細について説明します。"]
+NOTE: フェデレーションの有効化、無効化、更新などのフェデレーション管理イベントがタイムラインに表示されます。link:task-monitor-cm-operations.html["NetApp Consoleでの操作の監視について詳しく学習します。"]
 
 .必要な役割
 フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
@@ -82,7 +82,7 @@ IMPORTANT: ログインの問題を回避するには、IdP を更新する前�
 . *管理 > IDとアクセス*を選択します。
 . *Federation*タブを選択します。
 . アクションメニューを選択image:button_3_vert_dots.png["縦に3つの点があるアイコン"]検証済みドメインを追加するフェデレーションの横にある をクリックし、[*テスト接続*] を選択します。
-. *テスト*を選択します。システムは、企業の資格情報を使用してログインするように要求します。接続が成功すると、 NetAppコンソールにリダイレクトされます。接続に失敗した場合は、フェデレーションの問題を示すエラー メッセージが表示されます。
+. *テスト*を選択します。システムは、企業の資格情報を使用してログインするように要求します。接続が成功すると、 NetApp Consoleにリダイレクトされます。接続に失敗した場合は、フェデレーションの問題を示すエラー メッセージが表示されます。
 . *完了*を選択して*連合*タブに戻ります。
 
 

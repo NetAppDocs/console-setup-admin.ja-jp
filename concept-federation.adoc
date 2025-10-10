@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-federation.html 
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
-summary: アイデンティティ フェデレーションにより、 NetAppコンソールでのシングル サインオンが可能になり、ユーザーは企業アイデンティティの資格情報を使用してログインできるようになります。開始するには、セットアップ プロセスを確認してください。 
+summary: アイデンティティ フェデレーションにより、NetApp Consoleでのシングル サインオンが可能になり、ユーザーは企業アイデンティティの資格情報を使用してログインできるようになります。開始するには、セットアップ プロセスを確認してください。 
 ---
-= NetAppコンソールでIDフェデレーションを使用してシングルサインオンを有効にする
+= NetApp ConsoleでIDフェデレーションを使用してシングルサインオンを有効にする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: アイデンティティ フェデレーションにより、 NetAppコ
 
 
 [role="lead"]
-シングル サインオン (フェデレーション) により、ユーザーは企業の認証情報を使用してNetAppコンソールにログインできるため、ログイン プロセスが簡素化され、セキュリティが強化されます。アイデンティティ プロバイダー (IdP) またはNetAppサポート サイトを使用してシングル サインオン (SSO) を有効にできます。
+シングル サインオン (フェデレーション) により、ユーザーは企業の認証情報を使用してNetApp Consoleにログインできるため、ログイン プロセスが簡素化され、セキュリティが強化されます。アイデンティティ プロバイダー (IdP) またはNetAppサポート サイトを使用してシングル サインオン (SSO) を有効にできます。
 
 .必要な役割
 組織管理者、フェデレーション管理者、フェデレーション閲覧者。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
@@ -43,7 +43,7 @@ NetAppサポート チームがお客様のリクエストを確認し、処理�
 コンソールのシングル サインオン (SSO) を有効にするには、ID プロバイダーとのフェデレーション接続を設定できます。このプロセスでは、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成し、コンソールで接続を作成します。
 
 
-NOTE: 以前にNetApp Cloud Central (コンソールの外部アプリケーション) を使用してフェデレーションを構成した場合は、フェデレーション ページを使用してフェデレーションをインポートし、コンソール内で管理する必要があります。link:task-federation-import.html["フェデレーションをインポートする方法を学びます。"]
+NOTE: 以前にNetApp Cloud Central (コンソールの外部アプリケーション) を使用してフェデレーションを構成した場合は、コンソール内でフェデレーションを管理するために、フェデレーション ページを使用してフェデレーションをインポートする必要があります。link:task-federation-import.html["フェデレーションをインポートする方法を学びます。"]
 
 
 
@@ -63,7 +63,7 @@ NetApp は、フェデレーション用に次のプロトコルと ID プロバ
 
 
 
-=== NetAppコンソールワークフローとの連携
+=== NetApp Consoleワークフローとの連携
 
 NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成する必要があります。次に、コンソールで ID プロバイダーの構成を使用する接続を作成できます。
 

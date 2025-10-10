@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要です。
+オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要になります。
 
 * Red Hat Enterprise Linux 8 および 9 には Podman が必要です。
 +

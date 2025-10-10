@@ -44,8 +44,8 @@ _フォルダーまたはプロジェクト管理者_ は、*エージェント*
 link:task-iam-manage-resources.html#associate-resource["リソースをフォルダやプロジェクトに関連付ける方法を学びます"] 。
 
 .関連情報
-* link:concept-agents.html["NetAppコンソールエージェントについて学ぶ"]
-* link:concept-identity-and-access-management.html["NetAppコンソールのアイデンティティとアクセス管理について学ぶ"]
+* link:concept-agents.html["NetApp Consoleエージェントについて学ぶ"]
+* link:concept-identity-and-access-management.html["NetApp Consoleのアイデンティティとアクセス管理について学ぶ"]
 * link:task-iam-get-started.html["アイデンティティとアクセスを始める"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["IDとアクセス管理のためのAPIについて学ぶ"^]
 

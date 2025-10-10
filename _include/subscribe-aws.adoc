@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-次のビデオは、AWS Marketplace からNetApp Intelligent Services をサブスクライブする手順を示しています。
+次のビデオは、AWS Marketplace からNetApp Intelligent Servicesをサブスクライブする手順を示しています。
 
 .AWS MarketplaceからNetApp Intelligent Servicesをサブスクライブする
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
@@ -11,7 +11,7 @@ video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 . *組織の資格情報*を選択します。
 . コンソール エージェントに関連付けられている資格情報のセットのアクション メニューを選択し、[*サブスクリプションの構成*] を選択します。
 +
-コンソール エージェントに関連付けられている資格情報を選択する必要があります。  NetAppコンソールに関連付けられている資格情報にマーケットプレイス サブスクリプションを関連付けることはできません。
+コンソール エージェントに関連付けられている資格情報を選択する必要があります。マーケットプレイス サブスクリプションを、 NetApp Consoleに関連付けられている資格情報に関連付けることはできません。
 
 +
 image:screenshot_aws_configure_subscription.png["既存の資格情報セットのアクション メニューのスクリーンショット。"]
@@ -23,7 +23,7 @@ image:screenshot_aws_configure_subscription.png["既存の資格情報セット�
 .. *購読*を選択します。
 .. *アカウントを設定*を選択します。
 +
-NetAppコンソールにリダイレクトされます。
+NetApp Consoleにリダイレクトされます。
 
 .. *サブスクリプションの割り当て*ページから:
 +

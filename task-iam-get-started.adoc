@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-get-started.html 
 keywords: iam, quick start, get started, get started with iam, identity and access management 
-summary: NetAppコンソールで ID およびアクセス管理を開始するには、組織の階層をカスタマイズし、メンバーを追加し、リソースを追加または検出し、それらのリソースをプロジェクトに関連付けます。 
+summary: NetApp Consoleで ID およびアクセス管理を開始するには、組織の階層をカスタマイズし、メンバーを追加し、リソースを追加または検出し、それらのリソースをプロジェクトに関連付けます。 
 ---
-= NetAppコンソールでIDとアクセスを開始する
+= NetApp ConsoleでIDとアクセスを開始する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetAppコンソールで ID およびアクセス管理を開始する�
 
 
 [role="lead"]
-NetAppコンソールにサインアップすると、新しい組織を作成するように求められます。組織には、メンバー 1 人 (組織管理者) とデフォルト プロジェクト 1 つが含まれます。ビジネス ニーズを満たすように ID およびアクセス管理 (IAM) を設定するには、組織の階層をカスタマイズし、メンバーを追加し、リソースを追加または検出し、それらのリソースを階層全体に関連付ける必要があります。
+NetApp Consoleにサインアップすると、新しい組織を作成するように求められます。組織には、メンバー 1 人 (組織管理者) とデフォルト プロジェクト 1 つが含まれます。ビジネス ニーズを満たすように ID およびアクセス管理 (IAM) を設定するには、組織の階層をカスタマイズし、メンバーを追加し、リソースを追加または検出し、それらのリソースを階層全体に関連付ける必要があります。
 
 組織全体の ID とアクセスを管理するには、*組織管理者* 権限が必要です。  *フォルダーまたはプロジェクトの管理者*権限を持っている場合は、権限を持つフォルダーとプロジェクトのみを管理できます。
 
@@ -60,6 +60,6 @@ link:task-iam-manage-members-permissions.html["メンバーとその権限を管
 
 
 .関連情報
-* link:concept-identity-and-access-management.html["NetAppコンソールのアイデンティティとアクセス管理について学ぶ"]
+* link:concept-identity-and-access-management.html["NetApp Consoleのアイデンティティとアクセス管理について学ぶ"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["IDとアクセスのためのAPIについて学ぶ"^]
 

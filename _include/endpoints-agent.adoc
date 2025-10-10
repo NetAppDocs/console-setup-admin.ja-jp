@@ -42,9 +42,9 @@
 
 | Google Cloud 内のリソースを管理します。
 
-| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。  | \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。  | \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新したり、 NetApp Consoleに新しいNSS資格情報を追加したりします。  | \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェアアップデートを受信します。
+| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新したり、 NetApp Consoleに新しいNSS資格情報を追加したりします。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェアアップデートを受信します。
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetAppコンソール内で機能とサービスを提供するため。
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetApp Console内で機能とサービスを提供します。
 
 a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| コンソールエージェントのアップグレード用のイメージを取得します。
 
@@ -55,9 +55,9 @@ a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azu
 * ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
 
 
-^1^ NetApp、オプション 1 のエンドポイントの方が安全であるため、ファイアウォールでオプション 2 のエンドポイントを許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
+^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
 
-+ * コンソール エージェントの 3.9.47 リリース以降、システムはオプション 1 にリストされているエンドポイントをサポートします。コンソール エージェントの以前のリリースでは、下位互換性はサポートされていません。 * コンソール エージェントは、最初にオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。 * NetApp Backup and Recovery または Ransomware Resilience でコンソール エージェントを使用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
++ * コンソール エージェントの 3.9.47 リリース以降、システムはオプション 1 にリストされているエンドポイントをサポートします。コンソール エージェントの以前のリリースでは、下位互換性はサポートされていません。 * コンソール エージェントは、最初にオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。 * NetApp Backup and Recoveryまたは Ransomware Resilience でコンソール エージェントを使用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
 
 | コンソールエージェントがAWS Governmentリージョンにある場合: \https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
 

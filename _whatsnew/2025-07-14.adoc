@@ -55,7 +55,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-federation.html["B
 
 
 
-==== BlueXP backup and recovery、 BlueXP disaster recovery、フェデレーション管理の新しいアクセス ロール
+==== BlueXP backup and recovery、 BlueXP disaster recovery、およびフェデレーション管理の新しいアクセス ロール
 
 BlueXPでは、次の機能とデータ サービスに対する IAM ロールの使用がサポートされるようになりました。
 

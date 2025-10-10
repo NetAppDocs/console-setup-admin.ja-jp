@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-federation-saml.html 
 keywords: federation, SAML protocol, SAML, federation services,  federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: 'SAML 2.0 IdP プロバイダーと連携して、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。' 
+summary: 'SAML 2.0 IdP プロバイダーと連携して、 NetApp Consoleのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。' 
 ---
 = SAML ID プロバイダとの連携
 :hardbreaks:
@@ -28,7 +28,7 @@ SAML 2.0 プロバイダーとのフェデレーション接続を設定して�
 
 .開始する前に
 * 管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。
-* フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。link:task-federation-verify-domain.html["NetAppコンソールでドメインを確認する"]トピック。
+* フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。link:task-federation-verify-domain.html["NetApp Consoleでドメインを確認する"]トピック。
 
 
 .手順
@@ -89,4 +89,4 @@ SAML 2.0 プロバイダーとのフェデレーション接続を設定して�
 . プロセスを完了するには、[完了] を選択します。
 
 
-フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetAppコンソールにログインできるようになります。
+フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetApp Consoleにログインできるようになります。

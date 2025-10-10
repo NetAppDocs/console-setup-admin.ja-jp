@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-azure-accounts.html 
 keywords: permissions, microsoft, azure, permissions, custom role, role, json, active directory, ad, service principal, key, tenant id, application key, application id, operator role, managed identity, iam, operator, role, virtual machine, create custom role, create azure custom role, azure custom role 
-summary: 'Azure 資格情報を追加および管理して、 NetAppコンソールが Azure サブスクリプション内のクラウド リソースを展開および管理するために必要な権限を持つようにします。複数の Azure Marketplace サブスクリプションを管理する場合は、[資格情報] ページから各サブスクリプションを異なる Azure 資格情報に割り当てることができます。' 
+summary: 'Azure 資格情報を追加および管理して、 NetApp ConsoleがAzure サブスクリプション内のクラウド リソースを展開および管理するために必要な権限を持つようにします。複数の Azure Marketplace サブスクリプションを管理する場合は、[資格情報] ページから各サブスクリプションを異なる Azure 資格情報に割り当てることができます。' 
 ---
-= NetAppコンソールの Azure 資格情報とマーケットプレイス サブスクリプションを管理する
+= NetApp Consoleの Azure 資格情報とマーケットプレイス サブスクリプションを管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Azure 資格情報を追加および管理して、 NetAppコンソー
 
 
 [role="lead"]
-Azure 資格情報を追加および管理して、 NetAppコンソールが Azure サブスクリプション内のクラウド リソースを展開および管理するために必要な権限を持つようにします。複数の Azure Marketplace サブスクリプションを管理する場合は、[資格情報] ページから各サブスクリプションを異なる Azure 資格情報に割り当てることができます。
+Azure 資格情報を追加および管理して、 NetApp ConsoleがAzure サブスクリプション内のクラウド リソースを展開および管理するために必要な権限を持つようにします。複数の Azure Marketplace サブスクリプションを管理する場合は、[資格情報] ページから各サブスクリプションを異なる Azure 資格情報に割り当てることができます。
 
 
 
@@ -65,7 +65,7 @@ image:screenshot_accounts_switch_azure_subscription.gif["Microsoft Azure プロ�
 
 
 
-== NetAppコンソールに Azure 資格情報を追加する
+== NetApp Consoleに Azure 資格情報を追加する
 
 コンソールからコンソール エージェントを展開すると、コンソールは必要なアクセス許可を持つ仮想マシン上でシステム割り当てのマネージド ID を有効にします。  Cloud Volumes ONTAPの新しいシステムを作成するときに、コンソールはデフォルトでこれらの Azure 資格情報を選択します。
 
@@ -113,7 +113,7 @@ image:screenshot_azure_ad.png["Microsoft Azure の Active Directory サービス
 . アプリケーションの詳細を指定します。
 +
 ** *名前*: アプリケーションの名前を入力します。
-** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプでもNetAppコンソールで使用できます)。
+** *アカウント タイプ*: アカウント タイプを選択します (いずれのタイプもNetApp Consoleで使用できます)。
 ** *リダイレクト URI*: このフィールドは空白のままにすることができます。
 
 
@@ -203,7 +203,7 @@ image:screenshot_azure_service_principal_role.png["Azure ポータルの「ロ�
 これで、サービス プリンシパルに、コンソール エージェントをデプロイするために必要な Azure アクセス許可が付与されました。
 
 +
-複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetAppコンソールでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
+複数の Azure サブスクリプションからCloud Volumes ONTAPをデプロイする場合は、サービス プリンシパルを各サブスクリプションにバインドする必要があります。  NetApp Consoleでは、 Cloud Volumes ONTAP をデプロイするときに使用するサブスクリプションを選択できます。
 
 
 
@@ -327,7 +327,7 @@ Azure 資格情報をコンソールに追加したら、Azure Marketplace サ�
 . *組織の資格情報*を選択します。
 . コンソール エージェントに関連付けられている資格情報のセットのアクション メニューを選択し、[*サブスクリプションの構成*] を選択します。
 +
-コンソール エージェントに関連付けられている資格情報を選択する必要があります。  NetAppコンソールに関連付けられている資格情報にマーケットプレイス サブスクリプションを関連付けることはできません。
+コンソール エージェントに関連付けられている資格情報を選択する必要があります。マーケットプレイス サブスクリプションを、 NetApp Consoleに関連付けられている資格情報に関連付けることはできません。
 
 . 資格情報を既存のサブスクリプションに関連付けるには、ドロップダウン リストからサブスクリプションを選択し、[構成] を選択します。
 . 資格情報を新しいサブスクリプションに関連付けるには、[サブスクリプションの追加] > [続行] を選択し、Azure Marketplace の手順に従います。
@@ -337,7 +337,7 @@ Azure 資格情報をコンソールに追加したら、Azure Marketplace サ�
 .. フォームに記入し、「購読」を選択します。
 .. サブスクリプションプロセスが完了したら、「今すぐアカウントを構成」を選択します。
 +
-NetAppコンソールにリダイレクトされます。
+NetApp Consoleにリダイレクトされます。
 
 .. *サブスクリプションの割り当て*ページから:
 +
@@ -354,7 +354,7 @@ NetAppコンソールにリダイレクトされます。
 次のビデオでは、Azure Marketplace からサブスクライブする手順を示します。
 
 +
-.Azure Marketplace からNetApp Intelligent Services をサブスクライブする
+.Azure Marketplace からNetApp Intelligent Servicesをサブスクライブする
 video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 

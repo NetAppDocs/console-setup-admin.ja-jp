@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-install-agent-aws-console.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
-summary: NetAppコンソールから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。 
+summary: NetApp Consoleから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。 
 ---
-= NetAppコンソールからAWSにコンソールエージェントを作成する
+= NetApp ConsoleからAWSにコンソールエージェントを作成する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetAppコンソールから直接 AWS にコンソール エージェ�
 
 
 [role="lead"]
-NetAppコンソールから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。
+NetApp Consoleから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。
 
 .開始する前に
 * あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
@@ -78,7 +78,7 @@ AWS リソースを管理します。エンドポイントは AWS リージョ�
  a| 
 \https://signin.b2c.netapp.com
  a| 
-NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
 
 
 
@@ -92,7 +92,7 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-NetAppコンソール内で機能とサービスを提供します。
+NetApp Console内で機能とサービスを提供します。
 
 
 
@@ -112,7 +112,7 @@ NetAppコンソール内で機能とサービスを提供します。
 --
 
 
-NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetAppコンソールを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
+NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetApp Consoleを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
 +
 --
 link:reference-networking-saas-console.html["NetAppコンソールから接続されたエンドポイントのリストを表示します"] 。
@@ -134,7 +134,7 @@ link:reference-networking-saas-console.html["NetAppコンソールから接続�
 ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
 +
 --
-* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
 * SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
 * アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
 +
@@ -145,7 +145,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
 +
 --
 コンソール エージェントを作成した後、このネットワーク要件を実装する必要があります。
@@ -353,4 +353,4 @@ link:reference-ports-aws.html["AWS のセキュリティグループルールを
 
 NOTE: デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。link:task-troubleshoot-agent.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
 
-コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["NetAppコンソールから S3 バケットを管理する方法を学びます"^]
+コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["NetApp Consoleから S3 バケットを管理する方法を学びます"^]

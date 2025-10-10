@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-entra-id.html 
 keywords: Microsoft Entra ID, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, domain verification, client secret, redirect URL, organization admin, 
-summary: 'Microsoft Entra ID IdP プロバイダーと連携して、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。' 
+summary: 'Microsoft Entra ID IdP プロバイダーと連携して、 NetApp Consoleのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。' 
 ---
-= NetAppコンソールを Microsoft Entra ID と連携する
+= NetApp ConsoleをMicrosoft Entra ID と連携する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Microsoft Entra ID IdP プロバイダーと連携して、 NetAppコ�
 
 
 [role="lead"]
-Microsoft Entra ID IdP プロバイダーと連携して、 NetAppコンソールのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。
+Microsoft Entra ID IdP プロバイダーと連携して、 NetApp Consoleのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。
 
 .必要な役割
 フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
@@ -28,7 +28,7 @@ Microsoft Entra ID とのフェデレーション接続を設定して、コン�
 
 .開始する前に
 * 管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。
-* フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。link:task-federation-verify-domain.html["NetAppコンソールでドメインを確認する"]トピック。
+* フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。link:task-federation-verify-domain.html["NetApp Consoleでドメインを確認する"]トピック。
 
 
 .手順
@@ -96,4 +96,4 @@ Microsoft Entra ID とのフェデレーション接続を設定して、コン�
 . プロセスを完了するには、[完了] を選択します。
 
 
-フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetAppコンソールにログインできるようになります。
+フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetApp Consoleにログインできるようになります。

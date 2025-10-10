@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-aws.html 
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions 
-summary: NetAppコンソールが AWS でエージェント インスタンスを起動すると、その AWS アカウント内のリソースとプロセスを管理するための権限をエージェントに付与するポリシーがインスタンスにアタッチされます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービスなどの複数の AWS サービスへの API 呼び出しを行います。 
+summary: NetApp ConsoleがAWS でエージェント インスタンスを起動すると、その AWS アカウント内のリソースとプロセスを管理するための権限をエージェントに付与するポリシーがインスタンスにアタッチされます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービスなどの複数の AWS サービスへの API 呼び出しを実行します。 
 ---
 = コンソールエージェントのAWS権限
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetAppコンソールが AWS でエージェント インスタンス�
 
 
 [role="lead"]
-NetAppコンソールが AWS でコンソール エージェント インスタンスを起動すると、そのインスタンスにポリシーがアタッチされ、その AWS アカウント内のリソースとプロセスを管理するための権限がエージェントに付与されます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービス (KMS) などの複数の AWS サービスへの API 呼び出しを実行します。
+NetApp ConsoleがAWS でコンソール エージェント インスタンスを起動すると、そのインスタンスにポリシーがアタッチされ、その AWS アカウント内のリソースとプロセスを管理するための権限がエージェントに付与されます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービス (KMS) などの複数の AWS サービスへの API 呼び出しを実行します。
 
 
 
@@ -757,7 +757,7 @@ NetAppコンソールが AWS でコンソール エージェント インスタ�
 
 == AWS権限の使用方法
 
-次のセクションでは、各NetAppコンソール管理サービスまたはデータ サービスに対して権限がどのように使用されるかについて説明します。この情報は、必要な場合にのみ権限を付与するように企業ポリシーで定められている場合に役立ちます。
+次のセクションでは、各NetApp Console管理サービスまたはデータ サービスに対して権限がどのように使用されるかについて説明します。この情報は、必要な場合にのみ権限を付与するように企業ポリシーで定められている場合に役立ちます。
 
 
 
@@ -805,7 +805,7 @@ s3:暗号化設定の取得
 
 
 
-=== NetAppバックアップとリカバリ
+=== NetApp Backup and Recovery
 
 エージェントは、Amazon S3 内のバックアップを管理するために次の API リクエストを行います。
 
@@ -851,7 +851,7 @@ s3:暗号化設定の取得
 * グルー:バッチ削除パーティション
 
 
-ボリュームのバックアップに DataLock とNetApp Ransomware Resilience を使用する場合、エージェントは次の API 要求を行います。
+ボリュームのバックアップに DataLock とNetApp Ransomware Resilienceを使用する場合、エージェントは次の API 要求を行います。
 
 * s3:GetObjectVersionTagging
 * s3:GetBucketObjectLockConfiguration
@@ -865,7 +865,7 @@ s3:暗号化設定の取得
 * s3:GetObject
 * s3:PutBucketObjectLockConfiguration
 * s3:GetLifecycleConfiguration
-* s3:タグ別バケットリスト
+* s3:タグによるバケットのリスト
 * s3:GetBucketTagging
 * s3:オブジェクトバージョンの削除
 * s3:バケットバージョンのリスト
@@ -892,7 +892,7 @@ Cloud Volumes ONTAPバックアップにソースボリュームに使用して�
 
 === 分類
 
-エージェントは、 NetApp Data Classification を展開するために次の API 要求を行います。
+エージェントは、NetApp Data Classificationを展開するために次の API 要求を行います。
 
 * ec2:インスタンスの説明
 * ec2:インスタンスステータスの説明
@@ -920,7 +920,7 @@ Cloud Volumes ONTAPバックアップにソースボリュームに使用して�
 * ec2:IamInstanceProfileAssociations の説明
 
 
-NetApp Data Classification を使用する場合、エージェントは次の API 要求を行って S3 バケットをスキャンします。
+NetApp Data Classificationを使用する場合、エージェントは次の API 要求を行って S3 バケットをスキャンします。
 
 * iam:インスタンスプロファイルにロールを追加
 * ec2:Iamインスタンスプロファイルの関連付け
@@ -951,7 +951,7 @@ NetApp Data Classification を使用する場合、エージェントは次の A
 | 目的 | アクション | 展開に使用されますか? | 日常業務に使用されますか? | 削除に使用されますか? 
 
 
-.13+| Cloud Volumes ONTAPインスタンスのIAMロールとインスタンスプロファイルを作成および管理する | iam:ListInstanceProfiles | はい | はい | いいえ 
+.13+| Cloud Volumes ONTAPインスタンスのIAMロールとインスタンスプロファイルを作成および管理します | iam:ListInstanceProfiles | はい | はい | いいえ 
 
 
 | iam:CreateRole | はい | いいえ | いいえ 
@@ -1215,7 +1215,7 @@ NetApp Data Classification を使用する場合、エージェントは次の A
 
 === 2024年9月9日
 
-NetAppコンソールはNetAppエッジ キャッシングと Kubernetes クラスターの検出および管理をサポートしなくなったため、標準リージョンのポリシー #2 から権限が削除されました。
+NetApp ConsoleはNetAppエッジ キャッシングと Kubernetes クラスターの検出および管理をサポートしなくなったため、標準リージョンのポリシー #2 から権限が削除されました。
 
 .ポリシーから削除された権限を表示する
 [%collapsible]
@@ -1282,6 +1282,6 @@ kms:プレーンテキストなしでデータキーを生成する
 
 === 2023年2月14日
 
-NetApp Cloud Tiering には次の権限が必要になりました。
+NetApp Cloud Tieringには次の権限が必要になりました。
 
 ec2:Vpcエンドポイントの説明

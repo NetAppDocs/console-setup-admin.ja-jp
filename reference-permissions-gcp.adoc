@@ -14,7 +14,7 @@ summary: コンソール エージェントには、クラウド プロバイダ
 
 
 [role="lead"]
-NetAppコンソールには、Google Cloud でアクションを実行するための権限が必要です。これらの権限は、 NetAppが提供するカスタム ロールに含まれています。エージェントがこれらの権限を使用して何を行うかを理解する必要があります。
+NetApp Consoleには、Google Cloud でアクションを実行するための権限が必要です。これらの権限は、 NetAppが提供するカスタム ロールに含まれています。エージェントがこれらの権限を使用して何を行うかを理解する必要があります。
 
 
 
@@ -230,7 +230,7 @@ includedPermissions:
 | - compute.networks.updatePolicy | HA ペアの VPC とサブネットにファイアウォール ルールを適用します。 
 
 
-| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | NetAppデータ分類を有効にします。 
+| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | NetApp Data Classification を有効にします。 
 
 
 | - compute.instanceGroups.get - compute.addresses.get - compute.instances.updateNetworkInterface | Cloud Volumes ONTAP HA ペアでストレージ VM を作成および管理します。 
@@ -239,7 +239,7 @@ includedPermissions:
 | - 監視.timeSeries.リスト - ストレージ.バケット.getIamPolicy | Google Cloud Storage バケットに関する情報を検出します。 
 
 
-| - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.keyRings.getIamPolicy - cloudkms.keyRings.list - cloudkms.keyRings.setIamPolicy | デフォルトの Google 管理暗号化キーを使用する代わりに、 NetApp Backup and Recovery アクティベーション ウィザードで独自の顧客管理キーを選択します。 
+| - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.keyRings.getIamPolicy - cloudkms.keyRings.list - cloudkms.keyRings.setIamPolicy | デフォルトの Google 管理暗号化キーを使用する代わりに、 NetApp Backup and Recoveryアクティベーション ウィザードで独自の顧客管理キーを選択します。 
 |===
 
 
@@ -271,4 +271,4 @@ includedPermissions:
 * cloudkms.keyRings.setIamPolicy
 
 
-これらの権限は、 NetAppバックアップおよびリカバリに必要です。
+これらの権限は、NetApp Backup and Recoveryに必要です。

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-org-partnerships.html 
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
-summary: NetAppコンソールで組織間のパートナーシップを構築すると、組織のパートナーは組織の境界を越えてNetAppリソースを安全に管理できるようになり、コラボレーションが効率化され、セキュリティが強化されます。 
+summary: NetApp Consoleで組織間のパートナーシップを構築すると、組織のパートナーは組織の境界を越えてNetAppリソースを安全に管理できるようになり、コラボレーションが効率化され、セキュリティが強化されます。 
 ---
-= NetAppコンソールのパートナーシップ
+= NetApp Consoleのパートナーシップ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetAppコンソールで組織間のパートナーシップを構築�
 
 
 [role="lead"]
-NetAppコンソールを使用すると、組織間のパートナーシップを構築し、パートナーが組織の境界を越えてNetAppリソースを安全に管理し、コラボレーションを合理化し、セキュリティを強化できます。
+NetApp Consoleを使用すると、組織間のパートナーシップを構築し、パートナーが組織の境界を越えてNetAppリソースを安全に管理し、コラボレーションを合理化し、セキュリティを強化できます。
 
 .必要な役割
 パートナーシップ管理者link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
@@ -30,15 +30,15 @@ NetAppコンソールを使用すると、組織間のパートナーシップ�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]組織IDを開始組織と共有する
 [role="quick-margin-para"]
-パートナーシップを開始するには、イニシエーターがターゲット組織の組織 ID を知っている必要があります。この組織 ID にアクセスできるのは、それぞれの組織のみです。電子メールまたは別の方法で、 NetAppコンソールの外部にある開始組織と直接共有します。
+パートナーシップを開始するには、イニシエーターがターゲット組織の組織 ID を知っている必要があります。この組織 ID にアクセスできるのは、それぞれの組織のみです。電子メールまたは別の方法で、 NetApp Consoleの外部にある開始組織と直接共有します。
 
 開始組織とは、そのリソースへのアクセスを許可する組織です。
 
 image:diagram-partnership-org-id.png["初期の組織を示す図"]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"]NetAppコンソール内でパートナーシップを開始する
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"]NetApp Console内でパートナーシップを開始する
 [role="quick-margin-para"]
-パートナーシップを開始する組織は、 NetAppコンソール内からパートナーシップ要求を送信してパートナーシップを開始します。
+パートナーシップを開始する組織は、NetApp Console内からパートナーシップ要求を送信してパートナーシップを開始します。
 
 image:diagram-partnership-accept.png["パートナーシップの承認を示す図"]
 

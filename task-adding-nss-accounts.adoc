@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-nss-accounts.html 
 keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
-summary: Cloud Volumes ONTAPの主要なワークフローを有効にするには、 NetAppサポート サイト アカウントをNetAppコンソール組織に関連付けます。これらの NSS 認証情報は組織全体に関連付けられています。 
+summary: Cloud Volumes ONTAPの主要なワークフローを有効にするには、 NetAppサポート サイト アカウントをNetApp Console組織に関連付けます。これらの NSS 認証情報は組織全体に関連付けられています。 
 ---
-= NetAppコンソールに関連付けられたNSS資格情報を管理する
+= NetApp Consoleに関連付けられたNSS資格情報を管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -51,7 +51,7 @@ NSS アカウントを追加すると、コンソールはライセンスのダ�
 NOTE: NetApp は、サポートとライセンスに固有の認証サービスの ID プロバイダーとして Microsoft Entra ID を使用します。
 
 .手順
-. *管理 > サポート* で。
+. *管理 > サポート*。
 . *NSS管理*を選択します。
 . *NSS アカウントの追加*を選択します。
 . *続行*を選択すると、Microsoft ログイン ページにリダイレクトされます。
@@ -60,7 +60,7 @@ NOTE: NetApp は、サポートとライセンスに固有の認証サービス�
 ログインが成功すると、 NetApp はNSS ユーザー名を保存します。
 
 +
-これは、メールにマッピングされるシステム生成の ID です。*NSS管理*ページでは、image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["3つの水平の点のアイコン"]メニュー。
+これは、メールにマッピングされるシステム生成の ID です。  *NSS管理*ページでは、image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["3つの水平の点のアイコン"]メニュー。
 
 +
 ** ログイン認証トークンを更新する必要がある場合は、image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["3つの水平の点のアイコン"]メニュー。
@@ -95,7 +95,7 @@ NOTE: NetApp は、サポートとライセンスに固有の認証サービス�
 さらに、組織に関連付けられている NSS アカウントを変更する場合は、組織に関連付けられている NSS 資格情報を更新することもできます。たとえば、NSS アカウントに関連付けられている人物が退職した場合などです。
 
 .手順
-. *管理 > サポート* で。
+. *管理 > サポート*。
 . *NSS管理*を選択します。
 . 更新したいNSSアカウントについては、image:icon-action.png["3つの点が並んだアイコン"]次に、[*資格情報の更新*]を選択します。
 . プロンプトが表示されたら、[続行] を選択して、Microsoft ログイン ページにリダイレクトします。
@@ -114,7 +114,7 @@ NetApp は、サポートおよびライセンスに関連する認証サービ�
 まずアカウントをコンソールに関連付ける必要があります。
 
 .手順
-. *管理 > サポート* で。
+. *管理 > サポート*。
 . *NSS管理*を選択します。
 . NSS アカウントを変更するには、次の手順を実行します。
 +
@@ -139,7 +139,7 @@ image:screenshot-nss-change-account.png["NetAppサポート サイト アカウ�
 TIP: NSS 管理ページに移動すると、コンソールはテーブル内の各アカウントに対してトークンを生成します。そのトークンには、関連付けられた電子メール アドレスに関する情報が含まれます。ページを離れるとトークンは削除されます。情報はキャッシュされないため、プライバシーが保護されます。
 
 .手順
-. *管理 > サポート* で。
+. *管理 > サポート*。
 . *NSS管理*を選択します。
 . 更新したいNSSアカウントについては、image:icon-action.png["3つの点が並んだアイコン"]次に、[*メールアドレスを表示*]を選択します。コピーボタンを使用してメールアドレスをコピーできます。
 
@@ -153,7 +153,7 @@ TIP: NSS 管理ページに移動すると、コンソールはテーブル内�
 現在Cloud Volumes ONTAPシステムに関連付けられているアカウントは削除できません。まず最初に<<attach-system-nss-account,これらのシステムを別のNSSアカウントに接続する>>。
 
 .手順
-. *管理 > サポート* で。
+. *管理 > サポート*。
 . *NSS管理*を選択します。
 . 削除したいNSSアカウントについては、image:icon-action.png["3つの点が並んだアイコン"]次に、[削除] を選択します。
 . *削除*を選択して確認します。

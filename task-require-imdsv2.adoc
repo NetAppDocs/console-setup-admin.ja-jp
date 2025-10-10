@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-require-imdsv2.html 
 keywords: managing connectors, uninstall connector, switch connectors, switch between connectors, local interface, local connector, local cloud manager, local ui, go to local ui 
-summary: NetAppコンソールは、コンソール エージェントとCloud Volumes ONTAPを使用して IMDSv2 をサポートします。ほとんどの場合、IMDSv2 は新しい EC2 インスタンスで自動的に構成されます。 IMDSv1 は 2024 年 3 月より前に有効化されました。セキュリティ ポリシーで必要な場合は、EC2 インスタンスで IMDSv2 を手動で設定する必要がある場合があります。 
+summary: NetApp Consoleは、コンソール エージェントとCloud Volumes ONTAPを使用して IMDSv2 をサポートします。ほとんどの場合、IMDSv2 は新しい EC2 インスタンスで自動的に構成されます。 IMDSv1 は 2024 年 3 月より前に有効化されました。セキュリティ ポリシーで必要な場合は、EC2 インスタンスで IMDSv2 を手動で設定する必要がある場合があります。 
 ---
 = Amazon EC2 インスタンスで IMDSv2 の使用を必須にする
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetAppコンソールは、コンソール エージェントとCloud V
 
 
 [role="lead"]
-NetAppコンソールは、コンソール エージェントとCloud Volumes ONTAP (HA 展開のメディエーターを含む) を使用して、Amazon EC2 インスタンス メタデータ サービス バージョン 2 (IMDSv2) をサポートします。ほとんどの場合、IMDSv2 は新しい EC2 インスタンスで自動的に構成されます。 IMDSv1 は 2024 年 3 月より前に有効化されました。セキュリティ ポリシーで必要な場合は、EC2 インスタンスで IMDSv2 を手動で設定する必要がある場合があります。
+NetApp Consoleは、コンソール エージェントとCloud Volumes ONTAP (HA 展開のメディエーターを含む) を使用して、Amazon EC2 インスタンス メタデータ サービス バージョン 2 (IMDSv2) をサポートします。ほとんどの場合、IMDSv2 は新しい EC2 インスタンスで自動的に構成されます。 IMDSv1 は 2024 年 3 月より前に有効化されました。セキュリティ ポリシーで必要な場合は、EC2 インスタンスで IMDSv2 を手動で設定する必要がある場合があります。
 
 .開始する前に
 * コンソール エージェントのバージョンは 3.9.38 以降である必要があります。

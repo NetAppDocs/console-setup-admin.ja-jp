@@ -9,6 +9,6 @@
 * アイデンティティとアクセス管理 (IAM) API
 * クラウド キー管理サービス (KMS) API
 +
-（顧客管理暗号化キー（CMEK）を使用したNetApp Backup and Recovery を使用する予定の場合のみ必要）
+（顧客管理暗号化キー（CMEK）を使用したNetApp Backup and Recoveryを使用する予定の場合のみ必要）
 
 

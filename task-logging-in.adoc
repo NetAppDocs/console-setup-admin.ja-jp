@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-logging-in.html 
 keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login, login with netapp, log in with netapp, sign up, create account 
-summary: NetAppコンソールにログインする方法は、使用している展開モードによって異なります。 
+summary: NetApp Consoleにログインする方法は、使用している展開モードによって異なります。 
 ---
-= NetAppコンソールにログインする
+= NetApp Consoleにログインする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetAppコンソールにログインする方法は、使用してい�
 
 
 [role="lead"]
-NetAppコンソールにログインする方法は、使用している展開モードによって異なります。
+NetApp Consoleにログインする方法は、使用している展開モードによって異なります。
 
 24 時間経過またはブラウザを閉じると、自動的にログアウトされます。
 
@@ -24,13 +24,13 @@ link:concept-modes.html["コンソールの展開モードについて学ぶ"] �
 ====
 .標準モード
 --
-NetAppコンソールにサインアップすると、Web ベースのコンソールからログインして、データとストレージ インフラストラクチャの管理を開始できます。
+NetApp Consoleにサインアップすると、Web ベースのコンソールからログインして、データとストレージ インフラストラクチャの管理を開始できます。
 
 .タスク概要
-次のいずれかのオプションを使用してNetAppコンソールにログインできます。
+次のいずれかのオプションを使用してNetApp Consoleにログインできます。
 
 * 既存のNetAppサポートサイト（NSS）の認証情報
-* メールアドレスとパスワードを使用したNetAppコンソールアカウント
+* メールアドレスとパスワードを使用したNetApp Consoleアカウント
 * フェデレーション接続
 +
 シングル サインオンを使用すると、企業ディレクトリ (フェデレーション ID) の資格情報を使用してログインできます。link:concept-federation.html["ID連携の設定方法を学ぶ"] 。
@@ -38,7 +38,7 @@ NetAppコンソールにサインアップすると、Web ベースのコンソ�
 
 
 .手順
-. ウェブブラウザを開いて、 https://console.netapp.com["NetAppコンソール"]
+. ウェブブラウザを開いて、 https://console.netapp.com["NetApp Console"]
 . *ログイン*ページで、ログインに関連付けられているメールアドレスを入力します。
 . ログインに関連付けられた認証方法に応じて、資格情報を入力するよう求められます。
 +
@@ -60,7 +60,7 @@ NetAppコンソールにサインアップすると、Web ベースのコンソ�
 .タスク概要
 コンソールは、制限モードの場合、次のいずれかのオプションを使用してログインすることをサポートします。
 
-* メールアドレスとパスワードを使用したNetAppコンソールログイン
+* メールアドレスとパスワードを使用したNetApp Consoleログイン
 * フェデレーション接続
 +
 シングル サインオンを使用すると、企業ディレクトリ (フェデレーション ID) の資格情報を使用してログインできます。link:concept-federation.html["アイデンティティフェデレーションの使い方を学ぶ"] 。

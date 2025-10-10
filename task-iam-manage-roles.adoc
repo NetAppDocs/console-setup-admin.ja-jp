@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-manage-roles.html 
 keywords: projects, access, resources, user roles, iam, identity and access management, folder, organization, permissions, roles, members, access roles 
-summary: NetAppコンソールでは、ユーザーの実行内容と場所に基づいて、ユーザーにロールを割り当てることができます。 
+summary: NetApp Console内では、ユーザーの実行内容と場所に基づいて、ユーザーにロールを割り当てることができます。 
 ---
-= ロールを使用して、 NetAppコンソール リソースへのユーザー アクセスを管理します。
+= ロールを使用して、 NetApp Consoleリソースへのユーザー アクセスを管理します。
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

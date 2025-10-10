@@ -4,7 +4,7 @@
 
 [IMPORTANT]
 ====
-* 新しいエージェントの展開の場合、 NetApp は次のエンドポイントをチェックします。link:reference-networking-saas-console.html["ここに記載"^] 。アップグレードに使用した以前のエンドポイントを使用している場合、この構成チェックはエラーで失敗します。link:reference-networking-saas-console-previous.html["ここに記載"] 。  NetAppは、現在のエンドポイントへのアクセスを許可し、以前のエンドポイントへのアクセスをブロックするようにファイアウォールルールを更新することを推奨します。link:reference-networking-saas-console-previous.html#update-endpoint-list["ネットワークをアップデートする方法を学ぶ"] 。
+* 新しいエージェントの展開では、 NetApp は次のエンドポイントをチェックします。link:reference-networking-saas-console.html["ここに記載"^] 。アップグレードに使用した以前のエンドポイントを使用している場合、この構成チェックはエラーで失敗します。link:reference-networking-saas-console-previous.html["ここに記載"] 。  NetAppは、現在のエンドポイントへのアクセスを許可し、以前のエンドポイントへのアクセスをブロックするようにファイアウォールルールを更新することを推奨します。link:reference-networking-saas-console-previous.html#update-endpoint-list["ネットワークをアップデートする方法を学ぶ"] 。
 * ファイアウォールのエンドポイントを更新しても、既存のエージェントは引き続き動作します。
 
 

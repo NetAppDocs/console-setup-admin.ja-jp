@@ -70,7 +70,7 @@ Google Cloud 内のリソースを管理します。
  a| 
 \https://signin.b2c.netapp.com
  a| 
-NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
 
 
 
@@ -84,7 +84,7 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-NetAppコンソール内で機能とサービスを提供します。
+NetApp Console内で機能とサービスを提供します。
 
 
 
@@ -104,7 +104,7 @@ NetAppコンソール内で機能とサービスを提供します。
 --
 
 
-NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetAppコンソールを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
+NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetApp Consoleを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
 +
 --
 link:reference-networking-saas-console.html["NetAppコンソールから接続されたエンドポイントのリストを表示します"] 。
@@ -126,7 +126,7 @@ link:reference-networking-saas-console.html["NetAppコンソールから接続�
 ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
 +
 --
-* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
 * SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
 * アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
 +
@@ -137,7 +137,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
 +
 --
 コンソール エージェントを作成した後、このネットワーク要件を実装します。
@@ -320,11 +320,11 @@ compute.networkUser
 
 
 | エージェントサービスアカウント | カスタム | 奉仕プロジェクト  a| 
-link:reference-permissions-gcp.html["エージェントサービスアカウントポリシー"]
+link:reference-permissions-gcp.html["エージェント サービス アカウント ポリシー"]
 | compute.networkUser デプロイメントマネージャー.エディター | サービス プロジェクトでCloud Volumes ONTAPとサービスをデプロイおよび保守する 
 
 
-| Cloud Volumes ONTAPサービス アカウント | カスタム | 奉仕プロジェクト | storage.admin メンバー: serviceAccount.user としてのNetAppコンソール サービス アカウント | 該当なし | （オプション） NetApp Cloud TieringおよびNetApp Backup and Recoveryの場合 
+| Cloud Volumes ONTAPサービス アカウント | カスタム | 奉仕プロジェクト | storage.admin メンバー: serviceAccount.user としてのNetApp Consoleサービス アカウント | 該当なし | （オプション） NetApp Cloud TieringおよびNetApp Backup and Recoveryの場合 
 
 
 | Google API サービス エージェント | Google Cloud | 奉仕プロジェクト  a| 
@@ -342,7 +342,7 @@ compute.networkUser
 |===
 注：
 
-. ファイアウォール ルールをデプロイメントに渡さず、コンソールで自動的に作成するように選択した場合にのみ、ホスト プロジェクトで deploymentmanager.editor が必要になります。ルールが指定されていない場合、 NetAppコンソールは、VPC0 ファイアウォール ルールを含むデプロイメントをホスト プロジェクトに作成します。
+. ファイアウォール ルールをデプロイメントに渡さず、コンソールで自動的に作成するように選択した場合にのみ、ホスト プロジェクトで deploymentmanager.editor が必要になります。ルールが指定されていない場合、 NetApp Consoleは、VPC0 ファイアウォール ルールを含むデプロイメントをホスト プロジェクトに作成します。
 . firewall.create と firewall.delete は、デプロイメントにファイアウォール ルールを渡さず、コンソールで自動的に作成するように選択した場合にのみ必要です。これらの権限は、コンソール アカウントの .yaml ファイルにあります。共有 VPC を使用して HA ペアを展開する場合、これらの権限は VPC1、2、3 のファイアウォール ルールを作成するために使用されます。他のすべてのデプロイメントでは、これらの権限は VPC0 のルールの作成にも使用されます。
 . クラウド階層化の場合、階層化サービス アカウントには、プロジェクト レベルだけでなく、サービス アカウントに対する serviceAccount.user ロールが必要です。現在、プロジェクト レベルで serviceAccount.user を割り当てると、getIAMPolicy を使用してサービス アカウントをクエリしても権限が表示されません。
 
@@ -364,7 +364,7 @@ Console エージェントとCloud Volumes ONTAP をデプロイする前に、�
 ** アイデンティティとアクセス管理 (IAM) API
 ** クラウド キー管理サービス (KMS) API
 +
-（顧客管理暗号化キー（CMEK）を使用したNetApp Backup and Recovery を使用する予定の場合のみ必要）
+（顧客管理暗号化キー（CMEK）を使用したNetApp Backup and Recoveryを使用する予定の場合のみ必要）
 
 
 
@@ -483,4 +483,4 @@ link:concept-identity-and-access-management.html["アイデンティティとア
 .結果
 コンソール エージェントがインストールされ、コンソール組織に設定されました。
 
-ウェブブラウザを開いて、 https://console.netapp.com["NetAppコンソール"^]コンソール エージェントの使用を開始します。
+ウェブブラウザを開いて、 https://console.netapp.com["NetApp Console"^]コンソール エージェントの使用を開始します。

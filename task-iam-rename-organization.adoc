@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-iam-rename-organization.html 
 keywords: rename organization, change organization name, name change, rename, change name, iam, ID, integration, project, organization, API, identity and access management 
-summary: 必要に応じて、 NetAppコンソール組織の名前を変更できます。 
+summary: 必要に応じて、 NetApp Console組織の名前を変更できます。 
 ---
 = 組織IDとプロジェクトID
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 必要に応じて、 NetAppコンソール組織の名前を変更で�
 
 
 [role="lead"]
-NetAppコンソール組織には名前と ID があります。組織を識別しやすいように、組織の名前を選択できます。特定の統合では組織 ID を取得する必要がある場合もあります。
+NetApp Console組織には名前と ID があります。組織を識別しやすいように、組織の名前を選択できます。特定の統合では組織 ID を取得する必要がある場合もあります。
 
 
 

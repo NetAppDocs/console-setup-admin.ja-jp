@@ -70,7 +70,7 @@ Red Hat Enterprise Linux
 * ホストは Red Hat Subscription Management に登録されている必要があります。登録されていない場合、ホストはエージェントのインストール中に必要なサードパーティ製ソフトウェアを更新するためにリポジトリにアクセスできません。
 
  a| 
-3.9.50 以降、コンソールが標準モードまたは制限モードの場合
+3.9.50 以降、コンソールが標準モードまたは制限モード
  a| 
 Podman バージョン 4.6.1 または 4.9.4
 
@@ -88,7 +88,7 @@ Ubuntu
  a| 
 24.04 LTS
  a| 
-3.9.45 以降、 NetAppコンソールが標準モードまたは制限モード
+3.9.45 以降、 NetApp Consoleが標準モードまたは制限モード
  a| 
 Docker エンジン 23.06 から 28.0.0。
  a| 
@@ -131,7 +131,7 @@ Google Cloud マシンタイプ:: 上記の CPU および RAM の要件を満た
 
 == ステップ2: PodmanまたはDocker Engineをインストールする
 
-オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要です。
+オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要になります。
 
 * Red Hat Enterprise Linux 8 および 9 には Podman が必要です。
 +
@@ -304,7 +304,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 アウトバウンドインターネットアクセス:: コンソール エージェントを展開するネットワークの場所には、特定のエンドポイントに接続するための送信インターネット接続が必要です。
 
 
-WebベースのNetAppコンソールを使用する際にコンピュータから接続されるエンドポイント::
+WebベースのNetApp Consoleを使用する際にコンピュータから接続されるエンドポイント::
 +
 --
 Web ブラウザからコンソールにアクセスするコンピュータは、複数のエンドポイントに接続できる必要があります。コンソール エージェントを設定し、コンソールを日常的に使用するには、コンソールを使用する必要があります。
@@ -348,7 +348,7 @@ Google Cloud 内のリソースを管理します。
  a| 
 \https://signin.b2c.netapp.com
  a| 
-NetAppサポート サイト (NSS) の資格情報を更新するか、 NetAppコンソールに新しい NSS 資格情報を追加します。
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
 
 
 
@@ -362,7 +362,7 @@ NetAppサポート サイト (NSS) の資格情報を更新するか、 NetApp�
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-NetAppコンソール内で機能とサービスを提供します。
+NetApp Console内で機能とサービスを提供します。
 
 
 
@@ -396,7 +396,7 @@ NetAppコンソール内で機能とサービスを提供します。
 ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
 +
 --
-* HTTP (80) と HTTPS (443) は、まれに使用するローカル UI へのアクセスを提供します。
+* HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
 * SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
 * アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
 +
@@ -407,7 +407,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classification を使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classification システムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
 
 
 
@@ -491,11 +491,11 @@ compute.networkUser
 
 
 | エージェントサービスアカウント | カスタム | 奉仕プロジェクト  a| 
-link:reference-permissions-gcp.html["エージェントサービスアカウントポリシー"]
+link:reference-permissions-gcp.html["エージェント サービス アカウント ポリシー"]
 | compute.networkUser デプロイメントマネージャー.エディター | サービス プロジェクトでCloud Volumes ONTAPとサービスをデプロイおよび保守する 
 
 
-| Cloud Volumes ONTAPサービス アカウント | カスタム | 奉仕プロジェクト | storage.admin メンバー: serviceAccount.user としてのNetAppコンソール サービス アカウント | 該当なし | （オプション） NetApp Cloud TieringおよびNetApp Backup and Recoveryの場合 
+| Cloud Volumes ONTAPサービス アカウント | カスタム | 奉仕プロジェクト | storage.admin メンバー: serviceAccount.user としてのNetApp Consoleサービス アカウント | 該当なし | （オプション） NetApp Cloud TieringおよびNetApp Backup and Recoveryの場合 
 
 
 | Google API サービス エージェント | Google Cloud | 奉仕プロジェクト  a| 
@@ -513,7 +513,7 @@ compute.networkUser
 |===
 注：
 
-. ファイアウォール ルールをデプロイメントに渡さず、コンソールで自動的に作成するように選択した場合にのみ、ホスト プロジェクトで deploymentmanager.editor が必要になります。ルールが指定されていない場合、 NetAppコンソールは、VPC0 ファイアウォール ルールを含むデプロイメントをホスト プロジェクトに作成します。
+. ファイアウォール ルールをデプロイメントに渡さず、コンソールで自動的に作成するように選択した場合にのみ、ホスト プロジェクトで deploymentmanager.editor が必要になります。ルールが指定されていない場合、 NetApp Consoleは、VPC0 ファイアウォール ルールを含むデプロイメントをホスト プロジェクトに作成します。
 . firewall.create と firewall.delete は、デプロイメントにファイアウォール ルールを渡さず、コンソールで自動的に作成するように選択した場合にのみ必要です。これらの権限は、コンソール アカウントの .yaml ファイルにあります。共有 VPC を使用して HA ペアを展開する場合、これらの権限は VPC1、2、3 のファイアウォール ルールを作成するために使用されます。他のすべてのデプロイメントでは、これらの権限は VPC0 のルールの作成にも使用されます。
 . クラウド階層化の場合、階層化サービス アカウントには、プロジェクト レベルだけでなく、サービス アカウントに対する serviceAccount.user ロールが必要です。現在、プロジェクト レベルで serviceAccount.user を割り当てると、getIAMPolicy を使用してサービス アカウントをクエリしても権限が表示されません。
 
@@ -535,7 +535,7 @@ Google Cloud にCloud Volumes ONTAPシステムをデプロイする前に、い
 ** アイデンティティとアクセス管理 (IAM) API
 ** クラウド キー管理サービス (KMS) API
 +
-（顧客管理暗号化キー（CMEK）を使用したNetApp Backup and Recovery を使用する予定の場合のみ必要）
+（顧客管理暗号化キー（CMEK）を使用したNetApp Backup and Recoveryを使用する予定の場合のみ必要）
 
 
 
@@ -688,7 +688,7 @@ https://_ipaddress_[]
 .. システムの名前を入力します。
 .. *安全な環境で実行していますか?* の下で、制限モードを無効のままにします。
 +
-以下の手順ではコンソールを標準モードで使用する方法について説明しているため、制限モードは無効にしておく必要があります。安全な環境があり、このアカウントをバックエンド サービスから切断する場合にのみ、制限モードを有効にする必要があります。もしそうなら、link:task-quick-start-restricted-mode.html["NetAppコンソールを制限モードで使い始めるための手順に従います"] 。
+以下の手順ではコンソールを標準モードで使用する方法について説明しているため、制限モードは無効にしておく必要があります。安全な環境があり、このアカウントをバックエンド サービスから切断する場合にのみ、制限モードを有効にする必要があります。もしそうなら、link:task-quick-start-restricted-mode.html["NetApp Consoleを制限モードで使い始めるための手順に従います"] 。
 
 .. *始めましょう*を選択します。
 
@@ -699,7 +699,7 @@ NOTE: インストールが失敗した場合は、トラブルシューティ�
 
 
 
-コンソール エージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合は、[システム] ページに Google Cloud Storage システムが自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["NetAppコンソールから Google Cloud Storage を管理する方法を学びます"^]
+コンソール エージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合は、[システム] ページに Google Cloud Storage システムが自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["NetApp Consoleから Google Cloud Storage を管理する方法を学びます"^]
 
 
 
