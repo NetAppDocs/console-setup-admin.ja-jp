@@ -71,7 +71,7 @@ https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-o
 * 経済効率^1^
 * Google Cloud Storage バケット
 * オンプレミスのONTAPクラスタとNetAppデータ サービスの統合
-* NetAppランサムウェア耐性
+* NetApp Ransomware Resilience
 * StorageGRIDシステム
 * NetApp Cloud Tiering
 * NetApp Volume Caching

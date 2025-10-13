@@ -1298,7 +1298,6 @@
   <block id="c7a576f5db262c0475afa4a53822979e" category="list-text">経済効率^1^</block>
   <block id="390e388eccc77b388b4d54d73b76f902" category="list-text">Google Cloud Storage バケット</block>
   <block id="016d4dd0efd43648613b0639e13ba2c7" category="list-text">オンプレミスのONTAPクラスタとNetAppデータ サービスの統合</block>
-  <block id="cf399270632323e6349a7298f0e7eb09" category="list-text">NetAppランサムウェア耐性</block>
   <block id="a94a2dfcff08cd86c973716edaf32722" category="list-text">NetApp Cloud Tiering</block>
   <block id="6f267103f7f652e22e0ead9f66014cd4" category="list-text">NetApp Volume Caching</block>
   <block id="06f4d4213c3d87db39929c4ce6ffcc0f" category="paragraph">^1^ コンソール エージェントがなくてもこれらのサービスにアクセスできますが、アクションを開始するにはコンソール エージェントが必要です。</block>
@@ -2214,7 +2213,6 @@
   <block id="065933ac7339c32c2a386f3f69e4fd61" category="list-text"><block ref="065933ac7339c32c2a386f3f69e4fd61" category="inline-link-macro-rx"></block></block>
   <block id="470bbf3695958272c2830107baeb6411" category="summary">NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供する役割を付与できます。</block>
   <block id="5f87170a21a0b0d135060af816ac1433" category="doc">NetApp Consoleのランサムウェア耐性アクセス ロール</block>
-  <block id="9d9ae6ee36b5e9aae30cd19d4d3c6b92" category="paragraph">ランサムウェア レジリエンス ロールは、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供します。  2 つの役割は、ランサムウェア保護管理者とランサムウェア保護閲覧者です。  2 つの役割の主な違いは、ランサムウェア耐性において実行できるアクションです。</block>
   <block id="e6d88107afe61c1a78c0dac0689d8fac" category="paragraph">次の表は、各ロールが実行できるアクションを示しています。</block>
   <block id="2961ef9224153d664a9bde6ee6ef2570" category="cell">ダッシュボードで推奨事項のステータスを更新する</block>
   <block id="bb73fa2a07d0c544491039dc1ffed7b8" category="cell">ワークロードの再検出を開始する</block>
@@ -4005,8 +4003,6 @@
   <block id="cf3b3d414366a26f5b43041b5056897c" category="summary">NetApp Console内では、ユーザーの実行内容と場所に基づいて、ユーザーにロールを割り当てることができます。</block>
   <block id="14750286cb2a5a61bf62b65d9b9d2112" category="doc">ロールを使用して、 NetApp Consoleリソースへのユーザー アクセスを管理します。</block>
   <block id="5f24947dab075e3413b914aa36df023a" category="paragraph">コンソール内では、ユーザーの実行内容と場所に基づいて、ユーザーにロールを割り当てることができます。</block>
-  <block id="e5bb4954536b904550d932928f88306d" category="paragraph">*組織管理者* または *フォルダーまたはプロジェクト管理者* の役割を持つユーザーには、他のユーザーに役割を割り当てる責任があります。プロジェクトまたはフォルダーごとにアクセス ロールを割り当てることができます。たとえば、あるプロジェクトではランサムウェア保護管理者ロールをユーザーに割り当てることができ、別のプロジェクトではSnapCenter管理者ロールを割り当てることができます。あるいは、ユーザーが特定のフォルダー内のすべてのプロジェクトに対して分類管理者ロールを必要とする場合は、フォルダー レベルでこのロールを付与できます。</block>
-  <block id="982e57f560511ceb443082e656219246" category="paragraph">アクセス ロールを使用して、ユーザーが実行する必要がある特定のタスクに基づいてストレージ リソースへのアクセスを割り当てます。たとえば、ユーザーがランサムウェア保護サービスとやり取りする必要がある場合、アクセス ロールが付与されているプロジェクトのランサムウェア保護サービスに対する表示権限または管理権限のいずれかを含むアクセス ロールをユーザーに付与する必要があります。</block>
   <block id="61258c54d2a7f09077a72a4eeb56874d" category="paragraph">セキュリティを強化するために、IAM 戦略に基づいてユーザーにロールを割り当てます。  IAM ロールにより、ユーザーは必要なアクセス権のみを持つことができます。</block>
   <block id="3908f1e42aa5b81b8316befd30a6965d" category="inline-link-macro">フォルダーとプロジェクトを使用してリソースを整理する方法を学びます。</block>
   <block id="ecdeffad8e53c7c9b1fb61f02a3cb5d1" category="admonition">リソースへのアクセスを直接許可することはできないことに注意してください。まずプロジェクトにリソースを割り当てます。ユーザーにアクセスを割り当てる前に、リソース階層を設定することを検討してください。<block ref="122b4639308e055d5bdfeb8a65e1794d" category="inline-link-macro-rx"></block></block>
@@ -4016,7 +4012,6 @@
   <block id="12815307393fa19648b391d49b4282e4" category="section-title">メンバーにアクセスロールを追加する</block>
   <block id="9a9b4b286a389bc98dfdeb3214c134a1" category="paragraph">通常、組織にメンバーを追加するときにロールを割り当てますが、ロールを削除または追加することでいつでも更新できます。</block>
   <block id="ba364a79f6fbfab0c8591198ecfd87cc" category="paragraph">組織、フォルダ、またはプロジェクトへのアクセス ロールをユーザーに割り当てることができます。</block>
-  <block id="9e9b03c43a95d80b4d040ec538e41373" category="paragraph">メンバーは、同じプロジェクト内および異なるプロジェクト内で複数の役割を持つことができます。たとえば、小規模な組織では、利用可能なすべてのアクセス ロールを同じユーザーに割り当てる場合がありますが、大規模な組織では、ユーザーにさらに専門的なタスクを実行させる場合があります。あるいは、組織のランサムウェア保護管理者ロールを 1 人のユーザーに割り当てることもできます。この例では、ユーザーは組織内のすべてのプロジェクトでランサムウェア保護タスクを実行できるようになります。</block>
   <block id="7a43b6f649f8cf73a12056888057076b" category="paragraph">アクセス ロール戦略は、 NetAppリソースの編成方法と一致する必要があります。</block>
   <block id="20c36cd6c77d407b6118c77ebe403934" category="admonition">組織管理者の役割が割り当てられているメンバーには、追加の役割を割り当てることはできません。組織全体にわたる権限がすでに付与されています。フォルダーまたはプロジェクトのロールを持つメンバーには、そのロールがすでに割り当てられているフォルダーまたはプロジェクト内の他のロールを割り当てることはできません。これら両方のロールは、割り当てられた範囲内のすべてのサービスへのアクセスを提供します。</block>
   <block id="068135177d9d1843118236d5f10dc5b7" category="section-title">メンバーに割り当てられた役割を変更する</block>
@@ -4978,7 +4973,6 @@
   <block id="99cee3b8f810202d675de978cef4f9da" category="cell">はい<block ref="514d17d2eb0e043089e13542661abd63" category="inline-link-rx"></block></block>
   <block id="e216b7a924341f796bca310d1d812baf" category="cell">コピーと同期</block>
   <block id="645a84975202e30700b572b49a5ee29d" category="cell">ディザスタ リカバリ</block>
-  <block id="7478f8f98c41fc2f5747e6f31892fe6f" category="cell">ランサムウェア対策</block>
   <block id="ff45d71e69fb5930de79de7c94326d7b" category="cell">ボリュームキャッシュ</block>
   <block id="35ccbae2ce9b9594b9af9196a3bed361" category="cell">ワークロードファクトリー</block>
   <block id="3d1f92a565d3b1a61880236e33c49bf3" category="cell">スケジュール</block>
@@ -5531,7 +5525,6 @@
   <block id="35cbd88f43ce85ef7ed6866daa2c6066" category="sidebar">データサービスの役割</block>
   <block id="38dd106db79e0463f64b237d9de58a8e" category="sidebar">バックアップとリカバリの役割</block>
   <block id="2879d04f18c304fb2a3d5cf00deff6e2" category="sidebar">災害復旧の役割</block>
-  <block id="0310ff69ee2ad8b9fa1fbf2f23946a8e" category="sidebar">ランサムウェア保護の役割</block>
   <block id="4dd7bf281f080fe43c775a741f9f2cc1" category="sidebar">パートナー組織</block>
   <block id="d6cca643be1ccfaa32ccfdc068061f15" category="sidebar">組織パートナーシップについて学ぶ</block>
   <block id="d88a163f40de4d60f08d7006db6dbc69" category="sidebar">組織パートナーシップを構築する</block>
@@ -5564,4 +5557,11 @@
   <block id="abfd94e3956e611a257a32b0f396af25" category="sidebar">Google Cloud のコンソール エージェント ファイアウォール ルール</block>
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">コンソールネットワークアクセス（レガシー）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
+  <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">ランサムウェア レジリエンス ロールは、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供します。ランサムウェア耐性は次の役割をサポートします。</block>
+  <block id="b7055c90f2b38b6e2d3cddd08ec5c936" category="paragraph">ロールによって、設定とアクションへのアクセス権が異なります。疑わしいユーザー行動アクティビティを構成または表示するには、ユーザー行動ロールのいずれかを使用する必要があります。</block>
+  <block id="f75989b6aa2a7a3c16b04e40aebffd8f" category="paragraph">*組織管理者* または *フォルダーまたはプロジェクト管理者* の役割を持つユーザーには、他のユーザーに役割を割り当てる責任があります。プロジェクトまたはフォルダーごとにアクセス ロールを割り当てることができます。たとえば、あるプロジェクトでは Ransomware Resilience 管理者ロールをユーザーに割り当てることができ、別のプロジェクトではSnapCenter管理者ロールを割り当てることができます。あるいは、ユーザーが特定のフォルダー内のすべてのプロジェクトに対して分類管理者ロールを必要とする場合は、フォルダー レベルでこのロールを付与できます。</block>
+  <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">アクセス ロールを使用して、ユーザーが実行する必要がある特定のタスクに基づいてストレージ リソースへのアクセスを割り当てます。たとえば、ユーザーが Ransomware Resilience と対話する必要がある場合、アクセス ロールが付与されているプロジェクトの Ransomware Resilience の表示権限または管理権限のいずれかを含むアクセス ロールをユーザーに付与する必要があります。</block>
+  <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">メンバーは、同じプロジェクト内および異なるプロジェクト内で複数の役割を持つことができます。たとえば、小規模な組織では、利用可能なすべてのアクセス ロールを同じユーザーに割り当てる場合がありますが、大規模な組織では、ユーザーにさらに専門的なタスクを実行させる場合があります。あるいは、組織の Ransomware Resilience 管理者ロールを 1 人のユーザーに割り当てることもできます。この例では、ユーザーは組織内のすべてのプロジェクトでランサムウェア耐性タスクを実行できるようになります。</block>
+  <block id="c36b12344113082dcf8a9786e36a3536" category="cell">ランサムウェア耐性</block>
+  <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">ランサムウェア耐性の役割</block>
 </blocks>

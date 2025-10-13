@@ -85,7 +85,7 @@ link:media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXPプライベートモ
 | 経済効率 | いいえ 
 
 
-| ランサムウェア対策 | いいえ 
+| ランサムウェア耐性 | いいえ 
 
 
 | レプリケーション | はい 

@@ -154,7 +154,7 @@ sidebar:
             url: "/reference-iam-backup-rec-roles.html"
           - title: 災害復旧の役割
             url: "/reference-iam-disaster-rec-roles.html"
-          - title: ランサムウェア保護の役割
+          - title: ランサムウェア耐性の役割
             url: "/reference-iam-ransomware-roles.html"
     - title: パートナー組織
       entries:
