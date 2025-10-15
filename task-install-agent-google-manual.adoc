@@ -154,7 +154,7 @@ Podman をインストールして設定するには、次の手順に従いま�
 * Python3をインストールする
 * podman-compose パッケージ バージョン 1.0.6 をインストールします。
 * podman-composeをPATH環境変数に追加する
-* Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を使用していることを確認してください。
+* Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。
 
 
 
@@ -339,13 +339,6 @@ Google Cloud 内のリソースを管理します。
 
 
  a| 
-\https://support.netapp.com
- a| 
-ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
-
-
-
- a| 
 \https://signin.b2c.netapp.com
  a| 
 NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
@@ -371,7 +364,7 @@ NetApp Console内で機能とサービスを提供します。
  a| 
 コンソール エージェントのアップグレード用のイメージを取得します。
 
-* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
+* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
 +
 以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
 

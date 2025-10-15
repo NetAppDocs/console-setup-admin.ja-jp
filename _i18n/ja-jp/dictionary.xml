@@ -175,10 +175,8 @@
   <block id="6fc418bd4d8d26d716d678ffb2c516e9" category="paragraph">| Azure China リージョンのリソースを管理します。</block>
   <block id="1e20d05d6d0ad597892e7e3d08324340" category="paragraph">| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects</block>
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| Google Cloud 内のリソースを管理します。</block>
-  <block id="1edf01eab3b295d8836c4716654a90aa" category="paragraph">| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新したり、 NetApp Consoleに新しいNSS資格情報を追加したりします。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェアアップデートを受信します。</block>
   <block id="c642b24062280a73e940087788371986" category="paragraph">| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetApp Console内で機能とサービスを提供します。</block>
   <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| コンソールエージェントのアップグレード用のイメージを取得します。</block>
-  <block id="047e3fbb2dcfe77fd82c7af9c6b59cde" category="list-text">新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合<block ref="3f791c7fe5360af04e14756765d7002d" category="inline-link-macro-rx"></block>、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。</block>
   <block id="4691a33bfa50c006ca907ff0f1c2ff22" category="inline-link-macro">エンドポイントリストを更新する方法を学ぶ</block>
   <block id="6e9c9d81baee7aa9e962024fc724b7ca" category="paragraph">以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。<block ref="b264fb455cda46e4971383987c8dce4c" category="inline-link-macro-rx"></block> 。</block>
   <block id="b44e4956810f4ddc108ea4c7e1339c8b" category="list-text">ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。</block>
@@ -531,7 +529,6 @@
   <block id="402a934d05f32752831bc2ed8043fb03" category="list-text">Python3をインストールする</block>
   <block id="e7655ce2e211e4106a4d229011bca18b" category="list-text">podman-compose パッケージ バージョン 1.0.6 をインストールします。</block>
   <block id="a50a451f2ba0bc5a53f19d6887c717e4" category="list-text">podman-composeをPATH環境変数に追加する</block>
-  <block id="8fef27449fb74ae98514453c89c33853" category="list-text">Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を使用していることを確認してください。</block>
   <block id="72647f42887226fbe161a7784cde9900" category="admonition">DNS ポートの競合を避けるために、エージェントをインストールした後、aardvark-dns ポート (デフォルト: 53) を調整します。指示に従ってポートを構成します。</block>
   <block id="b7f382be5c79895b47058d13f21b554a" category="list-text">ホストに podman-docker パッケージがインストールされている場合は削除します。</block>
   <block id="3c7e0e0689042d7582c0880e1b998f2c" category="list-text">Podman をインストールします。</block>
@@ -1613,7 +1610,6 @@
   <block id="f4c6f851b00d5518bf888815de279aba" category="cell">注記</block>
   <block id="34678ee868eeabce720fc4a0fd60c17a" category="cell">完全サポート</block>
   <block id="34c6561859a3a97caa0248fbb4372124" category="inline-link">ONTAPデータのサポートされているバックアップ先のリストを表示します</block>
-  <block id="d49ef528aa6be744e9ccc075b5f5ea3f" category="cell">制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、 NetApp Backup and Recovery はONTAPボリューム データのみのバックアップと復元をサポートします。<block ref="b4c1403d372f1f9b47ce9baa913046c0" category="inline-link-rx"></block>アプリケーション データおよび仮想マシン データのバックアップと復元はサポートされていません。</block>
   <block id="91d5470ff0de1d64ddb0c8c3bef0b246" category="cell">NetApp Data Classification</block>
   <block id="0a44fe605745a017fde35750e5fae36a" category="paragraph">制限モードの政府地域でサポートされます。商用地域または制限モードのソブリン地域ではサポートされません。</block>
   <block id="63d604af1c7a5bfef29d50c6c2c2591f" category="cell">制限モードでサポートされている以下のライセンス オプションを使用して、ライセンスおよびサブスクリプション情報にアクセスできます。</block>
@@ -5564,4 +5560,8 @@
   <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">メンバーは、同じプロジェクト内および異なるプロジェクト内で複数の役割を持つことができます。たとえば、小規模な組織では、利用可能なすべてのアクセス ロールを同じユーザーに割り当てる場合がありますが、大規模な組織では、ユーザーにさらに専門的なタスクを実行させる場合があります。あるいは、組織の Ransomware Resilience 管理者ロールを 1 人のユーザーに割り当てることもできます。この例では、ユーザーは組織内のすべてのプロジェクトでランサムウェア耐性タスクを実行できるようになります。</block>
   <block id="c36b12344113082dcf8a9786e36a3536" category="cell">ランサムウェア耐性</block>
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">ランサムウェア耐性の役割</block>
+  <block id="e40a74210464aa0305c3d66c083f2e23" category="paragraph">| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新したり、 NetApp Consoleに新しいNSS資格情報を追加したりします。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェアアップデートを受信します。</block>
+  <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。</block>
+  <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。</block>
+  <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、 NetApp Backup and Recovery はONTAPボリューム データのみのバックアップと復元をサポートします。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block>アプリケーション データおよび仮想マシン データのバックアップと復元はサポートされていません。</block>
 </blocks>
