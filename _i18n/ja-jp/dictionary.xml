@@ -2207,9 +2207,7 @@
   <block id="05271cfa0bdeea693a59837fb97cbc3b" category="list-text"><block ref="05271cfa0bdeea693a59837fb97cbc3b" category="inline-link-macro-rx"></block></block>
   <block id="d5c64a8daa89e747afab2353c532cfd0" category="inline-link-macro">NetApp ConsoleIAMを使い始める</block>
   <block id="065933ac7339c32c2a386f3f69e4fd61" category="list-text"><block ref="065933ac7339c32c2a386f3f69e4fd61" category="inline-link-macro-rx"></block></block>
-  <block id="470bbf3695958272c2830107baeb6411" category="summary">NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供する役割を付与できます。</block>
   <block id="5f87170a21a0b0d135060af816ac1433" category="doc">NetApp Consoleのランサムウェア耐性アクセス ロール</block>
-  <block id="e6d88107afe61c1a78c0dac0689d8fac" category="paragraph">次の表は、各ロールが実行できるアクションを示しています。</block>
   <block id="2961ef9224153d664a9bde6ee6ef2570" category="cell">ダッシュボードで推奨事項のステータスを更新する</block>
   <block id="bb73fa2a07d0c544491039dc1ffed7b8" category="cell">ワークロードの再検出を開始する</block>
   <block id="26548eb85488e3cdc0f0b9b27802995f" category="cell">*[保護]タブで*:</block>
@@ -2219,7 +2217,6 @@
   <block id="e1b7f478f4648932399a0f8d6835740b" category="cell">保護プランと詳細を一覧表示する</block>
   <block id="8921dd8678af3de7359bee784af9a8e0" category="cell">保護グループの一覧</block>
   <block id="97803e7af23cd9dd5e46bef4245a8480" category="cell">保護グループの詳細を表示する</block>
-  <block id="70348d94ac22a6df8ff175b1e3a7535b" category="cell">保護グループの作成、編集、削除</block>
   <block id="4330b42a340140b836c42bbe9c7105be" category="cell">データをダウンロード</block>
   <block id="b1e60ac72e50f485ca0a5ea9c82143d2" category="cell">*アラートタブ*:</block>
   <block id="a0da34eb7fa7ce71299612d3548b6f6a" category="cell">アラートとアラートの詳細を表示する</block>
@@ -5519,8 +5516,6 @@
   <block id="a11961cab6627eac643ea36ae57ce8df" category="sidebar">Keystoneの役割</block>
   <block id="7654fe6ca44295ba5f844fc9798f0103" category="sidebar">ストレージの役割</block>
   <block id="35cbd88f43ce85ef7ed6866daa2c6066" category="sidebar">データサービスの役割</block>
-  <block id="38dd106db79e0463f64b237d9de58a8e" category="sidebar">バックアップとリカバリの役割</block>
-  <block id="2879d04f18c304fb2a3d5cf00deff6e2" category="sidebar">災害復旧の役割</block>
   <block id="4dd7bf281f080fe43c775a741f9f2cc1" category="sidebar">パートナー組織</block>
   <block id="d6cca643be1ccfaa32ccfdc068061f15" category="sidebar">組織パートナーシップについて学ぶ</block>
   <block id="d88a163f40de4d60f08d7006db6dbc69" category="sidebar">組織パートナーシップを構築する</block>
@@ -5554,7 +5549,6 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">コンソールネットワークアクセス（レガシー）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">ランサムウェア レジリエンス ロールは、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供します。ランサムウェア耐性は次の役割をサポートします。</block>
-  <block id="b7055c90f2b38b6e2d3cddd08ec5c936" category="paragraph">ロールによって、設定とアクションへのアクセス権が異なります。疑わしいユーザー行動アクティビティを構成または表示するには、ユーザー行動ロールのいずれかを使用する必要があります。</block>
   <block id="f75989b6aa2a7a3c16b04e40aebffd8f" category="paragraph">*組織管理者* または *フォルダーまたはプロジェクト管理者* の役割を持つユーザーには、他のユーザーに役割を割り当てる責任があります。プロジェクトまたはフォルダーごとにアクセス ロールを割り当てることができます。たとえば、あるプロジェクトでは Ransomware Resilience 管理者ロールをユーザーに割り当てることができ、別のプロジェクトではSnapCenter管理者ロールを割り当てることができます。あるいは、ユーザーが特定のフォルダー内のすべてのプロジェクトに対して分類管理者ロールを必要とする場合は、フォルダー レベルでこのロールを付与できます。</block>
   <block id="e55d79a6c1774cf0f39d67ca04d67bc0" category="paragraph">アクセス ロールを使用して、ユーザーが実行する必要がある特定のタスクに基づいてストレージ リソースへのアクセスを割り当てます。たとえば、ユーザーが Ransomware Resilience と対話する必要がある場合、アクセス ロールが付与されているプロジェクトの Ransomware Resilience の表示権限または管理権限のいずれかを含むアクセス ロールをユーザーに付与する必要があります。</block>
   <block id="e6bf2bfbd541e12c3cb2fca42df08ed3" category="paragraph">メンバーは、同じプロジェクト内および異なるプロジェクト内で複数の役割を持つことができます。たとえば、小規模な組織では、利用可能なすべてのアクセス ロールを同じユーザーに割り当てる場合がありますが、大規模な組織では、ユーザーにさらに専門的なタスクを実行させる場合があります。あるいは、組織の Ransomware Resilience 管理者ロールを 1 人のユーザーに割り当てることもできます。この例では、ユーザーは組織内のすべてのプロジェクトでランサムウェア耐性タスクを実行できるようになります。</block>
@@ -5564,4 +5558,12 @@
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。</block>
   <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。</block>
   <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、 NetApp Backup and Recovery はONTAPボリューム データのみのバックアップと復元をサポートします。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block>アプリケーション データおよび仮想マシン データのバックアップと復元はサポートされていません。</block>
+  <block id="7ce9d6824315daa5b3ba4a80bef8768d" category="summary">Ransomware Resilience は、権限、アクション、レポートへのアクセスを管理するためのさまざまなユーザー ロールを提供します。</block>
+  <block id="f74b0b36940f757370478cb904680fe8" category="paragraph">ロールによって、設定とアクションへの異なるレベルのアクセス権が付与されます。</block>
+  <block id="d8ed8dce9d98718d4019d9388c24353d" category="inline-link-macro">不審なユーザーアクティビティ</block>
+  <block id="592abd5ea65ad47726532e14cc5e25d7" category="paragraph">ランサムウェア耐性ユーザー行動管理者とユーザー行動閲覧者の役割で利用できるアクションは、 <block ref="ab0f0a524b6807cce9d5b60fdac0f887" category="inline-link-macro-rx"></block>。これらのロールは、ランサムウェア耐性管理者または閲覧者ロールに追加されるように設計されています。疑わしいユーザーの行動設定を構成し、アラートに応答するには、ユーザーは Ransomware Resilience ユーザー行動管理者ロールを持っている必要があります。疑わしいユーザー行動アラートのみを表示するには、ユーザーは Ransomware Resilience ユーザー行動閲覧者ロールを持っている必要があります。</block>
+  <block id="6ebf0d56afdbe7f6542cf91826e113ef" category="paragraph">次の表は、ランサムウェア レジリエンス管理者ロールとランサムウェア レジリエンス閲覧者ロールで使用できるアクションを区別しています。</block>
+  <block id="1ea8198251e36e2c445f036c869bfd7f" category="cell">保護グループの作成、編集、または削除</block>
+  <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">バックアップとリカバリの役割</block>
+  <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">災害復旧の役割</block>
 </blocks>

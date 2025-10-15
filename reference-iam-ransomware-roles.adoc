@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供する役割を付与できます。 
+summary: Ransomware Resilience は、権限、アクション、レポートへのアクセスを管理するためのさまざまなユーザー ロールを提供します。 
 ---
 = NetApp Consoleのランサムウェア耐性アクセス ロール
 :hardbreaks:
@@ -22,32 +22,26 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 * ランサムウェア耐性ユーザー行動ビューア
 
 
-ロールによって、設定とアクションへのアクセス権が異なります。疑わしいユーザー行動アクティビティを構成または表示するには、ユーザー行動ロールのいずれかを使用する必要があります。
+ロールによって、設定とアクションへの異なるレベルのアクセス権が付与されます。
 
-次の表は、各ロールが実行できるアクションを示しています。
+ランサムウェア耐性ユーザー行動管理者とユーザー行動閲覧者の役割で利用できるアクションは、 link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["不審なユーザーアクティビティ"^]。これらのロールは、ランサムウェア耐性管理者または閲覧者ロールに追加されるように設計されています。疑わしいユーザーの行動設定を構成し、アラートに応答するには、ユーザーは Ransomware Resilience ユーザー行動管理者ロールを持っている必要があります。疑わしいユーザー行動アラートのみを表示するには、ユーザーは Ransomware Resilience ユーザー行動閲覧者ロールを持っている必要があります。
 
-[cols="40,20a,20a,20a,20a"]
+次の表は、ランサムウェア レジリエンス管理者ロールとランサムウェア レジリエンス閲覧者ロールで使用できるアクションを区別しています。
+
+[cols="40,20a,20a"]
 |===
-| 特徴とアクション | ランサムウェア耐性管理者 | ランサムウェア耐性ビューア | ランサムウェア耐性ユーザー行動管理者 | ランサムウェア耐性ユーザー行動ビューア 
+| 特徴とアクション | ランサムウェア耐性管理者 | ランサムウェア耐性ビューア 
 
 
 | ダッシュボードとすべてのタブを表示  a| 
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
 | ダッシュボードで推奨事項のステータスを更新する  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -57,19 +51,11 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 いいえ
- a| 
-いいえ
- a| 
-いいえ
 
 
 
 | ワークロードの検出を開始する  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -79,22 +65,14 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 いいえ
- a| 
-いいえ
- a| 
-いいえ
 
 
 
-5+| *[保護]タブで*: 
+3+| *[保護]タブで*: 
 
 
 | 保護プランの追加、変更、削除  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -104,19 +82,11 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 いいえ
- a| 
-いいえ
- a| 
-いいえ
 
 
 
 | 機密データへの露出を特定する  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -126,10 +96,6 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
@@ -137,10 +103,6 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
@@ -148,19 +110,11 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
-| 保護グループの作成、編集、削除  a| 
+| 保護グループの作成、編集、または削除  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -170,33 +124,21 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
-5+| *アラートタブ*: 
+3+| *アラートタブ*: 
 
 
 | アラートとアラートの詳細を表示する  a| 
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
 | インシデントステータスの編集  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -206,10 +148,6 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 いいえ
- a| 
-いいえ
- a| 
-いいえ
 
 
 
@@ -217,19 +155,11 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
 | インシデントを却下または解決する  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -239,19 +169,11 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 いいえ
- a| 
-いいえ
- a| 
-いいえ
 
 
 
 | 影響を受けるファイルの完全なリストを取得する  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -261,10 +183,6 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
@@ -272,22 +190,14 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 いいえ
  a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
-5+| *[回復]タブで*: 
+3+| *[回復]タブで*: 
 
 
 | 影響を受けるファイルをダウンロードする  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -297,10 +207,6 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 いいえ
- a| 
-いいえ
- a| 
-いいえ
 
 
 
@@ -308,10 +214,6 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
@@ -319,22 +221,14 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
-5+| *設定タブで*: 
+3+| *設定タブで*: 
 
 
 | バックアップ先を追加または変更する  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -344,10 +238,6 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
@@ -355,19 +245,11 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
 | SIEMターゲットの追加または変更  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -377,19 +259,11 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 いいえ
- a| 
-いいえ
- a| 
-いいえ
 
 
 
 | 準備訓練を開始する  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -399,19 +273,11 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 いいえ
- a| 
-いいえ
- a| 
-いいえ
 
 
 
 | 編集準備訓練  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -421,19 +287,11 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
 | 検出構成の更新  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
  a| 
 いいえ
 
@@ -443,10 +301,6 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 
 
@@ -454,23 +308,15 @@ summary: NetApp Console内で、ユーザーにNetApp Ransomware Resilienceへ�
 いいえ
  a| 
 いいえ
- a| 
-はい
- a| 
-いいえ
 
 
 
-5+| *レポートタブ*: 
+3+| *レポートタブ*: 
 
 
 | レポートをダウンロード  a| 
 はい
  a| 
 はい
- a| 
-いいえ
- a| 
-いいえ
 
 |===
