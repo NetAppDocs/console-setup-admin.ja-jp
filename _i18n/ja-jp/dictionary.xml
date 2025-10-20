@@ -2211,40 +2211,22 @@
   <block id="2961ef9224153d664a9bde6ee6ef2570" category="cell">ダッシュボードで推奨事項のステータスを更新する</block>
   <block id="bb73fa2a07d0c544491039dc1ffed7b8" category="cell">ワークロードの再検出を開始する</block>
   <block id="26548eb85488e3cdc0f0b9b27802995f" category="cell">*[保護]タブで*:</block>
-  <block id="8ae06231e3533fd967c3e2959a7f5325" category="cell">保護プランの追加、変更、削除</block>
   <block id="bf4011ddd9ae5a6521f75843972999ab" category="cell">ワークロードを保護する</block>
-  <block id="579066063b3104c9f6c74d2084e0e7e4" category="cell">機密データへの露出を特定する</block>
   <block id="e1b7f478f4648932399a0f8d6835740b" category="cell">保護プランと詳細を一覧表示する</block>
   <block id="8921dd8678af3de7359bee784af9a8e0" category="cell">保護グループの一覧</block>
   <block id="97803e7af23cd9dd5e46bef4245a8480" category="cell">保護グループの詳細を表示する</block>
   <block id="4330b42a340140b836c42bbe9c7105be" category="cell">データをダウンロード</block>
   <block id="b1e60ac72e50f485ca0a5ea9c82143d2" category="cell">*アラートタブ*:</block>
-  <block id="a0da34eb7fa7ce71299612d3548b6f6a" category="cell">アラートとアラートの詳細を表示する</block>
-  <block id="f700fad2259a25a87fbe56ba2810e8ff" category="cell">インシデントステータスの編集</block>
-  <block id="e975f9abac95a06f0645ce83ab0e4e37" category="cell">回復の警告をマーク</block>
-  <block id="ef9988f85b068b8709daa3be2c31fca3" category="cell">インシデントの詳細を表示</block>
-  <block id="d1f58f4fcc4cff94a574e5986b051d2f" category="cell">インシデントを却下または解決する</block>
-  <block id="f84e2dc493985bbd340b2cd14bf2daeb" category="cell">ユーザーをブロック</block>
-  <block id="38de1b212ca13fa4c230f4c20adbb48a" category="cell">影響を受けるファイルの完全なリストを取得する</block>
-  <block id="4b1b2c63b979feafab4b35d6b2307876" category="cell">アラートデータをダウンロード</block>
-  <block id="406fe9c43e4a6d01dd8db03e3c5cd178" category="cell">不審なユーザーアクティビティを表示する</block>
   <block id="b338bf8c8e0fbc61d8a0fad3b4a74e35" category="cell">*[回復]タブで*:</block>
-  <block id="f5f949f53a00b2da6ffa7a9f7a0fd0f8" category="cell">影響を受けるファイルをダウンロードする</block>
-  <block id="65ca8041cc328ebb64db5f8368a9101a" category="cell">ワークロードの復元</block>
-  <block id="4ebc1406711ca6754873e22a81f31c6f" category="cell">回復データをダウンロードする</block>
   <block id="a4f2411faacb07693dd051a3d2d9f97e" category="cell">*設定タブで*:</block>
   <block id="fc36f5b7ec87bb05d12fcec7b985fe79" category="cell">バックアップ先を追加または変更する</block>
   <block id="765ffd3ea8472bde364d6d75c648c7e2" category="cell">バックアップ先の一覧</block>
   <block id="be9d2f996415c0e9128f109806d13e74" category="cell">接続されたSIEMターゲットを表示する</block>
   <block id="08fec10c338548595a28b0310a1c0600" category="cell">SIEMターゲットの追加または変更</block>
   <block id="0e12704ac2cf7981683f2392843a3751" category="cell">準備訓練を構成する</block>
-  <block id="fbca60f39e39ac567548a02c9e536305" category="cell">準備訓練を開始する</block>
-  <block id="9e914ba4c13fe3f6329717ca31b8bfca" category="cell">リセット準備訓練</block>
-  <block id="45f15fba3339f71439f0c72c967fc0d3" category="cell">編集準備訓練</block>
   <block id="62bbacc7c65bd53641f4347319efbc1b" category="cell">準備訓練の状況を確認する</block>
   <block id="0e6583bdbbf88acbfc57d3f868629d3c" category="cell">検出構成の更新</block>
   <block id="5439d77b96ff7a9498be958a6755e89a" category="cell">検出構成の表示</block>
-  <block id="9bc78d326dd9484756d8fb832592a4b8" category="cell">疑わしいユーザーの行動設定を構成する</block>
   <block id="1ed006cd78ff9bf590a02c6fc268141f" category="cell">*レポートタブ*:</block>
   <block id="a8017d11a1434e0a01ee8fa5f418c244" category="summary">ユーザーに次のロールを割り当てて、 NetApp Consoleのストレージ管理機能へのアクセスを許可できます。ユーザーに、ストレージを管理するための管理者ロールまたは監視するための閲覧者ロールを割り当てることができます。</block>
   <block id="222c6290ae86e7e691125c5ef19048ae" category="doc">NetApp Consoleのストレージアクセスロール</block>
@@ -5558,12 +5540,56 @@
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。</block>
   <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。</block>
   <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、 NetApp Backup and Recovery はONTAPボリューム データのみのバックアップと復元をサポートします。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block>アプリケーション データおよび仮想マシン データのバックアップと復元はサポートされていません。</block>
-  <block id="7ce9d6824315daa5b3ba4a80bef8768d" category="summary">Ransomware Resilience は、権限、アクション、レポートへのアクセスを管理するためのさまざまなユーザー ロールを提供します。</block>
-  <block id="f74b0b36940f757370478cb904680fe8" category="paragraph">ロールによって、設定とアクションへの異なるレベルのアクセス権が付与されます。</block>
-  <block id="d8ed8dce9d98718d4019d9388c24353d" category="inline-link-macro">不審なユーザーアクティビティ</block>
-  <block id="592abd5ea65ad47726532e14cc5e25d7" category="paragraph">ランサムウェア耐性ユーザー行動管理者とユーザー行動閲覧者の役割で利用できるアクションは、 <block ref="ab0f0a524b6807cce9d5b60fdac0f887" category="inline-link-macro-rx"></block>。これらのロールは、ランサムウェア耐性管理者または閲覧者ロールに追加されるように設計されています。疑わしいユーザーの行動設定を構成し、アラートに応答するには、ユーザーは Ransomware Resilience ユーザー行動管理者ロールを持っている必要があります。疑わしいユーザー行動アラートのみを表示するには、ユーザーは Ransomware Resilience ユーザー行動閲覧者ロールを持っている必要があります。</block>
-  <block id="6ebf0d56afdbe7f6542cf91826e113ef" category="paragraph">次の表は、ランサムウェア レジリエンス管理者ロールとランサムウェア レジリエンス閲覧者ロールで使用できるアクションを区別しています。</block>
-  <block id="1ea8198251e36e2c445f036c869bfd7f" category="cell">保護グループの作成、編集、または削除</block>
   <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">バックアップとリカバリの役割</block>
   <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">災害復旧の役割</block>
+  <block id="fffc92a6b6a3b44b650e6669aa797cac" category="summary">Ransomware Resilience では、設定、アクション、レポートへのアクセスを管理するためのさまざまなユーザー ロールが提供されます。</block>
+  <block id="1f0992962e7aa72491d3ea02fc5edda4" category="paragraph">**ベースラインロール**</block>
+  <block id="170e16c6dd1a9b91467ae7129f97a1d7" category="list-text">ランサムウェア耐性管理者 - ランサムウェア耐性設定を構成し、暗号化アラートを調査して対応します</block>
+  <block id="cdfd65d81032924213a156d66245ab10" category="list-text">ランサムウェア耐性ビューア - 暗号化インシデント、レポート、検出設定を表示</block>
+  <block id="e8664260e9d447452785abaf08b8b8f6" category="inline-link-macro">不審なユーザーアクティビティの検出</block>
+  <block id="04724d8f5ba2b38975c69834e3e8b920" category="paragraph">**ユーザー行動アクティビティの役割**<block ref="885ef4a0557ed3cd017b2efccb0c3de5" category="inline-link-macro-rx"></block>アラートは、ファイル アクティビティ イベントなどのデータの可視性を提供します。これらのアラートには、ファイル名と、ユーザーが実行したファイル アクション (読み取り、書き込み、削除、名前の変更など) が含まれます。このデータの可視性を制限するために、これらのロールを持つユーザーのみがこれらのアラートを管理または表示できます。</block>
+  <block id="eb660a2de52d250becf4703c75d4aaff" category="list-text">ランサムウェア耐性ユーザー行動管理者 - 疑わしいユーザーアクティビティの検出を有効にし、疑わしいユーザーアクティビティのアラートを調査して対応します</block>
+  <block id="fd26172aba8622db091eebe480cd7e37" category="list-text">ランサムウェア耐性ユーザー行動ビューア - 疑わしいユーザーアクティビティアラートを表示</block>
+  <block id="e98813c3c921a36511f197fc7a9fe204" category="admonition">ユーザー ビヘイビア ロールはスタンドアロン ロールではなく、ランサムウェア レジリエンス管理者ロールまたは閲覧者ロールに追加されるように設計されています。詳細については、 <block ref="97d5369167883766cc87d7bf7a5c9d91" category="inline-xref-macro-rx"></block>。</block>
+  <block id="aaf2eccc92917d658995c66b880cfb26" category="paragraph">各ロールの詳細な説明については、次の表を参照してください。</block>
+  <block id="bc206e6bf9f2ba8322bc8d55dceb3451" category="section-title">ベースラインロール</block>
+  <block id="b9f5850597eac5d0eb99ea44b9b7fbc1" category="paragraph">次の表は、ランサムウェア耐性管理者および閲覧者ロールで使用できるアクションを示しています。</block>
+  <block id="b3c2dec7fd62e5ac2afdc696b279f52e" category="cell">暗号化ポリシーの保護プランを追加、変更、または削除する</block>
+  <block id="daa48308bc964d092772d98c1a8a5562" category="cell">データ分類で機密データへの露出を特定</block>
+  <block id="3fa1d1b73ebf3c6b2e14ce235e91e131" category="cell">保護グループの作成、編集、または削除</block>
+  <block id="3ebecde38a0e7a26d762a9e15a5a5a9a" category="cell">暗号化アラートとアラートの詳細を表示する</block>
+  <block id="b004643cf84c26e96f5e987bda405d21" category="cell">暗号化インシデントステータスの編集</block>
+  <block id="518a814bfff8a4a1edc429720f3feeb4" category="cell">回復のために暗号化アラートをマークする</block>
+  <block id="783ddfc17d71a086a45112d2198f9149" category="cell">暗号化インシデントの詳細を表示</block>
+  <block id="2cf6d9c6c4e7e4e84b70b24691035739" category="cell">暗号化インシデントを無視または解決する</block>
+  <block id="6faf16eee5ba7ea63a49b8477a34791d" category="cell">暗号化イベントで影響を受けるファイルの完全なリストを取得します</block>
+  <block id="972e748f513e3e427b0f8b61933ea87e" category="cell">暗号化イベントアラートデータをダウンロードする</block>
+  <block id="1ab486a8f581ae47a45d2d4deef97251" category="cell">ユーザーをブロックする（Workload Securityエージェント構成を使用）</block>
+  <block id="63ef6293e2221c1c01beb10f135a6c0e" category="cell">暗号化イベントから影響を受けるファイルをダウンロードする</block>
+  <block id="fab67a6ef7c066c05b4a81be858d67bc" category="cell">暗号化イベントからのワークロードの復元</block>
+  <block id="f9b0c09989fcd6b8da430effb430fd15" category="cell">暗号化イベントから回復データをダウンロードする</block>
+  <block id="6a85f7b86db00c39f8204fc81ec39a9e" category="cell">暗号化イベントからのレポートをダウンロード</block>
+  <block id="5f6caca12756189febec29e78ca157b3" category="cell">準備訓練を開始、リセット、または編集する</block>
+  <block id="ef42b54359e596b7aa50418f7960a6a5" category="section-title">ユーザーの行動の役割</block>
+  <block id="bdd638184754634b202e21c33e499493" category="paragraph">疑わしいユーザーの行動設定を構成し、アラートに応答するには、ユーザーは Ransomware Resilience ユーザー行動管理者ロールを持っている必要があります。疑わしいユーザー行動アラートのみを表示するには、ユーザーは Ransomware Resilience ユーザー行動閲覧者ロールを持っている必要があります。</block>
+  <block id="d8e882f82c91850fe60b139660a3451f" category="inline-link-macro">不審なユーザーアクティビティの設定とアラート</block>
+  <block id="64873820e76b32a77a5cf79a547b9efa" category="paragraph">ランサムウェア耐性の管理者または閲覧者権限を持つユーザーで、アクセスが必要なユーザーには、ユーザー行動ロールを付与する必要があります。<block ref="dabde4cfb2462919536551734d022527" category="inline-link-macro-rx"></block> 。たとえば、ランサムウェア耐性管理者ロールを持つユーザーには、ユーザー アクティビティ エージェントを構成し、ユーザーをブロックまたはブロック解除するための、ランサムウェア耐性ユーザー動作管理者ロールが付与される必要があります。ランサムウェア耐性ユーザー動作管理者ロールは、ランサムウェア耐性ビューアに付与しないでください。</block>
+  <block id="759c83e40f93cea3a1eccdc76fde4c4b" category="paragraph">次の表は、ランサムウェア耐性ユーザー動作の管理者および閲覧者ロールで使用できるアクションを示しています。</block>
+  <block id="5c34bf47745609542194c315fe2964f9" category="cell">ユーザーアクティビティエージェントの作成、変更、または削除</block>
+  <block id="485cfdddcabc76dc28501c429282df6b" category="cell">ユーザーディレクトリコネクタの作成または削除</block>
+  <block id="458cd4b16a6ccc8096a881213d00476c" category="cell">データコレクターを一時停止または再開する</block>
+  <block id="82ad0db10e8a69c003b2b161e3364e26" category="cell">データ侵害対策訓練を実施する</block>
+  <block id="ced72ba7a22f2e6df64b261e0e0a6067" category="cell">_疑わしいユーザー行動_ポリシーの保護プランを追加、変更、または削除する</block>
+  <block id="38b33583e093e4fae906630deb4cdba6" category="cell">ユーザーアクティビティアラートとアラートの詳細を表示する</block>
+  <block id="d50892e502cf72b3ff332800b1520eb6" category="cell">ユーザーアクティビティインシデントステータスの編集</block>
+  <block id="83cc063050f992a5b154b590dd0ec572" category="cell">回復のためにユーザーアクティビティアラートをマークする</block>
+  <block id="19981db9b0f973b5a01494a279e6253b" category="cell">ユーザーアクティビティインシデントの詳細を表示する</block>
+  <block id="7df1d0b273c07752f3c6d8bae8860df1" category="cell">ユーザーアクティビティインシデントを無視または解決する</block>
+  <block id="e0984822bc2981ddb16b2a2e5bb4dcdd" category="cell">疑わしいユーザーによる影響を受けたファイルの完全なリストを取得する</block>
+  <block id="f7bc873fd62a198eead5ce503fec14d7" category="cell">ユーザーアクティビティイベントアラートデータをダウンロードする</block>
+  <block id="e69a1c0d984eb32417be3469adae2895" category="cell">ユーザーをブロックまたはブロック解除する</block>
+  <block id="90b5bc69606833e095e0da3967bdfcdb" category="cell">ユーザーアクティビティイベントの影響を受けるファイルをダウンロードする</block>
+  <block id="59358657bd56c540dd5a88214e34361a" category="cell">ユーザーアクティビティイベントからワークロードを復元する</block>
+  <block id="0bcd0f2de89d5cc2513b3b19cac9d193" category="cell">ユーザーアクティビティイベントから回復データをダウンロードする</block>
+  <block id="615b930aeaebafc57f53ff8e632fb38d" category="cell">ユーザーアクティビティイベントからレポートをダウンロードする</block>
 </blocks>
