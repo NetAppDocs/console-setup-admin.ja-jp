@@ -38,9 +38,9 @@ link:task-prepare-restricted-mode.html["ネットワーク要件について学�
 link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["AWS権限の設定方法を学ぶ"]
 
 * IAM ユーザーが AWS Marketplace にサブスクライブしたり、サブスクライブ解除したりするための権限。
-* インスタンスの CPU および RAM 要件を理解すること。
+* エージェントの CPU および RAM 要件を理解していること。
 +
-link:task-prepare-restricted-mode.html#step-3-review-host-requirements["インスタンス要件を確認する"] 。
+link:task-prepare-restricted-mode.html#step-3-review-host-requirements["エージェントの要件を確認する"]。
 
 * EC2 インスタンスのキーペア。
 
@@ -85,7 +85,7 @@ link:reference-ports-aws.html["AWS のセキュリティグループルールを
 
 
 .結果
-AWS は指定された設定でソフトウェアを起動します。コンソール エージェント インスタンスとソフトウェアは約 5 分で実行されます。
+AWS は指定された設定でソフトウェアを起動します。コンソール エージェントは約 5 分で展開されます。
 
 .次の手順
 NetApp Consoleをセットアップします。
@@ -139,7 +139,7 @@ image:screenshot_aws_iam_role.gif["AWS のインスタンス設定ページの�
 
 
 .結果
-AWS は指定された設定でソフトウェアを起動します。コンソール エージェント インスタンスとソフトウェアは約 5 分で実行されます。
+AWS は指定された設定でソフトウェアを起動します。コンソール エージェントは約 5 分で展開されます。
 
 .次の手順
 コンソールをセットアップします。

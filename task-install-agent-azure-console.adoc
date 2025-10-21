@@ -159,7 +159,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業のデ�
 
 Azure にコンソール エージェントをデプロイする権限を持つカスタム ロールを作成する必要があります。
 
-Azure アカウントまたは Microsoft Entra サービス プリンシパルに割り当てることができる Azure カスタム ロールを作成します。コンソールは Azure で認証し、これらのアクセス許可を使用してユーザーに代わってコンソール エージェント インスタンスを作成します。
+Azure アカウントまたは Microsoft Entra サービス プリンシパルに割り当てることができる Azure カスタム ロールを作成します。コンソールは Azure で認証し、これらのアクセス許可を使用してユーザーに代わってコンソール エージェントを作成します。
 
 コンソールはAzureにコンソールエージェントVMを展開し、 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["システム割り当てマネージドID"^]必要なロールを作成し、それを VM に割り当てます。link:reference-permissions-azure.html["コンソールが権限をどのように使用するかを確認します"] 。
 
@@ -444,7 +444,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 * コンソールエージェント用のAzureロールをコンソールが自動的に作成しないようにするには、独自のロールを作成する必要があります。link:reference-permissions-azure.html["このページのポリシーを使用する"] 。
 +
-これらの権限は、コンソール エージェント インスタンス自体に適用されます。これは、コンソール エージェント VM を展開するために以前に設定した権限セットとは異なります。
+これらの権限は、コンソール エージェント自体に適用されます。これは、コンソール エージェント VM を展開するために以前に設定した権限セットとは異なります。
 
 
 
@@ -481,7 +481,7 @@ TIP: すでに Azure アカウントにログインしている場合は、コ�
 +
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Azure の Linux VM への接続について学習します"^]
 
-. *詳細*ページで、インスタンスの名前を入力し、タグを指定して、コンソールで必要な権限を持つ新しいロールを作成するか、または既存のロールを選択するかを選択します。link:reference-permissions-azure.html["必要な権限"] 。
+. *詳細*ページで、エージェントの名前を入力し、タグを指定して、コンソールで必要な権限を持つ新しいロールを作成するか、または既存のロールを選択するかを選択します。link:reference-permissions-azure.html["必要な権限"] 。
 +
 このロールに関連付けられた Azure サブスクリプションを選択できることに注意してください。選択した各サブスクリプションは、そのサブスクリプション内のリソースを管理するためのコンソール エージェント権限を付与します (たとえば、 Cloud Volumes ONTAP)。
 
@@ -506,7 +506,7 @@ link:reference-ports-azure.html["Azure のセキュリティ グループ ルー
 ====
 . *追加*を選択します。
 +
-コンソールは約 10 分でインスタンスを準備します。プロセスが完了するまでこのページに留まります。
+コンソールは約 10 分でエージェントを準備します。プロセスが完了するまでこのページに留まります。
 
 
 
@@ -516,4 +516,4 @@ link:reference-ports-azure.html["Azure のセキュリティ グループ ルー
 
 NOTE: デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。link:task-troubleshoot-agent.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
 
-コンソール エージェントを作成したのと同じ Azure サブスクリプションに Azure Blob ストレージがある場合は、*システム* ページに Azure Blob ストレージ システムが自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["NetApp Consoleから Azure Blob ストレージを管理する方法を学びます"^]
+コンソール エージェントを作成したのと同じ Azure アカウントに Azure Blob ストレージがある場合は、*システム* ページに Azure Blob ストレージが自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["NetApp Consoleから Azure Blob ストレージを管理する方法を学びます"^]

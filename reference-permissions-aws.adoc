@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-aws.html 
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions 
-summary: NetApp ConsoleがAWS でエージェント インスタンスを起動すると、その AWS アカウント内のリソースとプロセスを管理するための権限をエージェントに付与するポリシーがインスタンスにアタッチされます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービスなどの複数の AWS サービスへの API 呼び出しを実行します。 
+summary: NetApp ConsoleがAWS でエージェントを起動すると、その AWS アカウント内のリソースとプロセスを管理するための権限をエージェントに付与するポリシーがエージェントにアタッチされます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービスなどの複数の AWS サービスへの API 呼び出しを実行します。 
 ---
 = コンソールエージェントのAWS権限
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp ConsoleがAWS でエージェント インスタンスを起動�
 
 
 [role="lead"]
-NetApp ConsoleがAWS でコンソール エージェント インスタンスを起動すると、そのインスタンスにポリシーがアタッチされ、その AWS アカウント内のリソースとプロセスを管理するための権限がエージェントに付与されます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービス (KMS) などの複数の AWS サービスへの API 呼び出しを実行します。
+NetApp ConsoleがAWS でコンソールエージェントを起動すると、その AWS アカウント内のリソースとプロセスを管理するための権限をエージェントに付与するポリシーがエージェントにアタッチされます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービス (KMS) などの複数の AWS サービスへの API 呼び出しを実行します。
 
 
 
@@ -1026,7 +1026,7 @@ NetApp Data Classificationを使用する場合、エージェントは次の AP
 | メンテナンスとコスト配分に使用される「WorkingEnvironment」および「WorkingEnvironmentId」タグでリソースにタグを付ける | ec2:タグの作成 | はい | はい | いいえ 
 
 
-.6+| Cloud Volumes ONTAPがバックエンドストレージとして使用するEBSボリュームを管理する | ec2:ボリュームの作成 | はい | はい | いいえ 
+.6+| Cloud Volumes ONTAP がバックエンド ストレージとして使用する EBS ボリュームを管理する | ec2:ボリュームの作成 | はい | はい | いいえ 
 
 
 | ec2:ボリュームの説明 | はい | はい | はい 

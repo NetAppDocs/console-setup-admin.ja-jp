@@ -595,8 +595,6 @@
   <block id="3221538307211e131f96e1a83b1a5235" category="list-text">サブスクリプションプロセスが完了したら、「今すぐアカウントを構成」を選択します。</block>
   <block id="89d8b3b4c08395fc5dbef0d35cb50529" category="paragraph">次のビデオでは、Azure Marketplace からサブスクライブする手順を示します。</block>
   <block id="930540e35d6a8bd81f5882c46e1f93c2" category="video-title">Azure Marketplace からNetApp Intelligent Servicesをサブスクライブする</block>
-  <block id="a0c8126f50d7b3808de600e46e5cbe60" category="list-text">*管理 &gt; *資格情報*を選択します。</block>
-  <block id="4f556a86e5249d0b56ee37e2d7942588" category="list-text">コンソール エージェントに関連付けられている資格情報のセットのアクション メニューを選択し、[*サブスクリプションの構成*] を選択します。  +新しいスクリーンショットが必要です (TS)<block ref="ea765af20d763fe16d94ba9ef03fd31b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ef5d79e3ae5671ca28e5f6e3b02eed27" category="list-text">選択した認証情報を使用して既存のサブスクリプションを構成するには、ドロップダウン リストから Google Cloud プロジェクトとサブスクリプションを選択し、[構成] を選択します。</block>
   <block id="fff6f5125be05a94543d2e88dbd30b27" category="inline-image-macro">Google Cloud 認証情報用に選択された Google Cloud プロジェクトとサブスクリプションのスクリーンショット。</block>
   <block id="cab980518d03aa36afc924b709828a6e" category="paragraph"><block ref="cab980518d03aa36afc924b709828a6e" category="inline-image-macro-rx" type="image"></block></block>
@@ -1131,11 +1129,7 @@
   <block id="e54158140168d6bfda7951dabc8a0468" category="doc">NetApp Consoleの AWS 認証情報と権限について学習します</block>
   <block id="64aa23be91006f71d837b2f3d1037b91" category="paragraph">NetApp ConsoleがAWS 認証情報を使用してユーザーに代わってアクションを実行する方法と、それらの認証情報がマーケットプレイスのサブスクリプションとどのように関連付けられるかについて説明します。これらの詳細を理解しておくと、NetApp Consoleで 1 つ以上の AWS アカウントの認証情報を管理するときに役立ちます。たとえば、追加の AWS 認証情報をいつ追加する必要があるかについて学習したい場合があります。</block>
   <block id="9ef43b020d41cab5808d78fdf855c429" category="section-title">初期AWS認証情報</block>
-  <block id="ba29ba5428e515700911cad0530da473" category="paragraph">コンソールからコンソールエージェントをデプロイする場合は、IAM ロールの ARN または IAM ユーザーのアクセスキーを指定する必要があります。認証方法には、AWS にコンソールをデプロイするための権限が必要です。必要な権限は、link:task-install-agent-aws-the Console.html#console-permissions-aws[AWS のエージェント展開ポリシー]に記載されています。</block>
   <block id="055263949ee2b6bf634a650444f9e58d" category="inline-link-macro">コンソールが権限をどのように使用するかを確認します</block>
-  <block id="9578371ace149ffae484a1e8a558e65f" category="paragraph">コンソールが AWS でコンソールエージェントインスタンスを起動すると、インスタンスの IAM ロールとインスタンスプロファイルが作成されます。また、コンソールエージェントにその AWS アカウント内のリソースとプロセスを管理するための権限を付与するポリシーも添付します。<block ref="8e59a32a1f99b7e02222756f023f4cdb" category="inline-link-macro-rx"></block> 。</block>
-  <block id="873c2fb7e6de1298736591dfc041a312" category="inline-image-macro">コンソールが AWS アカウントにコンソールエージェントを展開する様子を示す概念図。  IAM ポリシーは IAM ロールに割り当てられ、コンソール インスタンスにアタッチされます。</block>
-  <block id="4151f2403ede2b58299fbba0353ae08f" category="paragraph"><block ref="4151f2403ede2b58299fbba0353ae08f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3f466a41e365e816f063997e9ea5af63" category="paragraph">新しいCloud Volumes ONTAPシステムを追加すると、コンソールはデフォルトで次の AWS 認証情報を選択します。</block>
   <block id="98c16c747c940667876d314b6eb47dba" category="inline-image-macro">詳細と資格情報ページのアカウントの切り替えオプションを示すスクリーンショット。</block>
   <block id="e39fac9d22fb901a8fb8b7118de8c4e7" category="paragraph"><block ref="e4d4efd6d9bbb3c296b1c319bd5c65f5" category="inline-image-macro-rx" type="image"></block></block>
@@ -1173,7 +1167,6 @@
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="section-title">FAQ</block>
   <block id="d33d86c6f3f99b3b9b1b988bde0679bd" category="paragraph">次の質問は、資格情報とサブスクリプションに関連しています。</block>
   <block id="70bfaa19a89e29bf0fc2b34b8f3150ba" category="section-title">AWS 認証情報を安全にローテーションするにはどうすればよいですか?</block>
-  <block id="4589f94afcd8cd53bc8ec5293d3d4304" category="paragraph">上のセクションで説明したように、コンソールでは、コンソールエージェントインスタンスに関連付けられた IAM ロール、信頼できるアカウントでの IAM ロールの引き受け、または AWS アクセスキーの提供など、いくつかの方法で AWS 認証情報を提供できます。</block>
   <block id="3f306aaee2a65dfda1ad13f709a0b4ae" category="paragraph">最初の 2 つのオプションでは、コンソールは AWS セキュリティ トークン サービスを使用して、常にローテーションする一時的な認証情報を取得します。このプロセスはベストプラクティスであり、自動かつ安全です。</block>
   <block id="0756a90a4a5e55dd02063c7dc80562de" category="paragraph">コンソールに AWS アクセスキーを提供する場合は、コンソールで定期的にキーを更新してキーをローテーションする必要があります。これは完全に手動のプロセスです。</block>
   <block id="c32ecd65cd5790ceb41fc1ef7d6a6e7d" category="section-title">Cloud Volumes ONTAPシステムの AWS Marketplace サブスクリプションを変更できますか?</block>
@@ -1243,9 +1236,7 @@
   <block id="7c592b218a390e7d1c8bdbae8fbc794a" category="section-title">NetApp Consoleのプロジェクトと権限</block>
   <block id="077f81b3516261855bf075d3615cf476" category="paragraph">コンソールを使用して Google Cloud プロジェクト内のリソースを管理する前に、まずコンソール エージェントをデプロイする必要があります。エージェントは、オンプレミスまたは別のクラウド プロバイダーで実行することはできません。</block>
   <block id="376a095d3a95abfb749fc8cc50f95d32" category="paragraph">コンソール エージェントをコンソールから直接展開する前に、次の 2 セットの権限を設定する必要があります。</block>
-  <block id="ce278eefdbe370b1ef58015b5deb66a8" category="list-text">コンソールからコンソール エージェント VM インスタンスを起動する権限を持つ Google アカウントを使用して、コンソール エージェントを展開する必要があります。</block>
   <block id="1c3efa7cf0b87cbb078fe955b2c587a5" category="inline-link">サービスアカウント</block>
-  <block id="c168f30645856ed56e1373aa826e58e8" category="list-text">コンソールエージェントを展開する際には、<block ref="98f22f2dda0728ebb39af9a8fe826c8e" category="inline-link-rx"></block> VM インスタンス用。コンソールは、サービス アカウントから権限を取得して、 Cloud Volumes ONTAPシステムの作成と管理、 NetAppバックアップとリカバリを使用したバックアップの管理などを行います。権限は、サービス アカウントにカスタム ロールを添付することによって提供されます。</block>
   <block id="fee2d29ad57ecb4f5309060016b4495c" category="paragraph">次の図は、上記の 1 および 2 で説明した許可要件を示しています。</block>
   <block id="1b33affeaa41a09a9f3a99d38d14376f" category="inline-image-macro">Cloud Volumes ONTAPをデプロイするための Google アカウントとサービス アカウントの権限要件を示す概念図。</block>
   <block id="61ed3f7479580c6ad0ce86e9e6f3dd8d" category="paragraph"><block ref="61ed3f7479580c6ad0ce86e9e6f3dd8d" category="inline-image-macro-rx" type="image"></block></block>
@@ -1322,7 +1313,6 @@
   <block id="bb052ff727ad3405f9e377f005178fd8" category="inline-link-macro">制限モードでNetApp Consoleを使い始める</block>
   <block id="07a84f2a895ff5384ba250bbd0694216" category="list-text"><block ref="07a84f2a895ff5384ba250bbd0694216" category="inline-link-macro-rx"></block></block>
   <block id="51364b16802c39c0a147dcd705c784df" category="section-title">クラウド権限</block>
-  <block id="d869a2271d08fa3533d98e212739c930" category="paragraph">NetApp Consoleからコンソール エージェントを直接作成するには特定の権限が必要であり、コンソール エージェント インスタンス自体には別の権限セットが必要です。コンソールから直接 AWS または Azure にコンソールエージェントを作成すると、コンソールは必要な権限を持つコンソールエージェントを作成します。</block>
   <block id="cc8f36711f6212dccee4062562263a83" category="paragraph">コンソールを標準モードで使用する場合、権限を付与する方法は、コンソール エージェントを作成する方法によって異なります。</block>
   <block id="235df19fd66aa61dd8174f1a6480f822" category="paragraph">権限の設定方法については、以下を参照してください。</block>
   <block id="961f8ee244937e243425632b39f7defe" category="inline-link-macro">AWS でのエージェントのインストールオプション</block>
@@ -2374,9 +2364,7 @@
   <block id="46a1f2a1262e75b4e5ea88e748ead245" category="list-text"><block ref="46a1f2a1262e75b4e5ea88e748ead245" category="inline-link-macro-rx"></block></block>
   <block id="8dfda8cf3bfed1ba46319b9487959873" category="inline-link">それぞれのNetAppデータ サービスのドキュメントを参照してください。</block>
   <block id="9e66adbc40ae0df7bfa345fcbb26e31b" category="paragraph"><block ref="9e66adbc40ae0df7bfa345fcbb26e31b" category="inline-link-rx"></block></block>
-  <block id="a329e01ca77506585e48c6c0e5afa977" category="summary">NetApp ConsoleがAWS でエージェント インスタンスを起動すると、その AWS アカウント内のリソースとプロセスを管理するための権限をエージェントに付与するポリシーがインスタンスにアタッチされます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービスなどの複数の AWS サービスへの API 呼び出しを実行します。</block>
   <block id="87536203946c0c72fcd130937e3cc7ef" category="doc">コンソールエージェントのAWS権限</block>
-  <block id="f5c725e488a04836aa25e2d34d4b7f6d" category="paragraph">NetApp ConsoleがAWS でコンソール エージェント インスタンスを起動すると、そのインスタンスにポリシーがアタッチされ、その AWS アカウント内のリソースとプロセスを管理するための権限がエージェントに付与されます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービス (KMS) などの複数の AWS サービスへの API 呼び出しを実行します。</block>
   <block id="c1141a37b962270fc1e8960233830c99" category="section-title">IAMポリシー</block>
   <block id="573b0df2f89364b268637488ea138d56" category="paragraph">以下の IAM ポリシーは、AWS リージョンに基づいてパブリッククラウド環境内のリソースとプロセスを管理するためにコンソールエージェントに必要な権限を提供します。</block>
   <block id="61fec915f59809a2c499bb7406d1bae7" category="list-text">コンソールから直接標準 AWS リージョンにコンソールエージェントを作成すると、コンソールはエージェントにポリシーを自動的に適用します。</block>
@@ -2522,7 +2510,6 @@
   <block id="21d0110f8008b90efa11a26fa83b57c3" category="cell">ec2:インスタンス属性の変更</block>
   <block id="4334838bb012bcce350df94e430e8251" category="cell">サポートされているインスタンスタイプで拡張ネットワークが有効になっていることを確認します</block>
   <block id="f1d835bacd60573faa9e3559c63d1f1b" category="cell">メンテナンスとコスト配分に使用される「WorkingEnvironment」および「WorkingEnvironmentId」タグでリソースにタグを付ける</block>
-  <block id="4df68ee329324d6bfab7f1a6bec005d1" category="cell">Cloud Volumes ONTAPがバックエンドストレージとして使用するEBSボリュームを管理する</block>
   <block id="41335cfc4c2fb5b48949f4e7610951ec" category="cell">ec2:ボリューム属性の変更</block>
   <block id="451d09025146b4c5f4b33a18aa0c4234" category="cell">ec2:ボリュームの削除</block>
   <block id="06622319fb198ee98832f726ac405c79" category="cell">ec2:ボリュームのデタッチ</block>
@@ -2754,7 +2741,6 @@
   <block id="b73f51f05a3d7aca4e9b86bf6b66c214" category="paragraph">この権限は、Cloud Volumes ONTAP のデプロイメントに必要です。</block>
   <block id="accd9735475d1c9d7b0b5006261d6484" category="summary">コンソール エージェントには、クラウド プロバイダーでアクションを実行するための権限が必要です。これらの権限は、 NetAppが提供するポリシーに含まれています。エージェントがこれらの権限を使用して何を行うかを理解する必要があります。</block>
   <block id="1a24ebef5708132569792a414e03e094" category="doc">コンソール エージェントの Google Cloud 権限</block>
-  <block id="976bc0de7b817e2bbd4235a3067eb192" category="paragraph">NetApp Consoleには、Google Cloud でアクションを実行するための権限が必要です。これらの権限は、 NetAppが提供するカスタム ロールに含まれています。エージェントがこれらの権限を使用して何を行うかを理解する必要があります。</block>
   <block id="6b45b097205607d8631a7d487a76da98" category="section-title">サービスアカウントの権限</block>
   <block id="48f3320f6327aedea52854dfcbcf31d9" category="paragraph">以下に示すカスタムロールは、コンソール エージェントが Google Cloud ネットワーク内のリソースとプロセスを管理するために必要な権限を提供します。</block>
   <block id="82a6f573069dcbf74094644066f00ff8" category="paragraph">このカスタム ロールを、コンソール エージェント VM に接続されるサービス アカウントに適用する必要があります。</block>
@@ -2843,12 +2829,10 @@
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">説明</block>
   <block id="97e7c9a7d06eac006a28bf05467fcc8b" category="cell">リンク</block>
   <block id="7c803320cfc8e4215d4d26a0151ba1d0" category="cell">コンソールからコンソールエージェントを展開する</block>
-  <block id="6bdd632a69530bf24f9d888defc43d4c" category="cell">コンソールからコンソールエージェントを作成するユーザーには、AWS にインスタンスをデプロイするための特定の権限が必要です。</block>
   <block id="2d3fc94cd0898448a15e6e05f4098b6f" category="inline-link-macro">AWS権限を設定する</block>
   <block id="e1ab6ce5f78b6cffa4cb98b58c75ca74" category="cell"><block ref="e1ab6ce5f78b6cffa4cb98b58c75ca74" category="inline-link-macro-rx"></block></block>
   <block id="78b382509bdd4a7b6a4640d195cfbf2a" category="cell">コンソールエージェントに権限を付与する</block>
   <block id="c9c719cb0217b958ec8c7414fa63880a" category="inline-link-macro">コンソールエージェントにAWS認証情報を追加する</block>
-  <block id="188679009280735826c6ea749302c194" category="cell">コンソールがコンソールエージェントをデプロイすると、AWS アカウント内のリソースとプロセスを管理するために必要なアクセス許可を提供するポリシーがインスタンスにアタッチされます。 AWS Marketplaceからコンソールエージェントをデプロイする場合、コンソールエージェントを手動でインストールする場合、または<block ref="dd68e1e1425f1a2836915a8e7efa1f0a" category="inline-link-macro-rx"></block>。また、後続のリリースで新しい権限が追加された場合、ポリシーが最新であることを確認する必要があります。</block>
   <block id="9c0558b0c2119452ada22cb61fbef4d9" category="inline-link-macro">コンソールエージェントのAWS権限</block>
   <block id="5fcaed6ff7619142f6cf0442d3bfaa6b" category="cell"><block ref="5fcaed6ff7619142f6cf0442d3bfaa6b" category="inline-link-macro-rx"></block></block>
   <block id="c926e674205f7757d37d0a06a12a2b10" category="cell">NetApp Backup and Recoveryを使用してオンプレミスのONTAPクラスターを Amazon S3 にバックアップする</block>
@@ -2912,7 +2896,6 @@
   <block id="e31e5964808968a788e49e50220d6ef1" category="cell">コンソールからコンソール エージェントをデプロイする Google Cloud ユーザーには、Google Cloud にコンソール エージェントをデプロイするための特定の権限が必要です。</block>
   <block id="6ba3cdd92c12894a3d208241e1aa4f37" category="inline-link-macro">コンソールエージェントを作成するための権限を設定する</block>
   <block id="e33d05694ffbef46c07ae36b71e76f96" category="cell"><block ref="e33d05694ffbef46c07ae36b71e76f96" category="inline-link-macro-rx"></block></block>
-  <block id="fed7c7d3c9febb32111eed3404adf3f6" category="cell">コンソール エージェント VM インスタンスのサービス アカウントには、日常的な操作のための特定の権限が必要です。展開中に、サービス アカウントをコンソール エージェントに関連付ける必要があります。また、後続のリリースで新しい権限が追加された場合、ポリシーが最新であることを確認する必要があります。</block>
   <block id="1b29b6160eb822ba4beffa87a9ffbc2f" category="inline-link-macro">コンソールエージェントの権限を設定する</block>
   <block id="ab7e7f2c26e8446e9290f7e7714458a2" category="cell"><block ref="ab7e7f2c26e8446e9290f7e7714458a2" category="inline-link-macro-rx"></block></block>
   <block id="b5b529e8dc821910caacb50b880d2487" category="cell">Cloud Volumes ONTAPをGoogle Cloudにバックアップする</block>
@@ -3048,16 +3031,12 @@
   <block id="3e48ec43e41264dd8a6c3b790b4a258f" category="section-title">コンソールエージェントに追加の資格情報を追加する</block>
   <block id="1d4a6c72c2fbe88f780ea172a7b401dd" category="paragraph">コンソールエージェントに追加の AWS 認証情報を追加して、パブリッククラウド環境内のリソースとプロセスを管理するために必要な権限を付与します。別のアカウントの IAM ロールの ARN を提供するか、AWS アクセスキーを提供することができます。</block>
   <block id="d3bb70ac534e6609e97e89f0a0f9df68" category="inline-link-macro">NetApp ConsoleがAWS認証情報と権限を使用する方法を学ぶ</block>
-  <block id="300a51753e7fe876628e24a8cbbc8477" category="paragraph">コンソールを使い始めたばかりの方は、<block ref="bc75056b5fa2888bb728b2036381638f" category="inline-link-macro-rx"></block> 。</block>
   <block id="1b516070ab36ad4c186fe30bd203fb45" category="section-title">権限を付与する</block>
   <block id="f15edb27c0ef804642a9cdd261cf4ca4" category="paragraph">コンソールエージェントに AWS 認証情報を追加する前に、権限を付与します。権限により、コンソールエージェントはその AWS アカウント内のリソースとプロセスを管理できるようになります。信頼できるアカウントのロールの ARN または AWS キーを使用して、アクセス許可を付与できます。</block>
-  <block id="e5fc05695d6d40579715f8fc43e17cf6" category="inline-link-macro">AWS の認証情報と権限について学ぶ</block>
-  <block id="5607430bdff237b10cdbc1e16ce0e145" category="admonition">コンソールからコンソールエージェントを展開した場合、コンソールエージェントを展開したアカウントの AWS 認証情報が自動的に追加されます。これにより、リソースを管理するために必要な権限が確保されます。<block ref="36da95d92772c6b5e5c7802773061f54" category="inline-link-macro-rx"></block> 。</block>
   <block id="70fbce3d6c9e05b51c53c71d08732426" category="paragraph">*選択肢*</block>
   <block id="2dbbb3b6b99aebde1c79427caf3046e0" category="list-text"><block ref="02c78f765c83c4fb4a0370471b089610" category="inline-xref-macro-rx"></block></block>
   <block id="0db58c0529496c0e926af5f8c9002335" category="list-text"><block ref="60d271fc50ad3f5d03a8767578822d7b" category="inline-xref-macro-rx"></block></block>
   <block id="6fca6b826d3e4d0980a08d26e6cf905f" category="section-title">別のアカウントの IAM ロールを引き受けて権限を付与する</block>
-  <block id="389f261448d12fa65fd12b7f9294fdc9" category="paragraph">IAM ロールを使用して、コンソールエージェントインスタンスをデプロイしたソース AWS アカウントと他の AWS アカウントの間に信頼関係を設定できます。次に、信頼できるアカウントの IAM ロールの ARN をコンソールに提供します。</block>
   <block id="97d3a348b90c6d4e6c95f0c8960fe656" category="paragraph">コンソール エージェントがオンプレミスにインストールされている場合、この認証方法は使用できません。  AWS キーを使用する必要があります。</block>
   <block id="5f8c7217365445fad8bae039de36b547" category="list-text">コンソール エージェントに権限を付与するターゲット アカウントの IAM コンソールに移動します。</block>
   <block id="61b72a48f16d18bfce7a18c7ce80f123" category="list-text">[アクセス管理] で、*[ロール] &gt; [ロールの作成]* を選択し、手順に従ってロールを作成します。</block>
@@ -3084,7 +3063,6 @@
   <block id="53001e9d440579e828bc2001e8e51eb0" category="list-text">*資格情報の場所*: *Amazon Web Services &gt; エージェント*を選択します。</block>
   <block id="a1418a1fbbbe1aec52c1618b6cc4b381" category="list-text">*認証情報の定義*: 信頼できる IAM ロールの ARN (Amazon リソース名) を指定するか、AWS アクセスキーとシークレットキーを入力します。</block>
   <block id="6bde3721c0328285597064f41aeca793" category="paragraph">時間単位の料金 (PAYGO) または年間契約でサービス料金を支払うには、AWS 認証情報を AWS Marketplace サブスクリプションに関連付ける必要があります。</block>
-  <block id="c962e6fb16069e1e0d430a6596126a16" category="paragraph">コンソールにシステムを追加するときに、[詳細と資格情報] ページから別の資格情報セットに切り替えることができるようになりました。</block>
   <block id="2456df50f32587f6b78feb0da93a921f" category="section-title">コンソールエージェントを作成するためにコンソールに資格情報を追加します</block>
   <block id="eb544e044391f4665cb06461e7629e6b" category="paragraph">コンソールエージェントの作成に必要な権限を付与する IAM ロールの ARN を指定して、AWS 認証情報を追加します。新しいエージェントを作成するときに、これらの資格情報を選択できます。</block>
   <block id="d8a56d983b91f097e5ba55dd03a18509" category="section-title">IAMロールを設定する</block>
@@ -3102,33 +3080,25 @@
   <block id="6acff1832d6612cd1afefaf53c386a82" category="list-text"><block ref="6acff1832d6612cd1afefaf53c386a82" category="inline-link-macro-rx"></block></block>
   <block id="884fd0826fb740e296bb4324a3742247" category="list-text">次のステップでコンソールに貼り付けることができるように、IAM ロールのロール ARN をコピーします。</block>
   <block id="d04fbc50c09432c35c0eb302581b70e6" category="inline-xref">コンソールに追加できるようになりました</block>
-  <block id="74b04ca811de14aef84fa666cae52e42" category="paragraph">IAM ロールに必要な権限が付与されました。<block ref="22c8d50e24c1ac21193395087b881b55" category="inline-xref-macro-rx"></block> 。</block>
   <block id="75d520940839feb20c7009bf3a4913f6" category="paragraph">IAM ロールに必要な権限を付与したら、ロール ARN をコンソールに追加します。</block>
   <block id="32e5fa0a32d6c9e7f8724cd4d60073b3" category="paragraph">IAM ロールを作成したばかりの場合は、使用できるようになるまでに数分かかることがあります。資格情報をコンソールに追加する前に、数分お待ちください。</block>
   <block id="1e9d97942154bc8b3f30e40e88be18a1" category="inline-image-macro">コンソールの右上にある設定アイコンが表示されたスクリーンショット。</block>
   <block id="18cfde7fc8c96213e5e0bea16f9f1907" category="paragraph"><block ref="18cfde7fc8c96213e5e0bea16f9f1907" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7b0893f7350a7ce29533d2ee8bafbcea" category="list-text">*組織の資格情報* または *アカウントの資格情報* ページで、*資格情報の追加* を選択し、ウィザードの手順に従います。</block>
-  <block id="c6b7c0d9ca1ed97cdc686019e01cc204" category="list-text">*資格情報の場所*: *Amazon Web Services &gt; NetApp Console*を選択します。</block>
   <block id="8cf335d7d3b1dd5cdac30699d20489c0" category="list-text">*認証情報の定義*: IAM ロールの ARN (Amazon リソース名) を指定します。</block>
   <block id="b07bcd019d5673f40409ccc629aee309" category="section-title">Amazon FSx for ONTAPのコンソールに認証情報を追加する</block>
   <block id="0967d5014be6ea1485ad3e2ef66038b4" category="inline-link">Amazon FSx for ONTAPのコンソールドキュメント</block>
   <block id="acfc32e9de528d5b7c99c6756a63e918" category="paragraph">詳細については、<block ref="eca356f6dfda2c57cf1ad75280c32e28" category="inline-link-rx"></block></block>
   <block id="ff462988ef2bf728297fe5ed85ddc08d" category="section-title">AWSサブスクリプションを設定する</block>
-  <block id="06efaa955480ed147875fb9eaea13502" category="paragraph">AWS 認証情報を追加したら、その認証情報を使用して AWS Marketplace サブスクリプションを設定できます。サブスクリプションを使用すると、Cloud Volumes ONTAP の料金を時間単位 (PAYGO) または年間契約で支払うことができ、その他のデータ サービスに対しても支払うことができます。</block>
   <block id="baaf3fcde87b40756b9492e5ed1f488b" category="paragraph">認証情報を追加した後に AWS Marketplace サブスクリプションを構成するシナリオは 2 つあります。</block>
   <block id="e448450e916fa912f5d4d1dee101e1cd" category="list-text">資格情報を最初に追加したときに、サブスクリプションを構成しませんでした。</block>
   <block id="1fa2cd673301895c14fbffad8568f063" category="list-text">AWS 認証情報に設定されている AWS Marketplace サブスクリプションを変更します。</block>
   <block id="891c56b3793d8bb2d83dc9db21c81e12" category="paragraph">現在のマーケットプレイス サブスクリプションを新しいサブスクリプションに置き換えると、既存のCloud Volumes ONTAPシステムとすべての新しいシステムのマーケットプレイス サブスクリプションが変更されます。</block>
   <block id="17e922bee62498071d0b520a708ce7bc" category="inline-link-macro">コンソールエージェントの作成方法を学ぶ</block>
   <block id="261ff42fc8f9c0d862eeaad9e733fb30" category="paragraph">サブスクリプションを構成する前に、コンソール エージェントを作成する必要があります。<block ref="5464fa3cf6630a16780c24b91f4e9a76" category="inline-link-macro-rx"></block> 。</block>
-  <block id="d0ecf8e73b6ccfcf921b7f1d7a9f7aab" category="section-title">既存のサブスクリプションを組織またはアカウントに関連付ける</block>
-  <block id="cfc7641b49b25d7474ae90431316dac4" category="paragraph">AWS Marketplace からサブスクライブする場合、プロセスの最後のステップは、サブスクリプションを組織に関連付けることです。この手順を完了しなかった場合、組織またはアカウントでサブスクリプションを使用できません。</block>
   <block id="de889eba177db53c06a02269626fde94" category="inline-link-macro">コンソールの展開モードについて学ぶ</block>
   <block id="ad4b043010cfe36d97b2129f9c6bdfe5" category="list-text"><block ref="ad4b043010cfe36d97b2129f9c6bdfe5" category="inline-link-macro-rx"></block></block>
   <block id="5cfcb005e90f812bdbec7628cc5e3a28" category="inline-link-macro">コンソールのIDとアクセス管理について学ぶ</block>
   <block id="3558797850f17459a3d0cbf3067dbeab" category="list-text"><block ref="3558797850f17459a3d0cbf3067dbeab" category="inline-link-macro-rx"></block></block>
-  <block id="7f1ae543c9c9412c8eccd6cf3a927d87" category="paragraph">AWS Marketplace からNetAppインテリジェント データ サービスにサブスクライブしたが、サブスクリプションをアカウントに関連付ける手順を忘れた場合は、以下の手順に従ってください。</block>
-  <block id="7437a0735ed3e4471d35fd7b0c6979c4" category="list-text">サブスクリプションをコンソールの組織またはアカウントに関連付けていないことを確認します。</block>
   <block id="75a72899c30ed62f2bc6ea22cc2496f1" category="list-text">ナビゲーション メニューから、*管理 &gt;Licenses and subscriptions*を選択します。</block>
   <block id="8c3682e85d7f4dbe8a46485082335dec" category="list-text">*サブスクリプション*を選択します。</block>
   <block id="396dc6ebeb25f088871923698f198ac5" category="list-text">サブスクリプションが表示されていないことを確認します。</block>
@@ -3145,23 +3115,18 @@
   <block id="eb5b116e4f435bffc740f5b1aa2a64a4" category="paragraph">最初にコンソールにログインするように求められる場合があります。</block>
   <block id="a364d7b74dc44e218e30af9801063a87" category="inline-image-macro">このサブスクリプションに関連付ける組織を選択できる「サブスクリプションの割り当て」ページのスクリーンショット。</block>
   <block id="c649f133b0e8deee0e4c66f142b94dfe" category="paragraph"><block ref="c649f133b0e8deee0e4c66f142b94dfe" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cc7fcfbe620e18d18198b0a6f020972a" category="list-text">サブスクリプションが組織またはアカウントに関連付けられていることを確認します。</block>
   <block id="9a048d3215f3cac3514b151f66ce0e14" category="list-text">ナビゲーション メニューから、*管理 &gt; ライセンスとサブスクリプション*を選択します。</block>
   <block id="63efa257b0b77bd676137930df4d9b38" category="list-text">サブスクリプションが表示されていることを確認します。</block>
   <block id="b37f51b57881b03b6c52e06acb6edd87" category="list-text">サブスクリプションが AWS 認証情報に関連付けられていることを確認します。</block>
-  <block id="748b6fdce008be291b4c97353b02ef06" category="list-text">コンソールの右上にある設定アイコンを選択し、*資格情報*を選択します。</block>
   <block id="b5cf8c8ecbaf96c5703fefc72d8586a6" category="list-text">*組織の認証情報*ページで、サブスクリプションが AWS 認証情報に関連付けられていることを確認します。</block>
   <block id="ff61d6606967c3f8b0dfa41b1fd7bfa0" category="paragraph">ここに例があります。</block>
   <block id="7d04d329ecf260e56d96e50130eb662b" category="inline-image-macro">コンソールアカウント認証情報ページのスクリーンショット。認証情報に関連付けられているサブスクリプションの名前を識別するサブスクリプションフィールドを含む AWS 認証情報が表示されます。</block>
   <block id="315ac91dd30aaffe692f9619d9748d67" category="paragraph"><block ref="315ac91dd30aaffe692f9619d9748d67" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c98f8dfd7e317cb87d057d9e065d71d4" category="section-title">資格情報を編集する</block>
   <block id="62ce53ce4e7e424908529a45cc3ea1d3" category="paragraph">アカウントの種類 (AWS キーまたはロールの引き受け) を変更したり、名前を編集したり、認証情報自体 (キーまたはロール ARN) を更新したりして、AWS 認証情報を編集します。</block>
-  <block id="14ec991b23538afbb699977d8284888e" category="admonition">コンソールエージェントインスタンスまたはAmazon FSx for ONTAPインスタンスに関連付けられているインスタンスプロファイルの認証情報を編集することはできません。  FSx for ONTAPインスタンスの資格情報の名前のみを変更できます。</block>
-  <block id="c04c991a23225733a46a58429473235a" category="list-text">*組織の資格情報* または *アカウントの資格情報* ページで、資格情報セットのアクション メニューを選択し、*資格情報の編集* を選択します。</block>
   <block id="d7ef0bce115005fa2c5e3accd5b74cc5" category="list-text">必要な変更を加えて、[適用] を選択します。</block>
   <block id="7132b07cc411f1ad7091b34cfe32d739" category="section-title">資格情報を削除する</block>
   <block id="69c8b33c89a97aa0c69461286343a594" category="paragraph">資格情報セットが不要になった場合は、削除できます。システムに関連付けられていない資格情報のみを削除できます。</block>
-  <block id="e8f19939ffba67661d03c8dbc0bbdab9" category="admonition">コンソール エージェント インスタンスに関連付けられているインスタンス プロファイルの資格情報を削除することはできません。</block>
   <block id="b957a9b739887d11a774a7b99f5f474b" category="list-text">*組織の資格情報* または *アカウントの資格情報* ページで、資格情報セットのアクション メニューを選択し、*資格情報の削除* を選択します。</block>
   <block id="93ab98e83f767e271a56c06a99e0061f" category="list-text">*削除*を選択して確認します。</block>
   <block id="ea6fb0054a5e8a053307300ee4d03690" category="summary">Azure 資格情報を追加および管理して、 NetApp ConsoleがAzure サブスクリプション内のクラウド リソースを展開および管理するために必要な権限を持つようにします。複数の Azure Marketplace サブスクリプションを管理する場合は、[資格情報] ページから各サブスクリプションを異なる Azure 資格情報に割り当てることができます。</block>
@@ -3232,12 +3197,10 @@
   <block id="fca161e7e3d0f11c877617c572f2054d" category="list-text">資格情報セットのアクション メニューを選択し、[資格情報の編集] を選択します。</block>
   <block id="343f14fa04538530ee19575d02711691" category="list-text">*組織の資格情報*ページで、資格情報セットのアクション メニューを選択し、*資格情報の削除*を選択します。</block>
   <block id="aca93a34ac0830ae93442a45a45230ca" category="summary">マーケットプレイス サブスクリプションを関連付け、サブスクリプション プロセスをトラブルシューティングすることで、コンソール エージェント VM インスタンスに関連付けられている Google Cloud 認証情報を管理できます。これら両方のタスクにより、マーケットプレイスのサブスクリプションを使用してデータ サービスの支払いができるようになります。</block>
-  <block id="a5902f6d28779078fd2033b21af7a5fe" category="doc">NetApp Consoleの Google Cloud 認証情報とサブスクリプションを管理する</block>
   <block id="7fb6ce6ba61ee2f889266f6591c8bf62" category="paragraph">マーケットプレイス サブスクリプションを関連付け、サブスクリプション プロセスをトラブルシューティングすることで、コンソール エージェント VM インスタンスに関連付けられている Google Cloud 認証情報を管理できます。これら両方のタスクにより、マーケットプレイスのサブスクリプションを使用してデータ サービスの支払いができるようになります。</block>
   <block id="209e33f8aa50ade8c82e5bc82a8c023d" category="section-title">Marketplace サブスクリプションを Google Cloud 認証情報に関連付ける</block>
   <block id="eb7e6d1f8bb6ef3fd9a4c9dde493222f" category="paragraph">Google Cloud にコンソール エージェントをデプロイすると、コンソールによって、コンソール エージェント VM インスタンスに関連付けられたデフォルトの認証情報セットが作成されます。これらの認証情報に関連付けられている Google Cloud Marketplace サブスクリプションはいつでも変更できます。このサブスクリプションを使用すると、従量課金制のCloud Volumes ONTAPシステムを作成し、他のデータ サービスを使用できるようになります。</block>
   <block id="55c766cf4228626844250621a71175de" category="section-title">マーケットプレイスのサブスクリプションプロセスのトラブルシューティング</block>
-  <block id="22799693f8d16282f927158e17952aae" category="paragraph">Google Cloud Marketplace を通じてNetAppデータ サービスにサブスクライブすると、権限が間違っていたり、誤ってコンソールへのリダイレクトに従わなかったりしたために、断片化されることがあります。このような場合は、次の手順に従ってサブスクリプション プロセスを完了してください。</block>
   <block id="5e8a9e85694a19d502ffc719ffe16636" category="inline-link">Google Cloud Marketplace のNetAppページ</block>
   <block id="d6e50a6d3ec0159b4980423911b0d4c3" category="list-text">に移動<block ref="50dc0afbab90b927abe9802e2e044626" category="inline-link-rx"></block>注文の状態を確認します。ページに「*プロバイダーで管理*」と表示されている場合は、下にスクロールして「*注文の管理*」を選択します。</block>
   <block id="1602e955f4d68623784fbd9b3e232de3" category="inline-image-macro">サブスクリプション後のマーケットプレイス ページのスクリーンショット。</block>
@@ -4051,16 +4014,12 @@
   <block id="46db632d39e89f845984f05056817700" category="paragraph">AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。<block ref="04572646466baf6f86d09965eb5c3c86" category="inline-link-rx"></block></block>
   <block id="dc648d2a312f61564f5f6beb2e95a5cc" category="paragraph">コンソール エージェントを作成した後、このネットワーク要件を実装する必要があります。</block>
   <block id="fe34c82f62d8c19159528f702fa22a96" category="section-title">ステップ2: コンソールエージェントのAWS権限を設定する</block>
-  <block id="22dea0a159db63b5c0e6d7300465d98e" category="paragraph">コンソールは、VPC にコンソールエージェントインスタンスをデプロイする前に、AWS で認証する必要があります。次のいずれかの認証方法を選択できます。</block>
   <block id="eeda2f4307e522dfb736cc96eb303e27" category="list-text">コンソールに必要な権限を持つIAMロールを割り当てます</block>
   <block id="4964e9eef6df2fe316a2618afd8cd963" category="list-text">必要な権限を持つIAMユーザーにAWSアクセスキーとシークレットキーを提供します</block>
-  <block id="c782c9bfac5d0cf02cf4aac4dff7c3dc" category="paragraph">どちらのオプションを使用する場合でも、最初のステップは IAM ポリシーを作成することです。このポリシーには、コンソールから AWS のコンソールエージェントインスタンスを起動するために必要な権限のみが含まれています。</block>
   <block id="15f7c3376619ce497205d543fd1d7767" category="paragraph">必要に応じて、IAMを使用してIAMポリシーを制限することができます。<block ref="9e2941b3c81256fac10392aaca4ccfde" prefix=" " category="inline-code"></block>要素。<block ref="19ffef022087e160f1e54b9948795943" category="inline-link-rx"></block></block>
   <block id="1e71ce7defc90d8f5a2c46c08ba968df" category="list-text">AWS IAM コンソールに移動します。</block>
   <block id="d36ec2dc8acd5ade1fda1b4397ccc99a" category="list-text">「JSON」を選択します。</block>
   <block id="26d4a7a50dfbae842d907e3b8000633e" category="list-text">次のポリシーをコピーして貼り付けます。</block>
-  <block id="3cbd24e006d2016d3ee7aeba2fcfcc0d" category="inline-link-macro">コンソールエージェントインスタンス自体に必要な権限を表示する</block>
-  <block id="4e48090d3c94dbf17e900b8e0e1ab649" category="paragraph">このポリシーには、コンソールから AWS のコンソールエージェントインスタンスを起動するために必要な権限のみが含まれています。コンソールは、コンソールエージェントを作成すると、コンソールエージェントインスタンスに新しい権限セットを適用し、コンソールエージェントが AWS リソースを管理できるようにします。<block ref="2f65f589129cddadcefb4538fada0caf" category="inline-link-macro-rx"></block> 。</block>
   <block id="cedfddf2dfb74aa203be428f7657457c" category="list-text">必要に応じて、[次へ] を選択し、タグを追加します。</block>
   <block id="01de2e1a7f136c3eeda419bfb07814da" category="list-text">*次へ*を選択し、名前と説明を入力します。</block>
   <block id="db92c743d97601150bbdfa11bf3cf66b" category="list-text">*ポリシーの作成*を選択します。</block>
@@ -4082,7 +4041,6 @@
   <block id="5f951668599865c2dd2220fcb0617434" category="inline-link-macro">コンソールエージェントのデフォルト構成について学習します</block>
   <block id="6b02626fac3ccb06150290f9d284c115" category="list-text">コンソールからコンソール エージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。コンソールエージェントを作成した後、CPU や RAM が少ない小さな EC2 インスタンスに切り替えないでください。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
   <block id="5b648a602c64391c13459b2242feaccf" category="inline-link-macro">コンソールエージェントのIAMポリシーの詳細</block>
-  <block id="8cfa8205571c02f754f7ea3ea367085f" category="list-text">コンソールがコンソール エージェントを作成すると、インスタンスの IAM ロールとインスタンス プロファイルが作成されます。このロールには、コンソールエージェントが AWS リソースを管理できるようにする権限が含まれています。将来のリリースで新しい権限が追加されたら、ロールが更新されるようにしてください。<block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block> 。</block>
   <block id="aca02eea323174e41d57225a762eb959" category="list-text">AWS 認証方法: 必要な権限を持つ IAM ユーザーの IAM ロールまたはアクセスキーのいずれか。</block>
   <block id="482049a2c27830202c448327d329f378" category="list-text">ネットワーク要件を満たす VPC とサブネット。</block>
   <block id="b16e9971e18d4e63cd90cc2dc398c39e" category="list-text">EC2 インスタンスのキーペア。</block>
@@ -4096,15 +4054,11 @@
   <block id="8b8f36850755c4ac43a0df238add8748" category="inline-link-macro">追加の資格情報を追加する方法を学ぶ</block>
   <block id="a92469e7b4819b542d643764a5f08089" category="admonition">*役割を引き受ける* を選択した場合は、コンソール エージェント展開ウィザードから最初の資格情報セットを作成できます。追加の資格情報セットは、「資格情報」ページから作成する必要があります。これらはウィザードのドロップダウン リストで利用できるようになります。<block ref="21eba73392ef6be6fd6da758f5bd2e93" category="inline-link-macro-rx"></block> 。</block>
   <block id="f07116b379707ffd76d2b1be3d766311" category="list-text">*詳細*ページで、コンソール エージェントに関する詳細を入力します。</block>
-  <block id="bb535485e7b97661af60ecc59e655498" category="list-text">インスタンスの名前を入力します。</block>
-  <block id="edda80be79ac3f7cac925a65c6a3e5b5" category="list-text">インスタンスにカスタム タグ (メタデータ) を追加します。</block>
   <block id="a6100ac4fa5cb7bbb1c49e95165b96b2" category="inline-link-macro">必要な権限</block>
   <block id="603cd6f77a8d8d20e21808a8ba4480ea" category="list-text">コンソールで必要な権限を持つ新しいロールを作成するか、または既存のロールを選択するかを選択します。<block ref="8b098a06817becf62c06297dd76999b5" category="inline-link-macro-rx"></block> 。</block>
   <block id="a7dcc75dc3cacce63a6952fff1a50f65" category="list-text">コンソール エージェントの EBS ディスクを暗号化するかどうかを選択します。デフォルトの暗号化キーを使用するか、カスタム キーを使用するかを選択できます。</block>
-  <block id="b351764d5fbd3135f97955e1a28e993d" category="list-text">*ネットワーク* ページで、インスタンスの VPC、サブネット、キーペアを指定し、パブリック IP アドレスを有効にするかどうかを選択し、オプションでプロキシ設定を指定します。</block>
   <block id="a2f078803960d5d37e3fe024b9a33315" category="paragraph">コンソール エージェント仮想マシンにアクセスするための正しいキー ペアがあることを確認します。キーペアがないとアクセスできません。</block>
   <block id="7d94cf454f2eac26ff84a8d1c8a89d1e" category="list-text">*セキュリティ グループ* ページで、新しいセキュリティ グループを作成するか、必要な受信ルールと送信ルールを許可する既存のセキュリティ グループを選択するかを選択します。</block>
-  <block id="a60b1115783600a21eb41ae13935fdc8" category="paragraph">コンソールは約 10 分でインスタンスを準備します。プロセスが完了するまでこのページに留まります。</block>
   <block id="39dbd35a18bfa38cac810c0be826b561" category="paragraph">プロセスが完了すると、コンソール エージェントはコンソールから使用できるようになります。</block>
   <block id="1cc84d19a969a49be773baf953e6565c" category="admonition">デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="510a2d4afe6727bcdbafc74a103f9f16" category="inline-link">NetApp Consoleから S3 バケットを管理する方法を学びます</block>
@@ -4169,7 +4123,6 @@
   <block id="1088af463c45fd2ad41a6c82fa30901d" category="paragraph">コンソール エージェントを作成した後、このネットワーク要件を実装する必要があります。</block>
   <block id="a1d3b4f2bb3ea0f906918baa3bf1137e" category="section-title">ステップ 2: コンソール エージェント展開ポリシー (カスタム ロール) を作成する</block>
   <block id="60bdd26de3b4bc579bb0de3b5d2b317c" category="paragraph">Azure にコンソール エージェントをデプロイする権限を持つカスタム ロールを作成する必要があります。</block>
-  <block id="7b1462b427bd27c3074fea9676de0741" category="paragraph">Azure アカウントまたは Microsoft Entra サービス プリンシパルに割り当てることができる Azure カスタム ロールを作成します。コンソールは Azure で認証し、これらのアクセス許可を使用してユーザーに代わってコンソール エージェント インスタンスを作成します。</block>
   <block id="e67e7e248211452a7dde826d9908648e" category="paragraph">コンソールはAzureにコンソールエージェントVMを展開し、<block ref="3b529d5441a4ea26741352247ca08bac" category="inline-link-rx"></block>必要なロールを作成し、それを VM に割り当てます。<block ref="4e8f46d45dc9a2f1f1b6f49a05e1acc0" category="inline-link-macro-rx"></block> 。</block>
   <block id="fdf818accfe04434a4c9fd9ccfe6d56c" category="list-text">Azure の新しいカスタム ロールに必要なアクセス許可をコピーし、JSON ファイルに保存します。</block>
   <block id="d328c118ae9c803f8eba8e391922c298" category="admonition">このカスタム ロールには、コンソールから Azure のコンソール エージェント VM を起動するために必要なアクセス許可のみが含まれています。このポリシーを他の状況では使用しないでください。コンソールは、コンソール エージェントを作成するときに、コンソール エージェントが Azure リソースを管理できるようにする新しいアクセス許可セットをコンソール エージェント VM に適用します。</block>
@@ -4227,7 +4180,6 @@
   <block id="2f44f891a2e61a894ccc4f30dfd7b4be" category="paragraph"><block ref="8d330a1f00fb06fce7867e682fb9a351" category="inline-xref-macro-rx"></block> 。</block>
   <block id="e287af1d2980f92ee6cef799f9d29337" category="list-text">*仮想マシン認証* ページで、Azure サブスクリプション、場所、新しいリソース グループまたは既存のリソース グループを選択し、作成するコンソール エージェント仮想マシンの認証方法を選択します。</block>
   <block id="52f3863b6256b8ae764628f74442ca5c" category="paragraph">仮想マシンの認証方法は、パスワードまたは SSH 公開キーです。</block>
-  <block id="b2fffb117a4feff60b8edd4169d40b22" category="list-text">*詳細*ページで、インスタンスの名前を入力し、タグを指定して、コンソールで必要な権限を持つ新しいロールを作成するか、または既存のロールを選択するかを選択します。<block ref="b569336f779a413e2d7fa8c0ccb0306d" category="inline-link-macro-rx"></block> 。</block>
   <block id="6d316e3761ed9316d17ae819566bc027" category="paragraph">このロールに関連付けられた Azure サブスクリプションを選択できることに注意してください。選択した各サブスクリプションは、そのサブスクリプション内のリソースを管理するためのコンソール エージェント権限を付与します (たとえば、 Cloud Volumes ONTAP)。</block>
   <block id="a1b2fd3af3ae0dbe40775b47c4963c76" category="list-text">*ネットワーク* ページで、VNet とサブネットを選択し、パブリック IP アドレスを有効にするかどうかを選択し、必要に応じてプロキシ構成を指定します。</block>
   <block id="efcd4e60d15be9d5ddd70201eaeb17b1" category="list-text">*セキュリティ グループ* ページで、新しいセキュリティ グループを作成するか、必要な受信ルールと送信ルールを許可する既存のセキュリティ グループを選択するかを選択します。</block>
@@ -4326,7 +4278,6 @@
   <block id="d8948bb022f3ece9625b861d1822f759" category="list-text">*ファイアウォール ポリシー*: 新しいファイアウォール ポリシーを作成するか、必要な受信ルールと送信ルールを許可する既存のファイアウォール ポリシーを選択するかを選択します。</block>
   <block id="e22a4abc98b47ca148e0dfda7e259162" category="inline-link-macro">Google Cloud のファイアウォール ルール</block>
   <block id="4693bfc9044ed3552c37524411e90819" category="paragraph"><block ref="4693bfc9044ed3552c37524411e90819" category="inline-link-macro-rx"></block></block>
-  <block id="0b6aa4ea63b3a77b1b57e9fabb90a9fa" category="paragraph">インスタンスは約 10 分で準備完了します。プロセスが完了するまで、このページに留まってください。</block>
   <block id="e8b69837aadc0d9aafe18d0701d1dc76" category="paragraph">プロセスが完了すると、コンソール エージェントが使用できるようになります。</block>
   <block id="9bfb17e64abc7809724f85bcd87b6901" category="inline-link">コンソールから Google Cloud Storage を管理する方法を学びます</block>
   <block id="b1599f1dab16f4dcd35886dbdbbbb28e" category="paragraph">コンソール エージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合は、[システム] ページに Google Cloud Storage システムが自動的に表示されます。<block ref="f1cd5bada461ae8da2b324edaa3edd7e" category="inline-link-rx"></block></block>
@@ -4488,9 +4439,6 @@
   <block id="278a1d20d474323c7730eb5c88c86df3" category="paragraph"><block ref="278a1d20d474323c7730eb5c88c86df3" category="inline-link-macro-rx"></block></block>
   <block id="3f4713c771af26689845a2dfeec86b37" category="inline-link-macro">AWS権限の設定方法を学ぶ</block>
   <block id="ebb952d62c1eec36921c93691e959c82" category="paragraph"><block ref="ebb952d62c1eec36921c93691e959c82" category="inline-link-macro-rx"></block></block>
-  <block id="fbeff5cf304fefe21e93306905a53be6" category="inline-link-macro">インスタンス要件を確認する</block>
-  <block id="3841f44681bf2f357b9d0af73693bfe7" category="paragraph"><block ref="fd1bb5492ba75369497408ab8d3a2621" category="inline-link-macro-rx"></block> 。</block>
-  <block id="bf06d9b5e1ab190a2fda69c2d0cd5728" category="paragraph">AWS は指定された設定でソフトウェアを起動します。コンソール エージェント インスタンスとソフトウェアは約 5 分で実行されます。</block>
   <block id="bbf7a3139643c3f4a84bd5304f5d7758" category="paragraph">NetApp Consoleをセットアップします。</block>
   <block id="d919f0caf7e85368ea2bd20d82569c6b" category="open-title">AWS Gov マーケットプレイス</block>
   <block id="354d01219cd53e5b903301394dc26ed1" category="list-text">AWS Marketplace で提供されているNetApp Consoleエージェントにアクセスします。</block>
@@ -5592,4 +5540,66 @@
   <block id="59358657bd56c540dd5a88214e34361a" category="cell">ユーザーアクティビティイベントからワークロードを復元する</block>
   <block id="0bcd0f2de89d5cc2513b3b19cac9d193" category="cell">ユーザーアクティビティイベントから回復データをダウンロードする</block>
   <block id="615b930aeaebafc57f53ff8e632fb38d" category="cell">ユーザーアクティビティイベントからレポートをダウンロードする</block>
+  <block id="ea765af20d763fe16d94ba9ef03fd31b" category="paragraph"><block ref="ea765af20d763fe16d94ba9ef03fd31b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="669bdf1134d50e3993628c05585e5734" category="list-text">このサブスクリプションを関連付けるコンソール組織を選択します。</block>
+  <block id="d530645223f70d357ab17787b555f381" category="list-text">*既存のサブスクリプションを置き換える* フィールドで、1 つの組織の既存のサブスクリプションをこの新しいサブスクリプションに自動的に置き換えるかどうかを選択します。</block>
+  <block id="648c906efc1699c9d3ad4578bac84bd5" category="paragraph">コンソールは、組織内のすべての資格情報の既存のサブスクリプションをこの新しいサブスクリプションに置き換えます。資格情報のセットがサブスクリプションに関連付けられたことがない場合、この新しいサブスクリプションはそれらの資格情報に関連付けられません。</block>
+  <block id="fec37ac1cd6af148e5a37feded7851f2" category="paragraph">コンソールからコンソールエージェントをデプロイする場合は、IAM ロールの ARN または IAM ユーザーのアクセスキーを指定する必要があります。認証方法には、AWS にコンソールをデプロイするための権限が必要です。必要な権限は、link:task-install-agent-aws-the Console.html#aws-permissions-agent[AWS のエージェント展開ポリシー] に記載されています。</block>
+  <block id="6d98b6cff569df2b13894056f584ec94" category="inline-link-macro">エージェントが権限をどのように使用するか確認する</block>
+  <block id="2530b567a30729c8ca55db7e56f9039a" category="paragraph">コンソールが AWS でコンソールエージェントを起動すると、エージェントの IAM ロールとプロファイルが作成されます。また、コンソールエージェントにその AWS アカウント内のリソースとプロセスを管理するための権限を付与するポリシーも添付します。<block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>。</block>
+  <block id="9bdb90e2cf9f7f97285de5520ab53a37" category="inline-image-macro">コンソールが AWS アカウントにコンソールエージェントを展開する様子を示す概念図。IAM ポリシーは IAM ロールに割り当てられ、コンソールにアタッチされます。</block>
+  <block id="6200ddd5978ec4a6ebc04f286e729487" category="paragraph"><block ref="6200ddd5978ec4a6ebc04f286e729487" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1aed0c96ab82a81ab5988e9702bb43da" category="paragraph">上のセクションで説明したように、コンソールでは、コンソールエージェントに関連付けられた IAM ロール、信頼できるアカウントでの IAM ロールの引き受け、または AWS アクセスキーの提供など、いくつかの方法で AWS 認証情報を提供できます。</block>
+  <block id="a47f802b14f43406913307d1775681b4" category="list-text">コンソールからコンソール エージェントを起動する権限を持つ Google アカウントを使用して、コンソール エージェントを展開する必要があります。</block>
+  <block id="2f452b0fc39f70459edce8976da308fa" category="list-text">コンソールエージェントを展開する際には、<block ref="98f22f2dda0728ebb39af9a8fe826c8e" category="inline-link-rx"></block>エージェントの場合、コンソールはサービス アカウントから権限を取得し、 Cloud Volumes ONTAPシステムの作成と管理、 NetAppバックアップとリカバリを使用したバックアップの管理などを行います。権限は、サービス アカウントにカスタム ロールを添付することによって提供されます。</block>
+  <block id="0f45389ced3603929ac70a3772bf2348" category="paragraph">NetApp Consoleからコンソール エージェントを直接作成するには特定の権限が必要であり、コンソール エージェント自体には別の権限セットが必要です。コンソールから直接 AWS または Azure にコンソールエージェントを作成すると、コンソールは必要な権限を持つコンソールエージェントを作成します。</block>
+  <block id="ba792e43ee25d6c3d972aef21f18efbd" category="summary">NetApp ConsoleがAWS でエージェントを起動すると、その AWS アカウント内のリソースとプロセスを管理するための権限をエージェントに付与するポリシーがエージェントにアタッチされます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービスなどの複数の AWS サービスへの API 呼び出しを実行します。</block>
+  <block id="b10c09311b2a36cdbb586dd7823222f1" category="paragraph">NetApp ConsoleがAWS でコンソールエージェントを起動すると、その AWS アカウント内のリソースとプロセスを管理するための権限をエージェントに付与するポリシーがエージェントにアタッチされます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービス (KMS) などの複数の AWS サービスへの API 呼び出しを実行します。</block>
+  <block id="a4a0e88b76170508470ee15848f6e7ba" category="cell">Cloud Volumes ONTAP がバックエンド ストレージとして使用する EBS ボリュームを管理する</block>
+  <block id="ebbb47c5d02c18deadd05d0341ccdd00" category="paragraph">コンソール エージェントには、Google Cloud でアクションを実行するための権限が必要です。これらの権限は、 NetAppが提供するカスタム ロールに含まれています。エージェントがこれらの権限を使用して何を行うかを理解する必要があります。</block>
+  <block id="dfeb199885257150591ae817b9f6fe44" category="paragraph">NetApp Consoleの機能とサービスを使用するには、コンソール エージェントがクラウド環境で操作を実行できるように権限を付与する必要があります。このページのリンクを使用して、目標に応じて必要な権限にすばやくアクセスします。</block>
+  <block id="28dc1d5c4a46ee6ae58c1c58beab7562" category="cell">コンソールからコンソールエージェントを作成するユーザーには、AWS にエージェントをデプロイするための特定の権限が必要です。</block>
+  <block id="f9336c7c27ce5def37b4c85f532f3e69" category="cell">コンソールがコンソールエージェントをデプロイすると、AWS アカウント内のリソースとプロセスを管理するために必要なアクセス許可を提供するポリシーがエージェントにアタッチされます。 AWS Marketplaceからコンソールエージェントをデプロイする場合、コンソールエージェントを手動でインストールする場合、または<block ref="dd68e1e1425f1a2836915a8e7efa1f0a" category="inline-link-macro-rx"></block>。また、後続のリリースで新しい権限が追加された場合、ポリシーが最新であることを確認する必要があります。</block>
+  <block id="7d1553be39870d08636e98597a4b5934" category="cell">コンソール エージェントのサービス アカウントには、日常的な操作のための特定の権限が必要です。展開中に、サービス アカウントをコンソール エージェントに関連付ける必要があります。また、後続のリリースで新しい権限が追加された場合、ポリシーが最新であることを確認する必要があります。</block>
+  <block id="80c404e08f5d5340903c30aa20ed5e6d" category="paragraph"><block ref="bc75056b5fa2888bb728b2036381638f" category="inline-link-macro-rx"></block>。</block>
+  <block id="c1fecb1554425a64f3f9e6114b6f590b" category="admonition">コンソールからコンソールエージェントを展開した場合、コンソールエージェントを展開したアカウントの AWS 認証情報が自動的に追加されます。これにより、リソースを管理するために必要な権限が確保されます。</block>
+  <block id="eb6d1dd2b9253237853279d2ed49bd03" category="paragraph">IAM ロールを使用して、コンソールエージェントをデプロイしたソース AWS アカウントと他の AWS アカウントの間に信頼関係を設定できます。次に、信頼できるアカウントの IAM ロールの ARN をコンソールに提供します。</block>
+  <block id="8bbfee3dfea9efab141faf94f65da126" category="section-title">既存のエージェントに資格情報を追加する</block>
+  <block id="15479d50a4812891e2a0f13867e845c2" category="admonition">クラウド プロバイダーの新しい資格情報が使用可能になるまでに数分かかる場合があります。</block>
+  <block id="cdfb5dcecc749b988ba63c468d079e5b" category="paragraph">コンソールにサブスクリプションを追加するときに、[詳細と資格情報] ページから別の資格情報セットに切り替えることができるようになりました。</block>
+  <block id="4d534aa7d8c217939698ddc32611744f" category="paragraph">IAM ロールに必要な権限が付与されました。<block ref="b53d4dbcc4af6be682223fc9ff9ca01e" category="inline-xref-macro-rx"></block>。</block>
+  <block id="7fd1ab9f3f5fa9cac90471ec200331ee" category="list-text">*認証情報の場所*: *Amazon Web Services &gt; コンソール* を選択します。</block>
+  <block id="1882d8328b6723ee413aea7b61b66303" category="paragraph">AWS 認証情報を追加したら、その認証情報を使用して AWS Marketplace サブスクリプションを設定できます。サブスクリプションを使用すると、 NetAppデータ サービスとCloud Volumes ONTAPの料金を時間単位 (PAYGO) または年間契約で支払うことができます。</block>
+  <block id="2d19d5d422219f2efe1607c76a85a329" category="section-title">既存のサブスクリプションを組織に関連付ける</block>
+  <block id="c0bb1a2e67d4c59ab378839c81af1fac" category="paragraph">AWS Marketplace からサブスクライブする場合、プロセスの最後のステップは、サブスクリプションを組織に関連付けることです。この手順を完了しなかった場合、組織でサブスクリプションを使用することはできません。</block>
+  <block id="6b63cf09da57249f50100278c2a1e8ea" category="paragraph">AWS Marketplace からNetApp Intelligent Servicesにサブスクライブしたが、サブスクリプションをアカウントに関連付ける手順を忘れた場合は、以下の手順に従ってください。</block>
+  <block id="ea446ce450c19b4b3a401bedaa18b458" category="list-text">サブスクリプションをコンソール組織に関連付けていないことを確認します。</block>
+  <block id="cabac1a22a55ac7ec7d7dcf426b3ef41" category="list-text">サブスクリプションが組織に関連付けられていることを確認します。</block>
+  <block id="63355a9119047d0bb5216fe09819ed76" category="admonition">コンソールエージェントインスタンスまたはAmazon FSx for ONTAPインスタンスに関連付けられているインスタンスプロファイルの認証情報を編集することはできません。FSx for ONTAPインスタンスの資格情報の名前のみを変更できます。</block>
+  <block id="f2a10e059f22d2e4e590bf375629f82c" category="list-text">*組織の資格情報*ページで、資格情報セットのアクション メニューを選択し、*資格情報の編集*を選択します。</block>
+  <block id="76f673856509040ebe6f53809741b891" category="admonition">コンソール エージェントに関連付けられているインスタンス プロファイルの資格情報を削除することはできません。</block>
+  <block id="fe0e7233937189ab2b2856c5f3bbfefc" category="doc">コンソール エージェントの認証情報を Google Cloud サブスクリプションに関連付けます</block>
+  <block id="be6d6ead122d68c4f8ddf176dfa23437" category="paragraph">Google Cloud でコンソール エージェントを作成すると、関連付けられた認証情報を使用して、 Cloud Volumes ONTAPやNetAppデータサービスなどのNetApp Intelligent Servicesをサブスクライブできます。サービスの支払いに使用する資格情報を持つエージェントにサブスクリプションを関連付ける必要があります。</block>
+  <block id="1e494b5627bead907a00e4ea2064baa4" category="paragraph">現在のマーケットプレイス サブスクリプションを新しいものに置き換えると、既存および新しいCloud Volumes ONTAPシステムのサブスクリプションが更新されます。</block>
+  <block id="0e0ee6c108e2775832f3d4fec4e5c9ab" category="paragraph">Google Cloud Marketplace 経由でのNetAppデータ サービスへのサブスクライブは、権限が正しくないか、コンソールへのリダイレクトが失われているために失敗する可能性があります。このような場合は、次の手順に従ってサブスクリプション プロセスを完了してください。</block>
+  <block id="743026d6272c7eac4898bf78c6a0ec00" category="paragraph">コンソールは、VPC にコンソールエージェントをデプロイする前に、AWS で認証する必要があります。次のいずれかの認証方法を選択できます。</block>
+  <block id="3c3077c55d74474a96914d3933e99034" category="paragraph">どちらのオプションを使用する場合でも、最初のステップは IAM ポリシーを作成することです。このポリシーには、コンソールから AWS のコンソールエージェントを起動するために必要な権限のみが含まれています。</block>
+  <block id="a6ff8031b9b97942fbb164a958bb15cb" category="inline-link-macro">コンソールエージェント自体に必要な権限の表示</block>
+  <block id="f09d39b62bcd3db5dbab86ed9186dad9" category="paragraph">このポリシーには、コンソールから AWS のコンソールエージェントを起動するために必要な権限のみが含まれています。コンソールがコンソールエージェントを作成すると、コンソールエージェントが AWS リソースを管理できるようにする新しい権限セットがコンソールエージェントに適用されます。<block ref="909ec4de2b545730e300a321f5abea2f" category="inline-link-macro-rx"></block>。</block>
+  <block id="318bbdd390cdff7f023b8038a3fb0070" category="list-text">コンソールがコンソール エージェントを作成すると、エージェントの IAM ロールとプロファイルが作成されます。このロールには、コンソールエージェントが AWS リソースを管理できるようにする権限が含まれています。将来のリリースで新しい権限が追加されたら、ロールが更新されるようにしてください。<block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block>。</block>
+  <block id="dd74de0d68eefd1c10bd1501afbc8b46" category="list-text">名前を入力してください。</block>
+  <block id="cc12b07ff25c8e9f0f635a74e2d22a82" category="list-text">カスタム タグ (メタデータ) を追加します。</block>
+  <block id="7a7b58b8b66971d14e483e486905137d" category="list-text">*ネットワーク* ページで、エージェントの VPC、サブネット、キーペアを指定し、パブリック IP アドレスを有効にするかどうかを選択し、必要に応じてプロキシ設定を指定します。</block>
+  <block id="193563612f46c81d99f9d364d74518c6" category="paragraph">コンソールは約 10 分でエージェントを展開します。プロセスが完了するまでこのページに留まります。</block>
+  <block id="0cbff45e0f71134dbbfed8f2ba0d6f76" category="paragraph">Azure アカウントまたは Microsoft Entra サービス プリンシパルに割り当てることができる Azure カスタム ロールを作成します。コンソールは Azure で認証し、これらのアクセス許可を使用してユーザーに代わってコンソール エージェントを作成します。</block>
+  <block id="a07294e253f6aa6ecfa69e1864aed3dc" category="paragraph">これらの権限は、コンソール エージェント自体に適用されます。これは、コンソール エージェント VM を展開するために以前に設定した権限セットとは異なります。</block>
+  <block id="82b5105dec777bd74c2d06159a000e87" category="list-text">*詳細*ページで、エージェントの名前を入力し、タグを指定して、コンソールで必要な権限を持つ新しいロールを作成するか、または既存のロールを選択するかを選択します。<block ref="b569336f779a413e2d7fa8c0ccb0306d" category="inline-link-macro-rx"></block> 。</block>
+  <block id="19ffcd7024175b13282f800ea3adbed2" category="paragraph">コンソールは約 10 分でエージェントを準備します。プロセスが完了するまでこのページに留まります。</block>
+  <block id="876390ad9b0cf0f2d258d7aa2aa95113" category="paragraph">コンソール エージェントを作成したのと同じ Azure アカウントに Azure Blob ストレージがある場合は、*システム* ページに Azure Blob ストレージが自動的に表示されます。<block ref="3486c1e90a886b9a62eac44d0dc074c2" category="inline-link-rx"></block></block>
+  <block id="19a4cd42145fb38e7327a12208fcf7d1" category="paragraph">エージェントは約 10 分で準備完了します。プロセスが完了するまでページに留まってください。</block>
+  <block id="7c95faa9b7e721e7b4dde04af4775bad" category="list-text">エージェントの CPU および RAM 要件を理解していること。</block>
+  <block id="b40610ec83466e7c103049d70ad18892" category="inline-link-macro">エージェントの要件を確認する</block>
+  <block id="8a62551759227881974703cf10bfc946" category="paragraph"><block ref="e2790838ef7051b1907224142bc33625" category="inline-link-macro-rx"></block>。</block>
+  <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">AWS は指定された設定でソフトウェアを起動します。コンソール エージェントは約 5 分で展開されます。</block>
+  <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">代わりに標準 SKU IP アドレスを使用する場合、コンソールはパブリック IP ではなく、コンソール エージェントのプライベート IP アドレスを使用します。コンソールにアクセスするために使用しているマシンがそのプライベート IP アドレスにアクセスできない場合、コンソールからのアクションは失敗します。</block>
 </blocks>
