@@ -350,12 +350,6 @@ NetApp Consoleにリダイレクトされます。
 他のすべての組織またはアカウントについては、これらの手順を繰り返して、サブスクリプションを手動で関連付ける必要があります。
 
 *** *保存*を選択します。
-+
-次のビデオでは、Azure Marketplace からサブスクライブする手順を示します。
-
-+
-.Azure Marketplace からNetApp Intelligent Servicesをサブスクライブする
-video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
 

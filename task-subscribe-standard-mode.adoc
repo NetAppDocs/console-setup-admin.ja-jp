@@ -34,10 +34,6 @@ NetApp Data Classification はサブスクリプションを通じて有効に�
 ====
 .AWS
 --
-次のビデオは、AWS Marketplace からNetApp Intelligent Servicesをサブスクライブする手順を示しています。
-
-.AWS MarketplaceからNetApp Intelligent Servicesをサブスクライブする
-video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .手順
 . *管理 > 資格情報*を選択します。
 . *組織の資格情報*を選択します。
@@ -105,12 +101,6 @@ NetApp Consoleにリダイレクトされます。
 他のすべての組織またはアカウントについては、これらの手順を繰り返して、サブスクリプションを手動で関連付ける必要があります。
 
 *** *保存*を選択します。
-+
-次のビデオでは、Azure Marketplace からサブスクライブする手順を示します。
-
-+
-.Azure Marketplace からNetApp Intelligent Servicesをサブスクライブする
-video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
 
@@ -170,19 +160,15 @@ NOTE: 組織内の誰かが既に請求先アカウントからマーケット�
 他のすべての組織またはアカウントについては、これらの手順を繰り返して、サブスクリプションを手動で関連付ける必要があります。
 
 *** *保存*を選択します。
-+
-次のビデオでは、Google Cloud Marketplace からサブスクライブする手順を示します。
-
-+
-.Google Cloud Marketplace から登録する
-video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 
-.. このプロセスが完了したら、コンソールの [資格情報] ページに戻り、この新しいサブスクリプションを選択します。
+
+
+
+
+. このプロセスが完了したら、コンソールの [資格情報] ページに戻り、この新しいサブスクリプションを選択します。
 +
 image:screenshot_gcp_associate.gif["サブスクリプション割り当てページのスクリーンショット。"]
-
-
 
 
 
