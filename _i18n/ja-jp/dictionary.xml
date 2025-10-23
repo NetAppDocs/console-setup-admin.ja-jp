@@ -572,8 +572,6 @@
   <block id="b4b78d037549f1e53319a933fd923727" category="list-text">ログイン後、コンソールを設定します。</block>
   <block id="fa4a4ed3171c9645519ee525ed212db9" category="list-text">コンソール エージェントに関連付けるコンソール組織を指定します。</block>
   <block id="d1caa1543690181f63b8c0e0933c0c49" category="paragraph">コンソール エージェントがオンプレミスにインストールされている場合、制限モードはサポートされません。</block>
-  <block id="af60e7ca775342cbe207d574ae3a82ef" category="paragraph">次のビデオは、AWS Marketplace からNetApp Intelligent Servicesをサブスクライブする手順を示しています。</block>
-  <block id="1cfe9a2e660a541826be5b5cc3018fdd" category="video-title">AWS MarketplaceからNetApp Intelligent Servicesをサブスクライブする</block>
   <block id="aaf23e1cf00fee0789e1c392da395cc9" category="list-text">コンソール エージェントに関連付けられている資格情報のセットのアクション メニューを選択し、[*サブスクリプションの構成*] を選択します。</block>
   <block id="601c60f4bc1d60fb12bbba2d26b90b33" category="paragraph">コンソール エージェントに関連付けられている資格情報を選択する必要があります。マーケットプレイス サブスクリプションを、 NetApp Consoleに関連付けられている資格情報に関連付けることはできません。</block>
   <block id="0d28acbceed906f52a206d0f3fb0add2" category="inline-image-macro">既存の資格情報セットのアクション メニューのスクリーンショット。</block>
@@ -593,8 +591,6 @@
   <block id="7dffa6296286b12f66d638f53340316c" category="list-text">プロンプトが表示されたら、Azure アカウントにログインします。</block>
   <block id="9dc9a5b2f23fe90a0fd71125f3034dfd" category="list-text">フォームに記入し、「購読」を選択します。</block>
   <block id="3221538307211e131f96e1a83b1a5235" category="list-text">サブスクリプションプロセスが完了したら、「今すぐアカウントを構成」を選択します。</block>
-  <block id="89d8b3b4c08395fc5dbef0d35cb50529" category="paragraph">次のビデオでは、Azure Marketplace からサブスクライブする手順を示します。</block>
-  <block id="930540e35d6a8bd81f5882c46e1f93c2" category="video-title">Azure Marketplace からNetApp Intelligent Servicesをサブスクライブする</block>
   <block id="ef5d79e3ae5671ca28e5f6e3b02eed27" category="list-text">選択した認証情報を使用して既存のサブスクリプションを構成するには、ドロップダウン リストから Google Cloud プロジェクトとサブスクリプションを選択し、[構成] を選択します。</block>
   <block id="fff6f5125be05a94543d2e88dbd30b27" category="inline-image-macro">Google Cloud 認証情報用に選択された Google Cloud プロジェクトとサブスクリプションのスクリーンショット。</block>
   <block id="cab980518d03aa36afc924b709828a6e" category="paragraph"><block ref="cab980518d03aa36afc924b709828a6e" category="inline-image-macro-rx" type="image"></block></block>
@@ -613,8 +609,6 @@
   <block id="825c72d4114a9a71a355213f6b79c642" category="list-text">*サブスクリプションの割り当て* ページの手順を完了します。</block>
   <block id="58575503869d282abe104097770af48c" category="inline-link">NetApp Console内のCloud Volumes ONTAPページ</block>
   <block id="f363e3b5ffcff31a7405fb7c63982e48" category="admonition">組織内の誰かが既に請求先アカウントからマーケットプレイスサブスクリプションを利用している場合は、次のページにリダイレクトされます。<block ref="eeda9d490d323c6921491a4ef94ce954" category="inline-link-rx"></block>その代わり。予期しない事態が発生した場合は、 NetAppの営業チームにお問い合わせください。  Google では、Google 請求先アカウントごとに 1 つのサブスクリプションのみ有効になります。</block>
-  <block id="a6b7d96f53186edb463f8f8611f97cd9" category="paragraph">次のビデオでは、Google Cloud Marketplace からサブスクライブする手順を示します。</block>
-  <block id="c9b7d3dfb0a91a99ab5deba597b6741a" category="video-title">Google Cloud Marketplace から登録する</block>
   <block id="a5a1d94d16067bff86c06d08991b799b" category="list-text">このプロセスが完了したら、コンソールの [資格情報] ページに戻り、この新しいサブスクリプションを選択します。</block>
   <block id="467e5d6bbcd0ea531c8f7285b69e29ee" category="inline-image-macro">サブスクリプション割り当てページのスクリーンショット。</block>
   <block id="60d2ed6f6e1774535b6e69274800381d" category="paragraph"><block ref="60d2ed6f6e1774535b6e69274800381d" category="inline-image-macro-rx" type="image"></block></block>
@@ -5602,4 +5596,5 @@
   <block id="8a62551759227881974703cf10bfc946" category="paragraph"><block ref="e2790838ef7051b1907224142bc33625" category="inline-link-macro-rx"></block>。</block>
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">AWS は指定された設定でソフトウェアを起動します。コンソール エージェントは約 5 分で展開されます。</block>
   <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">代わりに標準 SKU IP アドレスを使用する場合、コンソールはパブリック IP ではなく、コンソール エージェントのプライベート IP アドレスを使用します。コンソールにアクセスするために使用しているマシンがそのプライベート IP アドレスにアクセスできない場合、コンソールからのアクションは失敗します。</block>
+  <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">不審なユーザー アクティビティの検出を有効にするには、コンソール組織管理者のロールが必要です。</block>
 </blocks>
