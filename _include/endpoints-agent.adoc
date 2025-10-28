@@ -46,6 +46,46 @@
 
 | \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetApp Console内で機能とサービスを提供します。
 
+[cols="2*"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+\https://support.netapp.com \https://mysupport.netapp.com
+ a| 
+ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
+\https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com
+| NetApp Console内で機能とサービスを提供します。 
+
+
+ a| 
+次の 2 つのエンドポイント セットから選択します。
+
+* オプション1（推奨）
++
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+
+* オプション2
++
+\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+
+
+ a| 
+コンソール エージェントのアップグレード用のイメージを取得します。
+
+NetApp、ランサムウェア耐性またはバックアップとリカバリを使用していない限り、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
+
+* オプション 1 エンドポイントは 3.9.47 以降でサポートされます。  3.9.47 より前のリリースでは下位互換性がサポートされていません。
+* コンソール エージェントは、まずオプション 2 のエンドポイントとの接続を開始します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。
+* コンソール エージェントをNetApp Backup and Recoveryまたは Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
+
+
+|===
 a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| コンソールエージェントのアップグレード用のイメージを取得します。
 
 * 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
@@ -80,3 +120,56 @@ a| コンソール エージェントが商用リージョンまたはソブリ�
 
 
 | コンソール エージェントが商用リージョンまたはソブリン リージョンにインストールされている場合に、コンソール エージェントのアップグレード用のイメージを取得します。
+
+[cols="3*"]
+|===
+| *以前のエンドポイント* | *4.0.0 以降のエンドポイント* | *目的* 
+
+
+ a| 
+* \https://support.netapp.com
+* \https://mysupport.netapp.com
+
+ a| 
+* \https://mysupport.netapp.com
+* \https://signin.b2c.netapp.com
+* \https://support.netapp.com
+
+ a| 
+ライセンスおよびNetAppサポートへの連絡について。
+
+
+
+ a| 
+* \https://*.api.bluexp.netapp.com
+* \https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \https://cloudmanager.cloud.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.bluexp.netapp.com
+* \https://*.console.bluexp.netapp.com
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+日常業務用。
+
+
+
+ a| 
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
+
+ a| 
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+| コンソール エージェントのアップグレード用のイメージを取得します。 
+|===

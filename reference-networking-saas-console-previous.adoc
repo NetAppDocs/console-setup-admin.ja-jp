@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference-networking-saas-console-previous.html 
-keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
-summary: ログインして Web ベースのコンソールを使用すると、開始したアクションを完了するために複数のエンドポイントに接続します。  NetApp Consoleにアクセスするコンピューターは、これらのエンドポイントに接続する必要があります。 
+keywords: networking, urls, endpoints, web browser, console, network, set up networking, netapp console 
+summary: コンソールとインストールするエージェントが適切に機能するには、適切なネットワーク アクセスがあることを確認する必要があります。 
 ---
-= 3.9.55 以前に必要なネットワーク アクセス ポイント
+= 3.9.55 以前に必要なネットワーク アクセス
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,16 @@ summary: ログインして Web ベースのコンソールを使用すると、
 
 
 [role="lead"]
-このトピックでは、 NetApp Console4.0.0 リリースより前のバージョンのNetApp Consoleコンソール標準モード、 NetApp Consoleエージェント、およびNetAppデータ サービスのアウトバウンド インターネット アクセス、および必要なエンドポイントに接続する機能に必要なネットワーク アクセスについて詳しく説明します。コンソールとインストールするエージェントに、機能プロパティへの適切なネットワーク アクセスがあることを確認する必要があります。
+NetApp Console、 NetApp Consoleエージェント、およびNetAppデータ サービスでは、必要なエンドポイントに接続するために、アウトバウンド インターネット アクセスが必要です。
 
-NetApp Consoleに SaaS (Software as a Service) としてアクセスするコンピューターと、オンプレミスまたはクラウドにインストールするコンソール エージェントのネットワーク アクセスを設定する必要があります。  Cloud Volumes ONTAPなどの特定のNetAppデータ サービスには追加のエンドポイントが必要になる場合もあります。
+
+NOTE: このトピックでは、 NetApp Console標準モード 3.9.55 以下のバージョンに必要なネットワーク アクセスについて説明します。  4.0.0以降に必要なエンドポイントについては、link:reference-networking-saas-console.html["4.0.0 以降に必要なエンドポイント"] 。
+
+次のネットワーク アクセスを設定する必要があります。
+
+* NetApp Consoleに SaaS (Software as a Service) としてアクセスするコンピュータ
+* オンプレミスまたはクラウドにインストールするコンソール エージェント。
+
 
 
 
@@ -24,11 +31,62 @@ NetApp Consoleに SaaS (Software as a Service) としてアクセスするコン
 
 バージョン 4.0.0 以降、コンソール エージェントに必要なエンドポイントが少なくなります。  4.0.0 より前の既存のデプロイメントは引き続きサポートされます。  4.0.0 以降にアップグレードした後、都合の良いときに古いエンドポイントを許可リストから削除できます。
 
-NetApp、改訂されたエンドポイント リストを使用するようにファイアウォール ルールを更新することをお勧めします。改訂されたリストは小さくなったため、より安全になり、管理も容易になりました。
+NetApp、ファイアウォール ルールを更新して、サイズが小さく、より安全で、管理が容易な改訂版エンドポイント リストを使用することをお勧めします。  NetAppワイルドカード エントリの必要性がなくなり、エージェント アップグレードのエンドポイントはすべてのデータ サービスをサポートします。
 
-レビューlink:reference-networking-saas-console.html["4.0.0以降でサポートされているエンドポイント"]
+[cols="3*"]
+|===
+| *以前のエンドポイント* | *4.0.0 以降のエンドポイント* | *目的* 
 
+
+ a| 
+* \https://support.netapp.com
+* \https://mysupport.netapp.com
+
+ a| 
+* \https://mysupport.netapp.com
+* \https://signin.b2c.netapp.com
+* \https://support.netapp.com
+
+ a| 
+ライセンスおよびNetAppサポートへの連絡について。
+
+
+
+ a| 
+* \https://*.api.bluexp.netapp.com
+* \https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \https://cloudmanager.cloud.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.bluexp.netapp.com
+* \https://*.console.bluexp.netapp.com
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+日常業務用。
+
+
+
+ a| 
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
+
+ a| 
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+| コンソール エージェントのアップグレード用のイメージを取得します。 
+|===
 .手順
+. エージェントのバージョンが 4.0.0 以上であることを確認します。link:task-troubleshoot-agent.html#view-the-console-agent-version["エージェントのバージョンを表示します。"]
 . エンドポイントをホワイトリストに登録するlink:reference-networking-saas-console.html["4.0.0 以降でサポートされているエンドポイント"]。
 . 次のコマンドを実行して、各エージェントのサービス マネージャー 2 サービスを再起動します。
 +
@@ -42,30 +100,30 @@ systemctl restart netapp-service-manager.service
 ----
 systemctl status netapp-service-manager.service
 ----
-. 許可リストから古いエンドポイントを削除します。
+. ファイアウォールの許可リストから古いエンドポイントを削除します。
 
 
 
 
-== NetApp Consoleが接続するエンドポイント
+== NetApp Consoleおよびコンソール エージェント 3.9.55 以前のエンドポイント
 
-NetApp Consoleにアクセスする各コンピューターは、以下にリストされているエンドポイントに接続されている必要があります。
-
-システムは、次の 2 つのシナリオでこれらのエンドポイントに接続します。
-
-* アクセスしているコンピュータから https://console.netapp.com["NetApp Console"^]サービスとしてのソフトウェア (SaaS) として。
-* エージェント ホストに直接アクセスするコンピュータから、ログインして設定するか、エージェント ホストからコンソールにアクセスします。
-
+これらのエンドポイントは、コンソール エージェント 3.9.55 以下に使用されます。
 
 [cols="2*"]
 |===
 | エンドポイント | 目的 
 
 
-| \https://support.netapp.com \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。 
+ a| 
+\https://support.netapp.com \https://mysupport.netapp.com
+ a| 
+ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
 
 
-| \https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com | NetApp Console内で機能とサービスを提供します。 
+
+ a| 
+\https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com
+| NetApp Console内で機能とサービスを提供します。 
 
 
  a| 
@@ -93,170 +151,30 @@ NetApp、ランサムウェア耐性またはバックアップとリカバリ�
 |===
 
 
-== コンソールエージェントが接続するエンドポイント
+== コンソールエージェントが接続するクラウドプロバイダーエンドポイント
 
-コンソール エージェントをオンプレミスまたはクラウドにインストールし、エンドポイントに接続してコンソールによって開始されたアクションを完了します。
+コンソール エージェントがクラウド プロバイダーに展開されている場合、追加のエンドポイントにアクセスできる必要があります。
 
-コンソール エージェントは、 NetApp Consoleと同じエンドポイントにアクセスできる必要があります。また、エージェントをクラウド プロバイダーに導入する場合は追加のエンドポイントにもアクセスできる必要があります。
+コンソール エージェントをインストールする前に、クラウド プロバイダーのエンドポイントへのアクセスを有効にします。
 
+* link:task-install-agent-aws-console.html#networking-aws-agent["コンソールエージェントの AWS ネットワークアクセスを設定する"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["コンソール エージェントの Azure ネットワーク アクセスを設定する"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["コンソール エージェントの Google Cloud ネットワーク アクセスを設定する"]
 
 
-=== AWS のエージェントエンドポイント
+クラウド プロバイダーのエンドポイントはすべてのバージョンで同じです。
 
-これらのエンドポイントは、4.0.0 より前のコンソール エージェントに適用されます。
 
-[cols="2*"]
-|===
-| エンドポイント | 目的 
 
+== コンソールエージェントが接続するデータサービスエンドポイント
 
-| AWS サービス (amazonaws.com): CloudFormation Elastic Compute Cloud (EC2) Identity and Access Management (IAM) Key Management Service (KMS) Security Token Service (STS) Simple Storage Service (S3) | AWS 内のリソースを管理します。正確なエンドポイントは、使用している AWS リージョンによって異なります。ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信する方法については、AWS のドキュメントを参照してください。 
+コンソール エージェントでは、一部のNetAppデータ サービスとCloud Volumes ONTAP をサポートするために、追加の送信インターネット アクセスが必要です。
 
 
-| \https://support.netapp.com \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。 
 
+=== Cloud Volumes ONTAPのエンドポイント
 
- a| 
-次の 2 つのエンドポイント セットから選択します。
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS のCloud Volumes ONTAPのエンドポイント"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Azure のCloud Volumes ONTAPのエンドポイント"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud のCloud Volumes ONTAPのエンドポイント"]
 
-* オプション1（推奨）
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* オプション2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
-NetApp、ランサムウェア耐性またはバックアップとリカバリを使用していない限り、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
-
-* オプション 1 エンドポイントは 3.9.47 以降でサポートされます。  3.9.47 より前のリリースでは下位互換性がサポートされていません。
-* コンソール エージェントは、まずオプション 2 のエンドポイントとの接続を開始します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。
-* コンソール エージェントをNetApp Backup and Recoveryまたは Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
-
-
-|===
-
-
-=== Azureのエージェントエンドポイント
-
-これらのエンドポイントは、4.0.0 より前のコンソール エージェントに適用されます。
-
-[cols="2*"]
-|===
-| エンドポイント | 目的 
-
-
-| \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net | Azure パブリック リージョン内のリソースを管理します。 
-
-
-| \https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn | Azure China リージョンのリソースを管理します。 
-
-
-| \https://support.netapp.com \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。 
-
-
- a| 
-次の 2 つのエンドポイント セットから選択します。
-
-* オプション1（推奨）
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* オプション2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
-NetApp、ランサムウェア耐性またはバックアップとリカバリを使用していない限り、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
-
-* オプション 1 エンドポイントは 3.9.47 以降でサポートされます。  3.9.47 より前のリリースでは下位互換性がサポートされていません。
-* コンソール エージェントは、まずオプション 2 のエンドポイントとの接続を開始します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。
-* コンソール エージェントをNetApp Backup and Recoveryまたは Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
-
-
-|===
-
-
-=== Google Cloud のエージェント エンドポイント
-
-これらのエンドポイントは、4.0.0 より前のコンソール エージェントに適用されます。
-
-[cols="2*"]
-|===
-| エンドポイント | 目的 
-
-
-| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/project | Google Cloud 内のリソースを管理します。 
-
-
-| \https://support.netapp.com \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。 
-
-
- a| 
-次の 2 つのエンドポイント セットから選択します。
-
-* オプション1（推奨）
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* オプション2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
-NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
-
-* コンソール エージェントの 3.9.47 リリース以降、システムはオプション 1 にリストされているエンドポイントをサポートします。コンソール エージェントの以前のリリースでは、下位互換性はサポートされていません。
-* コンソール エージェントは、最初にオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。
-* コンソール エージェントをNetApp Backup and Recoveryまたは Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
-
-
-|===
-
-
-== オンプレミスのエージェントエンドポイント
-
-[cols="2*"]
-|===
-| エンドポイント | 目的 
-
-
-| \https://support.netapp.com \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。 
-
-
-| \https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com | NetApp Console内で機能とサービスを提供します。 
-
-
- a| 
-次の 2 つのエンドポイント セットから選択します。
-
-* オプション1（推奨）
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* オプション2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
-NetApp、ランサムウェア耐性またはバックアップとリカバリを使用していない限り、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
-
-* オプション 1 エンドポイントは 3.9.47 以降でサポートされます。  3.9.47 より前のリリースでは下位互換性がサポートされていません。
-* コンソール エージェントは、まずオプション 2 のエンドポイントとの接続を開始します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。
-* コンソール エージェントをNetApp Backup and Recoveryまたは Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
-
-
-|===

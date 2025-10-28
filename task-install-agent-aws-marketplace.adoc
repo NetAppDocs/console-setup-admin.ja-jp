@@ -177,7 +177,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業のデ�
 
 CPU:: 8コアまたは8vCPU
 RAM:: 32 GB
-AWS EC2インスタンスタイプ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  t3.2xlarge をお勧めします。
+AWS EC2インスタンスタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetAppt3.2xlarge を推奨します。
 
 
 

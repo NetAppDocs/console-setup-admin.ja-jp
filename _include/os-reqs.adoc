@@ -148,7 +148,7 @@ CPU:: 8コアまたは8vCPU
 RAM:: 32 GB
 
 
-AWS EC2インスタンスタイプ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  t3.2xlarge をお勧めします。
+AWS EC2インスタンスタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetAppt3.2xlarge を推奨します。
 
 
 鍵ペア:: コンソールエージェントを作成するときは、インスタンスで使用する EC2 キーペアを選択する必要があります。
@@ -164,10 +164,10 @@ IMDSv2 使用時の PUT 応答ホップ制限:: EC2 インスタンスで IMDSv2
 --
 
 
-Azure VM サイズ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  Standard_D8s_v3 をお勧めします。
+Azure VM サイズ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetAppStandard_D8s_v3 を推奨します。
 
 
-Google Cloud マシンタイプ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  n2-standard-8 をお勧めします。
+Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetApp はn2-standard-8 を推奨します。
 +
 --
 コンソールエージェントは、Google Cloud の VM インスタンスで、以下の OS がサポートする環境でサポートされます。 https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["シールドされたVMの機能"^]

@@ -153,7 +153,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業のデ�
 
 CPU:: 8コアまたは8vCPU
 RAM:: 32 GB
-Azure VM サイズ:: 上記の CPU および RAM の要件を満たすインスタンス タイプ。  Standard_D8s_v3 をお勧めします。
+Azure VM サイズ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetAppStandard_D8s_v3 を推奨します。
 
 
 
@@ -209,7 +209,7 @@ image:screenshot_azure_shell_upload.png["ファイルをアップロードする
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 
 
@@ -280,7 +280,7 @@ image:screenshot_azure_shell_upload.png["ファイルをアップロードする
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 +
 これで、コンソール エージェント仮想マシンに割り当てることができる、コンソール オペレーターと呼ばれるカスタム ロールが作成されます。

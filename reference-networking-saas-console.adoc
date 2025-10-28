@@ -19,24 +19,19 @@ NetApp Console、 NetApp Consoleエージェント、およびNetAppデータ �
 次のネットワーク アクセスを設定する必要があります。
 
 * NetApp Consoleに SaaS (Software as a Service) としてアクセスするコンピュータ
-* オンプレミスまたはクラウドにインストールしたコンソール エージェントを展開するネットワークの場所。
-* Cloud Volumes ONTAPを含む特定のNetAppデータ サービスの追加エンドポイント。
+* オンプレミスまたはクラウドにインストールするコンソール エージェント。コンソールエージェント。
 
 
 
-NOTE: NetApp は、コンソールとコンソール エージェントに必要なネットワーク エンドポイントを削減し、セキュリティを強化して導入を簡素化しました。重要なのは、バージョン 4.0.0 より前のすべてのデプロイメントが引き続き完全にサポートされることです。以前のエンドポイントは既存のエージェントで引き続き使用できますが、 NetApp、エージェントのアップグレードが成功したことを確認した後、ファイアウォール ルールを現在のエンドポイントに更新することを強くお勧めします。link:reference-networking-saas-console-previous.html["エンドポイント リストを更新する方法について説明します。"]
+NOTE: 4.0.0 では、 NetApp はコンソールとコンソール エージェントに必要なネットワーク エンドポイントを削減し、セキュリティを強化して導入を簡素化しました。重要なのは、バージョン 4.0.0 より前のすべてのデプロイメントが引き続き完全にサポートされることです。以前のエンドポイントは既存のエージェントで引き続き使用できますが、 NetApp、エージェントのアップグレードが成功したことを確認した後、ファイアウォール ルールを現在のエンドポイントに更新することを強くお勧めします。link:reference-networking-saas-console-previous.html["エンドポイント リストを更新する方法について説明します。"]
 
 
 
-== NetApp Consoleが接続するエンドポイント
+== NetApp Consoleおよびコンソールエージェントが接続するエンドポイント
 
-NetApp Consoleにアクセスする各コンピューターは、以下にリストされているエンドポイントに接続されている必要があります。
+導入する各エージェントとNetApp Consoleにアクセスする各コンピューターは、以下にリストされているエンドポイントに接続する必要があります。
 
-システムは、次の 2 つのシナリオでこれらのエンドポイントに接続します。
-
-* アクセスしているコンピュータから https://console.netapp.com["NetApp Console"^]サービスとしてのソフトウェア (SaaS) として。
-* コンソール エージェント ホストに直接アクセスするコンピュータから、ログインして設定するか、エージェント ホストからコンソールにアクセスします。
-
+クラウド プロバイダーに展開されているコンソール エージェントは、そのクラウド プロバイダーに対応するエンドポイントにアクセスできる必要があります。
 
 [cols="2*"]
 |===
@@ -70,23 +65,20 @@ NetApp Consoleにアクセスする各コンピューターは、以下にリス
 |===
 
 
-== コンソールエージェントのネットワークを準備する
+== クラウドプロバイダーのエンドポイントがコンソールエージェントに接続しました
 
-コンソール エージェントをオンプレミスまたはクラウドにインストールし、エンドポイントに接続してコンソールによって開始されたアクションを完了します。
+コンソール エージェントがクラウド プロバイダーに展開されている場合、追加のエンドポイントにアクセスできる必要があります。
 
-コンソール エージェントは、 NetApp Consoleと同じエンドポイントにアクセスできる必要があります。また、エージェントのインストール場所に応じて追加のエンドポイントにもアクセスできる必要があります。
-
-コンソール エージェントをインストールする前に、ネットワーク エンドポイント アクセスを設定します。
+コンソール エージェントをインストールする前に、クラウド プロバイダー ネットワーク エンドポイント アクセスを設定します。
 
 * link:task-install-agent-aws-console.html#networking-aws-agent["コンソールエージェントの AWS ネットワークアクセスを設定する"]
 * link:task-install-agent-azure-console.html#networking-azure-agent["コンソール エージェントの Azure ネットワーク アクセスを設定する"]
 * link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["コンソール エージェントの Google Cloud ネットワーク アクセスを設定する"]
-* link:task-install-agent-on-prem.html#network-access-agent["コンソール エージェントのオンプレミス ネットワーク アクセスを設定する"]
 
 
 
 
-== Cloud Volumes ONTAPのネットワークを準備する
+== コンソールエージェントが接続するデータサービスエンドポイント
 
 一部のNetAppデータ サービスとCloud Volumes ONTAP、エージェントに追加のアウトバウンド インターネット アクセスが必要です。
 
@@ -98,5 +90,3 @@ NetApp Consoleにアクセスする各コンピューターは、以下にリス
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Azure のCloud Volumes ONTAPのエンドポイント"]
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud のCloud Volumes ONTAPのエンドポイント"]
 
-
-https://docs.netapp.com/us-en/data-services-family/["それぞれのNetAppデータ サービスのドキュメントを参照してください。"^]
