@@ -134,7 +134,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-agent-i
 
 NetApp は、コンソールとコンソール エージェントに必要なネットワーク エンドポイントを削減し、セキュリティを強化して導入を簡素化しました。重要なのは、バージョン 4.0.0 より前のすべてのデプロイメントが引き続き完全にサポートされていることです。以前のエンドポイントは既存のエージェントで引き続き使用できますが、 NetApp、エージェントのアップグレードが成功したことを確認した後、ファイアウォール ルールを現在のエンドポイントに更新することを強くお勧めします。
 
-* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新して比較を表示する方法を学びます"]。
 * link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html["必要なエンドポイントの詳細について説明します。"]
 
 

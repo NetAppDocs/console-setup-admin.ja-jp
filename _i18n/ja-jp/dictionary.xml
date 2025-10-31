@@ -1012,7 +1012,6 @@
   <block id="e95d0df05962f4456b8b569c54b396c6" category="paragraph">4.0.0 リリースは、標準モードと制限モードで利用できます。</block>
   <block id="5412276bd0dd11677309c5862e9a5a84" category="section-title">必要なネットワークエンドポイントの統合と削減</block>
   <block id="d0994d4e248da3f28077f3de0aa07b31" category="paragraph">NetApp は、コンソールとコンソール エージェントに必要なネットワーク エンドポイントを削減し、セキュリティを強化して導入を簡素化しました。重要なのは、バージョン 4.0.0 より前のすべてのデプロイメントが引き続き完全にサポートされていることです。以前のエンドポイントは既存のエージェントで引き続き使用できますが、 NetApp、エージェントのアップグレードが成功したことを確認した後、ファイアウォール ルールを現在のエンドポイントに更新することを強くお勧めします。</block>
-  <block id="cca12c7916c4a96b099460567ed56f7b" category="list-text"><block ref="8aad0fd6d4c3bc8fa0ee8715b00de090" category="inline-link-macro-rx"></block> 。</block>
   <block id="8880ac717c8ca7c5aacda1dbf0aa76b4" category="inline-link-macro">必要なエンドポイントの詳細について説明します。</block>
   <block id="a65e1c365f170de138a296cb93571b83" category="list-text"><block ref="a65e1c365f170de138a296cb93571b83" category="inline-link-macro-rx"></block></block>
   <block id="dcd681e02807cfe12b61283485a64b57" category="section-title">コンソールエージェントの VCenter 展開のサポート</block>
@@ -5547,7 +5546,6 @@
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">AWS は指定された設定でソフトウェアを起動します。コンソール エージェントは約 5 分で展開されます。</block>
   <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">代わりに標準 SKU IP アドレスを使用する場合、コンソールはパブリック IP ではなく、コンソール エージェントのプライベート IP アドレスを使用します。コンソールにアクセスするために使用しているマシンがそのプライベート IP アドレスにアクセスできない場合、コンソールからのアクションは失敗します。</block>
   <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">不審なユーザー アクティビティの検出を有効にするには、コンソール組織管理者のロールが必要です。</block>
-  <block id="148a5defddc98b9d994f39780f74e348" category="cell">*以前のエンドポイント*</block>
   <block id="c563d78603e1e09616c6c043a19061ba" category="cell">*4.0.0 以降のエンドポイント*</block>
   <block id="1463a95efc33a52765f03569e1e39a10" category="cell">*目的*</block>
   <block id="3b02fb538695ecfedde92943f6fd865e" category="paragraph">ライセンスおよびNetAppサポートへの連絡について。</block>
@@ -5599,4 +5597,7 @@
   <block id="a64b4879b658ef7dd1a5bf863f66e510" category="section-title">クラウドプロバイダーのエンドポイントがコンソールエージェントに接続しました</block>
   <block id="334af2b72c201a4f9aea3650a21ea8ec" category="paragraph">コンソール エージェントをインストールする前に、クラウド プロバイダー ネットワーク エンドポイント アクセスを設定します。</block>
   <block id="9ccb545b97d1ad0ce41d2577f6ae2e82" category="section-title">ステップ3: コンソールエージェントに権限を付与する</block>
+  <block id="9c4179cb78e78f8bd52b0a9525df84e3" category="cell">*3.9.55 以下のエンドポイント*</block>
+  <block id="af1ce09274091f662d34169f09b1482e" category="inline-link-macro">エンドポイントリストを更新して比較を表示する方法を学びます</block>
+  <block id="87bf0287482e9096c75805420a81b7ea" category="list-text"><block ref="eaf36d8f2aa9f00c9dd600ce08237a22" category="inline-link-macro-rx"></block>。</block>
 </blocks>
