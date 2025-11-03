@@ -64,6 +64,9 @@ NetApp Consoleの ID およびアクセス管理 (IAM) では、リソース階�
 | link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes管理者"] | Google Cloud NetApp Volumesロールを持つユーザーは、Google Cloud NetApp Volumes を検出して管理できます。 
 
 
+| link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumesユーザー"] | Google Cloud NetApp Volumesユーザーロールを持つユーザーは、 Google Cloud NetApp Volumes を表示できます。 
+
+
 | link:reference-iam-keystone-roles.html["Keystone管理者"] | Keystone管理者ロールを持つユーザーは、サービス リクエストを作成できます。ユーザーがアクセスしているKeystoneテナント内の使用状況、リソース、および管理の詳細を監視および表示できるようにします。 
 
 
