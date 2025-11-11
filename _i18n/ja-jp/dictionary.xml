@@ -460,7 +460,6 @@
   <block id="7b948bab9b4003048f0e729d2dd1b238" category="cell">サポートされるOSバージョン</block>
   <block id="b16ae794e2eeb2136b3c004c421fa714" category="cell">サポートされているエージェントのバージョン</block>
   <block id="301e9d698830f505ef2566dfc5a26274" category="cell">必要なコンテナツール</block>
-  <block id="f2ee533052f51406bfa3283372f0af96" category="cell">SELinux は</block>
   <block id="c73bbd3786350b0a8d3577d82afdf489" category="paragraph">Red Hat Enterprise Linux</block>
   <block id="94d03d842e38bfc8ebeb1cd5999b1321" category="paragraph">9.1～9.4</block>
   <block id="597f1630cd21d22c527f63002e42f059" category="paragraph">8.6～8.10</block>
@@ -5609,4 +5608,5 @@
   <block id="827939177a8e56e6d981ae1fc3dcb065" category="section-title">2024年9月9日</block>
   <block id="be8fd45f96dc537f9f4473811d5a2cb7" category="paragraph">コンソールが AWS でコンソールエージェントを起動すると、エージェントの IAM ロールとプロファイルが作成されます。また、コンソールエージェントにその AWS アカウント内のリソースとプロセスを管理するための権限を付与するポリシーも添付します。<block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>。</block>
   <block id="fe4b6329accdde90ed8d83073374f9cc" category="paragraph">上記のセクションでは、コンソールからのコンソール エージェントの推奨展開方法について説明しています。また、AWS Marketplace から AWS にエージェントを展開し、独自の Linux ホストまたは VCenter にコンソールエージェントソフトウェアを手動でインストールすることもできます。</block>
+  <block id="7294c37d50c105bffdf0e10ac05a9beb" category="paragraph">Podman バージョン 5.4.0 と podman-compose 1.5.0。</block>
 </blocks>
