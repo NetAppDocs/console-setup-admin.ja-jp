@@ -1165,7 +1165,6 @@
   <block id="70b92c994098903dd4d795e576df0178" category="section-title">既存のCloud Volumes ONTAPシステムを別の AWS アカウントに移動できますか?</block>
   <block id="76dceba3264b49dee2ad272ffb9d4744" category="paragraph">いいえ、 Cloud Volumes ONTAPシステムに関連付けられている AWS リソースを別の AWS アカウントに移動することはできません。</block>
   <block id="d8313e84240e5bf3fd7c17d104ad227d" category="section-title">マーケットプレイスの展開とオンプレミスの展開では資格情報はどのように機能しますか?</block>
-  <block id="e69076ba30bc8d2834e054c4781b1d9d" category="paragraph">上記のセクションでは、コンソールからのコンソール エージェントの推奨展開方法について説明しています。  AWS Marketplace から AWS にエージェントをデプロイし、独自の Linux ホストにコンソールエージェントソフトウェアを手動でインストールすることもできます。</block>
   <block id="a4542ce435b67066671321f478dce8cc" category="paragraph">Marketplace を使用する場合も、同様の方法で権限が提供されます。  IAM ロールを手動で作成して設定し、追加のアカウントに権限を付与するだけです。</block>
   <block id="13faeab8d56294c16f52b682c4081994" category="paragraph">オンプレミス展開の場合、コンソールに IAM ロールを設定することはできませんが、AWS アクセスキーを使用して権限を付与することはできます。</block>
   <block id="796c918f0fce99224fa4a1b54f518f96" category="paragraph">権限の設定方法については、次のページを参照してください。</block>
@@ -5450,7 +5449,6 @@
   <block id="648c906efc1699c9d3ad4578bac84bd5" category="paragraph">コンソールは、組織内のすべての資格情報の既存のサブスクリプションをこの新しいサブスクリプションに置き換えます。資格情報のセットがサブスクリプションに関連付けられたことがない場合、この新しいサブスクリプションはそれらの資格情報に関連付けられません。</block>
   <block id="fec37ac1cd6af148e5a37feded7851f2" category="paragraph">コンソールからコンソールエージェントをデプロイする場合は、IAM ロールの ARN または IAM ユーザーのアクセスキーを指定する必要があります。認証方法には、AWS にコンソールをデプロイするための権限が必要です。必要な権限は、link:task-install-agent-aws-the Console.html#aws-permissions-agent[AWS のエージェント展開ポリシー] に記載されています。</block>
   <block id="6d98b6cff569df2b13894056f584ec94" category="inline-link-macro">エージェントが権限をどのように使用するか確認する</block>
-  <block id="2530b567a30729c8ca55db7e56f9039a" category="paragraph">コンソールが AWS でコンソールエージェントを起動すると、エージェントの IAM ロールとプロファイルが作成されます。また、コンソールエージェントにその AWS アカウント内のリソースとプロセスを管理するための権限を付与するポリシーも添付します。<block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>。</block>
   <block id="9bdb90e2cf9f7f97285de5520ab53a37" category="inline-image-macro">コンソールが AWS アカウントにコンソールエージェントを展開する様子を示す概念図。IAM ポリシーは IAM ロールに割り当てられ、コンソールにアタッチされます。</block>
   <block id="6200ddd5978ec4a6ebc04f286e729487" category="paragraph"><block ref="6200ddd5978ec4a6ebc04f286e729487" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1aed0c96ab82a81ab5988e9702bb43da" category="paragraph">上のセクションで説明したように、コンソールでは、コンソールエージェントに関連付けられた IAM ロール、信頼できるアカウントでの IAM ロールの引き受け、または AWS アクセスキーの提供など、いくつかの方法で AWS 認証情報を提供できます。</block>
@@ -5609,4 +5607,6 @@
   <block id="527d18dfa760fc67196d102d429a8ea0" category="section-title">2024年12月9日</block>
   <block id="f66c63cf0ff76c19209f85ca687a2fb4" category="section-title">2024年10月7日</block>
   <block id="827939177a8e56e6d981ae1fc3dcb065" category="section-title">2024年9月9日</block>
+  <block id="be8fd45f96dc537f9f4473811d5a2cb7" category="paragraph">コンソールが AWS でコンソールエージェントを起動すると、エージェントの IAM ロールとプロファイルが作成されます。また、コンソールエージェントにその AWS アカウント内のリソースとプロセスを管理するための権限を付与するポリシーも添付します。<block ref="c8fcf01cd703cc98adb501c59ec6e8ce" category="inline-link-macro-rx"></block>。</block>
+  <block id="fe4b6329accdde90ed8d83073374f9cc" category="paragraph">上記のセクションでは、コンソールからのコンソール エージェントの推奨展開方法について説明しています。また、AWS Marketplace から AWS にエージェントを展開し、独自の Linux ホストまたは VCenter にコンソールエージェントソフトウェアを手動でインストールすることもできます。</block>
 </blocks>
