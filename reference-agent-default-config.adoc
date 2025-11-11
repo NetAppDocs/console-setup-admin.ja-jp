@@ -24,7 +24,7 @@ summary: コンソール エージェントを展開する前に、コンソー�
 
 
 
-=== AWS の詳細
+=== AWS のコンソールエージェント VM の詳細
 
 コンソールまたはクラウド プロバイダーのマーケットプレイスからコンソール エージェントを展開した場合は、次の点に注意してください。
 
@@ -40,7 +40,7 @@ summary: コンソール エージェントを展開する前に、コンソー�
 
 
 
-=== Azureの詳細
+=== Azure のコンソール エージェント VM の詳細
 
 コンソールまたはクラウド プロバイダーのマーケットプレイスからコンソール エージェントを展開した場合は、次の点に注意してください。
 
@@ -55,7 +55,7 @@ summary: コンソール エージェントを展開する前に、コンソー�
 
 
 
-=== Google Cloudの詳細
+=== Google Cloud のコンソール エージェント VM の詳細
 
 コンソールからコンソール エージェントを展開した場合は、次の点に注意してください。
 
@@ -74,7 +74,7 @@ summary: コンソール エージェントを展開する前に、コンソー�
 
 エージェントのインストール フォルダーは次の場所にあります。
 
-/opt/application/netapp/cloudmanager
+`/opt/application/netapp/cloudmanager`
 
 
 
@@ -82,12 +82,12 @@ summary: コンソール エージェントを展開する前に、コンソー�
 
 ログ ファイルは次のフォルダーに保存されます。
 
-* /opt/application/netapp/cloudmanager/log または
-* /opt/application/netapp/service-manager-2/logs (新しい 3.9.23 インストール以降)
+* `/opt/application/netapp/cloudmanager/log` または
+* `/opt/application/netapp/service-manager-2/logs` (3.9.23 の新規インストールから開始)
 +
 これらのフォルダー内のログには、コンソール エージェントに関する詳細が記録されます。
 
-* /opt/application/netapp/cloudmanager/docker_occm/data/log
+* `/opt/application/netapp/cloudmanager/docker_occm/data/log`
 +
 このフォルダー内のログには、クラウド サービスと、コンソール エージェントで実行されるコンソール サービスに関する詳細が記録されます。
 
@@ -122,11 +122,11 @@ MySQL サービスがダウンしている場合は、occm サービスもダウ
 
 * エージェントのインストール フォルダーは次の場所にあります。
 +
-/opt/application/netapp/ds
+`/opt/application/netapp/ds`
 
 * ログ ファイルは次のフォルダーに保存されます。
 +
-/var/lib/docker/volumes/ds_occmdata/_data/log
+`/var/lib/docker/volumes/ds_occmdata/_data/log`
 
 +
 このフォルダー内のログには、コンソール エージェントと Docker イメージに関する詳細が記録されます。

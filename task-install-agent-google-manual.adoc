@@ -201,27 +201,33 @@ sudo systemctl enable --now podman.socket
 sudo dnf install python3
 ----
 . システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。
-. Red Hat Enterprise を使用している場合:
-+
+
+
 podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。
 
-+
-Red Hat Enterprise Linux 9 の場合:
-
+. Red Hat Enterprise 9 を使用している場合:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
 +
-Red Hat Enterprise Linux 8 の場合:
+.. podman-compose パッケージ 1.5.0 をインストールします。
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.5.0
+----
 
+
+. Red Hat Enterprise Linux 8 を使用している場合:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-. podman-compose パッケージ 1.0.6 をインストールします。
++
+.. podman-compose パッケージ 1.0.6 をインストールします。
 +
 [source, cli]
 ----
@@ -231,39 +237,41 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-compose を追加するための要件を満たしています。インストールコマンドは、すでにインストールされているpodman-composeを/usr/binに追加します。 `secure_path`ホスト上のオプション。
 
-. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
-+
-.. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
+.. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
+
+
+. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
 +
 [source, cli]
 ----
 podman info | grep networkBackend
 ----
-.. networkBackendが `CNI`、それを変更する必要があります `netavark`。
-.. インストール `netavark`そして `aardvark-dns`次のコマンドを使用します。
+. networkBackendが `CNI`、それを変更する必要があります `netavark`。
+. インストール `netavark`そして `aardvark-dns`次のコマンドを使用します。
 +
 [source, cli]
 ----
 dnf install aardvark-dns netavark
 ----
-.. 開く `/etc/containers/containers.conf`ファイルを編集し、network_backend オプションを変更して、「cni」の代わりに「netavark」を使用します。
-
-
+. 開く `/etc/containers/containers.conf`ファイルを編集し、network_backend オプションを変更して、「cni」の代わりに「netavark」を使用します。
 +
 もし `/etc/containers/containers.conf`存在しない場合は、設定を変更してください `/usr/share/containers/containers.conf`。
 
-. podman を再起動します。
++
+.. podman を再起動します。
 +
 [source, cli]
 ----
 systemctl restart podman
 ----
-. 次のコマンドを使用して、networkBackend が「netavark」に変更されていることを確認します。
+.. 次のコマンドを使用して、networkBackend が「netavark」に変更されていることを確認します。
 +
 [source, cli]
 ----
 podman info | grep networkBackend
 ----
+
+
 
 
 --
@@ -585,7 +593,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
  ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
-ネットワークでインターネット アクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。透過プロキシまたは明示プロキシのいずれかを追加できます。 --proxy および --cacert パラメータはオプションであり、追加するように要求されることはありません。プロキシ サーバーがある場合は、示されているようにパラメータを入力する必要があります。
+ネットワークでインターネット アクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。インストール中に明示的なプロキシを追加することもできます。--proxy および --cacert パラメータはオプションであり、追加するように要求されることはありません。明示的なプロキシ サーバーがある場合は、示されているようにパラメータを入力する必要があります。
 
 +
 CA 署名証明書を使用して明示的なプロキシ サーバーを構成する例を次に示します。
@@ -625,16 +633,9 @@ CA 署名証明書を使用して明示的なプロキシ サーバーを構成�
 
 
 
-`--cacert`コンソール エージェントとプロキシ サーバー間の HTTPS アクセスに使用する CA 署名付き証明書を指定します。このパラメータは、HTTPS プロキシ サーバー、インターセプト プロキシ サーバー、および透過プロキシ サーバーに必須です。
 
-+ 透過プロキシ サーバーを構成する例を次に示します。透過プロキシを構成する場合、プロキシ サーバーを定義する必要はありません。コンソール エージェント ホストには、CA 署名付き証明書のみを追加します。
+NOTE: 透過プロキシを設定する場合は、インストール後に設定できます。 link:reference-agent-maint-console.html["エージェントメンテナンスコンソールについて学ぶ"]
 
-+
-
-[source, cli]
-----
- ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
-----
 . Podman を使用した場合は、aardvark-dns ポートを調整する必要があります。
 +
 .. コンソール エージェント仮想マシンに SSH で接続します。
