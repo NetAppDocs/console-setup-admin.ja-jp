@@ -32,7 +32,7 @@ NetApp Console管理機能の新機能（アイデンティティおよびアク
 コンソール エージェントのステータス インジケーターの名前を *アクティブ* と *非アクティブ* から *接続済み* と *切断済み* に変更し、目的をより明確にしました。
 
 .Redhat Enterprise Linux (RHEL) 9.6 および Podman 5.4.0 のサポート
-コンソール エージェントは、RHEL 9.6 および Podman 5.4.0 をサポートするようになりました。さらに、RHEL 9 以降を使用する場合、 NetApp はpodman-compose 1.5.0 をサポートします。
+コンソール エージェントを手動でインストールする場合、エージェントは Podman 5.4.0 を搭載した RHEL 9.6 をサポートするようになりました。さらに、RHEL 9 以降を使用する場合、 NetApp はpodman-compose 1.5.0 をサポートします。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html["オペレーティング システムの要件を表示"]。
 
 
 
@@ -1378,6 +1378,35 @@ BlueXPにサインアップする新規ユーザーは、ログインする前�
 BlueXPコネクタのこのリリースには、マイナーなセキュリティの改善とバグ修正が含まれています。
 
 3.9.41 リリースは、標準モードと制限モードで利用できます。
+
+
+
+=== RHEL 7およびCentOS 7のサポート終了
+
+2024 年 6 月 30 日に、RHEL 7 はメンテナンス終了 (EOM) に達し、CentOS 7 はサポート終了 (EOL) に達しました。  NetApp は、2024 年 6 月 30 日にこれらの Linux ディストリビューション上のエージェントのサポートを終了しました。
+
+https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-end-of-maintenance["Red Hat: Red Hat Enterprise Linux 7 のメンテナンス終了について知っておくべきこと"^]
+
+RHEL 7 または CentOS 7 で既存のエージェントが実行されている場合、 NetApp はオペレーティング システムを RHEL 8 または 9 にアップグレードまたは変換することをサポートしていません。サポートされているオペレーティング システムで新しいエージェントを作成する必要があります。
+
+. RHEL 8 または 9 ホストをセットアップします。
+. Podman をインストールします。
+. 新しいエージェントをインストールします。
+. 以前のエージェントが管理していたシステムを検出するようにエージェントを構成します。
+. システムを再発見してください。
++
+新しいコンソール エージェントを展開した後、システムを再検出するには、次のページを参照してください。
+
++
+** https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-adding-systems.html["既存のCloud Volumes ONTAPシステムを追加する"^]
+** https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAPクラスタの検出"^]
+** https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html["FSx for ONTAPシステムを作成または検出する"^]
+** https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-create-system.html["Azure NetApp Filesシステムを作成する"^]
+** https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html["Eシリーズシステムの詳細"^]
+** https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["StorageGRIDシステムの詳細"^]
+
+
+
 
 
 

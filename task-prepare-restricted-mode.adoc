@@ -91,6 +91,27 @@ Red Hat Enterprise Linux
 
  a| 
  a| 
+9.6
+
+* 英語版のみ。
+* ホストは Red Hat Subscription Management に登録されている必要があります。登録されていない場合、ホストはエージェントのインストール中に必要なサードパーティ製ソフトウェアを更新するためにリポジトリにアクセスできません。
+
+ a| 
+4.0.0 以降、コンソールが標準モードまたは制限モード
+ a| 
+Podman バージョン 5.4.0 と podman-compose 1.5.0。
+
+<<podman-configuration,Podman の構成要件を表示する>> 。
+ a| 
+強制モードまたは許可モードでサポートされます
+
+* Cloud Volumes ONTAPシステムの管理は、オペレーティング システムで SELinux が有効になっているエージェントではサポートされません。
+
+
+
+
+ a| 
+ a| 
 9.1～9.4
 
 * 英語版のみ。
@@ -99,7 +120,7 @@ Red Hat Enterprise Linux
  a| 
 3.9.50 以降、コンソールが標準モードまたは制限モード
  a| 
-Podman バージョン 5.4.0 と podman-compose 1.5.0。
+Podman バージョン 4.9.4 と podman-compose 1.5.0。
 
 <<podman-configuration,Podman の構成要件を表示する>> 。
  a| 
@@ -120,7 +141,7 @@ Podman バージョン 5.4.0 と podman-compose 1.5.0。
  a| 
 3.9.50 以降、コンソールが標準モードまたは制限モード
  a| 
-Podman バージョン 4.6.1 または 4.9.4
+Podman バージョン 4.6.1 または 4.9.4 と podman-compose 1.0.6。
 
 <<podman-configuration,Podman の構成要件を表示する>> 。
  a| 
