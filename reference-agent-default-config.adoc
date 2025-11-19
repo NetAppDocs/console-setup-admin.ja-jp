@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-agent-default-config.html 
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
-summary: コンソール エージェントを展開する前に、コンソール エージェントの詳細を確認してください。 
+summary: AWS、Azure、Google Cloud 全体の標準展開（インターネット アクセスあり）とオンプレミス環境の制限付き展開（インターネット アクセスなし）のコンソール エージェントのデフォルト構成について説明します。 
 ---
 = コンソールエージェントのデフォルト構成
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: コンソール エージェントを展開する前に、コンソー�
 
 
 [role="lead"]
-コンソール エージェントを展開する前に、その構成について詳しく確認してください。
+AWS、Azure、Google Cloud 全体の標準展開（インターネット アクセスあり）とオンプレミス環境の制限付き展開（インターネット アクセスなし）のコンソール エージェントのデフォルト構成について説明します。
 
 
 
