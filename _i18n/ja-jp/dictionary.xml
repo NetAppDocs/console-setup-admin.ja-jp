@@ -5563,12 +5563,6 @@
   <block id="b3df2aaed88f61f572a7284cb28844ec" category="inline-link-macro">オペレーティング システムの要件を表示</block>
   <block id="43a9602052a44f890e2bbc95a0205a46" category="paragraph">コンソール エージェントを手動でインストールする場合、エージェントは Podman 5.4.0 を搭載した RHEL 9.6 をサポートするようになりました。さらに、RHEL 9 以降を使用する場合、 NetApp はpodman-compose 1.5.0 をサポートします。<block ref="dd394ea917033ddbf269729b5d828637" category="inline-link-macro-rx"></block>。</block>
   <block id="823f8bc81b61298de6fde6292c77465f" category="list-text">システムを再発見してください。</block>
-  <block id="0d23055c9cd9e24b47c678ce2ce12890" category="doc">ルートフルブリッジのnetavarkでDNS転送デーモンに使用するポート</block>
-  <block id="a4a1852476f94952d74e4b8343a1caa2" category="paragraph">vi /usr/share/containers/containers.conf</block>
-  <block id="d5b159520f19881fc40a4bd748f62fc6" category="section-title">モードと DNS が有効になっています。</block>
-  <block id="b1a96ed8e5a02719308e8b11ad1f055b" category="section-title">代替ポートの使用は、他のDNSサービスが</block>
-  <block id="090648da33ae39ea5780d1a31fb1c849" category="section-title">マシン上で実行します。</block>
-  <block id="876565374bfaef3930e6f9d90f47177b" category="paragraph"># dns_bind_port = 54</block>
   <block id="f20af7c9fe0c9b9091735f55df3a51e1" category="list-text">コンソールから直接標準 AWS リージョンにコンソールエージェントを作成すると、コンソールはエージェントにポリシーを自動的に適用します。</block>
   <block id="8a2272b9faf18eb35a631e80900ec216" category="section-title">バックアップとリカバリの従来の権限</block>
   <block id="cf1f3a91d24e23f8dd4687e01a5c8192" category="paragraph">インデックス v2 のリリース前に従来のインデックス機能を有効にした場合にのみ、次の権限が必要です。</block>
@@ -5600,4 +5594,8 @@
   <block id="04a0a4e163c04f3082e39c4a05b56121" category="paragraph">AWS 認証情報を追加すると、コンソールエージェントを作成するための権限が付与されます。</block>
   <block id="325cf27c7a62fb4beb8b270094e56814" category="paragraph">Cloud Volumes ONTAPやその他のNetAppデータ サービスの料金を時間単位 (PAYGO) または年間契約で支払うには、コンソール エージェントに追加する認証情報を AWS Marketplace サブスクリプションに関連付ける必要があります。<block ref="ec04a55c38de32bb88fa7b4155061e7c" category="inline-link-macro-rx"></block>。</block>
   <block id="349b76807d98d4378df29b585951b7a4" category="summary">AWS、Azure、Google Cloud 全体の標準展開（インターネット アクセスあり）とオンプレミス環境の制限付き展開（インターネット アクセスなし）のコンソール エージェントのデフォルト構成について説明します。</block>
+  <block id="95df10d2ac630ff125b089e1f8e0e67f" category="paragraph">ネットワークでインターネット アクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。透過プロキシまたは明示プロキシのいずれかを追加できます。--proxy および --cacert パラメータはオプションであり、追加するように要求されることはありません。プロキシ サーバーがある場合は、示されているようにパラメータを入力する必要があります。</block>
+  <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy は、次のいずれかの形式を使用して、コンソール エージェントが HTTP または HTTPS プロキシ サーバーを使用するように構成します。</block>
+  <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert は、コンソール エージェントとプロキシ サーバー間の HTTPS アクセスに使用する CA 署名付き証明書を指定します。このパラメータは、HTTPS プロキシ サーバー、インターセプト プロキシ サーバー、および透過プロキシ サーバーに必須です。</block>
+  <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">透過プロキシ サーバーを構成する例を次に示します。透過プロキシを構成する場合、プロキシ サーバーを定義する必要はありません。コンソール エージェント ホストには、CA 署名付き証明書のみを追加します。</block>
 </blocks>
