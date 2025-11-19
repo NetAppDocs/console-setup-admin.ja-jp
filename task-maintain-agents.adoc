@@ -114,27 +114,28 @@ https://cloud.google.com/compute/docs/instances/connecting-to-instance["Google C
 
 +
 .. Cloud Volumes ONTAP CLI から、権限レベルを高度に設定します。
-+
-[source, cli]
+
+
+
+
+[listing]
 ----
 set -privilege advanced
 ----
-.. 現在のバックアップ ターゲットを表示するには、次のコマンドを実行します。
-+
-[source, cli]
+. 現在のバックアップ ターゲットを表示するには、次のコマンドを実行します。
+
+
+[listing]
 ----
 system configuration backup settings show
 ----
-.. バックアップ ターゲットの IP アドレスを更新するには、次のコマンドを実行します。
-+
-[source, cli]
+. バックアップ ターゲットの IP アドレスを更新するには、次のコマンドを実行します。
+
+
+[listing]
 ----
 system configuration backup settings modify -destination <target-location>
 ----
-
-
-
-
 
 
 == エージェントのURIを編集する

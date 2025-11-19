@@ -302,15 +302,17 @@ NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-co
 
 
 . 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
-+
-[source, cli]
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
 . networkBackendが `CNI`、それを変更する必要があります `netavark`。
 . インストール `netavark`そして `aardvark-dns`次のコマンドを使用します。
-+
-[source, cli]
+
+
+[listing]
 ----
 dnf install aardvark-dns netavark
 ----
@@ -320,21 +322,21 @@ dnf install aardvark-dns netavark
 
 +
 .. podman を再起動します。
-+
-[source, cli]
+
+
+
+
+[listing]
 ----
 systemctl restart podman
 ----
-.. 次のコマンドを使用して、networkBackend が「netavark」に変更されていることを確認します。
-+
-[source, cli]
+. 次のコマンドを使用して、networkBackend が「netavark」に変更されていることを確認します。
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
-
-
-
-
 --
 .Dockerエンジン
 --
@@ -636,6 +638,7 @@ NetApp Consoleで使用する各 Azure サブスクリプションの ID を追�
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
 ----
 . JSON ファイルを使用して、Azure でカスタム ロールを作成します。
 +
@@ -707,6 +710,7 @@ Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
 ----
 .. JSON ファイルを使用して、Azure でカスタム ロールを作成します。
 +

@@ -1,4 +1,4 @@
-= 
+= ルートフルブリッジのnetavarkでDNS転送デーモンに使用するポート
 :allow-uri-read: 
 
 
@@ -47,98 +47,106 @@ chmod +x NetApp-Console-Agent-<version>
 +
 [source, cli]
 ----
- ./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+./NetApp-Console-Agent-<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+
++
+You'll need to add proxy information if your network requires a proxy for internet access. You can add either a transparent or explicit proxy. The --proxy and --cacert parameters are optional and you won't be prompted to add them. If you have a proxy server, you will need to enter the parameters as shown.
++
+Here is an example configuring an explicit proxy server with a CA-signed certificate:
++
+[source,cli]
+----
+
+
+[listing]
 ----
 +
-ネットワークでインターネット アクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。透過プロキシまたは明示プロキシのいずれかを追加できます。 --proxy および --cacert パラメータはオプションであり、追加するように要求されることはありません。プロキシ サーバーがある場合は、示されているようにパラメータを入力する必要があります。
+--proxy configures the Console agent to use an HTTP or HTTPS proxy server using one of the following formats:
++
+* \http://address:port
+* \http://user-name:password@address:port
+* \http://domain-name%92user-name:password@address:port
+* \https://address:port
+* \https://user-name:password@address:port
+* \https://domain-name%92user-name:password@address:port
++
+Note the following:
++
+** The user can be a local user or domain user.
+** For a domain user, you must use the ASCII code for a \ as shown above.
+** The Console agent doesn't support user names or passwords that include the @ character.
+** If the password includes any of the following special characters, you must escape that special character by prepending it with a backslash: & or !
++
+For example:
++
+\http://bxpproxyuser:netapp1\!@address:3128
 
 +
-CA 署名証明書を使用して明示的なプロキシ サーバーを構成する例を次に示します。
+--cacert specifies a CA-signed certificate to use for HTTPS access between Console agent and the proxy server. This parameter is required for HTTPS proxy servers, intercepting proxy servers, and transparent proxy servers.
 
 +
-[source, cli]
-----
- ./NetApp-Console-Agent-v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
-----
-+
---proxy は、次のいずれかの形式を使用して、コンソール エージェントが HTTP または HTTPS プロキシ サーバーを使用するように構成します。
+Here is an example configuring a transparent proxy server. When you configure a transparent proxy, you don't need to define the proxy server. You only add a CA-signed certificate to your Console agent host:
 
 +
-** \http://アドレス:ポート
-** \http://ユーザー名:パスワード@アドレス:ポート
-** \http://ドメイン名%92ユーザー名:パスワード@アドレス:ポート
-** \https://アドレス:ポート
-** \https://ユーザー名:パスワード@アドレス:ポート
-** \https://ドメイン名%92ユーザー名:パスワード@アドレス:ポート
-+
-次の点に注意してください。
-
-+
-*** ユーザーはローカル ユーザーまたはドメイン ユーザーになります。
-*** ドメイン ユーザーの場合は、上記のように \ の ASCII コードを使用する必要があります。
-*** コンソール エージェントは、@ 文字を含むユーザー名またはパスワードをサポートしていません。
-*** パスワードに以下の特殊文字が含まれている場合は、その特殊文字の前にバックスラッシュ ( & または ! ) を付けてエスケープする必要があります。
-+
-例えば：
-
-+
-\http://bxpproxyuser:netapp1\!@アドレス:3128
-
-+
---cacert は、コンソール エージェントとプロキシ サーバー間の HTTPS アクセスに使用する CA 署名付き証明書を指定します。このパラメータは、HTTPS プロキシ サーバー、インターセプト プロキシ サーバー、および透過プロキシ サーバーに必須です。
-
-
-
-+
-透過プロキシ サーバーを構成する例を次に示します。透過プロキシを構成する場合、プロキシ サーバーを定義する必要はありません。コンソール エージェント ホストには、CA 署名付き証明書のみを追加します。
-
-
-
-+
-[source, cli]
+[source,cli]
 ----
  ./NetApp-Console-Agent-v4.0.0 --cacert /tmp/cacert/certificate.cer
+[listing]
 ----
-. Podman を使用した場合は、aardvark-dns ポートを調整する必要があります。
-+
-.. コンソール エージェント仮想マシンに SSH で接続します。
-.. podman _/usr/share/containers/containers.conf_ ファイルを開き、Aardvark DNS サービス用に選択したポートを変更します。たとえば、54 に変更します。
+. If you used Podman, you'll need to adjust the aardvark-dns port.
+.. SSH to the Console agent virtual machine.
+.. Open podman _/usr/share/containers/containers.conf_ file and modify the chosen port for Aardvark DNS service. For example, change it to 54.
 +
 [source, cli]
 ----
 vi /usr/share/containers/containers.conf
-...
-# Port to use for dns forwarding daemon with netavark in rootful bridge
-# mode and dns enabled.
-# Using an alternate port might be useful if other DNS services should
-# run on the machine.
-#
-dns_bind_port = 54
-...
-Esc:wq
+
+[listing]
 ----
-.. コンソール エージェント仮想マシンを再起動します。
-
-
-
-
-. インストールが完了するまでお待ちください。
 +
-プロキシ サーバーを指定した場合、インストールの最後に、コンソール エージェント サービス (occm) が 2 回再起動します。
-
-. コンソール エージェント仮想マシンに接続しているホストから Web ブラウザを開き、次の URL を入力します。
+For example:
 +
-https://_ipaddress_[]
+[source,text]
+----
 
-. ログイン後、コンソール エージェントを設定します。
+
+= ルートフルブリッジのnetavarkでDNS転送デーモンに使用するポート
+
+
+
+= モードと DNS が有効になっています。
+
+
+
+= 代替ポートの使用は、他のDNSサービスが
+
+
+
+= マシン上で実行します。
+
+# dns_bind_port = 54
+
+[listing]
+----
+.. Reboot the Console agent virtual machine.
+//end::main-steps[]
+
+//tag::standard-mode-steps-for-cloud[]
+. Wait for the installation to complete.
 +
-.. コンソール エージェントに関連付ける組織を指定します。
-.. システムの名前を入力します。
-.. *安全な環境で実行していますか?* の下で、制限モードを無効のままにします。
+At the end of the installation, the Console agent service (occm) restarts twice if you specified a proxy server.
+
+. Open a web browser from a host that has a connection to the Console agent virtual machine and enter the following URL:
 +
-以下の手順ではコンソールを標準モードで使用する方法について説明しているため、制限モードは無効にしておく必要があります。安全な環境があり、このアカウントをバックエンド サービスから切断する場合にのみ、制限モードを有効にする必要があります。もしそうなら、link:task-quick-start-restricted-mode.html["NetApp Consoleを制限モードで使い始めるための手順に従います"] 。
+https://_ipaddress_
 
-.. *始めましょう*を選択します。
+. After you log in, set up the Console agent:
+.. Specify the organization to associate with the Console agent.
+.. Enter a name for the system.
+.. Under *Are you running in a secured environment?* keep restricted mode disabled.
++
+You should keep restricted mode disabled because these steps describe how to use the Console in standard mode. You should enable restricted mode only if you have a secure environment and want to disconnect this account from backend services. If that's the case, link:task-quick-start-restricted-mode.html[follow steps to get started with the NetApp Console in restricted mode].
+.. Select *Let's start*.
 
-
-
+//end::standard-mode-steps-for-cloud[]
+----

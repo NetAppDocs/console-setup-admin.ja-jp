@@ -257,7 +257,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 [source, cli]
 ----
- ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
 ネットワークでインターネット アクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。インストール中に明示的なプロキシを追加することもできます。--proxy および --cacert パラメータはオプションであり、追加するように要求されることはありません。明示的なプロキシ サーバーがある場合は、示されているようにパラメータを入力する必要があります。
@@ -268,7 +268,7 @@ CA 署名証明書を使用して明示的なプロキシ サーバーを構成�
 +
 [source, cli]
 ----
- ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy`次のいずれかの形式を使用して、コンソール エージェントが HTTP または HTTPS プロキシ サーバーを使用するように構成します。
@@ -311,15 +311,19 @@ NOTE: 透過プロキシを設定する場合は、インストール後に設�
 [source, cli]
 ----
 vi /usr/share/containers/containers.conf
-...
+----
++
+例えば：
+
++
+[source, text]
+----
 # Port to use for dns forwarding daemon with netavark in rootful bridge
 # mode and dns enabled.
 # Using an alternate port might be useful if other DNS services should
 # run on the machine.
 #
 dns_bind_port = 54
-...
-Esc:wq
 ----
 .. コンソール エージェント仮想マシンを再起動します。
 

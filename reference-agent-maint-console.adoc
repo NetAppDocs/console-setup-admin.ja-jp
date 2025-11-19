@@ -22,7 +22,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 コンソール エージェント ホストからメンテナンス コンソールにアクセスできます。次のディレクトリに移動します。
 
-[source, CLI]
+[source, cli]
 ----
 /opt/application/netapp/service-manager-2/agent-maint-console
 ----
@@ -38,7 +38,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 現在の透過プロキシ構成を表示するには、次のコマンドを使用します。
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy get
 ----
@@ -48,7 +48,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 透過プロキシサーバーを追加するには、次のコマンドを使用します。 `/home/ubuntu/myCA1.pem`プロキシ サーバーの証明書ファイルへのパスです。証明書ファイルは PEM 形式である必要があります。
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy add -c /home/ubuntu/myCA1.pem
 ----
@@ -60,7 +60,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 透過プロキシサーバーの証明書を更新するには、次のコマンドを使用します。 `/home/ubuntu/myCA1.pem`プロキシ サーバーの新しい証明書ファイルへのパスです。証明書ファイルは PEM 形式である必要があります。
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy update -c /home/ubuntu/myCA1.pem
 ----
@@ -72,7 +72,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 透過プロキシ サーバーを削除するには、次のコマンドを使用します。
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy remove
 ----
@@ -82,7 +82,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 コマンドのヘルプを表示するには、 `--help`コマンドに。たとえば、 `proxy add`コマンドを実行するには、次のコマンドを使用します。
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy add --help
 ----

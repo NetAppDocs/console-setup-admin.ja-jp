@@ -345,7 +345,6 @@
   <block id="68ff18cb109d61d9e97d66c63cadf9e7" category="inline-link-macro">手動インストールの構成チェックを無効にする方法を説明します。</block>
   <block id="067f3ef114756cdabe76467602ca9b2e" category="list-text">Government Cloud 環境にインストールする場合は、構成チェックを無効にします。<block ref="9b8bf974e42c4282e3da7fa6c59f1dce" category="inline-link-macro-rx"></block></block>
   <block id="325740f998865be7879e32048d406868" category="list-text">インストール スクリプトを実行します。</block>
-  <block id="95df10d2ac630ff125b089e1f8e0e67f" category="paragraph">ネットワークでインターネット アクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。透過プロキシまたは明示プロキシのいずれかを追加できます。 --proxy および --cacert パラメータはオプションであり、追加するように要求されることはありません。プロキシ サーバーがある場合は、示されているようにパラメータを入力する必要があります。</block>
   <block id="5f4022bf0d27f22f4c44ac2e617ae12d" category="paragraph">CA 署名証明書を使用して明示的なプロキシ サーバーを構成する例を次に示します。</block>
   <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block>次のいずれかの形式を使用して、コンソール エージェントが HTTP または HTTPS プロキシ サーバーを使用するように構成します。</block>
   <block id="2ceb0e196c300f23618f8a9e66bf0553" category="list-text">\http://アドレス:ポート</block>
@@ -437,9 +436,6 @@
   <block id="9c0e62a86b9fe558cad9c4d280ea439d" category="list-text">NTP を有効にする</block>
   <block id="62286fee1b0c285ac291bc232fe7f74f" category="inline-link">NetAppデータ分類の詳細</block>
   <block id="c2fc633e22b03955b13beee2049ac471" category="list-text">NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。<block ref="95ad16386ae4ac759ff3f180dcafce84" category="inline-link-rx"></block></block>
-  <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy は、次のいずれかの形式を使用して、コンソール エージェントが HTTP または HTTPS プロキシ サーバーを使用するように構成します。</block>
-  <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert は、コンソール エージェントとプロキシ サーバー間の HTTPS アクセスに使用する CA 署名付き証明書を指定します。このパラメータは、HTTPS プロキシ サーバー、インターセプト プロキシ サーバー、および透過プロキシ サーバーに必須です。</block>
-  <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">透過プロキシ サーバーを構成する例を次に示します。透過プロキシを構成する場合、プロキシ サーバーを定義する必要はありません。コンソール エージェント ホストには、CA 署名付き証明書のみを追加します。</block>
   <block id="da9c5bf0a2786648e8cd1c7f9b39bd31" category="list-text">コンソール エージェントは、他のアプリケーションと共有されているホストではサポートされません。ホストは専用ホストである必要があります。ホストは、次のサイズ要件を満たす任意のアーキテクチャにすることができます。</block>
   <block id="df4af5ebfed55f726690fe09695fb1fa" category="list-text">CPU: 8コアまたは8vCPU</block>
   <block id="357a496c919d7b340d6f4582397b89b5" category="list-text">メモリ: 32 GB</block>
@@ -2262,7 +2258,6 @@
   <block id="87536203946c0c72fcd130937e3cc7ef" category="doc">コンソールエージェントのAWS権限</block>
   <block id="c1141a37b962270fc1e8960233830c99" category="section-title">IAMポリシー</block>
   <block id="573b0df2f89364b268637488ea138d56" category="paragraph">以下の IAM ポリシーは、AWS リージョンに基づいてパブリッククラウド環境内のリソースとプロセスを管理するためにコンソールエージェントに必要な権限を提供します。</block>
-  <block id="61fec915f59809a2c499bb7406d1bae7" category="list-text">コンソールから直接標準 AWS リージョンにコンソールエージェントを作成すると、コンソールはエージェントにポリシーを自動的に適用します。</block>
   <block id="fd09f851de413bc1029af2eb92f37484" category="list-text">AWS Marketplace からエージェントをデプロイする場合、Linux ホストにエージェントを手動でインストールする場合、またはコンソールに追加の AWS 認証情報を追加する場合は、ポリシーを自分で設定する必要があります。</block>
   <block id="27bfd6a18f38f12efb7983c46e54e86c" category="list-text">いずれの場合も、後続のリリースで新しい権限が追加されるため、ポリシーが最新であることを確認する必要があります。新しい権限が必要な場合は、リリース ノートに記載されます。</block>
   <block id="5409221a62615b6b2cf0061a5376c983" category="inline-link">AWS ドキュメント: 条件要素</block>
@@ -2445,7 +2440,6 @@
   <block id="6545a52408abec0206b47af0244f3ccf" category="paragraph">NetApp ConsoleはNetAppエッジ キャッシングと Kubernetes クラスターの検出および管理をサポートしなくなったため、標準リージョンのポリシー #2 から権限が削除されました。</block>
   <block id="233590199dce2cbcf120d8b311c92db1" category="example-title">ポリシーから削除された権限を表示する</block>
   <block id="0683995d371439e19d907680da921ba9" category="section-title">2024年5月9日</block>
-  <block id="376a26b461e6c64a1c38b284dbc9703f" category="paragraph">Cloud Volumes ONTAPには次の権限が必要になりました。</block>
   <block id="6a7140fd5370f297d9a834d30e26ffde" category="section-title">2023年6月6日</block>
   <block id="14cbfe27bd7092d1b2ab4502adbdd584" category="paragraph">Cloud Volumes ONTAPには次の権限が必要になりました。</block>
   <block id="5fc531b28735a6e141b39c2b5e2f1dcc" category="section-title">2023年2月14日</block>
@@ -2466,7 +2460,6 @@
   <block id="d532d42cdca6427a0c94a0fe2b7724bf" category="list-text">Microsoft. NetApp/netAppAccounts/capacityPools/volumes/write</block>
   <block id="8a2ef2886600a50e48c7ea77de74ad9a" category="list-text">Microsoft. NetApp/netAppAccounts/capacityPools/volumes/read</block>
   <block id="c937da506293f901431e22784134365b" category="list-text">Microsoft. NetApp/netAppAccounts/capacityPools/volumes/delete</block>
-  <block id="76219afbe04a082bd3390701b179af3f" category="paragraph">コンソール エージェントは、NetApp Backup and Recoveryに対して次の API 要求を行います。</block>
   <block id="0e7d546ff80798b31300a1327e64204c" category="list-text">Microsoft.Storage/storageAccounts/listkeys/アクション</block>
   <block id="b5de09220c1fb4fce37725ad40aa9087" category="list-text">Microsoft.Storage/storageAccounts/読み取り</block>
   <block id="ab2f957dea03d2c901135f72a5272e10" category="list-text">Microsoft.Storage/ストレージアカウント/書き込み</block>
@@ -2493,7 +2486,6 @@
   <block id="63995d3955eeab39b2079345713c2d18" category="list-text">Microsoft.Network/ネットワークセキュリティグループ/削除</block>
   <block id="b80b64cd9bf543f64855143ed4b5fcd0" category="list-text">Microsoft.Resources/デプロイメント/削除</block>
   <block id="9d86ed535c7b2cd7f809bf10164a64e2" category="list-text">Microsoft.ManagedIdentity/userAssignedIdentities/割り当て/アクション</block>
-  <block id="875ef5d584e3eb0968edca9a86c0490e" category="paragraph">検索と復元機能を使用するとき、エージェントは次の API リクエストを行います。</block>
   <block id="cfefa5c4ff629c9bf9659dbc829c253a" category="list-text">Microsoft.Synapse/ワークスペース/書き込み</block>
   <block id="3ba03ce8c40b9ebf7c3ac1f662b6b3a0" category="list-text">Microsoft.Synapse/ワークスペース/読み取り</block>
   <block id="2191541210eaa82f809d85b6c0aa6998" category="list-text">Microsoft.Synapse/ワークスペース/削除</block>
@@ -5581,4 +5573,31 @@
   <block id="b3df2aaed88f61f572a7284cb28844ec" category="inline-link-macro">オペレーティング システムの要件を表示</block>
   <block id="43a9602052a44f890e2bbc95a0205a46" category="paragraph">コンソール エージェントを手動でインストールする場合、エージェントは Podman 5.4.0 を搭載した RHEL 9.6 をサポートするようになりました。さらに、RHEL 9 以降を使用する場合、 NetApp はpodman-compose 1.5.0 をサポートします。<block ref="dd394ea917033ddbf269729b5d828637" category="inline-link-macro-rx"></block>。</block>
   <block id="823f8bc81b61298de6fde6292c77465f" category="list-text">システムを再発見してください。</block>
+  <block id="0d23055c9cd9e24b47c678ce2ce12890" category="doc">ルートフルブリッジのnetavarkでDNS転送デーモンに使用するポート</block>
+  <block id="a4a1852476f94952d74e4b8343a1caa2" category="paragraph">vi /usr/share/containers/containers.conf</block>
+  <block id="d5b159520f19881fc40a4bd748f62fc6" category="section-title">モードと DNS が有効になっています。</block>
+  <block id="b1a96ed8e5a02719308e8b11ad1f055b" category="section-title">代替ポートの使用は、他のDNSサービスが</block>
+  <block id="090648da33ae39ea5780d1a31fb1c849" category="section-title">マシン上で実行します。</block>
+  <block id="876565374bfaef3930e6f9d90f47177b" category="paragraph"># dns_bind_port = 54</block>
+  <block id="f20af7c9fe0c9b9091735f55df3a51e1" category="list-text">コンソールから直接標準 AWS リージョンにコンソールエージェントを作成すると、コンソールはエージェントにポリシーを自動的に適用します。</block>
+  <block id="8a2272b9faf18eb35a631e80900ec216" category="section-title">バックアップとリカバリの従来の権限</block>
+  <block id="cf1f3a91d24e23f8dd4687e01a5c8192" category="paragraph">インデックス v2 のリリース前に従来のインデックス機能を有効にした場合にのみ、次の権限が必要です。</block>
+  <block id="1760c97f466ea374318a8c0bedcb2aff" category="section-title">2025年11月11日</block>
+  <block id="ea135b9ba1abf88c0fc0f304bed7b8b2" category="paragraph">従来のインデックスを使用しない限り、 NetApp Backup and Recoveryには次の権限は不要になりました。このページのポリシーから次の権限が削除されました:</block>
+  <block id="6e6af573aec8151ae299651fd317472d" category="paragraph">以下は、可能な限り少ない権限と可能な限り狭い範囲を使用するバックアップとリカバリのカスタム ポリシーです。</block>
+  <block id="085d2cc48c6bbf7296c097a07804a4d1" category="section-title">最小限のNetApp Backup and Recovery権限</block>
+  <block id="46602301e1e9b92a123cc69be96445a2" category="paragraph">コンソール エージェントは、基本的なNetApp Backup and Recovery機能に対して次の API 要求を行います。</block>
+  <block id="ff9be13f0dd01fa19eeb632c57e75912" category="list-text">Microsoft.Authorization/ロック/書き込み</block>
+  <block id="9c54728f345d88de2c032cfb76dbdb17" category="list-text">Microsoft.Authorization/ロック/読み取り</block>
+  <block id="761a802cfbda43d4d27ac578e6d1127e" category="section-title">追加のバックアップとリカバリの権限</block>
+  <block id="02eee31e5109fac37be42cd2ad631e0f" category="paragraph">コンソール エージェントは、高度なバックアップとリカバリ操作および検索と復元機能に対して次の API 要求を行います。これらのアクセス許可により、ネットワーク、キー コンテナー、マネージド ID の管理が可能になります。</block>
+  <block id="9db96a7be686af799d5b0df68ebdf3a8" category="paragraph">検索と復元機能を使用するとき、エージェントは次の API 要求を行います。インデックス v2 のリリース前に従来のインデックス機能を有効にした場合にのみ、これらの権限が必要です。</block>
+  <block id="d3a274c843d8b8ce75d55d7c7829a6af" category="paragraph">JSON ロールの例から次の権限が削除され、例がバックアップとリカバリに必要な最小限の権限を反映できるようになりました。</block>
+  <block id="f4b5566a2cd5de876b361e9f7aaa2d92" category="list-text">Microsoft.Insights/メトリック/読み取り</block>
+  <block id="542e0e990e0a90f3111cc38f8fc96301" category="list-text">Microsoft.Compute/仮想マシン/拡張機能/書き込み</block>
+  <block id="027acd9694c335956d7cb35872c2d7f5" category="list-text">Microsoft.Compute/virtualMachines/拡張機能/読み取り</block>
+  <block id="ebd9939fa785bda0707a6efaf5d7b8da" category="paragraph">JSON ロールの例に次の権限が追加されました。</block>
+  <block id="73361bbe50a41bd2e76e59f453c19c62" category="paragraph">従来のインデックスを使用していない限り、バックアップとリカバリには次の権限は不要になりました。</block>
+  <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">次の権限は、最小限の構成では必要ないため、「追加のバックアップおよび回復権限」セクションに移動されました。</block>
+  <block id="862b252e960e9fce5bfb6811edec4eb5" category="list-text">次のコマンドを実行し、エージェントのステータスが _active(running)_ と表示されていることを確認します。</block>
 </blocks>

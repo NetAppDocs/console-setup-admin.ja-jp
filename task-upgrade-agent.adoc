@@ -68,7 +68,7 @@ podman ps -a
 +
 [source, json]
 ----
-  "isUpgradeDisabled": true,
+  "isUpgradeDisabled": true
 ----
 . ファイルを保存します。
 . 次のコマンドを実行して、サービス マネージャー 2 サービスを再起動します。
@@ -77,12 +77,11 @@ podman ps -a
 ----
 systemctl restart netapp-service-manager.service
 ----
-. 次のコマンドを実行し、エージェントのステータスが _active(running)_ と表示されていることを確認します: _
+. 次のコマンドを実行し、エージェントのステータスが _active(running)_ と表示されていることを確認します。
 +
 [source, cli]
 ----
 systemctl status netapp-service-manager.service
-_
 ----
 
 
