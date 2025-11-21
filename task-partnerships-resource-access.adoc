@@ -37,12 +37,16 @@ summary: 組織内のフォルダやプロジェクトに対する特定のロ�
 * link:reference-iam-backup-rec-roles.html["バックアップビューア"]
 * link:reference-iam-backup-rec-roles.html["管理者を復元"]
 * link:reference-iam-backup-rec-roles.html["クローン管理者"]
+* link:reference-iam-predefined-roles.html["データ分類ビューア"]
 * link:reference-iam-disaster-rec-roles.html["災害復旧管理者"]
 * link:reference-iam-disaster-rec-roles.html["災害復旧フェイルオーバー管理者"]
 * link:reference-iam-disaster-rec-roles.html["災害復旧アプリケーション管理者"]
 * link:reference-iam-disaster-rec-roles.html["災害復旧ビューア"]
 * link:reference-iam-storage-roles.html["オペレーションサポートアナリスト"]
-* link:reference-iam-predefined-roles.html["分類ビューア"]
+* link:reference-iam-ransomware-roles.html["ランサムウェア耐性管理者"]
+* link:reference-iam-ransomware-roles.html["ランサムウェア耐性ビューア"]
+* link:reference-iam-ransomware-roles.html#user-behavior-roles["ランサムウェア耐性ユーザー行動管理者"]
+* link:reference-iam-ransomware-roles.html#user-behavior-roles["ランサムウェア耐性ユーザー行動ビューア"]
 
 
 link:reference-iam-predefined-roles.html["定義済みロールの詳細"]
