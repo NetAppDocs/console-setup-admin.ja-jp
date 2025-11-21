@@ -141,111 +141,341 @@ includedPermissions:
 
 == Google Cloud の権限の使用方法
 
-[cols="50,50"]
+[cols="5*"]
 |===
-| アクション | 目的 
+| アクション | 目的 | 展開に使用されますか? | 日常業務に使用されますか? | 削除に使用されますか? 
 
 
-| - compute.disks.create - compute.disks.createSnapshot - compute.disks.delete - compute.disks.get - compute.disks.list - compute.disks.setLabels - compute.disks.use | Cloud Volumes ONTAPのディスクを作成および管理します。 
+| コンピューティングディスクの作成 .7+| Cloud Volumes ONTAPのディスクを作成および管理します。 | はい | はい | いいえ 
 
 
-| - compute.firewalls.create - compute.firewalls.delete - compute.firewalls.get - compute.firewalls.list | Cloud Volumes ONTAPのファイアウォール ルールを作成します。 
+| compute.disks.createSnapshot | いいえ | はい | いいえ 
 
 
-| - compute.globalOperations.get | 操作のステータスを取得します。 
+| 計算ディスク削除 | いいえ | はい | はい 
 
 
-| - compute.images.get - compute.images.getFromFamily - compute.images.list - compute.images.useReadOnly | VM インスタンスのイメージを取得します。 
+| compute.disks.get | いいえ | はい | いいえ 
 
 
-| - compute.instances.attachDisk - compute.instances.detachDisk | Cloud Volumes ONTAPにディスクを接続および切断します。 
+| 計算ディスクリスト | はい | はい | いいえ 
 
 
-| - compute.instances.create - compute.instances.delete | Cloud Volumes ONTAP VMインスタンスを作成および削除します。 
+| compute.disks.setLabels | はい | はい | いいえ 
 
 
-| - compute.instances.get | VM インスタンスを一覧表示します。 
+| 計算ディスク使用 | いいえ | はい | いいえ 
 
 
-| - compute.instances.getSerialPortOutput | コンソールログを取得します。 
+| compute.firewalls.create .4+| Cloud Volumes ONTAPのファイアウォール ルールを作成します。 | はい | いいえ | いいえ 
 
 
-| - compute.instances.list | ゾーン内のインスタンスのリストを取得します。 
+| compute.firewalls.delete | いいえ | はい | はい 
 
 
-| - compute.instances.setDeletionProtection | インスタンスに削除保護を設定します。 
+| compute.firewalls.get | はい | はい | いいえ 
 
 
-| - compute.instances.setLabels | ラベルを追加します。 
+| compute.firewalls.list | はい | はい | いいえ 
 
 
-| - compute.instances.setMachineType - compute.instances.setMinCpuPlatform | Cloud Volumes ONTAPのマシンタイプを変更します。 
+| compute.globalOperations.get 。 | 操作のステータスを取得します。 | はい | はい | いいえ 
 
 
-| - compute.instances.setMetadata | メタデータを追加します。 
+| 計算画像取得 .4+| VM インスタンスのイメージを取得します。 | はい | いいえ | いいえ 
 
 
-| - compute.instances.setTags | ファイアウォール ルールのタグを追加します。 
+| compute.images.getFromFamily | はい | いいえ | いいえ 
 
 
-| - compute.instances.start - compute.instances.stop - compute.instances.updateDisplayDevice | Cloud Volumes ONTAP を起動および停止します。 
+| 計算画像リスト | はい | いいえ | いいえ 
 
 
-| - compute.machineTypes.get | クォータをチェックするためのコア数を取得します。 
+| compute.images.useReadOnly | はい | いいえ | いいえ 
 
 
-| - compute.projects.get | 複数のプロジェクトをサポートします。 
+| compute.instances.attachDisk .2+| Cloud Volumes ONTAPにディスクを接続および切断します。 | はい | はい | いいえ 
 
 
-| - compute.snapshots.create - compute.snapshots.delete - compute.snapshots.get - compute.snapshots.list - compute.snapshots.setLabels | 永続ディスクのスナップショットを作成および管理します。 
+| compute.instances.detachDisk | いいえ | はい | はい 
 
 
-| - compute.networks.get - compute.networks.list - compute.regions.get - compute.regions.list - compute.subnetworks.get - compute.subnetworks.list - compute.zoneOperations.get - compute.zones.get - compute.zones.list | 新しいCloud Volumes ONTAP仮想マシンインスタンスを作成するために必要なネットワーク情報を取得します。 
+| コンピューティングインスタンスの作成 .2+| Cloud Volumes ONTAP VMインスタンスを作成および削除します。 | はい | いいえ | いいえ 
 
 
-| - deploymentmanager.compositeTypes.get - deploymentmanager.compositeTypes.list - deploymentmanager.deployments.create - deploymentmanager.deployments.delete - deploymentmanager.deployments.get - deploymentmanager.deployments.list - deploymentmanager.manifests.get - deploymentmanager.manifests.list - deploymentmanager.operations.get - deploymentmanager.operations.list - deploymentmanager.resources.get - deploymentmanager.resources.list - deploymentmanager.typeProviders.get - deploymentmanager.typeProviders.list - deploymentmanager.types.get - deploymentmanager.types.list | Google Cloud Deployment Manager を使用してCloud Volumes ONTAP仮想マシン インスタンスをデプロイします。 
+| コンピューティングインスタンスの削除 | いいえ | いいえ | はい 
 
 
-| - logging.logEntries.list - logging.privateLogEntries.list | スタック ログ ドライブを取得します。 
+| コンピューティングインスタンスの取得 | VM インスタンスを一覧表示します。 | はい | はい | いいえ 
 
 
-| - リソースマネージャー.プロジェクト.取得 | 複数のプロジェクトをサポートします。 
+| compute.instances.getSerialPortOutput | コンソールログを取得します。 | はい | はい | いいえ 
 
 
-| - ストレージバケットの作成 - ストレージバケットの削除 - ストレージバケットの取得 - ストレージバケットの一覧表示 - ストレージバケットの更新 | データ階層化用の Google Cloud Storage バケットを作成および管理します。 
+| 計算インスタンスリスト | ゾーン内のインスタンスのリストを取得します。 | はい | はい | いいえ 
 
 
-| - cloudkms.cryptoKeyVersions.useToEncrypt - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.list - cloudkms.keyRings.list | Cloud Volumes ONTAPで Cloud Key Management Service の顧客管理暗号化キーを使用する。 
+| compute.instances.setDeletionProtection | インスタンスに削除保護を設定します。 | はい | いいえ | いいえ 
 
 
-| - compute.instances.setServiceAccount - iam.serviceAccounts.actAs - iam.serviceAccounts.getIamPolicy - iam.serviceAccounts.list - storage.objects.get - storage.objects.list | Cloud Volumes ONTAPインスタンスにサービス アカウントを設定します。このサービス アカウントは、Google Cloud Storage バケットへのデータ階層化の権限を付与します。 
+| compute.instances.setLabels | ラベルを追加します。 | はい | いいえ | いいえ 
 
 
-| - アドレスリストを計算する | HA ペアを展開するときにリージョン内のアドレスを取得します。 
+| compute.instances.setMachineType .2+| Cloud Volumes ONTAPのマシンタイプを変更します。 | はい | はい | いいえ 
 
 
-| - compute.backendServices.create - compute.regionBackendServices.create - compute.regionBackendServices.get - compute.regionBackendServices.list | HA ペアでトラフィックを分散するためのバックエンド サービスを設定します。 
+| compute.instances.setMinCpuPlatform | はい | はい | いいえ 
 
 
-| - compute.networks.updatePolicy | HA ペアの VPC とサブネットにファイアウォール ルールを適用します。 
+| compute.instances.setMetadata | メタデータを追加します。 | はい | はい | いいえ 
 
 
-| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | NetApp Data Classification を有効にします。 
+| compute.instances.setTags | ファイアウォール ルールのタグを追加します。 | はい | はい | いいえ 
 
 
-| - compute.instanceGroups.get - compute.addresses.get - compute.instances.updateNetworkInterface | Cloud Volumes ONTAP HA ペアでストレージ VM を作成および管理します。 
+| コンピューティングインスタンスの開始 .3+| Cloud Volumes ONTAP を起動および停止します。 | はい | はい | いいえ 
 
 
-| - 監視.timeSeries.リスト - ストレージ.バケット.getIamPolicy | Google Cloud Storage バケットに関する情報を検出します。 
+| コンピューティングインスタンスの停止 | はい | はい | いいえ 
 
 
-| - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.keyRings.getIamPolicy - cloudkms.keyRings.list - cloudkms.keyRings.setIamPolicy | デフォルトの Google 管理暗号化キーを使用する代わりに、 NetApp Backup and Recoveryアクティベーション ウィザードで独自の顧客管理キーを選択します。 
+| compute.instances.updateDisplayDevice | はい | はい | いいえ 
+
+
+| compute.machineTypes.get | クォータを確認するためのコア数を取得します。 | はい | いいえ | いいえ 
+
+
+| compute.projects.get | 複数のプロジェクトをサポートします。 | はい | いいえ | いいえ 
+
+
+| 計算スナップショット作成 .5+| 永続ディスクのスナップショットを作成および管理します。 | はい | はい | いいえ 
+
+
+| 計算スナップショットの削除 | いいえ | はい | はい 
+
+
+| compute.snapshots.get | いいえ | はい | いいえ 
+
+
+| 計算スナップショットリスト | いいえ | はい | いいえ 
+
+
+| compute.snapshots.setLabels | はい | はい | いいえ 
+
+
+| compute.networks.get .9+| 新しいCloud Volumes ONTAP仮想マシンインスタンスを作成するために必要なネットワーク情報を取得します。 | はい | はい | いいえ 
+
+
+| compute.networks.list | はい | はい | いいえ 
+
+
+| compute.regions.get | はい | はい | いいえ 
+
+
+| compute.regions.list | はい | はい | いいえ 
+
+
+| compute.subnetworks.get | はい | はい | いいえ 
+
+
+| compute.subnetworks.list | はい | はい | いいえ 
+
+
+| compute.zoneOperations.get | はい | はい | いいえ 
+
+
+| compute.zones.get | はい | はい | いいえ 
+
+
+| compute.zones.list | はい | はい | いいえ 
+
+
+| デプロイメントマネージャー.複合タイプ.get .16+| Google Cloud Deployment Manager を使用してCloud Volumes ONTAP仮想マシン インスタンスをデプロイします。 | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー.複合タイプ.リスト | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー.デプロイメント.作成 | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー.デプロイメント.削除 | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー.デプロイメント.取得 | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー.デプロイメントリスト | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャーマニフェストの取得 | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャーマニフェストリスト | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー.操作.取得 | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー操作リスト | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー.リソース.取得 | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー.リソース.リスト | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー.typeProviders.get | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャー.typeProviders.リスト | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャータイプ取得 | はい | いいえ | いいえ 
+
+
+| デプロイメントマネージャータイプリスト | はい | いいえ | いいえ 
+
+
+| ログ記録.logEntries.リスト .2+| スタック ログ ドライブを取得します。 | はい | はい | いいえ 
+
+
+| ログ記録.privateLogEntries.リスト | はい | はい | いいえ 
+
+
+| リソースマネージャー.プロジェクト.取得 | 複数のプロジェクトをサポートします。 | はい | はい | いいえ 
+
+
+| ストレージバケットの作成 .5+| データ階層化用の Google Cloud Storage バケットを作成および管理します。 | はい | はい | いいえ 
+
+
+| ストレージバケットの削除 | いいえ | はい | はい 
+
+
+| ストレージバケットの取得 | いいえ | はい | いいえ 
+
+
+| ストレージバケットリスト | いいえ | はい | いいえ 
+
+
+| ストレージ.バケット.更新 | いいえ | はい | いいえ 
+
+
+| cloudkms.cryptoKeyVersions.useToEncrypt .4+| Cloud Volumes ONTAPで Cloud Key Management Service の顧客管理暗号化キーを使用する。 | はい | はい | いいえ 
+
+
+| cloudkms.cryptoKeys.get | はい | はい | いいえ 
+
+
+| cloudkms.cryptoKeys.リスト | はい | はい | いいえ 
+
+
+| cloudkms.keyRings.リスト | はい | はい | いいえ 
+
+
+| compute.instances.setServiceAccount .6+| Cloud Volumes ONTAPインスタンスにサービス アカウントを設定します。このサービス アカウントは、Google Cloud Storage バケットへのデータ階層化の権限を付与します。 | はい | はい | いいえ 
+
+
+| iam.serviceAccounts.actAs | はい | いいえ | いいえ 
+
+
+| iam.serviceAccounts.getIamPolicy | はい | はい | いいえ 
+
+
+| iam.serviceAccounts.list | はい | はい | いいえ 
+
+
+| ストレージオブジェクト取得 | はい | はい | いいえ 
+
+
+| ストレージオブジェクトリスト | はい | はい | いいえ 
+
+
+| 計算アドレスリスト | HA ペアを展開するときにリージョン内のアドレスを取得します。 | はい | いいえ | いいえ 
+
+
+| compute.backendServices.create .4+| HA ペアでトラフィックを分散するためのバックエンド サービスを設定します。 | はい | いいえ | いいえ 
+
+
+| compute.regionBackendServices.create | はい | いいえ | いいえ 
+
+
+| compute.regionBackendServices.get | はい | いいえ | いいえ 
+
+
+| compute.regionBackendServices.リスト | はい | いいえ | いいえ 
+
+
+| compute.networks.updatePolicy | HA ペアの VPC とサブネットにファイアウォール ルールを適用します。 | はい | いいえ | いいえ 
+
+
+| compute.instanceGroups.get .3+| Cloud Volumes ONTAP HA ペアでストレージ VM を作成および管理します。 | はい | はい | いいえ 
+
+
+| 計算アドレス取得 | はい | はい | いいえ 
+
+
+| compute.instances.updateNetworkInterface | はい | はい | いいえ 
+
+
+| 監視.timeSeries.リスト .2+| Google Cloud Storage バケットに関する情報を検出します。 | はい | はい | いいえ 
+
+
+| ストレージ.バケット.getIamPolicy | はい | はい | いいえ 
+|===
+
+
+=== NetApp Backup and Recoveryに使用される権限
+
+[cols="5*"]
+|===
+
+
+| アクション | 目的 | 展開に使用されますか? | 日常業務に使用されますか? | 削除に使用されますか? 
+
+
+ a| 
+* cloudkms.cryptoKeys.get
+* cloudkms.cryptoKeys.getIamPolicy
+* cloudkms.cryptoKeys.リスト
+* cloudkms.cryptoKeys.setIamPolicy
+* cloudkms.keyRings.get
+* cloudkms.keyRings.getIamPolicy
+* cloudkms.keyRings.リスト
+* cloudkms.keyRings.setIamPolicy
+
+| デフォルトの Google 管理暗号化キーを使用する代わりに、 NetApp Backup and Recoveryアクティベーション ウィザードで独自の顧客管理キーを選択します。 | はい | はい | いいえ 
+|===
+
+
+=== NetApp Data Classificationに使用される権限
+
+[cols="5*"]
+|===
+
+
+| アクション | 目的 | 展開に使用されますか? | 日常業務に使用されますか? | 削除に使用されますか? 
+
+
+ a| 
+* 計算サブネットワーク使用
+* compute.subnetworks.useExternalIp
+* compute.instances.addAccessConfig
+
+| NetApp Data Classification を有効にします。 | はい | いいえ | いいえ 
 |===
 
 
 == 変更ログ
 
 権限が追加または削除されると、以下のセクションでその旨を記録します。
+
+
+
+=== 2025/11/26
+
+権限は使用法を明確にするために更新されていますが、権限の追加や削除は行われていません。各権限がデプロイメント、日常的な操作、または削除のいずれに使用されるかを示す 3 つの列が追加されます。これとは別に、 NetApp Data ClassificationおよびNetApp Backup and Recoveryでの使用に基づいて、いくつかの権限が分離されています。
 
 
 
