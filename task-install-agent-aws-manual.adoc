@@ -188,13 +188,13 @@ IMDSv2 使用時の PUT 応答ホップ制限:: EC2 インスタンスで IMDSv2
 ====
 .ポッドマン
 --
-Podman をインストールして設定するには、次の手順に従います。
+Podman をインストールして設定します。
 
 * podman.socket サービスを有効にして起動します
 * Python3をインストールする
-* podman-compose パッケージ バージョン 1.0.6 をインストールします。
+* それぞれのpodman-composeパッケージをインストールします。
 * podman-composeをPATH環境変数に追加する
-* Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。
+* PodmanバージョンがCNIではなくNetavark Aardvark DNSを使用していることを確認します。
 
 
 
@@ -210,7 +210,7 @@ rm /var/run/docker.sock
 ----
 . Podman をインストールします。
 +
-Podman は、公式の Red Hat Enterprise Linux リポジトリから入手できます。
+Red Hat Enterprise Linux リポジトリから Podman を取得します。
 
 +
 Red Hat Enterprise Linux 9 の場合:
@@ -246,34 +246,32 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。
-
-
-podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。
-
-. Red Hat Enterprise 9 を使用している場合:
+. podman-compose を取得するには EPEL をインストールします。
++
+.. Red Hat Enterprise 9 を使用している場合:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-+
-.. podman-compose パッケージ 1.5.0 をインストールします。
+
+
+. podman-compose パッケージ 1.5.0 をインストールします。
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-
-
-. Red Hat Enterprise Linux 8 を使用している場合:
++
+.. Red Hat Enterprise Linux 8 を使用している場合:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-+
-.. podman-compose パッケージ 1.0.6 をインストールします。
+
+
+. podman-compose パッケージ 1.0.6 をインストールします。
 +
 [source, cli]
 ----
@@ -283,10 +281,11 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-compose を追加するための要件を満たしています。インストールコマンドは、すでにインストールされているpodman-composeを/usr/binに追加します。 `secure_path`ホスト上のオプション。
 
-.. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
+. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
++
+.. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
 
 
-. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
 
 
 [listing]
@@ -330,7 +329,7 @@ Docker のドキュメントに従って Docker Engine をインストールし�
 .手順
 . https://docs.docker.com/engine/install/["Dockerからのインストール手順を見る"^]
 +
-サポートされている Docker エンジン バージョンをインストールするには、手順に従ってください。最新バージョンはコンソールでサポートされていないため、インストールしないでください。
+次の手順に従って、サポートされている Docker エンジン バージョンをインストールします。コンソールは最新バージョンをサポートしていないため、インストールしないでください。
 
 . Docker が有効になっていて実行されていることを確認します。
 +
