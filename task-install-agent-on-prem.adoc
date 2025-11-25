@@ -643,7 +643,7 @@ sudo dnf install python3
 ----
 . podman-compose を取得するには EPEL をインストールします。
 +
-.. Red Hat Enterprise 9 を使用している場合:
+.. Red Hat Enterprise 9.1 ～ 9.6 を使用している場合:
 +
 [source, cli]
 ----
