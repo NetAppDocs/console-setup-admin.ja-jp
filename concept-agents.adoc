@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-agents.html 
-keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
+keywords: 'concept, Console agents, learn about agents, what are connectors, what is a connector, what"s a connector, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
 summary: _コンソール エージェント_ は、クラウド ネットワークまたはオンプレミス ネットワークで実行されるNetAppソフトウェアです。コンソール エージェントを使用して、 NetApp Consoleサービスをストレージ環境に接続します。 
 ---
 = NetApp Consoleエージェントについて学ぶ

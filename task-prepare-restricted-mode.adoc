@@ -47,7 +47,7 @@ link:concept-modes.html["制限モードの仕組みを学ぶ"] 。
 
 AWS または Azure Marketplace からコンソールエージェントをデプロイする場合、イメージには必要な OS およびソフトウェア コンポーネントが含まれます。  CPU と RAM の要件を満たすインスタンス タイプを選択するだけです。
 
-専用ホスト:: コンソール エージェントは、他のアプリケーションと共有されているホストではサポートされません。ホストは専用ホストである必要があります。ホストは、次のサイズ要件を満たす任意のアーキテクチャにすることができます。
+専用ホスト:: コンソール エージェントには専用のホストが必要です。次のサイズ要件を満たすアーキテクチャであれば、どれでもサポートされます。
 +
 --
 * CPU: 8コアまたは8vCPU
@@ -60,7 +60,7 @@ AWS または Azure Marketplace からコンソールエージェントをデプ
 
 ** `/var`: 40 GiBの空き容量が必要です
 +
-コンソールエージェントにはこのスペースが必要です `/var`Docker または Podman は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリ。このスペースでは外部マウントまたはシンボリックリンクは機能しません。
+コンソールエージェントにはこのスペースが必要です `/var`Podman または Docker は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリと `/var/lib/docker`Docker用。このスペースでは外部マウントまたはシンボリックリンクは機能しません。
 
 
 
@@ -69,7 +69,7 @@ AWS または Azure Marketplace からコンソールエージェントをデプ
 --
 AWS EC2インスタンスタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetAppt3.2xlarge を推奨します。
 Azure VM サイズ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetAppStandard_D8s_v3 を推奨します。
-Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetApp はn2-standard-8 を推奨します。
+Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。NetAppn2-standard-8 を推奨しています。
 +
 --
 コンソールエージェントは、Google Cloud の VM インスタンスで、以下の OS がサポートする環境でサポートされます。 https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["シールドされたVMの機能"^]
@@ -203,13 +203,13 @@ Docker エンジン 23.0.6 から 28.0.0。
 ====
 .ポッドマン
 --
-Podman をインストールして設定します。
+Podman をインストールして設定するには、次の手順に従います。
 
 * podman.socket サービスを有効にして起動します
 * Python3をインストールする
-* それぞれのpodman-composeパッケージをインストールします。
+* podman-compose パッケージ バージョン 1.0.6 をインストールします。
 * podman-composeをPATH環境変数に追加する
-* PodmanバージョンがCNIではなくNetavark Aardvark DNSを使用していることを確認します。
+* Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。
 
 
 
@@ -225,7 +225,7 @@ rm /var/run/docker.sock
 ----
 . Podman をインストールします。
 +
-Red Hat Enterprise Linux リポジトリから Podman を取得します。
+Podman は、公式の Red Hat Enterprise Linux リポジトリから入手できます。
 
 +
 Red Hat Enterprise Linux 9 の場合:
@@ -261,32 +261,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. podman-compose を取得するには EPEL をインストールします。
-+
-.. Red Hat Enterprise 9.1 ～ 9.6 を使用している場合:
+. システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。
+
+
+podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。
+
+. Red Hat Enterprise 9.1 ～ 9.6 を使用している場合:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. podman-compose パッケージ 1.5.0 をインストールします。
++
+.. podman-compose パッケージ 1.5.0 をインストールします。
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. Red Hat Enterprise Linux 8 を使用している場合:
+
+
+. Red Hat Enterprise Linux 8 を使用している場合:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. podman-compose パッケージ 1.0.6 をインストールします。
++
+.. podman-compose パッケージ 1.0.6 をインストールします。
 +
 [source, cli]
 ----
@@ -296,11 +298,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-compose を追加するための要件を満たしています。インストールコマンドは、すでにインストールされているpodman-composeを/usr/binに追加します。 `secure_path`ホスト上のオプション。
 
-. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
-+
-.. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
+.. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
 
 
+. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
 
 
 [listing]
@@ -344,7 +345,7 @@ Docker のドキュメントに従って Docker Engine をインストールし�
 .手順
 . https://docs.docker.com/engine/install/["Dockerからのインストール手順を見る"^]
 +
-次の手順に従って、サポートされている Docker エンジン バージョンをインストールします。コンソールは最新バージョンをサポートしていないため、インストールしないでください。
+サポートされている Docker エンジン バージョンをインストールするには、手順に従ってください。最新バージョンはコンソールでサポートされていないため、インストールしないでください。
 
 . Docker が有効になっていて実行されていることを確認します。
 +
@@ -410,6 +411,16 @@ AWS リソースを管理します。エンドポイントは AWS リージョ�
 
 
  a| 
+NetApp ONTAP用の Amazon FsX:
+
+* api.workloads.netapp.com
+
+ a| 
+Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
+
+
+
+ a| 
 *Azure 環境*
 
 
@@ -441,7 +452,7 @@ Azure China リージョンのリソースを管理します。
 
 
  a| 
-\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \//https://config.googleapis.com/v1/projects
  a| 
 Google Cloud 内のリソースを管理します。
 
@@ -821,12 +832,12 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 .. コンソール エージェントに必要な権限を含む YAML ファイルをアップロードします。
 .. カスタムロールを作成するには、 `gcloud iam roles create`指示。
 +
-次の例では、プロジェクト レベルで「connector」という名前のロールを作成します。
+次の例では、プロジェクト レベルで「agent」という名前のロールを作成します。
 
 +
 [source, gcloud]
 ----
-gcloud iam roles create connector --project=myproject --file=connector.yaml
+gcloud iam roles create agent --project=myproject --file=agent.yaml
 ----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud ドキュメント: カスタムロールの作成と管理"^]
@@ -846,9 +857,6 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 
 
-.結果
-これで、コンソール エージェント VM インスタンスに割り当てることができるサービス アカウントが作成されました。
-
 --
 ====
 
@@ -860,6 +868,7 @@ Google Cloud にCloud Volumes ONTAPをデプロイするには、いくつかの
 .手順
 . https://cloud.google.com/apis/docs/getting-started#enabling_apis["プロジェクトで次の Google Cloud API を有効にします"^]
 +
+** クラウド インフラストラクチャ マネージャー API
 ** クラウド デプロイメント マネージャー V2 API
 ** クラウドロギングAPI
 ** クラウド リソース マネージャー API

@@ -25,12 +25,12 @@ AWS で実行されている Linux ホストにコンソールエージェント
 
 == ステップ1: ホストの要件を確認する
 
-コンソール エージェント ソフトウェアは、特定のオペレーティング システム要件、RAM 要件、ポート要件などを満たすホスト上で実行する必要があります。
+コンソール エージェント ソフトウェアを実行しているホストが、オペレーティング システム、RAM、およびポートの要件を満たしていることを確認します。
 
 
 NOTE: コンソール エージェントは、19000 ～ 19200 の UID と GID の範囲を予約します。この範囲は固定されており、変更することはできません。ホスト上のサードパーティ ソフトウェアがこの範囲内の UID または GID を使用している場合、エージェントのインストールは失敗します。  NetApp、競合を回避するためにサードパーティ ソフトウェアがインストールされていないホストの使用を推奨しています。
 
-専用ホスト:: コンソール エージェントは、他のアプリケーションと共有されているホストではサポートされません。ホストは専用ホストである必要があります。ホストは、次のサイズ要件を満たす任意のアーキテクチャにすることができます。
+専用ホスト:: コンソール エージェントには専用のホストが必要です。次のサイズ要件を満たすアーキテクチャであれば、どれでもサポートされます。
 +
 --
 * CPU: 8コアまたは8vCPU
@@ -43,7 +43,7 @@ NOTE: コンソール エージェントは、19000 ～ 19200 の UID と GID �
 
 ** `/var`: 40 GiBの空き容量が必要です
 +
-コンソールエージェントにはこのスペースが必要です `/var`Docker または Podman は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリ。このスペースでは外部マウントまたはシンボリックリンクは機能しません。
+コンソールエージェントにはこのスペースが必要です `/var`Podman または Docker は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリと `/var/lib/docker`Docker用。このスペースでは外部マウントまたはシンボリックリンクは機能しません。
 
 
 
@@ -157,7 +157,7 @@ Docker エンジン 23.0.6 から 28.0.0。
 
 |===
 鍵ペア:: コンソールエージェントを作成するときは、インスタンスで使用する EC2 キーペアを選択する必要があります。
-IMDSv2 使用時の PUT 応答ホップ制限:: EC2 インスタンスで IMDSv2 が有効になっている場合 (これは新しい EC2 インスタンスのデフォルト設定です)、インスタンスの PUT 応答ホップ制限を 3 に変更する必要があります。  EC2 インスタンスの制限を変更しないと、エージェントを設定しようとすると UI 初期化エラーが発生します。
+IMDSv2 使用時の PUT 応答ホップ制限:: IMDSv2 が有効になっている場合 (新しい EC2 インスタンスのデフォルト)、PUT 応答ホップ制限を 3 に設定します。そうしないと、エージェントのセットアップ中に UI 初期化エラーが表示されます。
 +
 --
 * link:task-require-imdsv2.html["Amazon EC2 インスタンスで IMDSv2 の使用を必須にする"]
@@ -188,13 +188,13 @@ IMDSv2 使用時の PUT 応答ホップ制限:: EC2 インスタンスで IMDSv2
 ====
 .ポッドマン
 --
-Podman をインストールして設定します。
+Podman をインストールして設定するには、次の手順に従います。
 
 * podman.socket サービスを有効にして起動します
 * Python3をインストールする
-* それぞれのpodman-composeパッケージをインストールします。
+* podman-compose パッケージ バージョン 1.0.6 をインストールします。
 * podman-composeをPATH環境変数に追加する
-* PodmanバージョンがCNIではなくNetavark Aardvark DNSを使用していることを確認します。
+* Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。
 
 
 
@@ -210,7 +210,7 @@ rm /var/run/docker.sock
 ----
 . Podman をインストールします。
 +
-Red Hat Enterprise Linux リポジトリから Podman を取得します。
+Podman は、公式の Red Hat Enterprise Linux リポジトリから入手できます。
 
 +
 Red Hat Enterprise Linux 9 の場合:
@@ -246,32 +246,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. podman-compose を取得するには EPEL をインストールします。
-+
-.. Red Hat Enterprise 9.1 ～ 9.6 を使用している場合:
+. システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。
+
+
+podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。
+
+. Red Hat Enterprise 9.1 ～ 9.6 を使用している場合:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. podman-compose パッケージ 1.5.0 をインストールします。
++
+.. podman-compose パッケージ 1.5.0 をインストールします。
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. Red Hat Enterprise Linux 8 を使用している場合:
+
+
+. Red Hat Enterprise Linux 8 を使用している場合:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. podman-compose パッケージ 1.0.6 をインストールします。
++
+.. podman-compose パッケージ 1.0.6 をインストールします。
 +
 [source, cli]
 ----
@@ -281,11 +283,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-compose を追加するための要件を満たしています。インストールコマンドは、すでにインストールされているpodman-composeを/usr/binに追加します。 `secure_path`ホスト上のオプション。
 
-. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
-+
-.. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
+.. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
 
 
+. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
 
 
 [listing]
@@ -329,7 +330,7 @@ Docker のドキュメントに従って Docker Engine をインストールし�
 .手順
 . https://docs.docker.com/engine/install/["Dockerからのインストール手順を見る"^]
 +
-次の手順に従って、サポートされている Docker エンジン バージョンをインストールします。コンソールは最新バージョンをサポートしていないため、インストールしないでください。
+サポートされている Docker エンジン バージョンをインストールするには、手順に従ってください。最新バージョンはコンソールでサポートされていないため、インストールしないでください。
 
 . Docker が有効になっていて実行されていることを確認します。
 +
@@ -345,7 +346,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 
 == ステップ3: ネットワークを設定する
 
-コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件を満たすことで、コンソール エージェントはハイブリッド クラウド環境内のリソースとプロセスを管理できるようになります。
+コンソール エージェントがハイブリッド クラウド内のリソースを管理できるように、ネットワークの場所が次の要件をサポートしていることを確認します。
 
 ターゲットネットワークへの接続:: コンソール エージェントには、システムを作成および管理する予定の場所へのネットワーク接続が必要です。たとえば、オンプレミス環境にCloud Volumes ONTAPシステムまたはストレージ システムを作成する予定のネットワークなどです。
 
@@ -385,6 +386,16 @@ AWS サービス (amazonaws.com):
 
  a| 
 AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細についてはAWSドキュメントを参照してください"^]
+
+
+
+ a| 
+NetApp ONTAP用の Amazon FsX:
+
+* api.workloads.netapp.com
+
+ a| 
+Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
 
 
 
@@ -464,7 +475,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業のデ�
 
 == ステップ4: コンソールのAWS権限を設定する
 
-次のいずれかのオプションを使用して、 NetApp Consoleに AWS 権限を付与する必要があります。
+次のいずれかのオプションを使用して、 NetApp Consoleに AWS 権限を付与します。
 
 * オプション 1: IAM ポリシーを作成し、EC2 インスタンスに関連付けることができる IAM ロールにポリシーをアタッチします。
 * オプション 2: 必要な権限を持つ IAM ユーザーの AWS アクセスキーをコンソールに提供します。
@@ -537,7 +548,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業のデ�
 
 == ステップ5: コンソールエージェントをインストールする
 
-前提条件が完了したら、独自の Linux ホストにソフトウェアを手動でインストールできます。
+前提条件を満たしたら、Linux ホストにソフトウェアを手動でインストールします。
 
 .開始する前に
 次のものが必要です:
@@ -551,10 +562,10 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業のデ�
 
 
 
-NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちらlink:reference-agent-maint-console.html["エージェントメンテナンスコンソール"]。
+NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちら link:reference-agent-maint-console-proxy.html["エージェントメンテナンスコンソール"]。
 
 .タスク概要
-NetAppサポート サイトで入手できるインストーラーは、以前のバージョンである可能性があります。インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。
+インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。
 
 .手順
 . ホストに _http_proxy_ または _https_proxy_ システム変数が設定されている場合は、それらを削除します。
@@ -567,9 +578,14 @@ unset https_proxy
 +
 これらのシステム変数を削除しないと、インストールは失敗します。
 
-. コンソールエージェントソフトウェアを以下からダウンロードします。 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetAppサポート サイト"^]それを Linux ホストにコピーします。
+. コンソール エージェント ソフトウェアをダウンロードし、Linux ホストにコピーします。  NetApp ConsoleまたはNetAppサポート サイトからダウンロードできます。
 +
-ネットワークまたはクラウドで使用するための「オンライン」エージェント インストーラーをダウンロードする必要があります。
+** NetApp Console: *エージェント > 管理 > エージェントのデプロイ > オンプレミス > 手動インストール* に移動します。
++
+エージェント インストーラー ファイルのダウンロードまたはファイルへの URL を選択します。
+
+** NetAppサポート サイト (コンソールにまだアクセスできない場合に必要) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetAppサポート サイト"^] 、
+
 
 . スクリプトを実行するための権限を割り当てます。
 +
@@ -629,7 +645,7 @@ CA 署名証明書を使用して明示的なプロキシ サーバーを構成�
 
 
 
-NOTE: 透過プロキシを設定する場合は、インストール後に設定できます。 link:reference-agent-maint-console.html["エージェントメンテナンスコンソールについて学ぶ"]
+NOTE: 透過プロキシを設定する場合は、インストール後に設定できます。 link:reference-agent-maint-console-proxy.html["エージェントメンテナンスコンソールについて学ぶ"]
 
 . Podman を使用した場合は、aardvark-dns ポートを調整する必要があります。
 +
@@ -688,13 +704,13 @@ https://_ipaddress_[]
 
 == ステップ6: NetApp Consoleに権限を付与する
 
-コンソールエージェントをインストールしたので、以前に設定した AWS 権限をコンソールに提供する必要があります。権限を付与すると、コンソールエージェントは AWS 内のデータとストレージインフラストラクチャを管理できるようになります。
+コンソールエージェントをインストールした後、コンソールエージェントが AWS 内のデータとストレージインフラストラクチャを管理できるように、設定した AWS 権限を提供します。
 
 [role="tabbed-block"]
 ====
 .IAMのロール
 --
-以前に作成した IAM ロールをコンソールエージェント EC2 インスタンスにアタッチします。
+作成した IAM ロールをコンソールエージェント EC2 インスタンスにアタッチします。
 
 .手順
 . Amazon EC2 コンソールに移動します。

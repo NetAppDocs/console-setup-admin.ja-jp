@@ -30,7 +30,7 @@ summary: 独自の Linux ホストに Console エージェントを手動でイ�
 
 NOTE: コンソール エージェントは、19000 ～ 19200 の UID と GID の範囲を予約します。この範囲は固定されており、変更することはできません。ホスト上のサードパーティ ソフトウェアがこの範囲内の UID または GID を使用している場合、エージェントのインストールは失敗します。  NetApp、競合を回避するためにサードパーティ ソフトウェアがインストールされていないホストの使用を推奨しています。
 
-専用ホスト:: コンソール エージェントは、他のアプリケーションと共有されているホストではサポートされません。ホストは専用ホストである必要があります。ホストは、次のサイズ要件を満たす任意のアーキテクチャにすることができます。
+専用ホスト:: コンソール エージェントには専用のホストが必要です。次のサイズ要件を満たすアーキテクチャであれば、どれでもサポートされます。
 +
 --
 * CPU: 8コアまたは8vCPU
@@ -43,14 +43,14 @@ NOTE: コンソール エージェントは、19000 ～ 19200 の UID と GID �
 
 ** `/var`: 40 GiBの空き容量が必要です
 +
-コンソールエージェントにはこのスペースが必要です `/var`Docker または Podman は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリ。このスペースでは外部マウントまたはシンボリックリンクは機能しません。
+コンソールエージェントにはこのスペースが必要です `/var`Podman または Docker は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリと `/var/lib/docker`Docker用。このスペースでは外部マウントまたはシンボリックリンクは機能しません。
 
 
 
 
 
 --
-Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetApp はn2-standard-8 を推奨します。
+Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。NetAppn2-standard-8 を推奨しています。
 +
 --
 コンソールエージェントは、Google Cloud の VM インスタンスで、以下の OS がサポートする環境でサポートされます。 https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["シールドされたVMの機能"^]
@@ -161,7 +161,7 @@ Docker エンジン 23.0.6 から 28.0.0。
 サポート対象外
 
 |===
-Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetApp はn2-standard-8 を推奨します。
+Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。NetAppn2-standard-8 を推奨しています。
 +
 --
 コンソールエージェントは、Google Cloud の VM インスタンスで、以下の OS がサポートする環境でサポートされます。 https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["シールドされたVMの機能"^]
@@ -190,13 +190,13 @@ Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタ�
 ====
 .ポッドマン
 --
-Podman をインストールして設定します。
+Podman をインストールして設定するには、次の手順に従います。
 
 * podman.socket サービスを有効にして起動します
 * Python3をインストールする
-* それぞれのpodman-composeパッケージをインストールします。
+* podman-compose パッケージ バージョン 1.0.6 をインストールします。
 * podman-composeをPATH環境変数に追加する
-* PodmanバージョンがCNIではなくNetavark Aardvark DNSを使用していることを確認します。
+* Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。
 
 
 
@@ -212,7 +212,7 @@ rm /var/run/docker.sock
 ----
 . Podman をインストールします。
 +
-Red Hat Enterprise Linux リポジトリから Podman を取得します。
+Podman は、公式の Red Hat Enterprise Linux リポジトリから入手できます。
 
 +
 Red Hat Enterprise Linux 9 の場合:
@@ -248,32 +248,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. podman-compose を取得するには EPEL をインストールします。
-+
-.. Red Hat Enterprise 9.1 ～ 9.6 を使用している場合:
+. システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。
+
+
+podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。
+
+. Red Hat Enterprise 9.1 ～ 9.6 を使用している場合:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. podman-compose パッケージ 1.5.0 をインストールします。
++
+.. podman-compose パッケージ 1.5.0 をインストールします。
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. Red Hat Enterprise Linux 8 を使用している場合:
+
+
+. Red Hat Enterprise Linux 8 を使用している場合:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. podman-compose パッケージ 1.0.6 をインストールします。
++
+.. podman-compose パッケージ 1.0.6 をインストールします。
 +
 [source, cli]
 ----
@@ -283,11 +285,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-compose を追加するための要件を満たしています。インストールコマンドは、すでにインストールされているpodman-composeを/usr/binに追加します。 `secure_path`ホスト上のオプション。
 
-. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
-+
-.. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
+.. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
 
 
+. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
 
 
 [listing]
@@ -331,7 +332,7 @@ Docker のドキュメントに従って Docker Engine をインストールし�
 .手順
 . https://docs.docker.com/engine/install/["Dockerからのインストール手順を見る"^]
 +
-次の手順に従って、サポートされている Docker エンジン バージョンをインストールします。コンソールは最新バージョンをサポートしていないため、インストールしないでください。
+サポートされている Docker エンジン バージョンをインストールするには、手順に従ってください。最新バージョンはコンソールでサポートされていないため、インストールしないでください。
 
 . Docker が有効になっていて実行されていることを確認します。
 +
@@ -376,7 +377,7 @@ link:reference-networking-saas-console.html["NetAppコンソールのネット�
 
 
  a| 
-\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \//https://config.googleapis.com/v1/projects
  a| 
 Google Cloud 内のリソースを管理します。
 
@@ -470,10 +471,10 @@ Google Cloud 内のリソースを管理するためにコンソールが必要�
 .. 必要な権限を含む YAML ファイルをアップロードします。
 .. カスタムロールを作成するには、 `gcloud iam roles create`指示。
 +
-次の例では、プロジェクト レベルで「connector」という名前のロールを作成します。
+次の例では、プロジェクト レベルで「agent」という名前のロールを作成します。
 
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+`gcloud iam roles create connector --project=myproject --file=agent.yaml`
 
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud ドキュメント: カスタムロールの作成と管理"^]
@@ -567,11 +568,12 @@ compute.networkUser
 
 == ステップ6: Google Cloud APIを有効にする
 
-Google Cloud にCloud Volumes ONTAPシステムをデプロイする前に、いくつかの Google Cloud API を有効にする必要があります。
+Google Cloud にコンソール エージェントをデプロイする前に、いくつかの Google Cloud API を有効にする必要があります。
 
 .手順
 . プロジェクトで次の Google Cloud API を有効にします。
 +
+** クラウド インフラストラクチャ マネージャー API
 ** クラウド デプロイメント マネージャー V2 API
 ** クラウドロギングAPI
 ** クラウド リソース マネージャー API
@@ -593,6 +595,8 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 前提条件が完了したら、独自の Linux ホストにソフトウェアを手動でインストールできます。
 
+エージェントをデプロイすると、デプロイ ファイルを保存するための Google Cloud バケットも作成されます。
+
 .開始する前に
 次のものが必要です:
 
@@ -605,10 +609,10 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 
 
-NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちらlink:reference-agent-maint-console.html["エージェントメンテナンスコンソール"]。
+NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちら link:reference-agent-maint-console-proxy.html["エージェントメンテナンスコンソール"]。
 
 .タスク概要
-NetAppサポート サイトで入手できるインストーラーは、以前のバージョンである可能性があります。インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。
+インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。
 
 .手順
 . ホストに _http_proxy_ または _https_proxy_ システム変数が設定されている場合は、それらを削除します。
@@ -621,9 +625,14 @@ unset https_proxy
 +
 これらのシステム変数を削除しないと、インストールは失敗します。
 
-. コンソールエージェントソフトウェアを以下からダウンロードします。 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetAppサポート サイト"^]それを Linux ホストにコピーします。
+. コンソール エージェント ソフトウェアをダウンロードし、Linux ホストにコピーします。  NetApp ConsoleまたはNetAppサポート サイトからダウンロードできます。
 +
-ネットワークまたはクラウドで使用するための「オンライン」エージェント インストーラーをダウンロードする必要があります。
+** NetApp Console: *エージェント > 管理 > エージェントのデプロイ > オンプレミス > 手動インストール* に移動します。
++
+エージェント インストーラー ファイルのダウンロードまたはファイルへの URL を選択します。
+
+** NetAppサポート サイト (コンソールにまだアクセスできない場合に必要) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetAppサポート サイト"^] 、
+
 
 . スクリプトを実行するための権限を割り当てます。
 +
@@ -683,7 +692,7 @@ CA 署名証明書を使用して明示的なプロキシ サーバーを構成�
 
 
 
-NOTE: 透過プロキシを設定する場合は、インストール後に設定できます。 link:reference-agent-maint-console.html["エージェントメンテナンスコンソールについて学ぶ"]
+NOTE: 透過プロキシを設定する場合は、インストール後に設定できます。 link:reference-agent-maint-console-proxy.html["エージェントメンテナンスコンソールについて学ぶ"]
 
 . Podman を使用した場合は、aardvark-dns ポートを調整する必要があります。
 +

@@ -173,7 +173,6 @@
   <block id="4e223f64569ea1042cb81c1032cff1f8" category="paragraph">| Azure Government リージョン内のリソースを管理します。</block>
   <block id="2b7f6d951b3a705af72cb63a7d0788dd" category="paragraph">| \https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn</block>
   <block id="6fc418bd4d8d26d716d678ffb2c516e9" category="paragraph">| Azure China リージョンのリソースを管理します。</block>
-  <block id="1e20d05d6d0ad597892e7e3d08324340" category="paragraph">| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects</block>
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| Google Cloud 内のリソースを管理します。</block>
   <block id="c642b24062280a73e940087788371986" category="paragraph">| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetApp Console内で機能とサービスを提供します。</block>
   <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| コンソールエージェントのアップグレード用のイメージを取得します。</block>
@@ -238,10 +237,7 @@
   <block id="8f93743fbd54f532def6ac1dbad2311c" category="list-text">管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。</block>
   <block id="6b46a604d63ba159459b8912d7a91a98" category="inline-link-macro">NetApp Consoleでドメインを確認する</block>
   <block id="323b172f396879dcec7aaeccff2097c0" category="list-text">フェデレーションに使用するドメインを特定します。自分のメールドメインまたは自分が所有する別のドメインを使用できます。電子メール ドメイン以外のドメインを使用する場合は、まずコンソールでドメインを確認する必要があります。以下の手順に従ってこれを行うことができます。<block ref="a68d68e2e08ca1853c0f2263bccee217" category="inline-link-macro-rx"></block>トピック。</block>
-  <block id="1f6f159c41e8184975acbe6c7565ebfd" category="list-text">接続をテストするには、[*接続テスト*] を選択します。  IdP サーバーのログイン ページに移動します。  IdP 資格情報を使用してログインし、テストを完了してコンソールに戻り、接続を有効にします。</block>
-  <block id="f0761ff93e66859d8caa58e0c31e7b93" category="list-text">*フェデレーションの有効化*ページでフェデレーションの詳細を確認し、*フェデレーションの有効化*を選択します。</block>
   <block id="c27bc1dfe805a5825a9acbc35c1a7070" category="list-text">プロセスを完了するには、[完了] を選択します。</block>
-  <block id="862a4be632d4835e1b078c54f61faa22" category="paragraph">フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetApp Consoleにログインできるようになります。</block>
   <block id="f9e5e080572c03ab317bbccdc54d6420" category="list-text">ドメインの詳細を入力してください:</block>
   <block id="9532d6ece2fef47ed8c4e96a717a9d5a" category="list-text">検証済みドメインを使用するか、メールドメインを使用するかを選択します。電子メール ドメインは、ログインしているアカウントに関連付けられているドメインです。</block>
   <block id="7418fbd49ebe84785dec096769ba5b4d" category="list-text">構成するフェデレーションの名前を入力します。</block>
@@ -266,8 +262,6 @@
   <block id="49cfb78048f1f3515483265f3346abf2" category="list-text">Google Cloud から Cloud Shell を有効にします。</block>
   <block id="58ffd52090b3c8f5d53c7a41dce5badd" category="list-text">必要な権限を含む YAML ファイルをアップロードします。</block>
   <block id="e53a12ca8bd24ad75a525265c644c5c7" category="list-text">カスタムロールを作成するには、<block ref="46cbf543e45ddd605bb826dcc9a3c498" prefix=" " category="inline-code"></block>指示。</block>
-  <block id="60696c8c3376d314543ef1f6c5dd3364" category="paragraph">次の例では、プロジェクト レベルで「connector」という名前のロールを作成します。</block>
-  <block id="faa2f324a4d310b356e12aa82056254e" category="paragraph"><block ref="c95ec05c4ecf0f3a1ae9ac9ed3381eba" prefix="" category="inline-code"></block></block>
   <block id="bddcef6ecce1c29406e404e0432421e3" category="inline-link">Google Cloud ドキュメント: カスタムロールの作成と管理</block>
   <block id="df04ae29fdadbced9cd2cbe7c3037ab8" category="paragraph"><block ref="df04ae29fdadbced9cd2cbe7c3037ab8" category="inline-link-rx"></block></block>
   <block id="2afbc6cdafdfd50d0796ff7ccdc0fd3e" category="list-text">Google Cloud でサービス アカウントを作成し、そのサービス アカウントにロールを割り当てます。</block>
@@ -290,7 +284,6 @@
   <block id="a586afd44f6b4a0aadf87baaebfe958b" category="list-text">定義された権限を含むYAMLファイルを作成します。<block ref="5fa46f1796046b3ca5c88fd6f18f408a" category="inline-link-macro-rx"></block> 。</block>
   <block id="dea708cc736d31b65dc27e1f81cc0f15" category="list-text">コンソール エージェントに必要な権限を含む YAML ファイルをアップロードします。</block>
   <block id="bd67573655874b669c5ced800e8181a2" category="list-text">Google Cloud でサービス アカウントを作成します。</block>
-  <block id="9ed3505a9736251271f6b1b08b3433f5" category="paragraph">これで、コンソール エージェント VM インスタンスに割り当てることができるサービス アカウントが作成されました。</block>
   <block id="258ec60588311e40d9028ecd4b015f8a" category="paragraph">共有 VPC を使用してリソースをサービス プロジェクトにデプロイする場合は、権限を準備する必要があります。</block>
   <block id="d723567d50507549f1f0eed5e785438e" category="paragraph">この表は参考用であり、IAM 構成が完了すると、環境に権限表が反映されるはずです。</block>
   <block id="658340d0aa3e36a759f733841569dc13" category="example-title">共有 VPC 権限を表示する</block>
@@ -332,7 +325,6 @@
   <block id="4417d966b724524a7dd995ebe740c6cb" category="paragraph">インストール後にプロキシ サーバーを構成するオプションがありますが、これを行うにはコンソール エージェントを再起動する必要があります。</block>
   <block id="a9f9e821b8a8692181584ef4520bb0f5" category="list-text">プロキシ サーバーが HTTPS を使用する場合、またはプロキシがインターセプト プロキシである場合は、CA 署名証明書。</block>
   <block id="f055093e2366ca02aea03df7cfb1248e" category="inline-link-macro">エージェントメンテナンスコンソール</block>
-  <block id="4439aaaad475e34c70f12f09ad6165d9" category="admonition">コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちら<block ref="0f8b8c9e4ded9a5f5a72925670422347" category="inline-link-macro-rx"></block>。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">タスク概要</block>
   <block id="659f0b9a6a18db69662f4738cacedeb4" category="paragraph">NetAppサポート サイトで入手できるインストーラーは、以前のバージョンである可能性があります。インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。</block>
   <block id="16c184ab0a5376cef0ecef7f0da93ac2" category="list-text">ホストに _http_proxy_ または _https_proxy_ システム変数が設定されている場合は、それらを削除します。</block>
@@ -436,7 +428,6 @@
   <block id="9c0e62a86b9fe558cad9c4d280ea439d" category="list-text">NTP を有効にする</block>
   <block id="62286fee1b0c285ac291bc232fe7f74f" category="inline-link">NetAppデータ分類の詳細</block>
   <block id="c2fc633e22b03955b13beee2049ac471" category="list-text">NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。<block ref="95ad16386ae4ac759ff3f180dcafce84" category="inline-link-rx"></block></block>
-  <block id="da9c5bf0a2786648e8cd1c7f9b39bd31" category="list-text">コンソール エージェントは、他のアプリケーションと共有されているホストではサポートされません。ホストは専用ホストである必要があります。ホストは、次のサイズ要件を満たす任意のアーキテクチャにすることができます。</block>
   <block id="df4af5ebfed55f726690fe09695fb1fa" category="list-text">CPU: 8コアまたは8vCPU</block>
   <block id="357a496c919d7b340d6f4582397b89b5" category="list-text">メモリ: 32 GB</block>
   <block id="69fc366414a2e0b9932f47f1ac056ee7" category="list-text">ディスク容量: ホストには 165 GB が推奨され、パーティション要件は次のとおりです。</block>
@@ -482,7 +473,6 @@
   <block id="607262a04e5c4340fc8d641e874a5695" category="paragraph">3.9.29以降</block>
   <block id="a3336db0e9f7b6341a12794c144076b6" category="paragraph">Docker エンジン 23.0.6 から 26.0.0</block>
   <block id="5556c95763913c6cfa8f61d9cab4f4f2" category="paragraph">26.0.0は、_新しい_エージェント3.9.44以降のインストールでサポートされます。</block>
-  <block id="2482bd6110246df30d07035a37ec9284" category="list-text">Cloud Volumes ONTAPシステムの管理は、オペレーティング システムで SELinux が有効になっているエージェントではサポートされません。</block>
   <block id="afaf0577b469adb0296b4fcfa6f2af91" category="list-text">コンソール エージェントは、これらのオペレーティング システムの英語版でサポートされています。</block>
   <block id="31acdb1c0f97e43347645b47a1cb7ad5" category="list-text">RHEL の場合、ホストは Red Hat Subscription Management に登録されている必要があります。登録されていない場合、ホストはエージェントのインストール中に必要なサードパーティ製ソフトウェアを更新するためにリポジトリにアクセスできません。</block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="list-text">CPU</block>
@@ -493,7 +483,6 @@
   <block id="6cd56a4cc4ddbbfd2bc9d57de5d788aa" category="list-text">鍵ペア</block>
   <block id="56ff78b5911451c928f64308fe1d80b3" category="list-text">コンソールエージェントを作成するときは、インスタンスで使用する EC2 キーペアを選択する必要があります。</block>
   <block id="c8e7383477673ee726b6ba29dc487444" category="list-text">IMDSv2 使用時の PUT 応答ホップ制限</block>
-  <block id="6072a0c0865bf8071e3960e01a77d5f4" category="list-text">EC2 インスタンスで IMDSv2 が有効になっている場合 (これは新しい EC2 インスタンスのデフォルト設定です)、インスタンスの PUT 応答ホップ制限を 3 に変更する必要があります。  EC2 インスタンスの制限を変更しないと、エージェントを設定しようとすると UI 初期化エラーが発生します。</block>
   <block id="98dddf7eafbbdfa88756d62945237473" category="inline-link-macro">Amazon EC2 インスタンスで IMDSv2 の使用を必須にする</block>
   <block id="8d8efedf65fe740dfe59c5779c9d745c" category="list-text"><block ref="8d8efedf65fe740dfe59c5779c9d745c" category="inline-link-macro-rx"></block></block>
   <block id="75c0fbf84b1614b17a984df62bf849f6" category="inline-link">AWSドキュメント: PUTレスポンスのホップ制限を変更する</block>
@@ -944,7 +933,6 @@
   <block id="0b0a6d9ce7462fc9a218e93ccbee32e7" category="section-title">ナビゲーションメニューとページ</block>
   <block id="7ceea4a6639fef28fae4477857f229e5" category="paragraph">NetApp は、ほとんどのメニュー オプションを左側のナビゲーション ペインに移動し、メニューを再編成して、 NetApp Consoleでのナビゲーションを容易にしました。</block>
   <block id="4fa56c3d158c844dc75b2826ee4c98d0" category="section-title">Canvasはシステムページに置き換えられました</block>
-  <block id="e98962c5bb7d0d1afd483518e730b4c8" category="paragraph">NetApp は、Canvas の名前を *Systems* ページに変更しました。  *ストレージ &gt; 管理* メニューから *システム* ページに移動します。</block>
   <block id="ddd56b1479dbec10cfb6fc0a3a8afe57" category="inline-image-macro">システムページのスクリーンショット。</block>
   <block id="028a5defa734a1e5527100ece8ea2e66" category="paragraph"><block ref="028a5defa734a1e5527100ece8ea2e66" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e6ee78fd171283b1b449978ae0c73e06" category="section-title">拡張ストレージメニュー</block>
@@ -1136,7 +1124,6 @@
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="section-title">FAQ</block>
   <block id="d33d86c6f3f99b3b9b1b988bde0679bd" category="paragraph">次の質問は、資格情報とサブスクリプションに関連しています。</block>
   <block id="70bfaa19a89e29bf0fc2b34b8f3150ba" category="section-title">AWS 認証情報を安全にローテーションするにはどうすればよいですか?</block>
-  <block id="3f306aaee2a65dfda1ad13f709a0b4ae" category="paragraph">最初の 2 つのオプションでは、コンソールは AWS セキュリティ トークン サービスを使用して、常にローテーションする一時的な認証情報を取得します。このプロセスはベストプラクティスであり、自動かつ安全です。</block>
   <block id="0756a90a4a5e55dd02063c7dc80562de" category="paragraph">コンソールに AWS アクセスキーを提供する場合は、コンソールで定期的にキーを更新してキーをローテーションする必要があります。これは完全に手動のプロセスです。</block>
   <block id="c32ecd65cd5790ceb41fc1ef7d6a6e7d" category="section-title">Cloud Volumes ONTAPシステムの AWS Marketplace サブスクリプションを変更できますか?</block>
   <block id="469da6edf5632bcbb4aae525bd58406a" category="paragraph">はい、できます。認証情報セットに関連付けられている AWS Marketplace サブスクリプションを変更すると、既存および新規のすべてのCloud Volumes ONTAPシステムに新しいサブスクリプションの料金が課金されます。</block>
@@ -1617,7 +1604,6 @@
   <block id="eda63b570db82e05c2fd7b5f0c3bb20f" category="cell">監査</block>
   <block id="6c781c37150950b9639b1a88927fa671" category="summary">NetApp Consoleで組織間のパートナーシップを構築すると、組織のパートナーは組織の境界を越えてNetAppリソースを安全に管理できるようになり、コラボレーションが効率化され、セキュリティが強化されます。</block>
   <block id="48b10af85ea37189fccab5406ba059ed" category="doc">NetApp Consoleのパートナーシップ</block>
-  <block id="7fa861748c4d1659172de0b58f97b1f9" category="paragraph">NetApp Consoleを使用すると、組織間のパートナーシップを構築し、パートナーが組織の境界を越えてNetAppリソースを安全に管理し、コラボレーションを合理化し、セキュリティを強化できます。</block>
   <block id="8f032c748fc26fa9d1200f8efa6a0d8c" category="paragraph-title">必要な役割</block>
   <block id="8dab33dda3f37e096d3ad18f7ab81434" category="paragraph">パートナーシップ管理者<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
   <block id="324861aee136989b2cba2eb117747e57" category="paragraph">パートナーシップにより、コンソールでロール主導の関係を使用して、組織全体のNetAppリソースを安全に管理できます。開始組織はリソースへのアクセスを許可し、受け入れ組織はアクセスを許可するユーザーまたはサービス アカウントを提供します。パートナーシップはセルフサービス ワークフローを通じて確立され、開始組織は共有されるリソース、割り当てられるロール、必要に応じてパートナー アクセスをオンボード、管理、または取り消す機能などを完全に制御できます。</block>
@@ -1775,19 +1761,12 @@
   <block id="590b2ea5933ad8ead3c9a15a914f1a9c" category="list-text">すべてのサービスはDockerコンテナ内で実行されています</block>
   <block id="f76b4c57c56377745199382d59cdeed3" category="paragraph">サービスはdockerランタイムサービスの実行に依存しています</block>
   <block id="846c386cf81542225b98b6f2bb22ac66" category="summary">コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。</block>
-  <block id="201ded18828aa36cabf001ad5b286fef" category="doc">コンソールエージェントメンテナンスコンソール</block>
   <block id="64a20b3b93e3313beb44e4cdfaa3fc62" category="section-title">エージェントメンテナンスコンソールにアクセスする</block>
   <block id="54b21d666b59ebab4d006b20d3923a8a" category="paragraph">コンソール エージェント ホストからメンテナンス コンソールにアクセスできます。次のディレクトリに移動します。</block>
   <block id="38c16b07265a0ea453b6c31b87484378" category="section-title">透過プロキシコマンド</block>
-  <block id="4108bec2e5adefed2de8ccea6de208c1" category="paragraph">エージェント メンテナンス コンソールには、透過プロキシ サーバーを使用するようにエージェントを構成するコマンドが用意されています。</block>
-  <block id="67ee408ff988e76f6d3799ac5efa460f" category="section-title">現在の透過プロキシ構成を表示する</block>
-  <block id="a2a14e0f8a35f998c35eb5e7b4f11c63" category="paragraph">現在の透過プロキシ構成を表示するには、次のコマンドを使用します。</block>
-  <block id="2060dbc448df049844e06c84fd90c8cc" category="section-title">透過プロキシサーバーを追加する</block>
   <block id="d55c6a8d11c5ba3e1a749110d08d13a0" category="paragraph">透過プロキシサーバーを追加するには、次のコマンドを使用します。<block ref="b2ade5ab23fdcff48ad66c933b8c0a7a" prefix=" " category="inline-code"></block>プロキシ サーバーの証明書ファイルへのパスです。証明書ファイルは PEM 形式である必要があります。</block>
   <block id="2dfbed833348a18ef6acd6126802e582" category="paragraph">証明書ファイルがコマンドと同じディレクトリにあることを確認するか、証明書ファイルへの完全パスを指定します。</block>
-  <block id="37113521420e96a3a50c96de96815289" category="section-title">透過プロキシサーバーの証明書を更新する</block>
   <block id="7e3520831eb4f49402b5e66b7de0cf9b" category="paragraph">透過プロキシサーバーの証明書を更新するには、次のコマンドを使用します。<block ref="b2ade5ab23fdcff48ad66c933b8c0a7a" prefix=" " category="inline-code"></block>プロキシ サーバーの新しい証明書ファイルへのパスです。証明書ファイルは PEM 形式である必要があります。</block>
-  <block id="f45f29ba66bb2b571ee2752605accdb9" category="section-title">透過プロキシサーバーを削除する</block>
   <block id="0bddca9be37ec136c74bc13d67a2327c" category="paragraph">透過プロキシ サーバーを削除するには、次のコマンドを使用します。</block>
   <block id="e73e4a152d192531e90aca4120b4f30b" category="section-title">任意のコマンドのヘルプを表示する</block>
   <block id="6e59373a630740150c04aaac47bb0503" category="paragraph">コマンドのヘルプを表示するには、<block ref="0c113ca6d57519b559ba5a426be3c6b6" prefix=" " category="inline-code"></block>コマンドに。たとえば、<block ref="08bc9d3537a56e203564c5b4357049f4" prefix=" " category="inline-code"></block>コマンドを実行するには、次のコマンドを使用します。</block>
@@ -1818,9 +1797,7 @@
   <block id="8f4f872a5a91b4fda0f95e21e0b83fb1" category="list-text"><block ref="8f4f872a5a91b4fda0f95e21e0b83fb1" category="inline-link-rx"></block></block>
   <block id="d85b01f001ee16ebd8eb1917c739d824" category="inline-link">StorageGRIDシステムの詳細</block>
   <block id="6dd67f54d38094b3a7d65e4eeed06755" category="list-text"><block ref="6dd67f54d38094b3a7d65e4eeed06755" category="inline-link-rx"></block></block>
-  <block id="9957f1fffd0798d003f7701530308820" category="summary">NetApp ConsoleのID およびアクセス管理は、監視とサポート ケースを支援するサポート アナリストの役割を提供します。</block>
   <block id="bd35c1f622cddab38a157ba7ccffd7a0" category="doc">NetApp Consoleの運用サポートアナリスト アクセス ロール</block>
-  <block id="7e901891254682b3e1fddc06e4e1938a" category="paragraph">アラートと監視へのアクセスを提供するために、ユーザーに次のロールを割り当てることができます。この役割を持つユーザーはサポートケースを開くこともできます。</block>
   <block id="a9c987c5ba386ab7cea1039db6dab527" category="section-title">運用サポートアナリスト</block>
   <block id="eaeb30f9f18e0c50b178676f3eaef45f" category="cell">Task</block>
   <block id="6b67f7084bd7c23cc1a6915c07f7db8a" category="cell">実行できる</block>
@@ -2175,7 +2152,6 @@
   <block id="1dc9c22149f4c0ef8e2fc6c49159dc73" category="cell">ユーザ クレデンシャル</block>
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">今回のリリースでサポートされていない、または今回のリリースでは正常に機能しないプラットフォーム、デバイス、機能が記載されています。これらの制限事項をよく確認してください。</block>
   <block id="c6fe3fe7cf3d078b181c8a9d01950402" category="doc">NetApp Consoleの既知の制限</block>
-  <block id="882e98b214f100c29ca675a0c0b4c5a4" category="paragraph">これらの制限は、NEtApp コンソールと管理（エージェント、サービスとしてのソフトウェア (SaaS) プラットフォームなど）のセットアップに固有のものです。</block>
   <block id="66bf395a11c3c005c11b5085fdfc7337" category="section-title">コンソールエージェントの制限</block>
   <block id="911d15b7ac55478d2b567e8488658687" category="section-title">172番台のIPアドレスとの競合の可能性</block>
   <block id="c4c2e36276fced82261124b9b0bb8f65" category="paragraph">NetApp Consoleは、172.17.0.0/16 および 172.18.0.0/16 の範囲の IP アドレスを持つ 2 つのインターフェースを持つエージェントを展開します。</block>
@@ -2609,9 +2585,6 @@
   <block id="accd9735475d1c9d7b0b5006261d6484" category="summary">コンソール エージェントには、クラウド プロバイダーでアクションを実行するための権限が必要です。これらの権限は、 NetAppが提供するポリシーに含まれています。エージェントがこれらの権限を使用して何を行うかを理解する必要があります。</block>
   <block id="1a24ebef5708132569792a414e03e094" category="doc">コンソール エージェントの Google Cloud 権限</block>
   <block id="6b45b097205607d8631a7d487a76da98" category="section-title">サービスアカウントの権限</block>
-  <block id="48f3320f6327aedea52854dfcbcf31d9" category="paragraph">以下に示すカスタムロールは、コンソール エージェントが Google Cloud ネットワーク内のリソースとプロセスを管理するために必要な権限を提供します。</block>
-  <block id="82a6f573069dcbf74094644066f00ff8" category="paragraph">このカスタム ロールを、コンソール エージェント VM に接続されるサービス アカウントに適用する必要があります。</block>
-  <block id="4560d9b851db1f575c8bd1ba53369c0a" category="paragraph">また、後続のリリースで新しい権限が追加された場合、ロールが最新であることを確認する必要があります。新しい権限が必要な場合は、リリース ノートに記載されます。</block>
   <block id="823b2e7894c2b52c1e9adc9ea10b9be5" category="section-title">Google Cloud の権限の使用方法</block>
   <block id="06df33001c1d7187fdd81ea1f5b277aa" category="cell">アクション</block>
   <block id="f66d598893a55fa43b7676b10c66160f" category="cell">Cloud Volumes ONTAPのディスクを作成および管理します。</block>
@@ -2644,12 +2617,10 @@
   <block id="c5338aa09d091a71f3080053c9a0edc0" category="cell">Cloud Volumes ONTAP HA ペアでストレージ VM を作成および管理します。</block>
   <block id="884e026d3505b2b3847b25f6cecb4de7" category="cell">Google Cloud Storage バケットに関する情報を検出します。</block>
   <block id="d07a6a967273763e473875b528aab4ea" category="cell">デフォルトの Google 管理暗号化キーを使用する代わりに、 NetApp Backup and Recoveryアクティベーション ウィザードで独自の顧客管理キーを選択します。</block>
-  <block id="00e6f4ddf63e81c5de84a3913163d11d" category="section-title">2023/02/06</block>
   <block id="26e9753e85fc2c13a9569cd1345a5b06" category="paragraph">このポリシーに次の権限が追加されました:</block>
   <block id="3503950ea6a1ba87d4be44e07b1a16c8" category="list-text">compute.instances.updateNetworkInterface</block>
   <block id="0f30e2d10fca6f69c5f7a23bb2b30b1b" category="paragraph">この権限はCloud Volumes ONTAPに必要です。</block>
   <block id="8988a38ba3aaf6cb48e549dc3babd50e" category="section-title">2023/01/27</block>
-  <block id="6f3dd3aa6f04d6f98a881afe84a14828" category="paragraph">次の権限がポリシーに追加されました:</block>
   <block id="d5b52c55f0ffe2752d39b0d85f9ad0ef" category="list-text">cloudkms.cryptoKeys.getIamPolicy</block>
   <block id="631730c9e44e80f5f69e36901808bf98" category="list-text">cloudkms.cryptoKeys.setIamPolicy</block>
   <block id="7d5beaedd0c93a11314ff6699a51454e" category="list-text">cloudkms.keyRings.get</block>
@@ -3028,21 +2999,6 @@
   <block id="a7f8ea7817d42a132120d2a3377b0d22" category="paragraph">コンソールで Azure 資格情報を編集します。たとえば、サービス プリンシパル アプリケーションに新しいシークレットが作成された場合は、クライアント シークレットを更新できます。</block>
   <block id="fca161e7e3d0f11c877617c572f2054d" category="list-text">資格情報セットのアクション メニューを選択し、[資格情報の編集] を選択します。</block>
   <block id="343f14fa04538530ee19575d02711691" category="list-text">*組織の資格情報*ページで、資格情報セットのアクション メニューを選択し、*資格情報の削除*を選択します。</block>
-  <block id="aca93a34ac0830ae93442a45a45230ca" category="summary">マーケットプレイス サブスクリプションを関連付け、サブスクリプション プロセスをトラブルシューティングすることで、コンソール エージェント VM インスタンスに関連付けられている Google Cloud 認証情報を管理できます。これら両方のタスクにより、マーケットプレイスのサブスクリプションを使用してデータ サービスの支払いができるようになります。</block>
-  <block id="7fb6ce6ba61ee2f889266f6591c8bf62" category="paragraph">マーケットプレイス サブスクリプションを関連付け、サブスクリプション プロセスをトラブルシューティングすることで、コンソール エージェント VM インスタンスに関連付けられている Google Cloud 認証情報を管理できます。これら両方のタスクにより、マーケットプレイスのサブスクリプションを使用してデータ サービスの支払いができるようになります。</block>
-  <block id="209e33f8aa50ade8c82e5bc82a8c023d" category="section-title">Marketplace サブスクリプションを Google Cloud 認証情報に関連付ける</block>
-  <block id="eb7e6d1f8bb6ef3fd9a4c9dde493222f" category="paragraph">Google Cloud にコンソール エージェントをデプロイすると、コンソールによって、コンソール エージェント VM インスタンスに関連付けられたデフォルトの認証情報セットが作成されます。これらの認証情報に関連付けられている Google Cloud Marketplace サブスクリプションはいつでも変更できます。このサブスクリプションを使用すると、従量課金制のCloud Volumes ONTAPシステムを作成し、他のデータ サービスを使用できるようになります。</block>
-  <block id="55c766cf4228626844250621a71175de" category="section-title">マーケットプレイスのサブスクリプションプロセスのトラブルシューティング</block>
-  <block id="5e8a9e85694a19d502ffc719ffe16636" category="inline-link">Google Cloud Marketplace のNetAppページ</block>
-  <block id="d6e50a6d3ec0159b4980423911b0d4c3" category="list-text">に移動<block ref="50dc0afbab90b927abe9802e2e044626" category="inline-link-rx"></block>注文の状態を確認します。ページに「*プロバイダーで管理*」と表示されている場合は、下にスクロールして「*注文の管理*」を選択します。</block>
-  <block id="1602e955f4d68623784fbd9b3e232de3" category="inline-image-macro">サブスクリプション後のマーケットプレイス ページのスクリーンショット。</block>
-  <block id="138509c56fb0084f814c9be7b6c3f21d" category="paragraph"><block ref="138509c56fb0084f814c9be7b6c3f21d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e934500d9ced37392a4bfadda2e26daf" category="list-text">注文に緑色のチェックマークが表示され、これが予期しない場合は、同じ請求アカウントを使用している組織内の他のユーザーがすでにサブスクライブしている可能性があります。これが予期しないものである場合、またはこのサブスクリプションの詳細が必要な場合は、 NetApp の営業チームにお問い合わせください。</block>
-  <block id="bb7a877315ec49d95bef4521481a238d" category="inline-image-macro">承認された権限のスクリーンショット。</block>
-  <block id="57c37d5700a1b0612b4ca2402852172a" category="paragraph"><block ref="57c37d5700a1b0612b4ca2402852172a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="342df35452bbec008148c714d47038f6" category="list-text">注文に時計と「保留中」ステータスが表示されている場合は、マーケットプレイス ページに戻り、「プロバイダーで管理」を選択して、上記に記載されているプロセスを完了します。</block>
-  <block id="9547217bb6aa822040056cba67310321" category="inline-image-macro">保留中のマーケットプレイス権限のスクリーンショット。</block>
-  <block id="e6ec8d6dff39d45a9056311495699cef" category="paragraph"><block ref="e6ec8d6dff39d45a9056311495699cef" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2ef5f9dff59a7d4a9d1cf5d43f11c644" category="summary">Cloud Volumes ONTAPの主要なワークフローを有効にするには、 NetAppサポート サイト アカウントをNetApp Console組織に関連付けます。これらの NSS 認証情報は組織全体に関連付けられています。</block>
   <block id="1f2fc513e25e1f4b4fdc575d67f8f88d" category="doc">NetApp Consoleに関連付けられたNSS資格情報を管理する</block>
   <block id="b7dc979cedad1454168cefa97164fdc4" category="paragraph">ストレージ管理の主要なワークフローを有効にするには、 NetAppサポート サイト アカウントをコンソール組織に関連付けます。これらの NSS 認証情報は組織全体に関連付けられています。</block>
@@ -3205,7 +3161,6 @@
   <block id="b797d654931eeb3fd544b972b537bc1a" category="paragraph">証明書ファイルが PEM 形式であり、コマンドと同じディレクトリに存在することを確認するか、証明書ファイルへのフルパスを指定します。</block>
   <block id="76fe97fb8546b1f5923f0501c8e25ae0" category="section-title">コンソールエージェントの透過プロキシを変更する</block>
   <block id="92621940050d65fc4b47ade313d8f178" category="inline-link-macro">エージェントメンテナンスコンソール</block>
-  <block id="20257cdf81419bff017c7b16260ebb25" category="paragraph">コンソールエージェントの既存の透過プロキシサーバーを更新するには、<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>コマンドを使用して透過プロキシサーバーを削除するか、<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>指示。詳細については、次のドキュメントを参照してください。<block ref="9370e1eb4855e9767e8414447e836404" category="inline-link-macro-rx"></block> 。</block>
   <block id="349027440539dc46278ee9e93260025d" category="section-title">インターネットへのアクセスが失われた場合は、コンソールエージェントプロキシを更新します。</block>
   <block id="71164e4bc7911ce651a366899f4f487b" category="paragraph">ネットワークのプロキシ構成が変更されると、エージェントはインターネットにアクセスできなくなる可能性があります。たとえば、誰かがプロキシ サーバーのパスワードを変更したり、証明書を更新したりした場合などです。この場合、コンソール エージェント ホストから直接 UI にアクセスし、設定を更新する必要があります。コンソール エージェント ホストへのネットワーク アクセスがあり、コンソールにログインできることを確認します。</block>
   <block id="54734e5bba3b83b2757e43d1ff24b2c4" category="section-title">直接APIトラフィックを有効にする</block>
@@ -3601,19 +3556,14 @@
   <block id="c91d4274dbc95093979f44d9158f63c4" category="doc">NetApp Consoleのリソースをフォルダとプロジェクトで整理する</block>
   <block id="6dca94e5f8ef4f7534b19b4528884acb" category="paragraph">NetApp Console内で、プロジェクトとフォルダを使用してNetAppリソースを整理します。  _プロジェクト_ は、組織のメンバーが _リソース_ (たとえば、 Cloud Volumes ONTAPシステム) を管理するためにアクセスするコンソールのワークスペースを表します。 _フォルダー_ は関連するプロジェクトをグループ化します。リソースをフォルダーとプロジェクトに整理したら、組織のメンバーに特定のフォルダーとプロジェクトへの権限を付与することで、リソースへのきめ細かなアクセスを許可できます。</block>
   <block id="c08b7d4448e95633b73e2495389e853c" category="section-title">フォルダまたはプロジェクトを追加する</block>
-  <block id="bbc694ba62c62df49795c9c42c96c762" category="paragraph">組織を作成すると、1 つのプロジェクトが含まれます。リソースを管理するためのプロジェクトと、関連するプロジェクトをグループ化するためのフォルダーを追加します。</block>
-  <block id="c35523034b7fc4da98dc5a67f27b9d9d" category="paragraph">組織のリソース階層は最大 7 レベルまで設定でき、フォルダーは 6 レベルまでネストされ、プロジェクトは 7 レベル目になります。</block>
   <block id="8b2ab7e3ad5d97cdc07606024ad7cd90" category="list-text">*組織*を選択します。</block>
   <block id="54f6cd3aa5e387ea27f8d46fcd265b0f" category="list-text">*組織*ページから、*フォルダーまたはプロジェクトの追加*を選択します。</block>
   <block id="0bb9526fc793356f11cea651032b1b15" category="list-text">*フォルダー*または*プロジェクト*を選択します。</block>
-  <block id="5506a3204ff4171234856af0ca0d34fd" category="list-text">フォルダーまたはプロジェクトの詳細を入力します。</block>
-  <block id="dd3673b97acb6c067381ad1c2f6b16eb" category="list-text">*名前と場所*: 名前を入力し、フォルダーまたはプロジェクトの階層内の場所を選択します。フォルダーまたはプロジェクトは、組織の直下またはフォルダー内に配置できます。</block>
   <block id="f46059ba82cb53e4af025ce918760999" category="list-text">*リソース*: このフォルダーまたはプロジェクトに関連付けるリソースを選択します。</block>
   <block id="3c3738a24f68869d5cec5d24654be31c" category="paragraph">親フォルダーまたはプロジェクトに関連付けられているリソースを選択できます。</block>
   <block id="2aa8f2be43810963811ccc42047d868e" category="inline-link-macro">リソースをフォルダに関連付けるタイミングを学ぶ</block>
   <block id="1cfaf9081db0e3182d27f586bb481603" category="paragraph"><block ref="9b735c42d80f104cecdf7ab600a203a6" category="inline-link-macro-rx"></block> 。</block>
   <block id="8bb3c5dc86a399d0babf2eb49831e5ec" category="list-text">*アクセス*: リソース階層で既に定義されている既存の権限に基づいて、フォルダーまたはプロジェクトにアクセスできるメンバーを表示します。</block>
-  <block id="bb1674c6ad82758dbe5312cfed6ce30a" category="paragraph">追加のメンバーにアクセス権とロールを割り当てるには、「*メンバーを追加*」を選択します。ロールは、メンバーがフォルダーまたはプロジェクトに対して持つ権限を定義します。</block>
   <block id="7f394af8afb3598061eec3ed6197180d" category="section-title">フォルダまたはプロジェクトの名前を変更する</block>
   <block id="f8ca84129dded5d2d753c0d0cc1ddea1" category="paragraph">必要に応じて、フォルダーとプロジェクトの名前を変更できます。</block>
   <block id="f53392d049b9dddff4ba55ad74c96588" category="inline-image-macro">3つの点があるアイコン</block>
@@ -3621,9 +3571,6 @@
   <block id="ec4b36b02d2682a0624b6df463ee2789" category="list-text">*編集*ページで新しい名前を入力し、*適用*を選択します。</block>
   <block id="03b976867f3d4bd64ebf2dde3b296e4d" category="section-title">フォルダまたはプロジェクトを削除する</block>
   <block id="486b799bb85b3d2fe9d51e27f973ebbf" category="paragraph">不要になったフォルダーとプロジェクトを削除します。</block>
-  <block id="11c35e27e51a047151d75fb0ede09570" category="inline-xref">リソースの関連付けを解除する方法を学ぶ</block>
-  <block id="9a4d17fef1beed2567fc013cd2bec581" category="list-text">フォルダーまたはプロジェクトに関連付けられたリソースがないことを確認します。<block ref="802e9206ed2588cee6f64d588f1bc58d" category="inline-xref-macro-rx"></block> 。</block>
-  <block id="7e3bd90255d7fc608bda397ba970467a" category="list-text">フォルダーまたはプロジェクトに関連付けられたリソースがないことを確認してください。</block>
   <block id="42f2baba648ca8f4aea79acfaf1465c8" category="list-text">*組織*ページで、テーブル内のプロジェクトまたはフォルダに移動し、<block ref="e85cc783c74f9ef35cfeeca99fcaf6f6" category="inline-image-macro-rx" type="image"></block>次に、[削除] を選択します。</block>
   <block id="48a726f3d57687547ef8fb70fab0c713" category="list-text">フォルダーまたはプロジェクトを削除することを確認します。</block>
   <block id="7ef08e2a2795e0ebd33ca241791da34d" category="section-title">フォルダまたはプロジェクトに関連付けられたリソースを表示する</block>
@@ -3635,7 +3582,6 @@
   <block id="a470fed0aa4603c3c8d460c4028252f1" category="list-text">関連するリソースを表示するには、[*リソース*] を選択します。表の *ステータス* 列には、フォルダーまたはプロジェクトに関連付けられているリソースが識別されます。</block>
   <block id="c2fdbd86cd719dffbb80161af27b0ec9" category="inline-image-macro">プロジェクトに関連付けたり、関連付けを解除したりできる利用可能なリソースを表示する「プロジェクトの編集」ページのスクリーンショット。</block>
   <block id="65381685a85e45e94ee53dbceff322ff" category="paragraph"><block ref="65381685a85e45e94ee53dbceff322ff" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="df3e2bd0fe2ced6b1bd1a55dad748146" category="section-title">フォルダまたはプロジェクトに関連付けられたリソースを変更する</block>
   <block id="189b8907a7ab6c4c7b1ea92510e40d70" category="paragraph">フォルダーまたはプロジェクトに対する権限を持つメンバーは、それに関連付けられたリソースにアクセスできます。</block>
   <block id="0727cfa5c59f7b7114ac7246e406611c" category="list-text">*編集*ページで*リソース*を選択します。</block>
   <block id="d66e1bd376f74d0703fc72b368b92cd7" category="paragraph">表の *ステータス* 列には、フォルダーまたはプロジェクトに関連付けられているリソースが識別されます。</block>
@@ -3643,15 +3589,12 @@
   <block id="77132bcd63b33103ab4d954f60736e06" category="list-text">選択したリソースに応じて、*プロジェクトに関連付ける*または*プロジェクトとの関連付けを解除する*のいずれかを選択します。</block>
   <block id="152ff89b1af4f8995e50a4b8f158db52" category="inline-image-macro">現在関連付けられていないリソースを選択した後に使用できる [リソースの関連付け] オプションが表示されている [プロジェクトの編集] ページのスクリーンショット。</block>
   <block id="883f9a97670aa2ea1a29d0163ef97be1" category="paragraph"><block ref="883f9a97670aa2ea1a29d0163ef97be1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c16f1c2a54634bdad6dee177f8131ef5" category="list-text">*適用*を選択</block>
   <block id="e3621d23b92254c73b3a713d227a66f5" category="section-title">フォルダまたはプロジェクトに関連付けられたメンバーを表示する</block>
   <block id="6b1db5558a176057dbfc6d02d715d5ee" category="list-text">フォルダーまたはプロジェクトにアクセスできるメンバーを表示するには、「*アクセス*」を選択します。</block>
   <block id="68f9e92246f3af16e2706083b8012f92" category="inline-image-macro">プロジェクトにアクセスできるメンバーを表示する「プロジェクトの編集」ページのスクリーンショット。</block>
   <block id="e537768f43901c1791172250c6c08115" category="paragraph"><block ref="e537768f43901c1791172250c6c08115" category="inline-image-macro-rx" type="image"></block></block>
   <block id="19df46354fac1ffd06065f8388377f84" category="section-title">フォルダまたはプロジェクトへのメンバーアクセスを変更する</block>
-  <block id="838d404665efe77bad8374ea27c3b7ca" category="paragraph">適切なメンバーが関連付けられたリソースにアクセスできるように、メンバー アクセスを変更します。</block>
   <block id="f676fbba085923546a37baf94ce6784b" category="inline-link-macro">メンバーページから権限を管理する</block>
-  <block id="08e3536d495a23d703d2d1e7d2054ba1" category="paragraph">上位階層レベルで提供されるメンバー アクセスは、下位レベルでは変更できません。アクセスを変更するには、上位階層レベルでメンバーの権限を更新します。あるいは、<block ref="2e250d63a19626cb0aeed14260bd2f59" category="inline-link-macro-rx"></block> 。</block>
   <block id="6774afc9942c8dcab2e06828e8f199cb" category="inline-link-macro">ロール継承の詳細</block>
   <block id="8945f05b50a19ebe83ee85e629a09120" category="paragraph"><block ref="e2e11ae218588663759cb10a40da4876" category="inline-link-macro-rx"></block> 。</block>
   <block id="2bd6967deb6b9eb3d79e794bad318fb4" category="list-text">*編集*ページで*アクセス*を選択すると、選択したフォルダーまたはプロジェクトにアクセスできるメンバーのリストが表示されます。</block>
@@ -3672,7 +3615,6 @@
   <block id="f2822d5dedda5be93d6f6e298458878b" category="paragraph">この役割を持つユーザーは、指定されたフォルダまたはプロジェクトのメンバーのみを管理できます。</block>
   <block id="31c547d7cd4c250a91b1a8bef306d954" category="paragraph">_フォルダーまたはプロジェクト管理者_ は、*メンバー* ページですべてのメンバーを表示できますが、アクセス権を持つフォルダーとプロジェクトの権限のみを管理できます。<block ref="c691e2b9b4224ed90bb4f1f11059b372" category="inline-link-macro-rx"></block> 。</block>
   <block id="e3a1bd8f43fc761424ef512d07c27a8b" category="section-title">組織にメンバーを追加する</block>
-  <block id="af1944d628b4a4ffaf6c377d8bfd75a9" category="paragraph">組織には、ユーザー アカウントとサービス アカウントの 2 種類のメンバーを追加できます。アプリケーションはサービス アカウントを使用して、人間の介入なしに API タスクを実行します。通常、ユーザーはユーザー アカウントを使用してログインし、リソースを管理します。</block>
   <block id="4a6e57c6cb2443ee81ba504493e38c0d" category="paragraph">ユーザーを組織に追加したり、ロールを割り当てたりする前に、そのユーザーがNetApp Consoleにサインアップする必要があります。サービス アカウントはコンソールから直接作成します。</block>
   <block id="e882dcb285b727741daef45bc38e2d7b" category="paragraph">ユーザーとその権限を管理するには、*組織管理者* ロールまたは *フォルダーまたはプロジェクト管理者* ロールが必要です。  *フォルダーまたはプロジェクト管理者* ロールを持つユーザーは、管理者権限を持つフォルダーまたはプロジェクトのメンバーのみを管理できることに注意してください。</block>
   <block id="7915733bd673ab1728be20879c847f08" category="section-title">ユーザーアカウントを追加する</block>
@@ -3698,7 +3640,6 @@
   <block id="8e7e960ee764c7e6e42c82f1edaa4133" category="list-text">*メンバータイプ*では*サービスアカウント*を選択します。</block>
   <block id="e14a6ae0776860dda96f0e481824bccd" category="list-text">サービス アカウントの名前を入力します。</block>
   <block id="ebcb63e875051cc6846253b2c9ce48da" category="list-text">JWT 認証を使用する場合は、「*秘密鍵 JWT 認証を使用する*」を選択し、公開 RSA キーまたは証明書をアップロードします。代わりにクライアント ID とシークレットを使用する場合は、この手順をスキップしてください。</block>
-  <block id="f17ae6fd3e69f0e9652031dd252bbc3e" category="paragraph">X.509 証明書。  PEM、CRT、または CER 形式である必要があります。</block>
   <block id="fc0041752419b9f94c8f1b7af4db8c4a" category="list-text">*カテゴリー*を選択し、選択した組織、フォルダ、またはプロジェクトに関連付けられているリソースに対する権限をメンバーに付与する*ロール*を選択します。</block>
   <block id="78f6d8218cb580b136d9697f7235ad36" category="list-text">JWT 認証を使用しない場合は、クライアント ID とクライアント シークレットをダウンロードまたはコピーします。 + コンソールにはクライアント シークレットが 1 回だけ表示されます。安全にコピーしておけば、必要に応じて後で再作成できます。</block>
   <block id="3f1c25aff6cde8c3443a53dfb8490e46" category="list-text">JWT 認証を選択した場合は、クライアント ID と JWT オーディエンスをダウンロードまたはコピーします。この情報は一度だけ表示され、後で取得することはできません。</block>
@@ -3712,7 +3653,6 @@
   <block id="d5e4a18be128c90b65012755ecabfe00" category="paragraph">*メンバー* テーブルには組織のメンバーがリストされます。</block>
   <block id="4137654b2b560bb6af478553cbc120b2" category="section-title">組織からメンバーを削除する</block>
   <block id="e4cb5729a397d486706aec2c33ce4ea6" category="paragraph">たとえば、メンバーが会社を辞めた場合など、組織からメンバーを削除する必要がある場合があります。</block>
-  <block id="b6be293e7a1c53f72d15da417976fc81" category="paragraph">システムはメンバーの権限を削除しますが、コンソールとNetAppサポート サイトのアカウントは保持されます。</block>
   <block id="17968a6208774a9e7e1a042da70ec52f" category="list-text">*メンバー*ページで、テーブル内のメンバーに移動し、<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>次に、[*ユーザーの削除*]を選択します。</block>
   <block id="6e49938f1c5b86ad879eeaf086442b08" category="list-text">組織からメンバーを削除することを確認します。</block>
   <block id="a657b530c9804722859fcb4792bf4466" category="section-title">サービス アカウントの認証情報を再作成する</block>
@@ -3720,10 +3660,8 @@
   <block id="587ee44a2d8c31788fd2c2219c69f11c" category="paragraph">資格情報を再作成する場合は、サービス アカウントの既存の資格情報を削除し、新しい資格情報を作成します。以前の資格情報は使用できません。</block>
   <block id="bb0f4333667b84217bd737a0e3fc6024" category="list-text">*メンバー*テーブルでサービスアカウントに移動し、<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>次に、[*シークレットの再作成*]を選択します。</block>
   <block id="8de213850e1e3dc79a14014382d25163" category="list-text">*再作成*を選択します。</block>
-  <block id="26099ee95e920d1bb32d1205490ad92b" category="list-text">クライアント ID とクライアント シークレットをダウンロードまたはコピーします。 + クライアントシークレットは 1 回だけ表示されます。コピーまたはダウンロードして安全に保管してください。</block>
   <block id="25240dbf964ce37736226ead112d31f2" category="section-title">ユーザーの多要素認証（MFA）を管理する</block>
   <block id="50ce8407589b8befd67cd61c66e1dd17" category="paragraph">ユーザーが MFA デバイスにアクセスできなくなった場合は、MFA 構成を削除するか無効にすることができます。</block>
-  <block id="a860c0a128dada61cfda723f07532eda" category="paragraph">削除後、ユーザーはログイン時に MFA を再設定する必要があります。ユーザーが MFA デバイスへのアクセスを一時的に失っただけの場合は、MFA を設定したときに保存した回復コードを使用してログインできます。</block>
   <block id="e0703bf0ce92b0a162c7173416f52e67" category="paragraph">回復コードがない場合は、一時的に MFA を無効にしてログインを許可します。ユーザーの MFA を無効にすると、8 時間だけ無効になり、その後自動的に再度有効になります。その間、ユーザーは MFA なしで 1 回のログインが許可されます。8 時間経過後、ユーザーは MFA を使用してログインする必要があります。</block>
   <block id="5882327647586429810441bede064892" category="admonition">ユーザーの多要素認証を管理するには、影響を受けるユーザーと同じドメインのメール アドレスが必要です。</block>
   <block id="4c03cc49e70b34418f2385277d266d90" category="list-text">*メンバー*ページで、テーブル内のメンバーに移動し、<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>次に、[*多要素認証の管理*]を選択します。</block>
@@ -3731,11 +3669,8 @@
   <block id="2fe6c9d572351b2d4e0b387a62bdf1e2" category="summary">リソースを特定のプロジェクトやフォルダーに関連付けることで、組織のリソース階層を管理します。</block>
   <block id="0b99b236783ea746ceb31085990e767d" category="paragraph">メンバーを組織に関連付ける場合は、組織、フォルダ、またはプロジェクト レベルで権限を付与します。これらのメンバーが適切なリソースにアクセスする権限を持っていることを確認するには、リソースを特定のプロジェクトやフォルダに関連付けることで、組織のリソース階層を管理する必要があります。  _リソース_ とは、コンソールが既に管理しているか認識しているストレージ システムまたはコンソール エージェントです。</block>
   <block id="98ca801aa8933a24531043c30c475e2e" category="section-title">組織内のリソースを表示する</block>
-  <block id="19c483b3cc14239dca4a799e0b75956f" category="paragraph">組織に関連付けられている検出されたリソースと未検出のリソースの両方を表示できます。未検出のリソースは、識別されているがコンソールにまだ追加されていないストレージ リソースです。</block>
-  <block id="90e05d9e1b72166781e95442b46203c0" category="admonition">注意: ユーザーがロールに関連付けることができないため、[リソース] ページではAmazon FSx for NetApp ONTAPリソースは除外されます。システム ページまたはワークロードから表示します。</block>
   <block id="95c9ea5440ca8b54a3d3dae8e1d1f492" category="list-text">*リソース*を選択します。</block>
   <block id="a5d2efab4d8509840f3f76fe8f0a57c1" category="list-text">*高度な検索とフィルタリング*を選択します。</block>
-  <block id="3d1bc41342a56d581edf9d1765f01a0b" category="list-text">利用可能なオプションのいずれかを使用して、探しているリソースを見つけます。</block>
   <block id="48ca2619b5dca392dc3969df94469cf3" category="list-text">*リソース名で検索*: テキスト文字列を入力し、*追加*を選択します。</block>
   <block id="b2efca9e0863336ee0d7aa6af1771c24" category="list-text">*プラットフォーム*: Amazon Web Services など、1 つ以上のプラットフォームを選択します。</block>
   <block id="e6d1209910233e075e359b7fdb3892a8" category="list-text">*リソース*: Cloud Volumes ONTAPなどの 1 つ以上のリソースを選択します。</block>
@@ -3761,10 +3696,8 @@
   <block id="0d8f80667cd7bc86a6f6ea26c12d18b9" category="paragraph">次の例は、1 つのプロジェクトに関連付けられているリソースを示しています。</block>
   <block id="a46cbe82e9adff7ecc82d6eadb58aa97" category="inline-image-macro">組織の直下にあるプロジェクトに関連付けられたリソースを表示するリソース詳細ページのスクリーンショット。</block>
   <block id="7cadbb5f400f149f938a910df5c5cb0d" category="paragraph"><block ref="7cadbb5f400f149f938a910df5c5cb0d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7e77a0d272b850a5b082c2fed060594a" category="admonition">どの組織メンバーがリソースにアクセスできるのかを判断する必要がある場合は、<block ref="7b75e3c2af3e500cfb657c057dbc7c5e" category="inline-link-macro-rx"></block> 。</block>
   <block id="02daa88c7c6888cad8b055624d764072" category="section-title">フォルダまたはプロジェクトからリソースを削除する</block>
   <block id="101c2fc402187ad7ad2fa40cf25d35b2" category="paragraph">フォルダーまたはプロジェクトからリソースを削除するには、フォルダーまたはプロジェクトとリソース間の関連付けを削除する必要があります。関連付けを削除すると、メンバーはフォルダーまたはプロジェクト内のリソースを管理できなくなります。</block>
-  <block id="0ca2d7cec61f3ffe672d4b8efae574f3" category="admonition">検出されたリソースを組織全体から削除するには、*システム* ページからシステムを削除します。</block>
   <block id="a55ecc4bf928da93f86f41bb1fa482cc" category="inline-image-macro">ゴミ箱のアイコン</block>
   <block id="4fc3c6ef596dbec8a3af38f79c84cf02" category="list-text">リソースを削除するフォルダまたはプロジェクトで、<block ref="5aa3fbfa4a030d3d0fb7677a91fd2eba" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ece216a1c354b015ef19084b08f5e92f" category="list-text">*削除* を選択して、関連付けを削除することを確認します。</block>
@@ -3772,11 +3705,9 @@
   <block id="cf3b3d414366a26f5b43041b5056897c" category="summary">NetApp Console内では、ユーザーの実行内容と場所に基づいて、ユーザーにロールを割り当てることができます。</block>
   <block id="14750286cb2a5a61bf62b65d9b9d2112" category="doc">ロールを使用して、 NetApp Consoleリソースへのユーザー アクセスを管理します。</block>
   <block id="5f24947dab075e3413b914aa36df023a" category="paragraph">コンソール内では、ユーザーの実行内容と場所に基づいて、ユーザーにロールを割り当てることができます。</block>
-  <block id="61258c54d2a7f09077a72a4eeb56874d" category="paragraph">セキュリティを強化するために、IAM 戦略に基づいてユーザーにロールを割り当てます。  IAM ロールにより、ユーザーは必要なアクセス権のみを持つことができます。</block>
   <block id="3908f1e42aa5b81b8316befd30a6965d" category="inline-link-macro">フォルダーとプロジェクトを使用してリソースを整理する方法を学びます。</block>
   <block id="ecdeffad8e53c7c9b1fb61f02a3cb5d1" category="admonition">リソースへのアクセスを直接許可することはできないことに注意してください。まずプロジェクトにリソースを割り当てます。ユーザーにアクセスを割り当てる前に、リソース階層を設定することを検討してください。<block ref="122b4639308e055d5bdfeb8a65e1794d" category="inline-link-macro-rx"></block></block>
   <block id="34025ad60edecbf8612a359edaca8684" category="section-title">メンバーに割り当てられた役割を表示する</block>
-  <block id="aa71b6597d142a17d9d21782a5fd883b" category="paragraph">組織にメンバーを追加すると、そのメンバーにロールを割り当てるように求められます。メンバーに現在割り当てられているロールを確認できます。</block>
   <block id="317e1169ce13ad8808ce0775bf310cef" category="paragraph">_フォルダーまたはプロジェクト管理者_ ロールを持っている場合、ページには組織内のすべてのメンバーが表示されます。ただし、メンバー権限を表示および管理できるのは、権限を持つフォルダーとプロジェクトのみです。<block ref="c691e2b9b4224ed90bb4f1f11059b372" category="inline-link-macro-rx"></block> 。</block>
   <block id="12815307393fa19648b391d49b4282e4" category="section-title">メンバーにアクセスロールを追加する</block>
   <block id="9a9b4b286a389bc98dfdeb3214c134a1" category="paragraph">通常、組織にメンバーを追加するときにロールを割り当てますが、ロールを削除または追加することでいつでも更新できます。</block>
@@ -3784,7 +3715,6 @@
   <block id="7a43b6f649f8cf73a12056888057076b" category="paragraph">アクセス ロール戦略は、 NetAppリソースの編成方法と一致する必要があります。</block>
   <block id="20c36cd6c77d407b6118c77ebe403934" category="admonition">組織管理者の役割が割り当てられているメンバーには、追加の役割を割り当てることはできません。組織全体にわたる権限がすでに付与されています。フォルダーまたはプロジェクトのロールを持つメンバーには、そのロールがすでに割り当てられているフォルダーまたはプロジェクト内の他のロールを割り当てることはできません。これら両方のロールは、割り当てられた範囲内のすべてのサービスへのアクセスを提供します。</block>
   <block id="068135177d9d1843118236d5f10dc5b7" category="section-title">メンバーに割り当てられた役割を変更する</block>
-  <block id="88ccee89efe2b556b8fcc7b01ae63c9f" category="paragraph">ユーザーのアクセスを調整する必要がある場合は、メンバーに割り当てられたロールを変更できます。</block>
   <block id="4edfdeb74f014e9408efa692c71a9d2e" category="admonition">ユーザーには少なくとも 1 つのロールが割り当てられている必要があります。ユーザーからすべてのロールを削除することはできません。すべてのロールを削除する必要がある場合は、組織からユーザーを削除する必要があります。</block>
   <block id="2be01e6baa22b9b0a4f0a2c054fe7289" category="summary">必要に応じて、 NetApp Console組織の名前を変更できます。</block>
   <block id="1920da3586c2e2872f88b02997c971c3" category="doc">組織IDとプロジェクトID</block>
@@ -3901,7 +3831,6 @@
   <block id="80308b1bd5b2d563350bbb74c701710f" category="section-title">ステップ3: ネットワークを設定する</block>
   <block id="80196471f6a2f8c78a5455f640296b19" category="paragraph">コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件を満たすことで、コンソール エージェントはハイブリッド クラウド環境内のリソースとプロセスを管理できるようになります。</block>
   <block id="c39c5a4e7fd2ccefcd663038795421ed" category="section-title">ステップ4: コンソールのAWS権限を設定する</block>
-  <block id="103049e74e847c769a97fe33d5d46712" category="paragraph">次のいずれかのオプションを使用して、 NetApp Consoleに AWS 権限を付与する必要があります。</block>
   <block id="168b098cb315f9dde326e5fcaa738ac3" category="list-text">オプション 1: IAM ポリシーを作成し、EC2 インスタンスに関連付けることができる IAM ロールにポリシーをアタッチします。</block>
   <block id="ab285b81ee6660fa09c5ad9eb7eb49a6" category="list-text">オプション 2: 必要な権限を持つ IAM ユーザーの AWS アクセスキーをコンソールに提供します。</block>
   <block id="380b440efe1d4d54168900055656ba0c" category="paragraph">コンソールの権限を準備するには、手順に従ってください。</block>
@@ -3918,8 +3847,6 @@
   <block id="b3175a7a8c2ba73aad02f57026632d9b" category="inline-link">NetApp ConsolePからS3バケットを管理する方法を学ぶ</block>
   <block id="cb0908023b296d7d49436ab6f97e1722" category="paragraph">コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、[システム] ページに Amazon S3 ストレージ システムが自動的に表示されます。<block ref="e807fcbb34e8f3cdd2199d0fc61d445e" category="inline-link-rx"></block></block>
   <block id="c38f7847f04d50ab6fcbc66333ed1e25" category="section-title">ステップ6: NetApp Consoleに権限を付与する</block>
-  <block id="abdfcd483825370c001a0b749d453dc4" category="paragraph">コンソールエージェントをインストールしたので、以前に設定した AWS 権限をコンソールに提供する必要があります。権限を付与すると、コンソールエージェントは AWS 内のデータとストレージインフラストラクチャを管理できるようになります。</block>
-  <block id="5a52914d8d01c8e84d9a721dbf01a42b" category="paragraph">以前に作成した IAM ロールをコンソールエージェント EC2 インスタンスにアタッチします。</block>
   <block id="0ceede4f3f6785079b421e3b767884a7" category="paragraph">に行く<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>コンソール エージェントの使用を開始します。</block>
   <block id="478934e77aeec11eff664bb1d6c547a8" category="paragraph">必要な権限を持つ IAM ユーザーの AWS アクセスキーをコンソールに提供します。</block>
   <block id="0950c5af4754899d3da4c72fa2993986" category="list-text">コンソールで正しいコンソール エージェントが現在選択されていることを確認します。</block>
@@ -4073,7 +4000,6 @@
   <block id="702a1eca6754acddde443fd4cb404a99" category="doc">NetApp Consoleから Google Cloud にコンソール エージェントを作成する</block>
   <block id="4b4904242b46a5c5de838c3bf8de1c06" category="paragraph">コンソールから Google Cloud にコンソール エージェントを作成できます。ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。</block>
   <block id="05e4e55b4a1ded174cd4d080db80632c" category="paragraph">コンソール エージェントがターゲット ネットワークへの接続とアウトバウンド インターネット アクセスを使用してリソースを管理できるように、ネットワークを設定します。</block>
-  <block id="47bf230a49ecee72c3b36a37f9758812" category="paragraph">\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects</block>
   <block id="1ac278db12cb6e29a5837e46be7230d6" category="paragraph">コンソール エージェントを作成した後、このネットワーク要件を実装します。</block>
   <block id="367fc1a15d8d93ee5b98ec9fb0626a3f" category="section-title">ステップ2: コンソールエージェントを作成するための権限を設定する</block>
   <block id="770085896a0aaa47d2b2a21de5e713fe" category="paragraph">コンソールからコンソール エージェントをデプロイする前に、コンソール エージェント VM をデプロイする Google プラットフォーム ユーザーの権限を設定する必要があります。</block>
@@ -4162,7 +4088,6 @@
   <block id="d7134f839db72245fe3e0d8d0bfce146" category="section-title">ステップ4: コンソールエージェントの権限を設定する</block>
   <block id="a0e4b6848b26b9f671f19438b07d341b" category="section-title">ステップ5: 共有VPC権限を設定する</block>
   <block id="ed699bb1e56dba725718c6f093e80619" category="section-title">ステップ6: Google Cloud APIを有効にする</block>
-  <block id="69f380f2398b7565bd53d007caa73472" category="paragraph">Google Cloud にCloud Volumes ONTAPシステムをデプロイする前に、いくつかの Google Cloud API を有効にする必要があります。</block>
   <block id="e8e253336558188ed5f5c2ffa5852d13" category="section-title">ステップ7: コンソールエージェントをインストールする</block>
   <block id="99564e0e630cf4a642f3e276f6caacab" category="inline-link">NetApp Consoleから Google Cloud Storage を管理する方法を学びます</block>
   <block id="22a243e5f9859fe3d0fcb5d054ec0f43" category="paragraph">コンソール エージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合は、[システム] ページに Google Cloud Storage システムが自動的に表示されます。<block ref="f4a6f159093eba0ffefdac7ab4ea2c30" category="inline-link-rx"></block></block>
@@ -4297,7 +4222,6 @@
   <block id="25ed61080ee73d701a5ba6feef931050" category="paragraph"><block ref="25ed61080ee73d701a5ba6feef931050" category="inline-link-macro-rx"></block></block>
   <block id="8ac340f924d72696326df51a32dbdee5" category="inline-link">Azure Government リージョンの Azure Marketplace ページ</block>
   <block id="cc337b5a93c54f8a59d4731866297bf2" category="list-text"><block ref="cc337b5a93c54f8a59d4731866297bf2" category="inline-link-rx"></block></block>
-  <block id="ece4476b2389e3e8eff9a96e00d892b7" category="list-text">*パブリック IP*: コンソール エージェント VM でパブリック IP アドレスを使用する場合は、コンソールがこのパブリック IP アドレスを使用するように、IP アドレスで Basic SKU を使用する必要があります。</block>
   <block id="92fa0fc1299e55c066d0a19cd22b4e7b" category="list-text">*ID*: *管理* の下で、*システム割り当てマネージド ID を有効にする* を選択します。</block>
   <block id="b99469b29b000bd070b5f230caa3b887" category="paragraph">Azure は指定された設定で仮想マシンをデプロイします。仮想マシンとコンソール エージェント ソフトウェアは約 5 分以内に実行されるはずです。</block>
   <block id="8f40f6b9cda905fc9a83217435e6b940" category="open-title">手動インストール</block>
@@ -4307,7 +4231,6 @@
   <block id="dff3d2b179cc5b62a2e772cc8404f515" category="section-title">ステップ2: NetApp Consoleをセットアップする</block>
   <block id="673e7aa51056c2e179dd721d8108e744" category="paragraph">コンソールに初めてアクセスすると、コンソール エージェントの組織を選択するように求められ、制限モードを有効にする必要があります。</block>
   <block id="94c608264d0740c1539084d4a2415780" category="paragraph">コンソール エージェントを設定するユーザーは、コンソール組織に属していないログインを使用してコンソールにログインする必要があります。</block>
-  <block id="09bf19e6ad387b1e458c5178d9016692" category="paragraph">ログインが別の組織に関連付けられている場合は、新しいログインでサインアップする必要があります。そうしないと、セットアップ画面に制限モードを有効にするオプションが表示されません。</block>
   <block id="e698c1fd9cae8de09d0fab313c0adf0b" category="list-text">コンソール エージェント インスタンスに接続しているホストから Web ブラウザを開き、インストールしたコンソール エージェントの次の URL を入力します。</block>
   <block id="2f8c3ab071a9ded2677148c9c94dcab3" category="list-text">NetApp Consoleにサインアップまたはログインします。</block>
   <block id="7c129580ce3fdaedbab5835e1c6efc59" category="list-text">ログインしたら、コンソールを設定します。</block>
@@ -4319,7 +4242,6 @@
   <block id="e9a22dbe949aceeeba0832b4920f12de" category="paragraph">コンソール エージェントを政府リージョンに展開した場合、チェック ボックスは既に有効になっており、変更できません。これは、制限モードが政府地域でサポートされている唯一のモードであるためです。</block>
   <block id="34ef49f2003b645a0f1b248a8e158945" category="paragraph">コンソール エージェントがインストールされ、コンソール組織に設定されました。すべてのユーザーは、コンソール エージェント インスタンスの IP アドレスを使用してコンソールにアクセスする必要があります。</block>
   <block id="cb763b4641bf6e6767c99d379a3c59aa" category="paragraph">以前に設定した権限をコンソールに提供します。</block>
-  <block id="0d90b7023964fcc3c91d83c1e214d24e" category="paragraph">Azure Marketplace からコンソール エージェントを展開した場合、またはコンソール エージェント ソフトウェアを手動でインストールした場合は、以前に設定したアクセス許可を提供する必要があります。</block>
   <block id="9ec50c85d379863701d46321169dc12e" category="paragraph">デプロイ中に必要な IAM ロールを選択したため、AWS Marketplace からコンソールエージェントをデプロイした場合は、これらの手順は適用されません。</block>
   <block id="d8325912caeaba85aaefdb17eacaea8d" category="inline-link-macro">クラウド権限の準備方法を学ぶ</block>
   <block id="1b9eb4a1347f52519d9e7d0e26300a53" category="paragraph"><block ref="01cf67ff20127008355664826b726767" category="inline-link-macro-rx"></block> 。</block>
@@ -4905,7 +4827,6 @@
   <block id="a6c767dcba3869189c00afe8384d49d1" category="inline-link-macro">NetAppナレッジベース。</block>
   <block id="c5210c54ffa8d650855e8cf9ce855ee5" category="paragraph">NetAppサポートサイトのアカウントをお持ちの場合は、<block ref="b7101d8626a4e0032aefbb96762d5e1f" category="inline-link-macro-rx"></block></block>
   <block id="980194f6da5ee72bc5d20ee6e316a73f" category="section-title">一般的なエラーメッセージと解決策</block>
-  <block id="ece4155d60ae4e8dfd6eeb423c8526dd" category="paragraph">次の表に、一般的なエラー メッセージとその解決方法を示します。</block>
   <block id="e20cbb947afcf84cf58de1358ee1068d" category="cell">エラー メッセージ</block>
   <block id="b72ac10807b29c77f5b7e4b80ea40414" category="cell">説明</block>
   <block id="a18bb1dfc38a5f8bdbcc37d7ddf92320" category="cell">何をするか</block>
@@ -4926,7 +4847,6 @@
   <block id="41dd69dc7c6b4f3a269a4e72a6eedce5" category="list-text">OCCM コンテナが実行中であり、動作しているかどうかを確認します。</block>
   <block id="2fa1ea75814dc1fdfdc37b059a82eaea" category="paragraph">エージェントのサポート情報を読み込めません。</block>
   <block id="f741099adb576ac2cebaca78923cb39c" category="paragraph">エージェントがサポート アカウントにアクセスできない場合、このメッセージが表示されます。</block>
-  <block id="8c301b35d1707a20114f884ea75e3e4f" category="paragraph">* *。</block>
   <block id="f1250585f9c248976b034c285b91672c" category="paragraph">コンソール エージェントを確認するには、次のいずれかのコマンドを使用します。すべてのサービスのステータスは「実行中」になっている必要があります。そうでない場合は、 NetAppサポートにお問い合わせください。</block>
   <block id="0960e06fac3e48e6403802fb4aa8fbde" category="paragraph">コンソール エージェント診断へのアクセスの詳細については、次のトピックを参照してください。</block>
   <block id="a25b82d4083e9054d77530a1b1771861" category="inline-link-macro">コンソール エージェントのステータスを確認する (Linux ホスト展開の場合)</block>
@@ -4945,10 +4865,6 @@
   <block id="3b2256fce45383ccea4ebfc8f456dcf9" category="section-title">コンソールエージェントのインストールに関する問題</block>
   <block id="2cca0346972b04930650bf988ebae1ab" category="paragraph">インストールに失敗した場合は、レポートとログを表示して問題を解決してください。</block>
   <block id="f8a1a17cd9b62f1fc12e61715a042238" category="section-title">手動インストールの構成チェックを無効にする</block>
-  <block id="849f51f76842f376ad2d4b11f1383701" category="paragraph">インストール中に送信接続を検証する構成チェックを無効にする必要がある場合があります。例えば：</block>
-  <block id="763a64c54c72ab3083be417c5fc344f7" category="list-text">Government Cloud 環境にエージェントを手動でインストールする場合は、構成チェックを無効にする必要があります。無効にしないと、インストールは失敗します。</block>
-  <block id="09791c89411350b678fc1839765eab56" category="list-text">エージェントのアップグレードに以前のエンドポイント リストを引き続き使用している場合は、これらのチェックを無効にすることもできます。</block>
-  <block id="d904cff226021034938fcc2411d0007a" category="paragraph">_com/opt/application/netapp/service-manager-2/config.json_ ファイルで _skipConfigCheck_ フラグを設定することで、構成チェックを無効にします。デフォルトでは、このフラグは false に設定されており、構成チェックによってエージェントの送信アクセスが検証されます。チェックを無効にするには、このフラグを true に設定します。この手順を完了する前に、JSON 構文を理解しておく必要があります。</block>
   <block id="2b7c431e56422c4f2f72e4103ac272de" category="paragraph">構成チェックを再度有効にするには、次の手順に従い、_skipConfigCheck_ フラグを false に設定します。</block>
   <block id="e67f6596d19ecc5846a8d78e917daf2d" category="list-text">コンソール エージェント ホストに root または sudo 権限でアクセスします。</block>
   <block id="d0ec983e93943635bce3349bbdcbf79e" category="list-text">変更を元に戻せるように、_/opt/application/netapp/service-manager-2/config.json_ ファイルのバックアップ コピーを作成します。</block>
@@ -4956,13 +4872,6 @@
   <block id="e5a62c3c41fbb902bf1696d9b5ee861e" category="list-text">_/opt/application/netapp/service-manager-2/config.json_ ファイルを編集し、_skipConfigCheck_ フラグの値を true に変更します。</block>
   <block id="9e3e4c61d70076bf677edfc157a67761" category="list-text">ファイルを保存します。</block>
   <block id="92ae5258778c2fa8ece2b13c88ec0853" category="list-text">次のコマンドを実行して、サービス マネージャー 2 サービスを再起動します。</block>
-  <block id="662f9a338a22b54f53c272273a014b79" category="section-title">アップグレードに使用されたエンドポイントでのインストールの失敗</block>
-  <block id="433bf8d69523b6c45bd3e9074176c8e4" category="paragraph">まだ使用している場合は<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、*検証エージェント構成* チェックボックスをオフにするか、VCenter にインストールするときに構成チェックをスキップします。</block>
-  <block id="b223d695dc0a3cfeb346189c2e0da719" category="inline-link-macro">現在のエンドポイント</block>
-  <block id="6ff810ad8ac9135f58145c78533c4ad6" category="inline-link-macro">エンドポイントを更新する方法を学ぶ</block>
-  <block id="1d9f2c477941ad369756e011cc9d7f3f" category="paragraph">NetAppは、ファイアウォールルールを更新して、<block ref="4eae8a7245c9e90ebe2b3731e8a0c4a1" category="inline-link-macro-rx"></block>ご都合の良い時に。<block ref="81e8d12b12d5dbcaca843cd6eacbf7e1" category="inline-link-macro-rx"></block> 。</block>
-  <block id="651580bc14c37a80ea60b4945de22424" category="paragraph">唯一のエラーが以前のエンドポイントに関連していることを確認してください。</block>
-  <block id="5142e35e06a4059a377c9fc09d2a174e" category="paragraph">他にエラーがある場合は、続行する前に解決する必要があります。</block>
   <block id="efc08f7ae120eb6ea0a122c03f686581" category="section-title">NetAppサポートと連携する</block>
   <block id="d0bc8404c6e69b4ebc8cadb9768f40e3" category="paragraph">コンソール エージェントの問題を解決できない場合は、 NetAppサポートにお問い合わせください。  NetAppサポートでは、コンソール エージェント ID を要求したり、コンソール エージェント ログがまだない場合はそれを送信するよう要求したりすることがあります。</block>
   <block id="7a4c595a1d52f82afae3ef326e950386" category="section-title">コンソールエージェントIDを見つける</block>
@@ -5376,10 +5285,6 @@
   <block id="63355a9119047d0bb5216fe09819ed76" category="admonition">コンソールエージェントインスタンスまたはAmazon FSx for ONTAPインスタンスに関連付けられているインスタンスプロファイルの認証情報を編集することはできません。FSx for ONTAPインスタンスの資格情報の名前のみを変更できます。</block>
   <block id="f2a10e059f22d2e4e590bf375629f82c" category="list-text">*組織の資格情報*ページで、資格情報セットのアクション メニューを選択し、*資格情報の編集*を選択します。</block>
   <block id="76f673856509040ebe6f53809741b891" category="admonition">コンソール エージェントに関連付けられているインスタンス プロファイルの資格情報を削除することはできません。</block>
-  <block id="fe0e7233937189ab2b2856c5f3bbfefc" category="doc">コンソール エージェントの認証情報を Google Cloud サブスクリプションに関連付けます</block>
-  <block id="be6d6ead122d68c4f8ddf176dfa23437" category="paragraph">Google Cloud でコンソール エージェントを作成すると、関連付けられた認証情報を使用して、 Cloud Volumes ONTAPやNetAppデータサービスなどのNetApp Intelligent Servicesをサブスクライブできます。サービスの支払いに使用する資格情報を持つエージェントにサブスクリプションを関連付ける必要があります。</block>
-  <block id="1e494b5627bead907a00e4ea2064baa4" category="paragraph">現在のマーケットプレイス サブスクリプションを新しいものに置き換えると、既存および新しいCloud Volumes ONTAPシステムのサブスクリプションが更新されます。</block>
-  <block id="0e0ee6c108e2775832f3d4fec4e5c9ab" category="paragraph">Google Cloud Marketplace 経由でのNetAppデータ サービスへのサブスクライブは、権限が正しくないか、コンソールへのリダイレクトが失われているために失敗する可能性があります。このような場合は、次の手順に従ってサブスクリプション プロセスを完了してください。</block>
   <block id="743026d6272c7eac4898bf78c6a0ec00" category="paragraph">コンソールは、VPC にコンソールエージェントをデプロイする前に、AWS で認証する必要があります。次のいずれかの認証方法を選択できます。</block>
   <block id="3c3077c55d74474a96914d3933e99034" category="paragraph">どちらのオプションを使用する場合でも、最初のステップは IAM ポリシーを作成することです。このポリシーには、コンソールから AWS のコンソールエージェントを起動するために必要な権限のみが含まれています。</block>
   <block id="a6ff8031b9b97942fbb164a958bb15cb" category="inline-link-macro">コンソールエージェント自体に必要な権限の表示</block>
@@ -5399,7 +5304,6 @@
   <block id="b40610ec83466e7c103049d70ad18892" category="inline-link-macro">エージェントの要件を確認する</block>
   <block id="8a62551759227881974703cf10bfc946" category="paragraph"><block ref="e2790838ef7051b1907224142bc33625" category="inline-link-macro-rx"></block>。</block>
   <block id="446a691d3cf6457cb60610b81794fdbc" category="paragraph">AWS は指定された設定でソフトウェアを起動します。コンソール エージェントは約 5 分で展開されます。</block>
-  <block id="118b5697b68c5f4ada51d65dffac2674" category="paragraph">代わりに標準 SKU IP アドレスを使用する場合、コンソールはパブリック IP ではなく、コンソール エージェントのプライベート IP アドレスを使用します。コンソールにアクセスするために使用しているマシンがそのプライベート IP アドレスにアクセスできない場合、コンソールからのアクションは失敗します。</block>
   <block id="d1cb423c9810b1ddd65eea821845fff2" category="admonition">不審なユーザー アクティビティの検出を有効にするには、コンソール組織管理者のロールが必要です。</block>
   <block id="c563d78603e1e09616c6c043a19061ba" category="cell">*4.0.0 以降のエンドポイント*</block>
   <block id="1463a95efc33a52765f03569e1e39a10" category="cell">*目的*</block>
@@ -5418,7 +5322,6 @@
   <block id="30c4239755a3fa7fe7952fafec8297dd" category="paragraph">日常業務用。</block>
   <block id="533560d1d92ef216fc2f7047b132da5b" category="list-text">CPU と RAM の要件を満たすインスタンス タイプ。  NetAppt3.2xlarge を推奨します。</block>
   <block id="5218e689f8059e737f702b1608b1d2aa" category="list-text">CPU と RAM の要件を満たすインスタンス タイプ。  NetAppStandard_D8s_v3 を推奨します。</block>
-  <block id="8cf6ae40c51e78159e689e6172cff9c8" category="list-text">CPU と RAM の要件を満たすインスタンス タイプ。  NetApp はn2-standard-8 を推奨します。</block>
   <block id="9588595fbe3fa7f47431af3c53dbfa23" category="list-text"><block ref="9588595fbe3fa7f47431af3c53dbfa23" category="inline-link-rx"></block></block>
   <block id="cb4f6677094ab1c46678dcab5e428e83" category="summary">コンソールとインストールするエージェントが適切に機能するには、適切なネットワーク アクセスがあることを確認する必要があります。</block>
   <block id="08c556d51e4f6c65d7b6fa418e7669be" category="doc">3.9.55 以前に必要なネットワーク アクセス</block>
@@ -5455,7 +5358,6 @@
   <block id="7d04a8adb8b138151b42f809761295c7" category="cell"><block ref="7d04a8adb8b138151b42f809761295c7" category="inline-link-macro-rx"></block></block>
   <block id="a5e170ce8c9d104f0b20e67e54257be5" category="paragraph">ネットワークでインターネット アクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。インストール中に明示的なプロキシを追加することもできます。--proxy および --cacert パラメータはオプションであり、追加するように要求されることはありません。明示的なプロキシ サーバーがある場合は、示されているようにパラメータを入力する必要があります。</block>
   <block id="247a6a0ee254b2ff09347b727ee46227" category="inline-link-macro">エージェントメンテナンスコンソールについて学ぶ</block>
-  <block id="ed63faa45dd9543220a2183fa0e02b97" category="admonition">透過プロキシを設定する場合は、インストール後に設定できます。 <block ref="6d6c38ccb358695b7ab850225fcd83aa" category="inline-link-macro-rx"></block></block>
   <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちら <block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block>。</block>
   <block id="334ed7efb24267c8a9d5f60a214ee627" category="list-text">podman-compose パッケージ 1.5.0 をインストールします。</block>
   <block id="83291537b9ae75a78c7add56b73a4688" category="list-text">Red Hat Enterprise Linux 8 を使用している場合:</block>
@@ -5464,11 +5366,9 @@
   <block id="e32e1b9613d2e086e1fc46ae7489620c" category="paragraph">4.1.0 リリースは、標準モードと制限モードで利用できます。</block>
   <block id="650940dddaeb353d547fc2674ba4d35b" category="paragraph-title">エージェントステータスインジケーターの名前を変更しました</block>
   <block id="9722491a4236a9be86f414fa5b3eebb8" category="paragraph">コンソール エージェントのステータス インジケーターの名前を *アクティブ* と *非アクティブ* から *接続済み* と *切断済み* に変更し、目的をより明確にしました。</block>
-  <block id="d9e7da7d4b9cc9086a7ab3a5a270f7da" category="paragraph-title">Redhat Enterprise Linux (RHEL) 9.6 および Podman 5.4.0 のサポート</block>
   <block id="2749b80160d80f9500fa8b5d5b4da1ba" category="section-title">NetApp Console管理</block>
   <block id="a0d96dec6c85f67c2563063cec22ac66" category="paragraph">このリリースには以下が含まれます。</block>
   <block id="ac740509743c941164fb7e88fc8b768e" category="paragraph-title">NetApp Console通知用の新しいメールアドレス</block>
-  <block id="3ded9fa2f8cf197bdf563d5509101e3a" category="paragraph">NetApp Console通知を送信する電子メール アドレスが *service@console.bluexp.netapp.com* から *service@console.netapp.com* に変更されました。NetApp、 NetApp Consoleの電子メール通知を引き続き受信できるように、電子メール ルールを *service@console.netapp.com* を許可するように更新することを推奨しています。</block>
   <block id="e079e06be34bd849355b3a013a28ade3" category="section-title">AWS のコンソールエージェント VM の詳細</block>
   <block id="0759ecf4e00f5c23dd6fcb46adfd5f73" category="section-title">Azure のコンソール エージェント VM の詳細</block>
   <block id="a284e20714904b80b3bc57b894975967" category="section-title">Google Cloud のコンソール エージェント VM の詳細</block>
@@ -5550,7 +5450,6 @@
   <block id="4a882eeef3e6c50d3bb4d82f84d57379" category="cell">compute.firewalls.delete</block>
   <block id="29dc352467775fda0809adc424204117" category="cell">compute.firewalls.get</block>
   <block id="dbfb0e7e24eb5b7c01752edd4c67baa0" category="cell">compute.firewalls.list</block>
-  <block id="4a1e6993ee92e55c56f575a1285bdc17" category="cell">compute.globalOperations.get 。</block>
   <block id="d8bd74ea171478953e02b86e43191839" category="cell">計算画像取得</block>
   <block id="a2f8719fc4688979942132e6c83c9b02" category="cell">compute.images.getFromFamily</block>
   <block id="0c47c066c21579629745163c6286259e" category="cell">計算画像リスト</block>
@@ -5637,26 +5536,333 @@
   <block id="a4421516ae043bd916b22750fd43a081" category="list-text">計算サブネットワーク使用</block>
   <block id="e308cbdddf34fb65f938301ff80d4538" category="list-text">compute.subnetworks.useExternalIp</block>
   <block id="bc803c81454ea9df76e9060827a7bc53" category="list-text">compute.instances.addAccessConfig</block>
-  <block id="f14cdbbd5f80553660910a0a1219e605" category="section-title">2025/11/26</block>
   <block id="3f7540ad5f30cb6539b7476d85d2f608" category="paragraph">権限は使用法を明確にするために更新されていますが、権限の追加や削除は行われていません。各権限がデプロイメント、日常的な操作、または削除のいずれに使用されるかを示す 3 つの列が追加されます。これとは別に、 NetApp Data ClassificationおよびNetApp Backup and Recoveryでの使用に基づいて、いくつかの権限が分離されています。</block>
-  <block id="babdf7713555e95437e95d0dc578e050" category="list-text">*災害復旧管理者*: 任意のアクションを実行します。</block>
-  <block id="756062c061caa73b104caf35ad95abd9" category="list-text">*災害復旧フェールオーバー管理者*: フェールオーバーと移行を実行します。</block>
-  <block id="99c828ca537070159318271d66dda996" category="list-text">*災害復旧アプリケーション管理者*: レプリケーション プランを作成します。レプリケーション プランを変更します。テストフェイルオーバーを開始します。</block>
-  <block id="10bfeabec8da9ffb3c60c40834621a5d" category="list-text">*災害復旧ビューア*: 情報の表示のみ。</block>
-  <block id="f66b3ba81642886354f66476eebc171c" category="cell">ユーザーがNetApp Data Classificationスキャン結果を表示できるようにします。このロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つリソースのレポートを生成できます。これらのユーザーは、ボリューム、バケット、またはデータベース スキーマのスキャンを有効または無効にすることはできません。データ分類には管理者ロールがありません。</block>
-  <block id="9320804217d782369dccfe3cfe90fd29" category="inline-link">データ分類ドキュメント</block>
-  <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
-  <block id="d1047a2a7e1c25fc1d5cbd4c2dea5954" category="paragraph">*組織管理者* または *フォルダーまたはプロジェクト管理者* の役割を持つユーザーには、他のユーザーに役割を割り当てる責任があります。プロジェクトまたはフォルダーごとにアクセス ロールを割り当てることができます。たとえば、あるプロジェクトでは Ransomware Resilience 管理者ロールをユーザーに割り当てることができ、別のプロジェクトではSnapCenter管理者ロールを割り当てることができます。あるいは、ユーザーが特定のフォルダー内のすべてのプロジェクトに対して Ransomware Resilience 管理者ロールを必要とする場合は、フォルダー レベルでこのロールを付与できます。</block>
-  <block id="4c56531120cb5dd49448926a4a5fd1fd" category="paragraph">パートナー ユーザーには次のロールを割り当てることができます。</block>
-  <block id="c291dac152d909d3eb9020000be43137" category="inline-link-macro">データ分類ビューア</block>
-  <block id="c7e28713a896e9488b74e428eb025ad0" category="list-text"><block ref="c7e28713a896e9488b74e428eb025ad0" category="inline-link-macro-rx"></block></block>
-  <block id="08324e7c6f4c191ebd76163dd3616c9a" category="list-text"><block ref="08324e7c6f4c191ebd76163dd3616c9a" category="inline-link-macro-rx"></block></block>
-  <block id="4feead535ae6dd1e4ba78516194fe4b1" category="list-text"><block ref="4feead535ae6dd1e4ba78516194fe4b1" category="inline-link-macro-rx"></block></block>
-  <block id="6131a90681ddf9c2c7134fa754e90d4e" category="paragraph">Podman をインストールして設定します。</block>
-  <block id="68d20f859d04971de5875c315c929e92" category="list-text">それぞれのpodman-composeパッケージをインストールします。</block>
-  <block id="5448bfba9b19b99ebf560293cc6b89ab" category="list-text">PodmanバージョンがCNIではなくNetavark Aardvark DNSを使用していることを確認します。</block>
-  <block id="bf58c65de2201356b331dfea5e7eb976" category="paragraph">Red Hat Enterprise Linux リポジトリから Podman を取得します。</block>
-  <block id="2632bb82f2d43ffb72d31ea06ed68352" category="list-text">podman-compose を取得するには EPEL をインストールします。</block>
-  <block id="3c7d277b4a6a1367e3f2567411648df9" category="paragraph">次の手順に従って、サポートされている Docker エンジン バージョンをインストールします。コンソールは最新バージョンをサポートしていないため、インストールしないでください。</block>
   <block id="18ecbdaa6bb0f123dda150b973bd53b7" category="list-text">Red Hat Enterprise 9.1 ～ 9.6 を使用している場合:</block>
+  <block id="2f78cc1ceedbe872d890b3b087731dee" category="paragraph">| NetApp ONTAP向け Amazon FsX:</block>
+  <block id="fccc45024c0efe519c08e43bb1bd4c5f" category="list-text">api.workloads.netapp.com</block>
+  <block id="5e57ad0482de1c13a4a285a6101f6c13" category="paragraph">| Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。</block>
+  <block id="d273096b8b8c7966eb2a2fb6ca248366" category="paragraph">| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \//https://config.googleapis.com/v1/projects</block>
+  <block id="f8cd35bf6f398c2f8c485bfd95309caa" category="list-text">。  IdP 資格情報を使用してログインします。 ログイン後、コンソールに戻って接続を有効にします。接続をテストするには、[*接続テスト*] を選択します。IdP サーバーのログイン ページに移動します。IdPのクレデンシャルを使用してログインします。ログイン後、コンソールに戻って接続を有効にします。</block>
+  <block id="61169bbb57ab5c82abb2ac47499153f3" category="list-text">コンソールで、[*次へ*] を選択して概要ページを確認します。</block>
+  <block id="95d9f0b87c61b5cd1f8c21678ced4a5c" category="list-text">通知を設定します。</block>
+  <block id="ec811988404f148d3a7f84f040f45531" category="paragraph">7日間または30日間を選択します。システムは、スーパー管理者、組織管理者、フェデレーション管理者、フェデレーション閲覧者の役割を持つすべてのユーザーに有効期限通知を電子メールで送信し、コンソールに表示します。</block>
+  <block id="88f10db937786a2fa2751961ec03f831" category="list-text">フェデレーションの詳細を確認し、[*フェデレーションを有効にする*] を選択します。</block>
+  <block id="a59486087b1574debcf33e28dd13ed9f" category="paragraph">フェデレーションを有効にすると、ユーザーは企業の資格情報を使用してNetApp Consoleにログインします。</block>
+  <block id="15b890fd729e8bd42b01f29b115cdada" category="list-text">クラウド インフラストラクチャ マネージャー API</block>
+  <block id="10cefdd3da771664f7b0150b62c249ed" category="paragraph">次の例では、プロジェクト レベルで「agent」という名前のロールを作成します。</block>
+  <block id="1d98a973e28127ca1d5a524c0a65c609" category="paragraph"><block ref="6970de80a07cb67923442f88622aa01f" prefix="" category="inline-code"></block></block>
+  <block id="f84b7166fdd9d73f9025b6ebc8f1a1e2" category="admonition">コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちら <block ref="67604b84b6c55a93968d120e00fd25fc" category="inline-link-macro-rx"></block>。</block>
+  <block id="e6153b5af910bd914558e46567df943b" category="paragraph">インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。</block>
+  <block id="5f8a3be418076860c7498d8c5d0e14c3" category="list-text">コンソール エージェント ソフトウェアをダウンロードし、Linux ホストにコピーします。  NetApp ConsoleまたはNetAppサポート サイトからダウンロードできます。</block>
+  <block id="4775980021a4840f05c457f43800b94a" category="list-text">NetApp Console: *エージェント &gt; 管理 &gt; エージェントのデプロイ &gt; オンプレミス &gt; 手動インストール* に移動します。</block>
+  <block id="06f42bb69fed27c52f7bae78f3878026" category="paragraph">エージェント インストーラー ファイルのダウンロードまたはファイルへの URL を選択します。</block>
+  <block id="0501357b97c3d33dc8ef20b31207b3cc" category="list-text">NetAppサポート サイト (コンソールにまだアクセスできない場合に必要)<block ref="384f9db5f56c00fd1d970f44502ee5ff" category="inline-link-rx"></block> 、</block>
+  <block id="1619892cf61e304c5a69af0282981660" category="admonition">透過プロキシを設定する場合は、インストール後に設定できます。 <block ref="42ec89ae005e4bc718304f7a7f9af7dd" category="inline-link-macro-rx"></block></block>
+  <block id="f74259191e67bafc8413f9d445c37856" category="list-text">コンソール エージェントには専用のホストが必要です。次のサイズ要件を満たすアーキテクチャであれば、どれでもサポートされます。</block>
+  <block id="1123fbbce8c7742c0e3dcd6cccd5cce6" category="paragraph">コンソールエージェントにはこのスペースが必要です<block ref="ca905eb4a00d34150573153a09e2e79b" prefix=" " category="inline-code"></block>Podman または Docker は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、<block ref="af5045a6e72956f67984a97cd3e8b9da" prefix=" " category="inline-code"></block>ディレクトリと<block ref="2e1a4e3f55001820560b237188c70bc3" prefix=" " category="inline-code"></block>Docker用。このスペースでは外部マウントまたはシンボリックリンクは機能しません。</block>
+  <block id="1c6e1ba9ff363a7122e316a4b7f2c7e3" category="list-text">IMDSv2 が有効になっている場合 (新しい EC2 インスタンスのデフォルト)、PUT 応答ホップ制限を 3 に設定します。そうしないと、エージェントのセットアップ中に UI 初期化エラーが表示されます。</block>
+  <block id="328d5228f325395bc3a386f41499640a" category="list-text">CPU と RAM の要件を満たすインスタンス タイプ。NetAppn2-standard-8 を推奨しています。</block>
+  <block id="36321f8de6704271c20efb18c2788361" category="paragraph">Podman をインストールして設定するには、次の手順に従います。</block>
+  <block id="e7655ce2e211e4106a4d229011bca18b" category="list-text">podman-compose パッケージ バージョン 1.0.6 をインストールします。</block>
+  <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。</block>
+  <block id="e822146085e921b554750abcae74cd4a" category="paragraph">Podman は、公式の Red Hat Enterprise Linux リポジトリから入手できます。</block>
+  <block id="97c0d440ee76e86ece38ee9da4a462cb" category="list-text">システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。</block>
+  <block id="93052470e7c6a20358c8d89c161e4880" category="paragraph">podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。</block>
+  <block id="657da9022df45645ff2569b61278d3c3" category="paragraph">サポートされている Docker エンジン バージョンをインストールするには、手順に従ってください。最新バージョンはコンソールでサポートされていないため、インストールしないでください。</block>
+  <block id="ae41cdf98d6f24f84727785b0c41cda9" category="paragraph">NetApp は、Canvas の名前を *Systems* ページに変更しました。*ストレージ &gt; 管理* メニューから *システム* ページに移動します。</block>
+  <block id="6f111d20190d5490668e3e0ac2cad5d2" category="paragraph-title">Red Hat Enterprise Linux (RHEL) 9.6 および Podman 5.4.0 のサポート</block>
+  <block id="db70fced03768e8735fbdebf7ea67e66" category="paragraph">NetApp Console通知を送信する電子メール アドレスが *service@console.bluexp.netapp.com* から *service@console.netapp.com* に変更されました。NetApp、NetApp Consoleの電子メール通知を引き続き受信できるように、電子メール ルールを更新して *service@console.netapp.com* を許可することを推奨しています。</block>
+  <block id="026970f0ac157044199489d6744c2491" category="doc">コンソールエージェント 4.2.0</block>
+  <block id="7051fe17573689080a1f11b0e88a8603" category="paragraph">4.2.0 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
+  <block id="dfcd07d4790b963532ec4f8f70f184cd" category="paragraph-title">Google Cloud Infrastructure Manager のサポート</block>
+  <block id="221dc7db98837c8091cba0d42f55b28d" category="inline-link-macro">クラウドデプロイメントマネージャー</block>
+  <block id="e7858dcbf9687c88e071775eb4ee07ea" category="paragraph">NetApp、Google Cloud でエージェントをデプロイし、管理するために、Google Cloud Deployment Manager ではなく Google Cloud Infrastructure Manager（IM）を使用するようになりました。この変更は、Googleが廃止する予定であるためです。<block ref="9574f21b6b64ac1c3366333a9bb489f6" category="inline-link-macro-rx"></block> 。</block>
+  <block id="817a59a137d2f36b17e19b14b0e90545" category="inline-link-macro">権限変更ログを表示します。</block>
+  <block id="05345eddc0e94be562e27e8d53b608ae" category="list-text">4.2.0 以降の新しいエージェントはすべて Infrastructure Manager を使用するため、デプロイメントに使用するユーザー アカウントとサービス アカウントの両方の権限を更新する必要があります。<block ref="ca3a237b8d0ef6729093b3abe4bab2f0" category="inline-link-macro-rx"></block></block>
+  <block id="cc598dc1e413aff136dd2366a85faf46" category="list-text">エージェントをデプロイすると、デプロイ ファイルを保存するための Google Cloud バケットも作成されます。</block>
+  <block id="d9dfb1e70d9002b82990e5020a243087" category="list-title">コンソールエージェントの構成チェックの改善</block>
+  <block id="1c113e32e8394b861faad1f61a9626cb" category="inline-link-macro">コンソール エージェントに必要なエンドポイントの詳細について説明します。</block>
+  <block id="675d71adc8a1b2329a23e817b7275840" category="list-text">コンソール エージェントは、構成チェックを実行するときに、非推奨のエンドポイントをチェックするようになりました。  4.0.0 以降の新しいエンドポイント リストに更新していない場合、システムが以前のエンドポイント リストにアクセスできる場合はインストールが成功します。<block ref="4fa9d5f65f1179ca8dedab794aee5677" category="inline-link-macro-rx"></block></block>
+  <block id="5cf1eebafa9e566db5b16d2f75b10866" category="inline-link-macro">コンソール エージェントで構成チェックを実行する方法を学習します。</block>
+  <block id="532e2205eae250e20138ac0d4fb7670a" category="list-text">コンソールまたはエージェントのメンテナンス コンソールからインストールされたコンソール エージェントの構成チェックを実行し、接続を確認して問題をトラブルシューティングします。<block ref="2d14832e5c27ace253e7c4b1295d1814" category="inline-link-macro-rx"></block></block>
+  <block id="f1a69f998a4fd4d34f139b76d2b1cf5d" category="paragraph-title">NetApp Consoleからエージェントソフトウェアを直接ダウンロード</block>
+  <block id="ffb09157eddacde0f2ddbb27b8b5a58d" category="inline-link-macro">NetApp Consoleからコンソール エージェント ソフトウェアを直接ダウンロードする方法を説明します。</block>
+  <block id="0d8ee60431ecde7e8c0ca3d789c24bae" category="paragraph">エージェントを手動でインストールする必要がある場合は、 NetAppサポート サイトに加えて、 NetApp Consoleから直接エージェント ソフトウェアにアクセスできます。<block ref="3ce006bd909dc885369b2f86674a08a3" category="inline-link-macro-rx"></block></block>
+  <block id="f33a1c02aef9134dd317909d568855ae" category="paragraph-title">資格情報の有効期限切れに関する通知を設定する機能</block>
+  <block id="eb85d454a2ba07f1bf0f8e315ae0b696" category="paragraph">サービス アカウントとフェデレーションの資格情報の有効期限が切れた場合の通知を設定します。 7日間または30日間から選択してください。コンソールに通知が表示され、適切なロールを持つユーザーに電子メールが送信されます。組織管理者はサービス アカウント通知を受け取ります。組織管理者、フェデレーション管理者、およびフェデレーション閲覧者はフェデレーション通知を受け取ります。</block>
+  <block id="c76ecba1e00b52577de6653acbf29014" category="paragraph-title">フェデレーションを有効にすると、ローカルログインは利用できなくなります</block>
+  <block id="e713ec00d2b4c1f46099d8669c70bc4a" category="paragraph">コンソール組織に対してフェデレーションを有効にすると、ユーザーはローカル ログインを使用できなくなり、フェデレーション ログインに送信されます。</block>
+  <block id="37922d4b00cf704156c5276d88caa05c" category="paragraph-title">ストレージ管理ページの使いやすさの向上</block>
+  <block id="e8f9974435fe7b24ffa11827d0104693" category="paragraph">ONTAPオンプレミス システム (および FSx for ONTAP) に関する詳細情報を、ストレージ管理ページから簡単に表示および管理できるようになりました。</block>
+  <block id="c513928c0b95afec773bd29d135d4632" category="list-text">*Discoverable systems* ページでは、利用可能なシステムのタブ表示から概要情報が分離されているため、検出可能なシステムに関する包括的な情報を簡単に表示できます。</block>
+  <block id="044a03cc529cee34c57112a210e50b35" category="paragraph">最初の 2 つのオプションでは、コンソールは AWS セキュリティ トークン サービスを使用して、常にローテーションする一時的な認証情報を取得します。このプロセスはベストプラクティスであり、自動かつ安全です。</block>
+  <block id="b0d37b69696e5fe98085933a2a7e3fc1" category="paragraph">NetApp Consoleで組織間のパートナーシップを構築することで、パートナーは組織の境界を越えてNetAppリソースを安全に管理し、コラボレーションを合理化し、セキュリティを強化できます。</block>
+  <block id="d7046de4945385aed3cb44fde274d256" category="doc">メンテナンスコンソールによるエージェントの検証</block>
+  <block id="af6e565b77baba04e851ef6db3453fab" category="paragraph">コンソール エージェント メンテナンス コンソールを使用して、コンソール エージェントのインストールと構成を検証できます。</block>
+  <block id="2df2419e3b3e4992394516227a5f4a71" category="section-title">構成チェッカーの検証</block>
+  <block id="11d2b70f92f5671a073ee7f95edbc568" category="paragraph">その<block ref="2df2419e3b3e4992394516227a5f4a71" prefix=" " category="inline-code"></block>コマンドを使用すると、コンソール エージェントの構成を検証できます。</block>
+  <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">パラメータ</block>
+  <block id="bb9f0d8e73ffa6630952dc1ecc6cd9de" category="paragraph"><block ref="6a11199e55b0cb53d751c5170e5f74f9" prefix="" category="inline-code"></block> - *必須* - </block>
+  <block id="69dfddf838a2ddd2939ee5adc69cb83c" category="paragraph">検証するサービスを 1 つ以上選択します。有効なサービス名は次のとおりです。<block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block>必要なコンソール エンドポイントへのネットワーク接続を検証します。</block>
+  <block id="1fde504b28ae1c1b6dbb99c104b00a85" category="paragraph"><block ref="693f786102104e01b7396235926fc506" prefix="" category="inline-code"></block>--*必須*-- 実行する検証タイプを 1 つ以上選択します。有効な検証タイプは次のとおりです: *<block ref="25835188a2355e9530d3a10fcbe4c65b" prefix=" " category="inline-code"></block>必要なコンソール エンドポイントへのネットワーク接続を検証します。</block>
+  <block id="b3c3244f084b65704359870cc6488d93" category="paragraph"><block ref="f2d537814e28e44e0e35d5b4ce13cadb" prefix="" category="inline-code"></block>--*オプション*--</block>
+  <block id="d076e244720434cf026cb278c7f19d8e" category="paragraph">検証に使用するプロキシ サーバーの URL を指定します。エージェントがプロキシ サーバーを使用するように構成されている場合に必要です。</block>
+  <block id="775c73e442d845c4596a67e7c69aefd9" category="paragraph"><block ref="b58f4fd799634e7ef624ae15a007f9bb" prefix="" category="inline-code"></block>--*オプション*--</block>
+  <block id="4ed623d06dfe32e4f16db9d33c5ede6c" category="paragraph">検証に使用する 1 つ以上の証明書ファイルへのパスを指定します。証明書ファイルは PEM 形式である必要があります。複数のパスはコンマで区切ります。エージェントがカスタム証明書を使用する場合、このパラメータは必須です。</block>
+  <block id="6a90f9864a2f9aa8de0590c60d07a970" category="section-title">構成チェッカーの検証例</block>
+  <block id="56cc3a7f96b8e67c7d92a9185e36c08e" category="listing-title">基本的な検証:</block>
+  <block id="2947152e0492b862524897c4ae5ba389" category="listing-title">エージェントにプロキシ サーバーが使用される場合の検証:</block>
+  <block id="97df144968d77a81cf138d0e4021ce2c" category="listing-title">エージェントに証明書が使用される場合の検証:</block>
+  <block id="6db60e859007b84c686f5dc3f04f4697" category="section-title">プロキシ取得</block>
+  <block id="5b9ef687e725b42e8780bea1b481641c" category="paragraph">その<block ref="6db60e859007b84c686f5dc3f04f4697" prefix=" " category="inline-code"></block>コマンドは、現在の透過プロキシ サーバーの構成に関する情報を表示します。現在の透過プロキシ サーバーの構成を表示するには、次のコマンドを使用します。</block>
+  <block id="e08f6bee8517842a48e4ef6996aea3e0" category="section-title">プロキシ取得の例</block>
+  <block id="73c7d09b23bd1ddf9009062714384bf3" category="paragraph">現在の透過プロキシ サーバーの構成を表示するには、次のコマンドを使用します。</block>
+  <block id="08bc9d3537a56e203564c5b4357049f4" category="section-title">プロキシ追加</block>
+  <block id="74c09d7b43cd297a5639a898e7348c8b" category="paragraph">その<block ref="08bc9d3537a56e203564c5b4357049f4" prefix=" " category="inline-code"></block>コマンドは、エージェントが透過プロキシ サーバーを使用するように構成します。</block>
+  <block id="0e2fd9178e3f3c1cede27d7b2ecab1c8" category="paragraph"><block ref="681b381a05010f3412144ddec4fb6462" prefix="" category="inline-code"></block></block>
+  <block id="6868c5dea32c658d31e34cd6c643eda9" category="paragraph">プロキシ サーバーの証明書ファイルへのパスを指定します。証明書ファイルは PEM 形式である必要があります。証明書ファイルがコマンドと同じディレクトリにあることを確認するか、証明書ファイルへの完全パスを指定します。</block>
+  <block id="b7660892597c4cc86dbc7d99b33701af" category="section-title">プロキシ追加の例</block>
+  <block id="091092579ca8cede1b760e7c5a90a003" category="section-title">プロキシの更新</block>
+  <block id="6902b4aa3527b74bdb35b5dd12aec412" category="paragraph">その<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>コマンドを使用すると、透過プロキシの証明書を更新できます。</block>
+  <block id="6f1a60eec202a10b5b6d62f479ba4428" category="paragraph"><block ref="681b381a05010f3412144ddec4fb6462" prefix="" category="inline-code"></block>プロキシ サーバーの証明書ファイルへのパスを指定します。証明書ファイルは PEM 形式である必要があります。</block>
+  <block id="06b30352eda5cf9b69816fe23dff936f" category="section-title">プロキシ更新の例</block>
+  <block id="ef5ebb9e0c08ee0463e7503ff1111f4c" category="section-title">プロキシ削除</block>
+  <block id="f07ee52c9fc05f9047d0eb5e87de40b1" category="paragraph">その<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>コマンドは、エージェントから透過プロキシ サーバーの構成を削除します。</block>
+  <block id="7aa5255fb9f7e29b797e1c6816a0d999" category="section-title">プロキシ削除の例</block>
+  <block id="e1c2619e19fc02c38aacafc93d795901" category="summary">ユーザーに運用サポートアナリストの役割を割り当てて、アラートと監視へのアクセスを許可することができます。この役割を持つユーザーはサポートケースを開くこともできます。</block>
+  <block id="3db89b44d26706e71a450352c7c5a1da" category="list-text">*災害復旧管理者*: あらゆるアクションを実行します。</block>
+  <block id="1e732ca66bd89df595b8e795e5dfa4ac" category="list-text">*災害復旧フェールオーバー管理者*: フェールオーバーと移行を実行します。</block>
+  <block id="014b84d038553d60cf09cbddcb4e7d08" category="list-text">*災害復旧アプリケーション管理者*: レプリケーション プランを作成します。レプリケーション プランを変更します。テストフェイルオーバーを開始します。</block>
+  <block id="ca931702830a76aaa24d5f451156d2b4" category="list-text">*災害復旧ビューアー*: 情報の表示のみ。</block>
+  <block id="71aa2505b70e192a741f69ce63677f4b" category="cell">災害復旧フェイルオーバー管理者</block>
+  <block id="49f16ca5444f519e5203bb5067957eef" category="cell">災害復旧アプリケーション管理者</block>
+  <block id="49868b41c479810c405bc3509cdb1907" category="cell">ユーザーがNetApp Data Classificationスキャン結果を表示できるようにします。このロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つリソースのレポートを生成できます。これらのユーザーは、ボリューム、バケット、またはデータベース スキーマのスキャンを有効または無効にすることはできません。分類には管理者の役割がありません。</block>
+  <block id="7fefc96661449151a3bee08edda3e255" category="paragraph">これらの制限は、 NetApp Consoleと管理（エージェント、SaaS (Software as a Service) プラットフォームなど）のセットアップに固有のものです。</block>
+  <block id="332ea1ed79fb36acca4a28cb73bfb8c3" category="section-title">Google Cloud ユーザー アカウントの権限</block>
+  <block id="83ad392c56898ad2bc9258551bd9dc50" category="paragraph">以下のカスタムロールは、Google Cloud ユーザーにエージェントのデプロイに必要な権限を付与します。このカスタム ロールを、エージェントを展開するユーザーに適用します。</block>
+  <block id="3434c5106687454490c5ce3fd3325b7e" category="example-title">Google Cloud ユーザー アカウントの権限を表示する</block>
+  <block id="5e03aefcc897db1801bbaa45747a2971" category="paragraph">以下のカスタムロールは、コンソール エージェントに接続された Google Cloud サービス アカウントに、Google Cloud ネットワーク内のリソースとプロセスを管理するために必要な権限を付与します。</block>
+  <block id="d25721a787a66e973329bd6a7db30c28" category="paragraph">このカスタム ロールを、コンソール エージェント VM に接続されたサービス アカウントに適用します。</block>
+  <block id="60067761727ed2480c4d7988a096bea6" category="example-title">Google サービス アカウントの権限を表示する</block>
+  <block id="2ed702ae3741d2ab2632b3029a0f8e32" category="inline-link-macro">Google の権限変更ログを確認する</block>
+  <block id="46bc318b70c402ba98ca33c35bb84afc" category="inline-link-macro">Google Cloud サービス アカウントを追加する方法を確認する</block>
+  <block id="8dcaddb2ef42a50a271974a377b95e29" category="paragraph">後続のリリースで新しい権限が追加または削除されるので、ロールが最新であることを確認します。変更ログには、必要な新しい権限がすべてリストされます。<block ref="d7c0ba232558007d3f0cd6897a857261" category="inline-link-macro-rx"></block> <block ref="a191fc816c4388da3117cded8f9ecd39" category="inline-link-macro-rx"></block></block>
+  <block id="99b25e2af002c77f33933ee7b2cca7b6" category="paragraph">コンソール エージェントは、カスタムロールの権限を使用して、Google Cloud ネットワーク内のCloud Volumes ONTAPリソースとNetAppデータサービス プロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。</block>
+  <block id="ba28f37a50f35b5b62bf9d0cebb79e6a" category="section-title">Cloud Volumes ONTAPで使用される権限</block>
+  <block id="45c85e2fcbcad00a3b3aff5447627a5b" category="paragraph">コンソール エージェントは、カスタム ロールの権限を使用して、Google Cloud ネットワーク内のCloud Volumes ONTAP のリソースとプロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。</block>
+  <block id="05fedb77715f320017d52f66da44b1b0" category="example-title">Cloud Volumes ONTAPの権限</block>
+  <block id="1978fc577443d8841749463c81c14e1b" category="cell">*config.deployments.create*</block>
+  <block id="7011503cf97d17706ff8163876018fb2" category="cell">Google Cloud Infrastructure Manager を使用してCloud Volumes ONTAP仮想マシン インスタンスをデプロイします。</block>
+  <block id="90859ccfb98bd6357cfd9888e01654f7" category="cell">*config.deployments.delete*</block>
+  <block id="1c823c113d5b21854ab32fb4006d239e" category="cell">*config.deployments.deleteState*</block>
+  <block id="4aef8bfd5362969e0a14daaef6aa2206" category="cell">*config.deployments.get*</block>
+  <block id="39871c3ed7f15a544a81dd29a8f6d5be" category="cell">*config.deployments.getLock*</block>
+  <block id="6f5bdaf7fca0180616b4ae4d03d58a28" category="cell">*config.deployments.getState*</block>
+  <block id="3f52aa0019ca6c92a0b2ce5ef1585bb7" category="cell">*config.deployments.list*</block>
+  <block id="91ea1caf7d132e95307e5641e3eb678a" category="cell">*config.deployments.lock*</block>
+  <block id="5cea6e43ecc95c4f000154ebf17ffe41" category="cell">*config.deployments.update*</block>
+  <block id="efda381a960e37f6857c4e005d80f4d4" category="cell">*config.deployments.updateState*</block>
+  <block id="527ac12ac6f7f67f130d341677f2666a" category="cell">*config.operations.get*</block>
+  <block id="09cbd21df4067bcce7aca81e1d55d7f9" category="cell">*config.previews.get*</block>
+  <block id="4f81cd437237e3919ef57ccf6f896eab" category="cell">*config.previews.list*</block>
+  <block id="25beaddbb4bfa58c896401064f614a49" category="cell">*config.resources.list*</block>
+  <block id="b47fce5e3845afb2bed0589dd445f4b1" category="cell">*config.revisions.get*</block>
+  <block id="6e9d76e8116c43eb4d333f5e51a59158" category="cell">*compute.forwardingRules.create*</block>
+  <block id="1204549a036d6f1fa0e77a33b66ba5fc" category="cell">バックエンド サービスへのトラフィック ルーティング用の転送ルールを作成します。</block>
+  <block id="51f4457e4ce6f71c07304daee30d55a4" category="cell">*compute.forwardingRules.delete*</block>
+  <block id="5625df4a9e5fad50b5ed7483ef854ba0" category="cell">既存の転送ルールを削除します。</block>
+  <block id="2747d1bc3f8c306dcd87a303e8d46ac4" category="cell">*compute.forwardingRules.get*</block>
+  <block id="518cdf23dbd2f2786baa04a1b251789f" category="cell">既存の転送ルールの詳細を取得します。</block>
+  <block id="be4ea57d513cf3eb072627e23f9ab07d" category="cell">*compute.forwardingRules.setLabels*</block>
+  <block id="f5be53441d39f1e3531a7e05f4c9cb41" category="cell">組織の転送ルールのラベルを設定または更新します。</block>
+  <block id="2df5b761a5ee0099ec61a876d1eb970a" category="cell">compute.globalOperations.get</block>
+  <block id="e91ad303361b5fdc2d2c5336e085b399" category="cell">*コンピューティングヘルスチェックの作成*</block>
+  <block id="cd9c9102f061e7080ec044f1de8be60f" category="cell">バックエンド サービスの健全性を監視するためにヘルス チェックを作成および管理します。</block>
+  <block id="69c63ecfab8251f5332b3f093989452b" category="cell">*compute.healthChecks.delete*</block>
+  <block id="91fc716755c2ccb249d395deaddc51d1" category="cell">*compute.healthChecks.get*</block>
+  <block id="1d0d0f012d65150fe8a659ddc5246c6b" category="cell">*compute.healthChecks.useReadOnly*</block>
+  <block id="51c92eabc0dc72041fa2d618c547a3b3" category="cell">*コンピューティングインスタンスの使用*</block>
+  <block id="60f9a4c26542d13806ebfceda41b622a" category="cell">仮想マシン インスタンス (開始、停止、接続操作) を使用します。</block>
+  <block id="7694a96be1a3706f979373e54371672a" category="cell">*compute.resourcePolicies.create*</block>
+  <block id="69c9360ed1f6b9f362a8bb04cc2f9976" category="cell">自動リソース管理のためのリソース ポリシーを作成および管理します。</block>
+  <block id="5c1436481ccb784f0099a466930a9d4b" category="cell">*compute.resourcePolicies.delete*</block>
+  <block id="79c6a1fb6244cc1241f910477c4585fa" category="cell">*compute.resourcePolicies.get*</block>
+  <block id="946819076f570f98fc2669abc5ebb221" category="cell">*logging.logEntries.create*</block>
+  <block id="365620bda694367699a9e977c245c99d" category="cell">監視、デバッグ、監査のためにログエントリを作成してルーティングします。</block>
+  <block id="24073bc546846441de345b264ff9733b" category="cell">*logging.logEntries.route*</block>
+  <block id="af467f9a70abceae95e202a38cab79bc" category="cell">*cloudbuild.builds.get*</block>
+  <block id="f93ac717762cc8fe2abd2d13026a6e0c" category="cell">*iam.serviceAccounts.create*</block>
+  <block id="97f415e7bf3ae2691c030ac84e8a7ab4" category="cell">*iam.serviceAccountKeys.create*</block>
+  <block id="d097a5e02531e9d8606a4b9016211fb0" category="cell">ストレージオブジェクトの作成</block>
+  <block id="18e2e5fd1011d7608a9039b76959973f" category="cell">Google Cloud Storage バケット内のオブジェクト (ファイル) を作成および管理します。</block>
+  <block id="877dd561e8b326f974d6649bf025cc47" category="cell">ストレージオブジェクトの削除</block>
+  <block id="75c9b1d045f5bd31e38a2fe8fc99685b" category="cell">*compute.addresses.createInternal*</block>
+  <block id="a01609be65377c550c1f3f9c95e301e9" category="cell">リソース割り当てのために、VPC ネットワーク内に内部 IP アドレスを作成します。</block>
+  <block id="67ce54621d28117b563f4a29bba7ea15" category="cell">*compute.addresses.deleteInternal*</block>
+  <block id="eb8b5851a4b3813a0b7d8271e9390168" category="cell">リソースのクリーンアップのために内部 IP アドレスを削除します。</block>
+  <block id="4a9033f2bc4de0bb816e8bb0b5d4f954" category="cell">*compute.addresses.setLabels*</block>
+  <block id="c9100b96b75009cc80c0b2c138896bf1" category="cell">アドレス リソースのラベルを更新します。</block>
+  <block id="f80885b173b15e9ea2234f900e51e402" category="cell">*compute.addresses.useInternal*</block>
+  <block id="d52c5aaec9bec122290d546577a86741" category="cell">ネットワーク通信には内部 IP アドレスを使用します。</block>
+  <block id="6cf64ac632269f6541c1da37cd735d52" category="cell">トラフィック ルーティング用のバックエンド サービスを作成および管理します。</block>
+  <block id="d8e30cab07834e99dd81b60d6b1eb695" category="cell">*compute.regionBackendServices.delete*</block>
+  <block id="d71ae8f686ef0997fc9137df9832b3a3" category="cell">*compute.regionBackendServices.update*</block>
+  <block id="6ffa2106d04c5f11c8219cf00218c867" category="cell">*compute.regionBackendServices.use*</block>
+  <block id="8afe1371ad74901fbfca12f6507394f7" category="cell">*compute.instanceGroups.create*</block>
+  <block id="31837e29feaf463250d44e6b633644d1" category="cell">*compute.instanceGroups.delete*</block>
+  <block id="a231c32ea863f8bc2002ebefe954023f" category="cell">*compute.instanceGroups.update*</block>
+  <block id="008a67a6e66af0c91194d03a05ed9ca6" category="cell">*compute.instanceGroups.use*</block>
+  <block id="fee9fb5dae000866e2823c08577b5639" category="paragraph">コンソール エージェントは、カスタムロールの権限を使用して、Google Cloud ネットワーク内のNetApp Backup and Recovery のリソースとプロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。</block>
+  <block id="a696d2e75adad45b4173573021542ba7" category="example-title">NetApp Backup and Recoveryの権限の表示</block>
+  <block id="d5ca4eff15be43a2a5ebcb745899160d" category="paragraph">コンソール エージェントは、カスタムロールの権限を使用して、Google Cloud ネットワーク内のNetApp Data Classification のリソースとプロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。</block>
+  <block id="b8eb36ca4f2271dadd68e9f2f9d9f7b6" category="example-title">NetApp Data Classificationの表示権限</block>
+  <block id="7a5913617c08594a652178dd2ed587bf" category="paragraph">追加された権限と削除された権限は以下に記載されています。</block>
+  <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">2025年12月8日</block>
+  <block id="a70054dca76030cd2e7762887511fa92" category="paragraph">NetApp は、Google Cloud でコンソール エージェントをデプロイおよび実行するために、Google Cloud Deployment Manager から Google Cloud Infrastructure Manager（IM）に移行しています。この変更をサポートするために、次の権限が追加されました。</block>
+  <block id="9460401daaedfab505f0b1eadec0cb88" category="paragraph">エージェントをデプロイする Google Cloud ユーザーには、次の追加権限が必要です。</block>
+  <block id="e198f8a2ce0814efb4de119c73722602" category="list-text">ストレージフォルダの作成</block>
+  <block id="89d185c8189ca757fe8cb3161961069c" category="list-text">iam.serviceAccount.actAs</block>
+  <block id="7ead255295d96ea6de46a56ecad36e7d" category="list-text">config.deployments.create</block>
+  <block id="b00d998cacf7883bfb4d60b7f7b8dbe6" category="list-text">config.operations.get</block>
+  <block id="a77f8f520fc19fb807c12336eeb6e0f1" category="paragraph">日常業務に使用する Google Cloud のサービス アカウントには、次の追加権限が必要です。</block>
+  <block id="9c91d0a29ec8c0b89d42f6feb1b8b213" category="list-text">cloudbuild.接続リスト</block>
+  <block id="d22ee60cbc3ff63b0c7d8688d3ea75be" category="list-text">cloudbuild.repositories.accessReadToken</block>
+  <block id="7848d877069a98fcc73fd0262b50d5dc" category="list-text">cloudbuild.リポジトリリスト</block>
+  <block id="0e3e1067c310a197feb8287fe779ff81" category="list-text">cloudquotas.quotas.get</block>
+  <block id="a3b719875760fa108520adf339dee562" category="list-text">config.artifacts.import</block>
+  <block id="55cd451af096a93731b1e3d7e3429492" category="list-text">config.deployments.deleteState</block>
+  <block id="cd9b1a46a946b53d4fc054be8e028486" category="list-text">config.deployments.getLock</block>
+  <block id="995b280499f482fca8bf81a7ede55340" category="list-text">config.deployments.getState</block>
+  <block id="1b4d8bafd38f9bad158f509da5c485c6" category="list-text">config.deployments.updateState</block>
+  <block id="44c2cc8ff119df5a29b6a6ccee852e48" category="list-text">config.previews.upload</block>
+  <block id="2ae9911aee10f552e485d65f256fff31" category="list-text">config.revisions.getState</block>
+  <block id="77d9be0a069b64561dcc06d563707f9c" category="list-text">ログ記録.logEntries.create</block>
+  <block id="3cae5e024ce5f256c03eeb10c3ad4e19" category="list-text">ストレージオブジェクトの更新</block>
+  <block id="f91284eb9de39f3d7e2a21cf5994571d" category="list-text">iam.serviceAccounts.get</block>
+  <block id="5c2f845538267fafb03ca99ce0dc3f48" category="paragraph">Cloud Volumes ONTAP をデプロイするには、次の追加の権限が必要です。</block>
+  <block id="c163c809c2a0ca0c891139509a6ca65b" category="list-text">cloudbuild.builds.get</block>
+  <block id="8e69fbd4d05c5ecfcdaac5c9421ee931" category="list-text">config.deployments.delete</block>
+  <block id="36f59298cb7a695036b1f410b8e7a025" category="list-text">config.deployments.get</block>
+  <block id="12daf2722e0103231cb0dd113fd916ec" category="list-text">config.deployments.list</block>
+  <block id="f3c2c7bca6e535ec0244d2c8af06efd6" category="list-text">config.deployments.update</block>
+  <block id="44f3f9390fa3822713843b857e27b3fe" category="list-text">config.previews.get</block>
+  <block id="fa7d29940aaac850cb247120a867e23e" category="list-text">config.previews.list</block>
+  <block id="7f61b5a7a77adeb9e9f1790f452235c4" category="list-text">config.revisions.get</block>
+  <block id="635a490a44ad3028c4acede5b8484cc2" category="list-text">config.resources.list</block>
+  <block id="9989c44bee8dee4cb7f01266fafda94f" category="list-text">iam.serviceAccountKeys.create</block>
+  <block id="ee0506f09d6a7976f7ba93533e0a25a9" category="list-text">iam.serviceAccounts.create</block>
+  <block id="dd7e4582f9999edf3b40d496843fa529" category="paragraph">Cloud Volumes ONTAPの日常的な運用に使用するサービス アカウントには、次の追加の権限が必要です。</block>
+  <block id="5fb65d9866ed23983e68b0b7fddd0d15" category="list-text">compute.addresses.createInternal</block>
+  <block id="c2bc156592faf656f145d38a4823df20" category="list-text">compute.addresses.deleteInternal</block>
+  <block id="ef34b61f78525c155ff3b7e9c0b2be2d" category="list-text">compute.addresses.setLabels</block>
+  <block id="4a8f52870b8cc6d947fd943722432e79" category="list-text">compute.addresses.useInternal</block>
+  <block id="d57d373ca78566db582c948674bf5b7f" category="list-text">compute.forwardingRules.create</block>
+  <block id="448aabe83942e3bb9ef25173b527144e" category="list-text">compute.forwardingRules.delete</block>
+  <block id="1a7221f68ba7e68197368c69ea43808d" category="list-text">compute.forwardingRules.get</block>
+  <block id="dc6e0a34de68c5e87f224f9d6f2eaddb" category="list-text">compute.forwardingRules.setLabels</block>
+  <block id="663b65df0be4371d9e7079d58724e3ca" category="list-text">compute.healthChecks.create</block>
+  <block id="6b0675fc6728b7261f48895cbdaa668b" category="list-text">compute.healthChecks.delete</block>
+  <block id="761112290226750e922fcc41ea79565e" category="list-text">compute.healthChecks.get</block>
+  <block id="1ff641b277f1da1dc822ea8772aa7f7d" category="list-text">compute.healthChecks.useReadOnly</block>
+  <block id="007222f573b047fac21eb0c4010a04ae" category="list-text">compute.instanceGroups.create</block>
+  <block id="6fc202cfdabf6604e7e98cf9441ec3c9" category="list-text">compute.instanceGroups.delete</block>
+  <block id="b27ccd3f28fa1ae2c4c242ce4375b0d3" category="list-text">compute.instanceGroups.update</block>
+  <block id="756a8e6c0ce83856240259584a8f747f" category="list-text">compute.instanceGroups.use</block>
+  <block id="5a83ef5325f336f451391fea875ac476" category="list-text">コンピューティングインスタンスの使用</block>
+  <block id="3341ac251f90eb3feda08fa2af91c449" category="list-text">compute.regionBackendServices.delete</block>
+  <block id="8c5348684057fdb6ea94f53d6e91debe" category="list-text">compute.regionBackendServices.更新</block>
+  <block id="413fb87968c99457c19bc2cedb8a31e4" category="list-text">compute.regionBackendServices.use</block>
+  <block id="0b257a26721cbf5e7a10cd95066d7b49" category="list-text">compute.resourcePolicies.create</block>
+  <block id="738061c248141ac453e6b42cf82c2a8e" category="list-text">compute.resourcePolicies.delete</block>
+  <block id="32c06ac076ffdc3b2ccf1214454c6243" category="list-text">compute.resourcePolicies.get</block>
+  <block id="72ca8180a628903ebd8eea37a1c92bcc" category="list-text">ログ記録.logEntries.ルート</block>
+  <block id="f3f7e6957e72ba16a78d58e8ac7a43cd" category="list-text">config.deployments.lock</block>
+  <block id="33fb61c4c752d541a30c9ba8194091da" category="section-title">2025年11月26日</block>
+  <block id="90e7692e452d555a08bc34e6a38ecd0c" category="section-title">2023年2月6日</block>
+  <block id="47d455f427b4674cc00157a8a2934409" category="paragraph">このポリシーには次の権限が追加されました:</block>
+  <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">分類ドキュメント</block>
+  <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
+  <block id="9b894a36c4ebb01df8469fa98daba21f" category="summary">NetApp、Google Cloud にコンソール エージェントをデプロイするときに、コンソール エージェントに使用されるサービス アカウントに必要な権限を更新することがあります。</block>
+  <block id="d6d6c33d995f278b372d3d2f7a10524d" category="doc">Google Cloud デプロイメントのコンソール エージェント権限を管理する</block>
+  <block id="daf1fbd23852baa7dc431ec2658722d9" category="inline-link-macro">必要なGoogle権限リストを確認する</block>
+  <block id="c35025e4c3afa1c5d645893259cbce25" category="paragraph"><block ref="df29c88404b44d3e8df12197653b40b2" category="inline-link-macro-rx"></block>。</block>
+  <block id="4860b54918e1580143a7c01984c21fe1" category="paragraph">Google Cloud Console を使用して、サービス アカウントに割り当てられた IAM ロールを新しい権限セットに合わせて更新します。</block>
+  <block id="34e82a1501cca5af4e190be9c03c0fbb" category="inline-link-macro">Google Cloud ドキュメント: カスタムロールを編集する</block>
+  <block id="322a5219fa870735040f24cb43da8303" category="paragraph"><block ref="322a5219fa870735040f24cb43da8303" category="inline-link-macro-rx"></block></block>
+  <block id="16d62d361fbd1153b9fe75b035aa7c51" category="paragraph">コンソールエージェントの既存の透過プロキシサーバーを更新するには、<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>コマンドを使用して透過プロキシサーバーを削除するか、<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>指示。詳細については、次のドキュメントを参照してください。<block ref="1b2f5cd7e64b458e431e40fa20571324" category="inline-link-macro-rx"></block> 。</block>
+  <block id="6c69cf52de815b4e3d26a89db4f26c8a" category="paragraph">組織を作成すると、1 つのプロジェクトが含まれます。プロジェクトを追加してリソースとフォルダーを管理し、関連するプロジェクトをグループ化します。</block>
+  <block id="2bc87be9675bb8a069610f3430a1e3e8" category="paragraph">組織のリソース構造内に最大 7 レベルのフォルダーとプロジェクトを作成できます。フォルダー内にフォルダーを作成して、組織のネストされた構造を構築します。</block>
+  <block id="e403ae80ee5407293bf60157033759c8" category="list-text">フォルダまたはプロジェクトの詳細を入力してください:</block>
+  <block id="e3a15113b550a2e5d2560f495223b05a" category="list-text">*名前と場所*: 名前を入力し、フォルダーまたはプロジェクトの階層内の場所を選択します。フォルダーまたはプロジェクトを組織の下または別のフォルダー内に配置します。</block>
+  <block id="d67cf2e8c3d97e0eed9561206ed3e9ca" category="paragraph">アクセスとロールを割り当てるには、「メンバーを追加」を選択します。</block>
+  <block id="70fdeef63f056c10a8cdcc5f3fbc8eb3" category="inline-xref">リソースを削除する方法を学ぶ</block>
+  <block id="d66b571e57bc053e8b1ad8e43b91ee4e" category="paragraph">フォルダーまたはプロジェクトを削除する前に、そこにリソースが含まれていないことを確認してください。<block ref="2ce0cd71e2b80657c61ce3337cd46c5f" category="inline-xref-macro-rx"></block>。</block>
+  <block id="2634a609591cac73e3cee6d75b3a8299" category="section-title">フォルダまたはプロジェクトに関連付けられたリソースを変更する</block>
+  <block id="e1485c69a5051018e6f541a40ac64334" category="paragraph">メンバー アクセスを変更してリソース アクセスを制御します。</block>
+  <block id="3aab6b4b2431f483b7e867e25c7dc17f" category="paragraph">メンバー アクセスが上位階層レベルから継承されている場合、下位レベルでメンバー アクセスを変更することはできません。アクセスを変更するには、上位階層レベルでメンバーの権限を更新します。あるいは、 <block ref="2e250d63a19626cb0aeed14260bd2f59" category="inline-link-macro-rx"></block>.</block>
+  <block id="dc56ef546dad0049c4fe42c718817af1" category="paragraph">組織には、ユーザー アカウントとサービス アカウントの 2 種類のメンバーを追加できます。アプリケーションはサービス アカウントを使用して API タスクを自動的に実行します。ユーザーはユーザー アカウントを使用してログインし、リソースを管理します。</block>
+  <block id="0a8fdeec95373b802409cb30efb505de" category="paragraph">X.509 証明書。PEM、CRT、または CER 形式である必要があります。</block>
+  <block id="81e59e8e4bf25fcadc8863ff39bcfc04" category="list-text">証明書の有効期限通知を設定します。 7日間または30日間を選択します。有効期限通知は、スーパー管理者または組織管理者のロールを持つユーザーにメールで送信され、コンソールに表示されます。</block>
+  <block id="1753b2507377ecd0602ed08944b9d1b2" category="paragraph">メンバーを削除すると、そのメンバーの権限は取り消されますが、コンソールとNetAppサポート サイトのアカウントは保持されます。</block>
+  <block id="a758e86398ed40898f56dc46bf8d3b3b" category="list-text">クライアント ID とクライアント シークレットをダウンロードまたはコピーします。+ コンソールにはクライアント シークレットが 1 回だけ表示されます。コピーまたはダウンロードして安全に保管してください。</block>
+  <block id="a3d754fa6f41840770949e7570cb4dc0" category="paragraph">ユーザーは、削除後にログインするときに、MFA を再度設定する必要があります。ユーザーが MFA デバイスへのアクセスを一時的に失っただけの場合は、MFA を設定したときに保存した回復コードを使用してログインできます。</block>
+  <block id="e41f7fb86a6b410ae7e503a4ccc83ef6" category="paragraph">組織に関連付けられている検出されたリソースと未検出のリソースの両方を表示できます。システムはストレージ リソースを検出し、コンソールに追加されるまでそれらを未検出としてマークします。</block>
+  <block id="fc35c417bbb2c0ec9081298a05b3071b" category="admonition">ユーザーがロールに関連付けることができないため、リソース ページではAmazon FSx for NetApp ONTAPリソースが除外されます。  *システム* ページまたはワークロードから表示します。</block>
+  <block id="62ff23d019d29d30b64698ce14ebdc09" category="list-text">利用可能なオプションを使用してリソースを見つけます。</block>
+  <block id="aaff9ff22e8e6739bcdc8cc79cb3614b" category="inline-link-macro">関連付けられたフォルダとプロジェクトへのアクセス権を持つメンバーを表示する</block>
+  <block id="8b3be42a579e101783dbee0366282232" category="admonition">どの組織メンバーがリソースにアクセスできるのかを確認するには、<block ref="d3f770deeda88cc3cea0d73a63cf7240" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d23b81e3e519af34ae1d1368f055ab5c" category="admonition">検出されたリソースを組織全体から削除するには、「*システム*」ページに移動してシステムを削除します。</block>
+  <block id="876c2ced14b405974ba0e1bffce7d0d5" category="paragraph">*組織管理者* または *フォルダーまたはプロジェクト管理者* の役割を持つユーザーには、他のユーザーに役割を割り当てる責任があります。プロジェクトまたはフォルダーごとにアクセス ロールを割り当てることができます。プロジェクトまたはフォルダごとにアクセス ロールを割り当てます。たとえば、あるプロジェクトのユーザーに Ransomware Resilience 管理者ロールを割り当て、別のプロジェクトのユーザーにSnapCenter管理者ロールを割り当てます。フォルダー内のすべてのプロジェクトに対する Ransomware Resilience 管理者ロールをユーザーに付与するには、フォルダー レベルでロールを割り当てます。</block>
+  <block id="ed59bba19a8b1215a5da046694459de3" category="paragraph">セキュリティを強化するために、IAM 戦略に従ってロールを割り当てます。  IAM ロールは、ユーザー アクセスを必要なものだけに制限します。</block>
+  <block id="dff14b7229aae5e011982b724c9867d3" category="paragraph">組織にメンバーを追加すると、そのメンバーにロールを割り当てるように求められます。現在割り当てられているロールを確認できます。</block>
+  <block id="d47741191d2932672428925f5a647577" category="paragraph">メンバーの役割を変更してアクセスを更新します。</block>
+  <block id="c0597b9526c7ff0d7645fb305fbbb302" category="paragraph">NetApp ONTAP用の Amazon FsX:</block>
+  <block id="deb5ab06bb4820c3ddaf1096673112dd" category="paragraph">Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。</block>
+  <block id="92e2005838617f772873a40c3ba5ee87" category="paragraph">コンソール エージェント ソフトウェアを実行しているホストが、オペレーティング システム、RAM、およびポートの要件を満たしていることを確認します。</block>
+  <block id="7477110a62e7e23490489fd5dde0d9b3" category="paragraph">コンソール エージェントがハイブリッド クラウド内のリソースを管理できるように、ネットワークの場所が次の要件をサポートしていることを確認します。</block>
+  <block id="4a2cd5186a22d99f67f031f282623ea8" category="paragraph">次のいずれかのオプションを使用して、 NetApp Consoleに AWS 権限を付与します。</block>
+  <block id="cb55016940e52c1c7b882becfa96703f" category="paragraph">前提条件を満たしたら、Linux ホストにソフトウェアを手動でインストールします。</block>
+  <block id="3a25df27a9593be32d58d660128319d2" category="paragraph">コンソールエージェントをインストールした後、コンソールエージェントが AWS 内のデータとストレージインフラストラクチャを管理できるように、設定した AWS 権限を提供します。</block>
+  <block id="5c585aa7c70930b73bdafb2cb9161f8a" category="paragraph">作成した IAM ロールをコンソールエージェント EC2 インスタンスにアタッチします。</block>
+  <block id="ba496406ba5e67bd0a486e583b8cd337" category="paragraph">\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \//https://config.googleapis.com/v1/projects</block>
+  <block id="483f6f30ec7b7da81659462b08c18e8a" category="paragraph">次の例では、プロジェクト レベルで「agentDeployment」という名前のロールを作成します。</block>
+  <block id="606b4f54c298cd84f8c9d4d46c74820a" category="paragraph">gcloud iam ロール コネクタデプロイメントを作成 --project=myproject --file=agent-deployment.yaml</block>
+  <block id="a447c4cad2c58e7308d516639f777fff" category="section-title">ステップ 3: エージェントで使用する Google Cloud サービス アカウントを作成する</block>
+  <block id="45395d40cf0cb384fb917beab8ac0f5c" category="admonition">Google Cloud にエージェントをデプロイすると、エージェントによってデプロイ ファイルを保存するためのバケットが作成されます。</block>
+  <block id="478d6690c508002bc0e2f9e7c3ee46d5" category="paragraph">Google Cloud にコンソール エージェントをデプロイする前に、いくつかの Google Cloud API を有効にする必要があります。</block>
+  <block id="1fe3854ddba0cc13565a8a11d513f6a0" category="paragraph">以下のものを用意してください。</block>
+  <block id="989c7bb7f839354a9ed40ce2b95bb63a" category="list-text">プロンプトに従ってインスタンスをセットアップして起動します。</block>
+  <block id="b95854f0f3ff949a77556f1717a2053a" category="list-text">*パブリック IP*: コンソール エージェント VM でパブリック IP アドレスを使用するには、Basic SKU を選択します。</block>
+  <block id="14b08ffab5a3e9a00dd089a48d7cb1c4" category="paragraph">代わりに標準 SKU IP アドレスを使用する場合、コンソールはパブリック IP ではなく、コンソール エージェントのプライベート IP アドレスを使用します。コンソールにアクセスするために使用するマシンがプライベート IP アドレスに到達できない場合、コンソールは機能しません。</block>
+  <block id="e1f80f0a4664c5510ddb707c6296dd7c" category="paragraph">マネージド ID を使用すると、コンソール エージェント VM は資格情報なしで Microsoft Entra ID に対して自身を識別できます。<block ref="f91ce7faef49711445322691b4d6ac64" category="inline-link-rx"></block> 。</block>
+  <block id="c5edce68cac7e488fac66a004543fa61" category="paragraph">ログインが別の組織に関連付けられている場合は、新しいログインでサインアップする必要があります。そうしないと、セットアップ画面に制限モードを有効にするオプションが表示されません。</block>
+  <block id="b32ca5cd3832e04aa3786f7647aecbcc" category="paragraph">コンソール エージェントを Azure Marketplace から、または手動でインストールした場合は、以前に設定したアクセス許可を付与する必要があります。</block>
+  <block id="124aaa31a673a34a4e59e30b752222d2" category="paragraph">編集するには、コンソール エージェントに接続する必要があります。</block>
+  <block id="aa5691f6d018b3411c8082be20a4529f" category="paragraph">パートナー ユーザーには次のロールを割り当てることができます。</block>
+  <block id="eaec472b7a23d9c311a78adfd10b1032" category="inline-link-macro">バックアップとリカバリの管理者</block>
+  <block id="9b589496549b93bcbd645613fbd03c9c" category="list-text"><block ref="9b589496549b93bcbd645613fbd03c9c" category="inline-link-macro-rx"></block></block>
+  <block id="760c54a4cb61f02dffc8c2331073ae1d" category="list-text"><block ref="760c54a4cb61f02dffc8c2331073ae1d" category="inline-link-macro-rx"></block></block>
+  <block id="db385d806691bf16134876c971ae47ac" category="list-text"><block ref="db385d806691bf16134876c971ae47ac" category="inline-link-macro-rx"></block></block>
+  <block id="456f871b4f4ee4ad376b69d4040f5120" category="list-text"><block ref="456f871b4f4ee4ad376b69d4040f5120" category="inline-link-macro-rx"></block></block>
+  <block id="78d4b42d7cc8df44f5151da486494386" category="list-text"><block ref="78d4b42d7cc8df44f5151da486494386" category="inline-link-macro-rx"></block></block>
+  <block id="67580c71df9613a2df5711bad8e2d8d9" category="list-text"><block ref="67580c71df9613a2df5711bad8e2d8d9" category="inline-link-macro-rx"></block></block>
+  <block id="7c53729e63e6d7b0ff2748297a9aa07d" category="paragraph">次の表に、一般的なエラー メッセージとその修正方法を示します。</block>
+  <block id="5d3a908b240fe98ac0740455635b4cc0" category="list-text">それでも問題が解決しない場合は、サポートにお問い合わせください。</block>
+  <block id="13ab9425db1c4ad9c7ca529999f6de24" category="list-text">エージェントが必要なエンドポイントへの送信アクセス権を持っていることを確認します。<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
+  <block id="61af83c0a45998dc351428765c46fa2e" category="section-title">コンソールエージェントで構成チェックを実行する</block>
+  <block id="764bd6d2ae27e2401a34b6a482fc62d3" category="paragraph">コンソールまたはエージェント メンテナンス コンソールからコンソール エージェントの構成チェックを実行し、それらが接続されていることを確認します。</block>
+  <block id="cb4e992a592d7b26e6c218cdde9ee1b5" category="inline-link-macro">config-checker validate コマンドの使用について詳しく学習します。</block>
+  <block id="adbf5b321ab6472093079a96d92216c2" category="paragraph">エージェント メンテナンス コンソールを使用して構成チェックを実行することもできます。<block ref="714b5c6de8ffee7e082263b89290e9dc" category="inline-link-macro-rx"></block></block>
+  <block id="2c8b526b02d94d86279aebb87311c90d" category="admonition">ステータスが「*接続済み*」であるエージェントのみを検証できます。</block>
+  <block id="2256ce9e5331fffeb7ded438ec67c9bf" category="list-title">コンソールからの手順</block>
+  <block id="80ed8e269497520c11a5f07aaac10ca9" category="list-text">確認するコンソール エージェントのアクション メニューを選択し、[検証] を選択します。</block>
+  <block id="5dfebfd3b68f37eb76c1cbde60947384" category="inline-image-macro">エージェントの「アクション」メニューの「検証」オプションを示すスクリーンショット。</block>
+  <block id="9bccdaa91fb930ee1c5038c140fa7f92" category="paragraph"><block ref="9bccdaa91fb930ee1c5038c140fa7f92" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5a8fd97dba9bde8fc857ad3f2edce597" category="paragraph">検証には最大 15 分かかる場合があります。完了すると結果が表示されます。</block>
+  <block id="e1da0c759b99b40771f992144973dfe0" category="paragraph">インストール中に送信接続を検証する構成チェックを無効にする必要がある場合があります。たとえば、Government Cloud 環境にエージェントを手動でインストールする場合は、構成チェックを無効にする必要があります。無効にしないと、インストールは失敗します。</block>
+  <block id="749e848334a8eeda9b72b5bef6878260" category="paragraph">_com/opt/application/netapp/service-manager-2/config.json_ ファイルで _skipConfigCheck_ フラグを設定することで、構成チェックを無効にします。デフォルトでは、このフラグは false に設定されており、構成チェックによってエージェントの送信アクセスが検証されます。チェックを無効にするには、このフラグを true に設定します。この手順を完了する前に、JSON 構文を理解しておいてください。</block>
+  <block id="174dd97dd1f160583ac76fa482fa6a5e" category="section-title">2025年12月10日</block>
+  <block id="426c031f387e762bb968fd54671cf5a6" category="paragraph">&lt;stdin&gt; 内の未解決のディレクティブ - include::_whatsnew/2025-12-08.adoc[]</block>
+  <block id="5a348f21cc989b094b43c61561c46351" category="sidebar">構成チェック</block>
+  <block id="800641e37082e3805299720dbe2f9713" category="sidebar">透過プロキシ</block>
 </blocks>

@@ -47,7 +47,7 @@ VPCとサブネット:: コンソール エージェントを作成するとき�
 
 
  a| 
-\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \//https://config.googleapis.com/v1/projects
  a| 
 Google Cloud 内のリソースを管理します。
 
@@ -149,12 +149,16 @@ Google Cloud ユーザーが Google Cloud からコンソール エージェン�
 +
 .. 次の権限を含む YAML ファイルを作成します。
 +
+[%collapsible]
+====
 [source, yaml]
 ----
 title: Console agent deployment policy
-description: Permissions for the user who deploys the NetApp Console agent
+description: Permissions for the user who deploys the Console agent
 stage: GA
 includedPermissions:
+
+- cloudbuild.builds.get
 - compute.disks.create
 - compute.disks.get
 - compute.disks.list
@@ -192,6 +196,19 @@ includedPermissions:
 - compute.zoneOperations.get
 - compute.zones.get
 - compute.zones.list
+- *config.deployments.create*
+- *config.operations.get*
+- *config.deployments.delete*
+- *config.deployments.deleteState*
+- *config.deployments.get*
+- *config.deployments.getState*
+- *config.deployments.list*
+- *config.deployments.update*
+- *config.deployments.updateState*
+- *config.previews.get*
+- *config.previews.list*
+- *config.revisions.get*
+- *config.resources.list*
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
@@ -210,8 +227,18 @@ includedPermissions:
 - deploymentmanager.types.list
 - resourcemanager.projects.get
 - compute.instances.setServiceAccount
+- *iam.serviceAccounts.actAs*
+- *iam.serviceAccounts.create*
 - iam.serviceAccounts.list
+- *iam.serviceAccountKeys.create*
+- *storage.buckets.create*
+- *storage.buckets.get*
+- *storage.objects.create*
+- *storage.folders.create*
+- *storage.objects.list*
+
 ----
+====
 .. Google Cloud から Cloud Shell を有効にします。
 .. 必要な権限を含む YAML ファイルをアップロードします。
 .. カスタムロールを作成するには、 `gcloud iam roles create`指示。
@@ -248,10 +275,10 @@ Google Cloud 内のリソースを管理するためにコンソールが必要�
 .. 必要な権限を含む YAML ファイルをアップロードします。
 .. カスタムロールを作成するには、 `gcloud iam roles create`指示。
 +
-次の例では、プロジェクト レベルで「connector」という名前のロールを作成します。
+次の例では、プロジェクト レベルで「agent」という名前のロールを作成します。
 
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+`gcloud iam roles create connector --project=myproject --file=agent.yaml`
 
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud ドキュメント: カスタムロールの作成と管理"^]
@@ -350,6 +377,7 @@ Console エージェントとCloud Volumes ONTAP をデプロイする前に、�
 .手順
 . プロジェクトで次の Google Cloud API を有効にします。
 +
+** クラウド インフラストラクチャ マネージャー API
 ** クラウド デプロイメント マネージャー V2 API
 ** クラウドロギングAPI
 ** クラウド リソース マネージャー API

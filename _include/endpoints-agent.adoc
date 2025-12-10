@@ -22,6 +22,13 @@
 
 | AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細についてはAWSドキュメントを参照してください"^]
 
+| NetApp ONTAP向け Amazon FsX:
+
+* api.workloads.netapp.com
+
+
+| Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
+
 | \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
 
 | Azure パブリック リージョン内のリソースを管理します。
@@ -38,7 +45,7 @@
 
 | Azure China リージョンのリソースを管理します。
 
-| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \//https://config.googleapis.com/v1/projects
 
 | Google Cloud 内のリソースを管理します。
 

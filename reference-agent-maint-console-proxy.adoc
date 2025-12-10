@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: reference-agent-maint-console-proxy.html 
+keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
+summary: コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。 
+---
+= 透過プロキシコマンド
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。
+
+
+
+== エージェントメンテナンスコンソールにアクセスする
+
+コンソール エージェント ホストからメンテナンス コンソールにアクセスできます。次のディレクトリに移動します。
+
+[source, cli]
+----
+/opt/application/netapp/service-manager-2/agent-maint-console
+----
+
+
+=== 任意のコマンドのヘルプを表示する
+
+コマンドのヘルプを表示するには、 `--help`コマンドに。たとえば、 `proxy add`コマンドを実行するには、次のコマンドを使用します。
+
+[source, cli]
+----
+./agent-maint-console proxy add --help
+----
+
+
+== プロキシ取得
+
+その `proxy get`コマンドは、現在の透過プロキシ サーバーの構成に関する情報を表示します。現在の透過プロキシ サーバーの構成を表示するには、次のコマンドを使用します。
+
+
+
+=== プロキシ取得の例
+
+現在の透過プロキシ サーバーの構成を表示するには、次のコマンドを使用します。
+
+[source, cli]
+----
+./agent-maint-console proxy get
+----
+
+
+== プロキシ追加
+
+その `proxy add`コマンドは、エージェントが透過プロキシ サーバーを使用するように構成します。
+
+
+
+=== パラメータ
+
+`-c <certificate file>`
+
+[role="quick-margin-para"]
+プロキシ サーバーの証明書ファイルへのパスを指定します。証明書ファイルは PEM 形式である必要があります。証明書ファイルがコマンドと同じディレクトリにあることを確認するか、証明書ファイルへの完全パスを指定します。
+
+
+
+=== プロキシ追加の例
+
+透過プロキシサーバーを追加するには、次のコマンドを使用します。 `/home/ubuntu/myCA1.pem`プロキシ サーバーの証明書ファイルへのパスです。証明書ファイルは PEM 形式である必要があります。
+
+[source, cli]
+----
+./agent-maint-console proxy add -c /home/ubuntu/myCA1.pem
+----
+
+
+== プロキシの更新
+
+その `proxy update`コマンドを使用すると、透過プロキシの証明書を更新できます。
+
+
+
+=== パラメータ
+
+`-c <certificate file>`プロキシ サーバーの証明書ファイルへのパスを指定します。証明書ファイルは PEM 形式である必要があります。
+
+証明書ファイルがコマンドと同じディレクトリにあることを確認するか、証明書ファイルへの完全パスを指定します。
+
+
+
+=== プロキシ更新の例
+
+透過プロキシサーバーの証明書を更新するには、次のコマンドを使用します。 `/home/ubuntu/myCA1.pem`プロキシ サーバーの新しい証明書ファイルへのパスです。証明書ファイルは PEM 形式である必要があります。
+
+[source, cli]
+----
+./agent-maint-console proxy update -c /home/ubuntu/myCA1.pem
+----
+
+
+== プロキシ削除
+
+その `proxy remove`コマンドは、エージェントから透過プロキシ サーバーの構成を削除します。
+
+
+
+=== プロキシ削除の例
+
+透過プロキシ サーバーを削除するには、次のコマンドを使用します。
+
+[source, cli]
+----
+./agent-maint-console proxy remove
+----

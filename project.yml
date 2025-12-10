@@ -244,8 +244,10 @@ sidebar:
     entries:
     - title: エージェントメンテナンスコンソール
       entries:
-      - title: エージェントメンテナンスコンソール
+      - title: 構成チェック
         url: "/reference-agent-maint-console.html"
+      - title: 透過プロキシ
+        url: "/reference-agent-maint-console-proxy.html"
     - title: 権限
       entries:
       - title: 権限の概要

@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: reference-agent-maint-console-config-checker.html 
+keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
+summary: コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。 
+---
+= メンテナンスコンソールによるエージェントの検証
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+コンソール エージェント メンテナンス コンソールを使用して、コンソール エージェントのインストールと構成を検証できます。
+
+
+
+== エージェントメンテナンスコンソールにアクセスする
+
+コンソール エージェント ホストからメンテナンス コンソールにアクセスできます。次のディレクトリに移動します。
+
+[source, cli]
+----
+/opt/application/netapp/service-manager-2/agent-maint-console
+----
+
+
+== 構成チェッカーの検証
+
+その `config-checker validate`コマンドを使用すると、コンソール エージェントの構成を検証できます。
+
+
+
+=== パラメータ
+
+`--services <comma-separated list of services to validate>` - *必須* - 
+
+[role="quick-margin-para"]
+検証するサービスを 1 つ以上選択します。有効なサービス名は次のとおりです。*`PLATFORM`必要なコンソール エンドポイントへのネットワーク接続を検証します。
+
+`--validationTypes <comma-separated list validation types to run>`--*必須*-- 実行する検証タイプを 1 つ以上選択します。有効な検証タイプは次のとおりです: * `NETWORK`必要なコンソール エンドポイントへのネットワーク接続を検証します。
+
+`--proxy <url>`--*オプション*--
+
+[role="quick-margin-para"]
+検証に使用するプロキシ サーバーの URL を指定します。エージェントがプロキシ サーバーを使用するように構成されている場合に必要です。
+
+`--certs <paths>`--*オプション*--
+
+[role="quick-margin-para"]
+検証に使用する 1 つ以上の証明書ファイルへのパスを指定します。証明書ファイルは PEM 形式である必要があります。複数のパスはコンマで区切ります。エージェントがカスタム証明書を使用する場合、このパラメータは必須です。
+
+
+
+=== 構成チェッカーの検証例
+
+.基本的な検証:
+[source, cli]
+----
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK
+----
+.エージェントにプロキシ サーバーが使用される場合の検証:
+[source, cli]
+----
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --proxy http://proxy.company.com:8080
+----
+.エージェントに証明書が使用される場合の検証:
+[source, cli]
+----
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
+----
+
+
+=== 任意のコマンドのヘルプを表示する
+
+コマンドのヘルプを表示するには、 `--help`コマンドに。たとえば、 `proxy add`コマンドを実行するには、次のコマンドを使用します。
+
+[source, cli]
+----
+./agent-maint-console proxy add --help
+----

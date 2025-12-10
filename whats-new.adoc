@@ -18,6 +18,57 @@ NetApp Console管理機能の新機能（アイデンティティおよびアク
 
 
 
+== 2025年12月10日
+
+
+
+=== コンソールエージェント 4.2.0
+
+4.2.0 リリースでは、標準モードと制限モードの両方がサポートされています。
+
+コンソール エージェントのこのリリースには、セキュリティの改善、バグ修正、および次の機能が含まれています。
+
+.Google Cloud Infrastructure Manager のサポート
+NetApp、Google Cloud でエージェントをデプロイし、管理するために、Google Cloud Deployment Manager ではなく Google Cloud Infrastructure Manager（IM）を使用するようになりました。この変更は、Googleが廃止する予定であるためです。link:https://docs.cloud.google.com/deployment-manager/docs/deprecations["クラウドデプロイメントマネージャー"] 。
+
+* 4.2.0 以降の新しいエージェントはすべて Infrastructure Manager を使用するため、デプロイメントに使用するユーザー アカウントとサービス アカウントの両方の権限を更新する必要があります。link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log["権限変更ログを表示します。"^]
+* エージェントをデプロイすると、デプロイ ファイルを保存するための Google Cloud バケットも作成されます。
+
+
+.コンソールエージェントの構成チェックの改善
+* コンソール エージェントは、構成チェックを実行するときに、非推奨のエンドポイントをチェックするようになりました。  4.0.0 以降の新しいエンドポイント リストに更新していない場合、システムが以前のエンドポイント リストにアクセスできる場合はインストールが成功します。link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["コンソール エージェントに必要なエンドポイントの詳細について説明します。"^]
+* コンソールまたはエージェントのメンテナンス コンソールからインストールされたコンソール エージェントの構成チェックを実行し、接続を確認して問題をトラブルシューティングします。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["コンソール エージェントで構成チェックを実行する方法を学習します。"^]
+
+
+.NetApp Consoleからエージェントソフトウェアを直接ダウンロード
+エージェントを手動でインストールする必要がある場合は、 NetAppサポート サイトに加えて、 NetApp Consoleから直接エージェント ソフトウェアにアクセスできます。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html#install-the-console-agent-manually["NetApp Consoleからコンソール エージェント ソフトウェアを直接ダウンロードする方法を説明します。"^]
+
+
+
+=== NetApp Console管理
+
+このリリースには以下が含まれます。
+
+.資格情報の有効期限切れに関する通知を設定する機能
+サービス アカウントとフェデレーションの資格情報の有効期限が切れた場合の通知を設定します。 7日間または30日間から選択してください。コンソールに通知が表示され、適切なロールを持つユーザーに電子メールが送信されます。組織管理者はサービス アカウント通知を受け取ります。組織管理者、フェデレーション管理者、およびフェデレーション閲覧者はフェデレーション通知を受け取ります。
+
+.フェデレーションを有効にすると、ローカルログインは利用できなくなります
+コンソール組織に対してフェデレーションを有効にすると、ユーザーはローカル ログインを使用できなくなり、フェデレーション ログインに送信されます。
+
+.ストレージ管理ページの使いやすさの向上
+ONTAPオンプレミス システム (および FSx for ONTAP) に関する詳細情報を、ストレージ管理ページから簡単に表示および管理できるようになりました。
+
+* *Discoverable systems* ページでは、利用可能なシステムのタブ表示から概要情報が分離されているため、検出可能なシステムに関する包括的な情報を簡単に表示できます。
+
+
+
+
+== 2025年12月8日
+
+<stdin> 内の未解決のディレクティブ - include::_whatsnew/2025-12-08.adoc[]
+
+
+
 == 2025年11月10日
 
 
@@ -31,7 +82,7 @@ NetApp Console管理機能の新機能（アイデンティティおよびアク
 .エージェントステータスインジケーターの名前を変更しました
 コンソール エージェントのステータス インジケーターの名前を *アクティブ* と *非アクティブ* から *接続済み* と *切断済み* に変更し、目的をより明確にしました。
 
-.Redhat Enterprise Linux (RHEL) 9.6 および Podman 5.4.0 のサポート
+.Red Hat Enterprise Linux (RHEL) 9.6 および Podman 5.4.0 のサポート
 コンソール エージェントを手動でインストールする場合、エージェントは Podman 5.4.0 を搭載した RHEL 9.6 をサポートするようになりました。さらに、RHEL 9 以降を使用する場合、 NetApp はpodman-compose 1.5.0 をサポートします。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html["オペレーティング システムの要件を表示"]。
 
 
@@ -41,7 +92,7 @@ NetApp Console管理機能の新機能（アイデンティティおよびアク
 このリリースには以下が含まれます。
 
 .NetApp Console通知用の新しいメールアドレス
-NetApp Console通知を送信する電子メール アドレスが *service@console.bluexp.netapp.com* から *service@console.netapp.com* に変更されました。NetApp、 NetApp Consoleの電子メール通知を引き続き受信できるように、電子メール ルールを *service@console.netapp.com* を許可するように更新することを推奨しています。
+NetApp Console通知を送信する電子メール アドレスが *service@console.bluexp.netapp.com* から *service@console.netapp.com* に変更されました。NetApp、NetApp Consoleの電子メール通知を引き続き受信できるように、電子メール ルールを更新して *service@console.netapp.com* を許可することを推奨しています。
 
 
 
@@ -63,7 +114,7 @@ NetApp は、ほとんどのメニュー オプションを左側のナビゲー
 
 ==== Canvasはシステムページに置き換えられました
 
-NetApp は、Canvas の名前を *Systems* ページに変更しました。  *ストレージ > 管理* メニューから *システム* ページに移動します。
+NetApp は、Canvas の名前を *Systems* ページに変更しました。*ストレージ > 管理* メニューから *システム* ページに移動します。
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png["システムページのスクリーンショット。"]
 

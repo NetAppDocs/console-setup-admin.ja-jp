@@ -13,7 +13,7 @@
 .エージェントステータスインジケーターの名前を変更しました
 コンソール エージェントのステータス インジケーターの名前を *アクティブ* と *非アクティブ* から *接続済み* と *切断済み* に変更し、目的をより明確にしました。
 
-.Redhat Enterprise Linux (RHEL) 9.6 および Podman 5.4.0 のサポート
+.Red Hat Enterprise Linux (RHEL) 9.6 および Podman 5.4.0 のサポート
 コンソール エージェントを手動でインストールする場合、エージェントは Podman 5.4.0 を搭載した RHEL 9.6 をサポートするようになりました。さらに、RHEL 9 以降を使用する場合、 NetApp はpodman-compose 1.5.0 をサポートします。link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html["オペレーティング システムの要件を表示"]。
 
 
@@ -23,4 +23,4 @@
 このリリースには以下が含まれます。
 
 .NetApp Console通知用の新しいメールアドレス
-NetApp Console通知を送信する電子メール アドレスが *service@console.bluexp.netapp.com* から *service@console.netapp.com* に変更されました。NetApp、 NetApp Consoleの電子メール通知を引き続き受信できるように、電子メール ルールを *service@console.netapp.com* を許可するように更新することを推奨しています。
+NetApp Console通知を送信する電子メール アドレスが *service@console.bluexp.netapp.com* から *service@console.netapp.com* に変更されました。NetApp、NetApp Consoleの電子メール通知を引き続き受信できるように、電子メール ルールを更新して *service@console.netapp.com* を許可することを推奨しています。

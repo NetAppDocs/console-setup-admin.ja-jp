@@ -20,7 +20,7 @@ NetApp Consoleを制限モードで起動して実行すると、制限モード
 
 * https://docs.netapp.com/us-en/storage-management-azure-netapp-files/index.html["Azure NetApp Filesドキュメント"^]
 * https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["バックアップとリカバリのドキュメント"^]
-* https://docs.netapp.com/us-en/data-services-data-classification/index.html["データ分類ドキュメント"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/index.html["分類ドキュメント"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html["Cloud Volumes ONTAPドキュメント"^]
 * https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html["デジタルウォレットのドキュメント"^]
 * https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html["オンプレミスのONTAPクラスタのドキュメント"^]

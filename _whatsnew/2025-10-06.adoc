@@ -18,7 +18,7 @@ NetApp は、ほとんどのメニュー オプションを左側のナビゲー
 
 ==== Canvasはシステムページに置き換えられました
 
-NetApp は、Canvas の名前を *Systems* ページに変更しました。  *ストレージ > 管理* メニューから *システム* ページに移動します。
+NetApp は、Canvas の名前を *Systems* ページに変更しました。*ストレージ > 管理* メニューから *システム* ページに移動します。
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png["システムページのスクリーンショット。"]
 
