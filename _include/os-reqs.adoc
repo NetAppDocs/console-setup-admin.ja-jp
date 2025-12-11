@@ -66,9 +66,6 @@ Podman バージョン 5.4.0 と podman-compose 1.5.0。
  a| 
 強制モードまたは許可モードでサポートされます
 
-* Cloud Volumes ONTAPシステムの管理は、オペレーティング システムで SELinux が有効になっているエージェントではサポートされません。
-
-
 
 
  a| 
@@ -87,9 +84,6 @@ Podman バージョン 4.9.4 と podman-compose 1.5.0。
  a| 
 強制モードまたは許可モードでサポートされます
 
-* Cloud Volumes ONTAPシステムの管理は、オペレーティング システムで SELinux が有効になっているエージェントではサポートされません。
-
-
 
 
  a| 
@@ -107,9 +101,6 @@ Podman バージョン 4.6.1 または 4.9.4 と podman-compose 1.0.6。
 <<podman-configuration,Podman の構成要件を表示する>> 。
  a| 
 強制モードまたは許可モードでサポートされます
-
-* Cloud Volumes ONTAPシステムの管理は、オペレーティング システムで SELinux が有効になっているエージェントではサポートされません。
-
 
 
 

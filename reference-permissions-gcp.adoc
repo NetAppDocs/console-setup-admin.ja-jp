@@ -70,19 +70,19 @@ includedPermissions:
 - compute.zoneOperations.get
 - compute.zones.get
 - compute.zones.list
-- *config.deployments.create*
-- *config.operations.get*
-- *config.deployments.delete*
-- *config.deployments.deleteState*
-- *config.deployments.get*
-- *config.deployments.getState*
-- *config.deployments.list*
-- *config.deployments.update*
-- *config.deployments.updateState*
-- *config.previews.get*
-- *config.previews.list*
-- *config.revisions.get*
-- *config.resources.list*
+- config.deployments.create
+- config.operations.get
+- config.deployments.delete
+- config.deployments.deleteState
+- config.deployments.get
+- config.deployments.getState
+- config.deployments.list
+- config.deployments.update
+- config.deployments.updateState
+- config.previews.get
+- config.previews.list
+- config.revisions.get
+- config.resources.list
 - deploymentmanager.compositeTypes.get
 - deploymentmanager.compositeTypes.list
 - deploymentmanager.deployments.create
@@ -101,15 +101,15 @@ includedPermissions:
 - deploymentmanager.types.list
 - resourcemanager.projects.get
 - compute.instances.setServiceAccount
-- *iam.serviceAccounts.actAs*
-- *iam.serviceAccounts.create*
+- iam.serviceAccounts.actAs
+- iam.serviceAccounts.create
 - iam.serviceAccounts.list
-- *iam.serviceAccountKeys.create*
-- *storage.buckets.create*
-- *storage.buckets.get*
-- *storage.objects.create*
-- *storage.folders.create*
-- *storage.objects.list*
+- iam.serviceAccountKeys.create
+- storage.buckets.create
+- storage.buckets.get
+- storage.objects.create
+- storage.folders.create
+- storage.objects.list
 
 ----
 ====
@@ -136,45 +136,45 @@ title: NetApp Console agent
 description: Permissions for the service account associated with the Console agent.
 stage: GA
 includedPermissions:
-- *cloudbuild.builds.get*
-- *cloudbuild.connections.list*
-- *cloudbuild.repositories.accessReadToken*
-- *cloudbuild.repositories.list*
-- *cloudquotas.quotas.get*
+- cloudbuild.builds.get
+- cloudbuild.connections.list
+- cloudbuild.repositories.accessReadToken
+- cloudbuild.repositories.list
+- cloudquotas.quotas.get
 - cloudkms.cryptoKeys.getIamPolicy
 - cloudkms.cryptoKeys.setIamPolicy
 - cloudkms.keyRings.get
 - cloudkms.keyRings.getIamPolicy
 - cloudkms.keyRings.setIamPolicy
-- *config.artifacts.import*
-- *config.deployments.create*
-- *config.deployments.delete*
-- *config.deployments.deleteState*
-- *config.deployments.get*
-- *config.deployments.getLock*
-- *config.deployments.getState*
-- *config.deployments.update*
-- *config.deployments.updateState*
-- *config.previews.upload*
-- *config.revisions.get*
-- *config.revisions.getState*
-- *config.deployments.getLock*
-- *config.deployments.list*
-- *config.deployments.lock*
-- *config.operations.get*
-- *config.previews.get*
-- *config.previews.list*
-- *config.resources.list*
+- config.artifacts.import
+- config.deployments.create
+- config.deployments.delete
+- config.deployments.deleteState
+- config.deployments.get
+- config.deployments.getLock
+- config.deployments.getState
+- config.deployments.update
+- config.deployments.updateState
+- config.previews.upload
+- config.revisions.get
+- config.revisions.getState
+- config.deployments.getLock
+- config.deployments.list
+- config.deployments.lock
+- config.operations.get
+- config.previews.get
+- config.previews.list
+- config.resources.list
 - compute.regionBackendServices.create
 - compute.regionBackendServices.get
 - compute.regionBackendServices.list
-- *compute.regionBackendServices.update*
+- compute.regionBackendServices.update
 - compute.networks.updatePolicy
-- *compute.addresses.createInternal*
-- *compute.addresses.deleteInternal*
-- *compute.addresses.list*
-- *compute.addresses.setLabels*
-- *compute.addresses.useInternal*
+- compute.addresses.createInternal
+- compute.addresses.deleteInternal
+- compute.addresses.list
+- compute.addresses.setLabels
+- compute.addresses.useInternal
 - compute.backendServices.create
 - compute.disks.create
 - compute.disks.createSnapshot
@@ -187,15 +187,15 @@ includedPermissions:
 - compute.firewalls.delete
 - compute.firewalls.get
 - compute.firewalls.list
-- *compute.forwardingRules.create*
-- *compute.forwardingRules.delete*
-- *compute.forwardingRules.get*
-- *compute.forwardingRules.setLabels*
+- compute.forwardingRules.create
+- compute.forwardingRules.delete
+- compute.forwardingRules.get
+- compute.forwardingRules.setLabels
 - compute.globalOperations.get
-- *compute.healthChecks.create*
-- *compute.healthChecks.delete*
-- *compute.healthChecks.get*
-- *compute.healthChecks.useReadOnly*
+- compute.healthChecks.create
+- compute.healthChecks.delete
+- compute.healthChecks.get
+- compute.healthChecks.useReadOnly
 - compute.images.get
 - compute.images.getFromFamily
 - compute.images.list
@@ -216,12 +216,12 @@ includedPermissions:
 - compute.instances.start
 - compute.instances.stop
 - compute.instances.updateDisplayDevice
-- *compute.instances.use*
-- *compute.instanceGroups.create*
-- *compute.instanceGroups.delete*
+- compute.instances.use
+- compute.instanceGroups.create
+- compute.instanceGroups.delete
 - compute.instanceGroups.get
-- *compute.instanceGroups.update*
-- *compute.instanceGroups.use*
+- compute.instanceGroups.update
+- compute.instanceGroups.use
 - compute.addresses.get
 - compute.instances.updateNetworkInterface
 - compute.instances.setMinCpuPlatform
@@ -231,11 +231,11 @@ includedPermissions:
 - compute.projects.get
 - compute.regions.get
 - compute.regions.list
-- *compute.regionBackendServices.delete*
-- *compute.regionBackendServices.use*
-- *compute.resourcePolicies.create*
-- *compute.resourcePolicies.delete*
-- *compute.resourcePolicies.get*
+- compute.regionBackendServices.delete
+- compute.regionBackendServices.use
+- compute.resourcePolicies.create
+- compute.resourcePolicies.delete
+- compute.resourcePolicies.get
 - compute.snapshots.create
 - compute.snapshots.delete
 - compute.snapshots.get
@@ -267,28 +267,28 @@ includedPermissions:
 - deploymentmanager.types.list
 - logging.logEntries.list
 - logging.privateLogEntries.list
-- *logging.logEntries.create*
-- *logging.logEntries.route*
+- logging.logEntries.create
+- logging.logEntries.route
 - monitoring.timeSeries.list
 - resourcemanager.projects.get
 - storage.buckets.create
 - storage.buckets.delete
 - storage.buckets.get
 - storage.buckets.list
-- *storage.objects.create*
-- *storage.objects.delete*
-- *storage.objects.update*
+- storage.objects.create
+- storage.objects.delete
+- storage.objects.update
 - cloudkms.cryptoKeyVersions.useToEncrypt
 - cloudkms.cryptoKeys.get
 - cloudkms.cryptoKeys.list
 - cloudkms.keyRings.list
 - storage.buckets.update
 - iam.serviceAccounts.actAs
-- *iam.serviceAccounts.create*
-- *iam.serviceAccounts.get*
+- iam.serviceAccounts.create
+- iam.serviceAccounts.get
 - iam.serviceAccounts.getIamPolicy
 - iam.serviceAccounts.list
-- *iam.serviceAccountKeys.create*
+- iam.serviceAccountKeys.create
 - storage.objects.get
 - storage.buckets.getIamPolicy
 
@@ -316,49 +316,49 @@ includedPermissions:
 | アクション | 目的 | 展開に使用されますか? | 日常業務に使用されますか? | 削除に使用されますか? 
 
 
-| *config.deployments.create* .15+| Google Cloud Infrastructure Manager を使用してCloud Volumes ONTAP仮想マシン インスタンスをデプロイします。 | はい | いいえ | いいえ 
+| config.deployments.create .15+| Google Cloud Infrastructure Manager を使用してCloud Volumes ONTAP仮想マシン インスタンスをデプロイします。 | はい | いいえ | いいえ 
 
 
-| *config.deployments.delete* | いいえ | いいえ | はい 
+| config.deployments.delete | いいえ | いいえ | はい 
 
 
-| *config.deployments.deleteState* | いいえ | いいえ | はい 
+| config.deployments.deleteState | いいえ | いいえ | はい 
 
 
-| *config.deployments.get* | いいえ | はい | いいえ 
+| config.deployments.get | いいえ | はい | いいえ 
 
 
-| *config.deployments.getLock* | いいえ | はい | いいえ 
+| config.deployments.getLock | いいえ | はい | いいえ 
 
 
-| *config.deployments.getState* | いいえ | はい | いいえ 
+| config.deployments.getState | いいえ | はい | いいえ 
 
 
-| *config.deployments.list* | いいえ | はい | いいえ 
+| config.deployments.list | いいえ | はい | いいえ 
 
 
-| *config.deployments.lock* | いいえ | はい | いいえ 
+| config.deployments.lock | いいえ | はい | いいえ 
 
 
-| *config.deployments.update* | いいえ | はい | いいえ 
+| config.deployments.update | いいえ | はい | いいえ 
 
 
-| *config.deployments.updateState* | いいえ | はい | いいえ 
+| config.deployments.updateState | いいえ | はい | いいえ 
 
 
-| *config.operations.get* | いいえ | はい | いいえ 
+| config.operations.get | いいえ | はい | いいえ 
 
 
-| *config.previews.get* | いいえ | はい | いいえ 
+| config.previews.get | いいえ | はい | いいえ 
 
 
-| *config.previews.list* | いいえ | はい | いいえ 
+| config.previews.list | いいえ | はい | いいえ 
 
 
-| *config.resources.list* | いいえ | はい | いいえ 
+| config.resources.list | いいえ | はい | いいえ 
 
 
-| *config.revisions.get* | いいえ | はい | いいえ 
+| config.revisions.get | いいえ | はい | いいえ 
 
 
 | コンピューティングディスクの作成 .7+| Cloud Volumes ONTAPのディスクを作成および管理します。 | はい | はい | いいえ 
@@ -394,31 +394,31 @@ includedPermissions:
 | compute.firewalls.list | はい | はい | いいえ 
 
 
-| *compute.forwardingRules.create* | バックエンド サービスへのトラフィック ルーティング用の転送ルールを作成します。 | いいえ | はい | いいえ 
+| compute.forwardingRules.create | バックエンド サービスへのトラフィック ルーティング用の転送ルールを作成します。 | いいえ | はい | いいえ 
 
 
-| *compute.forwardingRules.delete* | 既存の転送ルールを削除します。 | いいえ | はい | いいえ 
+| compute.forwardingRules.delete | 既存の転送ルールを削除します。 | いいえ | はい | いいえ 
 
 
-| *compute.forwardingRules.get* | 既存の転送ルールの詳細を取得します。 | いいえ | はい | いいえ 
+| compute.forwardingRules.get | 既存の転送ルールの詳細を取得します。 | いいえ | はい | いいえ 
 
 
-| *compute.forwardingRules.setLabels* | 組織の転送ルールのラベルを設定または更新します。 | いいえ | はい | いいえ 
+| compute.forwardingRules.setLabels | 組織の転送ルールのラベルを設定または更新します。 | いいえ | はい | いいえ 
 
 
 | compute.globalOperations.get | 操作のステータスを取得します。 | はい | はい | いいえ 
 
 
-| *コンピューティングヘルスチェックの作成* .4+| バックエンド サービスの健全性を監視するためにヘルス チェックを作成および管理します。 | いいえ | はい | いいえ 
+| compute.healthChecks.create .4+| バックエンド サービスの健全性を監視するためにヘルス チェックを作成および管理します。 | いいえ | はい | いいえ 
 
 
-| *compute.healthChecks.delete* | いいえ | はい | いいえ 
+| compute.healthChecks.delete | いいえ | はい | いいえ 
 
 
-| *compute.healthChecks.get* | いいえ | はい | いいえ 
+| compute.healthChecks.get | いいえ | はい | いいえ 
 
 
-| *compute.healthChecks.useReadOnly* | いいえ | はい | いいえ 
+| compute.healthChecks.useReadOnly | いいえ | はい | いいえ 
 
 
 | 計算画像取得 .4+| VM インスタンスのイメージを取得します。 | はい | いいえ | いいえ 
@@ -481,7 +481,7 @@ includedPermissions:
 | compute.instances.updateDisplayDevice | はい | はい | いいえ 
 
 
-| *コンピューティングインスタンスの使用* | 仮想マシン インスタンス (開始、停止、接続操作) を使用します。 | いいえ | はい | いいえ 
+| コンピューティングインスタンスの使用 | 仮想マシン インスタンス (開始、停止、接続操作) を使用します。 | いいえ | はい | いいえ 
 
 
 | compute.machineTypes.get | クォータを確認するためのコア数を取得します。 | はい | いいえ | いいえ 
@@ -490,13 +490,13 @@ includedPermissions:
 | compute.projects.get | 複数のプロジェクトをサポートします。 | はい | いいえ | いいえ 
 
 
-| *compute.resourcePolicies.create* .3+| 自動リソース管理のためのリソース ポリシーを作成および管理します。 | いいえ | はい | いいえ 
+| compute.resourcePolicies.create .3+| 自動リソース管理のためのリソース ポリシーを作成および管理します。 | いいえ | はい | いいえ 
 
 
-| *compute.resourcePolicies.delete* | いいえ | はい | いいえ 
+| compute.resourcePolicies.delete | いいえ | はい | いいえ 
 
 
-| *compute.resourcePolicies.get* | いいえ | はい | いいえ 
+| compute.resourcePolicies.get | いいえ | はい | いいえ 
 
 
 | 計算スナップショット作成 .5+| 永続ディスクのスナップショットを作成および管理します。 | はい | はい | いいえ 
@@ -595,10 +595,10 @@ includedPermissions:
 | ログ記録.privateLogEntries.リスト | はい | はい | いいえ 
 
 
-| *logging.logEntries.create* .2+| 監視、デバッグ、監査のためにログエントリを作成してルーティングします。 | はい | はい | いいえ 
+| ログ記録.logEntries.create .2+| 監視、デバッグ、監査のためにログエントリを作成してルーティングします。 | はい | はい | いいえ 
 
 
-| *logging.logEntries.route* | はい | はい | いいえ 
+| ログ記録.logEntries.ルート | はい | はい | いいえ 
 
 
 | リソースマネージャー.プロジェクト.取得 | 複数のプロジェクトをサポートします。 | はい | はい | いいえ 
@@ -631,7 +631,7 @@ includedPermissions:
 | cloudkms.keyRings.リスト | はい | はい | いいえ 
 
 
-| *cloudbuild.builds.get* | はい | いいえ | いいえ 
+| cloudbuild.builds.get | はい | いいえ | いいえ 
 
 
 | compute.instances.setServiceAccount .6+| Cloud Volumes ONTAPインスタンスにサービス アカウントを設定します。このサービス アカウントは、Google Cloud Storage バケットへのデータ階層化の権限を付与します。 | はい | はい | いいえ 
@@ -640,7 +640,7 @@ includedPermissions:
 | iam.serviceAccounts.actAs | はい | いいえ | いいえ 
 
 
-| *iam.serviceAccounts.create* | はい | いいえ | いいえ 
+| iam.serviceAccounts.create | はい | いいえ | いいえ 
 
 
 | iam.serviceAccounts.getIamPolicy | はい | はい | いいえ 
@@ -649,7 +649,7 @@ includedPermissions:
 | iam.serviceAccounts.list | はい | はい | いいえ 
 
 
-| *iam.serviceAccountKeys.create* | はい | いいえ | いいえ 
+| iam.serviceAccountKeys.create | はい | いいえ | いいえ 
 
 
 | ストレージオブジェクトの作成 .4+| Google Cloud Storage バケット内のオブジェクト (ファイル) を作成および管理します。 | はい | はい | いいえ 
@@ -667,16 +667,16 @@ includedPermissions:
 | 計算アドレスリスト | HA ペアを展開するときにリージョン内のアドレスを取得します。 | はい | いいえ | いいえ 
 
 
-| *compute.addresses.createInternal* | リソース割り当てのために、VPC ネットワーク内に内部 IP アドレスを作成します。 | いいえ | はい | いいえ 
+| compute.addresses.createInternal | リソース割り当てのために、VPC ネットワーク内に内部 IP アドレスを作成します。 | いいえ | はい | いいえ 
 
 
-| *compute.addresses.deleteInternal* | リソースのクリーンアップのために内部 IP アドレスを削除します。 | いいえ | はい | いいえ 
+| compute.addresses.deleteInternal | リソースのクリーンアップのために内部 IP アドレスを削除します。 | いいえ | はい | いいえ 
 
 
-| *compute.addresses.setLabels* | アドレス リソースのラベルを更新します。 | いいえ | はい | いいえ 
+| compute.addresses.setLabels | アドレス リソースのラベルを更新します。 | いいえ | はい | いいえ 
 
 
-| *compute.addresses.useInternal* | ネットワーク通信には内部 IP アドレスを使用します。 | いいえ | はい | いいえ 
+| compute.addresses.useInternal | ネットワーク通信には内部 IP アドレスを使用します。 | いいえ | はい | いいえ 
 
 
 | compute.backendServices.create | HA ペアでトラフィックを分散するためのバックエンド サービスを設定します。 | はい | いいえ | いいえ 
@@ -685,19 +685,19 @@ includedPermissions:
 | compute.regionBackendServices.create .6+| トラフィック ルーティング用のバックエンド サービスを作成および管理します。 | はい | いいえ | いいえ 
 
 
-| *compute.regionBackendServices.delete* | いいえ | はい | いいえ 
+| compute.regionBackendServices.delete | いいえ | はい | いいえ 
 
 
 | compute.regionBackendServices.get | はい | いいえ | いいえ 
 
 
-| *compute.regionBackendServices.update* | はい | はい | いいえ 
+| compute.regionBackendServices.更新 | はい | はい | いいえ 
 
 
 | compute.regionBackendServices.リスト | はい | いいえ | いいえ 
 
 
-| *compute.regionBackendServices.use* | いいえ | はい | いいえ 
+| compute.regionBackendServices.use | いいえ | はい | いいえ 
 
 
 | compute.networks.updatePolicy | HA ペアの VPC とサブネットにファイアウォール ルールを適用します。 | はい | いいえ | いいえ 
@@ -712,16 +712,16 @@ includedPermissions:
 | compute.instances.updateNetworkInterface | はい | はい | いいえ 
 
 
-| *compute.instanceGroups.create* | いいえ | はい | いいえ 
+| compute.instanceGroups.create | いいえ | はい | いいえ 
 
 
-| *compute.instanceGroups.delete* | いいえ | はい | いいえ 
+| compute.instanceGroups.delete | いいえ | はい | いいえ 
 
 
-| *compute.instanceGroups.update* | いいえ | はい | いいえ 
+| compute.instanceGroups.update | いいえ | はい | いいえ 
 
 
-| *compute.instanceGroups.use* | いいえ | はい | いいえ 
+| compute.instanceGroups.use | いいえ | はい | いいえ 
 
 
 | 監視.timeSeries.リスト .2+| Google Cloud Storage バケットに関する情報を検出します。 | はい | はい | いいえ 
