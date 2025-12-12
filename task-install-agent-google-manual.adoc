@@ -206,26 +206,34 @@ rm /var/run/docker.sock
 Podman は、公式の Red Hat Enterprise Linux リポジトリから入手できます。
 
 +
-Red Hat Enterprise Linux 9 の場合:
-
+.. Red Hat Enterprise Linux 9.6 の場合:
 +
 [source, cli]
 ----
-sudo dnf install podman-2:<version>
+sudo dnf install podman-5:<version>
 ----
 +
 <version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
 
-+
-Red Hat Enterprise Linux 8 の場合:
-
+.. Red Hat Enterprise Linux 9.1 から 9.4 の場合:
 +
 [source, cli]
 ----
-sudo dnf install podman-3:<version>
+sudo dnf install podman-4:<version>
 ----
 +
 <version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
+.. Red Hat Enterprise Linux 8 の場合:
++
+[source, cli]
+----
+sudo dnf install podman-4:<version>
+----
++
+<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
+
 
 . podman.socket サービスを有効にして起動します。
 +
@@ -240,11 +248,14 @@ sudo systemctl enable --now podman.socket
 sudo dnf install python3
 ----
 . システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。
-
-
++
 podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。
 
-. Red Hat Enterprise 9.1 ～ 9.6 を使用している場合:
+. Red Hat Enterprise 9 を使用している場合:
++
+.. EPEL リポジトリ パッケージをインストールします。
+
+
 +
 [source, cli]
 ----
@@ -261,11 +272,12 @@ sudo dnf install podman-compose-1.5.0
 
 . Red Hat Enterprise Linux 8 を使用している場合:
 +
+.. EPEL リポジトリ パッケージをインストールします。
++
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-+
 .. podman-compose パッケージ 1.0.6 をインストールします。
 +
 [source, cli]
@@ -277,44 +289,42 @@ sudo dnf install podman-compose-1.0.6
 NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-compose を追加するための要件を満たしています。インストールコマンドは、すでにインストールされているpodman-composeを/usr/binに追加します。 `secure_path`ホスト上のオプション。
 
 .. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
-
-
-. 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
-
-
-[listing]
++
+... 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
++
+[source, cli]
 ----
 podman info | grep networkBackend
 ----
-. networkBackendが `CNI`、それを変更する必要があります `netavark`。
-. インストール `netavark`そして `aardvark-dns`次のコマンドを使用します。
-
-
-[listing]
+... networkBackendが `CNI`、それを変更する必要があります `netavark`。
+... インストール `netavark`そして `aardvark-dns`次のコマンドを使用します。
++
+[source, cli]
 ----
 dnf install aardvark-dns netavark
 ----
-. 開く `/etc/containers/containers.conf`ファイルを編集し、network_backend オプションを変更して、「cni」の代わりに「netavark」を使用します。
+... 開く `/etc/containers/containers.conf`ファイルを編集し、network_backend オプションを変更して、「cni」の代わりに「netavark」を使用します。
 +
 もし `/etc/containers/containers.conf`存在しない場合は、設定を変更してください `/usr/share/containers/containers.conf`。
 
+... podman を再起動します。
 +
-.. podman を再起動します。
-
-
-
-
-[listing]
+[source, cli]
 ----
 systemctl restart podman
 ----
-. 次のコマンドを使用して、networkBackend が「netavark」に変更されていることを確認します。
-
-
-[listing]
+... 次のコマンドを使用して、networkBackend が「netavark」に変更されていることを確認します。
++
+[source, cli]
 ----
 podman info | grep networkBackend
 ----
+
+
+
+
+
+
 --
 .Dockerエンジン
 --

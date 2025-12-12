@@ -202,8 +202,6 @@ sidebar:
         url: "/task-configuring-proxy.html"
       - title: EC2インスタンスでIMDSv2の使用を必須にする
         url: "/task-require-imdsv2.html"
-      - title: エージェントのアップグレードを管理する
-        url: "/task-upgrade-agent.html"
       - title: 複数のコンソールエージェントを操作する
         url: "/task-manage-multiple-agents.html"
       - title: コンソールエージェントのトラブルシューティング

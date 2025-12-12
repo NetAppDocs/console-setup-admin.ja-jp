@@ -457,7 +457,6 @@
   <block id="98119697a8c596d6a586655f867a2cda" category="inline-xref">Podman の構成要件を表示する</block>
   <block id="a4facfb2d16d1ed97d33467440808582" category="paragraph"><block ref="70e106a4b5e10c3f8e254a047f7ddb34" category="inline-xref-macro-rx"></block> 。</block>
   <block id="80626b31c22fa123b11c56011b1f23b6" category="paragraph">強制モードまたは許可モードでサポートされます</block>
-  <block id="af068a958b6647626147316242b85435" category="list-text">Cloud Volumes ONTAPシステムの管理は、オペレーティング システムで SELinux が有効になっているエージェントではサポートされません。</block>
   <block id="3d945423f8e9496c429a5d8c65b4604f" category="paragraph">Ubuntu</block>
   <block id="4cb2cce5e859bbc5a24d65a5385fba47" category="paragraph">24.04 LTS</block>
   <block id="c7c28552abf6b30437f72dd034b10f4b" category="paragraph">3.9.45 以降、 NetApp Consoleが標準モードまたは制限モード</block>
@@ -469,7 +468,6 @@
   <block id="8f06b143b878ae3919ba41cd38ea7380" category="list-text">コンソールをプライベート モードで使用する場合、コンソール エージェントは次のオペレーティング システムでサポートされます。エージェントをインストールする前に、コンテナ オーケストレーション ツールが必要です。</block>
   <block id="1a3d8802d280d4ec910f54042cd62998" category="cell">SELinux</block>
   <block id="730752c250979031a3c93723f75e0b07" category="paragraph">3.9.42 以降、コンソールがプライベート モードの場合</block>
-  <block id="7e4159d172a1854b6946f160a149d326" category="paragraph">強制モードまたは許可モードでサポートされます ^1^</block>
   <block id="607262a04e5c4340fc8d641e874a5695" category="paragraph">3.9.29以降</block>
   <block id="a3336db0e9f7b6341a12794c144076b6" category="paragraph">Docker エンジン 23.0.6 から 26.0.0</block>
   <block id="5556c95763913c6cfa8f61d9cab4f4f2" category="paragraph">26.0.0は、_新しい_エージェント3.9.44以降のインストールでサポートされます。</block>
@@ -509,7 +507,6 @@
   <block id="72647f42887226fbe161a7784cde9900" category="admonition">DNS ポートの競合を避けるために、エージェントをインストールした後、aardvark-dns ポート (デフォルト: 53) を調整します。指示に従ってポートを構成します。</block>
   <block id="b7f382be5c79895b47058d13f21b554a" category="list-text">ホストに podman-docker パッケージがインストールされている場合は削除します。</block>
   <block id="3c7e0e0689042d7582c0880e1b998f2c" category="list-text">Podman をインストールします。</block>
-  <block id="29c15383bb54e5c0c3bfba429503d481" category="paragraph">Red Hat Enterprise Linux 9 の場合:</block>
   <block id="6d76d2ad5a4defbd1ab7de4805041d08" category="paragraph">&lt;version&gt; は、インストールする Podman のサポートされているバージョンです。<block ref="f431862ab66067d97cd0bf60cb34059c" category="inline-xref-macro-rx"></block> 。</block>
   <block id="084cfc903eb108eb15642e42f36348f9" category="paragraph">Red Hat Enterprise Linux 8 の場合:</block>
   <block id="d85624226a34d354eb24bd9f58803ee7" category="list-text">podman.socket サービスを有効にして起動します。</block>
@@ -784,14 +781,6 @@
   <block id="b539e86fbaa7eae465366a0142624ec2" category="paragraph">BlueXP管理者 (組織管理者ロールを持つユーザー) は、 ONTAPシステム マネージャーにアクセスするためにユーザーにONTAP資格情報の入力を求めるようにBlueXPを設定できます。この設定を有効にすると、ONTAP 認証情報はBlueXPに保存されないため、ユーザーは毎回ONTAP認証情報を入力する必要があります。</block>
   <block id="990a2328425e217648ea5dd2ae370ffb" category="inline-link-macro">資格情報設定を構成する方法を学習します。</block>
   <block id="a97214620795cdb6071bd24584271e12" category="paragraph">この機能は、コネクタ バージョン 3.9.49 以降で利用できます。<block ref="d8aff65091362c86f97d60b0103d6fe5" category="inline-link-macro-rx"></block> 。</block>
-  <block id="a03c6dfbb1d64911f1090d54175ff8d3" category="section-title">コネクタ 3.9.48 アップデート</block>
-  <block id="1697b2b05dc5c7ad63e22e713e94ba7c" category="section-title">コネクタの自動アップグレード設定を無効にする機能</block>
-  <block id="91f4c340492e583f80db57f970516c1f" category="paragraph">コネクタの自動アップグレード機能を無効にすることができます。</block>
-  <block id="459e65cb3fcf9e226149b023791951b2" category="paragraph">BlueXP を標準モードまたは制限モードで使用する場合、コネクタがソフトウェア更新を取得するためのアウトバウンド インターネット アクセスを持っている限り、 BlueXP はコネクタを最新のリリースに自動的にアップグレードします。コネクタのアップグレード時期を手動で管理する必要がある場合は、標準モードまたは制限モードの自動アップグレードを無効にできるようになりました。</block>
-  <block id="01d6125faf020265bf432216c335698c" category="admonition">この変更は、常に自分でコネクタをアップグレードする必要があるBlueXPプライベート モードには影響しません。</block>
-  <block id="0e9ee8d377b683ca8ac77de05c3539d9" category="paragraph">この機能は、コネクタ バージョン 3.9.48 以降で利用できます。</block>
-  <block id="355c51d49cd780f57fe417fdede5f61c" category="inline-link-macro">コネクタの自動アップグレードを無効にする方法について説明します。</block>
-  <block id="205d3d3e91b5bdc14b60b9aa01a583a5" category="paragraph"><block ref="205d3d3e91b5bdc14b60b9aa01a583a5" category="inline-link-macro-rx"></block></block>
   <block id="23b3b711859803a815b81aca1cc4811c" category="doc">コネクタ 3.9.50</block>
   <block id="490e13bea5876f4583d326593619ee16" category="list-text">Cloud Volumes ONTAPシステムの管理は、オペレーティング システムで SELinux が有効になっているコネクタによってサポートされるようになりました。</block>
   <block id="256d8753a695f4395908c9903ae723b2" category="paragraph">現時点では、3.9.50 リリースは標準モードと制限モードで利用できます。</block>
@@ -5175,7 +5164,6 @@
   <block id="c8fa489b70f23c314b0b945db2384452" category="sidebar">VCenter にインストールされたエージェントを維持する</block>
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">Webコンソールへのアクセス用にCA署名証明書をインストールする</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">EC2インスタンスでIMDSv2の使用を必須にする</block>
-  <block id="c33d6b870a4603154aa9aca1e2bdc138" category="sidebar">エージェントのアップグレードを管理する</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">コンソールエージェントをアンインストールして削除する</block>
   <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">デフォルト設定</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">NetApp ConsoleでONTAP権限を適用する</block>
@@ -5537,7 +5525,6 @@
   <block id="e308cbdddf34fb65f938301ff80d4538" category="list-text">compute.subnetworks.useExternalIp</block>
   <block id="bc803c81454ea9df76e9060827a7bc53" category="list-text">compute.instances.addAccessConfig</block>
   <block id="3f7540ad5f30cb6539b7476d85d2f608" category="paragraph">権限は使用法を明確にするために更新されていますが、権限の追加や削除は行われていません。各権限がデプロイメント、日常的な操作、または削除のいずれに使用されるかを示す 3 つの列が追加されます。これとは別に、 NetApp Data ClassificationおよびNetApp Backup and Recoveryでの使用に基づいて、いくつかの権限が分離されています。</block>
-  <block id="18ecbdaa6bb0f123dda150b973bd53b7" category="list-text">Red Hat Enterprise 9.1 ～ 9.6 を使用している場合:</block>
   <block id="2f78cc1ceedbe872d890b3b087731dee" category="paragraph">| NetApp ONTAP向け Amazon FsX:</block>
   <block id="fccc45024c0efe519c08e43bb1bd4c5f" category="list-text">api.workloads.netapp.com</block>
   <block id="5e57ad0482de1c13a4a285a6101f6c13" category="paragraph">| Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。</block>
@@ -5651,67 +5638,24 @@
   <block id="ba28f37a50f35b5b62bf9d0cebb79e6a" category="section-title">Cloud Volumes ONTAPで使用される権限</block>
   <block id="45c85e2fcbcad00a3b3aff5447627a5b" category="paragraph">コンソール エージェントは、カスタム ロールの権限を使用して、Google Cloud ネットワーク内のCloud Volumes ONTAP のリソースとプロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。</block>
   <block id="05fedb77715f320017d52f66da44b1b0" category="example-title">Cloud Volumes ONTAPの権限</block>
-  <block id="1978fc577443d8841749463c81c14e1b" category="cell">*config.deployments.create*</block>
   <block id="7011503cf97d17706ff8163876018fb2" category="cell">Google Cloud Infrastructure Manager を使用してCloud Volumes ONTAP仮想マシン インスタンスをデプロイします。</block>
-  <block id="90859ccfb98bd6357cfd9888e01654f7" category="cell">*config.deployments.delete*</block>
-  <block id="1c823c113d5b21854ab32fb4006d239e" category="cell">*config.deployments.deleteState*</block>
-  <block id="4aef8bfd5362969e0a14daaef6aa2206" category="cell">*config.deployments.get*</block>
-  <block id="39871c3ed7f15a544a81dd29a8f6d5be" category="cell">*config.deployments.getLock*</block>
-  <block id="6f5bdaf7fca0180616b4ae4d03d58a28" category="cell">*config.deployments.getState*</block>
-  <block id="3f52aa0019ca6c92a0b2ce5ef1585bb7" category="cell">*config.deployments.list*</block>
-  <block id="91ea1caf7d132e95307e5641e3eb678a" category="cell">*config.deployments.lock*</block>
-  <block id="5cea6e43ecc95c4f000154ebf17ffe41" category="cell">*config.deployments.update*</block>
-  <block id="efda381a960e37f6857c4e005d80f4d4" category="cell">*config.deployments.updateState*</block>
-  <block id="527ac12ac6f7f67f130d341677f2666a" category="cell">*config.operations.get*</block>
-  <block id="09cbd21df4067bcce7aca81e1d55d7f9" category="cell">*config.previews.get*</block>
-  <block id="4f81cd437237e3919ef57ccf6f896eab" category="cell">*config.previews.list*</block>
-  <block id="25beaddbb4bfa58c896401064f614a49" category="cell">*config.resources.list*</block>
-  <block id="b47fce5e3845afb2bed0589dd445f4b1" category="cell">*config.revisions.get*</block>
-  <block id="6e9d76e8116c43eb4d333f5e51a59158" category="cell">*compute.forwardingRules.create*</block>
   <block id="1204549a036d6f1fa0e77a33b66ba5fc" category="cell">バックエンド サービスへのトラフィック ルーティング用の転送ルールを作成します。</block>
-  <block id="51f4457e4ce6f71c07304daee30d55a4" category="cell">*compute.forwardingRules.delete*</block>
   <block id="5625df4a9e5fad50b5ed7483ef854ba0" category="cell">既存の転送ルールを削除します。</block>
-  <block id="2747d1bc3f8c306dcd87a303e8d46ac4" category="cell">*compute.forwardingRules.get*</block>
   <block id="518cdf23dbd2f2786baa04a1b251789f" category="cell">既存の転送ルールの詳細を取得します。</block>
-  <block id="be4ea57d513cf3eb072627e23f9ab07d" category="cell">*compute.forwardingRules.setLabels*</block>
   <block id="f5be53441d39f1e3531a7e05f4c9cb41" category="cell">組織の転送ルールのラベルを設定または更新します。</block>
   <block id="2df5b761a5ee0099ec61a876d1eb970a" category="cell">compute.globalOperations.get</block>
-  <block id="e91ad303361b5fdc2d2c5336e085b399" category="cell">*コンピューティングヘルスチェックの作成*</block>
   <block id="cd9c9102f061e7080ec044f1de8be60f" category="cell">バックエンド サービスの健全性を監視するためにヘルス チェックを作成および管理します。</block>
-  <block id="69c63ecfab8251f5332b3f093989452b" category="cell">*compute.healthChecks.delete*</block>
-  <block id="91fc716755c2ccb249d395deaddc51d1" category="cell">*compute.healthChecks.get*</block>
-  <block id="1d0d0f012d65150fe8a659ddc5246c6b" category="cell">*compute.healthChecks.useReadOnly*</block>
-  <block id="51c92eabc0dc72041fa2d618c547a3b3" category="cell">*コンピューティングインスタンスの使用*</block>
   <block id="60f9a4c26542d13806ebfceda41b622a" category="cell">仮想マシン インスタンス (開始、停止、接続操作) を使用します。</block>
-  <block id="7694a96be1a3706f979373e54371672a" category="cell">*compute.resourcePolicies.create*</block>
   <block id="69c9360ed1f6b9f362a8bb04cc2f9976" category="cell">自動リソース管理のためのリソース ポリシーを作成および管理します。</block>
-  <block id="5c1436481ccb784f0099a466930a9d4b" category="cell">*compute.resourcePolicies.delete*</block>
-  <block id="79c6a1fb6244cc1241f910477c4585fa" category="cell">*compute.resourcePolicies.get*</block>
-  <block id="946819076f570f98fc2669abc5ebb221" category="cell">*logging.logEntries.create*</block>
   <block id="365620bda694367699a9e977c245c99d" category="cell">監視、デバッグ、監査のためにログエントリを作成してルーティングします。</block>
-  <block id="24073bc546846441de345b264ff9733b" category="cell">*logging.logEntries.route*</block>
-  <block id="af467f9a70abceae95e202a38cab79bc" category="cell">*cloudbuild.builds.get*</block>
-  <block id="f93ac717762cc8fe2abd2d13026a6e0c" category="cell">*iam.serviceAccounts.create*</block>
-  <block id="97f415e7bf3ae2691c030ac84e8a7ab4" category="cell">*iam.serviceAccountKeys.create*</block>
   <block id="d097a5e02531e9d8606a4b9016211fb0" category="cell">ストレージオブジェクトの作成</block>
   <block id="18e2e5fd1011d7608a9039b76959973f" category="cell">Google Cloud Storage バケット内のオブジェクト (ファイル) を作成および管理します。</block>
   <block id="877dd561e8b326f974d6649bf025cc47" category="cell">ストレージオブジェクトの削除</block>
-  <block id="75c9b1d045f5bd31e38a2fe8fc99685b" category="cell">*compute.addresses.createInternal*</block>
   <block id="a01609be65377c550c1f3f9c95e301e9" category="cell">リソース割り当てのために、VPC ネットワーク内に内部 IP アドレスを作成します。</block>
-  <block id="67ce54621d28117b563f4a29bba7ea15" category="cell">*compute.addresses.deleteInternal*</block>
   <block id="eb8b5851a4b3813a0b7d8271e9390168" category="cell">リソースのクリーンアップのために内部 IP アドレスを削除します。</block>
-  <block id="4a9033f2bc4de0bb816e8bb0b5d4f954" category="cell">*compute.addresses.setLabels*</block>
   <block id="c9100b96b75009cc80c0b2c138896bf1" category="cell">アドレス リソースのラベルを更新します。</block>
-  <block id="f80885b173b15e9ea2234f900e51e402" category="cell">*compute.addresses.useInternal*</block>
   <block id="d52c5aaec9bec122290d546577a86741" category="cell">ネットワーク通信には内部 IP アドレスを使用します。</block>
   <block id="6cf64ac632269f6541c1da37cd735d52" category="cell">トラフィック ルーティング用のバックエンド サービスを作成および管理します。</block>
-  <block id="d8e30cab07834e99dd81b60d6b1eb695" category="cell">*compute.regionBackendServices.delete*</block>
-  <block id="d71ae8f686ef0997fc9137df9832b3a3" category="cell">*compute.regionBackendServices.update*</block>
-  <block id="6ffa2106d04c5f11c8219cf00218c867" category="cell">*compute.regionBackendServices.use*</block>
-  <block id="8afe1371ad74901fbfca12f6507394f7" category="cell">*compute.instanceGroups.create*</block>
-  <block id="31837e29feaf463250d44e6b633644d1" category="cell">*compute.instanceGroups.delete*</block>
-  <block id="a231c32ea863f8bc2002ebefe954023f" category="cell">*compute.instanceGroups.update*</block>
-  <block id="008a67a6e66af0c91194d03a05ed9ca6" category="cell">*compute.instanceGroups.use*</block>
   <block id="fee9fb5dae000866e2823c08577b5639" category="paragraph">コンソール エージェントは、カスタムロールの権限を使用して、Google Cloud ネットワーク内のNetApp Backup and Recovery のリソースとプロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。</block>
   <block id="a696d2e75adad45b4173573021542ba7" category="example-title">NetApp Backup and Recoveryの権限の表示</block>
   <block id="d5ca4eff15be43a2a5ebcb745899160d" category="paragraph">コンソール エージェントは、カスタムロールの権限を使用して、Google Cloud ネットワーク内のNetApp Data Classification のリソースとプロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。</block>
@@ -5862,7 +5806,10 @@
   <block id="e1da0c759b99b40771f992144973dfe0" category="paragraph">インストール中に送信接続を検証する構成チェックを無効にする必要がある場合があります。たとえば、Government Cloud 環境にエージェントを手動でインストールする場合は、構成チェックを無効にする必要があります。無効にしないと、インストールは失敗します。</block>
   <block id="749e848334a8eeda9b72b5bef6878260" category="paragraph">_com/opt/application/netapp/service-manager-2/config.json_ ファイルで _skipConfigCheck_ フラグを設定することで、構成チェックを無効にします。デフォルトでは、このフラグは false に設定されており、構成チェックによってエージェントの送信アクセスが検証されます。チェックを無効にするには、このフラグを true に設定します。この手順を完了する前に、JSON 構文を理解しておいてください。</block>
   <block id="174dd97dd1f160583ac76fa482fa6a5e" category="section-title">2025年12月10日</block>
-  <block id="426c031f387e762bb968fd54671cf5a6" category="paragraph">&lt;stdin&gt; 内の未解決のディレクティブ - include::_whatsnew/2025-12-08.adoc[]</block>
   <block id="5a348f21cc989b094b43c61561c46351" category="sidebar">構成チェック</block>
   <block id="800641e37082e3805299720dbe2f9713" category="sidebar">透過プロキシ</block>
+  <block id="313de8c309a0a212c02f6a6a480a0bf1" category="list-text">Red Hat Enterprise Linux 9.6 の場合:</block>
+  <block id="d5bf119df844977ba02663feefe22591" category="list-text">Red Hat Enterprise Linux 9.1 から 9.4 の場合:</block>
+  <block id="4fcd2b24226e5ab1f33572cdc55d9b7b" category="list-text">Red Hat Enterprise 9 を使用している場合:</block>
+  <block id="fd1ad73a99f49752f7ad262decfb3b45" category="list-text">EPEL リポジトリ パッケージをインストールします。</block>
 </blocks>
