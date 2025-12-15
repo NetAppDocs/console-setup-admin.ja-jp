@@ -5402,14 +5402,7 @@
   <block id="46602301e1e9b92a123cc69be96445a2" category="paragraph">コンソール エージェントは、基本的なNetApp Backup and Recovery機能に対して次の API 要求を行います。</block>
   <block id="ff9be13f0dd01fa19eeb632c57e75912" category="list-text">Microsoft.Authorization/ロック/書き込み</block>
   <block id="9c54728f345d88de2c032cfb76dbdb17" category="list-text">Microsoft.Authorization/ロック/読み取り</block>
-  <block id="761a802cfbda43d4d27ac578e6d1127e" category="section-title">追加のバックアップとリカバリの権限</block>
   <block id="02eee31e5109fac37be42cd2ad631e0f" category="paragraph">コンソール エージェントは、高度なバックアップとリカバリ操作および検索と復元機能に対して次の API 要求を行います。これらのアクセス許可により、ネットワーク、キー コンテナー、マネージド ID の管理が可能になります。</block>
-  <block id="9db96a7be686af799d5b0df68ebdf3a8" category="paragraph">検索と復元機能を使用するとき、エージェントは次の API 要求を行います。インデックス v2 のリリース前に従来のインデックス機能を有効にした場合にのみ、これらの権限が必要です。</block>
-  <block id="d3a274c843d8b8ce75d55d7c7829a6af" category="paragraph">JSON ロールの例から次の権限が削除され、例がバックアップとリカバリに必要な最小限の権限を反映できるようになりました。</block>
-  <block id="f4b5566a2cd5de876b361e9f7aaa2d92" category="list-text">Microsoft.Insights/メトリック/読み取り</block>
-  <block id="542e0e990e0a90f3111cc38f8fc96301" category="list-text">Microsoft.Compute/仮想マシン/拡張機能/書き込み</block>
-  <block id="027acd9694c335956d7cb35872c2d7f5" category="list-text">Microsoft.Compute/virtualMachines/拡張機能/読み取り</block>
-  <block id="ebd9939fa785bda0707a6efaf5d7b8da" category="paragraph">JSON ロールの例に次の権限が追加されました。</block>
   <block id="73361bbe50a41bd2e76e59f453c19c62" category="paragraph">従来のインデックスを使用していない限り、バックアップとリカバリには次の権限は不要になりました。</block>
   <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">次の権限は、最小限の構成では必要ないため、「追加のバックアップおよび回復権限」セクションに移動されました。</block>
   <block id="862b252e960e9fce5bfb6811edec4eb5" category="list-text">次のコマンドを実行し、エージェントのステータスが _active(running)_ と表示されていることを確認します。</block>
@@ -5812,4 +5805,9 @@
   <block id="d5bf119df844977ba02663feefe22591" category="list-text">Red Hat Enterprise Linux 9.1 から 9.4 の場合:</block>
   <block id="4fcd2b24226e5ab1f33572cdc55d9b7b" category="list-text">Red Hat Enterprise 9 を使用している場合:</block>
   <block id="fd1ad73a99f49752f7ad262decfb3b45" category="list-text">EPEL リポジトリ パッケージをインストールします。</block>
+  <block id="b83fdcee3fd8ba30cb801a52c12a57c3" category="paragraph">次のセクションでは、NetApp Backup and Recoveryで権限がどのように使用されるかについて説明します。</block>
+  <block id="7b1fb20ba83a0d151738ea779ef6b541" category="section-title">高度なバックアップとリカバリの権限</block>
+  <block id="f81364bddd76f5bb00fa7ea1afb1e8f3" category="paragraph">検索と復元機能を使用するとき、エージェントは次の API 要求を行います。これらの権限は、2025 年 2 月のインデックス v2 のリリース前に従来のインデックス機能を有効にした場合にのみ必要です。</block>
+  <block id="6b3f95e18a1ba0f839260ac943cc5e73" category="paragraph">可能な限り少ない権限と可能な限り狭い範囲を反映するカスタム JSON ポリシーが追加されました。</block>
+  <block id="0a466732427ffe0e3d3bf69fe76471c6" category="paragraph">最小限のバックアップおよびリカバリ権限リストに次の権限が追加されました。</block>
 </blocks>

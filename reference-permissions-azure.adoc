@@ -35,6 +35,190 @@ Azure Marketplace からエージェントをデプロイする場合、また�
 
 
 
+[source, json]
+----
+{
+  "Name": "Console Operator",
+  "Actions": [
+    "Microsoft.Compute/disks/delete",
+    "Microsoft.Compute/disks/read",
+    "Microsoft.Compute/disks/write",
+    "Microsoft.Compute/locations/operations/read",
+    "Microsoft.Compute/locations/vmSizes/read",
+    "Microsoft.Resources/subscriptions/locations/read",
+    "Microsoft.Compute/operations/read",
+    "Microsoft.Compute/virtualMachines/instanceView/read",
+    "Microsoft.Compute/virtualMachines/powerOff/action",
+    "Microsoft.Compute/virtualMachines/read",
+    "Microsoft.Compute/virtualMachines/restart/action",
+    "Microsoft.Compute/virtualMachines/deallocate/action",
+    "Microsoft.Compute/virtualMachines/start/action",
+    "Microsoft.Compute/virtualMachines/vmSizes/read",
+    "Microsoft.Compute/virtualMachines/write",
+    "Microsoft.Compute/images/read",
+    "Microsoft.Network/locations/operationResults/read",
+    "Microsoft.Network/locations/operations/read",
+    "Microsoft.Network/networkInterfaces/read",
+    "Microsoft.Network/networkInterfaces/write",
+    "Microsoft.Network/networkInterfaces/join/action",
+    "Microsoft.Network/networkSecurityGroups/read",
+    "Microsoft.Network/networkSecurityGroups/write",
+    "Microsoft.Network/networkSecurityGroups/join/action",
+    "Microsoft.Network/virtualNetworks/read",
+    "Microsoft.Network/virtualNetworks/checkIpAddressAvailability/read",
+    "Microsoft.Network/virtualNetworks/subnets/read",
+    "Microsoft.Network/virtualNetworks/subnets/write",
+    "Microsoft.Network/virtualNetworks/subnets/virtualMachines/read",
+    "Microsoft.Network/virtualNetworks/virtualMachines/read",
+    "Microsoft.Network/virtualNetworks/subnets/join/action",
+    "Microsoft.Resources/deployments/operations/read",
+    "Microsoft.Resources/deployments/read",
+    "Microsoft.Resources/deployments/write",
+    "Microsoft.Resources/resources/read",
+    "Microsoft.Resources/subscriptions/operationresults/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/delete",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/write",
+    "Microsoft.Storage/checknameavailability/read",
+    "Microsoft.Storage/operations/read",
+    "Microsoft.Storage/storageAccounts/listkeys/action",
+    "Microsoft.Storage/storageAccounts/read",
+    "Microsoft.Storage/storageAccounts/delete",
+    "Microsoft.Storage/storageAccounts/write",
+    "Microsoft.Storage/storageAccounts/blobServices/containers/read",
+    "Microsoft.Storage/storageAccounts/listAccountSas/action",
+    "Microsoft.Storage/usages/read",
+    "Microsoft.Compute/snapshots/write",
+    "Microsoft.Compute/snapshots/read",
+    "Microsoft.Compute/availabilitySets/write",
+    "Microsoft.Compute/availabilitySets/read",
+    "Microsoft.Compute/disks/beginGetAccess/action",
+    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read",
+    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write",
+    "Microsoft.Network/loadBalancers/read",
+    "Microsoft.Network/loadBalancers/write",
+    "Microsoft.Network/loadBalancers/delete",
+    "Microsoft.Network/loadBalancers/backendAddressPools/read",
+    "Microsoft.Network/loadBalancers/backendAddressPools/join/action",
+    "Microsoft.Network/loadBalancers/loadBalancingRules/read",
+    "Microsoft.Network/loadBalancers/probes/read",
+    "Microsoft.Network/loadBalancers/probes/join/action",
+    "Microsoft.Authorization/locks/*",
+    "Microsoft.Network/routeTables/join/action",
+    "Microsoft.NetApp/netAppAccounts/read",
+    "Microsoft.NetApp/netAppAccounts/capacityPools/read",
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/write",
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/read",
+    "Microsoft.NetApp/netAppAccounts/capacityPools/volumes/delete",
+    "Microsoft.Network/privateEndpoints/write",
+    "Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action",
+    "Microsoft.Storage/storageAccounts/privateEndpointConnections/read",
+    "Microsoft.Storage/storageAccounts/managementPolicies/read",
+    "Microsoft.Storage/storageAccounts/managementPolicies/write",
+    "Microsoft.Network/privateEndpoints/read",
+    "Microsoft.Network/privateDnsZones/write",
+    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/write",
+    "Microsoft.Network/virtualNetworks/join/action",
+    "Microsoft.Network/privateDnsZones/A/write",
+    "Microsoft.Network/privateDnsZones/read",
+    "Microsoft.Network/privateDnsZones/virtualNetworkLinks/read",
+    "Microsoft.Resources/deployments/operationStatuses/read",
+    "Microsoft.Insights/Metrics/Read",
+    "Microsoft.Compute/virtualMachines/extensions/write",
+    "Microsoft.Compute/virtualMachines/extensions/delete",
+    "Microsoft.Compute/virtualMachines/extensions/read",
+    "Microsoft.Compute/virtualMachines/delete",
+    "Microsoft.Network/networkInterfaces/delete",
+    "Microsoft.Network/networkSecurityGroups/delete",
+    "Microsoft.Resources/deployments/delete",
+    "Microsoft.Compute/diskEncryptionSets/read",
+    "Microsoft.Compute/snapshots/delete",
+    "Microsoft.Network/privateEndpoints/delete",
+    "Microsoft.Compute/availabilitySets/delete",
+    "Microsoft.KeyVault/vaults/read",
+    "Microsoft.KeyVault/vaults/accessPolicies/write",
+    "Microsoft.Compute/diskEncryptionSets/write",
+    "Microsoft.KeyVault/vaults/deploy/action",
+    "Microsoft.Compute/diskEncryptionSets/delete",
+    "Microsoft.Resources/tags/read",
+    "Microsoft.Resources/tags/write",
+    "Microsoft.Resources/tags/delete",
+    "Microsoft.Network/applicationSecurityGroups/write",
+    "Microsoft.Network/applicationSecurityGroups/read",
+    "Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/action",
+    "Microsoft.Network/networkSecurityGroups/securityRules/write",
+    "Microsoft.Network/applicationSecurityGroups/delete",
+    "Microsoft.Network/networkSecurityGroups/securityRules/delete",
+    "Microsoft.Synapse/workspaces/write",
+    "Microsoft.Synapse/workspaces/read",
+    "Microsoft.Synapse/workspaces/delete",
+    "Microsoft.Synapse/register/action",
+    "Microsoft.Synapse/checkNameAvailability/action",
+    "Microsoft.Synapse/workspaces/operationStatuses/read",
+    "Microsoft.Synapse/workspaces/firewallRules/read",
+    "Microsoft.Synapse/workspaces/replaceAllIpFirewallRules/action",
+    "Microsoft.Synapse/workspaces/operationResults/read",
+    "Microsoft.Synapse/workspaces/privateEndpointConnectionsApproval/action",
+    "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action",
+    "Microsoft.Compute/images/write",
+    "Microsoft.Network/loadBalancers/frontendIPConfigurations/read",
+    "Microsoft.Compute/virtualMachineScaleSets/write",
+    "Microsoft.Compute/virtualMachineScaleSets/read",
+    "Microsoft.Compute/virtualMachineScaleSets/delete"
+  ],
+  "NotActions": [],
+  "AssignableScopes": [],
+  "Description": "Console Permissions",
+  "IsCustom": "true"
+}
+----
+
+
+== Azure の権限の使用方法
+
+次のセクションでは、各NetAppストレージ システムおよびデータ サービスに対する権限の使用方法について説明します。この情報は、必要な場合にのみ権限を付与するように企業ポリシーで定められている場合に役立ちます。
+
+
+
+=== Azure NetApp Files
+
+NetApp Data Classification を使用してAzure NetApp Filesデータをスキャンすると、エージェントは次の API 要求を行います。
+
+* Microsoft. NetApp/netAppAccounts/read
+* Microsoft. NetApp/netAppAccounts/capacityPools/read
+* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/write
+* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/read
+* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/delete
+
+
+
+
+=== NetApp Backup and Recovery
+
+次のセクションでは、NetApp Backup and Recoveryで権限がどのように使用されるかについて説明します。
+
+
+
+==== 最小限のNetApp Backup and Recovery権限
+
+コンソール エージェントは、基本的なNetApp Backup and Recovery機能に対して次の API 要求を行います。
+
+* Microsoft.Storage/storageAccounts/listkeys/アクション
+* Microsoft.Storage/storageAccounts/読み取り
+* Microsoft.Storage/ストレージアカウント/書き込み
+* Microsoft.Storage/storageAccounts/blobServices/containers/読み取り
+* Microsoft.Storage/storageAccounts/listAccountSas/アクション
+* Microsoft.Resources/サブスクリプション/場所/読み取り
+* Microsoft.Resources/サブスクリプション/リソースグループ/読み取り
+* Microsoft.Resources/サブスクリプション/リソースグループ/リソース/読み取り
+* Microsoft.Resources/サブスクリプション/リソースグループ/書き込み
+* Microsoft.Storage/storageAccounts/managementPolicies/読み取り
+* Microsoft.Storage/storageAccounts/managementPolicies/書き込み
+* Microsoft.Authorization/ロック/書き込み
+* Microsoft.Authorization/ロック/読み取り
+
+
 以下は、可能な限り少ない権限と可能な限り狭い範囲を使用するバックアップとリカバリのカスタム ポリシーです。
 
 [source, json]
@@ -76,47 +260,7 @@ Azure Marketplace からエージェントをデプロイする場合、また�
 ----
 
 
-== Azure の権限の使用方法
-
-次のセクションでは、各NetAppストレージ システムおよびデータ サービスに対する権限の使用方法について説明します。この情報は、必要な場合にのみ権限を付与するように企業ポリシーで定められている場合に役立ちます。
-
-
-
-=== Azure NetApp Files
-
-NetApp Data Classification を使用してAzure NetApp Filesデータをスキャンすると、エージェントは次の API 要求を行います。
-
-* Microsoft. NetApp/netAppAccounts/read
-* Microsoft. NetApp/netAppAccounts/capacityPools/read
-* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/write
-* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/read
-* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/delete
-
-
-
-
-=== 最小限のNetApp Backup and Recovery権限
-
-コンソール エージェントは、基本的なNetApp Backup and Recovery機能に対して次の API 要求を行います。
-
-* Microsoft.Storage/storageAccounts/listkeys/アクション
-* Microsoft.Storage/storageAccounts/読み取り
-* Microsoft.Storage/ストレージアカウント/書き込み
-* Microsoft.Storage/storageAccounts/blobServices/containers/読み取り
-* Microsoft.Storage/storageAccounts/listAccountSas/アクション
-* Microsoft.Resources/サブスクリプション/場所/読み取り
-* Microsoft.Resources/サブスクリプション/リソースグループ/読み取り
-* Microsoft.Resources/サブスクリプション/リソースグループ/リソース/読み取り
-* Microsoft.Resources/サブスクリプション/リソースグループ/書き込み
-* Microsoft.Storage/storageAccounts/managementPolicies/読み取り
-* Microsoft.Storage/storageAccounts/managementPolicies/書き込み
-* Microsoft.Authorization/ロック/書き込み
-* Microsoft.Authorization/ロック/読み取り
-
-
-
-
-=== 追加のバックアップとリカバリの権限
+==== 高度なバックアップとリカバリの権限
 
 コンソール エージェントは、高度なバックアップとリカバリ操作および検索と復元機能に対して次の API 要求を行います。これらのアクセス許可により、ネットワーク、キー コンテナー、マネージド ID の管理が可能になります。
 
@@ -136,9 +280,9 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 
 
 
-=== バックアップとリカバリの従来の権限
+==== バックアップとリカバリの従来の権限
 
-検索と復元機能を使用するとき、エージェントは次の API 要求を行います。インデックス v2 のリリース前に従来のインデックス機能を有効にした場合にのみ、これらの権限が必要です。
+検索と復元機能を使用するとき、エージェントは次の API 要求を行います。これらの権限は、2025 年 2 月のインデックス v2 のリリース前に従来のインデックス機能を有効にした場合にのみ必要です。
 
 * Microsoft.Synapse/ワークスペース/書き込み
 * Microsoft.Synapse/ワークスペース/読み取り
@@ -648,129 +792,9 @@ NetApp Cloud Tieringをセットアップすると、エージェントは次の
 
 === 2025年11月11日
 
-JSON ロールの例から次の権限が削除され、例がバックアップとリカバリに必要な最小限の権限を反映できるようになりました。
+可能な限り少ない権限と可能な限り狭い範囲を反映するカスタム JSON ポリシーが追加されました。
 
-[%collapsible]
-====
-* Microsoft.Compute/ディスク/削除
-* Microsoft.Compute/ディスク/読み取り
-* Microsoft.Compute/ディスク/書き込み
-* Microsoft.Compute/場所/操作/読み取り
-* Microsoft.Compute/場所/vmSizes/読み取り
-* Microsoft.Compute/操作/読み取り
-* Microsoft.Compute/virtualMachines/instanceView/読み取り
-* Microsoft.Compute/virtualMachines/powerOff/アクション
-* Microsoft.Compute/仮想マシン/読み取り
-* Microsoft.Compute/virtualMachines/再起動/アクション
-* Microsoft.Compute/virtualMachines/割り当て解除/アクション
-* Microsoft.Compute/virtualMachines/start/action
-* Microsoft.Compute/virtualMachines/vmSizes/読み取り
-* Microsoft.Compute/仮想マシン/書き込み
-* Microsoft.Compute/images/読み取り
-* Microsoft.Network/場所/操作結果/読み取り
-* Microsoft.Network/場所/操作/読み取り
-* Microsoft.Network/ネットワークインターフェイス/読み取り
-* Microsoft.Network/ネットワークインターフェイス/書き込み
-* Microsoft.Network/ネットワークインターフェイス/参加/アクション
-* Microsoft.Network/ネットワークセキュリティグループ/読み取り
-* Microsoft.Network/ネットワークセキュリティグループ/書き込み
-* Microsoft.Network/ネットワークセキュリティグループ/参加/アクション
-* Microsoft.Network/仮想ネットワーク/読み取り
-* Microsoft.Network/virtualNetworks/checkIpAddressAvailability/読み取り
-* Microsoft.Network/virtualNetworks/サブネット/読み取り
-* Microsoft.Network/virtualNetworks/サブネット/書き込み
-* Microsoft.Network/virtualNetworks/サブネット/virtualMachines/読み取り
-* Microsoft.Network/virtualNetworks/virtualMachines/読み取り
-* Microsoft.Network/virtualNetworks/サブネット/参加/アクション
-* Microsoft.Resources/デプロイメント/運用/読み取り
-* Microsoft.Resources/デプロイメント/読み取り
-* Microsoft.Resources/デプロイメント/書き込み
-* Microsoft.Resources/リソース/読み取り
-* Microsoft.Resources/サブスクリプション/操作結果/読み取り
-* Microsoft.Resources/サブスクリプション/リソースグループ/削除
-* Microsoft.Storage/checknameavailability/読み取り
-* Microsoft.Storage/操作/読み取り
-* Microsoft.Storage/storageAccounts/削除
-* Microsoft.Storage/使用状況/読み取り
-* Microsoft.Compute/スナップショット/書き込み
-* Microsoft.Compute/スナップショット/読み取り
-* Microsoft.Compute/availabilitySets/書き込み
-* Microsoft.Compute/availabilitySets/読み取り
-* Microsoft.Compute/ディスク/beginGetAccess/アクション
-* Microsoft.MarketplaceOrdering/オファータイプ/発行者/オファー/プラン/契約/読み取り
-* Microsoft.MarketplaceOrdering/オファータイプ/パブリッシャー/オファー/プラン/契約/書き込み
-* Microsoft.Network/ロードバランサー/読み取り
-* Microsoft.Network/ロードバランサー/書き込み
-* Microsoft.Network/loadBalancers/削除
-* Microsoft.Network/loadBalancers/backendAddressPools/読み取り
-* Microsoft.Network/loadBalancers/backendAddressPools/参加/アクション
-* Microsoft.Network/loadBalancers/loadBalancingRules/読み取り
-* Microsoft.Network/loadBalancers/プローブ/読み取り
-* Microsoft.Network/loadBalancers/プローブ/参加/アクション
-* Microsoft.Authorization/locks/*
-* Microsoft.Network/routeTables/join/アクション
-* Microsoft. NetApp/netAppAccounts/read
-* Microsoft. NetApp/netAppAccounts/capacityPools/read
-* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/write
-* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/read
-* Microsoft. NetApp/netAppAccounts/capacityPools/volumes/delete
-* Microsoft.Network/privateEndpoints/書き込み
-* Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/アクション
-* Microsoft.Storage/storageAccounts/privateEndpointConnections/読み取り
-* Microsoft.Network/privateEndpoints/読み取り
-* Microsoft.Network/privateDnsZones/書き込み
-* Microsoft.Network/privateDnsZones/virtualNetworkLinks/書き込み
-* Microsoft.Network/仮想ネットワーク/参加/アクション
-* Microsoft.Network/privateDnsZones/A/書き込み
-* Microsoft.Network/privateDnsZones/読み取り
-* Microsoft.Network/privateDnsZones/virtualNetworkLinks/読み取り
-* Microsoft.Resources/デプロイメント/操作ステータス/読み取り
-* Microsoft.Insights/メトリック/読み取り
-* Microsoft.Compute/仮想マシン/拡張機能/書き込み
-* Microsoft.Compute/virtualMachines/拡張機能/削除
-* Microsoft.Compute/virtualMachines/拡張機能/読み取り
-* Microsoft.Compute/仮想マシン/削除
-* Microsoft.Network/ネットワークインターフェイス/削除
-* Microsoft.Network/ネットワークセキュリティグループ/削除
-* Microsoft.Resources/デプロイメント/削除
-* Microsoft.Compute/diskEncryptionSets/読み取り
-* Microsoft.Compute/スナップショット/削除
-* Microsoft.Network/privateEndpoints/削除
-* Microsoft.Compute/availabilitySets/削除
-* Microsoft.KeyVault/vaults/読み取り
-* Microsoft.KeyVault/vaults/accessPolicies/書き込み
-* Microsoft.Compute/diskEncryptionSets/書き込み
-* Microsoft.KeyVault/vaults/deploy/action
-* Microsoft.Compute/diskEncryptionSets/削除
-* Microsoft.Resources/タグ/読み取り
-* Microsoft.Resources/タグ/書き込み
-* Microsoft.Resources/タグ/削除
-* Microsoft.Network/アプリケーションセキュリティグループ/書き込み
-* Microsoft.Network/applicationSecurityGroups/読み取り
-* Microsoft.Network/applicationSecurityGroups/joinIpConfiguration/アクション
-* Microsoft.Network/ネットワークセキュリティグループ/セキュリティルール/書き込み
-* Microsoft.Network/applicationSecurityGroups/削除
-* Microsoft.Network/ネットワークセキュリティグループ/セキュリティルール/削除
-* Microsoft.Synapse/ワークスペース/書き込み
-* Microsoft.Synapse/ワークスペース/読み取り
-* Microsoft.Synapse/ワークスペース/削除
-* Microsoft.Synapse/登録/アクション
-* Microsoft.Synapse/checkNameAvailability/アクション
-* Microsoft.Synapse/ワークスペース/操作ステータス/読み取り
-* Microsoft.Synapse/ワークスペース/ファイアウォールルール/読み取り
-* Microsoft.Synapse/ワークスペース/replaceAllIpFirewallRules/アクション
-* Microsoft.Synapse/ワークスペース/操作結果/読み取り
-* Microsoft.Synapse/ワークスペース/プライベートエンドポイント接続承認/アクション
-* Microsoft.ManagedIdentity/userAssignedIdentities/割り当て/アクション
-* Microsoft.Compute/images/書き込み
-* Microsoft.Network/loadBalancers/frontendIPConfigurations/読み取り
-* Microsoft.Compute/仮想マシンスケールセット/書き込み
-* Microsoft.Compute/仮想マシンスケールセット/読み取り
-* Microsoft.Compute/virtualMachineScaleSets/削除
-
-
-====
-JSON ロールの例に次の権限が追加されました。
+最小限のバックアップおよびリカバリ権限リストに次の権限が追加されました。
 
 * Microsoft.Authorization/ロック/書き込み
 * Microsoft.Authorization/ロック/読み取り
@@ -803,8 +827,6 @@ JSON ロールの例に次の権限が追加されました。
 * Microsoft.Resources/サブスクリプション/リソースグループ/書き込み
 * Microsoft.Storage/storageAccounts/managementPolicies/読み取り
 * Microsoft.Storage/storageAccounts/managementPolicies/書き込み
-* Microsoft.Authorization/ロック/書き込み
-* Microsoft.Authorization/ロック/読み取り
 
 
 
