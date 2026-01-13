@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: reference-compliance.html 
+keywords: SOC-2, compliance, netapp console compliance, console compliance, console soc-2, soc-2 report, soc 2 report 
+summary: コンソール内では、各ユーザーにはユーザーとその設定に関する情報が含まれるプロファイルがあります。プロフィール設定を表示および編集できます。 
+---
+= NetApp Consoleのセキュリティコンプライアンス
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Consoleは SOC 2 Type II に準拠しています。
+
+link:https://www.netapp.com/responsibility/trust-center/compliance/soc-2/["NetApp の SOC 2 コンプライアンスの詳細をご覧ください。"]

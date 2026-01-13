@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: concept-modes.html 
+permalink: concept-console.html 
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
-summary: 'NetApp Consoleは、ビジネス要件とセキュリティ要件を満たす複数の _導入モード_ を提供します。_標準モード_ では、サービスとしてのソフトウェア (SaaS) レイヤーを活用して完全な機能を提供しますが、接続制限がある組織では _制限モード_ と _プライベート モード_ が利用できます。' 
+summary: NetApp Consoleは、完全な機能アクセスを実現する SaaS エクスペリエンス、または接続制限のある組織向けのセルフホスト オプションを提供します。 
 ---
-= NetApp Consoleの導入モードについて学ぶ
+= NetApp Consoleについて学ぶ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,13 @@ summary: 'NetApp Consoleは、ビジネス要件とセキュリティ要件を�
 
 
 [role="lead"]
-NetApp Consoleは、ビジネス要件とセキュリティ要件を満たす複数の _導入モード_ を提供します。
+NetApp Consoleは、完全な機能アクセスを実現する SaaS エクスペリエンス、または接続制限のある組織向けのセルフホスト オプションを提供します。
 
-* _標準モード_ では、サービスとしてのソフトウェア (SaaS) レイヤーを活用して完全な機能を提供します。ユーザーはWebベースのホストインターフェースを通じてコンソールにアクセスします。
-* _制限モード_ は、接続制限があり、 NetApp Consoleを独自のパブリック クラウドにインストールしたい組織で利用できます。ユーザーは、クラウド環境内のコンソール エージェントでホストされている Web ベースのインターフェースを通じてコン​​ソールにアクセスします。
-+
-NetApp Consoleは制限モードでトラフィック、通信、データを制限するため、環境 (オンプレミスおよびクラウド) が必要な規制に準拠していることを確認する必要があります。
+NetApp Consoleは、完全に管理された SaaS エクスペリエンスとして使用するか、独自のクラウド環境でセルフホスト型ソリューションとして使用するかの 2 つの方法で使用できます。SaaS オプションでは、console.netapp.com からコンソールにアクセスし、 NetApp がすべてのインフラストラクチャ、認証、および更新を管理します。Web ブラウザから直接、すべての機能にアクセスできます。セルフホスト オプションを選択した場合は、AWS、Azure、または Google Cloud 環境にコンソール エージェントをインストールします。インターフェースはローカルで実行され、エージェントは認証や更新などの重要なタスクのためにNetAppへの限定的な送信接続を維持します。
 
+組織に標準的なインターネット接続がある場合は、SaaS エクスペリエンスを選択してください。最も簡単なセットアップ、自動更新、すべてのNetAppストレージ システム、データ サービス、高度な機能へのフル アクセスなどのメリットが得られます。コンソールから直接エージェントを追加でき、 NetApp がすべてのメンテナンスを処理します。
 
+政府機関や規制業界など、組織で厳格な接続、セキュリティ、コンプライアンス制御が必要な場合は、セルフホスト オプションを選択します。制御とネットワークの分離が強化されますが、管理できるのは一部のNetAppストレージ システムのみで、使用できるデータ サービスは限られており、一部の機能は利用できなくなります。コンソール エージェントを手動でインストールし、ローカル エージェント インターフェイスからコンソールに直接アクセスします。クラウド マーケットプレイスまたは手動インストールを通じてエージェントをインストールすると、エージェントはNetAppに対して送信のみ通信し、受信インターネット接続がないことが保証されます。
 
 
 

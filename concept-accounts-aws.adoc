@@ -24,7 +24,7 @@ summary: NetApp Consoleを使用すると、コンソール エージェント�
 
 コンソールが AWS でコンソールエージェントを起動すると、エージェントの IAM ロールとプロファイルが作成されます。また、コンソールエージェントにその AWS アカウント内のリソースとプロセスを管理するための権限を付与するポリシーも添付します。link:reference-permissions-aws.html["エージェントが権限をどのように使用するか確認する"]。
 
-image:diagram_permissions_initial_aws.png["コンソールが AWS アカウントにコンソールエージェントを展開する様子を示す概念図。IAM ポリシーは IAM ロールに割り当てられ、コンソールにアタッチされます。"]
+image:diagram_permissions_initial_aws.png["コンソールが AWS アカウントにコンソールエージェントを展開する様子を示す概念図。"]
 
 新しいCloud Volumes ONTAPシステムを追加すると、コンソールはデフォルトで次の AWS 認証情報を選択します。
 
@@ -51,7 +51,7 @@ image:screenshot_accounts_select_aws.gif["詳細と資格情報ページのア�
 
 追加の AWS アカウントでコンソールを使用するには、信頼できるアカウントの AWS キーまたはロールの ARN を指定します。次の図は、信頼できるアカウントの IAM ロールを通じて権限を提供するアカウントと、IAM ユーザーの AWS キーを通じて権限を提供するアカウントの 2 つの追加アカウントを示しています。
 
-image:diagram_permissions_multiple_aws.png["2 つの追加アカウントを示す概念図。それぞれに IAM ポリシーがあり、1 つは IAM ユーザーに接続され、もう 1 つは IAM ロールに接続されます。"]
+image:diagram_permissions_multiple_aws.png["2 つの追加アカウントを示す概念図。それぞれに IAM ポリシーがあります。1 つは IAM ユーザーに接続され、もう 1 つは IAM ロールに接続されます。"]
 
 IAM ロールの Amazon リソースネーム (ARN) または IAM ユーザーの AWS キーを指定して、コンソールにアカウント認証情報を追加します。
 

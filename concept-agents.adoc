@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: concept-agents.html 
-keywords: 'concept, Console agents, learn about agents, what are connectors, what is a connector, what"s a connector, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
-summary: _コンソール エージェント_ は、クラウド ネットワークまたはオンプレミス ネットワークで実行されるNetAppソフトウェアです。コンソール エージェントを使用して、 NetApp Consoleサービスをストレージ環境に接続します。 
+keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
+summary: コンソール エージェントを使用してNetApp Consoleをインフラストラクチャに接続し、AWS、Azure、Google Cloud、オンプレミス環境全体でストレージ ソリューションを安全にオーケストレーションし、データ保護サービスも利用できます。 
 ---
 = NetApp Consoleエージェントについて学ぶ
 :hardbreaks:
@@ -14,72 +14,225 @@ summary: _コンソール エージェント_ は、クラウド ネットワー
 
 
 [role="lead"]
-_コンソール エージェント_ は、クラウド ネットワークまたはオンプレミス ネットワークで実行されます。コンソール エージェントを使用して、 NetApp Consoleサービスをストレージ環境に接続します。
+コンソール エージェントを使用して、 NetApp Consoleをインフラストラクチャに接続し、AWS、Azure、Google Cloud、オンプレミス環境全体でストレージ ソリューションを安全にオーケストレーションし、データ保護サービスを使用します。
+
+コンソール エージェントを使用すると、次のことが可能になります。
+
+* Cloud Volumes ONTAP のプロビジョニング、ストレージ ボリュームの設定、データ分類の使用など、 NetApp Consoleからストレージ管理タスクを調整します。
+* サブスクリプション課金統合のためにクラウドプロバイダーのIAMロールを使用して認証する
+* 高度なデータ サービス (NetApp Backup and Recovery、 NetApp Disaster Recovery、 NetApp Ransomware Resilience、 NetApp Cloud Tiering) を使用する
+* コンソールを制限モードで使用します。
+
+
+高度なオーケストレーションやデータ保護が必要ない場合は、エージェントを導入せずに、オンプレミスのONTAPクラスターとクラウドネイティブ ストレージ サービスを一元管理できます。監視およびデータ移動ツールも利用できます。
+
+次の表は、コンソール エージェントの有無にかかわらず使用できる機能とサービスを示しています。
+
+[cols="40,20a,20a"]
+|===
+|  | エージェントで利用可能 | エージェントなしで利用可能 
+
+
+3+| *サポートされているストレージ システム*: 
+
+
+| Amazon FSx for ONTAP  a| 
+はい（検出および管理機能）
+ a| 
+はい（検出のみ）
 
 
 
-== コンソールエージェントなしでできること
-
-コンソール エージェントを展開しない場合でも、一部のコンソール機能とサービスが利用できます。
-
-* Amazon FSx for NetApp ONTAP
-+
-一部のアクションには、コンソール エージェントまたはNetAppワークロード リンクが必要です。 https://docs.netapp.com/us-en/storage-management-fsx-ontap/start/concept-fsx-aws.html["コンソールエージェントまたはリンクが必要なアクションを確認する"^]
-
-* 自動化ハブ
-* Azure NetApp Files
-+
-Azure NetApp Files を管理するためにコンソール エージェントは必要ありませんが、 NetApp Data Classificationを使用してAzure NetApp Files をスキャンするにはコンソール エージェントが必要です。
-
-* Google Cloud NetApp Volumes
-* NetApp Copy and Sync
-* デジタルアドバイザー
-* ライセンスの使用状況を監視します。サブスクリプションの監視にはコンソールエージェントが必要です。
-+
-通常、コンソール エージェントなしでNetApp Consoleにライセンスを追加できます。
-
-+
-データは Cloud Cloud Volumes ONTAP Cloud Volumes ONTAP のノードベースのライセンスを追加するにはエージェントが必要です。
-
-* オンプレミスのONTAPクラスタの直接検出
-+
-オンプレミスのONTAPクラスターをコンソールに追加するためにコンソール エージェントは必要ありませんが、追加のコンソール機能とデータ サービスにはコンソール エージェントが必要です。
-
-+
-https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAPクラスタの検出および管理オプションの詳細"^]
-
-* ソフトウェアアップデート
-* 持続可能性
-* NetAppワークロード
+| Amazon S3 ストレージ  a| 
+はい
+ a| 
+いいえ
 
 
 
-
-== コンソールエージェントが必要な場合
-
-標準モードでは、コンソールには次のコンソール エージェントが必要です。
-
-* アラート
-* Amazon FSx for ONTAP の管理機能
-* Amazon S3 ストレージ
-* Azure BLOB ストレージ
-* NetApp Backup and Recovery
-* データ分類
-* Cloud Volumes ONTAP
-* NetApp Disaster Recovery
-* Eシリーズシステム
-* 経済効率^1^
-* Google Cloud Storage バケット
-* オンプレミスのONTAPクラスタとNetAppデータ サービスの統合
-* NetApp Ransomware Resilience
-* StorageGRIDシステム
-* NetApp Cloud Tiering
-* NetApp Volume Caching
+| Azure BLOB ストレージ  a| 
+はい
+ a| 
+はい
 
 
-^1^ コンソール エージェントがなくてもこれらのサービスにアクセスできますが、アクションを開始するにはコンソール エージェントが必要です。
 
-コンソールを制限モードで使用するには、常にコンソール エージェントが必要です。
+| Azure NetApp Files  a| 
+はい
+ a| 
+はい
+
+
+
+| Cloud Volumes ONTAP  a| 
+はい
+ a| 
+いいえ
+
+
+
+| Eシリーズシステム  a| 
+はい
+ a| 
+いいえ
+
+
+
+| Google Cloud NetApp Volumes  a| 
+はい
+ a| 
+はい
+
+
+
+| Google Cloud ストレージ バケット  a| 
+はい
+ a| 
+いいえ
+
+
+
+| StorageGRIDシステム  a| 
+はい
+ a| 
+いいえ
+
+
+
+| オンプレミスのONTAPクラスタ（高度な管理と検出）  a| 
+はい（高度な管理と検出）
+ a| 
+いいえ（基本的な検出のみ）
+
+
+
+3+| *利用可能なストレージ管理サービス*: 
+
+
+| アラート  a| 
+はい
+ a| 
+いいえ
+
+
+
+| 自動化ハブ  a| 
+はい
+ a| 
+はい
+
+
+
+| Digital Advisor（Active IQ）  a| 
+はい
+ a| 
+いいえ
+
+
+
+| ライセンスとサブスクリプションの管理  a| 
+はい
+ a| 
+いいえ
+
+
+
+| 経済効率  a| 
+はい
+ a| 
+いいえ
+
+
+
+| ホームページダッシュボードのメトリクス  a| 
+はい^2^
+ a| 
+いいえ
+
+
+
+| ライフサイクルプランニング  a| 
+はい
+ a| 
+いいえ^1^
+
+
+
+| 持続可能性  a| 
+はい
+ a| 
+いいえ
+
+
+
+| ソフトウェアアップデート  a| 
+はい
+ a| 
+はい
+
+
+
+| NetAppワークロード  a| 
+はい
+ a| 
+はい
+
+
+
+3+| *利用可能なデータサービス*: 
+
+
+| NetApp Backup and Recovery  a| 
+はい
+ a| 
+いいえ
+
+
+
+| データ分類  a| 
+はい
+ a| 
+いいえ
+
+
+
+| NetApp Cloud Tiering  a| 
+はい
+ a| 
+いいえ
+
+
+
+| NetApp Copy and Sync  a| 
+はい
+ a| 
+いいえ
+
+
+
+| NetApp Disaster Recovery  a| 
+はい
+ a| 
+いいえ
+
+
+
+| NetApp Ransomware Resilience  a| 
+はい
+ a| 
+いいえ
+
+
+
+| NetApp Volume Caching  a| 
+はい
+ a| 
+いいえ
+
+|===
+^1^ コンソール エージェントがなくてもライフサイクル プランニングを表示できますが、アクションを開始するにはコンソール エージェントが必要です。
+
+^2^ ホーム ページで正確なメトリックを得るには、適切なサイズと構成のコンソール エージェントが必要です。
 
 
 
@@ -125,7 +278,7 @@ link:concept-modes.html["NetApp Consoleの導入モードについて学ぶ"] �
 
 == コンソールエージェントのインストール方法
 
-コンソール エージェントは、コンソールから直接インストールすることも、クラウド プロバイダーのマーケットプレイスからインストールすることも、独自の Linux ホストまたは VCenter 環境にソフトウェアを手動でインストールすることもできます。開始方法は、コンソールを標準モードで使用するか、制限モードで使用するかによって異なります。
+コンソール エージェントは、コンソールから直接インストールすることも、クラウド プロバイダーのマーケットプレイスからインストールすることも、独自の Linux ホストまたは VCenter 環境にソフトウェアを手動でインストールすることもできます。
 
 * link:concept-modes.html["NetApp Consoleの導入モードについて学ぶ"]
 * link:task-quick-start-standard-mode.html["NetApp Consoleを標準モードで使い始める"]
@@ -134,7 +287,7 @@ link:concept-modes.html["NetApp Consoleの導入モードについて学ぶ"] �
 
 
 
-== クラウド権限
+== クラウドプロバイダーの権限
 
 NetApp Consoleからコンソール エージェントを直接作成するには特定の権限が必要であり、コンソール エージェント自体には別の権限セットが必要です。コンソールから直接 AWS または Azure にコンソールエージェントを作成すると、コンソールは必要な権限を持つコンソールエージェントを作成します。
 
@@ -168,7 +321,7 @@ NetApp Consoleからコンソール エージェントを直接作成するに�
 
 NetApp は、機能の追加と安定性の向上のためにエージェント ソフトウェアを毎月更新します。  Cloud Volumes ONTAPやオンプレミスのONTAPクラスタ管理などの一部のコンソール機能は、コンソール エージェントのバージョンと設定に依存します。
 
-標準モードまたは制限モードでは、インターネットにアクセスできる場合、コンソール エージェントは自動的に更新されます。
+エージェントをクラウドにインストールすると、インターネットにアクセスできる場合はコンソール エージェントが自動的に更新されます。
 
 
 

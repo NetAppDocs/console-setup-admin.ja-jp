@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-federation-manage.html 
-keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
+keywords: federation, NetApp Console, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
 summary: フェデレーション接続を追加したら、 NetApp Consoleでそれを管理できます。接続のステータスを表示し、必要に応じて有効または無効にすることができます。 
 ---
 = NetApp Consoleでフェデレーションを管理する
@@ -16,17 +16,18 @@ summary: フェデレーション接続を追加したら、 NetApp Consoleで�
 [role="lead"]
 NetApp Consoleでフェデレーションを管理できます。無効にしたり、期限切れの資格情報を更新したり、不要になった場合に無効にしたりすることができます。
 
-
-NOTE: NetApp Cloud Central を使用してフェデレーションを構成した場合は、*フェデレーション* ページからインポートして、コンソールで管理します。link:task-federation-import.html["フェデレーションをインポートする方法を学ぶ"]
-
-検証済みのドメインを既存のフェデレーションに追加することもできます。これにより、フェデレーション接続に複数のドメインを使用できるようになります。
-
-
-NOTE: フェデレーションの有効化、無効化、更新などのフェデレーション管理イベントがタイムラインに表示されます。link:task-monitor-cm-operations.html["NetApp Consoleでの操作の監視について詳しく学習します。"]
-
 .必要な役割
 フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
 
+既存のフェデレーションに検証済みのドメインを追加することもできます。これにより、フェデレーション接続に複数のドメインを使用できるようになります。
+
+[NOTE]
+====
+* NetApp Cloud Central を使用してフェデレーションを構成した場合は、*フェデレーション* ページからインポートして、コンソールで管理します。link:task-federation-import.html["フェデレーションをインポートする方法を学ぶ"]
+* 監査ページでは、フェデレーションの有効化、無効化、更新などのフェデレーション管理イベントを表示できます。 link:task-monitor-cm-operations.html["NetApp Consoleでの操作の監視について詳しく学習します。"]
+
+
+====
 
 
 == フェデレーションを有効にする

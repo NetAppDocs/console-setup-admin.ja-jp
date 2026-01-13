@@ -14,7 +14,7 @@ summary: NetApp Consoleの機能とサービスを使用するには、コンソ
 
 
 [role="lead"]
-NetApp Consoleの機能とサービスを使用するには、コンソール エージェントがクラウド環境で操作を実行できるように権限を付与する必要があります。このページのリンクを使用して、目標に応じて必要な権限にすばやくアクセスします。
+クラウド環境で操作を実行できるように、コンソール エージェントに適切な権限を付与する必要があります。このページのリンクを使用して、目標に応じて必要な権限にすばやくアクセスします。
 
 
 
@@ -31,10 +31,7 @@ NetApp Consoleには、コンソールエージェントと個々のサービス
 | 目標 | 説明 | リンク 
 
 
-| コンソールからコンソールエージェントを展開する | コンソールからコンソールエージェントを作成するユーザーには、AWS にエージェントをデプロイするための特定の権限が必要です。 | link:task-install-agent-aws-console.html#aws-permissions-agent["AWS権限を設定する"] 
-
-
-| コンソールエージェントに権限を付与する | コンソールがコンソールエージェントをデプロイすると、AWS アカウント内のリソースとプロセスを管理するために必要なアクセス許可を提供するポリシーがエージェントにアタッチされます。 AWS Marketplaceからコンソールエージェントをデプロイする場合、コンソールエージェントを手動でインストールする場合、またはlink:task-adding-aws-accounts.html#add-credentials-agent-aws["コンソールエージェントにAWS認証情報を追加する"]。また、後続のリリースで新しい権限が追加された場合、ポリシーが最新であることを確認する必要があります。 | link:reference-permissions-aws.html["コンソールエージェントのAWS権限"] 
+| コンソールからコンソールエージェントをデプロイする AWS にコンソールエージェントをデプロイするには、ユーザーに特定の権限が必要です。 | link:task-install-agent-aws-console.html#aws-permissions-agent["AWS権限を設定する"] | コンソールエージェントに権限を付与する 
 |===
 
 
@@ -67,7 +64,7 @@ NetApp Consoleには、コンソールエージェントと個々のサービス
 | 目標 | 説明 | リンク 
 
 
-| AWSにデータブローカーをデプロイする | データブローカーをデプロイするために使用する AWS ユーザーアカウントには、特定の権限が必要です。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["AWS にデータブローカーをデプロイするために必要な権限"^] 
+| AWSにデータブローカーをデプロイする | データブローカーをデプロイするために使用する AWS ユーザーアカウントには、必要な権限が必要です。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["AWS にデータブローカーをデプロイするために必要な権限"^] 
 
 
 | データブローカーに権限を付与する | NetApp Copy and Sync がデータ ブローカーを展開すると、データ ブローカー インスタンスの IAM ロールが作成されます。必要に応じて、独自の IAM ロールを使用してデータ ブローカーをデプロイすることもできます。 | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["AWS データブローカーで独自の IAM ロールを使用するための要件"^] 
@@ -95,7 +92,7 @@ NetApp Consoleには、コンソールエージェントと個々のサービス
 | 目標 | 説明 | リンク 
 
 
-| オンプレミスのONTAPクラスターを Amazon S3 に階層化する | NetApp Cloud Tiering to AWS を有効にすると、ウィザードによってアクセス キーとシークレット キーの入力が求められます。これらの認証情報はONTAPクラスターに渡され、 ONTAP はデータを S3 バケットに階層化できるようになります。 | https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions["階層化のためのS3権限を設定する"^] 
+| オンプレミスのONTAPクラスターを Amazon S3 に階層化する | NetApp Cloud Tiering to AWS を有効にするときは、アクセス キーとシークレット キーを入力します。これらの認証情報はONTAPクラスターに渡され、 ONTAP はデータを S3 バケットに階層化できるようになります。 | https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions["階層化のためのS3権限を設定する"^] 
 |===
 
 
@@ -120,7 +117,7 @@ NetApp Consoleには、コンソールエージェントと個々のサービス
 
 マーケットプレイスからコンソールエージェントを起動する場合、コンソールエージェントを手動でインストールする場合、またはlink:task-adding-azure-accounts.html#add-credentials-azure["コンソールエージェントにAzure資格情報を追加する"]。
 
-また、後続のリリースで新しい権限が追加された場合、ポリシーが最新であることを確認する必要があります。
+今後のリリースで新しい権限が追加されるので、ポリシーを最新の状態に保ってください。
  a| 
 link:reference-permissions-azure.html["コンソールエージェントの Azure 権限"]
 
@@ -146,7 +143,7 @@ NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアッ�
 
 
 
-| オンプレミスのONTAPクラスターを Azure BLOB ストレージにバックアップする | NetApp Backup and Recoveryを使用してオンプレミスの ONTAP クラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html["バックアップとリカバリを使用してオンプレミスの ONTAPデータを Azure Blob ストレージにバックアップする"^] 
+| オンプレミスのONTAPクラスターを Azure BLOB ストレージにバックアップする | NetApp Backup and Recoveryを使用してオンプレミスのONTAPクラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html["バックアップとリカバリを使用してオンプレミスの ONTAPデータを Azure Blob ストレージにバックアップする"^] 
 |===
 
 
@@ -177,7 +174,7 @@ NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアッ�
 | コンソールからコンソールエージェントを展開する | コンソールからコンソール エージェントをデプロイする Google Cloud ユーザーには、Google Cloud にコンソール エージェントをデプロイするための特定の権限が必要です。 | link:task-install-agent-google-console-gcloud.html#console-permissions-google["コンソールエージェントを作成するための権限を設定する"] 
 
 
-| コンソールエージェントに権限を付与する | コンソール エージェントのサービス アカウントには、日常的な操作のための特定の権限が必要です。展開中に、サービス アカウントをコンソール エージェントに関連付ける必要があります。また、後続のリリースで新しい権限が追加された場合、ポリシーが最新であることを確認する必要があります。 | link:task-install-agent-google-console-gcloud.html#console-permissions-google["コンソールエージェントの権限を設定する"] 
+| コンソールエージェントに権限を付与する | コンソール エージェントのサービス アカウントには、日常的な操作のための特定の権限が必要です。展開中に、サービス アカウントをコンソール エージェントに関連付ける必要があります。今後のリリースで新しい権限が追加されるので、ポリシーを最新の状態に保ってください。 | link:task-install-agent-google-console-gcloud.html#console-permissions-google["コンソールエージェントの権限を設定する"] 
 |===
 
 
@@ -201,7 +198,7 @@ NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアッ�
 
 
 
-| オンプレミスのONTAPクラスタを Google Cloud にバックアップする | NetApp Backup and Recoveryを使用してオンプレミスの ONTAP クラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html["バックアップとリカバリを使用してオンプレミスのONTAPデータを Google Cloud Storage にバックアップする"^] 
+| オンプレミスのONTAPクラスタを Google Cloud にバックアップする | NetApp Backup and Recoveryを使用してオンプレミスのONTAPクラスターをバックアップする場合は、「検索と復元」機能を使用するために、コンソール エージェントに権限を追加する必要があります。 | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html["バックアップとリカバリを使用してオンプレミスのONTAPデータを Google Cloud Storage にバックアップする"^] 
 |===
 
 

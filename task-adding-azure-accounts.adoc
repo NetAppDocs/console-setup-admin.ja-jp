@@ -83,7 +83,7 @@ TIP: 既存のシステムにコンソール エージェント ソフトウェ�
 .タスク概要
 次の図は、コンソールが Azure で操作を実行するための権限を取得する方法を示しています。  1 つ以上の Azure サブスクリプションに関連付けられたサービス プリンシパル オブジェクトは、Microsoft Entra ID のコンソールを表し、必要なアクセス許可を許可するカスタム ロールに割り当てられます。
 
-image:diagram_azure_authentication.png["API 呼び出しを行う前に、コンソールが Microsoft Entra ID から認証と承認を取得する様子を示す概念図。 Active Directory では、コンソール ロールによって権限が定義されます。これは、1 つ以上の Azure サブスクリプションと、Cloud Manger アプリケーションを表すサービス プリンシパル オブジェクトに関連付けられています。"]
+image:diagram_azure_authentication.png["API 呼び出しを行う前に、コンソールが Microsoft Entra ID から認証と承認を取得する様子を示す概念図。コンソール ロールは、Active Directory 内の権限を定義します。これは、1 つ以上の Azure サブスクリプションと、コンソール アプリケーションを表すサービス プリンシパル オブジェクトに関連付けられています。"]
 
 .手順
 . <<Microsoft Entra アプリケーションを作成する>> 。

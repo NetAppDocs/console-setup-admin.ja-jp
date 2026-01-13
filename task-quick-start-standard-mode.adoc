@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-quick-start-standard-mode.html 
 keywords: quick start, standard mode quick start 
-summary: コンソールのネットワークを準備し、サインアップしてアカウントを作成し、オプションでコンソール エージェントを作成して、標準モードでNetApp Consoleの使用を開始します。 
+summary: 'NetApp Console(SaaS) の使用を開始するには、コンソールのネットワークを準備し、サインアップしてアカウントを作成し、 NetAppアシスタントを使用して初期機能を設定します。' 
 ---
-= 開始ワークフロー（標準モード）
+= 開始ワークフロー（SaaS）
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,22 +14,29 @@ summary: コンソールのネットワークを準備し、サインアップ�
 
 
 [role="lead"]
-コンソールのネットワークを準備し、サインアップしてアカウントを作成し、オプションでコンソール エージェントを作成して、標準モードでNetApp Consoleの使用を開始します。
+NetApp Console(SaaS) の使用を開始するには、コンソールのネットワークを準備し、サインアップしてアカウントを作成し、コンソール アシスタントを使用して初期機能を設定します。
 
-標準モードでは、 NetAppの Software-as-a-service (SaaS) 製品としてホストされている Web ベースのコンソールにアクセスします。始める前に、以下の点を理解しておいてくださいlink:concept-modes.html["展開モード"]そしてlink:concept-agents.html["コンソールエージェント"]。
+NetAppの Software-as-a-service (SaaS) 製品としてホストされているWebベースのコンソールにアクセスします。コンソールを使用して、ハイブリッド クラウド ストレージ環境を管理し、 NetAppデータ サービスを使用できます。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] link:reference-networking-saas-console.html["NetAppコンソールを使用するためのネットワークの準備"]
 [role="quick-margin-para"]
-NetAppコンソールにアクセスするコンピューターは、特定のエンドポイントに接続する必要があります。ネットワークで送信アクセスが制限されている場合は、これらのエンドポイントが許可されていることを確認する必要があります。
+NetAppコンソールにアクセスするコンピューターが必要なエンドポイントにネットワーク アクセスできることを確認します。
+
+link:reference-networking-saas-console.html["NetAppコンソールのネットワークを準備する方法を学びます。"]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"] link:task-sign-up-saas.html["サインアップして組織を作成する"]
 [role="quick-margin-para"]
-に行く https://console.netapp.com["NetAppコンソール"^]そしてサインアップしてください。組織を作成するオプションが提供されますが、会社に既に組織が存在する場合は、その手順をスキップする必要があります。
+に行く https://console.netapp.com["NetAppコンソール"^] そしてサインアップしてください。組織を作成するように求められた場合、会社にすでに組織が存在すると思われる場合は、ダイアログ ボックスを閉じて、組織の管理者に連絡してください。現在、会社に組織管理者がいない場合は、この役割を申請できます。 link:task-user-settings.html#contact-admin["組織管理者に連絡する方法について説明します。"^]
 
 [role="quick-margin-para"]
-この時点で、ログインしてストレージの管理や、 Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Filesなどのサービスの使用を開始できます。link:concept-agents.html["コンソールエージェントなしで何ができるかを学ぶ"] 。
+この時点でログインしており、 NetAppアシスタントを使用してコンソールの構成を開始できます。まず、 NetAppサポート アカウントとコンソール エージェントを関連付けて、完全な機能を有効にします。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"]コンソールエージェントを作成する
+NetAppアシスタントを使用しない、またはコンソール エージェントをインストールしない場合は、ストレージの管理を開始し、 Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Filesなどのサービスを使用できます。link:concept-agents.html["コンソールエージェントなしで何ができるかを学ぶ"]。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"] NetApp Support Site（NSS）アカウントを関連付ける
+NetApp Support Site(NSS) アカウントをコンソールに関連付けると、ライセンスとサブスクリプションをより簡単に管理できるだけでなく、コンソールから直接サポート リソースにアクセスできるようになります。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"] コンソールエージェントを作成する
 [role="quick-margin-para"]
 高度なストレージ管理機能と一部のNetAppデータ サービスを使用するには、コンソール エージェントをインストールする必要があります。コンソール エージェントにより、コンソールはハイブリッド クラウド環境内のリソースとプロセスを管理できるようになります。
 
@@ -44,9 +51,18 @@ NetAppコンソールにアクセスするコンピューターは、特定の�
 * link:task-install-agent-on-prem.html["オンプレミスでコンソールエージェントを作成する方法を学ぶ"]
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] コンソールにストレージシステムを追加する
 [role="quick-margin-para"]
-Google Cloud でストレージとデータを管理するためNetApp Intelligent Data Services を使用するには、コンソール エージェントが Google Cloud で実行されていることを確認します。
+NetApp Console内で、ストレージ システムを追加または検出して、ハイブリッド クラウド ストレージ環境を管理できます。NetAppアシスタントを使用して、最初のストレージ システムを追加します。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"] link:task-subscribe-standard-mode.html["NetApp Intelligent Servicesに加入する（オプション）"]
+
+TIP: AWS、Microsoft Azure、または Google Cloud にコンソール エージェントをインストールすると、コンソールはエージェントがインストールされている場所にあるAmazon S3バケット、Azure Blob ストレージ、または Google Cloud Storage バケットに関する情報を自動的に検出します。これらのシステムは自動的に *システム* ページに追加されます。
+
+* link:https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["ONTAPシステムの検出方法を学ぶ"]
+* link:https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["StorageGRIDシステムの検出方法を学ぶ"]
+* link:https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html["Eシリーズ システムの発見方法を学ぶ"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"] link:task-subscribe-standard-mode.html["NetApp Intelligent Servicesに加入する（オプション）"]
 [role="quick-margin-para"]
-クラウド プロバイダーを通じてNetApp Intelligent Servicesにサインアップし、時間単位 (PAYGO) または年間契約で支払います。  NetApp Intelligent Servicesには、 NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience 、 NetApp Disaster Recovery が含まれます。  NetApp Data Classification は追加料金なしでサブスクリプションに含まれています。
+クラウド プロバイダを通じて、時間単位 (PAYGO) または年額課金でNetApp Intelligent Servicesにサインアップします。サブスクリプションには、 NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience、 NetApp Disaster Recovery、 NetApp Data Classificationが含まれます。
