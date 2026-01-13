@@ -14,7 +14,7 @@ summary: Google Cloud でコンソール エージェントを作成するには
 
 
 [role="lead"]
-Google Cloud でコンソール エージェントを作成するには、いくつかの方法があります。 NetApp Consoleから直接行うのが最も一般的な方法です。---
+Google Cloud でコンソール エージェントを作成するには、いくつかの方法があります。  NetApp Consoleから直接行うのが最も一般的な方法です。
 
 次のインストール オプションが利用可能です。
 
