@@ -1293,7 +1293,6 @@
   <block id="320a91e2547bc28be93b76779dc849b4" category="paragraph">選択したインストール オプションは、インストールの準備方法に影響します。これには、Azure でリソースを認証および管理するために必要なアクセス許可をコンソール エージェントに付与する方法が含まれます。</block>
   <block id="011286419a3e5b900c9f64647edebdf7" category="summary">Google Cloud でコンソール エージェントを作成するには、いくつかの方法があります。  NetApp Consoleから直接行うのが最も一般的な方法です。</block>
   <block id="89facd2099770d471c8de70fdb5d0651" category="doc">Google Cloud のコンソール エージェントのインストール オプション</block>
-  <block id="0e60cc3f489de1661d16a80c2219b147" category="paragraph">Google Cloud でコンソール エージェントを作成するには、いくつかの方法があります。 NetApp Consoleから直接行うのが最も一般的な方法です。---</block>
   <block id="1a208b984fe61bb9d1e4e6b026e30354" category="list-text"><block ref="84693cca73c9981e6b563eb4572174e7" category="inline-link-macro-rx"></block>（これが標準オプションです）</block>
   <block id="efbe29648b3d8def21619f8bba35784f" category="paragraph">このアクションにより、選択した VPC で Linux とコンソール エージェント ソフトウェアを実行する VM インスタンスが起動します。</block>
   <block id="f47b616e0890c8a8507745d52fc62533" category="inline-link-macro">Google プラットフォームを使用してコンソール エージェントを作成する</block>
@@ -5904,4 +5903,9 @@
   <block id="4c61619ce49044f354b1f5cc38707fd2" category="sidebar">AWSエージェントの権限とセキュリティルール</block>
   <block id="20ec4216ad7aef42619add3b96b89c33" category="sidebar">Azure のアクセス許可と必要なセキュリティ ルール</block>
   <block id="347863a199ea8f4c7e1e9540d041ca12" category="sidebar">Google Cloud の権限と必要なファイアウォール ルール</block>
+  <block id="772b95b1a689cd9ca0f7d8935114e25c" category="paragraph-title">Cloud Volumes ONTAPの追加の Google Cloud 権限</block>
+  <block id="335ea2f40a7e49b48a24b0867a975d2b" category="paragraph">Google Cloud でCloud Volumes ONTAP管理をサポートするには、コンソール エージェントに追加の権限が必要になりました。コンソールエージェントが使用するサービスアカウントに次の権限が追加されました: compute.forwardingRules.update</block>
+  <block id="b4c9682d1423fe286221a4951d5900b8" category="paragraph"><block ref="b4c9682d1423fe286221a4951d5900b8" category="inline-link-macro-rx"></block></block>
+  <block id="b18fad63d8ccb120bf7c88b5cde19431" category="cell">compute.forwardingRules.update</block>
+  <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">トラフィック管理のために既存の転送ルールを更新します。</block>
 </blocks>

@@ -15,6 +15,11 @@
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["コンソール エージェントで構成チェックを実行する方法を学習します。"]
 
+.Cloud Volumes ONTAPの追加の Google Cloud 権限
+Google Cloud でCloud Volumes ONTAP管理をサポートするには、コンソール エージェントに追加の権限が必要になりました。コンソールエージェントが使用するサービスアカウントに次の権限が追加されました: compute.forwardingRules.update
+
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log["権限変更ログを表示します。"]
+
 
 
 === NetApp Console管理
