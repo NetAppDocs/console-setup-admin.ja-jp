@@ -21,6 +21,11 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.h
 
 このリリースには以下が含まれます。
 
+.NetApp Consoleでのフェデレーション グループに対するロールベースのアクセス
+NetApp Consoleは、フェデレーション グループ (Active Directory グループなど) へのロールの割り当てをサポートしており、管理者は組織の ID プロバイダー (IdP) のグループ メンバーシップに基づいてユーザーのオンボーディングとオフボーディングを自動化できます。この機能により、管理オーバーヘッドが削減され、グループ メンバーシップの変更に応じてコンソール アクセスが即座に更新されるため、安全で一貫したアクセスが確保されます。
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#add-a-federated-group-to-your-organization["組織にフェデレーション グループへのアクセスを提供する方法を学習します。"]
+
 .NetApp Consoleが制限モードの場合のフェデレーションのサポート
 制限モードになっているNetApp Console組織に対してフェデレーションを有効にできるようになりました。これにより、ユーザーは制限モードのセキュリティ上の利点を維持しながら、企業の資格情報を使用してコンソールにログインできるようになります。
 

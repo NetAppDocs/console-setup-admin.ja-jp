@@ -5744,9 +5744,7 @@
   <block id="1065e278b83db0baa7239d1c2c89e558" category="paragraph">コンソールにはクライアント シークレットが 1 回だけ表示されます。安全にコピーしておけば、紛失した場合でも後で再作成できます。</block>
   <block id="6c07155a6c5b387b3649e57518b2acbf" category="list-text">JWT 認証を選択した場合は、クライアント ID と JWT オーディエンスをダウンロードまたはコピーします。コンソールにはこの情報が一度だけ表示され、後で取得することはできません。</block>
   <block id="1e5bd0e3b2f8efdd44ff92b7d355c374" category="section-title">組織にフェデレーショングループを追加する</block>
-  <block id="c4d8a0f38fcfd51b64b45642a963ccd2" category="paragraph">アイデンティティ プロバイダー (IdP) から組織にフェデレーション グループを追加できます。フェデレーション グループのメンバーは、コンソールでグループに割り当てたロールを継承します。</block>
   <block id="1f87469083830ec60b59de86a65908a9" category="inline-link-macro">フェデレーションを設定する方法を学習します。</block>
-  <block id="44c50d77ce337726b2c52859655871e2" category="paragraph">フェデレーション グループを追加する前に、次の点を確認してください。 * IdP とコンソール間のフェデレーションがすでに設定されている必要があります。<block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block> * グループは IdP にすでに存在している必要があります。* IdP 内のグループの正確な名前を知っておく必要があります。* グループに属するユーザーは、 NetApp Consoleにすでにサインアップしており、コンソールで明示的にロールが割り当てられている必要があります。</block>
   <block id="16a2c505069eacd418dca553f5b68d99" category="list-text">*メンバータイプ*では*フェデレーショングループ*を選択します。</block>
   <block id="00cfd65508d24955faa8b609b29efc15" category="list-text">グループがメンバーである連盟を選択します</block>
   <block id="be1ae879869c7f401beda2410fc2ef42" category="list-text">*グループ名*には、IdP 内のグループの正確な名前を入力します。</block>
@@ -5903,9 +5901,13 @@
   <block id="4c61619ce49044f354b1f5cc38707fd2" category="sidebar">AWSエージェントの権限とセキュリティルール</block>
   <block id="20ec4216ad7aef42619add3b96b89c33" category="sidebar">Azure のアクセス許可と必要なセキュリティ ルール</block>
   <block id="347863a199ea8f4c7e1e9540d041ca12" category="sidebar">Google Cloud の権限と必要なファイアウォール ルール</block>
-  <block id="772b95b1a689cd9ca0f7d8935114e25c" category="paragraph-title">Cloud Volumes ONTAPの追加の Google Cloud 権限</block>
-  <block id="335ea2f40a7e49b48a24b0867a975d2b" category="paragraph">Google Cloud でCloud Volumes ONTAP管理をサポートするには、コンソール エージェントに追加の権限が必要になりました。コンソールエージェントが使用するサービスアカウントに次の権限が追加されました: compute.forwardingRules.update</block>
-  <block id="b4c9682d1423fe286221a4951d5900b8" category="paragraph"><block ref="b4c9682d1423fe286221a4951d5900b8" category="inline-link-macro-rx"></block></block>
-  <block id="b18fad63d8ccb120bf7c88b5cde19431" category="cell">compute.forwardingRules.update</block>
-  <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">トラフィック管理のために既存の転送ルールを更新します。</block>
+  <block id="9f3261123c8a658e7b62dee5c17371f4" category="paragraph-title">NetApp Consoleでのフェデレーション グループに対するロールベースのアクセス</block>
+  <block id="c4d7a3f544d6f76c7c70bcb232209dbf" category="paragraph">NetApp Consoleは、フェデレーション グループ (Active Directory グループなど) へのロールの割り当てをサポートしており、管理者は組織の ID プロバイダー (IdP) のグループ メンバーシップに基づいてユーザーのオンボーディングとオフボーディングを自動化できます。この機能により、管理オーバーヘッドが削減され、グループ メンバーシップの変更に応じてコンソール アクセスが即座に更新されるため、安全で一貫したアクセスが確保されます。</block>
+  <block id="ac4ebbe533b328180ba7587ac3ed17ea" category="inline-link-macro">組織にフェデレーション グループへのアクセスを提供する方法を学習します。</block>
+  <block id="bd8d483345dcb63c75668983c3887b87" category="paragraph"><block ref="bd8d483345dcb63c75668983c3887b87" category="inline-link-macro-rx"></block></block>
+  <block id="8e21188f4a561525a629d0158af709a2" category="paragraph">アイデンティティ プロバイダー (IdP) から組織にフェデレーション グループを追加し、それに 1 つ以上のロールを割り当てることができます。フェデレーション グループのメンバーは、コンソールでグループに割り当てたロールを継承します。</block>
+  <block id="74339c243d7e2c57c81d3b6eeb492598" category="paragraph">フェデレーション グループにロールを割り当てる前に、次の点を確認してください。</block>
+  <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">IdP とコンソール間のフェデレーションを設定します。 <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
+  <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">グループは既に IdP に存在し、コンソールへのアプリ アクセスが割り当てられている必要があります。</block>
+  <block id="06d5b18e5be0feb68eea2f9f0a2102d0" category="list-text">グループに属するユーザーは、すでにNetApp Consoleにサインアップしており、コンソールで明示的にロールが割り当てられている必要があります。NetApp、組織閲覧者などの最小限のアクセス ロールを割り当てることを推奨しています。</block>
 </blocks>
