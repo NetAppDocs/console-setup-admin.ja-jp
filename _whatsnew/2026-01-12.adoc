@@ -34,4 +34,4 @@ NetApp Console組織を読み取り専用モードに設定できます。読み
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-enable-read-only-mode.html["コンソール組織で読み取り専用モードを有効にする方法を学習します。"]
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings["組織が読み取り専用モードの場合に役割を昇格させる方法を学習します。"]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings.html["組織が読み取り専用モードの場合に役割を昇格させる方法を学習します。"]
