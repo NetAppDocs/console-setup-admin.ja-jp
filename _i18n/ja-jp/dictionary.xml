@@ -5910,4 +5910,8 @@
   <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">IdP とコンソール間のフェデレーションを設定します。 <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
   <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">グループは既に IdP に存在し、コンソールへのアプリ アクセスが割り当てられている必要があります。</block>
   <block id="06d5b18e5be0feb68eea2f9f0a2102d0" category="list-text">グループに属するユーザーは、すでにNetApp Consoleにサインアップしており、コンソールで明示的にロールが割り当てられている必要があります。NetApp、組織閲覧者などの最小限のアクセス ロールを割り当てることを推奨しています。</block>
+  <block id="881a7400da554e794b5b8e9d39c7db4a" category="section-title">ワークロードのエンドポイント</block>
+  <block id="7226c299553546c713e6b5ab556098c8" category="paragraph">コンソール エージェントは、 NetAppワークロードの次のエンドポイントにアクセスできる必要があります。</block>
+  <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">\https://api.workloads.netapp.com</block>
+  <block id="a2d795d1d62d99052325545b09f9236f" category="paragraph">Webベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。</block>
 </blocks>

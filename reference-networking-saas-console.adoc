@@ -90,3 +90,21 @@ NOTE: 4.0.0 では、 NetApp はコンソールとコンソール エージェ�
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Azure のCloud Volumes ONTAPのエンドポイント"]
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Google Cloud のCloud Volumes ONTAPのエンドポイント"]
 
+
+
+
+=== ワークロードのエンドポイント
+
+コンソール エージェントは、 NetAppワークロードの次のエンドポイントにアクセスできる必要があります。
+
+[cols="2*"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+\https://api.workloads.netapp.com
+ a| 
+Webベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
+
+|===
