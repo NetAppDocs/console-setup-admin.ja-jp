@@ -11,9 +11,9 @@
 コンソール エージェントのこのリリースには、セキュリティの改善、バグ修正、および次の機能が含まれています。
 
 .コンソールエージェントのネットワーク接続を検証する機能
-接続されたコンソール エージェントのネットワーク接続をNetApp Consoleから直接検証できるようになりました。この機能は、接続の検証とコンソール エージェントの問題のトラブルシューティングに役立ちます。
+接続された Console エージェントのネットワーク接続をNetApp Console から直接検証できるようになりました。この機能は、Console エージェントの接続性を検証し、問題のトラブルシューティングに役立ちます。これは、Console エージェントのメンテナンスコンソールのコマンドラインインターフェース（CLI）からネットワーク診断を実行できる既存の機能に加えて提供されます。
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["コンソール エージェントで構成チェックを実行する方法を学習します。"]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["NetApp Consoleから構成を実行する方法を学習します。"]
 
 
 

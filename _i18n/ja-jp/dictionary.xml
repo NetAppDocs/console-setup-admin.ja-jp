@@ -4838,7 +4838,6 @@
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">Webコンソールへのアクセス用にCA署名証明書をインストールする</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">EC2インスタンスでIMDSv2の使用を必須にする</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">コンソールエージェントをアンインストールして削除する</block>
-  <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">デフォルト設定</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">NetApp ConsoleでONTAP権限を適用する</block>
   <block id="cbaee96b9499da2c5c6d3b23090382c6" category="sidebar">資格情報と権限について学ぶ</block>
   <block id="9d812302dfdd0fdbf4faa0fe53b9ed24" category="sidebar">プロジェクトと権限について学ぶ</block>
@@ -5461,8 +5460,6 @@
   <block id="79af92d05f2b214eab2c765e215beb6b" category="doc">コンソールエージェント 4.3.0</block>
   <block id="6f1b51eea64496510e6cf5a5a2d57d29" category="paragraph">4.3.0 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
   <block id="664a9e1da962d9131b0a035da50bbcc7" category="paragraph-title">コンソールエージェントのネットワーク接続を検証する機能</block>
-  <block id="81cc16a2354d8ec80802e2e4ac22f15a" category="paragraph">接続されたコンソール エージェントのネットワーク接続をNetApp Consoleから直接検証できるようになりました。この機能は、接続の検証とコンソール エージェントの問題のトラブルシューティングに役立ちます。</block>
-  <block id="65ce32eae3a28c0b24f8cc33c345ab84" category="paragraph"><block ref="65ce32eae3a28c0b24f8cc33c345ab84" category="inline-link-macro-rx"></block></block>
   <block id="8b71edf4fd7d99d72da1d37de5e154b7" category="paragraph-title">NetApp Consoleが制限モードの場合のフェデレーションのサポート</block>
   <block id="58bbe2cc0931c12594be1bafb70597fb" category="paragraph">制限モードになっているNetApp Console組織に対してフェデレーションを有効にできるようになりました。これにより、ユーザーは制限モードのセキュリティ上の利点を維持しながら、企業の資格情報を使用してコンソールにログインできるようになります。</block>
   <block id="ac811c471ef716f9c8a3865d7f14caa3" category="paragraph-title">読み取り専用モード</block>
@@ -5780,7 +5777,6 @@
   <block id="cc58a3864ec91bd4d491cafcb895e671" category="paragraph">ユーザーがNetApp Consoleにサインアップしたら、そのユーザーを組織に追加し、リソースへのアクセスを提供するロールを割り当てることができます。 <block ref="43b297cbb0e75204baf387be01022755" category="inline-link-macro-rx"></block></block>
   <block id="729d1ca3c10203fc503fd9f53e1e1025" category="paragraph">必要に応じて役割を追加または削除することで、メンバーのアクセスを調整できます。</block>
   <block id="385f92ada47188b8c301664b007e6ca3" category="paragraph">メンバーは、同じプロジェクト内および異なるプロジェクト内で複数の役割を持つことができます。たとえば、小規模な組織では、利用可能なすべてのアクセス ロールを同じユーザーに割り当てる場合がありますが、大規模な組織では、ユーザーにさらに専門的なタスクを実行させる場合があります。あるいは、組織レベルで 1 人のユーザーに Ransomware Resilience 管理者ロールを割り当てることもできます。この例では、ユーザーは組織内のすべてのプロジェクトでランサムウェア耐性タスクを実行できるようになります。</block>
-  <block id="185fff519c8fc661f991bd10bba243ab" category="admonition">組織管理者の役割が割り当てられているメンバーには、追加の役割を割り当てることはできません。すでに組織全体にわたる権限を持っています。フォルダーまたはプロジェクトの管理者ロールを持つメンバーには、そのロールがすでに与えられているフォルダーまたはプロジェクト内の他のロールを割り当てることはできません。これら両方のロールは、割り当てられた範囲内のすべてのサービスへのアクセスを提供します。</block>
   <block id="ebeb67c2ab58cfe7b88d1a1bc054c1a8" category="list-text">メンバータブのいずれかを選択します: *ユーザー*、*サービス アカウント*、または *フェデレーション グループ*。</block>
   <block id="a62c20a6e8e006e17ebdbe37484ef3e8" category="paragraph">メンバーが組織を離れる場合は、そのメンバーを削除します。</block>
   <block id="b28aef4c16ab3aa23caf8777e9998b0c" category="paragraph">メンバーを削除すると、そのメンバーのコンソール権限は取り消されますが、コンソールとNetApp Support Siteのアカウントは保持されます。</block>
@@ -5914,4 +5910,10 @@
   <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">\https://api.workloads.netapp.com</block>
   <block id="a2d795d1d62d99052325545b09f9236f" category="paragraph">Webベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。</block>
   <block id="1f48aa3b8a17cda9bff69e07d29acd50" category="paragraph"><block ref="1f48aa3b8a17cda9bff69e07d29acd50" category="inline-link-macro-rx"></block></block>
+  <block id="3a78a8ea0b02debae5e6b16cc1929cb5" category="paragraph">接続された Console エージェントのネットワーク接続をNetApp Console から直接検証できるようになりました。この機能は、Console エージェントの接続性を検証し、問題のトラブルシューティングに役立ちます。これは、Console エージェントのメンテナンスコンソールのコマンドラインインターフェース（CLI）からネットワーク診断を実行できる既存の機能に加えて提供されます。</block>
+  <block id="16e0d5a8229f3c0136c12aa9def60bb1" category="inline-link-macro">NetApp Consoleから構成を実行する方法を学習します。</block>
+  <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
+  <block id="ee856bddd35f8f0d8d6a5e0b5017b7dd" category="sidebar">コンソールエージェントを理解する</block>
+  <block id="10895cced39195f7b9456b154a2c8530" category="sidebar">プライベートモードを始める</block>
+  <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">デフォルトのエージェント構成</block>
 </blocks>
