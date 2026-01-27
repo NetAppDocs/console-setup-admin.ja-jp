@@ -269,48 +269,35 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
-ネットワークでインターネット アクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。インストール中に明示的なプロキシを追加することもできます。--proxy および --cacert パラメータはオプションであり、追加するように要求されることはありません。明示的なプロキシ サーバーがある場合は、示されているようにパラメータを入力する必要があります。
-
-+
-CA 署名証明書を使用して明示的なプロキシ サーバーを構成する例を次に示します。
-
-+
-[source, cli]
-----
-./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
-----
-+
-`--proxy`次のいずれかの形式を使用して、コンソール エージェントが HTTP または HTTPS プロキシ サーバーを使用するように構成します。
-
-+
-** \http://アドレス:ポート
-** \http://ユーザー名:パスワード@アドレス:ポート
-** \http://ドメイン名%92ユーザー名:パスワード@アドレス:ポート
-** \https://アドレス:ポート
-** \https://ユーザー名:パスワード@アドレス:ポート
-** \https://ドメイン名%92ユーザー名:パスワード@アドレス:ポート
-+
-次の点に注意してください。
-
-+
-*** ユーザーはローカル ユーザーまたはドメイン ユーザーになります。
-*** ドメイン ユーザーの場合は、上記のように \ の ASCII コードを使用する必要があります。
-*** コンソール エージェントは、@ 文字を含むユーザー名またはパスワードをサポートしていません。
-*** パスワードに以下の特殊文字が含まれている場合は、その特殊文字の前にバックスラッシュ ( & または ! ) を付けてエスケープする必要があります。
-+
-例えば：
-
-+
-\http://bxpproxyuser:netapp1\!@アドレス:3128
-
-
-
-
+ネットワークでインターネットアクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。インストール中に明示的にプロキシを追加できます。 `--proxy`および `--cacert`パラメータはオプションであり、追加を要求されることはありません。明示的なプロキシ サーバがある場合は、示されているようにパラメータを入力する必要があります。
 
 
 
 
 NOTE: 透過プロキシを設定する場合は、インストール後に設定できます。 link:reference-agent-maint-console-proxy.html["エージェントメンテナンスコンソールについて学ぶ"]
+
++
+
+CA 署名証明書を使用して明示的なプロキシ サーバーを構成する例を次に示します。
+
++
+
+[source, cli]
+----
+./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy` 次のいずれかの形式を使用して、Console エージェントが HTTP または HTTPS プロキシ サーバを使用するように設定します：
+
++ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port
+
++ 以下の点に注意してください：
+
++ ** ユーザーは、ローカル ユーザーまたはドメイン ユーザーにすることができます。** ドメイン ユーザーの場合は、上記のように \ の ASCII コードを使用する必要があります。** Console エージェントは、@ 文字を含むユーザー名またはパスワードをサポートしていません。** パスワードに次の特殊文字が含まれている場合は、その特殊文字の前にバックスラッシュを付けてエスケープする必要があります：& または !
+
++ 例：
+
++ \http://bxpproxyuser:netapp1\!@address:3128
 
 . Podman を使用した場合は、aardvark-dns ポートを調整する必要があります。
 +
