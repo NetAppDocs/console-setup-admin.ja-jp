@@ -4,7 +4,7 @@ permalink: concept-org-partnerships.html
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
 summary: NetApp Consoleで組織間のパートナーシップを構築すると、組織のパートナーは組織の境界を越えてNetAppリソースを安全に管理できるようになり、コラボレーションが効率化され、セキュリティが強化されます。 
 ---
-= NetApp Consoleのパートナーシップ
+= NetApp Console における組織パートナーシップ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -26,7 +26,7 @@ NetApp Consoleで組織間のパートナーシップを構築することで、
 パートナーとして、顧客環境全体の一元的な可視性と制御を実現できます。顧客の組織に簡単に切り替えて、定義された境界内でリソースを管理し、データ サービスを実行し、正常性を監視できるため、カスタム ツールが削減され、各顧客のポリシーとの整合性が確保されます。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]1人以上のユーザーにパートナーシップ管理者の役割を割り当てる
-パートナーシップを作成および管理するには、開始組織と受信組織の両方で 1 人以上のユーザーにパートナーシップ管理者ロールを割り当てます。パートナーシップの表示のみが必要で、管理は必要ないユーザーには、パートナーシップ閲覧者ロールを割り当てることができます。
+パートナーシップを作成および管理するには、開始組織と受信組織の両方の 1 人以上のユーザーに Partnership admin ロールを割り当てます。パートナーシップの表示のみが必要で、管理は必要ないユーザーには、Partnership viewer ロールを割り当てることができます。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]組織IDを開始組織と共有する
 [role="quick-margin-para"]

@@ -16,4 +16,4 @@ summary: コンソール内では、各ユーザーにはユーザーとその�
 [role="lead"]
 NetApp Consoleは SOC 2 Type II に準拠しています。
 
-link:https://www.netapp.com/responsibility/trust-center/compliance/soc-2/["NetApp の SOC 2 コンプライアンスの詳細をご覧ください。"]
+link:https://www.netapp.com/responsibility/trust-center/compliance/soc-2/["NetApp の SOC 2 コンプライアンスの詳細をご覧ください。"^]

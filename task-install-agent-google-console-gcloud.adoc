@@ -374,16 +374,14 @@ Console エージェントとCloud Volumes ONTAPをデプロイする前に、�
 .手順
 . プロジェクトで次の Google Cloud API を有効にします。
 +
-** クラウド インフラストラクチャ マネージャー API
 ** クラウド デプロイメント マネージャー V2 API
+** クラウド インフラストラクチャ マネージャー API
 ** クラウドロギングAPI
 ** クラウド リソース マネージャー API
 ** コンピューティングエンジン API
 ** アイデンティティとアクセス管理 (IAM) API
-** クラウド キー管理サービス (KMS) API
-+
-（顧客管理暗号化キー（CMEK）を使用したNetApp Backup and Recoveryを使用する予定の場合のみ必要）
-
+** Cloud Key Management Service（KMS）API（お客様が管理する暗号化キー（CMEK）でNetApp Backup and Recoveryを使用する予定の場合のみ必要）
+** Cloud Quotas API（Infrastructure Managerを使用したCloud Volumes ONTAPデプロイメントに必要）
 
 
 

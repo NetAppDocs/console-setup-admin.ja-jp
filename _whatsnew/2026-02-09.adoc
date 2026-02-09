@@ -1,0 +1,22 @@
+= Console エージェント 4.4.0
+:allow-uri-read: 
+
+
+
+
+=== Console エージェント 4.4.0
+
+4.4.0 リリースでは、標準モードと制限モードの両方がサポートされています。
+
+Console エージェントのこのリリースには、セキュリティの改善とバグ修正が含まれています。
+
+
+
+=== NetApp Console管理
+
+このリリースには以下が含まれます。
+
+.NetApp Backup and Recoveryワークロード（OracleおよびMicrosoft SQL Server）のロールベースアクセスのサポート
+バックアップとリカバリのワークロード（OracleとMicrosoft SQL Server）をプロジェクトに関連付けることができます。プロジェクトに割り当てた後、プロジェクトのバックアップとリカバリのロールを割り当てられたユーザーはワークロードを操作できるようになります。その他のワークロードは、現時点ではロールベースのアクセスではサポートされていません。
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["Backup and Recovery ワークロードのロールベースアクセスの設定について詳しくは、こちらをご覧ください。"^]
