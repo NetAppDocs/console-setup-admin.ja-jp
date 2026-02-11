@@ -5367,13 +5367,6 @@
   <block id="47d455f427b4674cc00157a8a2934409" category="paragraph">このポリシーには次の権限が追加されました:</block>
   <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">分類ドキュメント</block>
   <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
-  <block id="9b894a36c4ebb01df8469fa98daba21f" category="summary">NetApp、Google Cloud にコンソール エージェントをデプロイするときに、コンソール エージェントに使用されるサービス アカウントに必要な権限を更新することがあります。</block>
-  <block id="d6d6c33d995f278b372d3d2f7a10524d" category="doc">Google Cloud デプロイメントのコンソール エージェント権限を管理する</block>
-  <block id="daf1fbd23852baa7dc431ec2658722d9" category="inline-link-macro">必要なGoogle権限リストを確認する</block>
-  <block id="c35025e4c3afa1c5d645893259cbce25" category="paragraph"><block ref="df29c88404b44d3e8df12197653b40b2" category="inline-link-macro-rx"></block>。</block>
-  <block id="4860b54918e1580143a7c01984c21fe1" category="paragraph">Google Cloud Console を使用して、サービス アカウントに割り当てられた IAM ロールを新しい権限セットに合わせて更新します。</block>
-  <block id="34e82a1501cca5af4e190be9c03c0fbb" category="inline-link-macro">Google Cloud ドキュメント: カスタムロールを編集する</block>
-  <block id="322a5219fa870735040f24cb43da8303" category="paragraph"><block ref="322a5219fa870735040f24cb43da8303" category="inline-link-macro-rx"></block></block>
   <block id="16d62d361fbd1153b9fe75b035aa7c51" category="paragraph">コンソールエージェントの既存の透過プロキシサーバーを更新するには、<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block>コマンドを使用して透過プロキシサーバーを削除するか、<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block>指示。詳細については、次のドキュメントを参照してください。<block ref="1b2f5cd7e64b458e431e40fa20571324" category="inline-link-macro-rx"></block> 。</block>
   <block id="e403ae80ee5407293bf60157033759c8" category="list-text">フォルダまたはプロジェクトの詳細を入力してください:</block>
   <block id="70fdeef63f056c10a8cdcc5f3fbc8eb3" category="inline-xref">リソースを削除する方法を学ぶ</block>
@@ -5935,5 +5928,21 @@
   <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">トラフィック管理のために既存の転送ルールを更新します。</block>
   <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026年2月9日</block>
   <block id="86adfecaaa4dc7c9c4b8f67dcfd84a27" category="paragraph"><block ref="b18fad63d8ccb120bf7c88b5cde19431" prefix=" " category="inline-code"></block>権限は、Google Cloud での Cloud Volumes ONTAP 導入において Infrastructure Manager をサポートするために追加されました。</block>
-  <block id="dea86e9f14e9d4847c31a2b6d002bdbc" category="paragraph">includes::_whatsnew/2026-02-09.adoc[]</block>
+  <block id="aca93a34ac0830ae93442a45a45230ca" category="summary">コンソールエージェントVMインスタンスに関連付けられているGoogle Cloud認証情報を管理するには、マーケットプレイスのサブスクリプションを関連付け、サブスクリプションプロセスのトラブルシューティングを行います。これら両方のタスクにより、マーケットプレイスのサブスクリプションを使用してデータサービスの支払いができるようになります。</block>
+  <block id="a5902f6d28779078fd2033b21af7a5fe" category="doc">NetApp Console の Google Cloud クレデンシャルとサブスクリプションを管理</block>
+  <block id="7fb6ce6ba61ee2f889266f6591c8bf62" category="paragraph">NetApp Console エージェント VM インスタンスに関連付けられている Google Cloud 認証情報を管理するには、マーケットプレイスのサブスクリプションを関連付け、サブスクリプション プロセスのトラブルシューティングを行います。これら両方のタスクにより、マーケットプレイスのサブスクリプションを使用してデータ サービスの料金を支払うことができます。</block>
+  <block id="209e33f8aa50ade8c82e5bc82a8c023d" category="section-title">Marketplace サブスクリプションを Google Cloud クレデンシャルに関連付ける</block>
+  <block id="eb7e6d1f8bb6ef3fd9a4c9dde493222f" category="paragraph">Google Cloud にConsoleエージェントをデプロイすると、ConsoleはConsoleエージェントVMインスタンスに関連付けられたデフォルトの認証情報セットを作成します。これらの認証情報に関連付けられているGoogle Cloud Marketplaceサブスクリプションはいつでも変更できます。サブスクリプションでは、従量課金制Cloud Volumes ONTAPシステムを作成し、その他のデータサービスを使用できます。</block>
+  <block id="55c766cf4228626844250621a71175de" category="section-title">Marketplaceのサブスクリプションプロセスのトラブルシューティング</block>
+  <block id="22799693f8d16282f927158e17952aae" category="paragraph">Google Cloud Marketplaceを通じてNetAppデータサービスにサブスクライブする際、権限が正しくない場合や誤ってNetApp Consoleへのリダイレクトに従わなかった場合、プロセスが断片化されることがあります。このような場合は、次の手順に従ってサブスクリプションプロセスを完了してください。</block>
+  <block id="5e8a9e85694a19d502ffc719ffe16636" category="inline-link">Google Cloud MarketplaceのNetAppページ</block>
+  <block id="d6e50a6d3ec0159b4980423911b0d4c3" category="list-text"><block ref="50dc0afbab90b927abe9802e2e044626" category="inline-link-rx"></block>に移動して、注文の状態を確認します。ページに*プロバイダーで管理*と表示されている場合は、下にスクロールして*注文の管理*を選択します。</block>
+  <block id="1602e955f4d68623784fbd9b3e232de3" category="inline-image-macro">サブスクリプション後のマーケットプレイスページのスクリーンショット。</block>
+  <block id="138509c56fb0084f814c9be7b6c3f21d" category="paragraph"><block ref="138509c56fb0084f814c9be7b6c3f21d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e934500d9ced37392a4bfadda2e26daf" category="list-text">注文に緑色のチェックマークが表示され、これが予期しない場合は、同じ請求アカウントを使用している組織内の他のユーザーがすでにサブスクライブしている可能性があります。これが予期せぬことである場合、またはこのサブスクリプションの詳細が必要な場合は、NetApp営業チームにお問い合わせください。</block>
+  <block id="bb7a877315ec49d95bef4521481a238d" category="inline-image-macro">承認されたエンタイトルメントのスクリーンショット。</block>
+  <block id="57c37d5700a1b0612b4ca2402852172a" category="paragraph"><block ref="57c37d5700a1b0612b4ca2402852172a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="342df35452bbec008148c714d47038f6" category="list-text">注文に時計と*保留中*ステータスが表示されている場合は、マーケットプレイス ページに戻り、*プロバイダーで管理*を選択して、上記に記載されているプロセスを完了します。</block>
+  <block id="9547217bb6aa822040056cba67310321" category="inline-image-macro">保留中のマーケットプレイス権限のスクリーンショット。</block>
+  <block id="e6ec8d6dff39d45a9056311495699cef" category="paragraph"><block ref="e6ec8d6dff39d45a9056311495699cef" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

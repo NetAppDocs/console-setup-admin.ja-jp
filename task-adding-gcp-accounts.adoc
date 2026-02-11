@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-gcp-accounts.html 
 keywords: permissions, gcp, marketplace, gcp subscription, subscription, gcp marketplace, subscribe, data tiering, tiering, setup, requirements, account for data tiering, account for tiering, interoperable, interoperability, interoperable storage access keys, access keys, bluexp 
-summary: NetApp、Google Cloud にコンソール エージェントをデプロイするときに、コンソール エージェントに使用されるサービス アカウントに必要な権限を更新することがあります。 
+summary: コンソールエージェントVMインスタンスに関連付けられているGoogle Cloud認証情報を管理するには、マーケットプレイスのサブスクリプションを関連付け、サブスクリプションプロセスのトラブルシューティングを行います。これら両方のタスクにより、マーケットプレイスのサブスクリプションを使用してデータサービスの支払いができるようになります。 
 ---
-= Google Cloud デプロイメントのコンソール エージェント権限を管理する
+= NetApp Console の Google Cloud クレデンシャルとサブスクリプションを管理
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,98 @@ summary: NetApp、Google Cloud にコンソール エージェントをデプロ
 
 
 [role="lead"]
-NetApp、Google Cloud にコンソール エージェントをデプロイするときに、コンソール エージェントに使用されるサービス アカウントに必要な権限を更新することがあります。
+NetApp Console エージェント VM インスタンスに関連付けられている Google Cloud 認証情報を管理するには、マーケットプレイスのサブスクリプションを関連付け、サブスクリプション プロセスのトラブルシューティングを行います。これら両方のタスクにより、マーケットプレイスのサブスクリプションを使用してデータ サービスの料金を支払うことができます。
 
-link:reference-permissions-gcp.html["必要なGoogle権限リストを確認する"]。
 
-Google Cloud Console を使用して、サービス アカウントに割り当てられた IAM ロールを新しい権限セットに合わせて更新します。
 
-link:https://docs.cloud.google.com/iam/docs/creating-custom-roles?hl=en#edit-role["Google Cloud ドキュメント: カスタムロールを編集する"]
+== Marketplace サブスクリプションを Google Cloud クレデンシャルに関連付ける
+
+Google Cloud にConsoleエージェントをデプロイすると、ConsoleはConsoleエージェントVMインスタンスに関連付けられたデフォルトの認証情報セットを作成します。これらの認証情報に関連付けられているGoogle Cloud Marketplaceサブスクリプションはいつでも変更できます。サブスクリプションでは、従量課金制Cloud Volumes ONTAPシステムを作成し、その他のデータサービスを使用できます。
+
+現在のマーケットプレイス サブスクリプションを新しいサブスクリプションに置き換えると、既存のCloud Volumes ONTAPシステムとすべての新しいシステムのマーケットプレイス サブスクリプションが変更されます。
+
+.手順
+. *管理 > 資格情報*を選択します。
+. *組織の資格情報*を選択します。
+. コンソール エージェントに関連付けられている資格情報のセットのアクション メニューを選択し、[*サブスクリプションの構成*] を選択します。
+
+
+image:screenshot_gcp_add_subscription.png["既存の資格情報セットのアクション メニューのスクリーンショット。"]
+
+. 選択した認証情報を使用して既存のサブスクリプションを構成するには、ドロップダウン リストから Google Cloud プロジェクトとサブスクリプションを選択し、[構成] を選択します。
++
+image:screenshot_gcp_associate.gif["Google Cloud 認証情報用に選択された Google Cloud プロジェクトとサブスクリプションのスクリーンショット。"]
+
+. まだサブスクリプションをお持ちでない場合は、[サブスクリプションを追加] > [続行] を選択し、Google Cloud Marketplace の手順に従います。
++
+
+NOTE: 次の手順を完了する前に、Google Cloud アカウントの課金管理者権限とNetApp Consoleのログイン権限の両方があることを確認してください。
+
++
+.. リダイレクトされたら https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace のNetApp Intelligent Servicesページ"^]上部のナビゲーション メニューで正しいプロジェクトが選択されていることを確認します。
++
+image:screenshot_gcp_cvo_marketplace.png["Google Cloud のCloud Volumes ONTAPマーケットプレイス ページのスクリーンショット。"]
+
+.. *購読*を選択します。
+.. 適切な請求先アカウントを選択し、利用規約に同意します。
+.. *購読*を選択します。
++
+この手順により、転送リクエストがNetAppに送信されます。
+
+.. ポップアップダイアログボックスで、* NetApp, Inc.に登録*を選択します。
++
+Google Cloud サブスクリプションをコンソールの組織またはアカウントにリンクするには、この手順を完了する必要があります。このページからリダイレクトされ、コンソールにサインインするまで、サブスクリプションをリンクするプロセスは完了しません。
+
++
+image:screenshot_gcp_marketplace_register.png["登録ポップアップのスクリーンショット。"]
+
+.. *サブスクリプションの割り当て* ページの手順を完了します。
++
+
+NOTE: 組織内の誰かが既に請求先アカウントからマーケットプレイスサブスクリプションを利用している場合は、次のページにリダイレクトされます。 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console内のCloud Volumes ONTAPページ"^]その代わり。予期しない事態が発生した場合は、 NetAppの営業チームにお問い合わせください。  Google では、Google 請求先アカウントごとに 1 つのサブスクリプションのみ有効になります。
+
++
+*** このサブスクリプションを関連付けるコンソール組織を選択します。
+*** *既存のサブスクリプションを置き換える* フィールドで、1 つの組織の既存のサブスクリプションをこの新しいサブスクリプションに自動的に置き換えるかどうかを選択します。
++
+コンソールは、組織内のすべての資格情報の既存のサブスクリプションをこの新しいサブスクリプションに置き換えます。資格情報のセットがサブスクリプションに関連付けられたことがない場合、この新しいサブスクリプションはそれらの資格情報に関連付けられません。
+
++
+他のすべての組織またはアカウントについては、これらの手順を繰り返して、サブスクリプションを手動で関連付ける必要があります。
+
+*** *保存*を選択します。
+
+
+
+
+
+
+. このプロセスが完了したら、コンソールの [資格情報] ページに戻り、この新しいサブスクリプションを選択します。
++
+image:screenshot_gcp_associate.gif["サブスクリプション割り当てページのスクリーンショット。"]
+
+
+
+
+
+== Marketplaceのサブスクリプションプロセスのトラブルシューティング
+
+Google Cloud Marketplaceを通じてNetAppデータサービスにサブスクライブする際、権限が正しくない場合や誤ってNetApp Consoleへのリダイレクトに従わなかった場合、プロセスが断片化されることがあります。このような場合は、次の手順に従ってサブスクリプションプロセスを完了してください。
+
+.手順
+.  https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud MarketplaceのNetAppページ"^]に移動して、注文の状態を確認します。ページに*プロバイダーで管理*と表示されている場合は、下にスクロールして*注文の管理*を選択します。
++
+image:screenshot_gcp_manage_orders.png["サブスクリプション後のマーケットプレイスページのスクリーンショット。"]
+
++
+** 注文に緑色のチェックマークが表示され、これが予期しない場合は、同じ請求アカウントを使用している組織内の他のユーザーがすでにサブスクライブしている可能性があります。これが予期せぬことである場合、またはこのサブスクリプションの詳細が必要な場合は、NetApp営業チームにお問い合わせください。
++
+image:screenshot_gcp_green_marketplace.png["承認されたエンタイトルメントのスクリーンショット。"]
+
+** 注文に時計と*保留中*ステータスが表示されている場合は、マーケットプレイス ページに戻り、*プロバイダーで管理*を選択して、上記に記載されているプロセスを完了します。
++
+image:screenshot_gcp_pending_marketplace.png["保留中のマーケットプレイス権限のスクリーンショット。"]
+
+
+
+
