@@ -5945,4 +5945,7 @@
   <block id="342df35452bbec008148c714d47038f6" category="list-text">注文に時計と*保留中*ステータスが表示されている場合は、マーケットプレイス ページに戻り、*プロバイダーで管理*を選択して、上記に記載されているプロセスを完了します。</block>
   <block id="9547217bb6aa822040056cba67310321" category="inline-image-macro">保留中のマーケットプレイス権限のスクリーンショット。</block>
   <block id="e6ec8d6dff39d45a9056311495699cef" category="paragraph"><block ref="e6ec8d6dff39d45a9056311495699cef" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="718285f559bff92f1fc2fb988df3fabe" category="doc">Console エージェント 4.4.1</block>
+  <block id="3ffe5c6490eae7ac4252c8efb9559119" category="paragraph-title">NetApp ConsoleからNetApp Data Infrastructure Insightsにアクセス</block>
+  <block id="0597e1be82ceeb01b40b4706c1dc68e1" category="paragraph">NetApp Console内からNetApp Data Infrastructure Insightsの無料トライアルにアクセスできます。*ガバナンス* &gt; *Data Infrastructure Insights*に移動して、データ環境に関する洞察と分析を調べるためにサインアップしてください。</block>
 </blocks>
