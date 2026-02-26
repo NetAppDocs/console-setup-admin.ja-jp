@@ -881,7 +881,7 @@ Cloud Volumes ONTAPバックアップにソースボリュームに使用して�
 
 
 
-=== 分類
+=== データ分類
 
 エージェントは、NetApp Data Classificationを展開するために次の API 要求を行います。
 

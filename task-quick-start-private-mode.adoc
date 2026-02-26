@@ -67,7 +67,7 @@ link:media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXPプライベートモ
 | バックアップとリカバリ | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] 
 
 
-| 分類 | はい 
+| データ分類 | はい 
 
 
 | コピーと同期 | いいえ 
