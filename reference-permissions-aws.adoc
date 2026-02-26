@@ -906,6 +906,7 @@ Cloud Volumes ONTAPバックアップにソースボリュームに使用して�
 * cloudformation:スタックの削除
 * cloudformation:スタックの説明
 * cloudformation:スタックイベントの説明
+* cloudformation：ListStacks
 * iam:インスタンスプロファイルにロールを追加
 * ec2:Iamインスタンスプロファイルの関連付け
 * ec2:IamInstanceProfileAssociations の説明
@@ -1195,6 +1196,14 @@ NetApp Data Classificationを使用する場合、エージェントは次の AP
 == 変更ログ
 
 権限が追加または削除されると、以下のセクションでその旨を記録します。
+
+
+
+=== 2026年2月24日
+
+データ分類には次の権限が必要になりました：
+
+cloudformation：ListStacks
 
 
 

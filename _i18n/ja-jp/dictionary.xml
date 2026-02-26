@@ -5948,4 +5948,7 @@
   <block id="718285f559bff92f1fc2fb988df3fabe" category="doc">Console エージェント 4.4.1</block>
   <block id="3ffe5c6490eae7ac4252c8efb9559119" category="paragraph-title">NetApp ConsoleからNetApp Data Infrastructure Insightsにアクセス</block>
   <block id="0597e1be82ceeb01b40b4706c1dc68e1" category="paragraph">NetApp Console内からNetApp Data Infrastructure Insightsの無料トライアルにアクセスできます。*ガバナンス* &gt; *Data Infrastructure Insights*に移動して、データ環境に関する洞察と分析を調べるためにサインアップしてください。</block>
+  <block id="1bad3fa525f7b2c60b554cc8a36a911c" category="list-text">cloudformation：ListStacks</block>
+  <block id="a09b37992441a5c2061c0ef135b80024" category="section-title">2026年2月24日</block>
+  <block id="51b31e1901c03d4b274f371dd730c779" category="paragraph">データ分類には次の権限が必要になりました：</block>
 </blocks>
