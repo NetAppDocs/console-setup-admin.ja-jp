@@ -16,6 +16,9 @@ summary: アイデンティティ フェデレーションにより、NetApp Con
 [role="lead"]
 シングル サインオン (フェデレーション) により、ユーザーは企業の認証情報を使用してNetApp Consoleにログインできるため、ログイン プロセスが簡素化され、セキュリティが強化されます。アイデンティティ プロバイダー (IdP) またはNetAppサポート サイトを使用してシングル サインオン (SSO) を有効にできます。
 
+
+NOTE: フェデレーションは、NetApp Consoleがプライベート モードの場合は使用できません。link:concept-modes.html["NetApp Console モードの詳細"^]。
+
 .必要な役割
 組織管理者、フェデレーション管理者、フェデレーション閲覧者。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
 

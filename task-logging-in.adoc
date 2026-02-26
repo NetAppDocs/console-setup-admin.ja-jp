@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-logging-in.html 
 keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login, login with netapp, log in with netapp, sign up, create account 
-summary: NetApp Consoleにログインする方法は、使用している展開モードによって異なります。 
+summary: NetApp Consoleにサインアップすると、Web ベースのコンソールからログインして、データとストレージ インフラストラクチャの管理を開始できます。 
 ---
-= NetApp Consoleにログインする
+= NetApp Consoleにログイン
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,63 +14,23 @@ summary: NetApp Consoleにログインする方法は、使用している展開
 
 
 [role="lead"]
-NetApp Consoleにログインする方法は、使用している展開モードによって異なります。
-
-24 時間経過またはブラウザを閉じると、自動的にログアウトされます。
-
-link:concept-modes.html["コンソールの展開モードについて学ぶ"] 。
-
-[role="tabbed-block"]
-====
-.標準モード
---
 NetApp Consoleにサインアップすると、Web ベースのコンソールからログインして、データとストレージ インフラストラクチャの管理を開始できます。
 
-.タスク概要
-次のいずれかのオプションを使用してNetApp Consoleにログインできます。
-
-* 既存のNetAppサポートサイト（NSS）の認証情報
-* メールアドレスとパスワードを使用したNetApp Consoleアカウント
-* フェデレーション接続
-+
-シングル サインオンを使用すると、企業ディレクトリ (フェデレーション ID) の資格情報を使用してログインできます。link:concept-federation.html["ID連携の設定方法を学ぶ"] 。
-
-
+サインアップ後、リソースにアクセスする前に、NetApp Console組織管理者がユーザー アカウントを組織に追加する必要があります。ログインしてもリソースが表示されない場合は、組織の管理者に問い合わせてください。link:task-user-settings.html#contact-admin["組織の管理者に問い合わせてください"]。
 
 .手順
-. ウェブブラウザを開いて、 https://console.netapp.com["NetApp Console"]
+. NetApp Console の URL に移動します。URL は、組織が使用しているコンソールのモードによって異なります：
++
+** **標準モード*：Webブラウザを開いて、 https://console.netapp.com["NetApp Console"]
+** **制限モードまたはプライベート モード**：Web ブラウザーを開き、Console エージェントがインストールされている IP アドレスに移動します。
+
+
 . *ログイン*ページで、ログインに関連付けられているメールアドレスを入力します。
-. ログインに関連付けられた認証方法に応じて、資格情報を入力するよう求められます。
+. ログインに関連付けられた認証方法に応じて、資格情報を入力するように求められます。
 +
-** NetAppクラウド認証情報: パスワードを入力してください
-** フェデレーションユーザー: フェデレーションIDの資格情報を入力してください
-** NetAppサポートサイトアカウント: NetAppサポートサイトの認証情報を入力します
+** 既存のNetAppサポートサイト（NSS）の認証情報
+** メールアドレスとパスワードを使用したNetApp Consoleアカウント
+** 管理者が組織の ID フェデレーションを設定している場合は、フェデレーション接続
 
 
 
-
-.結果
-これでログインが完了し、ハイブリッド マルチクラウド インフラストラクチャの管理を開始できるようになりました。
-
---
-.制限モード
---
-コンソールを制限モードで使用する場合は、エージェント上でローカルに実行されるユーザー インターフェイスからコンソールにログインする必要があります。
-
-.タスク概要
-コンソールは、制限モードの場合、次のいずれかのオプションを使用してログインすることをサポートします。
-
-* メールアドレスとパスワードを使用したNetApp Consoleログイン
-* フェデレーション接続
-+
-シングル サインオンを使用すると、企業ディレクトリ (フェデレーション ID) の資格情報を使用してログインできます。link:concept-federation.html["アイデンティティフェデレーションの使い方を学ぶ"] 。
-
-
-
-.手順
-. Web ブラウザを開き、エージェントがインストールされている IP アドレスを入力します。
-. ユーザー名とパスワードを入力してログインしてください。
-
-
---
-====

@@ -18,6 +18,41 @@ NetApp Console管理機能の新機能（アイデンティティおよびアク
 
 
 
+== 2026年2月26日
+
+
+
+=== プライベートモードリリース（4.4.0）
+
+新しいプライベートモードリリースがダウンロード可能になりました。 https://mysupport.netapp.com/site/downloads["NetAppサポート サイト"^]
+
+
+
+==== BlueXP プライベート モードが NetApp Console プライベート モードになりました
+
+NetApp Console 4.4.0は、プライベートモードにおけるNetApp Consoleの最初のリリースです。
+
+NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され、オンプレミスとクラウド環境全体にわたるエンタープライズ グレードのNetAppストレージとNetApp Data Servicesの集中管理を提供し、リアルタイムの分析情報、より高速なワークフロー、および高度に安全でコンプライアンスに準拠した簡素化された管理を実現します。
+
+新しいNetApp Consoleの詳細については、 https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2025-10-06.html["NetApp Console ページの新機能"^]を参照してください。
+
+4.4.0リリースには、以下のNetApp Consoleコンポーネントおよびサービスに対するアップデートが含まれています。
+
+[cols="3*"]
+|===
+| コンポーネントまたはサービス | このリリースに含まれるバージョン | 前回のプライベートモードリリース以降の変更点 
+
+
+| コンソールエージェント | 4.4.0 |  https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-02-09.html["NetApp Console ページの新機能"^]に移動し、バージョン 4.4.0 に含まれる変更を参照してください。 
+
+
+| バックアップとリカバリ | 5.0.2（2026年2月9日） |  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recoveryの新機能ページ"^]に移動します。 
+
+
+| 分類 | 1.5.1（2026年2月9日） |  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification の新機能ページ"^]に移動します。 
+|===
+
+
 == 2026年2月9日
 
 

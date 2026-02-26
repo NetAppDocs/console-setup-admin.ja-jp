@@ -22,14 +22,10 @@ indexpage:
     links:
     - title: NetApp Console(SaaS) の使用開始
       url: task-quick-start-standard-mode.html
-    - title: NetApp Consoleのネットワークアクセスを準備する
-      url: reference-networking-saas-console.html
-    - title: NetApp Consoleにサインアップ
-      url: task-sign-up-saas.html
-    - title: NetApp Consoleアシスタント（SaaS）を使用する
-      url: task-console-assistant.html
-    - title: NetApp Consoleを制限モードで導入する (ソブリン クラウド導入)
+    - title: NetApp Consoleを制限モードで導入する
       url: "/task-quick-start-restricted-mode.html"
+    - title: プライベートモードでNetApp Consoleを導入する
+      url: "/task-quick-start-private-mode.html"
   - title: アイデンティティとアクセス管理（IAM）を実装する
     links:
     - title: IAM戦略を計画する

@@ -36,6 +36,13 @@ unset https_proxy
 +
 エージェント インストーラー ファイルのダウンロードまたはファイルへの URL を選択します。
 
+
+
++
+
+NOTE: ネットワークまたはクラウドで使用するための「オンライン」エージェント インストーラーをダウンロードします。NetApp Console エージェントには別の「オフライン」インストーラーが用意されていますが、プライベート モードの展開でのみサポートされます。
+
++
 ** NetAppサポート サイト (コンソールにまだアクセスできない場合に必要) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetAppサポート サイト"^] 、
 
 

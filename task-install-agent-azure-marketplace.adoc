@@ -90,7 +90,7 @@ NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp C
 
 
  a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 NetApp Console内で機能とサービスを提供します。
 
@@ -179,7 +179,7 @@ Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用
 +
 https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure ドキュメント: Azure ポータルを使用して VM 上の Azure リソースのマネージド ID を構成する"^]
 
-. の内容をコピーしますlink:reference-permissions-azure.html["コネクタのカスタムロール権限"]JSON ファイルに保存します。
+. の内容をコピーしますlink:reference-permissions-azure.html["コンソールエージェントのカスタムロール権限"]JSON ファイルに保存します。
 . 割り当て可能なスコープに Azure サブスクリプション ID を追加して、JSON ファイルを変更します。
 +
 NetApp Consoleで使用する各 Azure サブスクリプションの ID を追加する必要があります。

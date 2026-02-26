@@ -406,7 +406,7 @@ NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp C
 
 
  a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 NetApp Console内で機能とサービスを提供します。
 
@@ -574,6 +574,7 @@ Google Cloud にコンソール エージェントをデプロイする前に、
 .手順
 . プロジェクトで次の Google Cloud API を有効にします。
 +
+** Cloud Build API（Infrastructure Managerを使用したプライベートモードCloud Volumes ONTAPデプロイメントに必要）
 ** クラウド デプロイメント マネージャー V2 API
 ** クラウド インフラストラクチャ マネージャー API
 ** クラウドロギングAPI
@@ -630,6 +631,13 @@ unset https_proxy
 +
 エージェント インストーラー ファイルのダウンロードまたはファイルへの URL を選択します。
 
+
+
++
+
+NOTE: ネットワークまたはクラウドで使用するための「オンライン」エージェント インストーラーをダウンロードします。NetApp Console エージェントには別の「オフライン」インストーラーが用意されていますが、プライベート モードの展開でのみサポートされます。
+
++
 ** NetAppサポート サイト (コンソールにまだアクセスできない場合に必要) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetAppサポート サイト"^] 、
 
 

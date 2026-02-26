@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-prepare-restricted-mode.html 
-keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
-summary: NetApp Consoleを制限モードで展開する前に、環境を準備します。ホストの要件を確認し、ネットワークを準備し、権限を設定するなどする必要があります。 
+permalink: task-prepare-private-mode.html 
+keywords: private mode requirements, requirements, install options, private mode networking, dark site, private mode permissions, permissions for private mode, networking for private mode 
+summary: プライベートモードでNetApp Consoleを導入する前に、環境を準備します。ホストの要件を確認し、ネットワークを準備し、権限を設定するなどの作業が必要です。 
 ---
-= 制限モードでの展開の準備
+= プライベートモードでの導入の準備
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,38 +14,32 @@ summary: NetApp Consoleを制限モードで展開する前に、環境を準備
 
 
 [role="lead"]
-NetApp Consoleを制限モードで展開する前に、環境を準備します。ホストの要件を確認し、ネットワークを準備し、権限を設定するなどする必要があります。
+プライベートモードでNetApp Consoleを導入する前に、環境を準備します。ホストの要件を確認し、ネットワークを準備し、権限を設定するなどの作業が必要です。
+
+
+NOTE: NetApp Consoleを https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]または https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]で使用するには、それぞれの環境に応じた手順に従ってください。 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws-c2s.html["AWS Secret CloudまたはTop Secret CloudでCloud Volumes ONTAPを使い始める方法を学ぶ"^]
 
 
 
-== ステップ1: 制限モードの仕組みを理解する
+== ステップ1：プライベートモードの仕組みを理解する
 
-開始する前に、 NetApp Consoleが制限モードでどのように動作するかを理解してください。
+プライベートモードでは、オンプレミスまたはクラウドにコンソールエージェントをインストールし、NetApp Console を使用してストレージシステム（ONTAP オンプレミスおよび Cloud Volumes ONTAP）を管理します。NetApp Console API エンドポイントまたは NetApp Console SaaS アプリケーションへの接続はないため、コンソールエージェントによって提供されるローカル UI からコンソールにアクセスします。
 
-インストールされたNetApp Console エージェントからローカルで利用可能なブラウザベースのインターフェースを使用します。SaaS アプリケーションを通じて提供される Web ベースのコンソールからNetApp Console にアクセスすることはできません。
-
-また、すべてのコンソール機能とNetAppデータ サービスが利用できるわけではありません。
-
-link:concept-modes.html["制限モードの仕組みを学ぶ"] 。
+link:concept-modes.html["プライベートモードの仕組みを学ぶ"]。
 
 
 
 == ステップ2: インストールオプションを確認する
 
-制限モードでは、コンソール エージェントをクラウドにのみインストールできます。次のインストール オプションが利用可能です。
+プライベートモードでは、独自の Linux ホストにエージェントを手動でインストールすることで、Console エージェントをオンプレミスまたはクラウドにインストールできます。
 
-* AWSマーケットプレイスから
-* Azure Marketplaceから
-* AWS、Azure、または Google Cloud で実行されている独自の Linux ホストにコンソール エージェントを手動でインストールする
-
+コンソールエージェントをインストールする場所によって、プライベートモードを使用する際に利用できるNetApp Consoleのサービスと機能が決まります。Cloud Volumes ONTAPを導入および管理する場合は、コンソールエージェントをクラウドにインストールする必要があります。
 
 
 
 == ステップ3: ホストの要件を確認する
 
-コンソール エージェントを実行するには、ホストが特定の OS、RAM、およびポートの要件を満たしている必要があります。
-
-AWS または Azure Marketplace からコンソールエージェントをデプロイする場合、イメージには必要な OS およびソフトウェア コンポーネントが含まれます。  CPU と RAM の要件を満たすインスタンス タイプを選択するだけです。
+NetApp Console エージェントを実行するには、ホストが特定のオペレーティング システム要件、RAM 要件、ポート要件などを満たしている必要があります。
 
 専用ホスト:: コンソール エージェントには専用のホストが必要です。次のサイズ要件を満たすアーキテクチャであれば、どれでもサポートされます。
 +
@@ -67,18 +61,9 @@ AWS または Azure Marketplace からコンソールエージェントをデプ
 
 
 --
-AWS EC2インスタンスタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetAppt3.2xlarge を推奨します。
-Azure VM サイズ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetAppStandard_D8s_v3 を推奨します。
-Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。NetAppn2-standard-8 を推奨しています。
+[[podman-versions]]オペレーティングシステムとコンテナの要件:: コンソールをプライベート モードで使用する場合、コンソール エージェントは次のオペレーティング システムでサポートされます。エージェントをインストールする前に、コンテナ オーケストレーション ツールが必要です。
 +
 --
-コンソールエージェントは、Google Cloud の VM インスタンスで、以下の OS がサポートする環境でサポートされます。 https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["シールドされたVMの機能"^]
-
---
-ハイパーバイザー:: サポートされているオペレーティング システムを実行することが認定されているベア メタルまたはホスト型ハイパーバイザーが必要です。
-[[podman-versions]]オペレーティングシステムとコンテナの要件:: コンソールを標準モードまたは制限モードで使用する場合、コンソール エージェントは次のオペレーティング システムでサポートされます。エージェントをインストールする前に、コンテナ オーケストレーション ツールが必要です。
-
-
 [cols="2a,2a,2a,2a,2a"]
 |===
 | オペレーティング システム | サポートされるOSバージョン | サポートされているエージェントのバージョン | 必要なコンテナツール | SELinux 
@@ -86,56 +71,14 @@ Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタ�
 
  a| 
 Red Hat Enterprise Linux
-
-
-
- a| 
- a| 
-9.6
-
-* 英語版のみ。
-* ホストは Red Hat Subscription Management に登録されている必要があります。登録されていない場合、ホストはエージェントのインストール中に必要なサードパーティ製ソフトウェアを更新するためにリポジトリにアクセスできません。
-
- a| 
-4.0.0 以降、コンソールが標準モードまたは制限モード
- a| 
-Podman バージョン 5.4.0 と podman-compose 1.5.0。
-
-<<podman-configuration,Podman の構成要件を表示する>> 。
- a| 
-強制モードまたは許可モードでサポートされます
-
-
-
- a| 
  a| 
 9.1～9.4
 
-* 英語版のみ。
-* ホストは Red Hat Subscription Management に登録されている必要があります。登録されていない場合、ホストはエージェントのインストール中に必要なサードパーティ製ソフトウェアを更新するためにリポジトリにアクセスできません。
-
- a| 
-3.9.50 以降、コンソールが標準モードまたは制限モード
- a| 
-Podman バージョン 4.9.4 と podman-compose 1.5.0。
-
-<<podman-configuration,Podman の構成要件を表示する>> 。
- a| 
-強制モードまたは許可モードでサポートされます
-
-
-
- a| 
- a| 
 8.6～8.10
-
-* 英語版のみ。
-* ホストは Red Hat Subscription Management に登録されている必要があります。登録されていない場合、ホストはエージェントのインストール中に必要なサードパーティ製ソフトウェアを更新するためにリポジトリにアクセスできません。
-
  a| 
-3.9.50 以降、コンソールが標準モードまたは制限モード
+3.9.42 以降、コンソールがプライベート モードの場合
  a| 
-Podman バージョン 4.6.1 または 4.9.4 と podman-compose 1.0.6。
+Podman バージョン 4.6.1 または 4.9.4
 
 <<podman-configuration,Podman の構成要件を表示する>> 。
  a| 
@@ -145,37 +88,55 @@ Podman バージョン 4.6.1 または 4.9.4 と podman-compose 1.0.6。
 
  a| 
 Ubuntu
-
-
-
- a| 
- a| 
-24.04 LTS
- a| 
-3.9.45 以降、 NetApp Consoleが標準モードまたは制限モード
- a| 
-Docker エンジン 23.06 から 28.0.0。
- a| 
-サポート対象外
-
-
-
- a| 
  a| 
 22.04 LTS
  a| 
-3.9.50以降
+3.9.29以降
  a| 
-Docker エンジン 23.0.6 から 28.0.0。
+Docker エンジン 23.0.6 から 26.0.0
+
+26.0.0は、_新しい_エージェント3.9.44以降のインストールでサポートされます。
  a| 
 サポート対象外
 
 |===
+注：
+
+. コンソール エージェントは、これらのオペレーティング システムの英語版でサポートされています。
+. RHEL の場合、ホストは Red Hat Subscription Management に登録されている必要があります。登録されていない場合、ホストはエージェントのインストール中に必要なサードパーティ製ソフトウェアを更新するためにリポジトリにアクセスできません。
+
+
+--
+ハイパーバイザー:: サポートされているオペレーティング システムを実行することが認定されているベア メタルまたはホスト型ハイパーバイザーが必要です。
+CPU:: 8コアまたは8vCPU
+RAM:: 32 GB
+AWS EC2インスタンスタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetAppt3.2xlarge を推奨します。
+Azure VM サイズ:: CPU と RAM の要件を満たすインスタンス タイプ。  NetAppStandard_D8s_v3 を推奨します。
+Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。NetAppn2-standard-8 を推奨しています。
++
+--
+コンソールエージェントは、Google Cloud の VM インスタンスで、以下の OS がサポートする環境でサポートされます。 https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["シールドされたVMの機能"^]
+
+--
+/optのディスク容量:: 100 GiBの空き容量が必要です
++
+--
+エージェントは `/opt`インストールするには `/opt/application/netapp`ディレクトリとその内容。
+
+--
+/varのディスク容量:: 20 GiBの空き容量が必要です
++
+--
+コンソールエージェントにはこのスペースが必要です `/var`Docker または Podman は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリ。このスペースでは外部マウントまたはシンボリックリンクは機能しません。
+
+--
+
+
 
 
 == ステップ4: PodmanまたはDocker Engineをインストールする
 
-コンソール エージェントを手動でインストールするには、Podman または Docker Engine をインストールしてホストを準備します。
+Podman または Docker Engine をインストールして、Console エージェント用のホストを準備する必要があります。
 
 オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要になります。
 
@@ -360,40 +321,17 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
-== ステップ5: ネットワークアクセスを準備する
+== ステップ5：ネットワークを準備する
 
-コンソール エージェントがパブリック クラウド内のリソースを管理できるように、ネットワーク アクセスを設定します。コンソール エージェント用の仮想ネットワークとサブネットがあることに加えて、次の要件が満たされていることを確認する必要があります。
+コンソール エージェントがパブリック クラウド内のリソースを管理できるようにネットワークを設定します。コンソール エージェント用の仮想ネットワークとサブネットを用意するほか、次の要件が満たされていることを確認してください。
 
-ターゲットネットワークへの接続:: コンソール エージェントがストレージの場所へのネットワーク接続を持っていることを確認します。たとえば、 Cloud Volumes ONTAPをデプロイする予定の VPC または VNet、またはオンプレミスのONTAPクラスターが存在するデータセンターなどです。
-NetApp Consoleへのユーザーアクセスのためのネットワークを準備する:: 制限モードでは、ユーザーはコンソール エージェント VM からコンソールにアクセスします。コンソール エージェントは、データ管理タスクを完了するためにいくつかのエンドポイントに接続します。これらのエンドポイントは、コンソールから特定のアクションを完了するときに、ユーザーのコンピューターから接続されます。
-
-
-
-NOTE: バージョン 4.0.0 より前のコンソール エージェントには追加のエンドポイントが必要です。  4.0.0 以降にアップグレードした場合は、許可リストから古いエンドポイントを削除できます。link:reference-networking-saas-console-previous.html["4.0.0 より前のバージョンに必要なネットワーク アクセスの詳細について説明します。"]
-
-+
-
-[cols="2*"]
-|===
-| エンドポイント | 目的 
-
-
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com | NetApp Console内で機能とサービスを提供します。 
-
-
-| \https://cdn.auth0.com \https://services.cloud.netapp.com | Web ブラウザはこれらのエンドポイントに接続し、 NetApp Consoleを通じて集中的なユーザー認証を行います。 
-|===
-日常業務のためのアウトバウンドインターネットアクセス:: コンソール エージェントのネットワークの場所には、送信インターネット アクセスが必要です。  NetApp Consoleの SaaS サービスと、それぞれのパブリック クラウド環境内のエンドポイントにアクセスできる必要があります。
+ターゲットネットワークへの接続:: コンソール エージェントは、ストレージを管理する予定の場所へのネットワーク接続を持っている必要があります。たとえば、Cloud Volumes ONTAP をデプロイする予定の VPC または VNet 、またはオンプレミス ONTAP クラスタが存在するデータセンターなどです。
+日常業務のエンドポイント:: Cloud Volumes ONTAP システムの作成を計画している場合、コンソールエージェントは、クラウド プロバイダの公開されているリソース内のエンドポイントへの接続が必要です。
 +
 --
 [cols="2a,1a"]
 |===
 | エンドポイント | 目的 
-
-
- a| 
-*AWS 環境*
-
 
 
  a| 
@@ -422,11 +360,6 @@ Web ベースのコンソールは、このエンドポイントに接続して 
 
 
  a| 
-*Azure 環境*
-
-
-
- a| 
 \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
  a| 
 Azure パブリック リージョン内のリソースを管理します。
@@ -434,9 +367,9 @@ Azure パブリック リージョン内のリソースを管理します。
 
 
  a| 
-\https://management.usgovcloudapi.net \https://login.microsoftonline.us \https://blob.core.usgovcloudapi.net \https://core.usgovcloudapi.net
+\https://management.azure.microsoft.scloud \https://login.microsoftonline.microsoft.scloud \https://blob.core.microsoft.scloud \https://core.microsoft.scloud
  a| 
-Azure Government リージョン内のリソースを管理します。
+Azure IL6 リージョン内のリソースを管理します。
 
 
 
@@ -448,61 +381,9 @@ Azure China リージョンのリソースを管理します。
 
 
  a| 
-*Google Cloud 環境*
-
-
-
- a| 
 \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://config.googleapis.com/v1/projects
  a| 
 Google Cloud 内のリソースを管理します。
-
-
-
- a| 
-* NetApp Consoleエンドポイント*
-
-
-
- a| 
-\https://mysupport.netapp.com
- a| 
-ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
-
-
-
- a| 
-\https://signin.b2c.netapp.com
- a| 
-NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
-
-
-
- a| 
-\https://support.netapp.com
- a| 
-ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
- a| 
-NetApp Console内で機能とサービスを提供します。
-
-
-
- a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
-* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
-+
-以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
-
-* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
-
 
 |===
 --
@@ -526,50 +407,36 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 * IPアドレス
 * Credentials
 * HTTPS証明書
++
+プライベートモードでは、NetApp Consoleがアウトバウンドトラフィックを送信するのは、Cloud Volumes ONTAPシステムを作成するためにクラウド プロバイダに対してのみです。
+
 
 
 --
-
-
-ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
+ポート:: ユーザーが開始しない限り、Console エージェントへの着信トラフィックは発生しません。
 +
 --
-* HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
-* SSH（22）は、トラブルシューティングのためにホストに接続する必要がある場合にのみ必要です。
-* アウトバウンド インターネット接続が利用できないサブネットにCloud Volumes ONTAPシステムを展開する場合は、ポート 3128 経由のインバウンド接続が必要です。
-+
-Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するためのアウトバウンド インターネット接続がない場合、コンソールは、コンソール エージェントに含まれているプロキシ サーバーを使用するようにそれらのシステムを自動的に構成します。唯一の要件は、コンソール エージェントのセキュリティ グループがポート 3128 経由の受信接続を許可していることを確認することです。コンソール エージェントを展開した後、このポートを開く必要があります。
-
-
+HTTP（80）とHTTPS（443）は、NetApp Consoleへのアクセスを提供します。トラブルシューティングのためにホストに接続する必要がある場合は、SSH（22）が必要です。
 
 --
 
 
 NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
-+
---
-クラウド プロバイダーのマーケットプレイスからコンソール エージェントを作成する予定の場合は、コンソール エージェントを作成した後にこのネットワーク要件を実装します。
-
---
 
 
 
 
 == ステップ6: クラウド権限を準備する
 
-コンソール エージェントには、仮想ネットワークにCloud Volumes ONTAPを展開し、 NetAppデータ サービスを使用するために、クラウド プロバイダーからの権限が必要です。クラウド プロバイダーで権限を設定し、それらの権限をコンソール エージェントに関連付ける必要があります。
+コンソールエージェントがクラウドにインストールされており、Cloud Volumes ONTAPシステムを作成する予定がある場合、NetApp Consoleにはクラウド プロバイダの権限が必要です。クラウド プロバイダで権限を設定してから、インストール後にそれらの権限をコンソール エージェント インスタンスに関連付ける必要があります。
 
-必要な手順を表示するには、クラウド プロバイダーで使用する認証オプションを選択します。
+必要な手順を確認するには、クラウド プロバイダに使用する認証オプションを選択してください。
 
 [role="tabbed-block"]
 ====
 .AWS IAM ロール
 --
-IAM ロールを使用して、コンソール エージェントに権限を付与します。
-
-AWS Marketplace からコンソールエージェントを作成している場合は、EC2 インスタンスを起動するときにその IAM ロールを選択するように求められます。
-
-独自の Linux ホストにコンソールエージェントを手動でインストールする場合は、ロールを EC2 インスタンスにアタッチします。
+IAM ロールを使用して、Console エージェントに権限を付与します。Console エージェントの EC2 インスタンスにロールを手動でアタッチする必要があります。
 
 .手順
 . AWS コンソールにログインし、IAM サービスに移動します。
@@ -596,7 +463,7 @@ AWS Marketplace からコンソールエージェントを作成している場�
 --
 .AWS アクセスキー
 --
-IAM ユーザーの権限とアクセスキーを設定します。コンソールエージェントをインストールしてコンソールを設定した後、コンソールに AWS アクセスキーを提供する必要があります。
+IAM ユーザーの権限とアクセスキーを設定します。Console エージェントをインストールして NetApp Console をセットアップしたら、NetApp Console に AWS アクセスキーを指定します。
 
 .手順
 . AWS コンソールにログインし、IAM サービスに移動します。
@@ -606,7 +473,7 @@ IAM ユーザーの権限とアクセスキーを設定します。コンソー�
 .. *JSON*を選択し、その内容をコピーして貼り付けます。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシー"] 。
 .. 残りの手順を完了してポリシーを作成します。
 +
-使用する予定のNetAppデータ サービスによっては、2 番目のポリシーを作成する必要がある場合があります。
+使用する予定のNetApp Consoleサービスに応じて、2番目のポリシーを作成する必要がある場合があります。
 
 +
 標準リージョンの場合、権限は 2 つのポリシーに分散されます。 AWS の管理ポリシーの最大文字サイズ制限により、2 つのポリシーが必要になります。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシーの詳細"] 。
@@ -622,15 +489,18 @@ IAM ユーザーの権限とアクセスキーを設定します。コンソー�
 . コンソール エージェントをインストールした後、 NetApp Consoleに追加できるアクセス キーがユーザーにあることを確認します。
 
 
+.結果
+これで、アカウントに必要な権限が付与されました。
+
 --
 .Azure ロール
 --
-必要な権限を持つ Azure カスタム ロールを作成します。このロールをコンソール エージェント VM に割り当てます。
+必要な権限を持つ Azure カスタム ロールを作成します。このロールを Console エージェント VM に割り当てます。
 
 Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して、Azure カスタム ロールを作成できます。次の手順は、Azure CLI を使用してロールを作成する方法を示しています。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]
 
 .手順
-. 独自のホストにソフトウェアを手動でインストールする予定の場合は、カスタム ロールを通じて必要な Azure アクセス許可を提供できるように、VM でシステム割り当てマネージド ID を有効にします。
+. Console エージェントをインストールする予定の VM でシステム割り当てマネージド ID を有効にして、カスタム ロールを通じて必要な Azure アクセス許可を提供できるようにします。
 +
 https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure ドキュメント: Azure ポータルを使用して VM 上の Azure リソースのマネージド ID を構成する"^]
 
@@ -674,7 +544,7 @@ az role definition create --role-definition agent_Policy.json
 --
 .Azure サービスプリンシパル
 --
-Microsoft Entra ID でサービス プリンシパルを作成して設定し、コンソールに必要な Azure 資格情報を取得します。コンソール エージェントをインストールした後、コンソールにこれらの資格情報を提供する必要があります。
+Microsoft Entra IDでサービスプリンシパルを作成して設定し、NetApp Consoleに必要なAzure資格情報を取得します。ConsoleエージェントをインストールしてNetApp Consoleをセットアップした後、これらの資格情報をNetApp Consoleに提供する必要があります。
 
 .ロールベースのアクセス制御用の Microsoft Entra アプリケーションを作成する
 . Azure で Active Directory アプリケーションを作成し、そのアプリケーションをロールに割り当てるためのアクセス許可があることを確認します。
@@ -818,7 +688,7 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 
 
 .結果
-これでサービス プリンシパルが設定され、アプリケーション (クライアント) ID、ディレクトリ (テナント) ID、およびクライアント シークレットの値がコピーされているはずです。  Azure アカウントを追加するときに、コンソールにこの情報を入力する必要があります。
+これでサービス プリンシパルが設定され、アプリケーション（クライアント）ID、ディレクトリ（テナント）ID、およびクライアント シークレットの値がコピーされているはずです。Azure クレデンシャルを追加するときに、この情報を NetApp Console に入力します。
 
 --
 .Google Cloud サービス アカウント
@@ -864,7 +734,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 == ステップ7: Google Cloud APIを有効にする
 
-Google Cloud にCloud Volumes ONTAPをデプロイするには、いくつかの API が必要です。
+Google Cloud に Cloud Volumes ONTAP をデプロイするには、いくつかの API を有効にする必要があります。
 
 .手順
 . https://cloud.google.com/apis/docs/getting-started#enabling_apis["プロジェクトで次の Google Cloud API を有効にします"^]

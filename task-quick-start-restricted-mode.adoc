@@ -4,7 +4,7 @@ permalink: task-quick-start-restricted-mode.html
 keywords: quick start, restricted mode quick start, govcloud, government, aws gov, azure gov 
 summary: 環境を準備し、コンソール エージェントを展開して、制限モードでNetApp Consoleの使用を開始します。 
 ---
-= 開始ワークフロー（制限モード）
+= 制限モードのNetApp Consoleの使用開始ワークフロー
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -35,3 +35,103 @@ summary: 環境を準備し、コンソール エージェントを展開して�
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"] link:task-subscribe-restricted-mode.html["NetApp Intelligent Servicesに加入する（オプション）"]
 [role="quick-margin-para"]
 オプション: クラウド プロバイダーのマーケットプレイスからNetApp Intelligent Servicesにサブスクライブして、時間単位の料金 (PAYGO) または年間契約でデータ サービスの料金を支払います。  NetApp Intelligent Servicesには、 NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience 、 NetApp Disaster Recovery が含まれます。  NetApp Data Classification は追加料金なしでサブスクリプションに含まれています。
+
+
+
+== 制限モードの NetApp Console でサポートされている機能とサービス
+
+次の表は、制限モードでインストールした場合にNetApp Consoleで利用可能なストレージ管理機能、データサービス、および管理機能の一覧です。
+
+[cols="3*"]
+|===
+| 製品分野 | NetAppサービスまたは機能 | コンソールエージェントが必要です 
+
+
+.3+| *ストレージシステムの管理* この表は、NetApp Console から管理できるストレージシステムを示しています。NetApp Backup and Recovery のバックアップ先はリストされません。 | Azure NetApp Files | いいえ 
+
+
+| Cloud Volumes ONTAP | はい 
+
+
+| オンプレミスのONTAPクラスタ | 検出と管理に必要です。Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。 
+
+
+.3+| *データ サービス*（制限モードでは、標準モードよりもサポートされるデータ サービスが少なくなります）  a| 
+バックアップとリカバリ
+
+* 制限モードの政府地域および商用地域でサポートされます。制限モードのソブリン地域ではサポートされません。
+* 制限モードでは、NetApp Backup and Recoveryは、ONTAPボリュームデータのバックアップとリストアのみをサポートします。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPデータのサポートされているバックアップ先のリストを表示します"^]
+
+| 制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、NetApp Backup and RecoveryはONTAPボリュームデータのバックアップとリストアのみをサポートします。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPデータのサポートされているバックアップ先のリストを表示します"^] 
+
+
+ a| 
+NetApp Data Classification
+
+* 制限モードの政府地域でサポートされます。商用地域または制限モードのソブリン地域ではサポートされません。
+
+| はい 
+
+
+ a| 
+NetApp Replication
+
+* 制限モードの政府地域でサポートされます。商用地域または制限モードのソブリン地域ではサポートされません。
+
+| はい*（ONTAP オンプレミスからONTAP オンプレミスへのレプリケーションの場合は不要） 
+
+
+| *NetApp サポート契約の特徴* | なし | 該当なし 
+
+
+.12+| *管理機能* | 監査 | いいえ 
+
+
+| 自動化ハブ | いいえ 
+
+
+| フェデレーション | いいえ 
+
+
+| アイデンティティとアクセス管理 | いいえ 
+
+
+ a| 
+Licenses and subscriptionsの管理
+
+次の点に注意してください。
+
+* マーケットプレイスのサブスクリプション（時間単位および年間契約）
++
+** Cloud Volumes ONTAPの場合、容量ベースのライセンスのみがサポートされます。
+** Azure では、政府地域では年間契約はサポートされていません。
+
+
+* BYOL
++
+Cloud Volumes ONTAPの場合、容量ベースのライセンスとノードベースのライセンスの両方が BYOL でサポートされます。
+
+
+| いいえ 
+
+
+| クラウド プロバイダの資格情報を管理する | いいえ 
+
+
+| 多要素認証（ローカルユーザ） | いいえ 
+
+
+| 通知 | いいえ 
+
+
+| NSSアカウント | いいえ 
+
+
+| 組織パートナーシップ | いいえ 
+
+
+| 読み取り専用モード | いいえ 
+
+
+| 通知 | いいえ 
+|===

@@ -2,6 +2,7 @@
 :allow-uri-read: 
 
 
+* Cloud Build API（Infrastructure Managerを使用したプライベートモードCloud Volumes ONTAPデプロイメントに必要）
 * クラウド デプロイメント マネージャー V2 API
 * クラウド インフラストラクチャ マネージャー API
 * クラウドロギングAPI

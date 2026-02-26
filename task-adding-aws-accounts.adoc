@@ -156,7 +156,7 @@ image:screenshot_accounts_switch_aws.png["詳細と資格情報ページでア�
 
 === IAMロールを設定する
 
-NetApp Consoleのソフトウェア サービス (SaaS) レイヤーがロールを引き受けることができる IAM ロールを設定します。
+IAMロールを設定して、NetApp Consoleのサービスとしてのソフトウェア（SaaS）アプリケーションがそのロールを引き受けられるようにします。
 
 .手順
 . ターゲットアカウントの IAM コンソールに移動します。

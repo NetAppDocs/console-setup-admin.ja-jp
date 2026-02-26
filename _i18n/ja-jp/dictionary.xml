@@ -84,8 +84,6 @@
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">*次へ*を選択します。</block>
   <block id="85b8cec39bdb05ec73cd076b2359cfd1" category="list-text">*レビュー + 割り当て*を選択します。</block>
   <block id="ddc3be173496396ad174fa34013f6165" category="list-text">追加の Azure サブスクリプションのリソースを管理する場合は、そのサブスクリプションに切り替えて、これらの手順を繰り返します。</block>
-  <block id="94e19270110a66c15c7d6d1718fb017f" category="inline-link-macro">コネクタのカスタムロール権限</block>
-  <block id="3e75f6bb25578c951967e7bdcb93a618" category="list-text">の内容をコピーします<block ref="e41800fb708ad5eec4d221bf716e5746" category="inline-link-macro-rx"></block>JSON ファイルに保存します。</block>
   <block id="69d64492530dd5ee6b0c49b4e7b88a54" category="list-text">割り当て可能なスコープに Azure サブスクリプション ID を追加して、JSON ファイルを変更します。</block>
   <block id="ed98f96183c63be41f6b1d0d1c72e905" category="paragraph">NetApp Consoleで使用する各 Azure サブスクリプションの ID を追加する必要があります。</block>
   <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">*例*</block>
@@ -174,7 +172,6 @@
   <block id="2b7f6d951b3a705af72cb63a7d0788dd" category="paragraph">| \https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn</block>
   <block id="6fc418bd4d8d26d716d678ffb2c516e9" category="paragraph">| Azure China リージョンのリソースを管理します。</block>
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| Google Cloud 内のリソースを管理します。</block>
-  <block id="c642b24062280a73e940087788371986" category="paragraph">| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetApp Console内で機能とサービスを提供します。</block>
   <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| コンソールエージェントのアップグレード用のイメージを取得します。</block>
   <block id="4691a33bfa50c006ca907ff0f1c2ff22" category="inline-link-macro">エンドポイントリストを更新する方法を学ぶ</block>
   <block id="6e9c9d81baee7aa9e962024fc724b7ca" category="paragraph">以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。<block ref="b264fb455cda46e4971383987c8dce4c" category="inline-link-macro-rx"></block> 。</block>
@@ -396,7 +393,6 @@
   <block id="c8f224037ea295aeec347c94779d9932" category="list-text">アウトバウンドインターネットアクセス</block>
   <block id="6374ee6394bd0ee1403eb0cc1c149271" category="list-text">コンソール エージェントを展開するネットワークの場所には、特定のエンドポイントに接続するための送信インターネット接続が必要です。</block>
   <block id="71c057c678de165bd2af317aa6fde95f" category="list-text">NetAppコンソールから接続されたエンドポイント</block>
-  <block id="2ccbbf39ec9141464ab0eac673b7faac" category="list-text">SaaS レイヤーを通じて提供される Web ベースのNetApp Consoleを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。</block>
   <block id="80ec46c10c415af62929aebb3e38f314" category="inline-link-macro">NetAppコンソールから接続されたエンドポイントのリストを表示します</block>
   <block id="cee8cbd02fe08cef11f2053a6070e46a" category="paragraph"><block ref="6e8d554bd6200de94bf370643a432e28" category="inline-link-macro-rx"></block> 。</block>
   <block id="0b21fb3864d43aad91ca35b2b5d2354d" category="list-text">Azureリージョン</block>
@@ -1161,9 +1157,7 @@
   <block id="695e0a47c56539eb9bcf6290d1c797d8" category="list-text">お客様の敷地内</block>
   <block id="6c42d9d3f2de2ec585181e975309fcf0" category="section-title">クラウドプロバイダーとのコミュニケーション</block>
   <block id="728a253b9c538005983ee633823e71a8" category="paragraph">エージェントは、AWS、Azure、Google Cloud へのすべての通信に TLS 1.3 を使用します。</block>
-  <block id="d5cdf20beb613f2572125d00566ec967" category="paragraph">コンソールを制限モードで使用するには、コンソール エージェントをインストールし、コンソール エージェント上でローカルに実行されているコンソール インターフェイスにアクセスします。</block>
   <block id="09e422c729719f602773531e14c7fdcb" category="inline-link-macro">NetApp Consoleの導入モードについて学ぶ</block>
-  <block id="0f99c6c066f1002e098cbdaa87427745" category="paragraph"><block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block> 。</block>
   <block id="277baff1e6ebc32f068b4cb7de953e5e" category="section-title">コンソールエージェントのインストール方法</block>
   <block id="d0fb4185dcdae7937ec99f5b30ad1a65" category="list-text"><block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block></block>
   <block id="22f7b8c9e3cec45bb0909cca22e4e862" category="inline-link-macro">NetApp Consoleを標準モードで使い始める</block>
@@ -1247,7 +1241,6 @@
   <block id="3f2aa4bd073d2458603c46bc293f8ade" category="inline-link-macro">SAML ID プロバイダとのフェデレーション接続を設定する</block>
   <block id="00aef0f14c29d451cdbf8446ce6b0b8e" category="list-text"><block ref="00aef0f14c29d451cdbf8446ce6b0b8e" category="inline-link-macro-rx"></block></block>
   <block id="728d17e7146dcd6218a24c46a1de8943" category="doc">NetApp Consoleのアイデンティティとアクセス管理について学ぶ</block>
-  <block id="557e5a677a2db55310052bc62fe96998" category="inline-link-macro">コンソールの展開モードについて学ぶ</block>
   <block id="e5c1519cd8d7472771e0a519c54ccae1" category="paragraph">組織は、コンソール IAM システムの最上位レベルであり、通常は会社を表します。組織は、フォルダー、プロジェクト、メンバー、ロール、リソースで構成されます。エージェントは組織内の特定のプロジェクトに関連付けられます。</block>
   <block id="6c8d76b40d187de98318661a9cab7239" category="paragraph">_組織管理者_ はリソースをフォルダーに関連付けることができるため、_フォルダーまたはプロジェクト管理者_ はリソースをフォルダー内の適切なプロジェクトにリンクできます。</block>
   <block id="13a6a98927a83ffb05bccef1ebf3e2a4" category="paragraph">リソースをフォルダーに関連付けても、すべてのプロジェクトがそのリソースにアクセスできるようになるわけではありません。_フォルダーまたはプロジェクトの管理者_ のみがそれを表示できます。  _フォルダーまたはプロジェクト管理者_ は、どのプロジェクトがアクセスできるかを決定し、リソースを適切なプロジェクトに関連付けます。</block>
@@ -1295,24 +1288,8 @@
   <block id="9f0f4ef7b4fff87cc68ce1185ff944ce" category="paragraph">このアクションでは、Linux とコンソール エージェント ソフトウェアを実行する VM インスタンスも起動しますが、デプロイはコンソールからではなく Google Cloud から直接開始されます。</block>
   <block id="0eef87956979cf6724fcf06a20f2e4eb" category="list-text"><block ref="0eef87956979cf6724fcf06a20f2e4eb" category="inline-link-macro-rx"></block></block>
   <block id="6ca5ab84f54829f432e3fc9d65f06d1c" category="paragraph">選択したインストール オプションは、インストールの準備方法に影響します。これには、Google Cloud でリソースを認証および管理するために必要な権限をコンソールに付与する方法が含まれます。</block>
-  <block id="0899f83543ed0bdcc2e1e20f83558546" category="summary">NetApp Consoleは、ビジネス要件とセキュリティ要件を満たす複数の _導入モード_ を提供します。_標準モード_ では、サービスとしてのソフトウェア (SaaS) レイヤーを活用して完全な機能を提供しますが、接続制限がある組織では _制限モード_ と _プライベート モード_ が利用できます。</block>
-  <block id="050bd8a4d093ad9b4ba1572b3fd77d0c" category="paragraph">NetApp Consoleは、ビジネス要件とセキュリティ要件を満たす複数の _導入モード_ を提供します。</block>
-  <block id="77b263f30defdfcf9832d77b90a644ba" category="list-text">_標準モード_ では、サービスとしてのソフトウェア (SaaS) レイヤーを活用して完全な機能を提供します。ユーザーはWebベースのホストインターフェースを通じてコンソールにアクセスします。</block>
-  <block id="f9960390ca43f76801330e407536ba64" category="list-text">_制限モード_ は、接続制限があり、 NetApp Consoleを独自のパブリック クラウドにインストールしたい組織で利用できます。ユーザーは、クラウド環境内のコンソール エージェントでホストされている Web ベースのインターフェースを通じてコン​​ソールにアクセスします。</block>
-  <block id="41cf28e75f71c8f5feda4bd12c1c3df8" category="paragraph">NetApp Consoleは制限モードでトラフィック、通信、データを制限するため、環境 (オンプレミスおよびクラウド) が必要な規制に準拠していることを確認する必要があります。</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="section-title">概要</block>
   <block id="579f2ccfa8f6ecb1be46c191e6f51980" category="paragraph">各展開モードでは、アウトバウンド接続、場所、インストール、認証、データ サービス、課金方法が異なります。</block>
-  <block id="9b873a2764b972270e6c29da62125ed3" category="list-text">Web ベースのコンソールから SaaS サービスを使用します。使用する予定のデータ サービスと機能に応じて、コンソール組織管理者は、ハイブリッド クラウド環境内のデータを管理するための 1 つ以上のコンソール エージェントを作成します。</block>
-  <block id="299192dda00d9cbb51cb176b72e6f464" category="paragraph">このモードでは、パブリックインターネット経由で暗号化されたデータ転送が使用されます。</block>
-  <block id="e9023ac403025935abaa6420f26c8115" category="list-text">コンソール エージェントをクラウド（政府、主権、または商業地域）にインストールし、 NetApp ConsoleSaaS レイヤーへの送信接続が制限されます。</block>
-  <block id="90fed451e3dab076e7f87c02c10b6e5d" category="paragraph">このモードは通常、州政府や地方自治体、規制対象企業によって使用されます。</block>
-  <block id="5120a32615b91a5de80fd01e90d53677" category="inline-xref">SaaS レイヤーへのアウトバウンド接続の詳細</block>
-  <block id="26791add2e44035ab424c178d3f4c61f" category="paragraph"><block ref="4a9f480c757559738dc0bf80da949e99" category="inline-xref-macro-rx"></block> 。</block>
-  <block id="8bd43632194c45c9c11a5e2f3ba51e6b" category="list-text">BlueXPプライベート モード (従来のBlueXPインターフェイスのみ)</block>
-  <block id="42e7ba7061f6a314504fc5939b6ee874" category="inline-link-macro">BlueXPプライベートモードの PDF ドキュメント</block>
-  <block id="859648b0c19c2309a7c9a716478c3134" category="list-text">BlueXPプライベート モード (レガシーBlueXPインターフェイス) は通常、インターネット接続がなく、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 などの安全なクラウド領域があるオンプレミス環境で使用されます。  NetApp は、従来のBlueXPインターフェースを使用してこれらの環境を引き続きサポートします。<block ref="f0d6401276844781c459c66448fa7d75" category="inline-link-macro-rx"></block></block>
-  <block id="cec6a96c926f8e3e1330f0a30b1fccba" category="paragraph">次の表は、 NetAppコンソールの比較を示しています。</block>
-  <block id="50219732ecf537399313d1449b7d56e3" category="cell">NetApp ConsoleSaaS レイヤーへの接続が必要ですか?</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">はい</block>
   <block id="6a4fdae8165172d715565269b5d6eb0b" category="cell">発信のみ</block>
   <block id="9f0878ebdd84e18f3339212d75f533cf" category="cell">クラウド プロバイダーへの接続が必要ですか?</block>
@@ -1321,13 +1298,9 @@
   <block id="a631ab6eb3812fe220118fcbe4d91005" category="cell">コンソール、クラウドマーケットプレイス、または手動インストールから</block>
   <block id="d2ae7374ec062234e52b60d36c234ceb" category="cell">クラウドマーケットプレイスまたは手動インストール</block>
   <block id="75681029e6ece7282ebf0bf6650e3547" category="cell">コンソールエージェントのアップグレード</block>
-  <block id="747585a36be1e14a4dd3ff25c4bf1e48" category="cell">自動アップグレード</block>
   <block id="ef218d4aa510098fe87b34d0b8101374" category="cell">UIアクセス</block>
-  <block id="ff6a985fa99a12880332d941ca5c8188" category="cell">コンソールSaaSレイヤーから</block>
   <block id="03caf351f80fcc33a8220fb7ca5a2c54" category="cell">エージェントVMからローカルに</block>
   <block id="4f740b5a623e3d05345b90af620f4a72" category="cell">APIエンドポイント</block>
-  <block id="4284eaeed932613e70a0bcb244dadec9" category="cell">コンソールSaaSレイヤー</block>
-  <block id="e73e7287ad2b8e179dae88b6eebada6c" category="cell">コンソールエージェント</block>
   <block id="c75f7811d70d17dbcd88e9d03752cbed" category="cell">認証</block>
   <block id="6401b9f8aef7ecb650cfb38495f171cd" category="cell">auth0、NSSログイン、またはIDフェデレーションを使用したSaaS経由</block>
   <block id="9e2c8b3879824561ac6969d746355a88" category="cell">auth0またはIDフェデレーションを使用したSaaSを通じて</block>
@@ -1339,11 +1312,8 @@
   <block id="e889e1f5870712e661ee36541e6a3ad4" category="cell">多くが支持されている</block>
   <block id="43edcdb6c00656305d8defca5b3b7be0" category="cell">データサービスライセンスオプション</block>
   <block id="d96ba69951eb7ddb699d3c264ee7fa6e" category="cell">マーケットプレイスのサブスクリプションとBYOL</block>
-  <block id="49aa7067a1e5b4d8f3ea23a65bb94a2e" category="paragraph">サポートされているNetApp Consoleの機能とサービスなど、これらのモードの詳細については、次のセクションをお読みください。</block>
-  <block id="cc59a00ae083d792f922023c8850d35c" category="paragraph">次の画像は標準モードの展開の例です。</block>
   <block id="ca136a9cca838ef5c3092290e511fb42" category="paragraph">コンソールは標準モードでは次のように動作します。</block>
   <block id="7b0c55f247d6f53c6782615b53af4619" category="list-text">アウトバウンドコミュニケーション</block>
-  <block id="c43c363ca98a3640bd064d1c0bd3a413" category="list-text">コンソール エージェントからコンソール SaaS レイヤー、クラウド プロバイダーの公開リソース、および日常の運用に不可欠なその他のコンポーネントへの接続が必要です。</block>
   <block id="9b5e57dc9b2aa6af73db773c627f993a" category="inline-link-macro">AWS でエージェントが接続するエンドポイント</block>
   <block id="8339e7865f160190422328b59c08ee1e" category="list-text"><block ref="8339e7865f160190422328b59c08ee1e" category="inline-link-macro-rx"></block></block>
   <block id="4858f9548af45fc4af93b80950e02dbf" category="inline-link-macro">Azure でエージェントが接続するエンドポイント</block>
@@ -1351,67 +1321,27 @@
   <block id="01e5b09b5730088f2de0030cdb3a7862" category="inline-link-macro">Google Cloud でエージェントが接続するエンドポイント</block>
   <block id="982bddeed9f81544f50291e3d6a924ce" category="list-text"><block ref="982bddeed9f81544f50291e3d6a924ce" category="inline-link-macro-rx"></block></block>
   <block id="d6ec275d37a7d519496b7320d23bf53b" category="list-text">エージェントがサポートされる場所</block>
-  <block id="56818e4b6176dd9fb4526f26aabee766" category="list-text">標準モードでは、エージェントはクラウドまたはオンプレミスでサポートされます。</block>
-  <block id="fbc27e60b0428f5d4d0abe0fcff4f75d" category="list-text">次のいずれかの方法でエージェントをインストールできます。</block>
-  <block id="275c98d72c06472c56e7cf3fb35f8862" category="list-text">コンソールから</block>
-  <block id="9ce0fa98acaf3b566d9d8c11cab41637" category="list-text">AWS または Azure Marketplace から</block>
-  <block id="c0f6aadcb6dff711df6e35c21177c7f5" category="list-text">Google Cloud SDKから</block>
-  <block id="b28b8dcea617598d450297afa2601590" category="list-text">データセンターまたはクラウド内の Linux ホストでインストーラーを手動で使用する</block>
-  <block id="dd592c555c1a2d53cf042be871818dda" category="list-text">提供された OVA を VCenter 環境で使用します。</block>
-  <block id="f5451a3d4cccc2611f9603ea615122d5" category="list-text">NetApp はエージェントを毎月自動的にアップグレードします。</block>
   <block id="bd521aa973861d923b4649240bf09964" category="list-text">ユーザーインターフェースアクセス</block>
-  <block id="9ec70babf788035cb815ff42523734cc" category="list-text">ユーザー インターフェイスには、SaaS レイヤーを通じて提供される Web ベースのコンソールからアクセスできます。</block>
   <block id="dfc681a401aa380af2d5dd63fa34b846" category="list-text">API呼び出しは次のエンドポイントに対して行われます: \https://api.bluexp.netapp.com</block>
-  <block id="c480ed058aca97ebdd28df63b1e29a95" category="list-text">auth0 またはNetAppサポート サイト (NSS) ログインによる認証。アイデンティティ連携が利用可能です。</block>
-  <block id="7defcd0d2a51c4956b3db3f855d351bb" category="list-text">サポートされているデータサービス</block>
-  <block id="83362b1201d07f13cdf730c349913c72" category="inline-link-macro">NetAppデータサービスの詳細</block>
-  <block id="5aee43fcaf38696d1d20542c4a3adc37" category="list-text">すべてのNetAppデータ サービスがサポートされています。<block ref="588eceeb17517c2c13aa1a4e054b144b" category="inline-link-macro-rx"></block> 。</block>
-  <block id="fc2d718c7f8567e5cf68526eb82b0a9d" category="list-text">サポートされているライセンスオプション</block>
   <block id="b2ce5bd121d305ac0ecc172108bef162" category="list-text">マーケットプレイスのサブスクリプションと BYOL は標準モードでサポートされていますが、サポートされるライセンス オプションは使用しているNetAppデータ サービスによって異なります。利用可能なライセンス オプションの詳細については、各サービスのドキュメントを確認してください。</block>
   <block id="2933440e5a2b9f3dfe1286c45aa72fbf" category="list-text">標準モードの開始方法</block>
   <block id="caf8c4952c4000aefa6a8a822422c0b8" category="list-text">に行く<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>そしてサインアップしてください。</block>
   <block id="e9fd7484e38200d8baa6e573d1d7294a" category="inline-link-macro">標準モードの開始方法を学ぶ</block>
-  <block id="52599219f6b08bb2ce3fc85743943c5e" category="paragraph"><block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block> 。</block>
   <block id="88f3c518a924b9747d81192ccc7eeaeb" category="paragraph">次の画像は、制限モードの展開の例です。</block>
   <block id="b8302c030e9a62244d45c84ad8ce6eb8" category="paragraph">制限モードではコンソールは次のように動作します。</block>
-  <block id="12e0780cde42b76465d8a45194d8c0f2" category="list-text">エージェントは、データ サービス、ソフトウェア アップグレード、認証、メタデータの転送のために、コンソール SaaS レイヤーへの送信接続を必要とします。</block>
-  <block id="a932bee9dfd2d4381168cfa68eca19a8" category="paragraph">コンソール SaaS レイヤーはエージェントへの通信を開始しません。エージェントは、コンソール SaaS レイヤーとのすべての通信を開始し、必要に応じてデータをプルまたはプッシュします。</block>
   <block id="572a35a7a9ed649cca9ec1cf347c9b9a" category="paragraph">リージョン内からクラウド プロバイダー リソースへの接続も必要です。</block>
-  <block id="7aa6714ad09622dfe578a3778dddf421" category="list-text">制限モードでは、エージェントはクラウド（政府リージョン、主権リージョン、または商用リージョン）でサポートされます。</block>
-  <block id="6553f8001cc3b8d8095c30dc022a8f8e" category="list-text">AWS または Azure Marketplace からインストールすることも、独自の Linux ホストに手動でインストールすることも、VCenter 環境でダウンロード可能な OVA を使用することもできます。</block>
-  <block id="af391b6c8a16d13203fce21fd2f30d9f" category="list-text">NetApp は、毎月のアップデートでエージェント ソフトウェアを自動的にアップグレードします。</block>
-  <block id="6e06d533266df086def4ac0b43413dce" category="list-text">ユーザー インターフェースには、クラウド リージョンにデプロイされたエージェント仮想マシンからアクセスできます。</block>
-  <block id="bb5a35aceba9b3c83d331446e142e3fa" category="list-text">API 呼び出しはエージェント仮想マシンに対して行われます。</block>
-  <block id="774e8db6d1dd36f320e4ebb5fd5f4a0b" category="list-text">認証は auth0 を通じて提供されます。アイデンティティフェデレーションも利用可能です。</block>
-  <block id="204756b73a8d97b00f89d22893049d31" category="list-text">サポートされているストレージ管理およびデータサービス</block>
-  <block id="8732a4c227800283f6c5678c1c6c5ce3" category="list-text">制限モードの次のストレージおよびデータ サービス:</block>
-  <block id="ea22f9957523103248d84695e98b17ba" category="cell">サポートされているサービス</block>
-  <block id="f4c6f851b00d5518bf888815de279aba" category="cell">注記</block>
-  <block id="34678ee868eeabce720fc4a0fd60c17a" category="cell">完全サポート</block>
   <block id="34c6561859a3a97caa0248fbb4372124" category="inline-link">ONTAPデータのサポートされているバックアップ先のリストを表示します</block>
   <block id="91d5470ff0de1d64ddb0c8c3bef0b246" category="cell">NetApp Data Classification</block>
   <block id="0a44fe605745a017fde35750e5fae36a" category="paragraph">制限モードの政府地域でサポートされます。商用地域または制限モードのソブリン地域ではサポートされません。</block>
-  <block id="63d604af1c7a5bfef29d50c6c2c2591f" category="cell">制限モードでサポートされている以下のライセンス オプションを使用して、ライセンスおよびサブスクリプション情報にアクセスできます。</block>
   <block id="6c253a8aff5dfa835a77545b3006abc8" category="cell">オンプレミスのONTAPクラスタ</block>
-  <block id="cf48a52090d6606e27770ad6a64dc153" category="cell">コンソール エージェントを使用した検出とコンソール エージェントを使用しない検出 (直接検出) の両方がサポートされています。コンソール エージェントなしでオンプレミス クラスターを検出する場合、詳細ビュー (システム マネージャー) はサポートされません。</block>
-  <block id="c26e19b0ab82c81e1df83e4f6d44e6af" category="list-text">制限モードでは、次のライセンス オプションがサポートされています。</block>
   <block id="b012b5d8eb383d0a82055699469c06d6" category="list-text">マーケットプレイスのサブスクリプション（時間単位および年間契約）</block>
   <block id="7fe4c05710aa3ce341a005ab26b2dfdf" category="list-text">Cloud Volumes ONTAPの場合、容量ベースのライセンスのみがサポートされます。</block>
   <block id="a5d9109cf2a557dd2c28d954ee774fd8" category="list-text">Azure では、政府地域では年間契約はサポートされていません。</block>
   <block id="b650b6a0e30782e5c59c3db6f2644347" category="list-text">BYOL</block>
   <block id="762e4ad93da7526b1209d0aed9dd1b9d" category="paragraph">Cloud Volumes ONTAPの場合、容量ベースのライセンスとノードベースのライセンスの両方が BYOL でサポートされます。</block>
   <block id="838ac5ba738d283ecc822963f2f2d06a" category="list-text">制限モードの開始方法</block>
-  <block id="f4f2adbe9379e62fc1649e2bd42e8cb6" category="list-text">NetApp Console組織を作成するときに、制限モードを有効にする必要があります。</block>
-  <block id="3010fa9d791288d705979e5d70c7c143" category="paragraph">まだ組織がない場合は、手動でインストールした、またはクラウド プロバイダーのマーケットプレイスから作成したコンソール エージェントから初めてコンソールにログインするときに、組織を作成して制限モードを有効にするように求められます。</block>
-  <block id="b4bfb9cefa43eb3f7280f66f61caabb7" category="admonition">組織を作成した後は、制限モード設定を変更することはできません。</block>
   <block id="999ae70b12514c648b606bf0f3afabcb" category="inline-link-macro">制限モードの開始方法を学ぶ</block>
-  <block id="3adc000476556fe48061c952620b6394" category="paragraph"><block ref="b25261838e688763c403e651d058df29" category="inline-link-macro-rx"></block> 。</block>
-  <block id="860f39a5e97bc595cbfcceecafdfb98e" category="section-title">サービスと機能の比較</block>
-  <block id="7275d75390baafb4c0ebe3ad0c47fb07" category="paragraph">次の表は、制限モードでサポートされているサービスと機能をすぐに識別するのに役立ちます。</block>
-  <block id="a38a9e2ffd289e7551fc92ed3e78f4af" category="paragraph">一部のサービスは制限付きでサポートされる場合がありますのでご了承ください。これらのサービスが制限モードでどのようにサポートされるかの詳細については、上記のセクションを参照してください。</block>
   <block id="aa200c19289e5050e77edc0bccc67c2b" category="cell">製品分野</block>
-  <block id="c5d16d578bd4ea7f2202b75b6349dd74" category="cell">NetAppデータサービスまたは機能</block>
-  <block id="1284e91bd7767daa975701f3e4d1582a" category="cell">*ストレージ* 表のこの部分には、コンソールからのストレージ システム管理のサポートがリストされています。  NetApp Backup and Recoveryでサポートされているバックアップ先は示されません。</block>
   <block id="18cf072964a583150dd247485ba75b92" category="cell">Amazon FSx for ONTAP</block>
   <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="cell">いいえ</block>
   <block id="270fcb785810d0206945029bb05f4e97" category="cell">Amazon S3</block>
@@ -1420,21 +1350,15 @@
   <block id="4a17f9505c41e2b9d2fdf8e21809e428" category="cell">Eシリーズ</block>
   <block id="392d70ca39f31f10bd637936769788df" category="cell">StorageGRID</block>
   <block id="3cb695a43961514082b7be25eac12c0b" category="cell">*データサービス*</block>
-  <block id="ede10582776ac743c114b051021cf0ca" category="cell">NetAppバックアップとリカバリ</block>
   <block id="b17e900e063883a32cc6ff0df77599bf" category="inline-link">ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します</block>
   <block id="91471b82e1f8cf03fbbf6a08da688679" category="cell">はい<block ref="d965d840576f8451a10b0c221310a681" category="inline-link-rx"></block></block>
   <block id="9a0927d2ec4654dfab564a09f0cadbf9" category="cell">NetApp Ransomware Resilience</block>
   <block id="a5db9212acd617412153fca9cdf5d9d7" category="cell">NetApp Replication</block>
-  <block id="928b1dc588c907971c8b25ff6a14aee2" category="cell">NetAppボリュームキャッシュ</block>
-  <block id="7001dfa06a016b8dd80f2476b04683a9" category="cell">NetAppワークロード ファクトリー</block>
-  <block id="86d0f8f9c44b93c040cb35a58ca2f2ff" category="cell">*特徴*</block>
-  <block id="f079f17b0940258743d34e7b771c715f" category="cell">Digital Advisor</block>
   <block id="5ed2a2f311f3d8e9c50e319b312ba7f6" category="cell">ライセンスとサブスクリプションの管理</block>
   <block id="22bdd8c71cc34511ea88881e20f7ca21" category="cell">アイデンティティとアクセス管理</block>
   <block id="6b0a74cb89aaf10fdf1c70bfd9bd78e2" category="cell">ライフサイクルプランニング</block>
   <block id="66aac1d75aef36714a42ae94b3624998" category="cell">NSSアカウント</block>
   <block id="a274f4d4670213a9045ce258c6c56b80" category="cell">通知</block>
-  <block id="13348442cc6a27032d2b4aa28b75a5d3" category="cell">検索</block>
   <block id="eda63b570db82e05c2fd7b5f0c3bb20f" category="cell">監査</block>
   <block id="6c781c37150950b9639b1a88927fa671" category="summary">NetApp Consoleで組織間のパートナーシップを構築すると、組織のパートナーは組織の境界を越えてNetAppリソースを安全に管理できるようになり、コラボレーションが効率化され、セキュリティが強化されます。</block>
   <block id="8f032c748fc26fa9d1200f8efa6a0d8c" category="paragraph-title">必要な役割</block>
@@ -1468,66 +1392,25 @@
   <block id="0f5725960c303f4472d3cc7550c2fd5a" category="inline-image-macro">リソースの共有を示す図</block>
   <block id="4830e6d5d6c968f2f2908ed6acc095af" category="paragraph"><block ref="4830e6d5d6c968f2f2908ed6acc095af" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b0be8ab9543f692468afd4189eda23e9" category="doc">NetApp Consoleについて学ぶ</block>
-  <block id="34af3a9c49c2c5c991ebfa2c64342ed6" category="paragraph">コンソールは、統合データ サービスを使用してハイブリッド マルチクラウド全体のストレージ管理と保護を統合し、データを保護および最適化します。</block>
-  <block id="7d55a867fdb967d9025d0801ef6eb458" category="section-title">集中ストレージ管理</block>
-  <block id="6601d888a62f87cae78b273d4598403b" category="paragraph">コンソールを使用して、クラウドおよびオンプレミスのストレージを検出、展開、管理します。</block>
-  <block id="a7a49fddbe3307c59d164dd83ddf376d" category="section-title">サポートされているクラウドおよびオンプレミスのストレージ</block>
-  <block id="e8809da5bd4736a026ed9c3f0c94105a" category="paragraph">コンソールから次の種類のストレージを管理できます。</block>
   <block id="165168c444979fab1fc4b5f5234e8edb" category="list-text">クラウドストレージソリューション</block>
   <block id="a77255c8473fd0c82b986bb6ce8b7d4d" category="list-text">オンプレミスのフラッシュとオブジェクトストレージ</block>
   <block id="3404cce75db90acf6a9d52860721a139" category="list-text">ONTAPクラスタ</block>
   <block id="b9c8cb06fa02abe70007fad1ae9d0b57" category="list-text">クラウドオブジェクトストレージ</block>
-  <block id="bfd15aa26ba0ced782240c4a8b7e517e" category="section-title">ストレージ管理</block>
-  <block id="0182e364824d96db33c54a813b67edca" category="paragraph">コンソール内では、_システム_ は検出または展開されたストレージを表します。システムを選択して、 NetAppデータ サービスと統合したり、ボリュームの追加などのストレージを管理したりできます。</block>
-  <block id="3212175a9a38f1ace0526f2a09ce6c99" category="section-title">データの保護、セキュリティ確保、最適化のための統合データサービスとストレージ管理</block>
-  <block id="f9f008da2a17fe3a33a465a0c004c33e" category="paragraph">コンソールは、ストレージの可用性を確保し維持するためのデータ サービスを提供します。</block>
   <block id="a0409ef7729969662c91fdaee22bc933" category="list-text">ストレージアラート</block>
   <block id="2d5c8aeda2ab373d4a288e3bb0e951b0" category="list-text">ONTAP環境の容量、可用性、パフォーマンス、保護、セキュリティに関連する問題を表示します。</block>
-  <block id="5d880ed9e8bc81eec72f5edb5332637d" category="list-text">スクリプト ソリューションを使用して、 NetApp製品とサービスの導入と統合を自動化します。</block>
-  <block id="4102ee4dc04d405e046bf0c00b9f15a7" category="list-text">クラウドとオンプレミスのデータをバックアップおよび復元します。</block>
-  <block id="2090f2d846793f153b9266c648b079ef" category="list-text">アプリケーション データとクラウド環境のプライバシーを準備します。</block>
-  <block id="ce77730dd6dbc743a3b153b41918d0fc" category="list-text">オンプレミスとクラウド データ ストア間でデータを同期します。</block>
   <block id="721fdbfdeaa13884256e96ff391b8f33" category="list-text">NetAppデジタルアドバイザー (Active IQ)</block>
   <block id="6f46f51af0fa796b3853885705907e6f" category="list-text">予測分析とプロアクティブなサポートを使用して、データ インフラストラクチャを最適化します。</block>
   <block id="5928ade999566a2ca0d839d3c191b3f1" category="list-text">ライセンスとサブスクリプションを管理および監視します。</block>
-  <block id="c7b1fe992423d57d0e492585ff631c02" category="list-text">VMware Cloud on Amazon FSx for ONTAPを災害復旧サイトとして使用して、オンプレミスの VMware ワークロードを保護します。</block>
-  <block id="068ff21264880d35ad4153fad90e3828" category="list-text">現在または予測される容量が低いクラスターを特定し、データ階層化または追加容量の推奨事項を実装します。</block>
-  <block id="a8dd42d088a97f32bf9a4c69abc2517a" category="list-text">ランサムウェア攻撃につながる可能性のある異常を検出します。ワークロードを保護および回復します。</block>
   <block id="852e5aa5bab2b81469e97f26b6e2b7f3" category="list-text">バックアップと災害復旧をサポートするために、ストレージ システム間でデータを複製します。</block>
-  <block id="e5f69c6478276f31149c942722646515" category="list-text">ONTAPアップグレードの評価、計画、実行を自動化します。</block>
   <block id="072d1a387472fb47fdfa33e48ff08ffd" category="list-text">サステナビリティダッシュボード</block>
   <block id="b6ec628f73e9b33a6ae94b2c3ef2879b" category="list-text">ストレージ システムの持続可能性を分析します。</block>
-  <block id="5d98e2651207e09de1a3137b754bcdb6" category="list-text">オンプレミスのONTAPストレージをクラウドに拡張します。</block>
-  <block id="d0e71bba7a9d538f008b05b19274bfe1" category="list-text">書き込み可能なキャッシュ ボリュームを作成して、データへのアクセスを高速化したり、頻繁にアクセスされるボリュームのトラフィックを軽減したりします。</block>
-  <block id="c2f4c01ba651c0bc1e3f5840352d4723" category="list-text">Amazon FSx for NetApp ONTAPを使用して主要なワークロードを設計、セットアップ、運用します。</block>
-  <block id="2272c41252ddb72cb1caa9df0427568c" category="inline-link">NetApp Consoleと利用可能なデータサービスの詳細</block>
-  <block id="79b6d70c58423b416abcb7d7a9814f1d" category="paragraph"><block ref="79b6d70c58423b416abcb7d7a9814f1d" category="inline-link-rx"></block></block>
-  <block id="902e65d33784bd8924eb05e622aa2dda" category="section-title">サポートされているクラウドプロバイダー</block>
-  <block id="93b72bf2601704968ba14dec9ae3cad7" category="paragraph">コンソールを使用すると、クラウド ストレージを管理し、Amazon Web Services、Microsoft Azure、Google Cloud のクラウド サービスを使用できます。</block>
-  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">料金</block>
   <block id="4ac6e187eec85ffe9a62a3a56aec7d4b" category="inline-link">NetAppデータサービスの価格について</block>
-  <block id="e5f7ad5f3b1c0d4a2f641adba7e1a91c" category="paragraph">NetApp Consoleは無料です。クラウドにコンソール エージェントを展開したり、クラウドに展開された制限モードを使用したりする場合は、コストが発生します。一部のNetAppデータ サービスにはコストがかかります。<block ref="737ad53c0691d6484be24092d035e183" category="inline-link-rx"></block></block>
-  <block id="c63c8e46f37281705ead3aa892215a97" category="section-title">NetApp Consoleの仕組み</block>
-  <block id="1500ff1129691008264fb3b5e6941d86" category="paragraph">NetApp Consoleは、SaaS レイヤー、リソースおよびアクセス管理システム、ストレージ システムを管理してNetAppデータ サービスを有効にするコンソール エージェント、およびビジネス要件を満たすさまざまな導入モードを通じて提供される Web ベースのコンソールです。</block>
-  <block id="11cf550820ecd5e75ae1a9046f7f7f05" category="section-title">サービスとしてのソフトウェア</block>
-  <block id="1e92653fb3f4b1939c6f79d95638210a" category="inline-link">ウェブベースのインターフェース</block>
-  <block id="7321e98b103d173fd0369961ab032d4d" category="paragraph">コンソールにアクセスするには<block ref="4bc71cfd2394cc21d883b4e614ec1af7" category="inline-link-rx"></block>および API。この SaaS エクスペリエンスにより、最新機能がリリースされると自動的にアクセスできるようになります。</block>
-  <block id="60bd5de47e0653619aa34bc7a79dcb36" category="section-title">アイデンティティとアクセス管理（IAM）</block>
-  <block id="0264deb235be5ecb06f9747b3af8c9c6" category="paragraph">コンソールは、リソースとアクセス管理のための ID およびアクセス管理 (IAM) を提供します。この IAM モデルは、リソースと権限のきめ細かな管理を提供します。</block>
-  <block id="54298776910b74abb9c78a3f449702b3" category="list-text">トップレベルの組織を使用すると、さまざまなプロジェクト間のアクセスを管理できます。</block>
-  <block id="29235ad952255adaa81cebf92ab3a0f0" category="list-text">_フォルダ_を使用すると、関連するプロジェクトをグループ化できます</block>
-  <block id="666d088bb19b110a528d20b21622daa9" category="list-text">リソース管理では、リソースを1つ以上のフォルダまたはプロジェクトに関連付けることができます。</block>
-  <block id="4c57f63e49ef8479b418a16f7d776ed6" category="list-text">アクセス管理により、組織階層のさまざまなレベルのメンバーに役割を割り当てることができます。</block>
   <block id="37a3468698a20ce104d536a1abe45dff" category="inline-link-macro">NetApp ConsoleのIAMの詳細</block>
   <block id="e386f797f1278a41cbdf60290772a272" category="list-text"><block ref="e386f797f1278a41cbdf60290772a272" category="inline-link-macro-rx"></block></block>
-  <block id="b5d4f8f6ade5a4fbfeb3724b7bbc0b5e" category="paragraph">いくつかの追加機能およびデータ サービスには、コンソール エージェントが必要です。オンプレミスとクラウド環境全体のリソースとプロセスを管理できます。一部のシステム ( Cloud Volumes ONTAPなど) を管理し、一部のNetAppデータ サービスを使用するために必要です。</block>
   <block id="919907c49b488683fa1ddd5c9088c12b" category="inline-link-macro">コンソールエージェントの詳細</block>
   <block id="9e97ec538c2df79d1e5e48262f80e2f3" category="paragraph"><block ref="a0861367aee4f711e39ff50c5df170be" category="inline-link-macro-rx"></block> 。</block>
-  <block id="93ed0ac1db1f6b5a46cfc5e5f9034f18" category="inline-link-macro">インターネットに接続できないサイト向けのBlueXP (プライベート モード) について説明します。</block>
   <block id="cf7a9a2cd5377e378f9b1405ec142a3b" category="inline-link-macro">展開モードの詳細</block>
   <block id="e9dbe7d99d4ec8722dd3b33c7c526c3e" category="paragraph"><block ref="fb1800a80fb75441187032d2305f2c40" category="inline-link-macro-rx"></block> 。</block>
-  <block id="0b43e955bb49e08923e9b43ee20ef2b3" category="section-title">SOC 2 タイプ2認証</block>
-  <block id="519febbb668c807564328303795f2a7a" category="paragraph">独立した公認会計士事務所とサービス監査人がコンソールを検査し、該当する Trust Services 基準に基づいて SOC 2 タイプ 2 レポートを達成したことを確認しました。</block>
   <block id="582a36961cbdd6ca90f6672041cdab83" category="inline-link">NetAppのSOC 2レポートを見る</block>
   <block id="958c315a8c40765f65895091ecc83488" category="paragraph"><block ref="958c315a8c40765f65895091ecc83488" category="inline-link-rx"></block></block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律上の表示</block>
@@ -2017,7 +1900,6 @@
   <block id="8963387394e2ee3e2a5a9ba160566a58" category="cell">\https://support.netapp.com</block>
   <block id="fe0afb21d6cb9bc2fa6c390327246314" category="cell">NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。</block>
   <block id="f092dc53062418401abf8d7b17161fcb" category="cell">ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。</block>
-  <block id="1daedeccee3ce9bebdac02815a88e596" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com</block>
   <block id="5eda3a7f9f9788e7beae44ca11c3fca1" category="inline-link-macro">コンソールエージェントの AWS ネットワークアクセスを設定する</block>
   <block id="fe65e3a837dc9a3749e87481b67ff0fb" category="list-text"><block ref="fe65e3a837dc9a3749e87481b67ff0fb" category="inline-link-macro-rx"></block></block>
   <block id="413296dfc7c1face41e185f79c4f8f7a" category="inline-link-macro">コンソール エージェントの Azure ネットワーク アクセスを設定する</block>
@@ -2681,7 +2563,6 @@
   <block id="2456df50f32587f6b78feb0da93a921f" category="section-title">コンソールエージェントを作成するためにコンソールに資格情報を追加します</block>
   <block id="eb544e044391f4665cb06461e7629e6b" category="paragraph">コンソールエージェントの作成に必要な権限を付与する IAM ロールの ARN を指定して、AWS 認証情報を追加します。新しいエージェントを作成するときに、これらの資格情報を選択できます。</block>
   <block id="d8a56d983b91f097e5ba55dd03a18509" category="section-title">IAMロールを設定する</block>
-  <block id="83c191c1ded83c52aab82a0e9b9e1997" category="paragraph">NetApp Consoleのソフトウェア サービス (SaaS) レイヤーがロールを引き受けることができる IAM ロールを設定します。</block>
   <block id="44030f19e52b4a03b050525f287bbc15" category="list-text">ターゲットアカウントの IAM コンソールに移動します。</block>
   <block id="c0194bb9a8d34b181052f172b4a9a98f" category="list-text">*別のAWSアカウント*を選択し、 NetApp ConsoleSaaSのIDを入力します：952013314444</block>
   <block id="43fcb7c92b7808baf72f1cd9eecef7a5" category="list-text">特にAmazon FSx for NetApp ONTAPの場合は、*信頼関係* ポリシーを編集して "AWS": "arn:aws:iam::952013314444:root" を含めます。</block>
@@ -3911,7 +3792,6 @@
   <block id="58c83e5c8c5ef2ad291661bcec1c6a86" category="paragraph">オンプレミスの既存の Linux ホストにコンソール エージェント ソフトウェアをダウンロードしてインストールします。</block>
   <block id="3f297ef15cde0668e93b35f2752fd4fd" category="paragraph-title">次は何？</block>
   <block id="29a09891cc27036127b16eefb0357d87" category="paragraph">NetApp Console内でコンソール エージェントを登録する必要があります。</block>
-  <block id="eba388b653df97f4ad393f9dec6af419" category="paragraph">コンソールにログインし、コンソール エージェントを組織に関連付けます。ログイン方法は、コンソールを使用しているモードによって異なります。コンソールを標準モードで使用している場合は、SaaS Web サイトからログインします。コンソールを制限モードで使用している場合は、コンソール エージェント ホストからローカルにログインします。</block>
   <block id="945a1013347d84bac0a2f13069240dcf" category="section-title">NetApp Consoleにクラウドプロバイダーの資格情報を提供する</block>
   <block id="6f7b4a56a4b8f79564d165736a5096b0" category="paragraph">これで、コンソール エージェントには、ユーザーに代わって Azure でアクションを実行するために必要なアクセス許可が付与されました。これで、<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block>コンソール エージェントの使用を開始します。</block>
   <block id="c04c3f6d982e47513e123d1910d6ae44" category="summary">制限されたアウトバウンド接続でNetApp Consoleを使用できるように、コンソール エージェントを制限モードで展開します。開始するには、コンソール エージェントをインストールし、コンソール エージェントで実行されているユーザー インターフェイスにアクセスしてコンソールをセットアップし、以前に設定したクラウド権限を提供します。</block>
@@ -3983,7 +3863,6 @@
   <block id="3612e0e7a44ec38da1e226c618526f91" category="open-title">Google Cloud サービス アカウント</block>
   <block id="a87080733aad453c529e801cc597efff" category="summary">NetApp Consoleを制限モードで使用する場合は、Web ベースのコンソールへのユーザー アクセス用に CA 署名付き証明書をインストールします。</block>
   <block id="76b215b1722d5e63e6379d518b352edf" category="doc">Webベースのコンソールアクセス用にCA署名証明書をインストールする</block>
-  <block id="4ae83e38ca6797595d821c9263e67cd5" category="paragraph">NetApp Consoleを制限モードで使用する場合、クラウド リージョンまたはオンプレミスに展開されているコンソール エージェント仮想マシンからユーザー インターフェイスにアクセスできます。デフォルトでは、コンソールは自己署名 SSL 証明書を使用して、コンソール エージェント上で実行されている Web ベースのコンソールへの安全な HTTPS アクセスを提供します。</block>
   <block id="556126dcddabe484c3c96e299b816797" category="paragraph">ビジネスで必要な場合は、証明機関 (CA) によって署名された証明書をインストールできます。これにより、自己署名証明書よりも優れたセキュリティ保護が提供されます。証明書をインストールすると、ユーザーが Web ベースのコンソールにアクセスするときに、コンソールは CA 署名付き証明書を使用します。</block>
   <block id="c49ff7d7009f9d4727b2b25afa496418" category="section-title">HTTPS証明書をインストールする</block>
   <block id="9bcd9cfa6027fc6f3b81733b086a6895" category="paragraph">コンソール エージェント上で実行されている Web ベースのコンソールに安全にアクセスするために、CA によって署名された証明書をインストールします。</block>
@@ -4011,31 +3890,10 @@
   <block id="9eb4aa2328626aaf57b918eeb9042186" category="paragraph">安全なアクセスを確保するには、エージェントの HTTPS 証明書が期限切れになる前に更新する必要があります。証明書の有効期限が切れる前に更新しないと、ユーザーが HTTPS を使用して Web コンソールにアクセスしたときに警告が表示されます。</block>
   <block id="a41d7b1dc012bd6875858e000d121870" category="paragraph">有効期限を含む証明書の詳細が表示されます。</block>
   <block id="56c47e4865091b4cf1fdfddb1fa57b51" category="list-text">*証明書の変更*を選択し、手順に従って CSR を生成するか、独自の CA 署名証明書をインストールします。</block>
-  <block id="844e77ced94ead57b6645511abd91a6e" category="summary">NetApp Consoleにログインする方法は、使用している展開モードによって異なります。</block>
-  <block id="0aa8eee6dc5796fb05ecd4c09063d90a" category="doc">NetApp Consoleにログインする</block>
-  <block id="90219278773fc128ada8cf996872a22c" category="paragraph">24 時間経過またはブラウザを閉じると、自動的にログアウトされます。</block>
-  <block id="db4d7e6ddf356afa2fe0d34e9c255e0b" category="paragraph"><block ref="8405362106e8a6cec493f51b335fe282" category="inline-link-macro-rx"></block> 。</block>
   <block id="6414722c7d448b33e2a69f6492ad6aee" category="paragraph">NetApp Consoleにサインアップすると、Web ベースのコンソールからログインして、データとストレージ インフラストラクチャの管理を開始できます。</block>
-  <block id="177ac44e93b512595cfec78be6af82a4" category="paragraph">次のいずれかのオプションを使用してNetApp Consoleにログインできます。</block>
   <block id="19df8bb4b5a805b23aeac731605bdf21" category="list-text">既存のNetAppサポートサイト（NSS）の認証情報</block>
   <block id="912ae110aa8df4a37c4331859a5e502a" category="list-text">メールアドレスとパスワードを使用したNetApp Consoleアカウント</block>
-  <block id="029351726760b5e014b1e49ec512b591" category="list-text">フェデレーション接続</block>
-  <block id="9e92ac9129f85d6c526b60f7f97e0f59" category="inline-link-macro">ID連携の設定方法を学ぶ</block>
-  <block id="db08cbb78e7b0e0b9a35148b636e862a" category="paragraph">シングル サインオンを使用すると、企業ディレクトリ (フェデレーション ID) の資格情報を使用してログインできます。<block ref="70d63f5e971b99bfbf9e1ed8b7bb46b7" category="inline-link-macro-rx"></block> 。</block>
-  <block id="4931d3b847a0aad3ad0dcd7e031c3213" category="list-text">ウェブブラウザを開いて、<block ref="d99e1eaf406503cf18504dce764c5135" category="inline-link-rx"></block></block>
   <block id="03eb7e8aedd1ad900f6996ff1a9cf8dd" category="list-text">*ログイン*ページで、ログインに関連付けられているメールアドレスを入力します。</block>
-  <block id="784d4eeca11deaf4ee3f37735e4d0334" category="list-text">ログインに関連付けられた認証方法に応じて、資格情報を入力するよう求められます。</block>
-  <block id="8a7c8d2028930eaef2c3f44925994051" category="list-text">NetAppクラウド認証情報: パスワードを入力してください</block>
-  <block id="a02705346febd77df5680fe2f12343a9" category="list-text">フェデレーションユーザー: フェデレーションIDの資格情報を入力してください</block>
-  <block id="24bdc2b22d38abff9ff97a9c5b5e7966" category="list-text">NetAppサポートサイトアカウント: NetAppサポートサイトの認証情報を入力します</block>
-  <block id="1708a1de9e761d8ac63dfcb9dc199331" category="paragraph">これでログインが完了し、ハイブリッド マルチクラウド インフラストラクチャの管理を開始できるようになりました。</block>
-  <block id="a6c2d5a0e0b2dee406eeecc1aa0e094d" category="paragraph">コンソールを制限モードで使用する場合は、エージェント上でローカルに実行されるユーザー インターフェイスからコンソールにログインする必要があります。</block>
-  <block id="d0ae1e0c24f09cd8e0fce13c820ec327" category="paragraph">コンソールは、制限モードの場合、次のいずれかのオプションを使用してログインすることをサポートします。</block>
-  <block id="87923991b56fc85bad09da2eff622389" category="list-text">メールアドレスとパスワードを使用したNetApp Consoleログイン</block>
-  <block id="2328b3ec29071f5c5870aa6610155460" category="inline-link-macro">アイデンティティフェデレーションの使い方を学ぶ</block>
-  <block id="22228c7e291e3dc9ca8a3cbb52ac92d2" category="paragraph">シングル サインオンを使用すると、企業ディレクトリ (フェデレーション ID) の資格情報を使用してログインできます。<block ref="10ff459ad3ab35740c58ec701e4bf6e3" category="inline-link-macro-rx"></block> 。</block>
-  <block id="7bceec47cb2761c6c5e3edab7c7877f7" category="list-text">Web ブラウザを開き、エージェントがインストールされている IP アドレスを入力します。</block>
-  <block id="bf16d7909c891a5a760cab0ad77d53bc" category="list-text">ユーザー名とパスワードを入力してログインしてください。</block>
   <block id="b3cb6ababbe01759cd13ec3fb3684c1a" category="summary">エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、会社の標準的なオペレーティング システムの配布手順に従って、コンソール エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。</block>
   <block id="6148da760abfb5167327e2dbd67b1724" category="doc">コンソールエージェントVMとオペレーティングシステムを保守する</block>
   <block id="5279ec16620bed638d689fb55a687bf8" category="paragraph">コンソール エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、お客様は、会社の標準的なオペレーティング システム配布手順に従って、エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。</block>
@@ -4291,7 +4149,6 @@
   <block id="ac92bf4ce3841c2f389d28ad3c07957f" category="summary">NetApp Consoleを制限モードで展開する前に、環境を準備します。ホストの要件を確認し、ネットワークを準備し、権限を設定するなどする必要があります。</block>
   <block id="755bdc98f2ba455bba23e5d86a671294" category="section-title">ステップ1: 制限モードの仕組みを理解する</block>
   <block id="bc3474242fe772e6976f83425651a854" category="paragraph">開始する前に、 NetApp Consoleが制限モードでどのように動作するかを理解してください。</block>
-  <block id="86376c61ae2ab89f055ee0c3f057d3a6" category="paragraph">インストールされたNetApp Consoleエージェントからローカルで利用できるブラウザベースのインターフェイスを使用します。  SaaS レイヤーを通じて提供される Web ベースのコンソールからNetApp Consoleにアクセスすることはできません。</block>
   <block id="b47bafef7d95f8c0631a546427b24bf3" category="paragraph">また、すべてのコンソール機能とNetAppデータ サービスが利用できるわけではありません。</block>
   <block id="969e5e6dbdd922439410c5eb57bc3c2e" category="inline-link-macro">制限モードの仕組みを学ぶ</block>
   <block id="b2036e1cefe79fc164d2eaaa419935c9" category="paragraph"><block ref="f4da007470370a47030c086e797197e9" category="inline-link-macro-rx"></block> 。</block>
@@ -4339,24 +4196,10 @@
   <block id="fd9a417717b20aa8358b766d0504d437" category="paragraph">Google Cloud にCloud Volumes ONTAPをデプロイするには、いくつかの API が必要です。</block>
   <block id="e478bf49f8034f2197e96520fa338da6" category="inline-link">プロジェクトで次の Google Cloud API を有効にします</block>
   <block id="dc5737502524148f78bf03ba18318700" category="list-text"><block ref="dc5737502524148f78bf03ba18318700" category="inline-link-rx"></block></block>
-  <block id="7593d6122eb13308ea80bb55fc41c505" category="summary">プライベート モードは通常、インターネット接続がなく、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 などの安全なクラウド リージョンがあるオンプレミス環境で使用されます。プライベート モードは、 NetApp Consoleではまだ利用できません。  NetApp は、 BlueXPレガシー インターフェースを使用してこれらの環境を引き続きサポートします。リンク:&lt;doc link to PDF&gt;</block>
-  <block id="c267a62001ea1e145c3d8683219f0d2f" category="doc">開始ワークフロー（BlueXPプライベートモード）</block>
-  <block id="400e27d53d740a5d15ff4c72adc4d291" category="paragraph">BlueXPプライベート モード (レガシーBlueXPインターフェイス) は通常、インターネット接続がなく、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 などの安全なクラウド領域があるオンプレミス環境で使用されます。  NetApp は、従来のBlueXPインターフェースを使用してこれらの環境を引き続きサポートします。</block>
-  <block id="f0d6401276844781c459c66448fa7d75" category="paragraph"><block ref="f0d6401276844781c459c66448fa7d75" category="inline-link-macro-rx"></block></block>
-  <block id="6851236e5609144d70ff216d0bf7494f" category="section-title">プライベートモードでサポートされる機能とデータサービス</block>
-  <block id="a716d7434dbf98dd8b0108a3cbe434dc" category="paragraph">次の表は、どのBlueXPサービスと機能がプライベート モードでサポートされているかをすぐに識別するのに役立ちます。</block>
-  <block id="736d00958cf70f5a0bc7588ee2b86592" category="paragraph">一部のサービスは制限付きでサポートされる場合がありますのでご了承ください。</block>
-  <block id="7e4b1c5ec6c6adb1fa50f4ca17076845" category="cell">BlueXPのサービスまたは機能</block>
-  <block id="d0622c7af7b2cc2435986b2d005d8fc3" category="cell">*作業環境* 表のこの部分には、 BlueXPキャンバスからの作業環境管理のサポートがリストされています。  BlueXP backup and recoveryでサポートされているバックアップ先は示されません。</block>
-  <block id="1376d64de9953f470f0708fc6e330334" category="cell">*サービス*</block>
   <block id="99cee3b8f810202d675de978cef4f9da" category="cell">はい<block ref="514d17d2eb0e043089e13542661abd63" category="inline-link-rx"></block></block>
   <block id="e216b7a924341f796bca310d1d812baf" category="cell">コピーと同期</block>
-  <block id="645a84975202e30700b572b49a5ee29d" category="cell">ディザスタ リカバリ</block>
-  <block id="ff45d71e69fb5930de79de7c94326d7b" category="cell">ボリュームキャッシュ</block>
   <block id="35ccbae2ce9b9594b9af9196a3bed361" category="cell">ワークロードファクトリー</block>
-  <block id="3d1f92a565d3b1a61880236e33c49bf3" category="cell">スケジュール</block>
   <block id="920d0c5e78f6b6572b89d526a296d06b" category="summary">環境を準備し、コンソール エージェントを展開して、制限モードでNetApp Consoleの使用を開始します。</block>
-  <block id="af2c4df7e8660cdabd8fc59a2aa0aaf1" category="doc">開始ワークフロー（制限モード）</block>
   <block id="c31816e89acef282910453c5620f26f4" category="inline-link-macro">展開モード</block>
   <block id="73766a81edee1e1df062cc59ac68494e" category="paragraph">制限モードは通常、AWS GovCloud および Azure Government リージョンでの展開を含む、州政府や地方自治体、規制対象企業によって使用されます。始める前に、以下の点を理解しておいてください。<block ref="4beb4752043a55296423922b143dd023" category="inline-link-macro-rx"></block>そして<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block>。</block>
   <block id="27677c533249219197c5933410713055" category="inline-link-macro">展開の準備</block>
@@ -4588,7 +4431,6 @@
   <block id="50442864bbf7126b7b62b75cde676ded" category="paragraph"><block ref="bb2a765d0923866ecd647a5c8b0cc5e9" category="inline-link-rx"></block> 。</block>
   <block id="ed87b6f79acebe813c13145433f4bce1" category="summary">問題をトラブルシューティングしたり、ホストから完全に削除したりするには、コンソール エージェントをアンインストールします。実行する必要がある手順は、使用している展開モードによって異なります。環境からコンソール エージェントを削除したら、コンソールからも削除できます。</block>
   <block id="afb829361695f0d21025a9396659859f" category="doc">コンソールエージェントをアンインストールして削除する</block>
-  <block id="7cbc6d3477f7ec0769c0695bb3001c58" category="section-title">標準モードまたは制限モードを使用している場合はエージェントをアンインストールします</block>
   <block id="bfc66ba3b81dc2d9cc21215e84660492" category="paragraph">標準モードまたは制限モードを使用している場合 (つまり、エージェント ホストに送信接続がある場合)、以下の手順に従ってエージェントをアンインストールする必要があります。</block>
   <block id="0f698c82e2e9c5cd1c4ae5eca5c6d189" category="list-text">エージェントの Linux VM に接続します。</block>
   <block id="6a5be3e06b444aea04beccda3bc9e1d6" category="list-text">Linux ホストから、アンインストール スクリプトを実行します。</block>
@@ -4599,20 +4441,7 @@
   <block id="41b9dde34c587a177c2f3827a8427dfd" category="list-text">このアクションでは仮想マシンは削除されません。</block>
   <block id="4d921e8b119cda6cf295382929919d43" category="list-text">このアクションは元に戻すことはできません。コンソール エージェントを削除すると、再度追加することはできません。</block>
   <block id="592190ac81807f2097b7f4253f7b5646" category="list-text">確認のためにエージェントの名前を入力し、「削除」を選択します。</block>
-  <block id="2c474831a621d6f0b4bdd5da67196b84" category="summary">標準モードまたは制限モードを使用する場合、コンソール エージェントがソフトウェア更新を取得するためのアウトバウンド インターネット アクセスを持っている限り、 NetApp Consoleはコンソール エージェントを最新リリースに自動的にアップグレードします。</block>
   <block id="ca901ca59322c0976d1191fbab40ddfb" category="doc">コンソールエージェントのアップグレードを管理する</block>
-  <block id="15b7b1a5e8e0215cb61de10f2526fce3" category="paragraph">コンソール エージェントのアップグレードを手動で管理する必要がある場合は、標準モードまたは制限モードの自動アップグレードを無効にすることができます。</block>
-  <block id="6c66e308926fc039cc9e20fe56d7abdf" category="section-title">自動アップグレードを無効にする</block>
-  <block id="ff2f1f684147e337fcb37a8c2bb653ec" category="paragraph">コンソール エージェントの自動アップグレードを無効にするには、2 つの手順を実行します。まず、コンソール エージェントが正常で最新の状態であることを確認する必要があります。次に、構成ファイルを編集して自動アップグレードをオフにします。</block>
-  <block id="8e0ce99ee35de975c5f7687d4affed0d" category="admonition">自動アップグレードを無効にできるのは、コンソール エージェント バージョン 3.9.48 以降を使用している場合のみです。</block>
-  <block id="face11afe90ede4a749be5a4157d8f2f" category="section-title">エージェントの健全性を確認する</block>
-  <block id="79cc06675d6785216b696a05c9871dcd" category="paragraph">エージェントが安定しており、エージェント VM 上で実行されているすべてのコンテナが正常に動作していることを確認する必要があります。自動アップグレードを無効にすると、エージェント VM は新しいサービスまたはアップグレード パッケージのチェックを停止します。</block>
-  <block id="8e0cd5e91588c3ce6a1ddbd84471639a" category="paragraph">コンソール エージェントを確認するには、次のいずれかのコマンドを使用します。すべてのサービスのステータスは「実行中」になっている必要があります。そうでない場合は、自動アップグレードを無効にする前にNetAppサポートにお問い合わせください。</block>
-  <block id="0a5bd35f1d7dd7f86f8d992e4307d414" category="section-title">エージェントの自動アップグレードを無効にする</block>
-  <block id="8cf2ff0255c785cd472f51ee0b04cb4f" category="paragraph">自動アップグレードを無効にするには、_com/opt/application/netapp/service-manager-2/config.json_ ファイルで _isUpgradeDisabled_ フラグを設定します。デフォルトでは、このフラグは false に設定されており、エージェントは自動的にアップグレードされます。自動アップグレードを無効にするには、このフラグを true に設定できます。この手順を完了する前に、JSON 構文を理解しておく必要があります。</block>
-  <block id="fda5aa414d851bf8018163c5fe4acb1a" category="paragraph">自動アップグレードを再度有効にするには、次の手順に従い、_isUpgradeDisabled_ フラグを false に設定します。</block>
-  <block id="87406664bbccf1c53e6478eba90e7126" category="list-text">エージェントが最新かつ正常であることを確認してください。</block>
-  <block id="b8000759daeb255b90b1845748aeb18e" category="list-text">_/opt/application/netapp/service-manager-2/config.json_ ファイルを編集し、_isUpgradeDisabled_ フラグの値を true に変更します。</block>
   <block id="21b1315c6a8f0b6a7d49a8cd93ddf218" category="section-title">コンソールエージェントをアップグレードする</block>
   <block id="aecaf1740cb5930ac7d205159eff94bc" category="paragraph">アップグレード プロセス中にコンソール エージェントを再起動する必要があるため、アップグレード中はNetApp Consoleは使用できません。</block>
   <block id="b0f22bfeabc1c7f8e39437a374a3af0b" category="list-text">コンソールエージェントソフトウェアを以下からダウンロードします。<block ref="99637e01fa8caa34a544049093cac68c" category="inline-link-rx"></block> 。</block>
@@ -4837,11 +4666,9 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">コンソールネットワークアクセス（レガシー）</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">ランサムウェア レジリエンス ロールは、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供します。ランサムウェア耐性は次の役割をサポートします。</block>
-  <block id="c36b12344113082dcf8a9786e36a3536" category="cell">ランサムウェア耐性</block>
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">ランサムウェア耐性の役割</block>
   <block id="e40a74210464aa0305c3d66c083f2e23" category="paragraph">| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新したり、 NetApp Consoleに新しいNSS資格情報を追加したりします。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェアアップデートを受信します。</block>
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。</block>
-  <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、 NetApp Backup and Recovery はONTAPボリューム データのみのバックアップと復元をサポートします。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block>アプリケーション データおよび仮想マシン データのバックアップと復元はサポートされていません。</block>
   <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">バックアップとリカバリの役割</block>
   <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">災害復旧の役割</block>
   <block id="fffc92a6b6a3b44b650e6669aa797cac" category="summary">Ransomware Resilience では、設定、アクション、レポートへのアクセスを管理するためのさまざまなユーザー ロールが提供されます。</block>
@@ -4953,10 +4780,7 @@
   <block id="115781a0043a85f8707c5c99fd02dc75" category="list-text">\https://cloudmanager.cloud.netapp.com</block>
   <block id="300f031c227ed1b4448a8bb51abec2bb" category="list-text">\https://netapp-cloud-account.auth0.com</block>
   <block id="14a739c7dd9ae7124076d6fca0a62a7e" category="list-text">\https://netapp-cloud-account.us.auth0.com</block>
-  <block id="03275fa7fd8487800900fe5ed21b50b4" category="list-text">\https://console.bluexp.netapp.com</block>
-  <block id="5802dd4b381723f6988464d2d6587cfa" category="list-text">\https://*.console.bluexp.netapp.com</block>
   <block id="be39dcb2fcc989bf18987169d1f8afc4" category="list-text">\https://console.netapp.com</block>
-  <block id="9ebf544c1d9c2833a9338e1e70ee31de" category="list-text">\https://components.console.bluexp.netapp.com</block>
   <block id="44c8f9fac8ac8a713dca77d34b7e902d" category="list-text">\https://cdn.auth0.com</block>
   <block id="30c4239755a3fa7fe7952fafec8297dd" category="paragraph">日常業務用。</block>
   <block id="533560d1d92ef216fc2f7047b132da5b" category="list-text">CPU と RAM の要件を満たすインスタンス タイプ。  NetAppt3.2xlarge を推奨します。</block>
@@ -5054,7 +4878,6 @@
   <block id="02eee31e5109fac37be42cd2ad631e0f" category="paragraph">コンソール エージェントは、高度なバックアップとリカバリ操作および検索と復元機能に対して次の API 要求を行います。これらのアクセス許可により、ネットワーク、キー コンテナー、マネージド ID の管理が可能になります。</block>
   <block id="73361bbe50a41bd2e76e59f453c19c62" category="paragraph">従来のインデックスを使用していない限り、バックアップとリカバリには次の権限は不要になりました。</block>
   <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">次の権限は、最小限の構成では必要ないため、「追加のバックアップおよび回復権限」セクションに移動されました。</block>
-  <block id="862b252e960e9fce5bfb6811edec4eb5" category="list-text">次のコマンドを実行し、エージェントのステータスが _active(running)_ と表示されていることを確認します。</block>
   <block id="fd45d2e80d190b12659f895ff5aa6e01" category="summary">NetApp Consoleを使用すると、コンソール エージェントの導入時に適切な IAM 認証情報を提供し、それらを AWS Marketplace サブスクリプションに関連付けて単一または複数の AWS アカウントに課金することで、AWS 認証情報とマーケットプレイス サブスクリプションを管理し、 Cloud Volumes ONTAPやその他のデータ サービスを安全かつコスト効率よく導入できます。</block>
   <block id="1efd890aee5019c9dd6a5ca79812af47" category="paragraph">コンソールエージェントの導入時に適切な IAM 認証情報を提供し、課金のためにそれらを AWS Marketplace サブスクリプションに関連付けることで、 NetApp Consoleから AWS 認証情報とマーケットプレイス サブスクリプションを直接管理し、 Cloud Volumes ONTAPやその他のデータ サービスの安全な導入を確保します。</block>
   <block id="e2df328564731e7d9ccff77a0ccc21d0" category="inline-link-macro">AWS のエージェント展開ポリシー</block>
@@ -5458,8 +5281,6 @@
   <block id="4d7b2f840c5d1940c932ef5b68407d63" category="list-text">Cloud Volumes ONTAP のプロビジョニング、ストレージ ボリュームの設定、データ分類の使用など、 NetApp Consoleからストレージ管理タスクを調整します。</block>
   <block id="63e5cc9026d02c060058ae369a9c3c72" category="list-text">サブスクリプション課金統合のためにクラウドプロバイダーのIAMロールを使用して認証する</block>
   <block id="b5442d822ef2fdf45dde0be1d98a8164" category="list-text">高度なデータ サービス (NetApp Backup and Recovery、 NetApp Disaster Recovery、 NetApp Ransomware Resilience、 NetApp Cloud Tiering) を使用する</block>
-  <block id="5588ef10eaf5928d5c2eef029dd121da" category="list-text">コンソールを制限モードで使用します。</block>
-  <block id="308c01eb8a0ce7aa29641087670683cc" category="paragraph">高度なオーケストレーションやデータ保護が必要ない場合は、エージェントを導入せずに、オンプレミスのONTAPクラスターとクラウドネイティブ ストレージ サービスを一元管理できます。監視およびデータ移動ツールも利用できます。</block>
   <block id="89d00b0e4cdc5ca22b542515e11cf7fb" category="paragraph">次の表は、コンソール エージェントの有無にかかわらず使用できる機能とサービスを示しています。</block>
   <block id="3ec96dde9691a6afd519c61179d8bedd" category="cell">エージェントで利用可能</block>
   <block id="1490f23e97090196f0b8e4be2d8742a2" category="cell">エージェントなしで利用可能</block>
@@ -5470,7 +5291,6 @@
   <block id="38b3d6672c5cc9fcae4bb30e89781b0d" category="cell">オンプレミスのONTAPクラスタ（高度な管理と検出）</block>
   <block id="bdec6a7498ca4d25566e3e23d2c62a76" category="paragraph">はい（高度な管理と検出）</block>
   <block id="b60366a003b487aaa0f17f8db3163ecc" category="paragraph">いいえ（基本的な検出のみ）</block>
-  <block id="a9ae3aa6d3b5385e5d21f5f7c9cbe066" category="cell">*利用可能なストレージ管理サービス*:</block>
   <block id="3b00545dfd90abf1453721e441754d3d" category="cell">Digital Advisor（Active IQ）</block>
   <block id="c3705e839d1a8df80ae158824bd08448" category="cell">ホームページダッシュボードのメトリクス</block>
   <block id="d3e800228af9a7ced9cadbe31f21cf71" category="paragraph">はい^2^</block>
@@ -5481,14 +5301,6 @@
   <block id="932e0f0da3df907fbda805c12b12abe5" category="paragraph">コンソール エージェントは、コンソールから直接インストールすることも、クラウド プロバイダーのマーケットプレイスからインストールすることも、独自の Linux ホストまたは VCenter 環境にソフトウェアを手動でインストールすることもできます。</block>
   <block id="0d07862d67097acd517fe27c0de099d7" category="section-title">クラウドプロバイダーの権限</block>
   <block id="3ba516db764b4c90d4973b3960d1d8d9" category="paragraph">エージェントをクラウドにインストールすると、インターネットにアクセスできる場合はコンソール エージェントが自動的に更新されます。</block>
-  <block id="59b11244b7261ce8d669bb84f89d952d" category="summary">NetApp Consoleは、完全な機能アクセスを実現する SaaS エクスペリエンス、または接続制限のある組織向けのセルフホスト オプションを提供します。</block>
-  <block id="7d4e67c65d7806e0a44c126537175622" category="paragraph">NetApp Consoleは、完全に管理された SaaS エクスペリエンスとして使用するか、独自のクラウド環境でセルフホスト型ソリューションとして使用するかの 2 つの方法で使用できます。SaaS オプションでは、console.netapp.com からコンソールにアクセスし、 NetApp がすべてのインフラストラクチャ、認証、および更新を管理します。Web ブラウザから直接、すべての機能にアクセスできます。セルフホスト オプションを選択した場合は、AWS、Azure、または Google Cloud 環境にコンソール エージェントをインストールします。インターフェースはローカルで実行され、エージェントは認証や更新などの重要なタスクのためにNetAppへの限定的な送信接続を維持します。</block>
-  <block id="7639306c3c0ecef2fa65fc37fa553d1e" category="paragraph">組織に標準的なインターネット接続がある場合は、SaaS エクスペリエンスを選択してください。最も簡単なセットアップ、自動更新、すべてのNetAppストレージ システム、データ サービス、高度な機能へのフル アクセスなどのメリットが得られます。コンソールから直接エージェントを追加でき、 NetApp がすべてのメンテナンスを処理します。</block>
-  <block id="693597565a0abb445dd8c1378b547c8a" category="paragraph">政府機関や規制業界など、組織で厳格な接続、セキュリティ、コンプライアンス制御が必要な場合は、セルフホスト オプションを選択します。制御とネットワークの分離が強化されますが、管理できるのは一部のNetAppストレージ システムのみで、使用できるデータ サービスは限られており、一部の機能は利用できなくなります。コンソール エージェントを手動でインストールし、ローカル エージェント インターフェイスからコンソールに直接アクセスします。クラウド マーケットプレイスまたは手動インストールを通じてエージェントをインストールすると、エージェントはNetAppに対して送信のみ通信し、受信インターネット接続がないことが保証されます。</block>
-  <block id="79b1b35ef8f164c3d04934de4b4e0249" category="inline-image-macro">SaaS レイヤーと auth0 認証が利用可能なパブリック インターネットを使用した標準モードのアーキテクチャを示す概念図。</block>
-  <block id="4c448565e3fd072b37daa94fa673661d" category="paragraph"><block ref="4c448565e3fd072b37daa94fa673661d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e875d2f82c83bb0d211e843f8273306f" category="inline-image-macro">制限モードの概念図。</block>
-  <block id="8eee0eea4e2ae93e083fb1f6a03a412e" category="paragraph"><block ref="8eee0eea4e2ae93e083fb1f6a03a412e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9ea7157b38fa199a8532fa65cd92d096" category="summary">ロールベースのアクセス制御 (RBAC) を使用してNetApp Consoleへのユーザー アクセスを管理し、組織、フォルダ、またはプロジェクト レベルで事前定義されたロールを割り当てます。各ロールは、割り当てられたスコープ内でユーザーが実行できるアクションを定義する特定の権限を付与します。</block>
   <block id="6369e7866450cfbd1595f3b5f17a45ce" category="doc">NetApp Consoleのロールベースアクセス制御（RBAC）について学ぶ</block>
   <block id="adb744c66714a9cd79eb46c484743e3a" category="paragraph">NetApp は最小限の権限でコンソール ロールを設計しているため、各ロールにはそのタスクに必要な権限のみが含まれます。このアプローチでは、各メンバーが必要なものへのアクセスを制限することでセキュリティが強化されます。</block>
@@ -5580,12 +5392,8 @@
   <block id="ec09e08f0dad9967f815ea4a6150e06c" category="list-text">**エージェント戦略:** リソースの所有権に基づいて部門プロジェクトにリンクされたエージェント</block>
   <block id="0ef5ca1d3a2b8ef1e24d12a2a867a4f6" category="list-text">**利点:** カスタマイズされたアクセス制御、運用効率の向上、専門的なタスクに対する明確な説明責任</block>
   <block id="12e01bb1a747f9efa932e4290df47651" category="section-title">NetApp ConsoleでのIAMの次のステップ</block>
-  <block id="317861835a558acc5da02a2d53e87e99" category="paragraph">これは、サービス (SaaS) プラットフォームとして、または独自のクラウドにインストールできるセルフホスト オプションとして利用できます。ストレージ管理、データの移動、データ保護、データ分析と制御を提供します。管理機能は、 Webベースのコンソールと API を通じて提供されます。</block>
   <block id="6f9220ecdca642b0359fd1d526b21090" category="inline-image-macro">複数のシステムを表示するコンソールのスクリーンショット。1 つが選択され、 NetAppデータ サービスを有効にするか、*Enter system* を選択してストレージを管理する機能が表示されます。</block>
   <block id="011d3401e6ecd731f72c9e3afe1df058" category="paragraph"><block ref="011d3401e6ecd731f72c9e3afe1df058" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="87d57ea72cafc3aa3be259970e754f81" category="section-title">SaaS とソブリンクラウドの展開</block>
-  <block id="641ac543d6ed23ceda83d07e868515f8" category="paragraph">NetApp Consoleの使用を開始するには、SaaS オファリングにサインアップするか、独自のクラウドに導入します。NetApp Consoleをソブリン クラウドに導入すると、 NetApp は組織のセキュリティとコンプライアンスの要件を満たすためにアウトバウンド接続を制限します。コンソールがソブリン クラウドにデプロイされている場合、すべての機能とサービスが利用できるわけではありません。</block>
-  <block id="2c6c43d54a7dd74a06c155d08d7db4eb" category="paragraph">NetApp は、アウトバウンド接続を望まないサイト向けにBlueXP を引き続き提供します。BlueXP は、アウトバウンド接続なしでネットワークにインストールできます。 <block ref="f1018912945653d0f5d1d6c88d05acfe" category="inline-link-macro-rx"></block></block>
   <block id="950a35d7aced985e8ee1b6240f65a908" category="doc">NetApp Consoleのセキュリティコンプライアンス</block>
   <block id="eedfa09a5feb67c791cc20a479679c67" category="paragraph">NetApp Consoleは SOC 2 Type II に準拠しています。</block>
   <block id="051ae024df3188ffe4e3ac43a493c874" category="inline-link-macro">NetApp の SOC 2 コンプライアンスの詳細をご覧ください。</block>
@@ -5775,7 +5583,6 @@
   <block id="8cec294d7bbf367168b102d1aed4952e" category="paragraph">AWS、Azure、または Google Cloud で実行されている独自の Linux ホストに、コンソール エージェントを手動でインストールできます。</block>
   <block id="f1a5483ce6e0c38d7737152319fdfc85" category="paragraph">組織にメンバーを追加したユーザーや、プロジェクトが正常に削除されたかどうかを確認することもできます。</block>
   <block id="d80a62f674e4a96f69c2ddfcceed1b7a" category="summary">NetApp Console(SaaS) の使用を開始するには、コンソールのネットワークを準備し、サインアップしてアカウントを作成し、 NetAppアシスタントを使用して初期機能を設定します。</block>
-  <block id="3162c8efd4cce0d602638a86276c10b1" category="doc">開始ワークフロー（SaaS）</block>
   <block id="e10c2ca7a3a40579fe4240028852ed47" category="paragraph">NetApp Console(SaaS) の使用を開始するには、コンソールのネットワークを準備し、サインアップしてアカウントを作成し、コンソール アシスタントを使用して初期機能を設定します。</block>
   <block id="f9fd7cc1e76e4519cd46daa993179867" category="paragraph">NetAppの Software-as-a-service (SaaS) 製品としてホストされているWebベースのコンソールにアクセスします。コンソールを使用して、ハイブリッド クラウド ストレージ環境を管理し、 NetAppデータ サービスを使用できます。</block>
   <block id="5a7e12e086f90e07ae42b4c3c6b5121a" category="paragraph">NetAppコンソールにアクセスするコンピューターが必要なエンドポイントにネットワーク アクセスできることを確認します。</block>
@@ -5816,8 +5623,6 @@
   <block id="8c31c8785f7463414c8f14dda741b437" category="paragraph">外部 ID プロバイダーまたはNetApp Support Siteでシングル サインオンを使用するユーザーは、MFA を有効にできません。これらのいずれかに該当する場合、プロフィール設定に MFA を有効にするオプションは表示されません。</block>
   <block id="174ae0d84f7c9dd712d41abcfa50ec20" category="section-title">2026年1月13日</block>
   <block id="7a53865977eaa5b4d126b4bb38ab3d60" category="sidebar">NetApp Console(SaaS) の使用開始</block>
-  <block id="d479c74127647ef19be1288e3c84ad58" category="sidebar">NetApp Consoleアシスタント（SaaS）を使用する</block>
-  <block id="a18e7b20a79ebd88fb9c7f1fc43e7133" category="sidebar">NetApp Consoleを制限モードで導入する (ソブリン クラウド導入)</block>
   <block id="528d4bb0b865d3d1472bb85fda901a37" category="sidebar">アイデンティティとアクセス管理（IAM）を実装する</block>
   <block id="33b619b2a0b648b8042ae175a232cd61" category="sidebar">IAM戦略を計画する</block>
   <block id="6fe6f7f944917c7ec0941e2231b3b4e0" category="sidebar">フォルダとプロジェクトを追加する</block>
@@ -5836,9 +5641,7 @@
   <block id="650a6b9660e523c1a925feddd83c0c4d" category="sidebar">NetApp Consoleを制限モードで導入する (ソブリン クラウド導入)</block>
   <block id="d71a2025aa5d19fc2c3bab8a7d5d1bc1" category="sidebar">SOC-2コンプライアンス</block>
   <block id="aa201c2db7dd29fb5926c96c4006fa2d" category="sidebar">コンソールパートナーシップ</block>
-  <block id="dc6f0f429a5f3d39f01ef6f9ecb8cc24" category="sidebar">SaaS と制限付き展開モード</block>
   <block id="c595922d1b033b7101399b8ddff46d28" category="sidebar">NetAppサポート アカウント</block>
-  <block id="0aa0b8f431cf64b7d8c4369a301c64dd" category="sidebar">NetApp Console（SaaS）を使い始める</block>
   <block id="b295192b816510df999050431291a13e" category="sidebar">NetApp Consoleの使用を開始する (制限モード)</block>
   <block id="0f7804927cf75f0a017463717b53dd88" category="sidebar">制限されたNetApp Consoleの導入の準備</block>
   <block id="e171a54350d0c0c8636e6db01c266344" category="sidebar">NetApp Consoleを制限モードで導入する</block>
@@ -5887,7 +5690,6 @@
   <block id="16e0d5a8229f3c0136c12aa9def60bb1" category="inline-link-macro">NetApp Consoleから構成を実行する方法を学習します。</block>
   <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
   <block id="ee856bddd35f8f0d8d6a5e0b5017b7dd" category="sidebar">コンソールエージェントを理解する</block>
-  <block id="10895cced39195f7b9456b154a2c8530" category="sidebar">プライベートモードを始める</block>
   <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">デフォルトのエージェント構成</block>
   <block id="cf6adff661a596f01b211beffb99d879" category="paragraph">ネットワークでインターネットアクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。インストール中に明示的にプロキシを追加できます。<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block>および<block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix=" " category="inline-code"></block>パラメータはオプションであり、追加を要求されることはありません。明示的なプロキシ サーバがある場合は、示されているようにパラメータを入力する必要があります。</block>
   <block id="55ccbb5c67dea0ea25dc1703475c6f80" category="paragraph">+<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> 次のいずれかの形式を使用して、Console エージェントが HTTP または HTTPS プロキシ サーバを使用するように設定します：</block>
@@ -5951,4 +5753,379 @@
   <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
   <block id="c19e034a7ae60fb90287c5050a076d5a" category="inline-link">Licenses and subscriptionsドキュメント</block>
   <block id="3dc73d95873fb59ed12df54318d70e6a" category="list-text"><block ref="3dc73d95873fb59ed12df54318d70e6a" category="inline-link-rx"></block></block>
+  <block id="a68eedcba6dbed6fbce0d0156a08917b" category="paragraph">| https://api.bluexp.netapp.com https://netapp-cloud-account.auth0.com https://netapp-cloud-account.us.auth0.com https://console.netapp.com https://components.console.netapp.com https://cdn.auth0.com | NetApp Console内で機能とサービスを提供するため。</block>
+  <block id="a143379fbf8aa8c70a83e2cc997686c2" category="list-text">\https://*.console.netapp.com</block>
+  <block id="d27d491b9a6f2946384b1068e83e3176" category="list-text">\https://components.console.netapp.com</block>
+  <block id="d83123cbb0ef00805b8ecdc02f91f2f6" category="list-text">Cloud Build API（Infrastructure Managerを使用したプライベートモードCloud Volumes ONTAPデプロイメントに必要）</block>
+  <block id="b103df8373177b93ba350f7123e02ddb" category="admonition">ネットワークまたはクラウドで使用するための「オンライン」エージェント インストーラーをダウンロードします。NetApp Console エージェントには別の「オフライン」インストーラーが用意されていますが、プライベート モードの展開でのみサポートされます。</block>
+  <block id="617db5c080680430f663377b51530e36" category="list-text">WebベースのNetApp Console SaaSアプリケーションを使用すると、データ管理タスクを完了するために複数のエンドポイントに接続します。これには、ConsoleからConsoleエージェントを導入するために接続されるエンドポイントが含まれます。</block>
+  <block id="e2a0e249f352de2ea956157df300d5c0" category="paragraph">4.4.1 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
+  <block id="b7c3f162d94516a17d91ff328463e7b2" category="doc">プライベートモードリリース（4.4.0）</block>
+  <block id="81ce971f80b475d475c24a4e44ada4e1" category="section-title">BlueXP プライベート モードが NetApp Console プライベート モードになりました</block>
+  <block id="9c787f49c95453f81615500fc040c752" category="paragraph">NetApp Console 4.4.0は、プライベートモードにおけるNetApp Consoleの最初のリリースです。</block>
+  <block id="7aced523efa2e35884ba6dffbc655f83" category="inline-link">NetApp Console ページの新機能</block>
+  <block id="214ce822f9505ec8f305259fe07864a2" category="paragraph">新しいNetApp Consoleの詳細については、<block ref="cad102c2112bf216811c7b6bb8f99baa" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="0dbaa5b0eedf75058865e2b0994d5a8f" category="paragraph">4.4.0リリースには、以下のNetApp Consoleコンポーネントおよびサービスに対するアップデートが含まれています。</block>
+  <block id="9b4bffa460105781f82b1d463bde8200" category="cell">4.4.0</block>
+  <block id="a0f66fdbde042599d314470228f3ca6d" category="inline-link">NetApp Console ページの新機能</block>
+  <block id="d9546787b8341bfee8dbbe4f87c60436" category="cell"><block ref="9edfdcbb835e82f6dae46ac911dcb157" category="inline-link-rx"></block>に移動し、バージョン 4.4.0 に含まれる変更を参照してください。</block>
+  <block id="380c830a3c13f16e4d36530d1de2be47" category="cell">5.0.2（2026年2月9日）</block>
+  <block id="582b607a608891f3c15d7fc69b83ace3" category="inline-link">NetApp Backup and Recoveryの新機能ページ</block>
+  <block id="b14e5d1e5d257d38ef28ffaa5bff5da4" category="cell"><block ref="a02d6bb1505d3b564f4ec7078c34d1ba" category="inline-link-rx"></block>に移動します。</block>
+  <block id="0ab04d2bfcc6d88bde2adee5587eeb44" category="cell">1.5.1（2026年2月9日）</block>
+  <block id="1197f67ce4773f97d566627f2af97b74" category="inline-link">NetApp Classification の新機能ページ</block>
+  <block id="c1c74cf0737facb2879b7e9d70e13707" category="cell"><block ref="f887ca45067fd52c2ee2854f67f70a25" category="inline-link-rx"></block>に移動します。</block>
+  <block id="fad45f664f0478b74c9485a0b1f6d781" category="inline-link-macro">プライベートモードの権限を設定する</block>
+  <block id="6c3a57872e006099844f13049e7b1891" category="list-text"><block ref="6c3a57872e006099844f13049e7b1891" category="inline-link-macro-rx"></block></block>
+  <block id="6ac740475336104c0a338afa7c968b92" category="summary">Consoleエージェントを導入することで、NetApp Consoleの機能を有効化します。Consoleエージェントは軽量なソフトウェアコンポーネントであり、オンプレミスおよびクラウドストレージシステムとNetApp Console間のセキュアな接続を提供し、高度なストレージオーケストレーションやデータサービスを可能にします。</block>
+  <block id="8ac78ab8923692f88d46369bad02e649" category="paragraph">Consoleエージェントを導入することで、NetApp Consoleの機能を有効化します。Consoleエージェントは、オンプレミスおよびクラウドストレージシステムとNetApp Console間の安全な接続を提供する軽量なソフトウェアコンポーネントであり、高度なストレージオーケストレーションやデータサービスを可能にします。</block>
+  <block id="64de839c0c32e1a751d58d0ef8b0fdfb" category="section-title">コンソールエージェントの機能</block>
+  <block id="19e6068a69e57ce5709e253adb1d4062" category="paragraph">コンソールエージェントは、ストレージシステムとNetApp Consoleの間のネットワークギャップを橋渡しします。インフラストラクチャをNetApp APIとConsoleに安全に接続し、次のことが可能になります：</block>
+  <block id="fdcdd0b06c236ebbe76d60efcc4cd7ec" category="list-text">AWS、Azure、Google Cloud、およびオンプレミス環境全体のストレージ システムをNetApp Consoleから検出および監視します。</block>
+  <block id="c46631c16d2e1fcc35bf31842e6161f5" category="list-text">NetApp Console からストレージ システム上のストレージ プロビジョニングと設定タスクをオーケストレーションします。</block>
+  <block id="785bc63c597dfac25b559538c8e96503" category="list-text">高度なデータ保護および最適化サービスを有効にします。</block>
+  <block id="d20c1539205e6fd1b25947b81eddfd64" category="list-text">クラウド プロバイダの認証情報を Console エージェントに関連付けて、クラウド サービスの使用状況を安全に追跡し、デプロイメントを適切なサブスクリプションに接続することで、正確な課金とコスト管理を実現します。</block>
+  <block id="6a02c4b17140e3428ec94946b7d436e4" category="section-title">エージェント アーキテクチャ</block>
+  <block id="a25e3c2f3dac5d7e6482dce310183cd5" category="paragraph">エージェントは次のような軽量プロセスで動作します：</block>
+  <block id="768d6d76975488f4ba88ef017c4edd78" category="list-text">Console SaaS アプリケーションとの間でデータをプルまたはプッシュする（標準モードと制限モード）、または完全にローカルで操作する（プライベート モード）</block>
+  <block id="f70202345a6dfcbfe77d627d2ac58285" category="list-text">すべての通信を開始します。NetApp Consoleはエージェントへの発信通話を開始しません。</block>
+  <block id="93600a46170527ea578d26f1b7fde4e3" category="list-text">標準管理プロトコルを使用してストレージ システムに接続します</block>
+  <block id="972474bcb92581c6b930a7f04f6d8710" category="list-text">クラウド プロバイダおよびNetApp Console APIとの安全な通信にはTLS 1.3を使用してください</block>
+  <block id="e61e46b7de69fefd5d77bc17d028e3b6" category="section-title">エージェントの可用性と運用要件</block>
+  <block id="e6b8da90c6635e88daf47711cf3785d0" category="paragraph">コンソールエージェントは、NetApp Consoleの重要なインフラストラクチャです。NetApp Consoleは短時間の停止に対処できますが、中断のない管理とデータ サービスを実現するために、エージェントは動作を継続し、アクセス可能な状態である必要があります。以下の事項を確実に実施する責任はお客様にあります：</block>
+  <block id="74c2f09d744d651cb5a4a662d2b18d1c" category="list-text">エージェントは稼働し続けます</block>
+  <block id="fd15e45efbec8c5db31829777b77fcb0" category="list-text">エージェントには、必要なエンドポイントへのネットワーク接続があります</block>
+  <block id="1fd9dbae51b571c6b97ab45c3154513f" category="list-text">インフラの障害はすぐに解決される</block>
+  <block id="7b5156100172ee6fa1476bac765fd041" category="list-text">エージェント VM は、NetApp の推奨事項に従って保守およびアップグレードされます</block>
+  <block id="d24ccb00f9e5803fe3257cfa648d21ce" category="section-title">Console エージェントが必要な場合</block>
+  <block id="9325edcf04c322305789f32f84c0cb59" category="paragraph">以下の場合には、少なくとも 1 つの Console エージェントを展開する必要があります：</block>
+  <block id="223a9d9cbfb96107d7bd54234e33162a" category="list-text">制限付きまたはプライベートな展開モードを使用します（Console は独自の環境にインストールされます）。一部のサービスを有効にするには追加のエージェントが必要です。</block>
+  <block id="7f01ef620ffff2abf7f2610491ec035d" category="list-text">高度なデータサービスにアクセス（NetApp Backup and Recovery、NetApp Disaster Recovery、NetApp Ransomware Resilience、NetApp Data Classification など）。</block>
+  <block id="ec9b2bc9b30484bfadf2945f19c86114" category="list-text">Cloud Volumes ONTAPシステムを管理します。</block>
+  <block id="6fe86acb33af67fd58702973ee4ab94a" category="list-text">オンプレミス ONTAP クラスタで高度な管理タスクを実行します。</block>
+  <block id="e6598db96dd238a9c069d901b9e66445" category="list-text">ライセンスを追跡し、ストレージの健全性を監視し、ライフサイクルのアップグレードを計画します。</block>
+  <block id="e63c89066090156259c756df70c96295" category="paragraph">エージェントがなくても、基本的なストレージ検出を実行し、監視機能とストレージ管理機能の限定されたセットにアクセスできます。ただし、ほとんどのエンタープライズ ユース ケースでは、1 つ以上の運用エージェントが必要です。</block>
+  <block id="be1c134e082f5cbc30cc533514d95cf5" category="paragraph"><block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block>エージェントが必要な状況とエージェントによって実現される機能を理解します。</block>
+  <block id="e4a025a18b1f8e62ad15ad270a21573d" category="section-title">Console エージェントの導入オプション</block>
+  <block id="5f4a870ffaecc8c4b3681d6ac88273fc" category="paragraph">Console エージェントは次の場所に導入できます：</block>
+  <block id="899d1bc9e05d1bc1959c42b13c2918a4" category="list-text">Amazon Web Services（標準、制限、またはプライベートモード）</block>
+  <block id="2474cad8d741f2cd4c0890cf082af8db" category="list-text">Microsoft Azure（標準、制限、またはプライベート モード）</block>
+  <block id="1d7cc8d3f6824854c5d2b12952fe2df1" category="list-text">Google Cloud（標準、制限付き、またはプライベートモード）</block>
+  <block id="8a6bb6cb1b0238791d83a19a1046d664" category="list-text">お客様の環境内（標準モードまたはプライベートモード）</block>
+  <block id="0d3e897c4a816e0c092c2daf64921fe7" category="paragraph">NetApp Consoleの導入モード、ストレージ環境、およびデータ主権のニーズによって、エージェントを導入する場所が決まります。組織の分離やビジネスニーズに応じて、環境全体に複数のエージェントを導入します。</block>
+  <block id="fd7b5a05c342e2d52f6a8285038457eb" category="paragraph">エージェントを展開したら、NetApp Console組織に登録して、その組織の機能を有効にします。複数のストレージ システムとデータ サービスを単一のエージェントに関連付けたり、組織の分離やビジネス ニーズに合わせて複数のエージェントを環境全体に展開したりすることができます。</block>
+  <block id="1d21faf6497a388f1c21c3018f517792" category="section-title">NetApp Console SaaS アプリケーション（標準モード）のエージェント</block>
+  <block id="64bd2b23107c1554c9272fddbd63de33" category="paragraph">クラウドまたはオンプレミスにエージェントを導入して、クラウドでホストされる Console SaaS アプリケーションへの接続をブリッジします。エージェントは高度な機能を有効にしますが、Console UI はどこからでもアクセスできます。</block>
+  <block id="2d99f5ff70e4995a63fd979f218ffff6" category="paragraph">SaaS アプリケーション（標準モード）を使用する場合、Console から直接エージェントをインストールできます。AWS、Azure、Google Cloud にインストールすることも、オンプレミスの Linux ホストまたは VCenter 環境に手動でインストールすることもできます。</block>
+  <block id="058e0a063d8fa981adaf3326cf1cb26b" category="paragraph">エージェントをオンプレミスにインストールする場合、それぞれのクラウド プロバイダの資格情報を関連付けて、課金統合とデータ サービスを有効にすることができます。</block>
+  <block id="d352fb6abd2321079aa6ae4cf5ccffd8" category="section-title">制限モードのNetApp ConsoleのエージェントNetApp</block>
+  <block id="bb86181d92786b27c5037b1e2052f318" category="paragraph">ユーザーがNetApp Consoleにアクセスするために、1つのエージェントをインストールする必要があります。データ サービスを有効にし、ストレージ システムを管理するには、追加のエージェントが必要です。</block>
+  <block id="801101aa6060932ba30773f5b51fb2e1" category="paragraph">制限モードでNetApp Consoleを使用している場合は、クラウド プロバイダのマーケットプレイスからエージェントをインストールするか、クラウド内、オンプレミス、またはVCenter環境内の独自のLinuxホストにソフトウェアを手動でインストールします。</block>
+  <block id="cd9eaf17be6a58930ba21c8e25898ae0" category="paragraph">ユーザーがNetApp Consoleにアクセスするために、1つのエージェントをインストールする必要があります。データ サービスを有効にし、ストレージ システムを管理するには、追加のエージェントが必要です。</block>
+  <block id="39f03287943ea9024a48114d1c813c9c" category="section-title">プライベートモードのNetApp Console用エージェント（オンプレミスまたはアウトバウンド接続のないクラウド内）</block>
+  <block id="58b57be8256f389aa03c4bd2a43e14c7" category="paragraph">データ センターまたはエアギャップ環境にエージェントをインストールします。エージェントはNetApp API エンドポイントに接続できません。すべての操作はローカルで実行され、完全なデータ主権と制御が維持されます。</block>
+  <block id="174d20ad6124d3d071e1cf8db158cf81" category="section-title">必要に応じて複数のエージェントを使用する</block>
+  <block id="34844adab5cab548cd83a1bbdf5cf105" category="paragraph">各エージェントは独立して動作し、複数のストレージ システムとデータ サービスを管理できます。次の場合は複数のエージェントを導入します：</block>
+  <block id="da16884e7d880d3d379590aa3547eb5f" category="list-text">ストレージ タイプまたは組織機能による分離</block>
+  <block id="48b5e113a80ee93a31fb523087a1228b" category="list-text">地理的またはネットワークのセグメンテーション要件を満たす</block>
+  <block id="51fdc08238f2b902c4ae72aa6f2170f9" category="paragraph">Console エージェントを導入する方法を学びます：</block>
+  <block id="671c13c6a9ba7605dee99a36bb936c9b" category="inline-link-macro">AWSにエージェントをインストールする</block>
+  <block id="7731b95e61f103f4fcdc8c35c12c6a40" category="list-text"><block ref="e4c8ea5b65b48e6be5e2cc830b3a3126" category="inline-link-macro-rx"></block>。</block>
+  <block id="b3715f8647324203cdc79c6887601ee5" category="inline-link-macro">Azureにエージェントをインストールする</block>
+  <block id="3e45098b0d9c257b4627a17390ae1959" category="list-text"><block ref="a2c5157bc864eede4beff17cfa68d202" category="inline-link-macro-rx"></block>。</block>
+  <block id="c9d415f7120a9d16f9a9ab7755b6e8e4" category="inline-link-macro">Google Cloud にエージェントをインストールする</block>
+  <block id="5cc50e0700be2ae34f2fb511abc44d4f" category="list-text"><block ref="dd0c583ebdf9a13cbc10d1b593b7aad7" category="inline-link-macro-rx"></block>。</block>
+  <block id="3de032c3eca58d2f1334f31cbf9c1f97" category="list-text"><block ref="4d8249618f142f0b8f88894df46c9870" category="inline-link-macro-rx"></block>。</block>
+  <block id="9e2328a47449dbb247a94c88105affd8" category="paragraph">高度なオーケストレーションやデータ保護サービスが必要ない場合は、エージェントを導入せずに、オンプレミス ONTAP クラスタとクラウドネイティブ ストレージ サービスを一元管理できます。一部の監視およびデータ移動ツールは、エージェントなしでも使用できます。</block>
+  <block id="b984ee282b5ae7bd8200b391985e0b7a" category="cell">*ストレージ管理およびヘルスサービス*：</block>
+  <block id="3ff457654de1144b6139c52950ddf987" category="inline-link-macro">NetApp Console モードの詳細</block>
+  <block id="a0e82755b2273e9a4360c92766d25540" category="admonition">フェデレーションは、NetApp Consoleがプライベート モードの場合は使用できません。<block ref="c8f88c82d0a8784db4736bf5632657d2" category="inline-link-macro-rx"></block>。</block>
+  <block id="2d55d6fe297c12639d20a811bbbefc59" category="summary">NetApp Console は、SaaS アプリケーションを介して使用することも、独自の環境（クラウドまたはオンプレミス）にインストールすることもできます。</block>
+  <block id="edeb431e14167b97a6b9bfb897be91b6" category="paragraph">NetApp では、これらのユースケースを_デプロイメント モード_と呼びます。各モードでは、ビジネスとセキュリティのニーズに合わせて、さまざまな接続性、機能、サービスが提供されます。</block>
+  <block id="039fece4b91879f57d8ce3e60cd91b72" category="list-text">標準モード（SaaS）</block>
+  <block id="4404088bcdbc148a12d9d54feaceaaa6" category="list-text">NetApp Console SaaS（ソフトウェア・アズ・ア・サービス）アプリケーションは、すべてのNetAppデータサービスへのアクセス、自動アップデート、アイデンティティフェデレーションやNetApp Support Siteログインなどの柔軟な認証オプションを可能にします。このモードはマーケットプレイスサブスクリプションおよびBYOLライセンスに対応しています。このモードは、特にNetApp Consoleで利用可能な最も多くの機能やサービスを求めるユーザや組織に最適です。</block>
+  <block id="cbe7773bd2fa95a5751a5e831a6e8519" category="list-text">制限モード（独自のパブリック クラウドにインストール）</block>
+  <block id="9b623b58bde4f03efa6364d08c8279df" category="list-text">制限モードは、政府機関や規制対象の企業など、セキュリティの強化と接続の制限を必要とする組織向けです。NetApp Console を独自のパブリック クラウド（政府、主権、または商業地域）にインストールすると、NetApp Console API エンドポイント（SaaS アプリケーションでホスト）への外部接続が制限されます。制限モードでは、Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（政府および商業地域）、データ分類などの主要なデータ サービスと、自動化されたソフトウェア アップグレードおよび ID フェデレーションにアクセスできます。</block>
+  <block id="58c169b907a09c154e92b586b03720ce" category="list-text">プライベートモード（オンプレミスまたはクラウドにインストール）</block>
+  <block id="e728600836da4c211714325b06aff5ce" category="list-text">プライベート モードは、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6、エアギャップ環境などの厳格なセキュリティ ニーズを持つ組織向けです。NetApp Console SaaSアプリケーションやNetAppクラウドベースのAPIには接続せず、完全な制御が可能になり、外部との通信をブロックできます。サポートされているデータ サービスには、NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication、Cloud Volumes ONTAPが含まれます。すべてのストレージと認証はローカルのままであり、データは環境内に保持されます。このモードは、防衛請負業者、厳格なデータ保存規則を持つ金融機関、機密システムを持つ政府機関に使用します。</block>
+  <block id="9c1f6580e4f786a77412f0477deeb241" category="paragraph">お客様の敷地内に設置する場合のみ、ONTAP ストレージ システムがサポートされています。</block>
+  <block id="8f674ddec71fa3256a062bcac7a92856" category="admonition">NetApp Console は制限モードとプライベート モードでデータ フローを制限しますが、環境が規制に準拠していることを確認する必要があります。</block>
+  <block id="98dfed72c4da8ca5a25bdfa5d04c5824" category="paragraph">次の表は、これらのモードを比較したものです。</block>
+  <block id="ba5f081414532f0d5aaec9831e4784be" category="cell">NetApp Console SaaS アプリケーションへの接続が必要ですか？</block>
+  <block id="6f9887086903cbee8430984e88107b05" category="cell">はい、リージョン内（Cloud Volumes ONTAP を使用している場合）</block>
+  <block id="8f40f6b9cda905fc9a83217435e6b940" category="cell">手動インストール</block>
+  <block id="b24f6f4300b08c76317c704bedb082b6" category="cell">Console エージェントソフトウェアの自動アップグレード</block>
+  <block id="e358a634785d3e2fff4c1217d03f407a" category="cell">手動アップグレードが必要です</block>
+  <block id="d69f745fe3dcf3077b8d5e27eafd2709" category="cell">Console SaaS アプリケーションから</block>
+  <block id="ccfac6390a72ecff69edf91b3045c7c0" category="cell">エージェント VM からローカルに</block>
+  <block id="587b25bbebb3a458f858a5d2ed9e104a" category="cell">Console SaaSアプリケーション</block>
+  <block id="f837d6fb5d0f781a54dbb27b30662546" category="cell">エージェント</block>
+  <block id="9ad8f5b23e6ea86ce6f710e0bf3191ae" category="cell">ローカルユーザ認証</block>
+  <block id="8bc8a1f88203ed7f28840bd663e2b355" category="cell">複数がサポートされています</block>
+  <block id="91daea12159afbb582562b3dce17d996" category="cell">BYOL（Bring-your-own-license）</block>
+  <block id="5cf44de13bdfbb37425c02342d1bf02a" category="paragraph">各モードでサポートされる機能とサービスの詳細については、次のセクションを参照してください。</block>
+  <block id="64f32336fdd35ab06025a25efa6f0377" category="section-title">NetApp Console の標準モード（Saas アプリケーション）</block>
+  <block id="61a4390ad7ea17b4a56fcfbf9251b5ca" category="paragraph">次の図は、標準モードの導入を示しています。</block>
+  <block id="0aa5c2bee848099108fdcca010978146" category="inline-image-macro">パブリックインターネット（Webベースのコンソール、SaaSアプリケーション、auth0認証が利用可能）、クラウド内の仮想ネットワーク（エージェントが実行されCloud Volumes ONTAPを管理）、およびオンプレミスデータセンター内のAFFクラスターを示す概念図。</block>
+  <block id="c15b8edfff82a556a96e76c9c2212ca0" category="paragraph"><block ref="c15b8edfff82a556a96e76c9c2212ca0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="65eb718fece70c4932491a8e1ed896ae" category="section-title">標準モードのNetApp Consoleでサポートされている機能とサービス</block>
+  <block id="2a15b748c11b6d0edc4a930d52e95397" category="paragraph">次の表は、NetApp Console SaaS アプリケーション（標準モード）で使用可能なストレージ管理機能、データサービス、および管理機能の一覧です。</block>
+  <block id="227f38fb72944057249b3d35ec2d2ad3" category="cell">NetAppサービスまたは機能</block>
+  <block id="ab73a743c1f5fee13984f7219394896a" category="cell">コンソールエージェントが必要です</block>
+  <block id="825846de36bd0d91117ef9c078e6de4e" category="cell">*ストレージシステムの管理* この表は、NetApp Console から管理できるストレージシステムを示しています。NetApp Backup and Recovery のバックアップ先はリストされません。</block>
+  <block id="c6abc2bc3f6322376797e84420db4fba" category="cell">検出と管理の場合ははい。Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。</block>
+  <block id="d00f4e3686c8067aa63d20326ba56529" category="cell">検出と管理に必要です。Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。</block>
+  <block id="f03c2be9572a6e7bfa92e94fd6438322" category="cell">NetApp 分類</block>
+  <block id="9889bea33cb340a0901dd911b722736f" category="cell">NetApp ランサムウェア対策</block>
+  <block id="c93c9484c37313d13a6650717683186d" category="cell">*NetApp サポート契約の特徴*</block>
+  <block id="fc5ae4b521ff6f2057073b4ce6c1fd65" category="cell">ライフサイクル計画</block>
+  <block id="6909951c7f061d5b54ce985daf4cef84" category="cell">*管理機能*</block>
+  <block id="0d1c3c2e7e01241fb19ceb720549bec8" category="paragraph">Licenses and subscriptionsの管理</block>
+  <block id="53a3be21a870370dce986e82b79657cb" category="cell">多要素認証（ローカルユーザ）</block>
+  <block id="982b656ed07c7605489c1f8e610a6863" category="cell">組織パートナーシップ</block>
+  <block id="933def25802d2df8e8afab6c32f5b9a2" category="section-title">NetApp Console が標準モードでどのように動作するか</block>
+  <block id="bfbc2ae43ec63d9a8c9b0bf28d6e76ac" category="list-text">エージェントから Console SaaS アプリケーション、クラウド プロバイダの公開リソース、および日常業務に不可欠なその他のコンポーネントへの接続が必要です。</block>
+  <block id="874ddb7da15406c9e0c1216ea069d4ad" category="list-text">Console エージェントのサポートされる場所</block>
+  <block id="5635ae08b48ccd09e89de740fc1eda35" category="list-text">標準モードでは、クラウドまたはオンプレミスに Console エージェントをインストールできます。</block>
+  <block id="1c607ead61df7abafd03f74249135fed" category="admonition">クラウドにエージェントをインストールすると、クラウド使用料が発生します。</block>
+  <block id="af6715a71d6494b4d95a731d8f2326c0" category="list-text">NetApp はエージェント ソフトウェアを毎月自動的にアップグレードします。</block>
+  <block id="4d5d1212bd0be52b0f06612ab0868e2b" category="list-text">ユーザインターフェイスには、パブリックインターネット経由で利用できる Console SaaS アプリケーションからアクセスします。</block>
+  <block id="5981099db8f6a5f0ede8f01d1c46b020" category="list-text">NetApp Consoleは、auth0またはNetApp Support Site（NSS）ログインによる認証を提供します。アイデンティティフェデレーションが利用可能です。</block>
+  <block id="f7edecd71600ffc14fed18b4fac58cb4" category="paragraph">+<block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block>。</block>
+  <block id="18ce407df84b9b3b6a37f37949068013" category="section-title">NetApp Console（制限モード）（独自のパブリック クラウドにインストール）</block>
+  <block id="1bab4d9f19f78d9293b2c57776f8b486" category="paragraph">コンソールエージェントをクラウド（政府、主権、または商業地域）にインストールし、NetApp Console API エンドポイント（SaaS アプリケーションでホスト）への限定的なアウトバウンド接続を持ちます。</block>
+  <block id="8aba565c1287faf0e1ca4932525d434a" category="paragraph">ユーザは、SaaS アプリケーションではなく、Console エージェントによって提供されるローカル UI にアクセスします。</block>
+  <block id="6db08dac0b67e028e51d8ac5e5a62432" category="paragraph">使用する予定のデータ サービスと機能に応じて、Console組織管理者は、ハイブリッド クラウド環境内のデータを管理するための追加のConsoleエージェントを作成します。</block>
+  <block id="074dab9c82d3474cf642c9f99e7d5a26" category="inline-xref">NetApp Console APIへのアウトバウンド接続の詳細</block>
+  <block id="014c03d6e48ef20c47b3fd17154a6d54" category="paragraph"><block ref="a77e3fdf9a749a1e7ea79c8e4fb20767" category="inline-xref-macro-rx"></block>。</block>
+  <block id="56899b78a8e10c53c1560d7de57c34e8" category="inline-image-macro">SaaSアプリケーションとauth0認証が利用可能なパブリックインターネット、エージェントが実行されてWebベースのコンソールへのアクセスを提供しているクラウド内の仮想ネットワーク、およびオンプレミスデータセンター内のCloud Volumes ONTAPとAFFクラスタを管理している様子を示す概念図。</block>
+  <block id="785d30430f94fe799a20dd723658310c" category="paragraph"><block ref="785d30430f94fe799a20dd723658310c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d2a6f3b571c873d3d99d18749793c049" category="section-title">制限モードの NetApp Console でサポートされている機能とサービス</block>
+  <block id="2a093d970c05089d032d564085dbc98b" category="paragraph">次の表は、制限モードでインストールした場合にNetApp Consoleで利用可能なストレージ管理機能、データサービス、および管理機能の一覧です。</block>
+  <block id="690d3adde6cb0f9f31856e15ceaf44e9" category="cell">*データ サービス*（制限モードでは、標準モードよりもサポートされるデータ サービスが少なくなります）</block>
+  <block id="f05ea9e0c9ccffc58a546b5b7a0d8608" category="paragraph">バックアップとリカバリ</block>
+  <block id="9fe116ba56bf2ac80436c5a339522871" category="list-text">制限モードの政府地域および商用地域でサポートされます。制限モードのソブリン地域ではサポートされません。</block>
+  <block id="307c8361113294df5dea27399377c5ec" category="list-text">制限モードでは、NetApp Backup and Recoveryは、ONTAPボリュームデータのバックアップとリストアのみをサポートします。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block></block>
+  <block id="d906f88b77c5d5ad1fd6cd31a6080838" category="cell">制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、NetApp Backup and RecoveryはONTAPボリュームデータのバックアップとリストアのみをサポートします。<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block></block>
+  <block id="34191754e8bf4b7f42d07c34ca79f160" category="cell">はい*（ONTAP オンプレミスからONTAP オンプレミスへのレプリケーションの場合は不要）</block>
+  <block id="6adf97f83acf6453d4a6a4b1070f3754" category="cell">なし</block>
+  <block id="6e568e69f510482525f8b306b4f4130b" category="section-title">制限モードでのNetApp Consoleの動作</block>
+  <block id="f0f4f30b009784beed6ad8665e748e23" category="list-text">エージェントは、データ サービス、ソフトウェア アップグレード、ユーザ認証、メタデータの転送をサポートするために、NetApp クラウドベース API へのアウトバウンド接続が必要です。</block>
+  <block id="b137ce70ef22b95981da53e7977843d8" category="paragraph">NetAppはエージェントへの通信を開始しません。エージェントはすべての通信を開始し、必要に応じてNetApp APIとサービスからデータをプルしたり、データをプッシュしたりすることができます。</block>
+  <block id="0f8c1692f179ddb4422735b08bed069d" category="list-text">制限モードでは、エージェントをクラウド（政府リージョン、主権リージョン、または商用リージョン）にインストールします。</block>
+  <block id="37e5310142487064fd2c4313a227660f" category="list-text">NetApp Console はエージェント ソフトウェアを毎月自動的にアップグレードします。</block>
+  <block id="a67dcbc15749d4a4d2b4eb5af47233d5" category="list-text">ユーザーは、クラウド リージョンにデプロイされたエージェント仮想マシンからConsoleにアクセスします。</block>
+  <block id="d81dfde1db67fde267c1825410540e0c" category="list-text">API 呼び出しはエージェント仮想マシンに対して行われます。</block>
+  <block id="0bdbd15cbfe00797d5415f2b43305646" category="list-text">認証は、auth0を使用するNetApp Consoleのクラウドサービスによって提供されます。IDフェデレーションも利用できます。</block>
+  <block id="c9c86222e5ef08d0838568088907a12e" category="paragraph">NetApp Console アカウントを作成するときに、制限モードを有効にする必要があります。組織がない場合は、インストールした Console エージェントに初めてログインするときに、組織を作成して制限モードを有効にするように求められます。</block>
+  <block id="72356754db8d0ac42aba94854456a194" category="paragraph">組織を作成した後は、制限モードの設定が固定されることに注意してください。制限モードを後から有効または無効にすることはできません。<block ref="b25261838e688763c403e651d058df29" category="inline-link-macro-rx"></block>。</block>
+  <block id="1ce3e41dba1334b3ecce14931c6a9016" category="section-title">プライベートモードのNetApp Console</block>
+  <block id="d86b5ae8a602484f78e217845125c295" category="paragraph">プライベートモードでは、オンプレミスまたはクラウドにConsoleエージェントをインストールし、NetApp Consoleを使用してハイブリッド クラウド全体のデータを管理します。NetApp Console APIエンドポイントまたはNetApp Console SaaSアプリケーションへの接続はないため、Consoleエージェントによって提供されるローカルUIからConsoleにアクセスします。</block>
+  <block id="79b5c939a45661e7f11d2bf37f2265fa" category="paragraph">次の図は、Console エージェントがクラウドにインストールされ、Cloud Volumes ONTAP とオンプレミス ONTAP クラスタの両方を管理するプライベートモードの導入例を示しています。</block>
+  <block id="6c8a587ca24e2cebe1124fd36bc32fd3" category="inline-image-macro">クラウド内の仮想ネットワークでエージェントが実行され、Webベースのコンソールへのアクセスを提供し、オンプレミスデータセンター内のCloud Volumes ONTAPとAFFクラスターを管理している様子を示す概念図。</block>
+  <block id="ae459a2fe167d8268a0d33ffbcbf2088" category="paragraph"><block ref="ae459a2fe167d8268a0d33ffbcbf2088" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1b63be9781d870bb5d3e04ff6a903a41" category="paragraph">2番目の画像は、エージェントがオンプレミスにインストールされ、オンプレミスのONTAPクラスタを管理し、サポートされているNetApp Consoleデータサービスへのアクセスを提供するプライベートモード導入の例を示しています。</block>
+  <block id="e60b04a4ff5109442ae8a2152959f6cc" category="inline-image-macro">エージェントが稼働し、Webベースのコンソール、NetApp Console データサービスへのアクセスを提供し、オンプレミスのデータセンター内のAFFクラスタを管理しているオンプレミスのデータセンターを示す概念図。</block>
+  <block id="673835393699b71ee84e6cac05f8c8db" category="paragraph"><block ref="673835393699b71ee84e6cac05f8c8db" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a5247533386982ba03a1571b35c74f65" category="section-title">プライベートモードのNetApp Consoleでサポートされている機能とサービス</block>
+  <block id="71599c8aa6b5affd8cb3869b51a7d795" category="paragraph">次の表は、プライベートモードでインストールした場合にNetApp Consoleで利用可能なストレージ管理機能、データサービス、および管理機能の一覧です。NetApp Consoleをクラウドにインストールする場合とオンプレミスにインストールする場合では、機能が異なります。</block>
+  <block id="28354212b170f036a6bc0a05c7d019af" category="list-text">クラウドにインストールされたプライベートモード</block>
+  <block id="18d2f67eac32ee714afae8e47c7818e7" category="cell">*ストレージシステム管理* この表のこの部分には、NetApp Console からのストレージシステム管理のサポートがリストされています。NetApp Backup and Recovery のサポートされているバックアップ先は示されていません。</block>
+  <block id="31c2a68a3b481659f4273bf96abda078" category="cell">はい、ただしインターネットアクセスがないため、以下の機能はご利用いただけません：自動ソフトウェアアップグレードとAutoSupport。</block>
+  <block id="b4d937a357e75e539e3b6d56c9ffef30" category="list-text">クラウド（Console エージェントがインストールされている場所）からオンプレミス環境への接続が必要です。</block>
+  <block id="1ae292dcccf82ec5392c5e656b16efff" category="paragraph">オンプレミス ONTAP クラスターを検出するには、Console エージェントがインストールされている必要があります。</block>
+  <block id="76c7543861a836c3a38bbec7dd7368d9" category="cell">Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。</block>
+  <block id="db1d2cdbd7a7f0d91181f94b8ab5d39d" category="list-text">プライベートモードでは、NetApp Backup and Recoveryは、ONTAPボリュームデータのバックアップとリストアのみをサポートします。<block ref="764b29f6c7a40f8d3e7ca63270cbd6c5" category="inline-link-rx"></block>アプリケーションデータおよび仮想マシンデータのバックアップとリストアはサポートされていません。</block>
+  <block id="ff2c9914d275ee17c3f22e89e7ca1ef7" category="inline-link">AWS Secret Cloud</block>
+  <block id="a864a931bf30f7ad758b78e4a2cb264c" category="inline-link">AWS Top Secret Cloud</block>
+  <block id="f7a5a85e5651d269f8be77a9a2e84792" category="inline-link">Azure IL6</block>
+  <block id="9bf62435b1c4f8fe29965ed3036a7077" category="list-text">Google Cloudまたは<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>、<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>、または<block ref="360910fe60b5d1cf9b7056b9b6f46685" category="inline-link-rx"></block>ではサポートされていません</block>
+  <block id="ad85db404f0dfc2267b348299aa513b9" category="inline-link">ローカルで検出できるソースを表示する</block>
+  <block id="8b00e7d734d7f196487736a1bc2336ba" category="list-text">サポートされるデータ ソースは、ローカルで検出できるもののみです。<block ref="2cf36bd19ec29519995a77683228df53" category="inline-link-rx"></block></block>
+  <block id="dfe34e1a4e0a8333f70854479803cb1f" category="inline-link">機能の制限事項を表示</block>
+  <block id="f8bd878735831f63dbc71f3562b744ec" category="list-text">アウトバウンドインターネットアクセスを必要とする機能はサポートされていません。<block ref="96ba795820450a3d9e0dd0929eed2eff" category="inline-link-rx"></block></block>
+  <block id="a00e8da6f2ef49b19a8e29dabe72308c" category="cell">はい*（ONTAPオンプレミスからONTAPオンプレミスへのレプリケーションの場合は不要）</block>
+  <block id="cfab1ba8c67c7c838db98d666f02a132" category="cell">--</block>
+  <block id="f4c24ff9a6eed35a6103620418728351" category="list-text">プライベート モードでは BYOL のみがサポートされます。</block>
+  <block id="060238ee46c683d291e5e6499562da94" category="paragraph">Cloud Volumes ONTAP BYOL では、ノードベースのライセンスのみがサポートされます。容量ベースのライセンスはサポートされていません。アウトバウンドインターネット接続が利用できないため、Cloud Volumes ONTAP ライセンスファイルをコンソールに手動でアップロードする必要があります。</block>
+  <block id="5f9f1c95fd759ee94e03d75b38ad2687" category="inline-link">ライセンスを追加する方法を確認する</block>
+  <block id="2930700c460007635353231a13984ee4" category="paragraph"><block ref="2930700c460007635353231a13984ee4" category="inline-link-rx"></block></block>
+  <block id="c5aed2c864c903761bd0e24c92279350" category="list-text">プライベートモードがオンプレミスにインストールされました</block>
+  <block id="1c6c64dc92029867c550924bc606f7a7" category="list-text">プライベートモードでは、NetApp Backup and Recoveryは、ONTAPボリュームデータのバックアップとリストアのみをサポートします。<block ref="764b29f6c7a40f8d3e7ca63270cbd6c5" category="inline-link-rx"></block></block>
+  <block id="1b021f96102834ba370c95f2fe7f48a9" category="list-text">アプリケーション データおよび仮想マシン データのバックアップと復元はサポートされていません。</block>
+  <block id="c2073c89c0bf18095ae7bb2cd6cd1472" category="section-title">NetApp Console がプライベートモードで動作する仕組み</block>
+  <block id="0a394a4770dec98dfd25080803a067db" category="paragraph">NetApp Console はプライベート モードでは次のように動作します：</block>
+  <block id="9c7cfb35faff152bffb99fb0ba8cf74a" category="list-text">Console SaaS アプリケーション（追加の API エンドポイントが存在する場所）への送信接続は必要ありません。すべてのパッケージ、依存関係、および必須コンポーネントは、Console エージェントとともにパッケージ化され、ローカルマシンから提供されます。Cloud Volumes ONTAP を導入する場合にのみ、クラウド プロバイダの公開リソースへの接続が必要です。</block>
+  <block id="9ff1093cd0da67b1395b66fd5242484c" category="list-text">Console エージェントのサポートされる場所</block>
+  <block id="5add885d77ee87f55818dffa3d608c51" category="list-text">プライベートモードでは、Console エージェントはクラウドまたはオンプレミスでサポートされます。</block>
+  <block id="c388bdb2ffaa2293412db42c53d3f2dd" category="list-text">コンソールエージェントソフトウェアは手動でアップグレードする必要があります。NetApp は、コンソールエージェントソフトウェアを不定期で NetApp Support Site に公開しています。</block>
+  <block id="d8196600413ef026673183fc8f1bf030" category="list-text">ユーザは、クラウド リージョンまたはオンプレミスにデプロイされた Console エージェントから Console にアクセスします。</block>
+  <block id="f8e0b9284dfa1be07108b7eb019c54e7" category="list-text">API 呼び出しは、 Console エージェント仮想マシンに対して行われます。</block>
+  <block id="399b8998b64adfece5b5559ed2b7332f" category="list-text">認証は、ローカル ユーザ管理とアクセスを通じて提供されます。認証はNetApp Consoleのクラウド サービスを通じて提供されません。</block>
+  <block id="83e5d949613547f552890cbaf97a52db" category="section-title">プライベートモードの使用を開始する方法</block>
+  <block id="2ec8b0a0f85b8d5eb1e817dd692d490d" category="paragraph">プライベートモードは、NetApp Support Siteから「オフライン」インストーラーをダウンロードすることで利用できます。</block>
+  <block id="fb45c34b4268797014451aa41c2ea38f" category="inline-link-macro">プライベートモードの使用を開始する方法を確認する</block>
+  <block id="90dadad3719a53e4b2bc0f512e763bdb" category="paragraph">+ <block ref="fe22d90ac580c62f8eea5bbabb839850" category="inline-link-macro-rx"></block>.</block>
+  <block id="958949b356b2f90081cbb745321e2bf3" category="inline-link">AWS Secret CloudまたはTop Secret CloudでCloud Volumes ONTAPを使い始める方法を学ぶ</block>
+  <block id="b05f814989364c5de6ec94ebc8e3b44b" category="paragraph">+ 注：<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>または<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>でNetApp Consoleを使用する場合は、それらの環境で開始するための個別の手順に従う必要があります。<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
+  <block id="d1f73e853ae398a7dfb8e9ddb57c9920" category="section-title">NetApp Consoleのサービスと機能の比較</block>
+  <block id="29266a44516a1695ec25e51464e6ce51" category="paragraph">この表は、制限モードとプライベート モードでサポートされているサービスと機能を示しています。</block>
+  <block id="aa0106ba900239b9b240117351fd31a1" category="admonition">標準モード（NetApp Console SaaS アプリケーション）は、すべての機能をサポートします。</block>
+  <block id="b04b058acf83e4616c9312ab2b951050" category="paragraph">一部のサービスは制限付きでサポートされる場合があります。これらのサービスが制限モードとプライベート モードでどのようにサポートされるかの詳細については、上記のセクションを参照してください。</block>
+  <block id="caf4a30b20a11e01cd72ece077ed9e50" category="cell">オンプレミス ONTAP クラスター</block>
+  <block id="68a27766c88e7a46b8cf75f317897c53" category="cell">ストレージおよびデータ サービスのダッシュボード メトリック</block>
+  <block id="caa439279d19ace285e22f87f479e876" category="summary">NetApp Consoleは、すべてのクラウドおよびオンプレミスシステム全体でデータを管理および保護するのに役立ちます。データの安全性を保ち、正常に動作させるためのツールが含まれています。</block>
+  <block id="166d58641d71e8f7701618924f6e0230" category="doc">NetApp Console：統合ストレージ管理</block>
+  <block id="aa14ca2be3c293532f200bf7d16ab2fa" category="paragraph">コンソールをSaaS（Software-as-a-Service）アプリケーションとして使用するか、クラウドまたはオンプレミス環境（制限モードまたはプライベートモード）にインストールします。各モードは、異なる機能セットとセキュリティ要件をサポートします。</block>
+  <block id="45449898e6eb917b44e1e32f0b89ba76" category="paragraph">コンソールは、環境に導入したコンソールエージェントと連携して、リソースを管理し、オンプレミス環境とクラウド環境全体のプロセスをオーケストレーションします。</block>
+  <block id="272b65faa175970c4d03415b57d4f80f" category="section-title">NetApp Console へのアクセス方法を選択</block>
+  <block id="6de063fe6e4e3ea3829e05df83035f0a" category="paragraph">NetApp Console の使用を開始するには、SaaS アプリケーションにサインアップするか（標準モード）、クラウドにインストールするか（制限モード）、オンプレミスにインストールします（プライベート モード）。一部の機能は、制限モードまたはプライベート モードでは使用できません。</block>
+  <block id="a6b0b45cc13fb447320f502320ecb064" category="section-title">Console エージェントで Console 機能を拡張する</block>
+  <block id="f1cc74e66f6f716e17c875f4f3823f41" category="paragraph">コンソールエージェントは、NetApp Console SaaSアプリケーションとクラウドベースのAPIへの接続を提供する軽量なソフトウェアコンポーネントであり、高度な機能とデータサービスを実現します。</block>
+  <block id="0fc8df5108ca276dc8dc2cbd229772b2" category="paragraph">制限モードまたはプライベートモードでは、クラウドまたはオンプレミス環境にコンソール エージェントをインストールして、NetApp コンソール アプリケーションにアクセスします。NetApp コンソールとその API への直接接続を必要とする機能をサポートするには、追加のエージェントを導入する必要があります。</block>
+  <block id="b1f4f28fdcdf699f4e339ffc03c9e3f2" category="section-title">NetApp Console でユーザーのアクセスと権限を管理する</block>
+  <block id="30c6f0b04f939d82aaf90fc17990d7c1" category="paragraph">コンソールは、アイデンティティとアクセス管理（IAM）を提供し、データ インフラストラクチャ全体のセキュリティと制御を向上させます。組織の役割と責任に基づいてストレージとデータ サービスを編成し、運用効率を維持しながら不正アクセスのリスクを軽減します：</block>
+  <block id="ef5b57cb4129d0853f1f04a6bbcec5c6" category="list-text">最上位の_organization_では、インフラストラクチャ全体にわたってストレージ システムとプロジェクトへのアクセスを許可したり取り消したりできます。</block>
+  <block id="3e2ec58bd2060958968548ff997bafcc" category="list-text">_フォルダ_を使用すると、ビジネス機能やコンプライアンス要件に基づいてストレージリソースとプロジェクトをグループ化できます</block>
+  <block id="86769cb48e947ccfaf106e7b621cbf23" category="list-text">_Projects_ を使用すると、特定のストレージ システム、ボリューム、データ サービスにアクセスできるチームを制御できます</block>
+  <block id="42ba6b895ff1e33fc26744169998d7bd" category="list-text">_ロールベースのアクセス制御（RBAC）_を使用すると、さまざまなレベルのチームメンバーにストレージ管理権限を付与できるため、過度のアクセス権を与えることなくタスクを委任できます</block>
+  <block id="81e6a6680fde9b218ec2b30bf48fb10f" category="section-title">NetApp Console のセキュリティとコンプライアンス</block>
+  <block id="d8aa662670c5f88592992cac4e0a7d21" category="paragraph">シングル サインオン（SSO）などのセキュリティとコンプライアンス機能を有効にして、ストレージおよびデータ サービスへのアクセスを制御します。組織管理者ロールを持つユーザーは、デフォルトで読み取り専用モードを設定できます。これにより、ユーザーはストレージ システムに変更を加えたりデータ サービスを使用したりするために、昇格された権限を要求する必要があります。NetApp Consoleを使用して、ストレージ管理とユーザー アクティビティを監視することもできます。NetApp ConsoleはSOC 2 Type 2認証を取得しており、NetAppは顧客にSOC 2レポートを提供します。</block>
+  <block id="a7b92eeb833ba143657bb996d0dd4259" category="section-title">NetApp Consoleの機能とサポートされるストレージ</block>
+  <block id="a968d93cc8f884491263acfdca668b3a" category="paragraph">NetApp Consoleは、オンプレミス環境とクラウド環境全体で、幅広いストレージタイプ、機能、データサービスをサポートします。Consoleを使用して、ストレージシステムを管理し、その健全性とパフォーマンスを監視し、データサービスを有効にしてデータを保護および最適化します。</block>
+  <block id="d3322aab3f0705d14f914efd90a4a2cf" category="section-title">NetApp Console でサポートされているクラウドおよびオンプレミスのストレージ</block>
+  <block id="626d7219d72c12a4afe62185189a2ab4" category="paragraph">コンソールから次のストレージ タイプを管理します：</block>
+  <block id="5d1366e64b723f275762f8e9327e76b0" category="section-title">NetApp Console のストレージ管理とヘルスサービス</block>
+  <block id="550bf389cd0fe031c04d99bc54bb516f" category="paragraph">NetApp Consoleは、単一のインターフェースを介してNetAppストレージ インフラストラクチャの統合管理を提供します。</block>
+  <block id="e9c3019ce4f248695c7e505f41a1a43d" category="paragraph">コンソールでは、_システム_ は検出または展開されたストレージを表します。コンソールで直接ストレージボリュームを管理するか、システムの管理インターフェイスを開いてその他のオプションを確認してください。</block>
+  <block id="d903912fdd9f544f19fa091d7e215516" category="paragraph">ストレージ管理に加えて、インフラストラクチャ サービスを使用して、すべての環境にわたってストレージ インフラストラクチャを監視および管理します。</block>
+  <block id="701b0bd0b0d43e4530884e72d6b3b8fd" category="list-text">ヘルスとパフォーマンスの監視</block>
+  <block id="0d14fbcd49ab2df1b56be33824b147fd" category="list-text">ストレージ システムの健全性とパフォーマンスのダッシュボードを表示し、問題が発生する前に修正するためのアラートを受け取ります。</block>
+  <block id="9c8411e30aa7139b6a46072c395fa3ee" category="list-text">スペースが不足しているクラスタを特定し、必要に応じて容量を追加するかデータを移動します。</block>
+  <block id="7f445e2c0021a5eba0478a1def2b8e1d" category="list-text">ONTAP アップグレードの評価、計画、完了を自動化します。</block>
+  <block id="2d18eec45e3c30f0d0c384cfce4fcec5" category="list-text">システムページ</block>
+  <block id="f476c2914f85801caf7e4b46fffe7a62" category="list-text">すべてのストレージ システムを 1 か所で表示し、管理インターフェイスにすばやくアクセスできます。ドラッグ アンド ドロップで、システム ページから直接データ サービスを有効にします。</block>
+  <block id="0f33e874261b87c7b783ae0bfd6bc5cc" category="section-title">NetApp コンソールのデータセキュリティと保護サービス</block>
+  <block id="34f3a30863c9ef055442797cbd2948f2" category="paragraph">組み込みのデータサービスを使用して、重要なデータを保護し、ストレージ効率を最適化します。</block>
+  <block id="773c2d45d0b7ef2d7a4238c5474cfa86" category="list-text">クラウドおよびオンプレミスのデータをバックアップおよびリストアします。サブスクリプションが必要です。</block>
+  <block id="8491d61bd8fb27de0c2c3775c50e0147" category="list-text">オンプレミスとクラウド データ ストア間でデータを同期します。</block>
+  <block id="49331dc465add41e1ba6e92716614615" category="list-text">VMware Cloud on Amazon FSx for ONTAP を災害復旧サイトとして使用して、オンプレミスの VMware ワークロードを保護します。サブスクリプションが必要です。</block>
+  <block id="0d9b7d7fbaa6ca7e5ac0f03195b425de" category="list-text">ランサムウェア攻撃につながる可能性のある異常を検出します。ワークロードを保護および回復します。サブスクリプションが必要です。</block>
+  <block id="bf2dd05fdc0bdbc8a0f1b7fb8c2afaa1" category="section-title">NetApp Console のコストとコンプライアンス管理サービス</block>
+  <block id="1a9b5932db1134b67b21b3c238ec27e7" category="paragraph">すべてのシステムにわたって契約ステータスを追跡し、コスト管理、コンプライアンス、購入の意思決定を改善します。</block>
+  <block id="58161bba30463b220b84e58cb97f5fd5" category="list-text">スクリプトソリューションを使用して、NetApp製品とサービスのセットアップと接続を自動化し、よりスムーズで一貫性のある運用を実現します。</block>
+  <block id="4832328d355560b55efa26c4c2c2d03c" category="list-text">オンプレミスの ONTAP ストレージをクラウドに拡張して、コスト最適化とデータのライフサイクル管理を実現します。</block>
+  <block id="6db5d32b9455f53fb771511d47bb4646" category="list-text">データ プライバシー規制に準拠するために、アプリケーション データとクラウド環境のプライバシーを準備します。サブスクリプションで無料。</block>
+  <block id="26444e20535c400889cbd46fa71bcc4b" category="list-text">書き込み可能なキャッシュ ボリュームを作成して、データへのアクセスを高速化したり、頻繁にアクセスされるボリュームからトラフィックをオフロードしてパフォーマンスとコスト効率を向上させます。</block>
+  <block id="46152e594769d440fdd2271b8eef67cc" category="list-text">Amazon FSx for NetApp ONTAP を使用して主要なワークロードを設計、セットアップ、運用し、特定のアプリケーションのパフォーマンスとコストを最適化します。</block>
+  <block id="a84b7ef1efa1290691ba2982da6b70e2" category="section-title">NetApp Consoleのコスト</block>
+  <block id="c61697a1a0ac5f10a9f125c5e79f83a1" category="paragraph">NetAppはConsoleに対して料金を請求しません。Consoleエージェントを導入したり、クラウドで制限モードを使用したりすると、コストが発生します。一部のNetAppデータ サービスにも関連コストがあります。<block ref="737ad53c0691d6484be24092d035e183" category="inline-link-rx"></block></block>
+  <block id="2bfcaebb03e23620a28efcaf5c485bb5" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com</block>
+  <block id="b366c1901726ed94faabaca293b342ab" category="cell">cloudbuild.workerpools.get</block>
+  <block id="7b28e5df245493d70a91ad50a3ca876a" category="cell">Infrastructure Manager を使用したプライベートモードの導入時および Cloud Volumes ONTAP システムの変換時にワーカープール情報にアクセスするため。</block>
+  <block id="a5bb5562c6a74b17ab2426705833048f" category="cell">cloudbuild.workerpools.list</block>
+  <block id="8001b115ad750f8f9713c8e64a5fc508" category="cell">Infrastructure Manager を使用した Cloud Volumes ONTAP システムのプライベートモード展開中にワーカープール情報を一覧表示するには。</block>
+  <block id="56a5c925d77740ea69d50272863f3f75" category="section-title">2026年2月26日</block>
+  <block id="ca76fb3a5c3254bbb60d8872e85c0dd2" category="paragraph"><block ref="b366c1901726ed94faabaca293b342ab" prefix=" " category="inline-code"></block>および<block ref="a5bb5562c6a74b17ab2426705833048f" prefix=" " category="inline-code"></block>の権限は、Google CloudでのCloud Volumes ONTAPのプライベートモード導入におけるInfrastructure Managerをサポートするために追加されました。</block>
+  <block id="822fb1292e00acb015eaeae98fa0d707" category="summary">プライベート モードでNetApp Consoleを起動して実行した後、プライベート モードでサポートされているサービスの使用を開始できます。</block>
+  <block id="299e0f249c257857628a7f5786b1b039" category="doc">次にできること（プライベートモード）</block>
+  <block id="fced466a309d5f02b614e19af9c50a3a" category="paragraph">ヘルプについては、次のドキュメントを参照してください：</block>
+  <block id="e2526549eb6efd40df917c2c161ca7e0" category="list-text"><block ref="e2526549eb6efd40df917c2c161ca7e0" category="inline-link-rx"></block></block>
+  <block id="69eb68d33ba0429abb5fa64f4944c13f" category="inline-link">NetApp Classification を使用したオンプレミス ONTAP ボリュームデータのスキャン</block>
+  <block id="b6d14a2d23ba7340a263fba8398f59a3" category="list-text"><block ref="b6d14a2d23ba7340a263fba8398f59a3" category="inline-link-rx"></block></block>
+  <block id="40001b0ba3bc2b3616726d6717821c11" category="inline-link">ライセンスの使用状況を監視する</block>
+  <block id="1fee15ed80afdbf61dee051273ed95fd" category="list-text"><block ref="1fee15ed80afdbf61dee051273ed95fd" category="inline-link-rx"></block></block>
+  <block id="2b4ee5a3ed1d0d51275a5e7bbd3c9ecf" category="paragraph">IAMロールを設定して、NetApp Consoleのサービスとしてのソフトウェア（SaaS）アプリケーションがそのロールを引き受けられるようにします。</block>
+  <block id="3a18e641c4904b34adaf167885cce158" category="admonition">読み取り専用モードは、NetApp Console がプライベート モードの場合は使用できません。<block ref="dfc550bfde7e455e24c09c75b6f9a3cd" category="inline-link-macro-rx"></block>。</block>
+  <block id="dbe35f69a98ad381d73f0e434193aaef" category="paragraph">コンソールにログインし、コンソール エージェントを組織に関連付けます。ログイン方法は、コンソールを使用しているモードによって異なります。コンソールを標準モードで使用している場合は、SaaS Web サイトからログインします。コンソールを制限モードまたはプライベート モードで使用している場合は、コンソール エージェント ホストからローカルにログインします。</block>
+  <block id="e6de9ba283a3b88438bc9364ca14a865" category="summary">NetApp Consoleをプライベート モードで導入すると、アウトバウンド接続なしで使用できます。開始するには、Consoleエージェントをインストールし、Consoleエージェントで実行されているユーザー インターフェイスにアクセスしてNetApp Consoleをセットアップしてから、以前にセットアップしたクラウド権限を指定します。</block>
+  <block id="ed49d41012410c35755a665e704c51a3" category="doc">Consoleエージェントをプライベートモードで導入する</block>
+  <block id="b3d73a3e909120ba0dfb51cbe2327967" category="paragraph">製品のインストーラーをNetApp Support Siteからダウンロードし、自分のLinuxホストにConsoleを手動でインストールします。</block>
+  <block id="c73db6dd4dc3a461773070693cc406c6" category="paragraph">NetApp Console を<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>または<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>で使用する場合は、それらの環境で開始するための個別の手順に従う必要があります。<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
+  <block id="1c88387d9be2a13f9b45fd276e63cf80" category="list-text">Console エージェントをインストールするには、ルート権限が必要です。</block>
+  <block id="afbfe533a489b7d4102d31feb17a881a" category="list-text">Console エージェントソフトウェアを以下からダウンロードします。<block ref="99637e01fa8caa34a544049093cac68c" category="inline-link-rx"></block></block>
+  <block id="a6c2003199e95310a83aa40a67058bd8" category="paragraph">インターネットにアクセスできないプライベート ネットワークの場合は、必ずオフライン インストーラをダウンロードしてください。</block>
+  <block id="70c6033ed76dffb5d74ff7bb0402f4fa" category="paragraph">コンソール エージェントがインストールされています。これで、NetApp Console をセットアップできます。</block>
+  <block id="4d50d200e5ecb85ea8908049caf1caab" category="paragraph">NetApp Consoleに初めてアクセスすると、NetApp Consoleのセットアップを求められます。</block>
+  <block id="d50d972bc008375c76a9eba41b5ce3e3" category="list-text">Web ブラウザを開き、Console エージェントをインストールした Linux ホストの IP アドレスを入力します。</block>
+  <block id="3483774c8e92dafa7899f7358ee7c2bf" category="list-text">*新しい Console エージェントのセットアップ* を選択し、プロンプトに従ってシステムをセットアップします。</block>
+  <block id="45b96df4dab7930952e3c3b410841de7" category="list-text">*システムの詳細*：Console エージェントの名前と会社名を入力します。</block>
+  <block id="1759129089da3c0c000cb4c2196a2fd0" category="list-text">*管理者ユーザーの作成*：システムの管理者ユーザーを作成します。</block>
+  <block id="22cb2add8f3bffef4e749ab0af395ded" category="list-text">*確認*：詳細を確認し、ライセンス契約に同意して、*セットアップ*を選択します。</block>
+  <block id="e5b06544d35df6b0563a6a5991ca745e" category="list-text">先ほど作成した管理者ユーザーを使用してNetApp Consoleにログインします。</block>
+  <block id="3350183130c96d96cdb8d55a92bd2d0f" category="paragraph">Console エージェントがインストールされました。Web ブラウザで IP アドレスにアクセスして、プライベート モードで NetApp Console にアクセスします。</block>
+  <block id="7f62baeae233557038f3ea1c39c1ecc5" category="inline-link-macro">Console エージェントのアップグレード方法を学ぶ</block>
+  <block id="bd4712dc3b2294959d607ff5d73e0d3c" category="paragraph">コンソールソフトウェアの新しいバージョンが利用可能になると、NetApp Support Siteに投稿されます。<block ref="10b8ce94d276ad2c1931363e1a5e745a" category="inline-link-macro-rx"></block>。</block>
+  <block id="a673654ce3fe28d3d7290e4a5c813efb" category="paragraph">以前に設定したクラウド プロバイダの権限をコンソールエージェントに付与します。</block>
+  <block id="76a66cd0418701ca824490a0a7bba6d0" category="section-title">ステップ3：Consoleエージェントに権限を付与する</block>
+  <block id="ea6ff95d70830b920617a227585e1b8b" category="paragraph">Cloud Volumes ONTAP 作業環境を作成する場合は、以前に設定したクラウド プロバイダの権限をコンソールエージェントに付与する必要があります。</block>
+  <block id="bce5cf056b28239df2bdb7b2083217ac" category="paragraph"><block ref="242e7f2f46e42a12308aa354a9159aef" category="inline-link-macro-rx"></block>。</block>
+  <block id="5a52914d8d01c8e84d9a721dbf01a42b" category="paragraph">以前に作成した IAM ロールを Console エージェント EC2 インスタンスにアタッチします。</block>
+  <block id="e5311097ebf5eea728485c7ccebc65fa" category="paragraph">必要な権限を持つ IAM ユーザーの AWS アクセスキーを Console エージェントに提供します。</block>
+  <block id="afb56c9ee95decb83d1800984ece9d5b" category="paragraph">以前に設定した Azure サービス プリンシパルの資格情報を Console エージェントに提供します。</block>
+  <block id="1f179958933c93a4eaefeb75f54dd63e" category="paragraph">NetApp Consoleを制限モードまたはプライベートモードで使用する場合、ユーザーインターフェイスには、クラウドリージョンまたはオンプレミスに導入されているConsoleエージェント仮想マシンからアクセスできます。デフォルトでは、Consoleは自己署名SSL証明書を使用して、Consoleエージェント上で実行されているWebベースのコンソールへの安全なHTTPSアクセスを提供します。</block>
+  <block id="f75f04b8a387edfb2df7d3cd5fa974a8" category="inline-link-macro">組織の管理者に問い合わせてください</block>
+  <block id="fdc0e0fca606cf54a0a897572707c368" category="paragraph">サインアップ後、リソースにアクセスする前に、NetApp Console組織管理者がユーザー アカウントを組織に追加する必要があります。ログインしてもリソースが表示されない場合は、組織の管理者に問い合わせてください。<block ref="11d2ec2c56c0640477c61afee5dc1252" category="inline-link-macro-rx"></block>。</block>
+  <block id="750d8533e3422880e0f3745b61ace637" category="list-text">NetApp Console の URL に移動します。URL は、組織が使用しているコンソールのモードによって異なります：</block>
+  <block id="0ce20a4f9a2eaba138af185f99d4f8db" category="list-text">**標準モード*：Webブラウザを開いて、<block ref="d99e1eaf406503cf18504dce764c5135" category="inline-link-rx"></block></block>
+  <block id="dd8c68c1c1e70bd88296cfa55bc07484" category="list-text">**制限モードまたはプライベート モード**：Web ブラウザーを開き、Console エージェントがインストールされている IP アドレスに移動します。</block>
+  <block id="ab4fc3f68e8f23b6d532eb446e1e0a46" category="list-text">ログインに関連付けられた認証方法に応じて、資格情報を入力するように求められます。</block>
+  <block id="3bcc313e589d80f58afe7da826230bf9" category="list-text">管理者が組織の ID フェデレーションを設定している場合は、フェデレーション接続</block>
+  <block id="b4256d874b9eb9321ae2b4a02d8b30c0" category="summary">プライベートモードでNetApp Consoleを導入する前に、環境を準備します。ホストの要件を確認し、ネットワークを準備し、権限を設定するなどの作業が必要です。</block>
+  <block id="5f1067df496bfafd5eb793369b955e41" category="doc">プライベートモードでの導入の準備</block>
+  <block id="984490bee63453d441c7b37cdc6c3db7" category="admonition">NetApp Consoleを<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>または<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>で使用するには、それぞれの環境に応じた手順に従ってください。<block ref="4d25824b3e9e7473eac5e4c3e5c39cc3" category="inline-link-rx"></block></block>
+  <block id="7670b3e7fd0d9b5404a8ab86daf87444" category="section-title">ステップ1：プライベートモードの仕組みを理解する</block>
+  <block id="0c154543ae4407489c65103d2af0bf29" category="paragraph">プライベートモードでは、オンプレミスまたはクラウドにコンソールエージェントをインストールし、NetApp Console を使用してストレージシステム（ONTAP オンプレミスおよび Cloud Volumes ONTAP）を管理します。NetApp Console API エンドポイントまたは NetApp Console SaaS アプリケーションへの接続はないため、コンソールエージェントによって提供されるローカル UI からコンソールにアクセスします。</block>
+  <block id="b55621a1719dba9e40d841c865c267ac" category="inline-link-macro">プライベートモードの仕組みを学ぶ</block>
+  <block id="e7e043e1590b443c8520402279e7ac44" category="paragraph"><block ref="7d2115a84914cfa6792d7d3921dc8e33" category="inline-link-macro-rx"></block>。</block>
+  <block id="084adfaad6f683ed1019e0f76816032c" category="paragraph">プライベートモードでは、独自の Linux ホストにエージェントを手動でインストールすることで、Console エージェントをオンプレミスまたはクラウドにインストールできます。</block>
+  <block id="31d8a49ecc84b52a4d892c10ddad8ba2" category="paragraph">コンソールエージェントをインストールする場所によって、プライベートモードを使用する際に利用できるNetApp Consoleのサービスと機能が決まります。Cloud Volumes ONTAPを導入および管理する場合は、コンソールエージェントをクラウドにインストールする必要があります。</block>
+  <block id="4d67e2c0dda438048efad6d422b5858d" category="paragraph">NetApp Console エージェントを実行するには、ホストが特定のオペレーティング システム要件、RAM 要件、ポート要件などを満たしている必要があります。</block>
+  <block id="4bdd946e228e94af284882c74da6cffc" category="paragraph">Podman または Docker Engine をインストールして、Console エージェント用のホストを準備する必要があります。</block>
+  <block id="788ad005554c124586a11cee3346ac9b" category="section-title">ステップ5：ネットワークを準備する</block>
+  <block id="c6fb1f3d8fa6104e059d82078e80caf7" category="paragraph">コンソール エージェントがパブリック クラウド内のリソースを管理できるようにネットワークを設定します。コンソール エージェント用の仮想ネットワークとサブネットを用意するほか、次の要件が満たされていることを確認してください。</block>
+  <block id="3ca608f3f4b691bd6f8f0bb656603992" category="list-text">コンソール エージェントは、ストレージを管理する予定の場所へのネットワーク接続を持っている必要があります。たとえば、Cloud Volumes ONTAP をデプロイする予定の VPC または VNet 、またはオンプレミス ONTAP クラスタが存在するデータセンターなどです。</block>
+  <block id="c3d3f783d267d1bd41b2e7f8639a5865" category="list-text">日常業務のエンドポイント</block>
+  <block id="c9a43f7d176509a988903746b2cf38de" category="list-text">Cloud Volumes ONTAP システムの作成を計画している場合、コンソールエージェントは、クラウド プロバイダの公開されているリソース内のエンドポイントへの接続が必要です。</block>
+  <block id="b2723147717f1c60a42e0b1cbdb0ad6c" category="paragraph">\https://management.azure.microsoft.scloud \https://login.microsoftonline.microsoft.scloud \https://blob.core.microsoft.scloud \https://core.microsoft.scloud</block>
+  <block id="8ec83edee8d0c8a3dd001c3d7e558479" category="paragraph">Azure IL6 リージョン内のリソースを管理します。</block>
+  <block id="3f0b08f17c8f7daca589267c384fa32a" category="paragraph">プライベートモードでは、NetApp Consoleがアウトバウンドトラフィックを送信するのは、Cloud Volumes ONTAPシステムを作成するためにクラウド プロバイダに対してのみです。</block>
+  <block id="fd9b6b5e37ac7c196ba7a3e572709fab" category="list-text">ユーザーが開始しない限り、Console エージェントへの着信トラフィックは発生しません。</block>
+  <block id="5cfdbaa159b57f80c3129a66dcd7322d" category="paragraph">HTTP（80）とHTTPS（443）は、NetApp Consoleへのアクセスを提供します。トラブルシューティングのためにホストに接続する必要がある場合は、SSH（22）が必要です。</block>
+  <block id="afdfd56d4f16d6a02abb90ce36a88e3d" category="paragraph">コンソールエージェントがクラウドにインストールされており、Cloud Volumes ONTAPシステムを作成する予定がある場合、NetApp Consoleにはクラウド プロバイダの権限が必要です。クラウド プロバイダで権限を設定してから、インストール後にそれらの権限をコンソール エージェント インスタンスに関連付ける必要があります。</block>
+  <block id="0db5b81cf6db397c0165b2a6678ee87e" category="paragraph">必要な手順を確認するには、クラウド プロバイダに使用する認証オプションを選択してください。</block>
+  <block id="54dd926042936944a27098b552f2b197" category="paragraph">IAM ロールを使用して、Console エージェントに権限を付与します。Console エージェントの EC2 インスタンスにロールを手動でアタッチする必要があります。</block>
+  <block id="106a0de3116ee4c14aed3a5f62ce587c" category="paragraph">IAM ユーザーの権限とアクセスキーを設定します。Console エージェントをインストールして NetApp Console をセットアップしたら、NetApp Console に AWS アクセスキーを指定します。</block>
+  <block id="0c6a29a60cf078dae9359a3568ea55ba" category="paragraph">使用する予定のNetApp Consoleサービスに応じて、2番目のポリシーを作成する必要がある場合があります。</block>
+  <block id="5850d39c612d40f90f438e324ad5d585" category="paragraph">これで、アカウントに必要な権限が付与されました。</block>
+  <block id="5a8046aa3c1f3737b68bcddf970687cf" category="paragraph">必要な権限を持つ Azure カスタム ロールを作成します。このロールを Console エージェント VM に割り当てます。</block>
+  <block id="ee8e1b3e3a475e76f0dc83cafe4e83f0" category="list-text">Console エージェントをインストールする予定の VM でシステム割り当てマネージド ID を有効にして、カスタム ロールを通じて必要な Azure アクセス許可を提供できるようにします。</block>
+  <block id="2b78da0be59ec8063edf260324bcf603" category="paragraph">Microsoft Entra IDでサービスプリンシパルを作成して設定し、NetApp Consoleに必要なAzure資格情報を取得します。ConsoleエージェントをインストールしてNetApp Consoleをセットアップした後、これらの資格情報をNetApp Consoleに提供する必要があります。</block>
+  <block id="743fe0cac503720ec73c3536a16bdbe7" category="paragraph">これでサービス プリンシパルが設定され、アプリケーション（クライアント）ID、ディレクトリ（テナント）ID、およびクライアント シークレットの値がコピーされているはずです。Azure クレデンシャルを追加するときに、この情報を NetApp Console に入力します。</block>
+  <block id="fb743a256e003636e11c6a09e6f9f45c" category="paragraph">Google Cloud に Cloud Volumes ONTAP をデプロイするには、いくつかの API を有効にする必要があります。</block>
+  <block id="c5b5e04334ad1c3a88fc36eb4c450924" category="paragraph">インストールされたNetApp Console エージェントからローカルで利用可能なブラウザベースのインターフェースを使用します。SaaS アプリケーションを通じて提供される Web ベースのコンソールからNetApp Console にアクセスすることはできません。</block>
+  <block id="482b4f20ae8169fa9067887ee7c6f373" category="summary">プライベートモードは通常、インターネット接続がないオンプレミス環境や、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 などのセキュアなクラウドリージョンで使用されます。</block>
+  <block id="97159ba233bb02feaff6b3c2be05c879" category="doc">プライベートモードでの NetApp Console の使用開始ワークフロー</block>
+  <block id="98c53ba126696b94818d318df7c7246e" category="paragraph">NetApp Console は、オンプレミスまたはセキュアなクラウド環境にインストールできます。プライベートモードは通常、インターネット接続のないオンプレミス環境や、<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>、<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>、<block ref="360910fe60b5d1cf9b7056b9b6f46685" category="inline-link-rx"></block>を含むセキュアなクラウドリージョンで使用されます。</block>
+  <block id="86324dc19986cf024d27996fe0699e06" category="list-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="0be36da6d7a1ea4d94468b72475c7e35" category="inline-link-macro-rx"></block></block>
+  <block id="8cb1247d6f1cd796c983b5b1cfbbd285" category="list-text">ターゲット ネットワークへのアクセスを提供するネットワークをセットアップします。</block>
+  <block id="8b08d043834b2ce6cdd1276030f09b82" category="list-text">クラウド展開の場合は、クラウド プロバイダで権限を設定して、ソフトウェアをインストールした後にこれらの権限をコンソール エージェントに関連付けることができるようにします。</block>
+  <block id="0da0ea4ab36b3defa2512b061fcc0b5b" category="list-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="581e7c0a76f2b84cc30c9196df85b9df" category="inline-link-macro-rx"></block></block>
+  <block id="43290dee15998094cd0591ca540849fc" category="list-text">独自の Linux ホストに Console エージェントをインストールします。</block>
+  <block id="a5d18b4d32134c035ee19835845fb372" category="list-text">Webブラウザを開き、LinuxホストのIPアドレスを入力してNetApp Consoleをセットアップします。</block>
+  <block id="f5320dd227fd2915c76475559e91c231" category="list-text">クラウド導入の場合は、以前に設定した権限を NetApp Console に付与します。</block>
+  <block id="48c1fdc6148c4c5d5073b6e7a5d44800" category="doc">制限モードのNetApp Consoleの使用開始ワークフロー</block>
+  <block id="91edb8869565e8b84d0bb89e65038d3a" category="doc">NetApp Console（SaaSアプリケーション）の使用を開始するためのワークフロー</block>
+  <block id="f98e75fe997bc0f9c22b78c53cbde10d" category="section-title">アウトバウンド接続がある場合はエージェントをアンインストールします</block>
+  <block id="8df5c96bcf4a5bf3cdde9f1422196766" category="section-title">アウトバウンド接続がない場合にエージェントをアンインストールする</block>
+  <block id="37ad32ae84be5d4772583f6e7502b281" category="paragraph">エージェントに送信接続がない場合（たとえば、プライベート モードの場合）、ホストからエージェント ソフトウェアを手動で削除する必要があります。</block>
+  <block id="c89064bda3f1ae133a231f5b1f44c3b0" category="list-text">Linux ホストから、次のコマンドを実行します：</block>
+  <block id="1b2b35b59eb889c82041c85d020846da" category="list-text">Linux ホストから、古い未使用のコンテナ イメージ ファイルを削除して、再インストール用に /var ディレクトリの領域を解放します。</block>
+  <block id="c5fd214cdd0d2b3b4272e73b022ba5c2" category="open-title">Docker</block>
+  <block id="485b9a6d9e38df00661f2dd32a3f0746" category="summary">Console エージェントは、送信接続がある場合に自動的にアップグレードされます。Console エージェントに送信接続がない場合は、手動でアップグレードできます（プライベート モードなど）。</block>
+  <block id="3b240599579798c1fd8c4e7b4aa36e0e" category="sidebar">プライベートモードでNetApp Consoleを導入する</block>
+  <block id="754dab26f37da0666d18d084eeb9cac1" category="sidebar">NetApp Console（SaaS）の使用を開始する</block>
+  <block id="fc2bd25c4501ebc9670b599a0996c243" category="sidebar">制限モードの使用開始ワークフロー</block>
+  <block id="d9f6b701b4e6e8fa39df2310070b5bad" category="sidebar">NetApp Console（プライベートモード）の使用を開始する</block>
+  <block id="cc1e97b9fe18a374eacd6937d0fd1f20" category="sidebar">プライベートモードの使用開始ワークフロー</block>
 </blocks>

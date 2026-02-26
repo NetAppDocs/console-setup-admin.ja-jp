@@ -1,0 +1,195 @@
+---
+sidebar: sidebar 
+permalink: task-install-private-mode.html 
+keywords: install dark site, deploy dark site, install private mode, deploy private mode, install agent dark site, agent dark site, dark site, private mode, no internet 
+summary: NetApp Consoleをプライベート モードで導入すると、アウトバウンド接続なしで使用できます。開始するには、Consoleエージェントをインストールし、Consoleエージェントで実行されているユーザー インターフェイスにアクセスしてNetApp Consoleをセットアップしてから、以前にセットアップしたクラウド権限を指定します。 
+---
+= Consoleエージェントをプライベートモードで導入する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Consoleをプライベート モードで導入すると、アウトバウンド接続なしで使用できます。開始するには、Consoleエージェントをインストールし、Consoleエージェントで実行されているユーザー インターフェイスにアクセスしてNetApp Consoleをセットアップしてから、以前にセットアップしたクラウド権限を指定します。
+
+
+
+== ステップ1: コンソールエージェントをインストールする
+
+製品のインストーラーをNetApp Support Siteからダウンロードし、自分のLinuxホストにConsoleを手動でインストールします。
+
+NetApp Console を https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]または https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]で使用する場合は、それらの環境で開始するための個別の手順に従う必要があります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html["AWS Secret CloudまたはTop Secret CloudでCloud Volumes ONTAPを使い始める方法を学ぶ"^]
+
+.開始する前に
+* Console エージェントをインストールするには、ルート権限が必要です。
+* オペレーティング システムに応じて、コンソール エージェントをインストールする前に Podman または Docker Engine のいずれかが必要です。
+
+
+.手順
+. Console エージェントソフトウェアを以下からダウンロードします。 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetAppサポート サイト"^]
++
+インターネットにアクセスできないプライベート ネットワークの場合は、必ずオフライン インストーラをダウンロードしてください。
+
+. インストーラーを Linux ホストにコピーします。
+. スクリプトを実行するための権限を割り当てます。
++
+[source, cli]
+----
+chmod +x /path/NetApp-Console-Private-Mode-<version>
+----
++
+<version> は、ダウンロードしたコンソール エージェントのバージョンです。
+
+. インストール スクリプトを実行します。
++
+[source, cli]
+----
+sudo /path/NetApp-Console-Private-Mode-<version>
+----
++
+<version> は、ダウンロードしたコンソール エージェントのバージョンです。
+
+
+
+.結果
+コンソール エージェントがインストールされています。これで、NetApp Console をセットアップできます。
+
+
+
+== ステップ2: NetApp Consoleをセットアップする
+
+NetApp Consoleに初めてアクセスすると、NetApp Consoleのセットアップを求められます。
+
+.手順
+. Web ブラウザを開き、Console エージェントをインストールした Linux ホストの IP アドレスを入力します。
+. *新しい Console エージェントのセットアップ* を選択し、プロンプトに従ってシステムをセットアップします。
++
+** *システムの詳細*：Console エージェントの名前と会社名を入力します。
+** *管理者ユーザーの作成*：システムの管理者ユーザーを作成します。
+** *確認*：詳細を確認し、ライセンス契約に同意して、*セットアップ*を選択します。
+
+
+. 先ほど作成した管理者ユーザーを使用してNetApp Consoleにログインします。
+
+
+.結果
+Console エージェントがインストールされました。Web ブラウザで IP アドレスにアクセスして、プライベート モードで NetApp Console にアクセスします。
+
+コンソールソフトウェアの新しいバージョンが利用可能になると、NetApp Support Siteに投稿されます。link:task-upgrade-agent.html["Console エージェントのアップグレード方法を学ぶ"]。
+
+.次の手順
+以前に設定したクラウド プロバイダの権限をコンソールエージェントに付与します。
+
+
+
+== ステップ3：Consoleエージェントに権限を付与する
+
+Cloud Volumes ONTAP 作業環境を作成する場合は、以前に設定したクラウド プロバイダの権限をコンソールエージェントに付与する必要があります。
+
+link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["クラウド権限の準備方法を学ぶ"]。
+
+[role="tabbed-block"]
+====
+.AWS IAM ロール
+--
+以前に作成した IAM ロールを Console エージェント EC2 インスタンスにアタッチします。
+
+.手順
+. Amazon EC2 コンソールに移動します。
+. *インスタンス*を選択します。
+. コンソール エージェント インスタンスを選択します。
+. *アクション > セキュリティ > IAM ロールの変更*を選択します。
+. IAM ロールを選択し、*IAM ロールの更新*を選択します。
+
+
+--
+.AWS アクセスキー
+--
+必要な権限を持つ IAM ユーザーの AWS アクセスキーを Console エージェントに提供します。
+
+.手順
+. *管理 > 資格情報*を選択します。
+. *組織の資格情報*を選択します。
+. *資格情報の追加*を選択し、ウィザードの手順に従います。
++
+.. *資格情報の場所*: *Amazon Web Services > エージェントを選択します。
+.. *資格情報の定義*: AWS アクセスキーとシークレットキーを入力します。
+.. *マーケットプレイス サブスクリプション*: 今すぐサブスクライブするか、既存のサブスクリプションを選択して、マーケットプレイス サブスクリプションをこれらの資格情報に関連付けます。
+.. *確認*: 新しい資格情報の詳細を確認し、[*追加*] を選択します。
+
+
+
+
+--
+.Azure ロール
+--
+Azure ポータルに移動し、1 つ以上のサブスクリプションのコンソール エージェント仮想マシンに Azure カスタム ロールを割り当てます。
+
+.手順
+. Azure ポータルから *サブスクリプション* サービスを開き、サブスクリプションを選択します。
++
+*サブスクリプション* サービスからロールを割り当てることが重要です。これは、サブスクリプション レベルでのロール割り当ての範囲を指定するためです。 _scope_ は、アクセスが適用されるリソースのセットを定義します。別のレベル (たとえば、仮想マシン レベル) でスコープを指定すると、 NetApp Console内からアクションを完了する機能に影響します。
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure ドキュメント: Azure RBAC のスコープを理解する"^]
+
+. *アクセス制御 (IAM)* > *追加* > *ロール割り当ての追加* を選択します。
+. *役割*タブで、*コンソールオペレーター*役割を選択し、*次へ*を選択します。
++
+
+NOTE: コンソール オペレーターは、ポリシーで提供されるデフォルト名です。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
+
+. *メンバー*タブで、次の手順を実行します。
++
+.. *マネージド ID* へのアクセスを割り当てます。
+.. *メンバーの選択*を選択し、コンソール エージェント仮想マシンが作成されたサブスクリプションを選択し、*マネージド ID*の下で*仮想マシン*を選択して、コンソール エージェント仮想マシンを選択します。
+.. *選択*を選択します。
+.. *次へ*を選択します。
+.. *レビュー + 割り当て*を選択します。
+.. 追加の Azure サブスクリプションのリソースを管理する場合は、そのサブスクリプションに切り替えて、これらの手順を繰り返します。
+
+
+
+
+--
+.Azure サービスプリンシパル
+--
+以前に設定した Azure サービス プリンシパルの資格情報を Console エージェントに提供します。
+
+.手順
+. *管理 > 資格情報*を選択します。
+. *資格情報の追加*を選択し、ウィザードの手順に従います。
++
+.. *資格情報の場所*: *Microsoft Azure > エージェント* を選択します。
+.. *資格情報の定義*: 必要な権限を付与する Microsoft Entra サービス プリンシパルに関する情報を入力します。
++
+*** アプリケーション（クライアント）ID
+*** ディレクトリ（テナント）ID
+*** クライアントシークレット
+
+
+.. *マーケットプレイス サブスクリプション*: 今すぐサブスクライブするか、既存のサブスクリプションを選択して、マーケットプレイス サブスクリプションをこれらの資格情報に関連付けます。
+.. *確認*: 新しい資格情報の詳細を確認し、[*追加*] を選択します。
+
+
+
+
+--
+.Google Cloud サービス アカウント
+--
+サービス アカウントをコンソール エージェント VM に関連付けます。
+
+.手順
+. Google Cloud ポータルに移動し、サービス アカウントをコンソール エージェント VM インスタンスに割り当てます。
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud ドキュメント: インスタンスのサービス アカウントとアクセス スコープの変更"^]
+
+. 他のプロジェクトのリソースを管理する場合は、コンソール エージェント ロールを持つサービス アカウントをそのプロジェクトに追加してアクセスを許可します。プロジェクトごとにこの手順を繰り返す必要があります。
+
+
+--
+====

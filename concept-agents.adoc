@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-agents.html 
-keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
+keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is an agent required, agent supported locations, restricted mode, private mode, dark site, permissions, multiple agents, disaster recovery, agents, multiple agents, what is a Console agent' 
 summary: コンソール エージェントを使用してNetApp Consoleをインフラストラクチャに接続し、AWS、Azure、Google Cloud、オンプレミス環境全体でストレージ ソリューションを安全にオーケストレーションし、データ保護サービスも利用できます。 
 ---
 = NetApp Consoleエージェントについて学ぶ
@@ -21,10 +21,9 @@ summary: コンソール エージェントを使用してNetApp Consoleをイ�
 * Cloud Volumes ONTAP のプロビジョニング、ストレージ ボリュームの設定、データ分類の使用など、 NetApp Consoleからストレージ管理タスクを調整します。
 * サブスクリプション課金統合のためにクラウドプロバイダーのIAMロールを使用して認証する
 * 高度なデータ サービス (NetApp Backup and Recovery、 NetApp Disaster Recovery、 NetApp Ransomware Resilience、 NetApp Cloud Tiering) を使用する
-* コンソールを制限モードで使用します。
 
 
-高度なオーケストレーションやデータ保護が必要ない場合は、エージェントを導入せずに、オンプレミスのONTAPクラスターとクラウドネイティブ ストレージ サービスを一元管理できます。監視およびデータ移動ツールも利用できます。
+高度なオーケストレーションやデータ保護サービスが必要ない場合は、エージェントを導入せずに、オンプレミス ONTAP クラスタとクラウドネイティブ ストレージ サービスを一元管理できます。一部の監視およびデータ移動ツールは、エージェントなしでも使用できます。
 
 次の表は、コンソール エージェントの有無にかかわらず使用できる機能とサービスを示しています。
 
@@ -106,7 +105,7 @@ summary: コンソール エージェントを使用してNetApp Consoleをイ�
 
 
 
-3+| *利用可能なストレージ管理サービス*: 
+3+| *ストレージ管理およびヘルスサービス*： 
 
 
 | アラート  a| 
@@ -189,7 +188,7 @@ summary: コンソール エージェントを使用してNetApp Consoleをイ�
 
 
 
-| データ分類  a| 
+| NetApp Data Classification  a| 
 はい
  a| 
 いいえ
@@ -265,14 +264,6 @@ Google Cloud でコンソールとデータサービスを使用するには、G
 == クラウドプロバイダーとのコミュニケーション
 
 エージェントは、AWS、Azure、Google Cloud へのすべての通信に TLS 1.3 を使用します。
-
-
-
-== 制限モード
-
-コンソールを制限モードで使用するには、コンソール エージェントをインストールし、コンソール エージェント上でローカルに実行されているコンソール インターフェイスにアクセスします。
-
-link:concept-modes.html["NetApp Consoleの導入モードについて学ぶ"] 。
 
 
 

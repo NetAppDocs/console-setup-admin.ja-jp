@@ -93,7 +93,7 @@ NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp C
 
 
  a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 NetApp Console内で機能とサービスを提供します。
 
@@ -115,7 +115,7 @@ NetApp Console内で機能とサービスを提供します。
 --
 
 
-NetAppコンソールから接続されたエンドポイント:: SaaS レイヤーを通じて提供される Web ベースのNetApp Consoleを使用すると、複数のエンドポイントに接続してデータ管理タスクが完了します。これには、コンソールからコンソール エージェントを展開するために接続されるエンドポイントが含まれます。
+NetAppコンソールから接続されたエンドポイント:: WebベースのNetApp Console SaaSアプリケーションを使用すると、データ管理タスクを完了するために複数のエンドポイントに接続します。これには、ConsoleからConsoleエージェントを導入するために接続されるエンドポイントが含まれます。
 +
 --
 link:reference-networking-saas-console.html["NetAppコンソールから接続されたエンドポイントのリストを表示します"] 。

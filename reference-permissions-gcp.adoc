@@ -140,6 +140,8 @@ includedPermissions:
 - cloudbuild.connections.list
 - cloudbuild.repositories.accessReadToken
 - cloudbuild.repositories.list
+- cloudbuild.workerpools.list
+- cloudbuild.workerpools.get
 - cloudquotas.quotas.get
 - cloudkms.cryptoKeys.getIamPolicy
 - cloudkms.cryptoKeys.setIamPolicy
@@ -640,6 +642,12 @@ includedPermissions:
 | cloudbuild.builds.get | はい | いいえ | いいえ 
 
 
+| cloudbuild.workerpools.get | Infrastructure Manager を使用したプライベートモードの導入時および Cloud Volumes ONTAP システムの変換時にワーカープール情報にアクセスするため。 | はい | はい | はい 
+
+
+| cloudbuild.workerpools.list | Infrastructure Manager を使用した Cloud Volumes ONTAP システムのプライベートモード展開中にワーカープール情報を一覧表示するには。 | はい | いいえ | いいえ 
+
+
 | compute.instances.setServiceAccount .6+| Cloud Volumes ONTAPインスタンスにサービス アカウントを設定します。このサービス アカウントは、Google Cloud Storage バケットへのデータ階層化の権限を付与します。 | はい | はい | いいえ 
 
 
@@ -794,6 +802,12 @@ includedPermissions:
 == 変更ログ
 
 追加された権限と削除された権限は以下に記載されています。
+
+
+
+=== 2026年2月26日
+
+ `cloudbuild.workerpools.get`および `cloudbuild.workerpools.list`の権限は、Google CloudでのCloud Volumes ONTAPのプライベートモード導入におけるInfrastructure Managerをサポートするために追加されました。
 
 
 

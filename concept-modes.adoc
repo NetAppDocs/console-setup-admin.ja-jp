@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-modes.html 
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
-summary: 'NetApp Consoleは、ビジネス要件とセキュリティ要件を満たす複数の _導入モード_ を提供します。_標準モード_ では、サービスとしてのソフトウェア (SaaS) レイヤーを活用して完全な機能を提供しますが、接続制限がある組織では _制限モード_ と _プライベート モード_ が利用できます。' 
+summary: NetApp Console は、SaaS アプリケーションを介して使用することも、独自の環境（クラウドまたはオンプレミス）にインストールすることもできます。 
 ---
 = NetApp Consoleの導入モードについて学ぶ
 :hardbreaks:
@@ -14,87 +14,201 @@ summary: 'NetApp Consoleは、ビジネス要件とセキュリティ要件を�
 
 
 [role="lead"]
-NetApp Consoleは、ビジネス要件とセキュリティ要件を満たす複数の _導入モード_ を提供します。
+NetApp Console は、SaaS アプリケーションを介して使用することも、独自の環境（クラウドまたはオンプレミス）にインストールすることもできます。
 
-* _標準モード_ では、サービスとしてのソフトウェア (SaaS) レイヤーを活用して完全な機能を提供します。ユーザーはWebベースのホストインターフェースを通じてコンソールにアクセスします。
-* _制限モード_ は、接続制限があり、 NetApp Consoleを独自のパブリック クラウドにインストールしたい組織で利用できます。ユーザーは、クラウド環境内のコンソール エージェントでホストされている Web ベースのインターフェースを通じてコン​​ソールにアクセスします。
-+
-NetApp Consoleは制限モードでトラフィック、通信、データを制限するため、環境 (オンプレミスおよびクラウド) が必要な規制に準拠していることを確認する必要があります。
+NetApp では、これらのユースケースを_デプロイメント モード_と呼びます。各モードでは、ビジネスとセキュリティのニーズに合わせて、さまざまな接続性、機能、サービスが提供されます。
 
-
-
+標準モード（SaaS）:: NetApp Console SaaS（ソフトウェア・アズ・ア・サービス）アプリケーションは、すべてのNetAppデータサービスへのアクセス、自動アップデート、アイデンティティフェデレーションやNetApp Support Siteログインなどの柔軟な認証オプションを可能にします。このモードはマーケットプレイスサブスクリプションおよびBYOLライセンスに対応しています。このモードは、特にNetApp Consoleで利用可能な最も多くの機能やサービスを求めるユーザや組織に最適です。
+制限モード（独自のパブリック クラウドにインストール）:: 制限モードは、政府機関や規制対象の企業など、セキュリティの強化と接続の制限を必要とする組織向けです。NetApp Console を独自のパブリック クラウド（政府、主権、または商業地域）にインストールすると、NetApp Console API エンドポイント（SaaS アプリケーションでホスト）への外部接続が制限されます。制限モードでは、Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（政府および商業地域）、データ分類などの主要なデータ サービスと、自動化されたソフトウェア アップグレードおよび ID フェデレーションにアクセスできます。
+プライベートモード（オンプレミスまたはクラウドにインストール）:: プライベート モードは、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6、エアギャップ環境などの厳格なセキュリティ ニーズを持つ組織向けです。NetApp Console SaaSアプリケーションやNetAppクラウドベースのAPIには接続せず、完全な制御が可能になり、外部との通信をブロックできます。サポートされているデータ サービスには、NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication、Cloud Volumes ONTAPが含まれます。すべてのストレージと認証はローカルのままであり、データは環境内に保持されます。このモードは、防衛請負業者、厳格なデータ保存規則を持つ金融機関、機密システムを持つ政府機関に使用します。
 
 
-== 概要
+お客様の敷地内に設置する場合のみ、ONTAP ストレージ システムがサポートされています。
+
+
+NOTE: NetApp Console は制限モードとプライベート モードでデータ フローを制限しますが、環境が規制に準拠していることを確認する必要があります。
 
 各展開モードでは、アウトバウンド接続、場所、インストール、認証、データ サービス、課金方法が異なります。
 
-標準モード:: Web ベースのコンソールから SaaS サービスを使用します。使用する予定のデータ サービスと機能に応じて、コンソール組織管理者は、ハイブリッド クラウド環境内のデータを管理するための 1 つ以上のコンソール エージェントを作成します。
-+
---
-このモードでは、パブリックインターネット経由で暗号化されたデータ転送が使用されます。
+次の表は、これらのモードを比較したものです。
 
---
-制限モード:: コンソール エージェントをクラウド（政府、主権、または商業地域）にインストールし、 NetApp ConsoleSaaS レイヤーへの送信接続が制限されます。
-+
---
-このモードは通常、州政府や地方自治体、規制対象企業によって使用されます。
-
-<<制限モード,SaaS レイヤーへのアウトバウンド接続の詳細>> 。
-
---
-BlueXPプライベート モード (従来のBlueXPインターフェイスのみ):: BlueXPプライベート モード (レガシーBlueXPインターフェイス) は通常、インターネット接続がなく、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6 などの安全なクラウド領域があるオンプレミス環境で使用されます。  NetApp は、従来のBlueXPインターフェースを使用してこれらの環境を引き続きサポートします。link:media/BlueXP-Private-Mode-legacy-interface.pdf["BlueXPプライベートモードの PDF ドキュメント"^]
-
-
-次の表は、 NetAppコンソールの比較を示しています。
-
-[cols="16h,28,28"]
+[cols="16h,28,28,28"]
 |===
-|  | 標準モード | 制限モード 
+|  | 標準モード | 制限モード | プライベートモード 
 
 
-| NetApp ConsoleSaaS レイヤーへの接続が必要ですか? | はい | 発信のみ 
+| NetApp Console SaaS アプリケーションへの接続が必要ですか？ | はい | 発信のみ | いいえ 
 
 
-| クラウド プロバイダーへの接続が必要ですか? | はい | はい、地域内です 
+| クラウド プロバイダーへの接続が必要ですか? | はい | はい、地域内です | はい、リージョン内（Cloud Volumes ONTAP を使用している場合） 
 
 
-| コンソールエージェントのインストール | コンソール、クラウドマーケットプレイス、または手動インストールから | クラウドマーケットプレイスまたは手動インストール 
+| コンソールエージェントのインストール | コンソール、クラウドマーケットプレイス、または手動インストールから | クラウドマーケットプレイスまたは手動インストール | 手動インストール 
 
 
-| コンソールエージェントのアップグレード | 自動アップグレード | 自動アップグレード 
+| コンソールエージェントのアップグレード | Console エージェントソフトウェアの自動アップグレード | Console エージェントソフトウェアの自動アップグレード | 手動アップグレードが必要です 
 
 
-| UIアクセス | コンソールSaaSレイヤーから | エージェントVMからローカルに 
+| UIアクセス | Console SaaS アプリケーションから | エージェントVMからローカルに | エージェント VM からローカルに 
 
 
-| APIエンドポイント | コンソールSaaSレイヤー | コンソールエージェント 
+| APIエンドポイント | Console SaaSアプリケーション | エージェント | エージェント 
 
 
-| 認証 | auth0、NSSログイン、またはIDフェデレーションを使用したSaaS経由 | auth0またはIDフェデレーションを使用したSaaSを通じて 
+| 認証 | auth0、NSSログイン、またはIDフェデレーションを使用したSaaS経由 | auth0またはIDフェデレーションを使用したSaaSを通じて | ローカルユーザ認証 
 
 
-| 多要素認証 | ローカルユーザーが利用可能 | 使用不可 
+| 多要素認証 | ローカルユーザーが利用可能 | 使用不可 | 使用不可 
 
 
-| ストレージおよびデータサービス | すべてサポートされています | 多くが支持されている 
+| ストレージおよびデータサービス | すべてサポートされています | 多くが支持されている | 複数がサポートされています 
 
 
-| データサービスライセンスオプション | マーケットプレイスのサブスクリプションとBYOL | マーケットプレイスのサブスクリプションとBYOL 
+| データサービスライセンスオプション | マーケットプレイスのサブスクリプションとBYOL | マーケットプレイスのサブスクリプションとBYOL | BYOL（Bring-your-own-license） 
 |===
-サポートされているNetApp Consoleの機能とサービスなど、これらのモードの詳細については、次のセクションをお読みください。
+各モードでサポートされる機能とサービスの詳細については、次のセクションを参照してください。
 
 
 
-== 標準モード
+== NetApp Console の標準モード（Saas アプリケーション）
 
-次の画像は標準モードの展開の例です。
+次の図は、標準モードの導入を示しています。
 
-image:diagram-standard-mode.png["SaaS レイヤーと auth0 認証が利用可能なパブリック インターネットを使用した標準モードのアーキテクチャを示す概念図。"]
+image:diagram-standard-mode.png["パブリックインターネット（Webベースのコンソール、SaaSアプリケーション、auth0認証が利用可能）、クラウド内の仮想ネットワーク（エージェントが実行されCloud Volumes ONTAPを管理）、およびオンプレミスデータセンター内のAFFクラスターを示す概念図。"]
+
+
+
+=== 標準モードのNetApp Consoleでサポートされている機能とサービス
+
+次の表は、NetApp Console SaaS アプリケーション（標準モード）で使用可能なストレージ管理機能、データサービス、および管理機能の一覧です。
+
+[cols="3*"]
+|===
+| 製品分野 | NetAppサービスまたは機能 | コンソールエージェントが必要です 
+
+
+.12+| *ストレージシステムの管理* この表は、NetApp Console から管理できるストレージシステムを示しています。NetApp Backup and Recovery のバックアップ先はリストされません。 | アラート | はい 
+
+
+| Amazon FSx for ONTAP | 検出と管理の場合ははい。Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。 
+
+
+| Amazon S3 | はい 
+
+
+| Azure ブロブ | いいえ 
+
+
+| Azure NetApp Files | いいえ 
+
+
+| Cloud Volumes ONTAP | はい 
+
+
+| Eシリーズ | はい 
+
+
+| Google Cloud NetApp Volumes | いいえ 
+
+
+| Google Cloud Storage | はい 
+
+
+| オンプレミスのONTAPクラスタ | 検出と管理に必要です。Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。 
+
+
+| StorageGRID | はい 
+
+
+| ワークロード | いいえ 
+
+
+.8+| *データサービス* | NetApp Backup and Recovery | はい 
+
+
+| NetApp 分類 | はい 
+
+
+| NetAppコピーと同期 | はい 
+
+
+| NetApp Disaster Recovery | はい 
+
+
+| NetApp ランサムウェア対策 | はい 
+
+
+| NetApp Replication | いいえ 
+
+
+| NetApp Cloud Tiering | はい 
+
+
+| NetApp Volume Caching | はい 
+
+
+.5+| *NetApp サポート契約の特徴* | デジタルアドバイザー | はい 
+
+
+| 経済効率 | はい 
+
+
+| ライフサイクル計画 | はい 
+
+
+| ソフトウェアアップデート | いいえ 
+
+
+| 持続可能性 | はい 
+
+
+.12+| *管理機能* | 監査 | いいえ 
+
+
+| 自動化ハブ | いいえ 
+
+
+| フェデレーション | いいえ 
+
+
+| アイデンティティとアクセス管理 | いいえ 
+
+
+ a| 
+Licenses and subscriptionsの管理
+
+* マーケットプレイスのサブスクリプションと BYOL は標準モードでサポートされていますが、サポートされるライセンス オプションは使用しているNetAppデータ サービスによって異なります。利用可能なライセンス オプションの詳細については、各サービスのドキュメントを確認してください。
+
+| いいえ 
+
+
+| クラウド プロバイダの資格情報を管理する | いいえ 
+
+
+| 多要素認証（ローカルユーザ） | いいえ 
+
+
+| 通知 | いいえ 
+
+
+| NSSアカウント | いいえ 
+
+
+| 組織パートナーシップ | いいえ 
+
+
+| 読み取り専用モード | いいえ 
+
+
+| 通知 | いいえ 
+|===
+
+
+=== NetApp Console が標準モードでどのように動作するか
 
 コンソールは標準モードでは次のように動作します。
 
-アウトバウンドコミュニケーション:: コンソール エージェントからコンソール SaaS レイヤー、クラウド プロバイダーの公開リソース、および日常の運用に不可欠なその他のコンポーネントへの接続が必要です。
+アウトバウンドコミュニケーション:: エージェントから Console SaaS アプリケーション、クラウド プロバイダの公開リソース、および日常業務に不可欠なその他のコンポーネントへの接続が必要です。
 +
 --
 * link:task-install-agent-aws-console.html#networking-aws-agent["AWS でエージェントが接続するエンドポイント"]
@@ -103,94 +217,108 @@ image:diagram-standard-mode.png["SaaS レイヤーと auth0 認証が利用可�
 
 
 --
-エージェントがサポートされる場所:: 標準モードでは、エージェントはクラウドまたはオンプレミスでサポートされます。
-コンソールエージェントのインストール:: 次のいずれかの方法でエージェントをインストールできます。
-+
---
-* コンソールから
-* AWS または Azure Marketplace から
-* Google Cloud SDKから
-* データセンターまたはクラウド内の Linux ホストでインストーラーを手動で使用する
-* 提供された OVA を VCenter 環境で使用します。
+Console エージェントのサポートされる場所:: 標準モードでは、クラウドまたはオンプレミスに Console エージェントをインストールできます。
 
 
---
-コンソールエージェントのアップグレード:: NetApp はエージェントを毎月自動的にアップグレードします。
-ユーザーインターフェースアクセス:: ユーザー インターフェイスには、SaaS レイヤーを通じて提供される Web ベースのコンソールからアクセスできます。
+
+NOTE: クラウドにエージェントをインストールすると、クラウド使用料が発生します。
+
+コンソールエージェントのアップグレード:: NetApp はエージェント ソフトウェアを毎月自動的にアップグレードします。
+ユーザーインターフェースアクセス:: ユーザインターフェイスには、パブリックインターネット経由で利用できる Console SaaS アプリケーションからアクセスします。
 APIエンドポイント:: API呼び出しは次のエンドポイントに対して行われます: \https://api.bluexp.netapp.com
-認証:: auth0 またはNetAppサポート サイト (NSS) ログインによる認証。アイデンティティ連携が利用可能です。
-サポートされているデータサービス:: すべてのNetAppデータ サービスがサポートされています。link:https://docs.netapp.com/us-en/data-services-family/index.html["NetAppデータサービスの詳細"^] 。
-サポートされているライセンスオプション:: マーケットプレイスのサブスクリプションと BYOL は標準モードでサポートされていますが、サポートされるライセンス オプションは使用しているNetAppデータ サービスによって異なります。利用可能なライセンス オプションの詳細については、各サービスのドキュメントを確認してください。
-標準モードの開始方法:: に行く https://console.netapp.com["NetApp Console"^]そしてサインアップしてください。
-+
---
-link:task-quick-start-standard-mode.html["標準モードの開始方法を学ぶ"] 。
-
---
+認証:: NetApp Consoleは、auth0またはNetApp Support Site（NSS）ログインによる認証を提供します。アイデンティティフェデレーションが利用可能です。
 
 
 
 
-== 制限モード
+=== 標準モードの開始方法
+
+に行く https://console.netapp.com["NetApp Console"^]そしてサインアップしてください。
+
++link:task-quick-start-standard-mode.html["標準モードの開始方法を学ぶ"]。
+
+
+
+== NetApp Console（制限モード）（独自のパブリック クラウドにインストール）
+
+コンソールエージェントをクラウド（政府、主権、または商業地域）にインストールし、NetApp Console API エンドポイント（SaaS アプリケーションでホスト）への限定的なアウトバウンド接続を持ちます。
+
+ユーザは、SaaS アプリケーションではなく、Console エージェントによって提供されるローカル UI にアクセスします。
+
+使用する予定のデータ サービスと機能に応じて、Console組織管理者は、ハイブリッド クラウド環境内のデータを管理するための追加のConsoleエージェントを作成します。
+
+<<制限モード,NetApp Console APIへのアウトバウンド接続の詳細>>。
 
 次の画像は、制限モードの展開の例です。
 
-image:diagram-restricted-mode.png["制限モードの概念図。"]
+image:diagram-restricted-mode.png["SaaSアプリケーションとauth0認証が利用可能なパブリックインターネット、エージェントが実行されてWebベースのコンソールへのアクセスを提供しているクラウド内の仮想ネットワーク、およびオンプレミスデータセンター内のCloud Volumes ONTAPとAFFクラスタを管理している様子を示す概念図。"]
 
-制限モードではコンソールは次のように動作します。
 
-アウトバウンドコミュニケーション:: エージェントは、データ サービス、ソフトウェア アップグレード、認証、メタデータの転送のために、コンソール SaaS レイヤーへの送信接続を必要とします。
-+
---
-コンソール SaaS レイヤーはエージェントへの通信を開始しません。エージェントは、コンソール SaaS レイヤーとのすべての通信を開始し、必要に応じてデータをプルまたはプッシュします。
 
-リージョン内からクラウド プロバイダー リソースへの接続も必要です。
+=== 制限モードの NetApp Console でサポートされている機能とサービス
 
---
-エージェントがサポートされる場所:: 制限モードでは、エージェントはクラウド（政府リージョン、主権リージョン、または商用リージョン）でサポートされます。
-コンソールエージェントのインストール:: AWS または Azure Marketplace からインストールすることも、独自の Linux ホストに手動でインストールすることも、VCenter 環境でダウンロード可能な OVA を使用することもできます。
-コンソールエージェントのアップグレード:: NetApp は、毎月のアップデートでエージェント ソフトウェアを自動的にアップグレードします。
-ユーザーインターフェースアクセス:: ユーザー インターフェースには、クラウド リージョンにデプロイされたエージェント仮想マシンからアクセスできます。
-APIエンドポイント:: API 呼び出しはエージェント仮想マシンに対して行われます。
-認証:: 認証は auth0 を通じて提供されます。アイデンティティフェデレーションも利用可能です。
-サポートされているストレージ管理およびデータサービス:: 制限モードの次のストレージおよびデータ サービス:
-+
---
-[cols="2*"]
+次の表は、制限モードでインストールした場合にNetApp Consoleで利用可能なストレージ管理機能、データサービス、および管理機能の一覧です。
+
+[cols="3*"]
 |===
-| サポートされているサービス | 注記 
+| 製品分野 | NetAppサービスまたは機能 | コンソールエージェントが必要です 
 
 
-| Azure NetApp Files | 完全サポート 
+.3+| *ストレージシステムの管理* この表は、NetApp Console から管理できるストレージシステムを示しています。NetApp Backup and Recovery のバックアップ先はリストされません。 | Azure NetApp Files | いいえ 
 
 
-| バックアップとリカバリ | 制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、 NetApp Backup and Recovery はONTAPボリューム データのみのバックアップと復元をサポートします。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPデータのサポートされているバックアップ先のリストを表示します"^]アプリケーション データおよび仮想マシン データのバックアップと復元はサポートされていません。 
+| Cloud Volumes ONTAP | はい 
 
 
-| NetApp Data Classification  a| 
-制限モードの政府地域でサポートされます。商用地域または制限モードのソブリン地域ではサポートされません。
+| オンプレミスのONTAPクラスタ | 検出と管理に必要です。Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。 
 
 
+.3+| *データ サービス*（制限モードでは、標準モードよりもサポートされるデータ サービスが少なくなります）  a| 
+バックアップとリカバリ
 
-| Cloud Volumes ONTAP | 完全サポート 
+* 制限モードの政府地域および商用地域でサポートされます。制限モードのソブリン地域ではサポートされません。
+* 制限モードでは、NetApp Backup and Recoveryは、ONTAPボリュームデータのバックアップとリストアのみをサポートします。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPデータのサポートされているバックアップ先のリストを表示します"^]
+
+| 制限モードの政府地域および商用地域でサポートされます。制限モードの主権地域ではサポートされません。制限モードでは、NetApp Backup and RecoveryはONTAPボリュームデータのバックアップとリストアのみをサポートします。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPデータのサポートされているバックアップ先のリストを表示します"^] 
 
 
-| Licenses and subscriptions | 制限モードでサポートされている以下のライセンス オプションを使用して、ライセンスおよびサブスクリプション情報にアクセスできます。 
+ a| 
+NetApp Data Classification
+
+* 制限モードの政府地域でサポートされます。商用地域または制限モードのソブリン地域ではサポートされません。
+
+| はい 
 
 
-| オンプレミスのONTAPクラスタ | コンソール エージェントを使用した検出とコンソール エージェントを使用しない検出 (直接検出) の両方がサポートされています。コンソール エージェントなしでオンプレミス クラスターを検出する場合、詳細ビュー (システム マネージャー) はサポートされません。 
+ a| 
+NetApp Replication
+
+* 制限モードの政府地域でサポートされます。商用地域または制限モードのソブリン地域ではサポートされません。
+
+| はい*（ONTAP オンプレミスからONTAP オンプレミスへのレプリケーションの場合は不要） 
 
 
-| レプリケーション | 制限モードの政府地域でサポートされます。商用地域または制限モードのソブリン地域ではサポートされません。 
-|===
---
-サポートされているライセンスオプション:: 制限モードでは、次のライセンス オプションがサポートされています。
-+
---
-* マーケットプレイスのサブスクリプション（時間単位および年間契約）
-+
+| *NetApp サポート契約の特徴* | なし | 該当なし 
+
+
+.12+| *管理機能* | 監査 | いいえ 
+
+
+| 自動化ハブ | いいえ 
+
+
+| フェデレーション | いいえ 
+
+
+| アイデンティティとアクセス管理 | いいえ 
+
+
+ a| 
+Licenses and subscriptionsの管理
+
 次の点に注意してください。
 
+* マーケットプレイスのサブスクリプション（時間単位および年間契約）
 +
 ** Cloud Volumes ONTAPの場合、容量ベースのライセンスのみがサポートされます。
 ** Azure では、政府地域では年間契約はサポートされていません。
@@ -201,126 +329,354 @@ APIエンドポイント:: API 呼び出しはエージェント仮想マシン�
 Cloud Volumes ONTAPの場合、容量ベースのライセンスとノードベースのライセンスの両方が BYOL でサポートされます。
 
 
+| いいえ 
+
+
+| クラウド プロバイダの資格情報を管理する | いいえ 
+
+
+| 多要素認証（ローカルユーザ） | いいえ 
+
+
+| 通知 | いいえ 
+
+
+| NSSアカウント | いいえ 
+
+
+| 組織パートナーシップ | いいえ 
+
+
+| 読み取り専用モード | いいえ 
+
+
+| 通知 | いいえ 
+|===
+
+
+=== 制限モードでのNetApp Consoleの動作
+
+制限モードではコンソールは次のように動作します。
+
+アウトバウンドコミュニケーション:: エージェントは、データ サービス、ソフトウェア アップグレード、ユーザ認証、メタデータの転送をサポートするために、NetApp クラウドベース API へのアウトバウンド接続が必要です。
++
+--
+NetAppはエージェントへの通信を開始しません。エージェントはすべての通信を開始し、必要に応じてNetApp APIとサービスからデータをプルしたり、データをプッシュしたりすることができます。
+
+リージョン内からクラウド プロバイダー リソースへの接続も必要です。
 
 --
-制限モードの開始方法:: NetApp Console組織を作成するときに、制限モードを有効にする必要があります。
-
-
-まだ組織がない場合は、手動でインストールした、またはクラウド プロバイダーのマーケットプレイスから作成したコンソール エージェントから初めてコンソールにログインするときに、組織を作成して制限モードを有効にするように求められます。
-
-
-NOTE: 組織を作成した後は、制限モード設定を変更することはできません。
-
-link:task-quick-start-restricted-mode.html["制限モードの開始方法を学ぶ"] 。
+エージェントがサポートされる場所:: 制限モードでは、エージェントをクラウド（政府リージョン、主権リージョン、または商用リージョン）にインストールします。
+コンソールエージェントのアップグレード:: NetApp Console はエージェント ソフトウェアを毎月自動的にアップグレードします。
+ユーザーインターフェースアクセス:: ユーザーは、クラウド リージョンにデプロイされたエージェント仮想マシンからConsoleにアクセスします。
+APIエンドポイント:: API 呼び出しはエージェント仮想マシンに対して行われます。
+認証:: 認証は、auth0を使用するNetApp Consoleのクラウドサービスによって提供されます。IDフェデレーションも利用できます。
 
 
 
-== サービスと機能の比較
 
-次の表は、制限モードでサポートされているサービスと機能をすぐに識別するのに役立ちます。
+=== 制限モードの開始方法
 
-一部のサービスは制限付きでサポートされる場合がありますのでご了承ください。これらのサービスが制限モードでどのようにサポートされるかの詳細については、上記のセクションを参照してください。
+NetApp Console アカウントを作成するときに、制限モードを有効にする必要があります。組織がない場合は、インストールした Console エージェントに初めてログインするときに、組織を作成して制限モードを有効にするように求められます。
 
-[cols="19,27,27"]
+組織を作成した後は、制限モードの設定が固定されることに注意してください。制限モードを後から有効または無効にすることはできません。link:task-quick-start-restricted-mode.html["制限モードの開始方法を学ぶ"]。
+
+
+
+== プライベートモードのNetApp Console
+
+プライベートモードでは、オンプレミスまたはクラウドにConsoleエージェントをインストールし、NetApp Consoleを使用してハイブリッド クラウド全体のデータを管理します。NetApp Console APIエンドポイントまたはNetApp Console SaaSアプリケーションへの接続はないため、Consoleエージェントによって提供されるローカルUIからConsoleにアクセスします。
+
+次の図は、Console エージェントがクラウドにインストールされ、Cloud Volumes ONTAP とオンプレミス ONTAP クラスタの両方を管理するプライベートモードの導入例を示しています。
+
+image:diagram-private-mode-cloud.png["クラウド内の仮想ネットワークでエージェントが実行され、Webベースのコンソールへのアクセスを提供し、オンプレミスデータセンター内のCloud Volumes ONTAPとAFFクラスターを管理している様子を示す概念図。"]
+
+2番目の画像は、エージェントがオンプレミスにインストールされ、オンプレミスのONTAPクラスタを管理し、サポートされているNetApp Consoleデータサービスへのアクセスを提供するプライベートモード導入の例を示しています。
+
+image:diagram-private-mode-onprem.png["エージェントが稼働し、Webベースのコンソール、NetApp Console データサービスへのアクセスを提供し、オンプレミスのデータセンター内のAFFクラスタを管理しているオンプレミスのデータセンターを示す概念図。"]
+
+
+
+=== プライベートモードのNetApp Consoleでサポートされている機能とサービス
+
+次の表は、プライベートモードでインストールした場合にNetApp Consoleで利用可能なストレージ管理機能、データサービス、および管理機能の一覧です。NetApp Consoleをクラウドにインストールする場合とオンプレミスにインストールする場合では、機能が異なります。
+
+クラウドにインストールされたプライベートモード::
+
+
+[cols="3*"]
 |===
-| 製品分野 | NetAppデータサービスまたは機能 | 制限モード 
+| 製品分野 | NetAppサービスまたは機能 | コンソールエージェントが必要です 
 
 
-.10+| *ストレージ* 表のこの部分には、コンソールからのストレージ システム管理のサポートがリストされています。  NetApp Backup and Recoveryでサポートされているバックアップ先は示されません。 | Amazon FSx for ONTAP | いいえ 
+.2+| *ストレージシステム管理* この表のこの部分には、NetApp Console からのストレージシステム管理のサポートがリストされています。NetApp Backup and Recovery のサポートされているバックアップ先は示されていません。 | Cloud Volumes ONTAP | はい、ただしインターネットアクセスがないため、以下の機能はご利用いただけません：自動ソフトウェアアップグレードとAutoSupport。 
 
 
-| Amazon S3 | いいえ 
+ a| 
+オンプレミスのONTAPクラスタ
 
+* クラウド（Console エージェントがインストールされている場所）からオンプレミス環境への接続が必要です。
++
+オンプレミス ONTAP クラスターを検出するには、Console エージェントがインストールされている必要があります。
 
-| Azure ブロブ | いいえ 
 
+| Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。 
 
-| Azure NetApp Files | はい 
 
+.3+| *データサービス*  a| 
+バックアップとリカバリ
 
-| Cloud Volumes ONTAP | はい 
+* プライベートモードでは、NetApp Backup and Recoveryは、ONTAPボリュームデータのバックアップとリストアのみをサポートします。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["ONTAPデータのサポートされているバックアップ先のリストを表示します"^]アプリケーションデータおよび仮想マシンデータのバックアップとリストアはサポートされていません。
+* Google Cloudまたは https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]、 https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]、または https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6["Azure IL6"^]ではサポートされていません
 
+| はい 
 
-| Google Cloud NetApp Volumes | いいえ 
 
+ a| 
+NetApp 分類
 
-| Google Cloud Storage | いいえ 
+* サポートされるデータ ソースは、ローカルで検出できるもののみです。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#supported-data-sources["ローカルで検出できるソースを表示する"^]
+* アウトバウンドインターネットアクセスを必要とする機能はサポートされていません。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#limitations["機能の制限事項を表示"^]
 
+| はい 
 
-| オンプレミスのONTAPクラスタ | はい 
 
+| NetApp Replication | はい*（ONTAPオンプレミスからONTAPオンプレミスへのレプリケーションの場合は不要） 
 
-| Eシリーズ | いいえ 
 
+| *NetApp サポート契約の特徴* | なし | -- 
 
-| StorageGRID | いいえ 
 
+.6+| *管理機能* | 監査 | いいえ 
 
-.9+| *データサービス* | NetAppバックアップとリカバリ | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] 
 
+ a| 
+Licenses and subscriptionsの管理
 
-| NetApp Data Classification | はい 
+* プライベート モードでは BYOL のみがサポートされます。
++
+Cloud Volumes ONTAP BYOL では、ノードベースのライセンスのみがサポートされます。容量ベースのライセンスはサポートされていません。アウトバウンドインターネット接続が利用できないため、Cloud Volumes ONTAP ライセンスファイルをコンソールに手動でアップロードする必要があります。
 
 
-| NetApp Copy and Sync | いいえ 
 
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses["ライセンスを追加する方法を確認する"^]
+| いいえ 
 
-| NetApp Disaster Recovery | いいえ 
 
+| アイデンティティとアクセス管理 | いいえ 
 
-| NetApp Ransomware Resilience | いいえ 
 
+| クラウド プロバイダの資格情報を管理する | いいえ 
 
-| NetApp Replication | はい 
 
+| 読み取り専用モード | いいえ 
 
-| NetApp Cloud Tiering | いいえ 
 
+| 通知 | いいえ 
+|===
+プライベートモードがオンプレミスにインストールされました::
 
-| NetAppボリュームキャッシュ | いいえ 
 
+[cols="3*"]
+|===
+| 製品分野 | NetAppサービスまたは機能 | コンソールエージェントが必要です 
 
-| NetAppワークロード ファクトリー | いいえ 
 
+| *ストレージシステム管理* この表のこの部分には、NetApp Console からのストレージシステム管理のサポートがリストされています。NetApp Backup and Recovery のサポートされているバックアップ先は示されていません。  a| 
+オンプレミスのONTAPクラスタ
 
-.14+| *特徴* | アラート | いいえ 
+* クラウド（Console エージェントがインストールされている場所）からオンプレミス環境への接続が必要です。
++
+オンプレミス ONTAP クラスターを検出するには、Console エージェントがインストールされている必要があります。
 
 
-| Digital Advisor | いいえ 
+| Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。 
 
 
-| ライセンスとサブスクリプションの管理 | はい 
+.3+| *データサービス*  a| 
+バックアップとリカバリ
 
+* プライベートモードでは、NetApp Backup and Recoveryは、ONTAPボリュームデータのバックアップとリストアのみをサポートします。 https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["ONTAPデータのサポートされているバックアップ先のリストを表示します"^]
+* アプリケーション データおよび仮想マシン データのバックアップと復元はサポートされていません。
 
-| アイデンティティとアクセス管理 | はい 
+| はい 
 
 
-| Credentials | はい 
+ a| 
+NetApp 分類
 
+* サポートされるデータ ソースは、ローカルで検出できるもののみです。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#supported-data-sources["ローカルで検出できるソースを表示する"^]
+* アウトバウンドインターネットアクセスを必要とする機能はサポートされていません。 https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#limitations["機能の制限事項を表示"^]
 
-| フェデレーション | はい 
+| はい 
 
 
-| ライフサイクルプランニング | いいえ 
+| NetApp Replication | はい*（ONTAPオンプレミスからONTAPオンプレミスへのレプリケーションの場合は不要） 
 
 
-| 多要素認証 | はい 
+| *NetApp サポート契約の特徴* | なし | 該当なし 
 
 
-| NSSアカウント | はい 
+.6+| *管理機能* | 監査 | いいえ 
 
 
-| 通知 | はい 
+ a| 
+Licenses and subscriptionsの管理
 
+* プライベート モードでは BYOL のみがサポートされます。
 
-| 検索 | はい 
+| いいえ 
 
 
-| ソフトウェアアップデート | いいえ 
+| アイデンティティとアクセス管理 | いいえ 
 
 
-| 持続可能性 | いいえ 
+| クラウド プロバイダの資格情報を管理する | いいえ 
 
 
-| 監査 | はい 
+| 読み取り専用モード | いいえ 
+
+
+| 通知 | いいえ 
+|===
+
+
+=== NetApp Console がプライベートモードで動作する仕組み
+
+NetApp Console はプライベート モードでは次のように動作します：
+
+アウトバウンドコミュニケーション:: Console SaaS アプリケーション（追加の API エンドポイントが存在する場所）への送信接続は必要ありません。すべてのパッケージ、依存関係、および必須コンポーネントは、Console エージェントとともにパッケージ化され、ローカルマシンから提供されます。Cloud Volumes ONTAP を導入する場合にのみ、クラウド プロバイダの公開リソースへの接続が必要です。
+Console エージェントのサポートされる場所:: プライベートモードでは、Console エージェントはクラウドまたはオンプレミスでサポートされます。
+コンソールエージェントのアップグレード:: コンソールエージェントソフトウェアは手動でアップグレードする必要があります。NetApp は、コンソールエージェントソフトウェアを不定期で NetApp Support Site に公開しています。
+ユーザーインターフェースアクセス:: ユーザは、クラウド リージョンまたはオンプレミスにデプロイされた Console エージェントから Console にアクセスします。
+APIエンドポイント:: API 呼び出しは、 Console エージェント仮想マシンに対して行われます。
+認証:: 認証は、ローカル ユーザ管理とアクセスを通じて提供されます。認証はNetApp Consoleのクラウド サービスを通じて提供されません。
+
+
+
+
+=== プライベートモードの使用を開始する方法
+
+プライベートモードは、NetApp Support Siteから「オフライン」インストーラーをダウンロードすることで利用できます。
+
++ link:task-quick-start-private-mode.html["プライベートモードの使用を開始する方法を確認する"].
+
++ 注： https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]または https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]でNetApp Consoleを使用する場合は、それらの環境で開始するための個別の手順に従う必要があります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html["AWS Secret CloudまたはTop Secret CloudでCloud Volumes ONTAPを使い始める方法を学ぶ"^]
+
+
+
+== NetApp Consoleのサービスと機能の比較
+
+この表は、制限モードとプライベート モードでサポートされているサービスと機能を示しています。
+
+
+NOTE: 標準モード（NetApp Console SaaS アプリケーション）は、すべての機能をサポートします。
+
+一部のサービスは制限付きでサポートされる場合があります。これらのサービスが制限モードとプライベート モードでどのようにサポートされるかの詳細については、上記のセクションを参照してください。
+
+[cols="19,27,27,27"]
+|===
+| 製品分野 | NetAppサービスまたは機能 | 制限モード | プライベートモード 
+
+
+.10+| *ストレージシステムの管理* この表は、NetApp Console から管理できるストレージシステムを示しています。NetApp Backup and Recovery のバックアップ先はリストされません。 | アラート | いいえ | いいえ 
+
+
+| Amazon FSx for ONTAP | いいえ | いいえ 
+
+
+| Amazon S3 | いいえ | いいえ 
+
+
+| Azure ブロブ | いいえ | いいえ 
+
+
+| Azure NetApp Files | はい | いいえ 
+
+
+| Cloud Volumes ONTAP | はい | はい 
+
+
+| Google Cloud NetApp Volumes | いいえ | いいえ 
+
+
+| Google Cloud Storage | いいえ | いいえ 
+
+
+| オンプレミス ONTAP クラスター | はい | はい 
+
+
+| Eシリーズ | いいえ | いいえ 
+
+
+| StorageGRID | いいえ | いいえ | ワークロードファクトリー 
+
+
+| いいえ | いいえ .8+| *データサービス* | バックアップとリカバリ 
+
+
+| はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] | NetApp 分類 
+
+
+| はい | はい | コピーと同期 
+
+
+| いいえ | いいえ | NetApp Disaster Recovery 
+
+
+| いいえ | いいえ | NetApp ランサムウェア対策 
+
+
+| いいえ | いいえ | NetApp Replication 
+
+
+| はい | はい | NetApp Cloud Tiering 
+
+
+| いいえ | いいえ | NetApp Volume Caching 
+
+
+| いいえ | いいえ .4+| *NetApp サポート契約の特徴* | デジタルアドバイザー 
+
+
+| いいえ | いいえ | ライフサイクル計画 
+
+
+| いいえ | いいえ | ソフトウェアアップデート 
+
+
+| いいえ | いいえ | 持続可能性 
+
+
+| いいえ | いいえ .9+| *管理機能* | ストレージおよびデータ サービスのダッシュボード メトリック 
+
+
+| いいえ | いいえ | アイデンティティとアクセス管理 
+
+
+| はい | はい | クラウド プロバイダの資格情報を管理する 
+
+
+| はい | はい | フェデレーション 
+
+
+| はい | いいえ | Licenses and subscriptions 
+
+
+| はい | はい | 多要素認証 
+
+
+| はい | いいえ | NSSアカウント 
+
+
+| はい | いいえ | 組織パートナーシップ 
+
+
+| はい | いいえ | 読み取り専用モード 
+
+
+| いいえ | いいえ | 通知 | はい 
+
+
+| いいえ | 監査 | はい | はい 
 |===
