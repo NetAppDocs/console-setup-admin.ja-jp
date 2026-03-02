@@ -108,6 +108,7 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
         "cloudformation:CreateStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "cloudformation:DeleteStack",
         "iam:PassRole",
@@ -405,6 +406,7 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "s3:GetObject",
         "s3:ListBucket",
@@ -549,6 +551,7 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "iam:PassRole",
         "iam:CreateRole",
@@ -668,6 +671,7 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "iam:PassRole",
         "iam:CreateRole",
@@ -882,7 +886,7 @@ Cloud Volumes ONTAPバックアップにソースボリュームに使用して�
 
 
 
-=== データ分類
+=== NetApp Data Classification
 
 エージェントは、NetApp Data Classificationを展開するために次の API 要求を行います。
 
