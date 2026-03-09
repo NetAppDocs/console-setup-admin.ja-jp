@@ -43,6 +43,8 @@ summary: 組織内のフォルダやプロジェクトに対する特定のロ�
 * link:reference-iam-disaster-rec-roles.html["災害復旧ビューア"]
 * link:reference-iam-storage-roles.html["オペレーションサポートアナリスト"]
 * link:reference-iam-predefined-roles.html["分類ビューア"]
+* link:reference-iam-keystone-roles.html["Keystone管理者"]
+* link:reference-iam-keystone-roles.html["Keystoneビューア"]
 
 
 link:reference-iam-predefined-roles.html["定義済みロールの詳細"]

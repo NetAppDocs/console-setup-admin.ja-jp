@@ -1,0 +1,20 @@
+= Console エージェント 4.5.0
+:allow-uri-read: 
+
+
+
+
+=== Console エージェント 4.5.0
+
+4.5.0 リリースでは、標準モードと制限モードの両方がサポートされています。
+
+コンソール エージェントのこのリリースには、セキュリティの改善とバグ修正に加えて、次の新機能が含まれています。
+
+.必要なポートへの構成チェックのサポート
+構成チェックを使用して、Console エージェントに必要なポートが開いていることを確認できます。Console または Agent メンテナンス コンソールから構成チェックを実行できます。link:https://docs.netapp.com/console-setup-admin/task-troubleshoot-agent.html["Console エージェントで構成チェックを実行する方法の詳細について説明します。"]
+
+
+
+=== コンソール管理
+
+パートナーユーザーにKeystoneロールを割り当てて、そのユーザーがパートナー組織内のKeystoneリソースを管理できるようにすることができます。link:https://docs.netapp.com/console-setup-admin/console-administration/task-partnerships-assign-users.html["パートナー ユーザーへの Keystone ロールの割り当てについて詳しく説明します。"]

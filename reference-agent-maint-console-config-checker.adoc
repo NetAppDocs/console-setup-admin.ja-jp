@@ -39,7 +39,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 `--services <comma-separated list of services to validate>` - *必須* - 
 
 [role="quick-margin-para"]
-検証するサービスを 1 つ以上選択します。有効なサービス名は次のとおりです。*`PLATFORM`必要なコンソール エンドポイントへのネットワーク接続を検証します。
+検証するサービスを 1 つ以上選択します。有効なサービス名は次のとおりです：*`PLATFORM`これにより、必要な Console エンドポイントへのネットワーク接続と、Console エージェントに必要なポートが開いているかどうかが検証されます。
 
 `--validationTypes <comma-separated list validation types to run>`--*必須*-- 実行する検証タイプを 1 つ以上選択します。有効な検証タイプは次のとおりです: * `NETWORK`必要なコンソール エンドポイントへのネットワーク接続を検証します。
 

@@ -4392,7 +4392,6 @@
   <block id="23fc9bc00056f19d24e4c3ab8b5ca0c6" category="paragraph">コンソール エージェントのバージョンを表示してアップグレードを確認するか、 NetApp の担当者と共有してください。</block>
   <block id="b9b50a4a67814c748f85c0dd361e7931" category="list-text">*管理 &gt; サポート &gt; エージェント*を選択します。</block>
   <block id="b8833ad6a19536ecd8aef7620db4ddce" category="paragraph">コンソールのページ上部にバージョンが表示されます。</block>
-  <block id="fb2564b7b05cf68b7b51fea5098120fd" category="section-title">ネットワークアクセスを確認する</block>
   <block id="021662795bfc95f525aded11ea0f47b7" category="inline-link-macro">必要なネットワーク アクセス ポイントの詳細について説明します。</block>
   <block id="532483dbc5894a7da7a4dd2c7f9b4e0e" category="paragraph">コンソール エージェントに必要なネットワーク アクセスがあることを確認します。<block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block></block>
   <block id="3b2256fce45383ccea4ebfc8f456dcf9" category="section-title">コンソールエージェントのインストールに関する問題</block>
@@ -5053,7 +5052,6 @@
   <block id="11d2b70f92f5671a073ee7f95edbc568" category="paragraph">その<block ref="2df2419e3b3e4992394516227a5f4a71" prefix=" " category="inline-code"></block>コマンドを使用すると、コンソール エージェントの構成を検証できます。</block>
   <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">パラメータ</block>
   <block id="bb9f0d8e73ffa6630952dc1ecc6cd9de" category="paragraph"><block ref="6a11199e55b0cb53d751c5170e5f74f9" prefix="" category="inline-code"></block> - *必須* - </block>
-  <block id="69dfddf838a2ddd2939ee5adc69cb83c" category="paragraph">検証するサービスを 1 つ以上選択します。有効なサービス名は次のとおりです。<block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block>必要なコンソール エンドポイントへのネットワーク接続を検証します。</block>
   <block id="1fde504b28ae1c1b6dbb99c104b00a85" category="paragraph"><block ref="693f786102104e01b7396235926fc506" prefix="" category="inline-code"></block>--*必須*-- 実行する検証タイプを 1 つ以上選択します。有効な検証タイプは次のとおりです: *<block ref="25835188a2355e9530d3a10fcbe4c65b" prefix=" " category="inline-code"></block>必要なコンソール エンドポイントへのネットワーク接続を検証します。</block>
   <block id="b3c3244f084b65704359870cc6488d93" category="paragraph"><block ref="f2d537814e28e44e0e35d5b4ce13cadb" prefix="" category="inline-code"></block>--*オプション*--</block>
   <block id="d076e244720434cf026cb278c7f19d8e" category="paragraph">検証に使用するプロキシ サーバーの URL を指定します。エージェントがプロキシ サーバーを使用するように構成されている場合に必要です。</block>
@@ -5231,7 +5229,6 @@
   <block id="5d3a908b240fe98ac0740455635b4cc0" category="list-text">それでも問題が解決しない場合は、サポートにお問い合わせください。</block>
   <block id="13ab9425db1c4ad9c7ca529999f6de24" category="list-text">エージェントが必要なエンドポイントへの送信アクセス権を持っていることを確認します。<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
   <block id="61af83c0a45998dc351428765c46fa2e" category="section-title">コンソールエージェントで構成チェックを実行する</block>
-  <block id="764bd6d2ae27e2401a34b6a482fc62d3" category="paragraph">コンソールまたはエージェント メンテナンス コンソールからコンソール エージェントの構成チェックを実行し、それらが接続されていることを確認します。</block>
   <block id="cb4e992a592d7b26e6c218cdde9ee1b5" category="inline-link-macro">config-checker validate コマンドの使用について詳しく学習します。</block>
   <block id="adbf5b321ab6472093079a96d92216c2" category="paragraph">エージェント メンテナンス コンソールを使用して構成チェックを実行することもできます。<block ref="714b5c6de8ffee7e082263b89290e9dc" category="inline-link-macro-rx"></block></block>
   <block id="2c8b526b02d94d86279aebb87311c90d" category="admonition">ステータスが「*接続済み*」であるエージェントのみを検証できます。</block>
@@ -6128,4 +6125,16 @@
   <block id="d9f6b701b4e6e8fa39df2310070b5bad" category="sidebar">NetApp Console（プライベートモード）の使用を開始する</block>
   <block id="cc1e97b9fe18a374eacd6937d0fd1f20" category="sidebar">プライベートモードの使用開始ワークフロー</block>
   <block id="68874f436c529f1931417d4bdfb1c183" category="cell">5.0.3（2026年3月2日）</block>
+  <block id="dd340069cb16665edf781618805f1165" category="doc">Console エージェント 4.5.0</block>
+  <block id="de3b44fa9f294325dd837b3f15773cd6" category="paragraph">4.5.0 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
+  <block id="8d40f2642d0505b33483f580f9515a11" category="paragraph">コンソール エージェントのこのリリースには、セキュリティの改善とバグ修正に加えて、次の新機能が含まれています。</block>
+  <block id="b8ea9a14287592fd39444f5f11f22b28" category="paragraph-title">必要なポートへの構成チェックのサポート</block>
+  <block id="e6aa0876ac72372fe4102974fad02f9e" category="inline-link-macro">Console エージェントで構成チェックを実行する方法の詳細について説明します。</block>
+  <block id="8fab8f63a86cd4593eb84501e6b42574" category="paragraph">構成チェックを使用して、Console エージェントに必要なポートが開いていることを確認できます。Console または Agent メンテナンス コンソールから構成チェックを実行できます。<block ref="b6bcdf4dfaf7604bd81efc4009e39859" category="inline-link-macro-rx"></block></block>
+  <block id="2de08c251ba5c647be79f6b565692ba4" category="section-title">コンソール管理</block>
+  <block id="2bdd9842a1d8845c8d1b9f13695c4ac5" category="inline-link-macro">パートナー ユーザーへの Keystone ロールの割り当てについて詳しく説明します。</block>
+  <block id="f932e5731af0b28e3d04131c77f23704" category="paragraph">パートナーユーザーにKeystoneロールを割り当てて、そのユーザーがパートナー組織内のKeystoneリソースを管理できるようにすることができます。<block ref="37c7e4a6dbebd9961095310c537fa832" category="inline-link-macro-rx"></block></block>
+  <block id="89c004a6a6a30c4e3297ce59ad9244fe" category="paragraph">検証するサービスを 1 つ以上選択します。有効なサービス名は次のとおりです：<block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block>これにより、必要な Console エンドポイントへのネットワーク接続と、Console エージェントに必要なポートが開いているかどうかが検証されます。</block>
+  <block id="81e25f5172548cbe6ade4ab58b86b791" category="section-title">コンソールエージェントのネットワークとポートアクセスを確認する</block>
+  <block id="79809c4a6f04cdeb09f4ec1df49c2f33" category="paragraph">Console またはエージェント メンテナンス コンソールから Console エージェントの構成チェックを実行し、必要なエンドポイントにアクセスでき、必要なポートが開いていることを確認します。</block>
 </blocks>
