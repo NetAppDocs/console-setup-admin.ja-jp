@@ -347,7 +347,7 @@ Cloud Volumes ONTAPの場合、容量ベースのライセンスとノードベ�
 | 組織パートナーシップ | いいえ 
 
 
-| 読み取り専用モード | いいえ 
+| 読み取り専用モード | はい 
 
 
 | 通知 | いいえ 
@@ -579,7 +579,7 @@ NOTE: 標準モード（NetApp Console SaaS アプリケーション）は、す
 | 製品分野 | NetAppサービスまたは機能 | 制限モード | プライベートモード 
 
 
-.10+| *ストレージシステムの管理* この表は、NetApp Console から管理できるストレージシステムを示しています。NetApp Backup and Recovery のバックアップ先はリストされません。 | アラート | いいえ | いいえ 
+.12+| *ストレージシステムの管理* この表は、NetApp Console から管理できるストレージシステムを示しています。NetApp Backup and Recovery のバックアップ先はリストされません。 | アラート | いいえ | いいえ 
 
 
 | Amazon FSx for ONTAP | いいえ | いいえ 
@@ -609,74 +609,74 @@ NOTE: 標準モード（NetApp Console SaaS アプリケーション）は、す
 | Eシリーズ | いいえ | いいえ 
 
 
-| StorageGRID | いいえ | いいえ | ワークロードファクトリー 
+| StorageGRID | いいえ | いいえ 
 
 
-| いいえ | いいえ .8+| *データサービス* | バックアップとリカバリ 
+| ワークロードファクトリー | いいえ | いいえ 
 
 
-| はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] | NetApp 分類 
+.8+| *データサービス* | バックアップとリカバリ | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] 
 
 
-| はい | はい | コピーと同期 
+| NetApp 分類 | はい | はい 
 
 
-| いいえ | いいえ | NetApp Disaster Recovery 
+| コピーと同期 | いいえ | いいえ 
 
 
-| いいえ | いいえ | NetApp ランサムウェア対策 
+| NetApp Disaster Recovery | いいえ | いいえ 
 
 
-| いいえ | いいえ | NetApp Replication 
+| NetApp ランサムウェア対策 | いいえ | いいえ 
 
 
-| はい | はい | NetApp Cloud Tiering 
+| NetApp Replication | はい | はい 
 
 
-| いいえ | いいえ | NetApp Volume Caching 
+| NetApp Cloud Tiering | いいえ | いいえ 
 
 
-| いいえ | いいえ .4+| *NetApp サポート契約の特徴* | デジタルアドバイザー 
+| NetApp Volume Caching | いいえ | いいえ 
 
 
-| いいえ | いいえ | ライフサイクル計画 
+.4+| *NetApp サポート契約の特徴* | デジタルアドバイザー | いいえ | いいえ 
 
 
-| いいえ | いいえ | ソフトウェアアップデート 
+| ライフサイクル計画 | いいえ | いいえ 
 
 
-| いいえ | いいえ | 持続可能性 
+| ソフトウェアアップデート | いいえ | いいえ 
 
 
-| いいえ | いいえ .9+| *管理機能* | ストレージおよびデータ サービスのダッシュボード メトリック 
+| 持続可能性 | いいえ | いいえ 
 
 
-| いいえ | いいえ | アイデンティティとアクセス管理 
+.9+| *管理機能* | ストレージおよびデータ サービスのダッシュボード メトリック | いいえ | いいえ 
 
 
-| はい | はい | クラウド プロバイダの資格情報を管理する 
+| アイデンティティとアクセス管理 | はい | はい 
 
 
-| はい | はい | フェデレーション 
+| クラウド プロバイダの資格情報を管理する | はい | はい 
 
 
-| はい | いいえ | Licenses and subscriptions 
+| フェデレーション | はい | いいえ 
 
 
-| はい | はい | 多要素認証 
+| Licenses and subscriptions | はい | はい 
 
 
-| はい | いいえ | NSSアカウント 
+| 多要素認証 | はい | いいえ 
 
 
-| はい | いいえ | 組織パートナーシップ 
+| NSSアカウント | はい | いいえ 
 
 
-| はい | いいえ | 読み取り専用モード 
+| 組織パートナーシップ | はい | いいえ 
 
 
-| いいえ | いいえ | 通知 | はい 
+| 読み取り専用モード | はい | いいえ 
 
 
-| いいえ | 監査 | はい | はい 
+| 通知 | はい | いいえ | 監査 
 |===
