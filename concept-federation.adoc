@@ -55,13 +55,14 @@ NOTE: 以前にNetApp Cloud Central (コンソールの外部アプリケーシ�
 NetApp は、フェデレーション用に次のプロトコルと ID プロバイダーをサポートしています。
 
 .プロトコル
-* セキュリティアサーションマークアップ言語（SAML）IDプロバイダー
-* アクティブ ディレクトリ フェデレーション サービス (AD FS)
+* link:task-federation-adfs.html["アクティブ ディレクトリ フェデレーション サービス (AD FS)"]
+* link:task-federation-entra-id.html["Microsoft Entra ID"]
+* link:link:task-federation-saml.html["セキュリティアサーションマークアップ言語（SAML）IDプロバイダー"]
 
 
 .アイデンティティプロバイダー
-* Microsoft Entra ID
-* PingFederate
+* link:task-federation-entra-id.html["Microsoft Entra ID"]
+* link:task-federation-ping.html["PingFederate"]
 
 
 
@@ -91,11 +92,3 @@ NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサ�
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["三つ"]コンソールで接続を有効にする
 [role="quick-margin-para"]
 接続を有効にすると、ユーザーは企業の資格情報を使用してコンソールにログインできるようになります。
-
-開始するには、それぞれのプロトコルまたは IdP のトピックを確認してください。
-
-* link:task-federation-adfs.html["AD FSとのフェデレーション接続を設定する"]
-* link:task-federation-entra-id.html["Microsoft Entra ID とのフェデレーション接続を設定する"]
-* link:task-federation-ping.html["PingFederateでフェデレーション接続を設定する"]
-* link:task-federation-saml.html["SAML ID プロバイダとのフェデレーション接続を設定する"]
-
