@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-maintain-agents.html 
-keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health 
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
 summary: エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、会社の標準的なオペレーティング システムの配布手順に従って、コンソール エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。 
 ---
-= コンソールエージェントVMとオペレーティングシステムを保守する
+= 手動でインストールしたコンソールエージェントのVMインスタンスを維持する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,31 @@ summary: エージェント ホスト上のオペレーティング システム
 
 
 [role="lead"]
-コンソール エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、お客様は、会社の標準的なオペレーティング システム配布手順に従って、エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。
+コンソールエージェントを手動でインストールする場合、エージェントホスト上のオペレーティングシステムの維持管理は、お客様の責任となります。たとえば、お客様は、自社のオペレーティングシステム配布に関する標準手順に従って、エージェントホスト上のオペレーティングシステムにセキュリティアップデートを適用する必要があります。
 
 
 
-== オペレーティングシステムのパッチとエージェント
+== エージェントホストにオペレーティングシステムのアップデートを適用する
 
 エージェント ホスト サービスを停止せずに OS セキュリティ パッチを適用します。
 
+サポートされている構成との互換性を維持するため、定期的なOSパッチ適用時にDockerまたはPodmanがアップグレードされないようにしてください。これは、アップデート時にDockerまたはPodmanを一時的に除外するか、パッケージマネージャーを永続的に設定してDockerまたはPodmanのアップデートをスキップすることで実現できます。
+
+以下は、さまざまなLinuxディストリビューションでDockerまたはPodmanのアップデートを除外する方法の例です。パッケージをアップデートから除外する方法に関する最新の手順については、お使いのLinuxディストリビューションのドキュメントを参照してください。
+
+.Podmanの例
+[source, bash]
+----
+sudo yum update --exclude=podman
+sudo yum upgrade
+----
+.Dockerの例
+[source, bash]
+----
+sudo apt-mark hold docker-ce docker-ce-cli containerd.io
+sudo apt update
+sudo apt upgrade
+----
 
 
 == VMまたはインスタンスタイプ
@@ -47,7 +64,7 @@ link:reference-agent-default-config.html["エージェントのデフォルト�
 
 NOTE: エージェント VM の変更について質問がある場合は、 NetAppサポートにお問い合わせください。
 
-link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#notification-center["詳細情報"^]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#notification-center["詳細情報"^]
 
 [cols="47,47"]
 |===
@@ -94,57 +111,4 @@ Google Cloud:: Google Cloud でエージェントを作成するときに認証�
 https://cloud.google.com/compute/docs/instances/connecting-to-instance["Google Cloud ドキュメント: Linux VM への接続"^]
 
 --
-
-
-
-
-== エージェントのIPアドレスを変更する
-
-必要に応じて、クラウド プロバイダーによって割り当てられたエージェント インスタンスの内部 IP アドレスとパブリック IP アドレスを変更できます。
-
-.手順
-. クラウド プロバイダーの指示に従って、エージェント インスタンスのローカル IP アドレスまたはパブリック IP アドレス (あるいはその両方) を変更します。
-. エージェント インスタンスを再起動して、新しいパブリック IP アドレスをコンソールに登録します。
-. プライベート IP アドレスを変更した場合は、 Cloud Volumes ONTAP構成ファイルのバックアップ場所を更新して、バックアップがエージェントの新しいプライベート IP アドレスに送信されるようにします。
-+
-各Cloud Volumes ONTAPシステムのバックアップ場所を更新します。
-
-+
-.. Cloud Volumes ONTAP CLI から、権限レベルを高度に設定します。
-
-
-
-
-[listing]
-----
-set -privilege advanced
-----
-. 現在のバックアップ ターゲットを表示するには、次のコマンドを実行します。
-
-
-[listing]
-----
-system configuration backup settings show
-----
-. バックアップ ターゲットの IP アドレスを更新するには、次のコマンドを実行します。
-
-
-[listing]
-----
-system configuration backup settings modify -destination <target-location>
-----
-
-
-== エージェントのURIを編集する
-
-エージェントの Uniform Resource Identifier (URI) を追加および削除できます。
-
-.手順
-. *管理 > エージェント*を選択します。
-. *概要*ページで、コンソール エージェントのアクション メニューを選択し、*エージェントの編集*を選択します。
-+
-編集するには、コンソール エージェントがアクティブである必要があります。
-
-. エージェント URI を表示するには、*エージェント URI* バーを展開します。
-. URI を追加および削除し、[適用] を選択します。
 

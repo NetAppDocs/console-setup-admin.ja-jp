@@ -4,7 +4,7 @@ permalink: reference-agent-default-config.html
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
 summary: AWS、Azure、Google Cloud 全体の標準展開（インターネット アクセスあり）とオンプレミス環境の制限付き展開（インターネット アクセスなし）のコンソール エージェントのデフォルト構成について説明します。 
 ---
-= コンソールエージェントのデフォルト構成
+= NetApp Console のコンソールエージェントのデフォルト設定
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -97,10 +97,10 @@ AWS、Azure、Google Cloud 全体の標準展開（インターネット アク�
 
 === コンソールエージェントサービス
 
-* コンソール エージェント サービスの名前は occm です。
-* occm サービスは MySQL サービスに依存します。
+* Console エージェントサービスの名前は `occm`です。
+*  `occm`サービスはMySQLサービスに依存しています。
 +
-MySQL サービスがダウンしている場合は、occm サービスもダウンします。
+MySQL サービスがダウンしている場合、 `occm` サービスも停止しています。
 
 
 

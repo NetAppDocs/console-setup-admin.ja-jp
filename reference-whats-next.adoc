@@ -4,7 +4,7 @@ permalink: reference-whats-next.html
 keywords: standard mode, what you can do 
 summary: NetApp Consoleを標準モードでログインしてセットアップしたので、ユーザーはストレージ システムを作成および検出し、 NetAppデータ サービスを使用できるようになります。 
 ---
-= 次にできること（標準モード）
+= 標準モードのNetApp Consoleの次のステップ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-install-agent-google-manual.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, manual install, create connector, gcp installation, gcp connector 
 summary: 独自の Linux ホストに Console エージェントを手動でインストールするには、ホストの要件を確認し、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にし、Console をインストールして、準備した権限を付与する必要があります。 
 ---
-= Google Cloud にコンソール エージェントを手動でインストールする
+= Google Cloud にコンソールエージェントを手動でデプロイする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,12 @@ summary: 独自の Linux ホストに Console エージェントを手動でイ�
 
 
 [role="lead"]
-独自の Linux ホストに Console エージェントを手動でインストールするには、ホストの要件を確認し、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にし、Console をインストールして、準備した権限を付与する必要があります。
+コンソールエージェントを独自のLinuxホストに手動でデプロイするには、ホストの要件を確認し、ネットワークを設定し、Google Cloudの権限を準備し、Google Cloud APIを有効にし、NetApp Consoleをインストールしてから、準備した権限を付与する必要があります。
+
+Google Cloud にエージェントを導入すると、選択した VPC 内で Linux と NetApp Console エージェントソフトウェアを実行する VM インスタンスが起動します。
 
 .開始する前に
-* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
+* link:concept-agents.html["コンソールエージェントについて学ぶ"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 

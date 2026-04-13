@@ -4,7 +4,7 @@ permalink: reference-agent-maint-console-proxy.html
 keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
 summary: コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。 
 ---
-= 透過プロキシコマンド
+= NetApp Console のコンソールエージェントの透過プロキシコマンド
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

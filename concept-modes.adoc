@@ -559,9 +559,10 @@ APIエンドポイント:: API 呼び出しは、 Console エージェント仮�
 
 プライベートモードは、NetApp Support Siteから「オフライン」インストーラーをダウンロードすることで利用できます。
 
-+ link:task-quick-start-private-mode.html["プライベートモードの使用を開始する方法を確認する"].
+link:task-quick-start-private-mode.html["プライベートモードの使用を開始する方法を確認する"]。
 
-+ 注： https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]または https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]でNetApp Consoleを使用する場合は、それらの環境で開始するための個別の手順に従う必要があります。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html["AWS Secret CloudまたはTop Secret CloudでCloud Volumes ONTAPを使い始める方法を学ぶ"^]
+
+NOTE: NetApp Console を https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^]または https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^]で使用する場合は、それぞれの環境で作業を開始するための個別の手順に従ってください。 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html["AWS Secret CloudまたはTop Secret CloudでCloud Volumes ONTAPを使い始める方法を学ぶ"^]
 
 
 

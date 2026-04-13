@@ -4,7 +4,7 @@ permalink: task-install-agent-on-prem-ova.html
 keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install 
 summary: VMWare ユーザーの場合は、OVA を使用して VCenter にコンソール エージェントをインストールできます。  OVA のダウンロードまたは URL は、NetApp Consoleから入手できます。 
 ---
-= VCenter を使用してオンプレミスにコンソール エージェントをインストールする
+= vCenterを使用してオンプレミスにConsoleエージェントをデプロイする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: VMWare ユーザーの場合は、OVA を使用して VCenter にコン
 
 
 [role="lead"]
-VMWare ユーザーの場合は、OVA を使用して VCenter にコンソール エージェントをインストールできます。  OVA のダウンロードまたは URL は、NetApp Consoleから入手できます。
+VMwareユーザーであれば、OVAを使用してvCenterにConsoleエージェントをデプロイできます。OVAのダウンロードまたはURLは、NetApp Consoleから入手できます。
 
 
-NOTE: VCenter ツールと共にコンソール エージェントをインストールすると、VM Web コンソールを使用してメンテナンス タスクを実行できます。link:task-agent-vm-config.html["エージェントの VM コンソールの詳細について説明します。"]
+NOTE: vCenterツールとともにConsoleエージェントをデプロイすると、VMのWebコンソールを使用してメンテナンス作業を実行できます。link:task-agent-vm-config.html["エージェントの VM コンソールの詳細について説明します。"]
 
 
 
@@ -450,7 +450,7 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 
 == VCenter環境にコンソールエージェントをインストールする
 
-NetApp は、VCenter 環境へのコンソール エージェントのインストールをサポートしています。 OVA ファイルには、VMware 環境に展開できる事前構成済みの VM イメージが含まれています。ファイルのダウンロードまたは URL の展開は、 NetApp Consoleから直接行えます。コンソール エージェント ソフトウェアと自己署名証明書が含まれています。
+NetAppは、vCenter環境へのConsoleエージェントのインストールをサポートしています。OVAファイルには、VMware環境にデプロイできる事前設定済みのVMイメージが含まれています。ファイルのダウンロードまたはURLデプロイは、NetApp Consoleから直接利用できます。これには、Consoleエージェントソフトウェアと自己署名証明書が含まれます。
 
 
 
@@ -466,12 +466,12 @@ OVA をダウンロードするか、 NetApp Consoleから OVA URL を直接コ�
 
 
 
-=== VCenterにエージェントを展開する
+=== エージェントをVCenter環境にデプロイします
 
 エージェントを展開するには、VCenter 環境にログインします。
 
 .手順
-. 環境で必要な場合は、自己署名証明書を信頼できる証明書にアップロードします。インストール後にこの証明書を置き換えます。link:task-installing-https-cert.html["自己署名証明書を置き換える方法を学びます。"]
+. 環境で必要な場合は、自己署名証明書を信頼済み証明書にアップロードします。この証明書はインストール後に置き換えます。
 . コンテンツ ライブラリまたはローカル システムから OVA を展開します。
 +
 |===

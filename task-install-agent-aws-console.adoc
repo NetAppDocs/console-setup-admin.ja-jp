@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-aws-console.html 
-keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
-summary: NetApp Consoleから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。 
+keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console 
+summary: AWSのコンソール エージェントは、NetApp Consoleから直接デプロイできます。ConsoleからAWSにコンソール エージェントをデプロイする前に、ネットワークをセットアップし、AWSの権限を準備する必要があります。 
 ---
-= NetApp ConsoleからAWSにコンソールエージェントを作成する
+= NetApp ConsoleからAWSにConsoleエージェントをデプロイする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,12 @@ summary: NetApp Consoleから直接 AWS にコンソール エージェントを
 
 
 [role="lead"]
-NetApp Consoleから直接 AWS にコンソール エージェントを作成できます。コンソールから AWS にコンソールエージェントを作成する前に、ネットワークを設定し、AWS 権限を準備する必要があります。
+AWSのコンソール エージェントは、NetApp Consoleから直接デプロイできます。ConsoleからAWSにコンソール エージェントをデプロイする前に、ネットワークをセットアップし、AWSの権限を準備する必要があります。
+
+AWSにエージェントをデプロイすると、選択したVPC内でLinuxとNetApp Consoleエージェントソフトウェアを実行するEC2インスタンスが起動します。
 
 .開始する前に
-* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
+* link:concept-agents.html["コンソールエージェントについて学ぶ"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 
@@ -341,7 +343,9 @@ link:reference-ports-aws.html["AWS のセキュリティグループルールを
 +
 []
 ====
-まだ使用している場合はlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、チェックボックスをオフにして検証チェックをスキップします。
+** まだ使用している場合はlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、チェックボックスをオフにして検証チェックをスキップします。
+** インストール中、NetAppは、エージェントホストに、ディスク全体の空き容量の少なくとも80パーセントがあることを確認します。これには、 `/opt`に48 GB、 `/var`に32 GBが含まれます（合計80 GB）。インストール後、ディスク全体の少なくとも20パーセントが利用可能である必要があり、これには、 `/opt`に12 GB、 `/var`に8 GBが含まれます（合計20 GB）。
+
 
 ====
 . *追加*を選択します。

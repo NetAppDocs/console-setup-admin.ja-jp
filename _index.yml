@@ -38,8 +38,8 @@ indexpage:
       url: task-iam-manage-members-permissions.html
   - title: コンソールエージェントを展開する
     links:
-    - title: コンソールエージェントについて学ぶ
-      url: concept-agents.html
+    - title: Console エージェントの導入方法を選択
+      url: "/concept-agent-install-options.html"
     - title: オンプレミスにエージェントを展開する
       url: "/task-install-agent-on-prem.html"
     - title: AWSにエージェントをデプロイする
@@ -49,7 +49,7 @@ indexpage:
     - title: Google Cloud にエージェントをデプロイする
       url: "/task-install-agent-google-console-gcloud.html"
     - title: コンソールエージェントのメンテナンス
-      url: task-maintain-agents.html
+      url: "/task-maintain-agents.html"
   - title: セキュリティとコンプライアンス
     links:
     - title: IDプロバイダーとの連携

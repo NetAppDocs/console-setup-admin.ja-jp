@@ -1,0 +1,17 @@
+= Console エージェント 4.6.0
+:allow-uri-read: 
+
+
+
+
+=== Console エージェント 4.6.0
+
+4.6.0 リリースでは、標準モードと制限モードの両方がサポートされています。
+
+コンソール エージェントのこのリリースには、セキュリティの改善とバグ修正に加えて、次の新機能が含まれています。
+
+.必要なディスク容量の構成チェックのサポート
+構成チェックを使用することで、Consoleエージェントに必要なディスク容量が確保されていることを検証できます。ConsoleまたはAgentメンテナンスコンソールから構成チェックを実行できます。link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["NetApp Console エージェントで構成チェックを実行する方法について詳しくはこちらをご覧ください。"^]
+
+.ISOを使用してvCenterにデプロイされたConsoleエージェントをアップグレードする
+OVA を使用して vCenter に Console エージェントをデプロイした場合、ISO を VM にマウントし、VM メンテナンスコンソールからアップグレードを実行することで、新しいバージョンにアップグレードできます。link:https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-agent.html["vCenter でデプロイされた Console エージェントをアップグレードする方法について説明します"^]

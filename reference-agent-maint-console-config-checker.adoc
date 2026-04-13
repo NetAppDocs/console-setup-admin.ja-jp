@@ -4,7 +4,7 @@ permalink: reference-agent-maint-console-config-checker.html
 keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
 summary: コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。 
 ---
-= メンテナンスコンソールによるエージェントの検証
+= NetApp Console のメンテナンスコンソールを使用したコンソールエージェントの検証
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -39,9 +39,19 @@ summary: コンソール エージェント メンテナンス コンソール�
 `--services <comma-separated list of services to validate>` - *必須* - 
 
 [role="quick-margin-para"]
-検証するサービスを 1 つ以上選択します。有効なサービス名は次のとおりです：*`PLATFORM`これにより、必要な Console エンドポイントへのネットワーク接続と、Console エージェントに必要なポートが開いているかどうかが検証されます。
+検証するサービスを1つ以上選択してください。有効なサービス名は次のとおりです：
 
-`--validationTypes <comma-separated list validation types to run>`--*必須*-- 実行する検証タイプを 1 つ以上選択します。有効な検証タイプは次のとおりです: * `NETWORK`必要なコンソール エンドポイントへのネットワーク接続を検証します。
+*`PLATFORM`これは、必要なNetApp Consoleエンドポイントへのネットワーク接続を検証するとともに、NetApp Consoleエージェントに必要なポートが開いているかどうかも検証します。
+
+`--validationTypes <comma-separated list validation types to run>` --*REQUIRED*-- 実行する検証タイプを1つ以上選択してください。有効な検証タイプは次のとおりです：
+
+* `NETWORK`これは、必要な Console エンドポイントへのネットワーク接続を検証します。
+* `HARDWARE`これは、エージェントホストが NetApp Console エージェントの最小ハードウェア要件を満たしていることを検証するものです。
++
+
+NOTE: インストール中、NetAppは、エージェントホストに、ディスク全体の空き容量の少なくとも80パーセントがあることを確認します。これには、 `/opt`に48 GB、 `/var`に32 GBが含まれます（合計80 GB）。インストール後、ディスク全体の少なくとも20パーセントが利用可能である必要があり、これには、 `/opt`に12 GB、 `/var`に8 GBが含まれます（合計20 GB）。
+
+
 
 `--proxy <url>`--*オプション*--
 
@@ -57,20 +67,22 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 === 構成チェッカーの検証例
 
-.基本的な検証:
+以下の例には、ネットワーク接続、必要なポート、ハードウェア要件の検証と、プロキシ サーバおよびカスタム証明書のさまざまな組み合わせの使用が含まれます。
+
+.ネットワーク接続性およびハードウェア要件の検証：
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE
 ----
 .エージェントにプロキシ サーバーが使用される場合の検証:
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --proxy http://proxy.company.com:8080
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --proxy http://proxy.company.com:8080
 ----
 .エージェントに証明書が使用される場合の検証:
 [source, cli]
 ----
-./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK --certs /path/to/cert1.pem,/path/to/cert2.pem
+./agent-maint-console config-checker validate --services PLATFORM --validationTypes NETWORK,HARDWARE --certs /path/to/cert1.pem,/path/to/cert2.pem
 ----
 
 

@@ -56,7 +56,7 @@ NetApp は、フェデレーション用に次のプロトコルと ID プロバ
 
 .プロトコル
 * link:task-federation-adfs.html["アクティブ ディレクトリ フェデレーション サービス (AD FS)"]
-* link:link:task-federation-saml.html["セキュリティアサーションマークアップ言語（SAML）IDプロバイダー"]
+* link:task-federation-saml.html["セキュリティアサーションマークアップ言語（SAML）IDプロバイダー"]
 
 
 .アイデンティティプロバイダー

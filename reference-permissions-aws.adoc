@@ -4,7 +4,7 @@ permalink: reference-permissions-aws.html
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions 
 summary: NetApp ConsoleがAWS でエージェントを起動すると、その AWS アカウント内のリソースとプロセスを管理するための権限をエージェントに付与するポリシーがエージェントにアタッチされます。エージェントは、権限を使用して、EC2、S3、CloudFormation、IAM、キー管理サービスなどの複数の AWS サービスへの API 呼び出しを実行します。 
 ---
-= コンソールエージェントのAWS権限
+= NetApp Console エージェントの AWS 権限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

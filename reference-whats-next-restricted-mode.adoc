@@ -4,7 +4,7 @@ permalink: reference-whats-next-restricted-mode.html
 keywords: restricted mode, what you can do 
 summary: NetApp Consoleを制限モードで起動して実行すると、制限モードでサポートされているサービスの使用を開始できます。 
 ---
-= 次にできること（制限モード）
+= 制限モードでの NetApp Console の次のステップ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

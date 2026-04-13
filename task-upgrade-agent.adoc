@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-upgrade-agent.html 
-keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
-summary: Console エージェントは、送信接続がある場合に自動的にアップグレードされます。Console エージェントに送信接続がない場合は、手動でアップグレードできます（プライベート モードなど）。 
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade, vcenter upgrade, OVA upgrade, ISO upgrade, vsphere upgrade 
+summary: コンソールエージェントは、アウトバウンド接続が確立されると自動的にアップグレードされます。コンソールエージェントにアウトバウンド接続機能がない場合は、手動でアップグレードできます。エージェントがvCenterに導入されている場合は、ISOを使用してアップグレードできます。 
 ---
-= コンソールエージェントのアップグレードを管理する
+= コンソールエージェントをアップグレードする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Console エージェントは、送信接続がある場合に自動的
 
 
 [role="lead"]
-Console エージェントは、送信接続がある場合に自動的にアップグレードされます。Console エージェントに送信接続がない場合は、手動でアップグレードできます（プライベート モードなど）。
+Consoleエージェントは、アウトバウンド接続がある場合に自動的にアップグレードされます。Consoleエージェントにアウトバウンド接続がない場合は、手動でアップグレードできます。OVAを使用してvCenterにエージェントを導入した場合は、ISOをVMにマウントすることで新しいバージョンにアップグレードできます。
 
 
 
@@ -44,4 +44,47 @@ sudo /path/NetApp-Console-Agent-Offline-<version>
 ここで、<version> はダウンロードしたエージェントのバージョンです。
 
 . アップグレードが完了したら、*管理 > サポート > エージェント* に移動してエージェントのバージョンを確認できます。
+
+
+
+
+== ISOを使用してvCenterにデプロイされたConsoleエージェントをアップグレードする
+
+コンソールエージェントがOVAを使用してvCenterにデプロイされている場合、ISOをVMにマウントし、VMメンテナンスコンソールからアップグレードを実行することで、新しいバージョンにアップグレードできます。
+
+開始する前に、ロールバックが必要になった場合に備えて、VMのスナップショットを取得してください。
+
+.手順
+.  https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetAppサポート サイト"^]からConsoleエージェントISOをダウンロードします。
+. vCenterからアクセス可能なデータストアにISOをアップロードします。
+. vSphereクライアントで、vCenterにログインし、コンソールエージェントをホストするVMインスタンスを選択します。
+. ISOをVMにマウントします。
++
+.. VMを右クリックして*設定の編集*を選択します。
+.. CD/DVDドライブを選択し、*Datastore ISO File*を選択します。
+.. Console エージェントの ISO ファイルを参照して選択します。
+.. * Connect * が有効になっていることを確認してください。
+.. 「OK」を選択します。
+
+
+. VMを選択した状態で、*Webコンソールを起動*を選択します。
+. ユーザー名 `maint`と、OVAの導入時に指定したメンテナンスパスワードを使用して、メンテナンスコンソールにログインします。
+.  `1`を入力して、*システム設定*メニューを開きます。
+.  `3`を入力して*アップグレード*を選択し、画面の指示に従ってください。
++
+このアップグレードにより、更新されたOS、Dockerランタイム、およびConsoleエージェントサービスがインストールされます。カーネルが更新されると、VMは自動的に再起動します。
+
+. アップグレードが完了したら、NetApp Consoleエージェントが正しく動作していることを確認してください：
++
+.. vSphereクライアントで、VMの電源がオンになっており、Webコンソールにアクセスできることを確認します。
+.. NetApp コンソールで、*管理 > サポート > エージェント*に移動し、エージェントのバージョンが新しいバージョンを反映していることを確認します。
+
+
+. VMからISOをアンマウントします：
++
+.. vSphereクライアントで、VMを右クリックして*設定の編集*を選択します。
+.. CD/DVDドライブを選択し、*Client Device*を選択するか、データストアISOを取り外してください。
+.. 「OK」を選択します。
+
+
 

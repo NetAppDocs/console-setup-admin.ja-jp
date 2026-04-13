@@ -4,7 +4,7 @@ permalink: task-install-agent-google-console-gcloud.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
 summary: NetAppコンソールから、または Google Cloud を使用して Google Cloud でコンソール エージェントを作成するには、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。 
 ---
-= NetApp Consoleから Google Cloud にコンソール エージェントを作成する
+= Google Cloud の NetApp Console からコンソール エージェントをデプロイします
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,9 @@ summary: NetAppコンソールから、または Google Cloud を使用して Go
 
 
 [role="lead"]
-コンソールから Google Cloud にコンソール エージェントを作成できます。ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。
+NetApp Console から Google Cloud に Console エージェントをデプロイできます。ネットワークの設定、Google Cloud のアクセス許可の準備、Google Cloud API の有効化を行い、その後 Console エージェントをデプロイする必要があります。
+
+Google Cloud にエージェントを導入すると、選択した VPC 内で Linux と NetApp Console エージェントソフトウェアを実行する VM インスタンスが起動します。
 
 .開始する前に
 * あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
@@ -441,7 +443,9 @@ link:reference-ports-gcp.html["Google Cloud のファイアウォール ルー�
 +
 []
 ====
-まだ使用している場合はlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、チェックボックスをオフにして検証チェックをスキップします。
+** まだ使用している場合はlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、チェックボックスをオフにして検証チェックをスキップします。
+** インストール中、NetAppは、エージェントホストに、ディスク全体の空き容量の少なくとも80パーセントがあることを確認します。これには、 `/opt`に48 GB、 `/var`に32 GBが含まれます（合計80 GB）。インストール後、ディスク全体の少なくとも20パーセントが利用可能である必要があり、これには、 `/opt`に12 GB、 `/var`に8 GBが含まれます（合計20 GB）。
+
 
 ====
 . *追加*を選択します。

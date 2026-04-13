@@ -4,7 +4,7 @@ permalink: reference-whats-next-private-mode.html
 keywords: private mode, supported features for private mode 
 summary: プライベート モードでNetApp Consoleを起動して実行した後、プライベート モードでサポートされているサービスの使用を開始できます。 
 ---
-= 次にできること（プライベートモード）
+= プライベートモードでのNetApp Consoleの次のステップ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

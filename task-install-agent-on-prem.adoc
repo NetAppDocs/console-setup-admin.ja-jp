@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-on-prem.html 
-keywords: install connector, on prem connector installation, on prem connector, install connector on prem, manual install 
-summary: オンプレミスにコンソール エージェントをインストールし、ログインして、コンソール組織で動作するように設定します。 
+keywords: deploy agent, on prem agent deployment, on prem agent, deploy connector on prem, manual deployment 
+summary: コンソールエージェントをオンプレミスにデプロイし、ログインしてコンソール組織と連携するように設定します。 
 ---
-= オンプレミスにコンソールエージェントを手動でインストールする
+= Console エージェントをオンプレミスに手動でデプロイする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: オンプレミスにコンソール エージェントをインスト�
 
 
 [role="lead"]
-オンプレミスにコンソール エージェントをインストールし、ログインして、コンソール組織で動作するように設定します。
+コンソールエージェントをオンプレミスにデプロイし、ログインしてコンソール組織と連携するように設定します。
 
 
-NOTE: VMWare ユーザーの場合は、OVA を使用して VCenter にコンソール エージェントをインストールできます。link:task-install-agent-on-prem-ova.html["VCenter にエージェントをインストールする方法の詳細について説明します。"]
+NOTE: VMwareユーザーであれば、OVAを使用してvCenterにConsoleエージェントをデプロイできます。link:task-install-agent-on-prem-ova.html["vCenterへのエージェントのデプロイの詳細については、こちらをご覧ください。"]
 
 インストールする前に、ホスト (VM または Linux ホスト) が要件を満たしていること、およびコンソール エージェントがインターネットと対象ネットワークへの送信アクセスできることを確認する必要があります。  NetAppデータ サービス、またはCloud Volumes ONTAPなどのクラウド ストレージ オプションを使用する予定の場合は、コンソール エージェントがユーザーに代わってクラウド内でアクションを実行できるように、クラウド プロバイダーで資格情報を作成してコンソールに追加する必要があります。
 

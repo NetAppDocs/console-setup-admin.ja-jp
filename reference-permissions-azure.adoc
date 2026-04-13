@@ -4,7 +4,7 @@ permalink: reference-permissions-azure.html
 keywords: permissions, azure, azure permissions, bluexp 
 summary: NetApp ConsoleがAzure でコンソール エージェントを起動すると、その Azure サブスクリプション内のリソースとプロセスを管理するための権限をエージェントに提供するカスタム ロールが VM にアタッチされます。エージェントは、アクセス許可を使用して、複数の Azure サービスへの API 呼び出しを実行します。 
 ---
-= コンソールエージェントのAzure権限
+= NetApp Console エージェントの Azure 権限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

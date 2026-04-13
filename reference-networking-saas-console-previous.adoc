@@ -4,7 +4,7 @@ permalink: reference-networking-saas-console-previous.html
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, netapp console 
 summary: コンソールとインストールするエージェントが適切に機能するには、適切なネットワーク アクセスがあることを確認する必要があります。 
 ---
-= 3.9.55 以前に必要なネットワーク アクセス
+= NetApp Console 3.9.55以前のネットワークアクセス
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
