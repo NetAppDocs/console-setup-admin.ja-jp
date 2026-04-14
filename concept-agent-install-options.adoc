@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-agent-install-options.html 
 keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, 
-summary: NetApp Console、クラウド プロバイダのマーケットプレイス、または Linux ホストへのソフトウェアの手動インストールを使用して、Console エージェントをデプロイします。デプロイ方法によって、ホストの制御方法と起動の速さが決まります。 
+summary: NetApp Console、クラウド プロバイダのマーケットプレイス、または Linux ホストへのソフトウェアの手動インストールを使用して、Console エージェントをデプロイします。デプロイ方法によってエージェントホストの保守方法が決まり、使用している NetApp Console デプロイモードによって異なります。 
 ---
 = Console エージェントの導入方法を選択
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: NetApp Console、クラウド プロバイダのマーケットプレ�
 
 
 [role="lead"]
-NetApp Console、クラウド プロバイダのマーケットプレイス、または Linux ホストへのソフトウェアの手動インストールを使用して、Console エージェントをデプロイします。デプロイ方法によって、ホストに対する制御権と起動の迅速さが決まります。
+NetApp Console、クラウド プロバイダのマーケットプレイス、または Linux ホストへのソフトウェアの手動インストールを使用して、Console エージェントをデプロイします。デプロイ方法によってエージェントホストの保守方法が決まり、使用している NetApp Console デプロイモードによって異なります。
 
 クラウド環境へのデプロイの場合、エージェントはAmazon Web Services（AWS）、Microsoft Azure、またはGoogle Cloudにデプロイできます。
 

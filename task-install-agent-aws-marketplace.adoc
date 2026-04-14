@@ -19,7 +19,7 @@ AWS MarketplaceからAWSに直接Consoleエージェントをデプロイしま�
 AWSにエージェントをデプロイすると、選択したVPC内でLinuxとNetApp Consoleエージェントソフトウェアを実行するEC2インスタンスが起動します。
 
 .開始する前に
-* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
+* link:concept-agent-install-options.html#agent-marketplace-deploy["AWS Marketplaceからデプロイするタイミングを学ぶ"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 

@@ -19,7 +19,7 @@ AWS で実行されている Linux ホストに Console エージェントを手
 AWSにエージェントをデプロイすると、選択したVPC内でLinuxとNetApp Consoleエージェントソフトウェアを実行するEC2インスタンスが起動します。
 
 .開始する前に
-* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy["AWS で手動でデプロイするタイミングを確認する"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 

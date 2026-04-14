@@ -22,7 +22,7 @@ Azureにエージェントを導入すると、選択したVNet内でLinuxを実
 NOTE: Cloud Volumes ONTAPシステムを管理するコンソールエージェントを同じAzureリージョン、または https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure リージョン ペア"^]にデプロイします。これにより、Cloud Volumes ONTAPとそれに関連付けられたストレージアカウント間でAzure Private Link接続が使用されます。
 
 .開始する前に
-* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
+* link:concept-agent-install-options.html#agent-console-deploy["コンソールからいつ導入するかを確認する"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 

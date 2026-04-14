@@ -66,6 +66,42 @@ sidebar:
         url: "/task-install-private-mode.html"
       - title: 次にできること
         url: "/reference-whats-next-private-mode.html"
+    - title: コンソールエージェントを展開する
+      entries:
+      - title: Console エージェントの導入方法を選択
+        url: "/concept-agent-install-options.html"
+      - title: AWS
+        entries:
+        - title: NetApp ConsoleからAWSにコンソールエージェントを作成する
+          url: "/task-install-agent-aws-console.html"
+        - title: AWS Marketplace から AWS に Console エージェントを作成します。
+          url: "/task-install-agent-aws-marketplace.html"
+        - title: AWSにConsoleエージェントを手動でインストールする
+          url: "/task-install-agent-aws-manual.html"
+      - title: Azure
+        entries:
+        - title: NetApp Consoleから Azure にコンソール エージェントを作成する
+          url: "/task-install-agent-azure-console.html"
+        - title: Azure Marketplace から Azure に Console エージェントを作成します。
+          url: "/task-install-agent-azure-marketplace.html"
+        - title: Azure に Console エージェントを手動でインストールする
+          url: "/task-install-agent-azure-manual.html"
+      - title: Google Cloud
+        entries:
+        - title: NetApp Consoleから Google Cloud にコンソール エージェントを作成する
+          url: "/task-install-agent-google-console-gcloud.html"
+        - title: Google Cloud から Google Cloud に NetApp Console エージェントを作成します
+          url: "/task-install-agent-google-gcloud.html"
+        - title: Google Cloud に Console エージェントを手動でインストールします
+          url: "/task-install-agent-google-manual.html"
+      - title: オンプレミスにエージェントをインストールする
+        entries:
+        - title: オンプレミスにコンソールエージェントを手動でインストールする
+          url: "/task-install-agent-on-prem.html"
+        - title: オンプレミスのVCenterにNetApp Consoleエージェントをインストールします
+          url: "/task-install-agent-on-prem-ova.html"
+        - title: オンプレミスのコンソールエージェントのポート
+          url: "/reference-ports-on-prem.html"
   - title: NetApp Consoleを使用する
     entries:
     - title: NetApp Consoleにログイン
@@ -88,48 +124,6 @@ sidebar:
       entries:
       - title: コンソールエージェントについて学ぶ
         url: "/concept-agents.html"
-      - title: コンソールエージェントを展開する
-        entries:
-        - title: Console エージェントの導入方法を選択
-          url: "/concept-agent-install-options.html"
-        - title: AWS
-          entries:
-          - title: AWS のコンソールエージェントのインストールオプション
-            url: "/concept-install-aws.html"
-          - title: NetApp ConsoleからAWSにコンソールエージェントを作成する
-            url: "/task-install-agent-aws-console.html"
-          - title: AWS Marketplace から AWS に Console エージェントを作成します。
-            url: "/task-install-agent-aws-marketplace.html"
-          - title: AWSにConsoleエージェントを手動でインストールする
-            url: "/task-install-agent-aws-manual.html"
-        - title: Azure
-          entries:
-          - title: Azure の Console エージェントのインストール オプション
-            url: "/concept-install-azure.html"
-          - title: NetApp Consoleから Azure にコンソール エージェントを作成する
-            url: "/task-install-agent-azure-console.html"
-          - title: Azure Marketplace から Azure に Console エージェントを作成します。
-            url: "/task-install-agent-azure-marketplace.html"
-          - title: Azure に Console エージェントを手動でインストールする
-            url: "/task-install-agent-azure-manual.html"
-        - title: Google Cloud
-          entries:
-          - title: Google Cloud のコンソール エージェントのインストール オプション
-            url: "/concept-install-google.html"
-          - title: NetApp Consoleから Google Cloud にコンソール エージェントを作成する
-            url: "/task-install-agent-google-console-gcloud.html"
-          - title: Google Cloud から Google Cloud に NetApp Console エージェントを作成します
-            url: "/task-install-agent-google-gcloud.html"
-          - title: Google Cloud に Console エージェントを手動でインストールします
-            url: "/task-install-agent-google-manual.html"
-        - title: オンプレミスにエージェントをインストールする
-          entries:
-          - title: オンプレミスにコンソールエージェントを手動でインストールする
-            url: "/task-install-agent-on-prem.html"
-          - title: オンプレミスのVCenterにNetApp Consoleエージェントをインストールします
-            url: "/task-install-agent-on-prem-ova.html"
-          - title: オンプレミスのコンソールエージェントのポート
-            url: "/reference-ports-on-prem.html"
       - title: コンソールエージェントのメンテナンス
         entries:
         - title: 手動でインストールされたNetApp Consoleエージェントを保守する

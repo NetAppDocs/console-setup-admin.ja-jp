@@ -19,7 +19,7 @@ summary: 独自の Linux ホストに Console エージェントを手動でイ�
 Google Cloud にエージェントを導入すると、選択した VPC 内で Linux と NetApp Console エージェントソフトウェアを実行する VM インスタンスが起動します。
 
 .開始する前に
-* link:concept-agents.html["コンソールエージェントについて学ぶ"]。
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy["Google Cloud で手動でデプロイするタイミングを学ぶ"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 

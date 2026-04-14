@@ -1198,37 +1198,7 @@
   <block id="a97fa38afe9727184ada1ed0c4bf8cbf" category="list-text"><block ref="a97fa38afe9727184ada1ed0c4bf8cbf" category="inline-link-macro-rx"></block></block>
   <block id="d0be151a63fab72d6333774c4ad643bb" category="inline-link">NetApp ConsoleIAMのAPIについて学ぶ</block>
   <block id="d7726716920c51dac9e8d3b944fb1d9c" category="list-text"><block ref="d7726716920c51dac9e8d3b944fb1d9c" category="inline-link-rx"></block></block>
-  <block id="00755108fad233add4100be86dce2451" category="summary">AWS でコンソールエージェントを作成する方法はいくつかあります。  NetApp Consoleから直接行うのが最も一般的な方法です。</block>
-  <block id="7ff9f8e2467774df163161a38d2d5040" category="doc">AWS のコンソールエージェントのインストールオプション</block>
-  <block id="b5afc81c4f24b143224e304b939a3f6c" category="paragraph">次のインストール オプションが利用可能です。</block>
-  <block id="b9dd01a6aae803f666e75d60b5cc37fe" category="inline-link-macro">コンソールから直接コンソールエージェントを作成する</block>
-  <block id="22ca43ce5c5a872fcead2b9795d43ce4" category="list-text"><block ref="4cac40a6f38a644ae4e3211385f3144e" category="inline-link-macro-rx"></block>（これが標準オプションです）</block>
-  <block id="f27c252d931beb3466d3231006b71803" category="paragraph">このアクションにより、選択した VPC で Linux とコンソール エージェント ソフトウェアを実行する EC2 インスタンスが起動されます。</block>
-  <block id="1515391ee07716093ddb994cd9906006" category="inline-link-macro">AWS Marketplaceからコンソールエージェントを作成する</block>
-  <block id="b0a755c889be10fff38496428b62e124" category="list-text"><block ref="b0a755c889be10fff38496428b62e124" category="inline-link-macro-rx"></block></block>
-  <block id="b839e2143764191ce8726714fcf0e54c" category="paragraph">このアクションでは、Linux とコンソールエージェントソフトウェアを実行する EC2 インスタンスも起動しますが、デプロイメントはコンソールからではなく AWS Marketplace から直接開始されます。</block>
-  <block id="7ec389ef03b4378689ec8afd5b977499" category="inline-link-macro">自分のLinuxホストにソフトウェアをダウンロードして手動でインストールする</block>
-  <block id="ce8b5514801557c28339a07e7885738d" category="list-text"><block ref="ce8b5514801557c28339a07e7885738d" category="inline-link-macro-rx"></block></block>
-  <block id="a189e78df125d3702fb17473d7a17faa" category="paragraph">選択したインストール オプションは、インストールの準備方法に影響します。これには、AWS でリソースを認証および管理するために必要な権限をコンソールに付与する方法が含まれます。</block>
-  <block id="f67190f28c8f18c6676794f4acd943fc" category="summary">Azure でコンソール エージェントを作成するには、いくつかの方法があります。  NetApp Consoleから直接行うのが最も一般的な方法です。</block>
-  <block id="dcd94e7f09b8c058ae8084e8e5730bbb" category="doc">Azure のコンソール エージェントのインストール オプション</block>
-  <block id="f73d744dbe9e744eb8f73a3bab9f243e" category="inline-link-macro">NetApp Consoleから直接コンソールエージェントを作成する</block>
-  <block id="4d116474327ab97148d8a69fd11379ea" category="list-text"><block ref="e0fdd18000ece681beed8a0793eff329" category="inline-link-macro-rx"></block>（これが標準オプションです）</block>
-  <block id="079e5f76242a76ddceeb5ae46398071c" category="paragraph">このアクションにより、選択した VNet で Linux とコンソール エージェント ソフトウェアを実行する VM が起動します。</block>
   <block id="2dd5916ed68f963e9c5529d69a4de5fa" category="inline-link-macro">Azure Marketplace からコンソール エージェントを作成する</block>
-  <block id="b54d9f5a24d2e6b2b731b2862685ce97" category="list-text"><block ref="b54d9f5a24d2e6b2b731b2862685ce97" category="inline-link-macro-rx"></block></block>
-  <block id="cea96889fec9e311da2265fdf2e92490" category="paragraph">このアクションでは、Linux とコンソール エージェント ソフトウェアを実行する VM も起動しますが、展開はコンソールからではなく、Azure Marketplace から直接開始されます。</block>
-  <block id="9e0a66536136cc55db9b005faf3fa26e" category="list-text"><block ref="9e0a66536136cc55db9b005faf3fa26e" category="inline-link-macro-rx"></block></block>
-  <block id="320a91e2547bc28be93b76779dc849b4" category="paragraph">選択したインストール オプションは、インストールの準備方法に影響します。これには、Azure でリソースを認証および管理するために必要なアクセス許可をコンソール エージェントに付与する方法が含まれます。</block>
-  <block id="011286419a3e5b900c9f64647edebdf7" category="summary">Google Cloud でコンソール エージェントを作成するには、いくつかの方法があります。  NetApp Consoleから直接行うのが最も一般的な方法です。</block>
-  <block id="89facd2099770d471c8de70fdb5d0651" category="doc">Google Cloud のコンソール エージェントのインストール オプション</block>
-  <block id="1a208b984fe61bb9d1e4e6b026e30354" category="list-text"><block ref="84693cca73c9981e6b563eb4572174e7" category="inline-link-macro-rx"></block>（これが標準オプションです）</block>
-  <block id="efbe29648b3d8def21619f8bba35784f" category="paragraph">このアクションにより、選択した VPC で Linux とコンソール エージェント ソフトウェアを実行する VM インスタンスが起動します。</block>
-  <block id="f47b616e0890c8a8507745d52fc62533" category="inline-link-macro">Google プラットフォームを使用してコンソール エージェントを作成する</block>
-  <block id="952e50ce3636bd2393f109405c59b8c0" category="list-text"><block ref="952e50ce3636bd2393f109405c59b8c0" category="inline-link-macro-rx"></block></block>
-  <block id="9f0f4ef7b4fff87cc68ce1185ff944ce" category="paragraph">このアクションでは、Linux とコンソール エージェント ソフトウェアを実行する VM インスタンスも起動しますが、デプロイはコンソールからではなく Google Cloud から直接開始されます。</block>
-  <block id="0eef87956979cf6724fcf06a20f2e4eb" category="list-text"><block ref="0eef87956979cf6724fcf06a20f2e4eb" category="inline-link-macro-rx"></block></block>
-  <block id="6ca5ab84f54829f432e3fc9d65f06d1c" category="paragraph">選択したインストール オプションは、インストールの準備方法に影響します。これには、Google Cloud でリソースを認証および管理するために必要な権限をコンソールに付与する方法が含まれます。</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="section-title">概要</block>
   <block id="579f2ccfa8f6ecb1be46c191e6f51980" category="paragraph">各展開モードでは、アウトバウンド接続、場所、インストール、認証、データ サービス、課金方法が異なります。</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">はい</block>
@@ -3300,8 +3270,6 @@
   <block id="798a2a9b64140e0f8f05fa5695aa1faf" category="list-text">別のエージェントを選択し、[切り替え] を選択します。</block>
   <block id="52b5b2b5dbfa5254101b42416d1a8773" category="paragraph"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block> 。</block>
   <block id="59451d5b1be51c2e522deb585360baaf" category="doc">NetApp ConsoleからAWSにコンソールエージェントを作成する</block>
-  <block id="29c7d79b8474c98bbf8600f925dfb317" category="inline-link-macro">コンソールエージェントの理解</block>
-  <block id="5f551ddf859b1d7525a5d87169b1c520" category="list-text">あなたは<block ref="d16111ab8ba33a1610fbb17fe340b992" category="inline-link-macro-rx"></block>。</block>
   <block id="035f13f16b03eaaa0e6f9e50510bada8" category="list-text">確認すべき<block ref="2c29232fcf7d2d4af34b1c675a642823" category="inline-link-macro-rx"></block>。</block>
   <block id="ece2bb18919ce5ae01a5179cefd722b3" category="section-title">ステップ1: AWSにコンソールエージェントを展開するためのネットワークを設定する</block>
   <block id="3622d53137f09c5a1f41ab1c1500f461" category="paragraph">コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件により、コンソール エージェントはハイブリッド クラウド内のリソースとプロセスを管理できるようになります。</block>
@@ -4117,7 +4085,6 @@
   <block id="08a85e7ea19b20609018d63a75a9ab37" category="list-text">以前に設定した権限をコンソール エージェントに提供します。</block>
   <block id="1d682899a424ef1c9395956d4422fd8a" category="inline-link-macro">NetApp Intelligent Servicesに加入する（オプション）</block>
   <block id="e7dd7f23b1ff3326cdebf5cb759f7a6f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> <block ref="60f282c89397f6d15a4ed422eccb831c" category="inline-link-macro-rx"></block></block>
-  <block id="d1d624aaa80d4b95ecda4ca00906004a" category="paragraph">オプション: クラウド プロバイダーのマーケットプレイスからNetApp Intelligent Servicesにサブスクライブして、時間単位の料金 (PAYGO) または年間契約でデータ サービスの料金を支払います。  NetApp Intelligent Servicesには、 NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience 、 NetApp Disaster Recovery が含まれます。  NetApp Data Classification は追加料金なしでサブスクリプションに含まれています。</block>
   <block id="4a5cd58a00c166a3e1b93ea2c38ae5db" category="inline-link-macro">NetAppコンソールを使用するためのネットワークの準備</block>
   <block id="4170442d537b0bcdcf26afecc0b46214" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="81434ae0997d25fd3bf3ebcd9de42f03" category="inline-link-macro-rx"></block></block>
   <block id="0f29bdee858adb6d973cf8db83b0a896" category="inline-link-macro">サインアップして組織を作成する</block>
@@ -5164,10 +5131,7 @@
   <block id="b60366a003b487aaa0f17f8db3163ecc" category="paragraph">いいえ（基本的な検出のみ）</block>
   <block id="3b00545dfd90abf1453721e441754d3d" category="cell">Digital Advisor（Active IQ）</block>
   <block id="c3705e839d1a8df80ae158824bd08448" category="cell">ホームページダッシュボードのメトリクス</block>
-  <block id="d3e800228af9a7ced9cadbe31f21cf71" category="paragraph">はい^2^</block>
-  <block id="fec52cc0232a22ef4060c7b61d92c0a0" category="paragraph">いいえ^1^</block>
   <block id="3863a60fc30916ec3597541037025585" category="cell">*利用可能なデータサービス*:</block>
-  <block id="6444e1b68689d877ddc4f4121e08c0f6" category="paragraph">^1^ コンソール エージェントがなくてもライフサイクル プランニングを表示できますが、アクションを開始するにはコンソール エージェントが必要です。</block>
   <block id="9ea7157b38fa199a8532fa65cd92d096" category="summary">ロールベースのアクセス制御 (RBAC) を使用してNetApp Consoleへのユーザー アクセスを管理し、組織、フォルダ、またはプロジェクト レベルで事前定義されたロールを割り当てます。各ロールは、割り当てられたスコープ内でユーザーが実行できるアクションを定義する特定の権限を付与します。</block>
   <block id="6369e7866450cfbd1595f3b5f17a45ce" category="doc">NetApp Consoleのロールベースアクセス制御（RBAC）について学ぶ</block>
   <block id="adb744c66714a9cd79eb46c484743e3a" category="paragraph">NetApp は最小限の権限でコンソール ロールを設計しているため、各ロールにはそのタスクに必要な権限のみが含まれます。このアプローチでは、各メンバーが必要なものへのアクセスを制限することでセキュリティが強化されます。</block>
@@ -5448,7 +5412,6 @@
   <block id="bd2a04f40dfa26475eeaeb5104213639" category="inline-link-macro">Eシリーズ システムの発見方法を学ぶ</block>
   <block id="20397d9bb3cf91b26829ed1f1050f846" category="list-text"><block ref="20397d9bb3cf91b26829ed1f1050f846" category="inline-link-macro-rx"></block></block>
   <block id="0f1d83ed07623902c200d2b4489a8bc0" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> <block ref="60a7e52b5f1dace8fe7cd5fadf089cd0" category="inline-link-macro-rx"></block></block>
-  <block id="9c50bfc1c0c8af31868d53cf5d274ca4" category="paragraph">クラウド プロバイダを通じて、時間単位 (PAYGO) または年額課金でNetApp Intelligent Servicesにサインアップします。サブスクリプションには、 NetApp Backup and Recovery、 Cloud Volumes ONTAP、 NetApp Cloud Tiering、 NetApp Ransomware Resilience、 NetApp Disaster Recovery、 NetApp Data Classificationが含まれます。</block>
   <block id="b13696d6f982d12cdad42fb6cff86df3" category="paragraph">コンソールを使用するには、 NetApp Support Siteの認証情報を使用してサインアップまたはログインするか、 NetApp Consoleのログインを作成します。社内で最初にサインアップする場合は、管理者として新しい組織を作成します。会社にすでに組織がある場合は、既存のNetApp Support Siteの認証情報または会社のシングル サインオン (SSO) を使用してサインアップまたはログインします。</block>
   <block id="826401015c53957df701460dc5fefb05" category="paragraph">会社にNetApp Console組織がない場合は、サインアップして作成してください。最初のユーザーは組織管理者となり、ユーザー アカウントと権限を管理します。後からロールを更新したり、管理者を追加したりすることもできます。</block>
   <block id="d5f547e805bd962044877e771a5c80c4" category="paragraph">+ 初めてのユーザーおよび組織管理者は、ガイド付きのプロセスに従ってストレージ リソースの追加、コンソール エージェントの作成などを行います。 <block ref="85a3a682e34d7edd80cbda274368cd58" category="inline-link-macro-rx"></block></block>
@@ -5819,7 +5782,6 @@
   <block id="bf2dd05fdc0bdbc8a0f1b7fb8c2afaa1" category="section-title">NetApp Console のコストとコンプライアンス管理サービス</block>
   <block id="1a9b5932db1134b67b21b3c238ec27e7" category="paragraph">すべてのシステムにわたって契約ステータスを追跡し、コスト管理、コンプライアンス、購入の意思決定を改善します。</block>
   <block id="58161bba30463b220b84e58cb97f5fd5" category="list-text">スクリプトソリューションを使用して、NetApp製品とサービスのセットアップと接続を自動化し、よりスムーズで一貫性のある運用を実現します。</block>
-  <block id="4832328d355560b55efa26c4c2c2d03c" category="list-text">オンプレミスの ONTAP ストレージをクラウドに拡張して、コスト最適化とデータのライフサイクル管理を実現します。</block>
   <block id="6db5d32b9455f53fb771511d47bb4646" category="list-text">データ プライバシー規制に準拠するために、アプリケーション データとクラウド環境のプライバシーを準備します。サブスクリプションで無料。</block>
   <block id="26444e20535c400889cbd46fa71bcc4b" category="list-text">書き込み可能なキャッシュ ボリュームを作成して、データへのアクセスを高速化したり、頻繁にアクセスされるボリュームからトラフィックをオフロードしてパフォーマンスとコスト効率を向上させます。</block>
   <block id="46152e594769d440fdd2271b8eef67cc" category="list-text">Amazon FSx for NetApp ONTAP を使用して主要なワークロードを設計、セットアップ、運用し、特定のアプリケーションのパフォーマンスとコストを最適化します。</block>
@@ -5957,9 +5919,7 @@
   <block id="6f8cdd1e2991c2d2f9a4580b6f79bf52" category="paragraph-title">ISOを使用してvCenterにデプロイされたConsoleエージェントをアップグレードする</block>
   <block id="307d2695a2fce9ab7e904c8ad0ec1904" category="inline-link-macro">vCenter でデプロイされた Console エージェントをアップグレードする方法について説明します</block>
   <block id="30c4a8a1d5fde5730fe4249081e4d06c" category="paragraph">OVA を使用して vCenter に Console エージェントをデプロイした場合、ISO を VM にマウントし、VM メンテナンスコンソールからアップグレードを実行することで、新しいバージョンにアップグレードできます。<block ref="5494ba1785de42707e7a1fa6cefcddcd" category="inline-link-macro-rx"></block></block>
-  <block id="4d2638b05d3fa7aba4bb7424fa2b2a26" category="summary">NetApp Console、クラウド プロバイダのマーケットプレイス、または Linux ホストへのソフトウェアの手動インストールを使用して、Console エージェントをデプロイします。デプロイ方法によって、ホストの制御方法と起動の速さが決まります。</block>
   <block id="9db458bccb025b8de9d4cfd46a4d1578" category="doc">Console エージェントの導入方法を選択</block>
-  <block id="bf9b093b5914185e68f2bf0b3c47073f" category="paragraph">NetApp Console、クラウド プロバイダのマーケットプレイス、または Linux ホストへのソフトウェアの手動インストールを使用して、Console エージェントをデプロイします。デプロイ方法によって、ホストに対する制御権と起動の迅速さが決まります。</block>
   <block id="091643e3b21d7e830a310e57763b4775" category="paragraph">クラウド環境へのデプロイの場合、エージェントはAmazon Web Services（AWS）、Microsoft Azure、またはGoogle Cloudにデプロイできます。</block>
   <block id="775737d382907fd41e70093d7ab88b9f" category="section-title">NetApp Console からデプロイします</block>
   <block id="d791eb5db248a6d2868b3d89245f5f00" category="paragraph">NetAppでは、標準モードを使用する場合は、NetApp Consoleから導入することを推奨します。NetApp Consoleでは、ネットワークと権限の設定をガイドし、クラウド プロバイダでVMまたはインスタンスを自動的に起動します。Consoleでは、ネットワークと権限の設定をガイドし、クラウド プロバイダでVMまたはインスタンスを自動的に起動します。</block>
@@ -6035,7 +5995,6 @@
   <block id="e25842751cafa99bcd27e28d53aa0a74" category="paragraph">以下の表は、Console エージェントの有無によって利用可能なストレージ システムとサービスを示しています。</block>
   <block id="103dc98f6960434c2f9ff478ef8618f7" category="cell">*対応ストレージシステム*：</block>
   <block id="0ef90fde5440e5fbd859cb4d59f76f2c" category="cell">オンプレミス ONTAP クラスタ</block>
-  <block id="9b2d29fbe0d27c5340433f589b4ffedd" category="paragraph">^2^ 正確なホームページの指標には、適切なサイズと構成のNetApp Consoleエージェントが必要です。</block>
   <block id="762c7a5905f9e2e1e066d46ccf563a52" category="paragraph">Google Cloudのリソースを管理するには、Google Cloudにエージェントをデプロイしてください。オンプレミスエージェントはGoogle Cloudのリソースを管理できません。</block>
   <block id="6265d84f2de108c19a3c1b8a19a22d01" category="list-text">お客様の敷地内（標準モードまたはプライベート モードのみ）</block>
   <block id="3f2acb165155b9f2c13851d0a96a3f63" category="inline-link-macro">環境に適した導入方法を選択するために導入方法を比較する</block>
@@ -6159,7 +6118,6 @@
   <block id="5ac9b947c65653cf6d02fe3c59e7fa2f" category="summary">AWSのコンソール エージェントは、NetApp Consoleから直接デプロイできます。ConsoleからAWSにコンソール エージェントをデプロイする前に、ネットワークをセットアップし、AWSの権限を準備する必要があります。</block>
   <block id="dc06977a17baa1d2ac30423086ded05e" category="doc">NetApp ConsoleからAWSにConsoleエージェントをデプロイする</block>
   <block id="21bc24ad9112fe84642a352511c8c896" category="paragraph">AWSにエージェントをデプロイすると、選択したVPC内でLinuxとNetApp Consoleエージェントソフトウェアを実行するEC2インスタンスが起動します。</block>
-  <block id="a7bfdf791cd40e0ecc1b8e7cef1ca6c1" category="list-text"><block ref="6863c249d676553f48927d7d95fd710e" category="inline-link-macro-rx"></block>。</block>
   <block id="13cc9918631bd12add35c3badfe98a74" category="doc">AWSにConsoleエージェントを手動でデプロイする</block>
   <block id="3f0527499a34df287448340f6ef53274" category="paragraph">AWS で実行されている Linux ホストに Console エージェントを手動でデプロイできます。独自の Linux ホストに Console エージェントを手動でデプロイするには、ホストの要件を確認し、ネットワークをセットアップし、AWS 権限を準備し、Console エージェントをデプロイしてから、準備した権限を指定する必要があります。</block>
   <block id="ae156547be858d5da6a6ad874dab7c9e" category="doc">AWS Marketplace から Console エージェントをデプロイする</block>
@@ -6234,14 +6192,37 @@
   <block id="26ebb9e5362ebbe39939cfeec9b06e2e" category="list-text">vSphereクライアントで、VMを右クリックして*設定の編集*を選択します。</block>
   <block id="25f777f1eaa91fa773a6c639768fa5fc" category="list-text">CD/DVDドライブを選択し、*Client Device*を選択するか、データストアISOを取り外してください。</block>
   <block id="e382e67da79695356dc1fa71918bf917" category="summary">NetApp Console管理の最新情報をご確認ください。</block>
-  <block id="34fb7793c6dd21820fca4599855cc8d6" category="sidebar">AWS のコンソールエージェントのインストールオプション</block>
   <block id="dfaeded134f05cc3b6e8cfbb7dc74750" category="sidebar">AWS Marketplace から AWS に Console エージェントを作成します。</block>
-  <block id="da3632a79f01a64e10a52f3d8b2f20b3" category="sidebar">Azure の Console エージェントのインストール オプション</block>
   <block id="7b3521e08bd698da5e7f4e8dd23ffd28" category="sidebar">Azure Marketplace から Azure に Console エージェントを作成します。</block>
-  <block id="aeb40985e24f14c0392276a5b302ec39" category="sidebar">Google Cloud のコンソール エージェントのインストール オプション</block>
   <block id="9263d00bd3085ab3f7fe9d54b53da0bb" category="sidebar">Google Cloud から Google Cloud に NetApp Console エージェントを作成します</block>
   <block id="ef65981a653f842358b97ed65fdd873e" category="sidebar">オンプレミスのVCenterにNetApp Consoleエージェントをインストールします</block>
   <block id="0b1032eeff080ebafeabe1d451b25cbc" category="sidebar">手動でインストールされたNetApp Consoleエージェントを保守する</block>
   <block id="fed6fefc4794de432303a8decf8cfed9" category="sidebar">手動でインストールしたエージェントを保守する</block>
   <block id="15cae31ad8279b2e766e14f72e9a7766" category="sidebar">IDおよびアクセス管理に関するよくある質問</block>
+  <block id="bde6bbfbb596382f506558c6bab1343b" category="paragraph">NetApp Cloud Tieringは、2026年4月26日をもって購入またはライセンス更新ができなくなります。</block>
+  <block id="bb94a9ffb3205557387f0b00f8e24dca" category="paragraph">既存のお客様は、サブスクリプションまたはライセンス契約が満了するまで、NetApp Cloud Tieringを引き続き使用し、サポートを受けることができます。サブスクリプションの有効期限が切れると、お客様はNetApp Cloud Tieringの機能またはサポートにアクセスできなくなります。</block>
+  <block id="f8a967869572457212675a5d470c728f" category="inline-link-macro">ONTAP クラスタに FabricPool ライセンスをインストールする</block>
+  <block id="f1a805b989e2fd716c6ed52db78b4c09" category="paragraph">NetAppでは、お客様がNetAppの担当者と協力して、既存の階層化ライセンスをONTAPのFabricPoolライセンスに移行することを推奨しています。このライセンスは、ONTAPでのデータ階層化機能を提供します。FabricPoolを使用してONTAPでデータ階層化を設定する方法の詳細については、<block ref="ecd46e7261f4b06a38f69686168fad8b" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="d5b1e29a38c69118ebb52ddd25078a82" category="inline-link-macro">NetApp Cloud Tiering 提供終了のお知らせ</block>
+  <block id="3c1b98a4347b1e75ca57e51e43e141b2" category="list-text"><block ref="bc9f3746ee1a6c6e91093bc2b9ff13fb" category="inline-link-macro-rx"></block></block>
+  <block id="65afa52dc402fa4f804d1fad742f5b32" category="inline-link-macro">NetApp Cloud Tiering 提供終了 FAQ</block>
+  <block id="91140b6bf054d442adb9178830663a05" category="list-text"><block ref="317d9243bec15035f876da17dbcf900e" category="inline-link-macro-rx"></block></block>
+  <block id="d1618b2005bb616189c51872f4eeb7a1" category="summary">NetApp Console、クラウド プロバイダのマーケットプレイス、または Linux ホストへのソフトウェアの手動インストールを使用して、Console エージェントをデプロイします。デプロイ方法によってエージェントホストの保守方法が決まり、使用している NetApp Console デプロイモードによって異なります。</block>
+  <block id="45fb0fdcc82849eb5d817c5636b5bdfe" category="paragraph">はい。正確なホームページ指標を取得するには、適切なサイズと構成のNetApp Consoleエージェントが必要です。</block>
+  <block id="79f67f651f3a0b97533f98f67c3ae42a" category="paragraph">いいえ。ライフサイクルプランニングは Console エージェントなしでも閲覧できますが、アクションを開始するには Console エージェントが必要です。</block>
+  <block id="e56f7590d3bf460e920c96d0e1a4d00c" category="paragraph">NetApp Cloud Tiering*</block>
+  <block id="d82435623d1717d1441dd242d0d2d5dd" category="inline-link-macro">コンソールからいつ導入するかを確認する</block>
+  <block id="bb4de92fce42a43473c818b1a685f78e" category="list-text"><block ref="65345eed93b7b4d57b17176976feb61c" category="inline-link-macro-rx"></block>。</block>
+  <block id="4058bec8c05b7eec8e8da62db0d4c29c" category="inline-link-macro">AWS で手動でデプロイするタイミングを確認する</block>
+  <block id="bbba72d665c28a50ff890f9bf258bf44" category="list-text"><block ref="af0eeb37b47edb9c09804643bac40d9c" category="inline-link-macro-rx"></block>。</block>
+  <block id="90e4f94df0a9c5eb44bab6156156dfc9" category="inline-link-macro">AWS Marketplaceからデプロイするタイミングを学ぶ</block>
+  <block id="16ed41e7d53f616b01345af5fa5bd8df" category="list-text"><block ref="2cd30ddcbcdf1f251e7b73909152be56" category="inline-link-macro-rx"></block>。</block>
+  <block id="66aa6cab05064212e5db559feb1dc39b" category="inline-link-macro">Azure で手動でデプロイするタイミングを学習する</block>
+  <block id="68168baf0e09918601a7b016175f25dc" category="list-text"><block ref="51a3655f41ec4f97f4438747d212bacc" category="inline-link-macro-rx"></block>。</block>
+  <block id="d1ed08857033eae041161d0cf84b5e13" category="inline-link-macro">Azure Marketplace からデプロイするタイミングを確認する</block>
+  <block id="da299adc373f6bb4f71527af1d4a5229" category="list-text"><block ref="549d9ddde85979492f18f1b01a816a1c" category="inline-link-macro-rx"></block>。</block>
+  <block id="ea8976e4bcb3a4dc4f9dbcce6a078f45" category="inline-link-macro">Google Cloud で手動でデプロイするタイミングを学ぶ</block>
+  <block id="fdac344e6e2a4fe5d79f5e4669b070fe" category="list-text"><block ref="0c9621013a18e4c625fdd25673bfa917" category="inline-link-macro-rx"></block>。</block>
+  <block id="8f5eebf6075fe260d8a4c0281dc3bfe2" category="paragraph">オプション：クラウド プロバイダのマーケットプレイスから NetApp Intelligent Services にサブスクライブして、データサービスの料金を時間単位（PAYGO）または年間契約で支払うことができます。NetApp Intelligent Services には、NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience、NetApp Disaster Recovery が含まれます。NetApp Data Classification は、追加料金なしでサブスクリプションに含まれています。</block>
+  <block id="6c842907a578805c3a54843de813b384" category="paragraph">時間単位（PAYGO）または年間単位の課金については、クラウド プロバイダを通じてNetApp Intelligent Servicesに登録してください。サブスクリプションには、NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience、NetApp Disaster Recovery、およびNetApp Data Classificationが含まれます。</block>
 </blocks>

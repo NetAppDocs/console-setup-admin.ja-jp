@@ -19,7 +19,7 @@ AWSのコンソール エージェントは、NetApp Consoleから直接デプ�
 AWSにエージェントをデプロイすると、選択したVPC内でLinuxとNetApp Consoleエージェントソフトウェアを実行するEC2インスタンスが起動します。
 
 .開始する前に
-* link:concept-agents.html["コンソールエージェントについて学ぶ"]。
+* link:concept-agent-install-options.html#agent-console-deploy["コンソールからいつ導入するかを確認する"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 

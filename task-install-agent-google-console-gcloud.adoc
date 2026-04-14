@@ -19,7 +19,7 @@ NetApp Console から Google Cloud に Console エージェントをデプロイ
 Google Cloud にエージェントを導入すると、選択した VPC 内で Linux と NetApp Console エージェントソフトウェアを実行する VM インスタンスが起動します。
 
 .開始する前に
-* あなたはlink:concept-agents.html["コンソールエージェントの理解"]。
+* link:concept-agent-install-options.html#agent-console-deploy["コンソールからいつ導入するかを確認する"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 
