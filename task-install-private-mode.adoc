@@ -32,7 +32,9 @@ NetApp Console を https://aws.amazon.com/federal/secret-cloud/["AWS Secret Clou
 .手順
 . Console エージェントソフトウェアを以下からダウンロードします。 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetAppサポート サイト"^]
 +
-インターネットにアクセスできないプライベート ネットワークの場合は、必ずオフライン インストーラをダウンロードしてください。
+** プライベートモードに対応しているバージョンを選択してください。最新のサポート対象バージョンについては、link:whats-new.html["リリース ノート"]を確認してください。
+** インターネットアクセスのないネットワーク用のオフラインインストーラをダウンロードします。
+
 
 . インストーラーを Linux ホストにコピーします。
 . スクリプトを実行するための権限を割り当てます。

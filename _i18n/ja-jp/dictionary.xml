@@ -5810,7 +5810,6 @@
   <block id="c73db6dd4dc3a461773070693cc406c6" category="paragraph">NetApp Console を<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>または<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>で使用する場合は、それらの環境で開始するための個別の手順に従う必要があります。<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
   <block id="1c88387d9be2a13f9b45fd276e63cf80" category="list-text">Console エージェントをインストールするには、ルート権限が必要です。</block>
   <block id="afbfe533a489b7d4102d31feb17a881a" category="list-text">Console エージェントソフトウェアを以下からダウンロードします。<block ref="99637e01fa8caa34a544049093cac68c" category="inline-link-rx"></block></block>
-  <block id="a6c2003199e95310a83aa40a67058bd8" category="paragraph">インターネットにアクセスできないプライベート ネットワークの場合は、必ずオフライン インストーラをダウンロードしてください。</block>
   <block id="70c6033ed76dffb5d74ff7bb0402f4fa" category="paragraph">コンソール エージェントがインストールされています。これで、NetApp Console をセットアップできます。</block>
   <block id="4d50d200e5ecb85ea8908049caf1caab" category="paragraph">NetApp Consoleに初めてアクセスすると、NetApp Consoleのセットアップを求められます。</block>
   <block id="d50d972bc008375c76a9eba41b5ce3e3" category="list-text">Web ブラウザを開き、Console エージェントをインストールした Linux ホストの IP アドレスを入力します。</block>
@@ -6225,4 +6224,7 @@
   <block id="fdac344e6e2a4fe5d79f5e4669b070fe" category="list-text"><block ref="0c9621013a18e4c625fdd25673bfa917" category="inline-link-macro-rx"></block>。</block>
   <block id="8f5eebf6075fe260d8a4c0281dc3bfe2" category="paragraph">オプション：クラウド プロバイダのマーケットプレイスから NetApp Intelligent Services にサブスクライブして、データサービスの料金を時間単位（PAYGO）または年間契約で支払うことができます。NetApp Intelligent Services には、NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience、NetApp Disaster Recovery が含まれます。NetApp Data Classification は、追加料金なしでサブスクリプションに含まれています。</block>
   <block id="6c842907a578805c3a54843de813b384" category="paragraph">時間単位（PAYGO）または年間単位の課金については、クラウド プロバイダを通じてNetApp Intelligent Servicesに登録してください。サブスクリプションには、NetApp Backup and Recovery、Cloud Volumes ONTAP、NetApp Ransomware Resilience、NetApp Disaster Recovery、およびNetApp Data Classificationが含まれます。</block>
+  <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">リリース ノート</block>
+  <block id="ce51f82ecbd933f0a6bf385915be19b8" category="list-text">プライベートモードに対応しているバージョンを選択してください。最新のサポート対象バージョンについては、<block ref="2c36977bb4765b4c1724e0f48d254dff" category="inline-link-macro-rx"></block>を確認してください。</block>
+  <block id="bd7c58df65cf13e6d395217af09edfdb" category="list-text">インターネットアクセスのないネットワーク用のオフラインインストーラをダウンロードします。</block>
 </blocks>
