@@ -442,10 +442,65 @@ NetApp Console内で機能とサービスを提供します。
 * ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
 
 
+
+
+ a| 
+\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
+ a| 
+コンソール エージェントのアップグレード用のイメージを取得します。
+
+* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
++
+以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
+
+* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
+
+
+^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
+
++ * コンソール エージェントの 3.9.47 リリース以降、システムはオプション 1 にリストされているエンドポイントをサポートします。コンソール エージェントの以前のリリースでは、下位互換性はサポートされていません。 * コンソール エージェントは、最初にオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。 * NetApp Backup and Recoveryまたは Ransomware Resilience でコンソール エージェントを使用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
+
+
+
+ a| 
+Console エージェントが AWS Government リージョンにある場合：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+ a| 
+コンソールエージェントがAWS Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得する。
+
+
+
+ a| 
+Console エージェントが Azure Government リージョンにある場合：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
+ a| 
+Console エージェントが Azure Government リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得します。
+
+
+
+ a| 
+コンソールエージェントが商用リージョンまたは主権リージョンにある場合、次の2つのエンドポイントセットから選択できます：
+
+* オプション 1 (推奨) ^1^
++
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+
+* オプション2
++
+\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+
+
+ a| 
+コンソールエージェントが商用リージョンまたは主権リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得するため。
+
 |===
 --
 
 
+|*3.9.55以前のエンドポイント* | *4.0.0以降のエンドポイント* | *目的*
+
+a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| ライセンス取得およびNetAppサポートへのお問い合わせ。 a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 日常業務用。 a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | コンソールエージェントのアップグレード用のイメージを取得するため。
+
+|===
+|===
 プロキシ サーバ:: NetApp は明示的プロキシ構成と透過的プロキシ構成の両方をサポートしています。透過プロキシを使用している場合は、プロキシ サーバーの証明書のみを提供する必要があります。明示的なプロキシを使用している場合は、IP アドレスと資格情報も必要になります。
 +
 --

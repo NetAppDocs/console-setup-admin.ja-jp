@@ -4039,7 +4039,6 @@
   <block id="2f494f83707a07f0e9291c07ca188635" category="list-text">NetApp Consoleへのユーザーアクセスのためのネットワークを準備する</block>
   <block id="95eb2566e767fc3a5aef275a7e7a5ed1" category="list-text">制限モードでは、ユーザーはコンソール エージェント VM からコンソールにアクセスします。コンソール エージェントは、データ管理タスクを完了するためにいくつかのエンドポイントに接続します。これらのエンドポイントは、コンソールから特定のアクションを完了するときに、ユーザーのコンピューターから接続されます。</block>
   <block id="6d15ec998ca5b36e1198120e9926fcce" category="inline-link-macro">4.0.0 より前のバージョンに必要なネットワーク アクセスの詳細について説明します。</block>
-  <block id="619032e5c3c27ba05162bacd35032461" category="admonition">バージョン 4.0.0 より前のコンソール エージェントには追加のエンドポイントが必要です。  4.0.0 以降にアップグレードした場合は、許可リストから古いエンドポイントを削除できます。<block ref="09d4bc1b829716c1eb9fd392e0198549" category="inline-link-macro-rx"></block></block>
   <block id="7748cd70a494ff5fd7b8c1e42d92a2e6" category="cell">\https://cdn.auth0.com \https://services.cloud.netapp.com</block>
   <block id="9ed5fb21e9c2b709cc0bad180f57762d" category="cell">Web ブラウザはこれらのエンドポイントに接続し、 NetApp Consoleを通じて集中的なユーザー認証を行います。</block>
   <block id="fa5cc2cb386581601ffd1b12fb1e1e4f" category="list-text">日常業務のためのアウトバウンドインターネットアクセス</block>
@@ -6227,4 +6226,16 @@
   <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">リリース ノート</block>
   <block id="ce51f82ecbd933f0a6bf385915be19b8" category="list-text">プライベートモードに対応しているバージョンを選択してください。最新のサポート対象バージョンについては、<block ref="2c36977bb4765b4c1724e0f48d254dff" category="inline-link-macro-rx"></block>を確認してください。</block>
   <block id="bd7c58df65cf13e6d395217af09edfdb" category="list-text">インターネットアクセスのないネットワーク用のオフラインインストーラをダウンロードします。</block>
+  <block id="c8b1b9c2d71ef002d1c50060b2cb083e" category="paragraph">a| https://occmclientinfragov.azurecr.us.io https://bluexpinfraprod.azurecr.io a| Consoleエージェントのアップグレード用のイメージを取得する。</block>
+  <block id="819febf39e28af038c733bae7ff4f55c" category="paragraph">\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io</block>
+  <block id="44915bc5ffc6c8bb2ea6583e61a74d64" category="cell">Console エージェントが AWS Government リージョンにある場合：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io</block>
+  <block id="7d128c30060391a6ee4534fc0d154143" category="cell">コンソールエージェントがAWS Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得する。</block>
+  <block id="1ed1ae4edf03cb57c3163af9c463b4fe" category="cell">Console エージェントが Azure Government リージョンにある場合：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us</block>
+  <block id="0b38caea2fd4b746ced14d695c333449" category="cell">Console エージェントが Azure Government リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得します。</block>
+  <block id="60437b7f6fe69c94ccfdf5bf6379a7e3" category="paragraph">コンソールエージェントが商用リージョンまたは主権リージョンにある場合、次の2つのエンドポイントセットから選択できます：</block>
+  <block id="31a8003e522e87e4d487da308c8a6607" category="cell">Console agentが商用リージョンまたはソブリンリージョンにインストールされている場合に、Console agentのアップグレード用イメージを取得するには。[cols=3*,options="header,autowidth"]</block>
+  <block id="4d7feb9606c47cedd755f6afd698f4a3" category="paragraph">|*3.9.55以前のエンドポイント* | *4.0.0以降のエンドポイント* | *目的*</block>
+  <block id="68fd8193be29a61e220fc4162cc03154" category="paragraph">a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| ライセンス取得およびNetAppサポートへのお問い合わせ。 a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 日常業務用。 a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | コンソールエージェントのアップグレード用のイメージを取得するため。</block>
+  <block id="a913a5833b76298a0bccb4d15b796571" category="paragraph">コンソールエージェントが商用リージョンまたは主権リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得するため。</block>
+  <block id="6fddb2ca8b2393be844b4c4153d1f6f7" category="admonition">バージョン4.0.0より前のコンソールエージェントは、異なるエンドポイントをサポートしています。バージョン4.0.0以降にアップグレードした場合は、許可リストから古いエンドポイントを削除できます。<block ref="09d4bc1b829716c1eb9fd392e0198549" category="inline-link-macro-rx"></block></block>
 </blocks>
