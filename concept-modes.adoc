@@ -23,8 +23,6 @@ NetApp では、これらのユースケースを_デプロイメント モー�
 プライベートモード（オンプレミスまたはクラウドにインストール）:: プライベート モードは、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6、エアギャップ環境などの厳格なセキュリティ ニーズを持つ組織向けです。NetApp Console SaaSアプリケーションやNetAppクラウドベースのAPIには接続せず、完全な制御が可能になり、外部との通信をブロックできます。サポートされているデータ サービスには、NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication、Cloud Volumes ONTAPが含まれます。すべてのストレージと認証はローカルのままであり、データは環境内に保持されます。このモードは、防衛請負業者、厳格なデータ保存規則を持つ金融機関、機密システムを持つ政府機関に使用します。
 
 
-お客様の敷地内に設置する場合のみ、ONTAP ストレージ システムがサポートされています。
-
 
 NOTE: NetApp Console は制限モードとプライベート モードでデータ フローを制限しますが、環境が規制に準拠していることを確認する必要があります。
 

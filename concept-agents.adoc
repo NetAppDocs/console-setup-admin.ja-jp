@@ -167,7 +167,7 @@ summary: コンソールエージェントは、ストレージインフラス�
 | Digital Advisor（Active IQ）  a| 
 はい
  a| 
-いいえ
+はい
 
 
 
