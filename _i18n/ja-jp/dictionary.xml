@@ -5617,7 +5617,6 @@
   <block id="9b623b58bde4f03efa6364d08c8279df" category="list-text">制限モードは、政府機関や規制対象の企業など、セキュリティの強化と接続の制限を必要とする組織向けです。NetApp Console を独自のパブリック クラウド（政府、主権、または商業地域）にインストールすると、NetApp Console API エンドポイント（SaaS アプリケーションでホスト）への外部接続が制限されます。制限モードでは、Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（政府および商業地域）、データ分類などの主要なデータ サービスと、自動化されたソフトウェア アップグレードおよび ID フェデレーションにアクセスできます。</block>
   <block id="58c169b907a09c154e92b586b03720ce" category="list-text">プライベートモード（オンプレミスまたはクラウドにインストール）</block>
   <block id="e728600836da4c211714325b06aff5ce" category="list-text">プライベート モードは、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6、エアギャップ環境などの厳格なセキュリティ ニーズを持つ組織向けです。NetApp Console SaaSアプリケーションやNetAppクラウドベースのAPIには接続せず、完全な制御が可能になり、外部との通信をブロックできます。サポートされているデータ サービスには、NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication、Cloud Volumes ONTAPが含まれます。すべてのストレージと認証はローカルのままであり、データは環境内に保持されます。このモードは、防衛請負業者、厳格なデータ保存規則を持つ金融機関、機密システムを持つ政府機関に使用します。</block>
-  <block id="9c1f6580e4f786a77412f0477deeb241" category="paragraph">お客様の敷地内に設置する場合のみ、ONTAP ストレージ システムがサポートされています。</block>
   <block id="8f674ddec71fa3256a062bcac7a92856" category="admonition">NetApp Console は制限モードとプライベート モードでデータ フローを制限しますが、環境が規制に準拠していることを確認する必要があります。</block>
   <block id="98dfed72c4da8ca5a25bdfa5d04c5824" category="paragraph">次の表は、これらのモードを比較したものです。</block>
   <block id="ba5f081414532f0d5aaec9831e4784be" category="cell">NetApp Console SaaS アプリケーションへの接続が必要ですか？</block>
@@ -5831,7 +5830,6 @@
   <block id="f75f04b8a387edfb2df7d3cd5fa974a8" category="inline-link-macro">組織の管理者に問い合わせてください</block>
   <block id="fdc0e0fca606cf54a0a897572707c368" category="paragraph">サインアップ後、リソースにアクセスする前に、NetApp Console組織管理者がユーザー アカウントを組織に追加する必要があります。ログインしてもリソースが表示されない場合は、組織の管理者に問い合わせてください。<block ref="11d2ec2c56c0640477c61afee5dc1252" category="inline-link-macro-rx"></block>。</block>
   <block id="750d8533e3422880e0f3745b61ace637" category="list-text">NetApp Console の URL に移動します。URL は、組織が使用しているコンソールのモードによって異なります：</block>
-  <block id="0ce20a4f9a2eaba138af185f99d4f8db" category="list-text">**標準モード*：Webブラウザを開いて、<block ref="d99e1eaf406503cf18504dce764c5135" category="inline-link-rx"></block></block>
   <block id="dd8c68c1c1e70bd88296cfa55bc07484" category="list-text">**制限モードまたはプライベート モード**：Web ブラウザーを開き、Console エージェントがインストールされている IP アドレスに移動します。</block>
   <block id="ab4fc3f68e8f23b6d532eb446e1e0a46" category="list-text">ログインに関連付けられた認証方法に応じて、資格情報を入力するように求められます。</block>
   <block id="3bcc313e589d80f58afe7da826230bf9" category="list-text">管理者が組織の ID フェデレーションを設定している場合は、フェデレーション接続</block>
@@ -6238,4 +6236,5 @@
   <block id="68fd8193be29a61e220fc4162cc03154" category="paragraph">a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| ライセンス取得およびNetAppサポートへのお問い合わせ。 a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 日常業務用。 a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | コンソールエージェントのアップグレード用のイメージを取得するため。</block>
   <block id="a913a5833b76298a0bccb4d15b796571" category="paragraph">コンソールエージェントが商用リージョンまたは主権リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得するため。</block>
   <block id="6fddb2ca8b2393be844b4c4153d1f6f7" category="admonition">バージョン4.0.0より前のコンソールエージェントは、異なるエンドポイントをサポートしています。バージョン4.0.0以降にアップグレードした場合は、許可リストから古いエンドポイントを削除できます。<block ref="09d4bc1b829716c1eb9fd392e0198549" category="inline-link-macro-rx"></block></block>
+  <block id="225a60e47c64c2fc93ba428341d684ac" category="list-text">*標準モード*：Webブラウザを開いて、<block ref="d99e1eaf406503cf18504dce764c5135" category="inline-link-rx"></block></block>
 </blocks>

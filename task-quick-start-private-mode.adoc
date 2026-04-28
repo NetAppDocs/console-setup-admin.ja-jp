@@ -99,7 +99,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 | いいえ 
 
 
-| アイデンティティとアクセス管理 | いいえ 
+| アイデンティティとアクセス管理 | はい 
 
 
 | クラウド プロバイダの資格情報を管理する | いいえ 
@@ -165,7 +165,7 @@ Licenses and subscriptionsの管理
 | いいえ 
 
 
-| アイデンティティとアクセス管理 | いいえ 
+| アイデンティティとアクセス管理 | はい 
 
 
 | クラウド プロバイダの資格情報を管理する | いいえ 

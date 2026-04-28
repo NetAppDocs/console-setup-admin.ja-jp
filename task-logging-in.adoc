@@ -21,7 +21,7 @@ NetApp Consoleにサインアップすると、Web ベースのコンソール�
 .手順
 . NetApp Console の URL に移動します。URL は、組織が使用しているコンソールのモードによって異なります：
 +
-** **標準モード*：Webブラウザを開いて、 https://console.netapp.com["NetApp Console"]
+** *標準モード*：Webブラウザを開いて、 https://console.netapp.com["NetApp Console"]
 ** **制限モードまたはプライベート モード**：Web ブラウザーを開き、Console エージェントがインストールされている IP アドレスに移動します。
 
 
