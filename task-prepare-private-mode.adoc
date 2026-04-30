@@ -350,12 +350,12 @@ AWS リソースを管理します。エンドポイントは AWS リージョ�
 
 
  a| 
-NetApp ONTAP用の Amazon FsX:
+Amazon FSx for NetApp ONTAP：
 
 * api.workloads.netapp.com
 
  a| 
-Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
+Webベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
 
 
 

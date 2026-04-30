@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-install-agent-on-prem-ova.html 
 keywords: install agent, on prem agent installation, on prem connector, vmware, OVA, manual install 
-summary: VMWare ユーザーの場合は、OVA を使用して VCenter にコンソール エージェントをインストールできます。  OVA のダウンロードまたは URL は、NetApp Consoleから入手できます。 
+summary: VMware ユーザーであれば、OVA を使用して vCenter にコンソール エージェントをインストールできます。OVA のダウンロードまたは URL は NetApp Console から入手できます。 
 ---
-= vCenterを使用してオンプレミスにConsoleエージェントをデプロイする
+= vCenterを使用してオンプレミスにConsoleエージェントをインストールする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: VMWare ユーザーの場合は、OVA を使用して VCenter にコン
 
 
 [role="lead"]
-VMwareユーザーであれば、OVAを使用してvCenterにConsoleエージェントをデプロイできます。OVAのダウンロードまたはURLは、NetApp Consoleから入手できます。
+VMware ユーザーであれば、OVA を使用して vCenter に Console エージェントをデプロイできます。OVA のダウンロードまたは URL は NetApp Console から入手できます。
 
 
-NOTE: vCenterツールとともにConsoleエージェントをデプロイすると、VMのWebコンソールを使用してメンテナンス作業を実行できます。link:task-agent-vm-config.html["エージェントの VM コンソールの詳細について説明します。"]
+NOTE: vCenterツールを使用してConsoleエージェントを導入すると、VM Webコンソールでメンテナンスタスクを実行できます。link:task-agent-vm-config.html["エージェントの VM コンソールの詳細について説明します。"]
 
 
 
@@ -72,18 +72,64 @@ link:reference-networking-saas-console.html["NetAppコンソールのネット�
 
 
 
-NOTE: オンプレミスにコンソール エージェントがインストールされている場合、Google Cloud のリソースを管理することはできません。  Google Cloud リソースを管理するには、Google Cloud にエージェントをインストールします。
+NOTE: オンプレミスにコンソールエージェントをインストールした場合、Google Cloud のリソースを管理することはできません。Google Cloud のリソースを管理するには、Google Cloud にエージェントをインストールしてください。
 
 [role="tabbed-block"]
 ====
-.AWS
+.最低限必要なエンドポイント
 --
-コンソール エージェントをオンプレミスでインストールする場合、AWS に導入されたNetAppシステム ( Cloud Volumes ONTAPなど) を管理するために、次の AWS エンドポイントへのネットワーク アクセスが必要です。
+これらのエンドポイントは、すべての Console エージェントの導入に必要です。AWS または Azure で NetApp リソースを管理するには、追加のエンドポイントが必要です。
 
-コンソールエージェントから接続されたエンドポイント:: コンソール エージェントは、日常業務でパブリック クラウド環境内のリソースとプロセスを管理するために、次のエンドポイントに接続するために、送信インターネット アクセスを必要とします。
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+\https://mysupport.netapp.com
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
+\https://signin.b2c.netapp.com
+ a| 
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
+
+
+
+ a| 
+\https://support.netapp.com
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
+ a| 
+NetApp Console内で機能とサービスを提供します。
+
+
+
+ a| 
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+ a| 
+コンソール エージェントのアップグレード用のイメージを取得します。
+
+* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
 +
+以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
+
+* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
+
+
+|===
 --
-以下にリストされているエンドポイントはすべて CNAME エントリです。
+.AWS リソースの追加エンドポイント
+--
+Console エージェントがオンプレミスにインストールされている場合、AWS にデプロイされた NetApp システム（Cloud Volumes ONTAP など）を管理するために、次の追加の AWS エンドポイントへのネットワーク アクセスが必要です。
 
 [cols="2a,1a"]
 |===
@@ -106,118 +152,18 @@ AWS リソースを管理します。エンドポイントは AWS リージョ�
 
 
  a| 
-NetApp ONTAP用の Amazon FsX:
+Amazon FSx for NetApp ONTAP：
 
 * api.workloads.netapp.com
 
  a| 
-Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
-
-
-
- a| 
-\https://mysupport.netapp.com
- a| 
-ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
-
-
-
- a| 
-\https://signin.b2c.netapp.com
- a| 
-NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
-
-
-
- a| 
-\https://support.netapp.com
- a| 
-ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
- a| 
-NetApp Console内で機能とサービスを提供します。
-
-
-
- a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
-* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
-+
-以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
-
-* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
-
-
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
-* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
-+
-以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
-
-* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
-
-
-^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
-
-+ * コンソール エージェントの 3.9.47 リリース以降、システムはオプション 1 にリストされているエンドポイントをサポートします。コンソール エージェントの以前のリリースでは、下位互換性はサポートされていません。 * コンソール エージェントは、最初にオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。 * NetApp Backup and Recoveryまたは Ransomware Resilience でコンソール エージェントを使用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
-
-
-
- a| 
-Console エージェントが AWS Government リージョンにある場合：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
- a| 
-コンソールエージェントがAWS Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得する。
-
-
-
- a| 
-Console エージェントが Azure Government リージョンにある場合：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
- a| 
-Console エージェントが Azure Government リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得します。
-
-
-
- a| 
-コンソールエージェントが商用リージョンまたは主権リージョンにある場合、次の2つのエンドポイントセットから選択できます：
-
-* オプション 1 (推奨) ^1^
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* オプション2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-コンソールエージェントが商用リージョンまたは主権リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得するため。
+Webベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
 
 |===
 --
-
-
-|*3.9.55以前のエンドポイント* | *4.0.0以降のエンドポイント* | *目的*
-
-a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| ライセンス取得およびNetAppサポートへのお問い合わせ。 a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 日常業務用。 a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | コンソールエージェントのアップグレード用のイメージを取得するため。
-
-|===
-|===
+.Azure リソースの追加エンドポイント
 --
-.Azure
---
-コンソール エージェントがオンプレミスにインストールされている場合、Azure にデプロイされたNetAppシステム ( Cloud Volumes ONTAPなど) を管理するために、次の Azure エンドポイントへのネットワーク アクセスが必要です。
+Console エージェントがオンプレミスにインストールされている場合、Azure にデプロイされた NetApp システム（Cloud Volumes ONTAP など）を管理するために、次の追加の Azure エンドポイントへのネットワーク アクセスが必要です。
 
 [cols="2a,1a"]
 |===
@@ -236,103 +182,6 @@ Azure パブリック リージョン内のリソースを管理します。
  a| 
 Azure China リージョンのリソースを管理します。
 
-
-
- a| 
-\https://mysupport.netapp.com
- a| 
-ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
-
-
-
- a| 
-\https://signin.b2c.netapp.com
- a| 
-NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
-
-
-
- a| 
-\https://support.netapp.com
- a| 
-ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
- a| 
-NetApp Console内で機能とサービスを提供します。
-
-
-
- a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
-* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
-+
-以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
-
-* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
-
-
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
-* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
-+
-以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
-
-* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
-
-
-^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
-
-+ * コンソール エージェントの 3.9.47 リリース以降、システムはオプション 1 にリストされているエンドポイントをサポートします。コンソール エージェントの以前のリリースでは、下位互換性はサポートされていません。 * コンソール エージェントは、最初にオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。 * NetApp Backup and Recoveryまたは Ransomware Resilience でコンソール エージェントを使用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
-
-
-
- a| 
-Console エージェントが AWS Government リージョンにある場合：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
- a| 
-コンソールエージェントがAWS Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得する。
-
-
-
- a| 
-Console エージェントが Azure Government リージョンにある場合：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
- a| 
-Console エージェントが Azure Government リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得します。
-
-
-
- a| 
-コンソールエージェントが商用リージョンまたは主権リージョンにある場合、次の2つのエンドポイントセットから選択できます：
-
-* オプション 1 (推奨) ^1^
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* オプション2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-コンソールエージェントが商用リージョンまたは主権リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得するため。
-
-|===
-|*3.9.55以前のエンドポイント* | *4.0.0以降のエンドポイント* | *目的*
-
-a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| ライセンス取得およびNetAppサポートへのお問い合わせ。 a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 日常業務用。 a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | コンソールエージェントのアップグレード用のイメージを取得するため。
-
-|===
 |===
 --
 ====
@@ -406,7 +255,7 @@ NOTE: オンプレミスにコンソール エージェントがインストー�
 
 
 .結果
-これで、必要な権限を持つ IAM ユーザー アクセス キーを取得できるはずです。コンソール エージェントをインストールした後、コンソールからこれらの認証情報をコンソール エージェントに関連付けます。
+これで、必要な権限を持つIAMユーザーアクセスキーが取得できたはずです。Console エージェントをインストールしたら、Console からこれらの認証情報を Console エージェントに関連付けてください。
 
 --
 .Azure
@@ -558,7 +407,7 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 ====
 
 
-== VCenter環境にコンソールエージェントをインストールする
+== vCenter 環境に Console エージェントをインストールします
 
 NetAppは、vCenter環境へのConsoleエージェントのインストールをサポートしています。OVAファイルには、VMware環境にデプロイできる事前設定済みのVMイメージが含まれています。ファイルのダウンロードまたはURLデプロイは、NetApp Consoleから直接利用できます。これには、Consoleエージェントソフトウェアと自己署名証明書が含まれます。
 
@@ -571,14 +420,14 @@ OVA をダウンロードするか、 NetApp Consoleから OVA URL を直接コ�
 . *管理 > エージェント*を選択します。
 . *概要*ページで、*エージェントのデプロイ > オンプレミス*を選択します。
 . *OVA付き*を選択してください。
-. OVA をダウンロードするか、VCenter で使用する URL をコピーするかを選択します。
+. OVAをダウンロードするか、URLをコピーしてvCenterで使用するかを選択してください。
 
 
 
 
-=== エージェントをVCenter環境にデプロイします
+=== vCenter 環境にエージェントを導入します
 
-エージェントを展開するには、VCenter 環境にログインします。
+vCenter 環境にログインして、エージェントをデプロイします。
 
 .手順
 . 環境で必要な場合は、自己署名証明書を信頼済み証明書にアップロードします。この証明書はインストール後に置き換えます。
@@ -600,11 +449,11 @@ OVA をダウンロードするか、 NetApp Consoleから OVA URL を直接コ�
 . 使用するプロキシ構成のタイプ（明示的プロキシ、透過プロキシ、またはプロキシなし）を選択します。
 . VM を展開するデータストアを選択し、[次へ] を選択します。ホストの要件を満たしていることを確認してください。
 . VM を接続するネットワークを選択し、[次へ] を選択します。ネットワークが IPv4 であり、必要なエンドポイントへのアウトバウンド インターネット アクセスできることを確認します。
-. *テンプレートのカスタマイズ*ウィンドウで、次のフィールドに入力します。
+. *テンプレートのカスタマイズ*ウィンドウで、以下のフィールドを入力します：
 +
 ** *プロキシ情報*
 +
-*** 明示的なプロキシを選択した場合は、プロキシ サーバーのホスト名または IP アドレスとポート番号、およびユーザー名とパスワードを入力します。
+*** 明示的なプロキシを選択した場合は、プロキシ サーバのホスト名またはIPアドレスとポート番号、およびユーザー名とパスワードを入力します。
 *** 透過プロキシを選択した場合は、それぞれの証明書をアップロードします。
 
 
@@ -612,7 +461,7 @@ OVA をダウンロードするか、 NetApp Consoleから OVA URL を直接コ�
 +
 *** *構成チェックをスキップ*: このチェックボックスはデフォルトでオフになっており、エージェントはネットワーク アクセスを検証するために構成チェックを実行します。
 +
-**** NetApp、インストールにエージェントの構成チェックが含まれるように、このボックスをオフのままにしておくことを推奨しています。構成チェックでは、エージェントが必要なエンドポイントへのネットワーク アクセス権を持っているかどうかを検証します。接続の問題によりデプロイメントが失敗した場合は、エージェント ホストから検証レポートとログにアクセスできます。場合によっては、エージェントがネットワークにアクセスできることが確実な場合は、チェックをスキップすることもできます。例えば、まだlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、検証チェックなしでインストールするためのチェックボックスをオンにします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
+**** NetAppでは、インストール時にエージェントの構成チェックが含まれるように、このチェックボックスはオフのままにしておくことを推奨しています。構成チェックでは、エージェントが必要なエンドポイントへのネットワーク アクセスを持っていることを検証します。接続の問題が原因でデプロイが失敗した場合は、エージェントホストから検証レポートとログにアクセスできます。場合によっては、エージェントがネットワーク アクセスを持っていることが確実であれば、チェックをスキップすることもできます。たとえば、エージェントのアップグレードに使用されるlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]をまだ使用している場合、検証はエラーで失敗します。これを回避するには、検証チェックなしでインストールするチェックボックスを選択してください。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"]。
 
 
 *** *メンテナンスパスワード*: `maint`エージェントメンテナンスコンソールへのアクセスを許可するユーザー。
@@ -620,7 +469,7 @@ OVA をダウンロードするか、 NetApp Consoleから OVA URL を直接コ�
 *** *ホスト名*: この VM のホスト名を設定します。検索ドメインを含めることはできません。たとえば、console10.searchdomain.company.com の FQDN は console10 と入力する必要があります。
 *** *プライマリ DNS*: 名前解決に使用するプライマリ DNS サーバーを指定します。
 *** *セカンダリ DNS*: 名前解決に使用するセカンダリ DNS サーバーを指定します。
-*** 検索ドメイン: ホスト名を解決するときに使用する検索ドメイン名を指定します。たとえば、FQDN が console10.searchdomain.company.com の場合は、searchdomain.company.com と入力します。
+*** *検索ドメイン*：ホスト名を解決する際に使用する検索ドメイン名を指定します。たとえば、FQDNがconsole10.searchdomain.company.comの場合は、searchdomain.company.comと入力します。
 *** *IPv4 アドレス*: ホスト名にマッピングされる IP アドレス。
 *** *IPv4 サブネット マスク*: IPv4 アドレスのサブネット マスク。
 *** *IPv4 ゲートウェイ アドレス*: IPv4 アドレスのゲートウェイ アドレス。
@@ -629,7 +478,7 @@ OVA をダウンロードするか、 NetApp Consoleから OVA URL を直接コ�
 
 
 . *次へ*を選択します。
-. *完了準備完了*ウィンドウで詳細を確認し、*完了*を選択します。
+. *Ready to complete* ウィンドウで詳細を確認し、 *Finish* を選択します。
 +
 vSphere タスク バーには、コンソール エージェントの展開の進行状況が表示されます。
 

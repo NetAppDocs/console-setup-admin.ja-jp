@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-agent-google-console-gcloud.html 
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
-summary: NetAppコンソールから、または Google Cloud を使用して Google Cloud でコンソール エージェントを作成するには、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。 
+summary: Google Cloud で Console エージェントを作成するには、NetApp Console を使用する場合、または Google Cloud を使用する場合は、ネットワークの設定、Google Cloud のアクセス許可の準備、Google Cloud API の有効化を行い、その後 Console エージェントを作成する必要があります。 
 ---
 = Google Cloud の NetApp Console からコンソール エージェントをデプロイします
 :hardbreaks:
@@ -58,7 +58,7 @@ Google Cloud 内のリソースを管理します。
  a| 
 \https://mysupport.netapp.com
  a| 
-ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。
 
 
 
@@ -72,7 +72,7 @@ NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp C
  a| 
 \https://support.netapp.com
  a| 
-ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
 
 
 
@@ -95,65 +95,10 @@ NetApp Console内で機能とサービスを提供します。
 * ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
 
 
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
-* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
-+
-以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
-
-* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
-
-
-^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
-
-+ * コンソール エージェントの 3.9.47 リリース以降、システムはオプション 1 にリストされているエンドポイントをサポートします。コンソール エージェントの以前のリリースでは、下位互換性はサポートされていません。 * コンソール エージェントは、最初にオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。 * NetApp Backup and Recoveryまたは Ransomware Resilience でコンソール エージェントを使用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
-
-
-
- a| 
-Console エージェントが AWS Government リージョンにある場合：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
- a| 
-コンソールエージェントがAWS Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得する。
-
-
-
- a| 
-Console エージェントが Azure Government リージョンにある場合：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
- a| 
-Console エージェントが Azure Government リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得します。
-
-
-
- a| 
-コンソールエージェントが商用リージョンまたは主権リージョンにある場合、次の2つのエンドポイントセットから選択できます：
-
-* オプション 1 (推奨) ^1^
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* オプション2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-コンソールエージェントが商用リージョンまたは主権リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得するため。
-
 |===
 --
 
 
-|*3.9.55以前のエンドポイント* | *4.0.0以降のエンドポイント* | *目的*
-
-a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| ライセンス取得およびNetAppサポートへのお問い合わせ。 a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 日常業務用。 a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | コンソールエージェントのアップグレード用のイメージを取得するため。
-
-|===
-|===
 NetAppコンソールから接続されたエンドポイント:: WebベースのNetApp Console SaaSアプリケーションを使用すると、データ管理タスクを完了するために複数のエンドポイントに接続します。これには、ConsoleからConsoleエージェントを導入するために接続されるエンドポイントが含まれます。
 +
 --
@@ -300,8 +245,10 @@ includedPermissions:
 次の例では、プロジェクト レベルで「agentDeployment」という名前のロールを作成します。
 
 +
-gcloud iam ロール コネクタデプロイメントを作成 --project=myproject --file=agent-deployment.yaml
-
+[source, shell]
+----
+gcloud iam roles create agentDeployment --project=myproject --file=agent-deployment.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud ドキュメント: カスタムロールの作成と管理"^]
 
@@ -461,7 +408,7 @@ NOTE: Google Cloud にエージェントをデプロイすると、エージェ�
 次のものが必要です:
 
 * コンソール エージェントとコンソール エージェント VM のサービス アカウントを作成するために必要な Google Cloud 権限。
-* ネットワーク要件を満たす VPC とサブネット。
+* ネットワーク要件を満たすVPCとサブネット。
 * コンソール エージェントからのインターネット アクセスにプロキシが必要な場合のプロキシ サーバーの詳細。
 
 
@@ -483,8 +430,8 @@ NOTE: Google Cloud にエージェントをデプロイすると、エージェ�
 ** *詳細*: 仮想マシン インスタンスの名前を入力し、タグを指定して、プロジェクトを選択し、必要な権限を持つサービス アカウントを選択します (詳細については上記のセクションを参照してください)。
 ** *場所*: インスタンスのリージョン、ゾーン、VPC、サブネットを指定します。
 ** *ネットワーク*: パブリック IP アドレスを有効にするかどうかを選択し、オプションでプロキシ構成を指定します。
-** *ネットワーク タグ*: 透過プロキシを使用している場合は、コンソール エージェント インスタンスにネットワーク タグを追加します。ネットワーク タグは小文字で始まる必要があり、小文字、数字、ハイフンを含めることができます。タグは小文字または数字で終わる必要があります。たとえば、「console-agent-proxy」というタグを使用できます。
-** *ファイアウォール ポリシー*: 新しいファイアウォール ポリシーを作成するか、必要な受信ルールと送信ルールを許可する既存のファイアウォール ポリシーを選択するかを選択します。
+** *ネットワークタグ*：透過プロキシを使用する場合は、Consoleエージェントインスタンスにネットワークタグを追加します。ネットワークタグは小文字で始まり、小文字、数字、ハイフンを含めることができます。タグは小文字の英字または数字で終わる必要があります。たとえば、タグ `console-agent-proxy`を使用できます。
+** * ファイアウォール ポリシー * ：新しいファイアウォール ポリシーを作成するか、必要なインバウンド ルールとアウトバウンド ルールを許可する既存のファイアウォール ポリシーを選択するかを選択します。
 +
 link:reference-ports-gcp.html["Google Cloud のファイアウォール ルール"]
 
@@ -515,4 +462,4 @@ link:reference-ports-gcp.html["Google Cloud のファイアウォール ルー�
 
 NOTE: デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。link:task-troubleshoot-agent.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
 
-コンソール エージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合は、[システム] ページに Google Cloud Storage システムが自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["コンソールから Google Cloud Storage を管理する方法を学びます"]
+コンソールエージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合、Google Cloud Storage システムが [システム] ページに自動的に表示されます https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["コンソールから Google Cloud Storage を管理する方法を学びます"^]。

@@ -177,7 +177,6 @@
   <block id="6e9c9d81baee7aa9e962024fc724b7ca" category="paragraph">以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。<block ref="b264fb455cda46e4971383987c8dce4c" category="inline-link-macro-rx"></block> 。</block>
   <block id="b44e4956810f4ddc108ea4c7e1339c8b" category="list-text">ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。</block>
   <block id="27ef411618dcaaeae6016b6063099cd3" category="paragraph">^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。</block>
-  <block id="6a03e1c891355688819315331d67c297" category="paragraph">+ * コンソール エージェントの 3.9.47 リリース以降、システムはオプション 1 にリストされているエンドポイントをサポートします。コンソール エージェントの以前のリリースでは、下位互換性はサポートされていません。 * コンソール エージェントは、最初にオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。 * NetApp Backup and Recoveryまたは Ransomware Resilience でコンソール エージェントを使用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。</block>
   <block id="9d8771d45517bfb98492c1863dcd84e6" category="paragraph">| コンソールエージェントがAWS Governmentリージョンにある場合: \https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io</block>
   <block id="d69547f8da7a3fc1f1750b21a40b4d81" category="paragraph">| コンソールエージェントが AWS Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得します。</block>
   <block id="e1e00fbff5d8f3eda49d54653859b8dc" category="paragraph">| コンソールエージェントがAzure Governmentリージョンにある場合: \https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us</block>
@@ -1787,8 +1786,6 @@
   <block id="82dcb7c91520ddfaa8fc1f4260ebe46c" category="list-text">オプション1（推奨）</block>
   <block id="7fecdfc8687a610d980b932694761cd7" category="paragraph">コンソール エージェントのアップグレード用のイメージを取得します。</block>
   <block id="b6aefb323f8d83a881c23e1757158ad2" category="paragraph">NetApp、ランサムウェア耐性またはバックアップとリカバリを使用していない限り、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。</block>
-  <block id="f3b521898fd9510c7d26d0b0ea8284c8" category="list-text">オプション 1 エンドポイントは 3.9.47 以降でサポートされます。  3.9.47 より前のリリースでは下位互換性がサポートされていません。</block>
-  <block id="3f22e8460387fbe2426f3e71560e86e4" category="list-text">コンソール エージェントは、まずオプション 2 のエンドポイントとの接続を開始します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。</block>
   <block id="5a1acaa8c83a1beeb2be7c01dd1efeb3" category="list-text">コンソール エージェントをNetApp Backup and Recoveryまたは Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。</block>
   <block id="7dfb843f052469a3cc66d13554feb0f4" category="cell">\https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net</block>
   <block id="068395f3cd26ca40ad905de3790c9435" category="cell">Azure パブリック リージョン内のリソースを管理します。</block>
@@ -1802,7 +1799,6 @@
   <block id="76e8c2ef4f00506a56e17505bb27d4f1" category="inline-link-macro">エンドポイント リストを更新する方法について説明します。</block>
   <block id="8963387394e2ee3e2a5a9ba160566a58" category="cell">\https://support.netapp.com</block>
   <block id="fe0afb21d6cb9bc2fa6c390327246314" category="cell">NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。</block>
-  <block id="f092dc53062418401abf8d7b17161fcb" category="cell">ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェア アップデートを受信します。</block>
   <block id="5eda3a7f9f9788e7beae44ca11c3fca1" category="inline-link-macro">コンソールエージェントの AWS ネットワークアクセスを設定する</block>
   <block id="fe65e3a837dc9a3749e87481b67ff0fb" category="list-text"><block ref="fe65e3a837dc9a3749e87481b67ff0fb" category="inline-link-macro-rx"></block></block>
   <block id="413296dfc7c1face41e185f79c4f8f7a" category="inline-link-macro">コンソール エージェントの Azure ネットワーク アクセスを設定する</block>
@@ -3497,7 +3493,6 @@
   <block id="287770d72fc21f25627dd52e25482a5f" category="section-title">ステップ5: コンソールエージェントに権限を付与する</block>
   <block id="83743ee9802016e7518c8a4f48a77bb3" category="paragraph">コンソール エージェントを作成したので、以前に設定した権限をエージェントに付与する必要があります。権限を付与すると、コンソール エージェントは Azure 内のデータとストレージ インフラストラクチャを管理できるようになります。</block>
   <block id="ea3c56aef0a9007d0d56003998b5b840" category="paragraph">これで、コンソールに、ユーザーに代わって Azure でアクションを実行するために必要なアクセス許可が付与されました。</block>
-  <block id="7f8bd52da3d2fb0e23caaadaa19ce40a" category="summary">NetAppコンソールから、または Google Cloud を使用して Google Cloud でコンソール エージェントを作成するには、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。</block>
   <block id="702a1eca6754acddde443fd4cb404a99" category="doc">NetApp Consoleから Google Cloud にコンソール エージェントを作成する</block>
   <block id="05e4e55b4a1ded174cd4d080db80632c" category="paragraph">コンソール エージェントがターゲット ネットワークへの接続とアウトバウンド インターネット アクセスを使用してリソースを管理できるように、ネットワークを設定します。</block>
   <block id="1ac278db12cb6e29a5837e46be7230d6" category="paragraph">コンソール エージェントを作成した後、このネットワーク要件を実装します。</block>
@@ -3522,7 +3517,6 @@
   <block id="061388a938fd64eb5c4e7136956bbd01" category="paragraph">コンソールから直接コンソール エージェントを作成します。</block>
   <block id="d1f00850b9389d111947a36ca0d9068b" category="paragraph">コンソール エージェントを作成すると、デフォルト構成を使用して Google Cloud に仮想マシン インスタンスがデプロイされます。コンソール エージェントを作成した後、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
   <block id="5afba04db223b94ef6f22bee25e70fdc" category="list-text">コンソール エージェントとコンソール エージェント VM のサービス アカウントを作成するために必要な Google Cloud 権限。</block>
-  <block id="ee011866b8623b71b582287613b814bc" category="list-text">*概要*ページで、*エージェントのデプロイ &gt; Google Cloud*を選択します。</block>
   <block id="cec29f07fe09b750feee9ec4b4ef3ca7" category="list-text">*エージェントのデプロイ*ページで、必要なものの詳細を確認します。次の 2 つのオプションがあります。</block>
   <block id="15de410cab5b286c0cff40620cbbc2f8" category="list-text">製品内ガイドを使用して展開の準備をするには、[*続行*] を選択します。製品内ガイドの各ステップには、ドキュメントのこのページに記載されている情報が含まれています。</block>
   <block id="43c314e15e760781773285daf91c0ad5" category="list-text">このページの手順に従ってすでに準備している場合は、[*展開にスキップ*] を選択します。</block>
@@ -3531,13 +3525,10 @@
   <block id="abfd76b9567ca082322504a092e076c7" category="list-text">*詳細*: 仮想マシン インスタンスの名前を入力し、タグを指定して、プロジェクトを選択し、必要な権限を持つサービス アカウントを選択します (詳細については上記のセクションを参照してください)。</block>
   <block id="221cebedac65af2855cc9b0f21c55587" category="list-text">*場所*: インスタンスのリージョン、ゾーン、VPC、サブネットを指定します。</block>
   <block id="39ca94376c3d56de257bd39a110e0c3b" category="list-text">*ネットワーク*: パブリック IP アドレスを有効にするかどうかを選択し、オプションでプロキシ構成を指定します。</block>
-  <block id="16ab4603644e6d4c79db4c5f40201c58" category="list-text">*ネットワーク タグ*: 透過プロキシを使用している場合は、コンソール エージェント インスタンスにネットワーク タグを追加します。ネットワーク タグは小文字で始まる必要があり、小文字、数字、ハイフンを含めることができます。タグは小文字または数字で終わる必要があります。たとえば、「console-agent-proxy」というタグを使用できます。</block>
-  <block id="d8948bb022f3ece9625b861d1822f759" category="list-text">*ファイアウォール ポリシー*: 新しいファイアウォール ポリシーを作成するか、必要な受信ルールと送信ルールを許可する既存のファイアウォール ポリシーを選択するかを選択します。</block>
   <block id="e22a4abc98b47ca148e0dfda7e259162" category="inline-link-macro">Google Cloud のファイアウォール ルール</block>
   <block id="4693bfc9044ed3552c37524411e90819" category="paragraph"><block ref="4693bfc9044ed3552c37524411e90819" category="inline-link-macro-rx"></block></block>
   <block id="e8b69837aadc0d9aafe18d0701d1dc76" category="paragraph">プロセスが完了すると、コンソール エージェントが使用できるようになります。</block>
   <block id="9bfb17e64abc7809724f85bcd87b6901" category="inline-link">コンソールから Google Cloud Storage を管理する方法を学びます</block>
-  <block id="b1599f1dab16f4dcd35886dbdbbbb28e" category="paragraph">コンソール エージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合は、[システム] ページに Google Cloud Storage システムが自動的に表示されます。<block ref="f1cd5bada461ae8da2b324edaa3edd7e" category="inline-link-rx"></block></block>
   <block id="4c2e9efea94172b6ed2675549b18aa3d" category="summary">Google Cloud を使用して Google Cloud にコンソール エージェントを作成するには、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。</block>
   <block id="eaf8526751222fae318894a8fef05e01" category="paragraph">コンソール エージェントがリソースを管理し、ターゲット ネットワークおよびインターネットに接続できるようにネットワークを設定します。</block>
   <block id="721dfac3d9c6cded3f26338ec95ebc2f" category="paragraph">Google Cloud ユーザーが Google Cloud からコンソール エージェント VM をデプロイするための権限を設定します。</block>
@@ -3592,7 +3583,6 @@
   <block id="4c4edb2137b0216befa4b8e99dca1cde" category="section-title">ステップ8: コンソールエージェントに権限を付与する</block>
   <block id="7d8205c63a7b91b92998e4cecc811f54" category="paragraph">以前に設定した Google Cloud 権限をコンソール エージェントに提供する必要があります。権限を付与すると、コンソール エージェントが Google Cloud 内のデータとストレージ インフラストラクチャを管理できるようになります。</block>
   <block id="b851520b404a9e4e66e67b6d193bd247" category="list-text">他の Google Cloud プロジェクトのリソースを管理する場合は、コンソール エージェントのロールを持つサービス アカウントをそのプロジェクトに追加してアクセス権を付与します。プロジェクトごとにこの手順を繰り返す必要があります。</block>
-  <block id="6213290b2e7665edea40cc0e43f3bd7d" category="summary">VMWare ユーザーの場合は、OVA を使用して VCenter にコンソール エージェントをインストールできます。  OVA のダウンロードまたは URL は、NetApp Consoleから入手できます。</block>
   <block id="a3c7b5a3c1143faff777c4825dfe7b66" category="inline-link-macro">エージェントの VM コンソールの詳細について説明します。</block>
   <block id="0342133e06734200c991eb898e2ca8be" category="section-title">コンソールエージェントのインストールの準備</block>
   <block id="89a24ecb39c9f62ac88a464d920dec1d" category="paragraph">インストールする前に、VM ホストが要件を満たしており、コンソール エージェントがインターネットおよび対象のネットワークにアクセスできることを確認してください。  NetAppデータ サービスまたはCloud Volumes ONTAP を使用するには、コンソール エージェントがユーザーに代わってアクションを実行できるように、クラウド プロバイダの資格情報を作成します。</block>
@@ -3601,23 +3591,16 @@
   <block id="74e4d777eaf84c03d65f037d183ff503" category="admonition">エージェントを ESXi ホストに直接インストールするのではなく、vCenter 環境にインストールします。</block>
   <block id="8bfb1ddc371943b9f534ef554b930453" category="section-title">コンソールエージェントのネットワークアクセスを設定する</block>
   <block id="7129d9645e064e1e28d1d36774534766" category="paragraph">ネットワーク管理者と協力して、コンソール エージェントが必要なエンドポイントへの送信アクセスと対象ネットワークへの接続を持っていることを確認します。</block>
-  <block id="71773db80c869385c33ed8bbdaf9d710" category="admonition">オンプレミスにコンソール エージェントがインストールされている場合、Google Cloud のリソースを管理することはできません。  Google Cloud リソースを管理するには、Google Cloud にエージェントをインストールします。</block>
-  <block id="92da416783ffaf0d739b0cf33c66885c" category="paragraph">コンソール エージェントをオンプレミスでインストールする場合、AWS に導入されたNetAppシステム ( Cloud Volumes ONTAPなど) を管理するために、次の AWS エンドポイントへのネットワーク アクセスが必要です。</block>
-  <block id="ec1dedcc618c65ed1a952b05e154ce54" category="paragraph">コンソール エージェントがオンプレミスにインストールされている場合、Azure にデプロイされたNetAppシステム ( Cloud Volumes ONTAPなど) を管理するために、次の Azure エンドポイントへのネットワーク アクセスが必要です。</block>
   <block id="1e3e3c5b4db6c0d9931a1f9cf1d39412" category="section-title">AWS または Azure のコンソール エージェント クラウド権限を作成する</block>
   <block id="d5ec04e9e8c34b2d798bd288de7fe984" category="paragraph">オンプレミスのコンソールエージェントを使用して AWS または Azure のNetAppデータ サービスを使用する場合は、インストール後にコンソールエージェントに資格情報を追加できるように、クラウド プロバイダーで権限を設定する必要があります。</block>
   <block id="dfb9fa0c4426b8a3bd6f4d28bb0e08bd" category="admonition">オンプレミスにコンソール エージェントがインストールされている場合、Google Cloud のリソースを管理することはできません。  Google Cloud リソースを管理するには、Google Cloud にエージェントをインストールする必要があります。</block>
   <block id="7ad823583996f30ced062ef115ae1e1c" category="paragraph">オンプレミスのコンソールエージェントの場合は、IAM ユーザーアクセスキーを追加して AWS 権限を付与します。</block>
   <block id="b4ae6a79d6eb44ce0c53078f82061e4b" category="paragraph">オンプレミスのコンソール エージェントには IAM ユーザー アクセス キーを使用します。オンプレミスのコンソール エージェントでは IAM ロールはサポートされていません。</block>
-  <block id="4bb5a2a521eb4d58e16bc14b8c911f01" category="paragraph">これで、必要な権限を持つ IAM ユーザー アクセス キーを取得できるはずです。コンソール エージェントをインストールした後、コンソールからこれらの認証情報をコンソール エージェントに関連付けます。</block>
   <block id="697fed71e5c4d47214c869b8aa917600" category="paragraph">コンソール エージェントがオンプレミスでインストールされている場合は、Microsoft Entra ID でサービス プリンシパルを設定し、コンソール エージェントに必要な Azure 資格情報を取得して、コンソール エージェントに Azure 権限を付与する必要があります。</block>
-  <block id="8c499dc49b60230cffd92735462c1e33" category="section-title">VCenter環境にコンソールエージェントをインストールする</block>
   <block id="15e605ee974fa55f027726848cc8afff" category="section-title">OVAをダウンロードするかURLをコピーしてください</block>
   <block id="3cb68bd3e8922f7c1ffbda95dcdfc461" category="paragraph">OVA をダウンロードするか、 NetApp Consoleから OVA URL を直接コピーします。</block>
   <block id="e4988d7a577285f1e24c4e82aa9743ef" category="list-text">*概要*ページで、*エージェントのデプロイ &gt; オンプレミス*を選択します。</block>
   <block id="4fc92d7e33e740f10aef02cbbc6fa610" category="list-text">*OVA付き*を選択してください。</block>
-  <block id="3692c50940f6e7b93bd78e98318c75b0" category="list-text">OVA をダウンロードするか、VCenter で使用する URL をコピーするかを選択します。</block>
-  <block id="bae9ea4e0a7a3c2d248631b12fa7d19f" category="paragraph">エージェントを展開するには、VCenter 環境にログインします。</block>
   <block id="c7183a793d1ba773366b88c02fa65bbf" category="list-text">コンテンツ ライブラリまたはローカル システムから OVA を展開します。</block>
   <block id="0b044bf45314e5d20c59ab7b578f7495" category="cell">ローカルシステムから</block>
   <block id="0aac2e2d60f56941b22e0c247b2e8606" category="cell">コンテンツライブラリから</block>
@@ -3631,42 +3614,33 @@
   <block id="6d78ed573fddd6a3f8f162c07848707d" category="list-text">使用するプロキシ構成のタイプ（明示的プロキシ、透過プロキシ、またはプロキシなし）を選択します。</block>
   <block id="12dc2cce6b942756043a4ae0da4c14b6" category="list-text">VM を展開するデータストアを選択し、[次へ] を選択します。ホストの要件を満たしていることを確認してください。</block>
   <block id="945e8bee85a6e3eef017e30f4ee2df31" category="list-text">VM を接続するネットワークを選択し、[次へ] を選択します。ネットワークが IPv4 であり、必要なエンドポイントへのアウトバウンド インターネット アクセスできることを確認します。</block>
-  <block id="5ff2f6027b004f50fdeef1f7b72a3261" category="list-text">*テンプレートのカスタマイズ*ウィンドウで、次のフィールドに入力します。</block>
   <block id="25ed452e0ddd0d0767ff6341fa17da58" category="list-text">*プロキシ情報*</block>
-  <block id="bb1e1ef266584a5a332dfd21a0ceff90" category="list-text">明示的なプロキシを選択した場合は、プロキシ サーバーのホスト名または IP アドレスとポート番号、およびユーザー名とパスワードを入力します。</block>
   <block id="777fde86c6354cd539ec78cfac87b390" category="list-text">透過プロキシを選択した場合は、それぞれの証明書をアップロードします。</block>
   <block id="f6b06d7af2e17b031527e55078cf6bda" category="list-text">*仮想マシンの構成*</block>
   <block id="76839622dc86d11edf37954c2016a8c3" category="list-text">*構成チェックをスキップ*: このチェックボックスはデフォルトでオフになっており、エージェントはネットワーク アクセスを検証するために構成チェックを実行します。</block>
-  <block id="35dd80fc271af4350d80a6c1d9404850" category="list-text">NetApp、インストールにエージェントの構成チェックが含まれるように、このボックスをオフのままにしておくことを推奨しています。構成チェックでは、エージェントが必要なエンドポイントへのネットワーク アクセス権を持っているかどうかを検証します。接続の問題によりデプロイメントが失敗した場合は、エージェント ホストから検証レポートとログにアクセスできます。場合によっては、エージェントがネットワークにアクセスできることが確実な場合は、チェックをスキップすることもできます。例えば、まだ<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、検証チェックなしでインストールするためのチェックボックスをオンにします。<block ref="b264fb455cda46e4971383987c8dce4c" category="inline-link-macro-rx"></block> 。</block>
   <block id="5ed60c42a611e853bd9d184e917366cf" category="list-text">*メンテナンスパスワード*:<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>エージェントメンテナンスコンソールへのアクセスを許可するユーザー。</block>
   <block id="cb059a17daa0db402273fce83326bc2b" category="list-text">*NTP サーバー*: 時刻同期用の 1 つ以上の NTP サーバーを指定します。</block>
   <block id="fea958d8a6639552d2e73dadaab0eb59" category="list-text">*ホスト名*: この VM のホスト名を設定します。検索ドメインを含めることはできません。たとえば、console10.searchdomain.company.com の FQDN は console10 と入力する必要があります。</block>
   <block id="beb010a263787a74cdc9103169ec7147" category="list-text">*プライマリ DNS*: 名前解決に使用するプライマリ DNS サーバーを指定します。</block>
   <block id="2f27bbc1e4c1294b414b1e98144cf977" category="list-text">*セカンダリ DNS*: 名前解決に使用するセカンダリ DNS サーバーを指定します。</block>
-  <block id="a7fa7e49f04cf263877a2cbae3e1b8b0" category="list-text">検索ドメイン: ホスト名を解決するときに使用する検索ドメイン名を指定します。たとえば、FQDN が console10.searchdomain.company.com の場合は、searchdomain.company.com と入力します。</block>
   <block id="516cfc546d400009d4baa6b619af8d52" category="list-text">*IPv4 アドレス*: ホスト名にマッピングされる IP アドレス。</block>
   <block id="8d476d4f2856ab26f45a1d6fa687d3ce" category="list-text">*IPv4 サブネット マスク*: IPv4 アドレスのサブネット マスク。</block>
   <block id="e9cae4345e6ad7a5fa4299f01731ebf6" category="list-text">*IPv4 ゲートウェイ アドレス*: IPv4 アドレスのゲートウェイ アドレス。</block>
-  <block id="310f705969896b4d59368edab71d1d87" category="list-text">*完了準備完了*ウィンドウで詳細を確認し、*完了*を選択します。</block>
   <block id="533cb358048cec10b9364d5d776a39b1" category="paragraph">vSphere タスク バーには、コンソール エージェントの展開の進行状況が表示されます。</block>
   <block id="54453e0b33b1c136b904d49d40e5584f" category="list-text">VMの電源をオンにします。</block>
   <block id="54a3b32628f9142d15de42359d5a4ab9" category="admonition">デプロイメントが失敗した場合は、エージェント ホストから検証レポートとログにアクセスできます。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="9ef04a4b8a28bfcf784c72eeace644a2" category="section-title">NetApp Consoleにコンソールエージェントを登録する</block>
   <block id="24ec0b6e7c909c10633ec52c6523f771" category="section-title">コンソールにクラウドプロバイダーの資格情報を追加する</block>
   <block id="5ec74590d8c956ff4efa142da1a4f0a3" category="doc">オンプレミスにコンソールエージェントを手動でインストールする</block>
-  <block id="7ca24cd3ff141e4586dd77f541557fbb" category="paragraph">インストールする前に、ホスト (VM または Linux ホスト) が要件を満たしていること、およびコンソール エージェントがインターネットと対象ネットワークへの送信アクセスできることを確認する必要があります。  NetAppデータ サービス、またはCloud Volumes ONTAPなどのクラウド ストレージ オプションを使用する予定の場合は、コンソール エージェントがユーザーに代わってクラウド内でアクションを実行できるように、クラウド プロバイダーで資格情報を作成してコンソールに追加する必要があります。</block>
   <block id="48cf64c1b89091cf12a59389f02aeecb" category="paragraph">コンソール エージェントをインストールする前に、インストール要件を満たすホスト マシンがあることを確認する必要があります。また、ネットワーク管理者と協力して、コンソール エージェントが必要なエンドポイントへの送信アクセスと対象ネットワークへの接続を持っていることを確認する必要があります。</block>
-  <block id="23c99137ddf95fcb54b75a1f1bf8bb1e" category="paragraph">オペレーティング システム、RAM、およびポートの要件を満たす x86 ホストでコンソール エージェントを実行します。コンソール エージェントをインストールする前に、ホストがこれらの要件を満たしていることを確認してください。</block>
   <block id="433aeb543079d84c8061aef71ae9f473" category="paragraph">コンソール エージェントがリソースを管理できるようにネットワーク アクセスを設定します。ターゲット ネットワークへの接続と特定のエンドポイントへのアウトバウンド インターネット アクセスが必要です。</block>
   <block id="f0eeb12cb5a8be7440f60683d523545a" category="admonition">オンプレミスにインストールされたコンソール エージェントは、Google Cloud 内のリソースを管理できません。  Google Cloud リソースを管理するには、Google Cloud にエージェントをインストールする必要があります。</block>
-  <block id="ecc5f67294990fffe1f3aa3b80dfa239" category="paragraph">オンプレミスのコンソールエージェントを使用して AWS または Azure のNetAppデータ サービスを使用する場合は、クラウド プロバイダーで権限を設定し、インストール後にコンソールエージェントに資格情報を追加する必要があります。</block>
   <block id="8fb0aa6563c8905f9c4ad1b5e411ea68" category="admonition">Google Cloud に存在するリソースを管理するには、Google Cloud に Console エージェントをインストールする必要があります。</block>
   <block id="1a88760d0eed4fcfa6bdd0d4c51b1656" category="paragraph">コンソール エージェントがオンプレミスにインストールされている場合は、必要な権限を持つ IAM ユーザーのアクセス キーを追加して、コンソールに AWS 権限を付与する必要があります。</block>
   <block id="14f39ce00d196da67b89fbd133487f7f" category="paragraph">コンソール エージェントがオンプレミスにインストールされている場合は、この認証方法を使用する必要があります。  IAM ロールは使用できません。</block>
   <block id="9c0d3838c78ea52eb921fac4ec2432cc" category="paragraph">これで、必要な権限を持つ IAM ユーザーのアクセス キーを取得できるはずです。コンソール エージェントをインストールした後、コンソールからこれらの資格情報をコンソール エージェントに関連付けます。</block>
   <block id="88de2e797d826492bc900e819362d09a" category="paragraph">コンソール エージェントがオンプレミスでインストールされている場合は、Microsoft Entra ID でサービス プリンシパルを設定し、コンソール エージェントに必要な Azure 資格情報を取得して、コンソール エージェントに Azure 権限を付与する必要があります。</block>
   <block id="59e21bbcfbfbdf2812922da704c8a331" category="section-title">コンソールエージェントを手動でインストールする</block>
-  <block id="cdea55201ee5d84c2fc2396b0293044a" category="paragraph">コンソール エージェントを手動でインストールする場合は、要件を満たすようにマシン環境を準備する必要があります。  Linux マシンが必要であり、Linux オペレーティング システムに応じて Podman または Docker をインストールする必要があります。</block>
   <block id="a1646db22e4431ba3294252b51d9e819" category="section-title">PodmanまたはDocker Engineをインストールする</block>
   <block id="a27a07a43a00f187989c47f620949169" category="section-title">コンソールエージェントを手動でインストールする</block>
   <block id="58c83e5c8c5ef2ad291661bcec1c6a86" category="paragraph">オンプレミスの既存の Linux ホストにコンソール エージェント ソフトウェアをダウンロードしてインストールします。</block>
@@ -4528,7 +4502,6 @@
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">ランサムウェア レジリエンス ロールは、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供します。ランサムウェア耐性は次の役割をサポートします。</block>
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">ランサムウェア耐性の役割</block>
-  <block id="e40a74210464aa0305c3d66c083f2e23" category="paragraph">| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新したり、 NetApp Consoleに新しいNSS資格情報を追加したりします。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェアアップデートを受信します。</block>
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。</block>
   <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">バックアップとリカバリの役割</block>
   <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">災害復旧の役割</block>
@@ -4843,9 +4816,7 @@
   <block id="e308cbdddf34fb65f938301ff80d4538" category="list-text">compute.subnetworks.useExternalIp</block>
   <block id="bc803c81454ea9df76e9060827a7bc53" category="list-text">compute.instances.addAccessConfig</block>
   <block id="3f7540ad5f30cb6539b7476d85d2f608" category="paragraph">権限は使用法を明確にするために更新されていますが、権限の追加や削除は行われていません。各権限がデプロイメント、日常的な操作、または削除のいずれに使用されるかを示す 3 つの列が追加されます。これとは別に、 NetApp Data ClassificationおよびNetApp Backup and Recoveryでの使用に基づいて、いくつかの権限が分離されています。</block>
-  <block id="2f78cc1ceedbe872d890b3b087731dee" category="paragraph">| NetApp ONTAP向け Amazon FsX:</block>
   <block id="fccc45024c0efe519c08e43bb1bd4c5f" category="list-text">api.workloads.netapp.com</block>
-  <block id="5e57ad0482de1c13a4a285a6101f6c13" category="paragraph">| Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。</block>
   <block id="61169bbb57ab5c82abb2ac47499153f3" category="list-text">コンソールで、[*次へ*] を選択して概要ページを確認します。</block>
   <block id="95d9f0b87c61b5cd1f8c21678ced4a5c" category="list-text">通知を設定します。</block>
   <block id="ec811988404f148d3a7f84f040f45531" category="paragraph">7日間または30日間を選択します。システムは、スーパー管理者、組織管理者、フェデレーション管理者、フェデレーション閲覧者の役割を持つすべてのユーザーに有効期限通知を電子メールで送信し、コンソールに表示します。</block>
@@ -5047,8 +5018,6 @@
   <block id="8b3be42a579e101783dbee0366282232" category="admonition">どの組織メンバーがリソースにアクセスできるのかを確認するには、<block ref="d3f770deeda88cc3cea0d73a63cf7240" category="inline-link-macro-rx"></block> 。</block>
   <block id="d23b81e3e519af34ae1d1368f055ab5c" category="admonition">検出されたリソースを組織全体から削除するには、「*システム*」ページに移動してシステムを削除します。</block>
   <block id="d47741191d2932672428925f5a647577" category="paragraph">メンバーの役割を変更してアクセスを更新します。</block>
-  <block id="c0597b9526c7ff0d7645fb305fbbb302" category="paragraph">NetApp ONTAP用の Amazon FsX:</block>
-  <block id="deb5ab06bb4820c3ddaf1096673112dd" category="paragraph">Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。</block>
   <block id="92e2005838617f772873a40c3ba5ee87" category="paragraph">コンソール エージェント ソフトウェアを実行しているホストが、オペレーティング システム、RAM、およびポートの要件を満たしていることを確認します。</block>
   <block id="7477110a62e7e23490489fd5dde0d9b3" category="paragraph">コンソール エージェントがハイブリッド クラウド内のリソースを管理できるように、ネットワークの場所が次の要件をサポートしていることを確認します。</block>
   <block id="4a2cd5186a22d99f67f031f282623ea8" category="paragraph">次のいずれかのオプションを使用して、 NetApp Consoleに AWS 権限を付与します。</block>
@@ -5056,7 +5025,6 @@
   <block id="3a25df27a9593be32d58d660128319d2" category="paragraph">コンソールエージェントをインストールした後、コンソールエージェントが AWS 内のデータとストレージインフラストラクチャを管理できるように、設定した AWS 権限を提供します。</block>
   <block id="5c585aa7c70930b73bdafb2cb9161f8a" category="paragraph">作成した IAM ロールをコンソールエージェント EC2 インスタンスにアタッチします。</block>
   <block id="483f6f30ec7b7da81659462b08c18e8a" category="paragraph">次の例では、プロジェクト レベルで「agentDeployment」という名前のロールを作成します。</block>
-  <block id="606b4f54c298cd84f8c9d4d46c74820a" category="paragraph">gcloud iam ロール コネクタデプロイメントを作成 --project=myproject --file=agent-deployment.yaml</block>
   <block id="a447c4cad2c58e7308d516639f777fff" category="section-title">ステップ 3: エージェントで使用する Google Cloud サービス アカウントを作成する</block>
   <block id="45395d40cf0cb384fb917beab8ac0f5c" category="admonition">Google Cloud にエージェントをデプロイすると、エージェントによってデプロイ ファイルを保存するためのバケットが作成されます。</block>
   <block id="478d6690c508002bc0e2f9e7c3ee46d5" category="paragraph">Google Cloud にコンソール エージェントをデプロイする前に、いくつかの Google Cloud API を有効にする必要があります。</block>
@@ -5150,7 +5118,6 @@
   <block id="fe766b76d3c1afbbfa9812a4774a1108" category="inline-link-macro">NetApp Consoleで利用可能な定義済みロールについて学習します</block>
   <block id="ca5fd8bb5d9faf476fbe2d765b802bdc" category="paragraph"><block ref="55b5ceff8fee7cfc075b04636ac3ba7f" category="inline-link-macro-rx"></block>。</block>
   <block id="e6f301b2c67375931164ffab8594268a" category="summary">NetAppコンソールの Identity and Access Management (IAM) を使用して、場所、部門、プロジェクトなどのビジネス階層に応じてリソース アクセスを構造化および制御します。</block>
-  <block id="8f0b3e866642f7b2bd73e95879da522a" category="paragraph">NetAppコンソールの ID およびアクセス管理 (IAM) を使用して、 NetAppリソースを整理し、場所、部門、プロジェクトなどのビジネス構造に応じてアクセスを制御します。</block>
   <block id="e8c67cc0d7ca66d55340b50ff19e81d8" category="inline-image-macro">リソース管理の構成要素を示す概念図</block>
   <block id="6dc5e990649602e7e565307ea2b766cc" category="section-title">アイデンティティおよびアクセス管理コンポーネント</block>
   <block id="8427feb21fa52ea7a726ef6e57657a30" category="paragraph">たとえば、ニーズに応じて、オンプレミスのONTAPシステムを単一のプロジェクトまたは組織内のすべてのプロジェクトに関連付けることができます。</block>
@@ -5159,7 +5126,6 @@
   <block id="41e1fd34ab20918035d6b06b198a4dd6" category="paragraph">たとえば、 Cloud Volumes ONTAPシステムを 1 つのプロジェクトまたは組織内のすべてのプロジェクトに関連付けることができます。リソースを関連付ける方法は、組織のニーズによって異なります。</block>
   <block id="ea7af68e4527f06be6522ac5e2825e2d" category="inline-link-macro">リソースをプロジェクトに関連付ける方法を学習します。</block>
   <block id="54b06ad2f4c53f14ee1e9e9d7c2b1b2a" category="paragraph"><block ref="54b06ad2f4c53f14ee1e9e9d7c2b1b2a" category="inline-link-macro-rx"></block></block>
-  <block id="acf67f786e22a15c3ff04ae1f6c8ea12" category="paragraph">Keystoneサブスクリプションは、 NetApp Consoleでユーザーにサブスクリプションへのアクセスを許可するためにプロジェクトに関連付けることができるリソースでもあります。</block>
   <block id="803ae69b5603a03e7969373e143099c4" category="inline-link-macro">エージェントをプロジェクトに関連付ける方法を学習します。</block>
   <block id="d2023a4ab828cd6c831b409006f97d93" category="paragraph"><block ref="d2023a4ab828cd6c831b409006f97d93" category="inline-link-macro-rx"></block></block>
   <block id="3046a3cf2a88459ab80652e4ae68b22c" category="section-title">メンバーと役割</block>
@@ -5167,41 +5133,24 @@
   <block id="04049ea3946b8d071880d432ab8244f5" category="section-title">IAM戦略の例</block>
   <block id="0107f97fd7cbc1a3c8ceb62d7e5a6d61" category="section-title">小規模組織戦略</block>
   <block id="32443b220e6828d6f9f8016ad5c10432" category="paragraph">ユーザー数が 50 人未満で、ストレージ管理が集中している組織の場合は、スーパー管理者とスーパー閲覧者のロールを使用した簡素化されたアプローチを検討してください。</block>
-  <block id="618d897449d220f2837f97a28a20e8e4" category="paragraph">**例：ABC株式会社（5人チーム）**</block>
-  <block id="61cbbf5877d024341a0ef65454034d0d" category="list-text">**構造:** 3 つのプロジェクト (プロダクション、開発、バックアップ) を持つ単一の組織</block>
-  <block id="727267ca2e62d67e09baf72ee7a6143c" category="list-text">**役割:**</block>
   <block id="52d0e3e3e49b1c15ffc46987d4355baf" category="list-text">上級メンバー 2 名: 完全な管理アクセス権限を持つ *スーパー管理者* ロール</block>
   <block id="b9ec60acb8ef1e7e6f9701eb09d805a3" category="list-text">3 人のチームメンバー: 変更権限のない監視用の *スーパー ビューアー* ロール</block>
-  <block id="d9a58df0eace2d186eaded70baf838b6" category="list-text">**エージェント戦略:** 共有リソースアクセスのためにすべてのプロジェクトに関連付けられた単一のエージェント</block>
-  <block id="55b47824d0005c8b8ab4de13ff882e64" category="list-text">**利点:** 管理が簡素化され、役割の複雑さが軽減され、幅広いアクセスを必要とするチームに適しています</block>
   <block id="f19b08303a80cfd1d9684c7ce9cb8320" category="section-title">多地域企業戦略</block>
   <block id="aba9938ebc9466429e9556389084ff33" category="paragraph">地域的な事業や専門チームを持つ大規模な組織の場合は、地理的または事業部門の境界を表すフォルダーを使用して階層的なアプローチを実装します。</block>
-  <block id="9b890ccf9a6e93916c8c59f0adbe368b" category="paragraph">**例: XYZ株式会社（多国籍企業）**</block>
-  <block id="c4e9a544c77f67f0daa16a823c5dad67" category="list-text">**構造:** 組織 &gt; 地域フォルダ (北米、ヨーロッパ、アジア太平洋) &gt; 地域ごとのプロジェクトフォルダ</block>
-  <block id="cbb69d7099797b6abb26688a676ebafd" category="list-text">**プラットフォームの役割:**</block>
   <block id="22fadd1c560fece376d8a8bcd22a6686" category="list-text">1 *組織管理者*: グローバルな監視とポリシー管理</block>
   <block id="d085387b24d7bd608526ad66a88849e2" category="list-text">3 *フォルダまたはプロジェクト管理者*: 地域管理 (地域ごとに 1 人)</block>
   <block id="047117926ac026ef323e1bb551d7a3ba" category="list-text">1 *フェデレーション管理者*: 企業IDプロバイダーの統合</block>
-  <block id="af6b385891fa191082f9b26a2d50fd71" category="list-text">**リージョン別のストレージの役割:**</block>
   <block id="7fca1fbbd1c1e4437e0285a8ce868797" category="list-text">9 *ストレージ管理者*: 割り当てられたリージョン内のストレージ システムを検出して管理します</block>
   <block id="d824c09b7302996cb69c8ac47615d269" category="list-text">2 *ストレージビューア*: リージョン間のストレージリソースを監視する</block>
   <block id="336a9df87a259bea2c48f91551120070" category="list-text">1 *システムヘルススペシャリスト*: システムを変更せずにストレージのヘルスを管理します</block>
-  <block id="d01b14a12072eaf2bdc4f1ab2189e695" category="list-text">**データ サービスの役割:**</block>
   <block id="620ae10c7e5824918bbe23191568baec" category="list-text">*バックアップおよびリカバリ管理者*: バックアップ責任に基づいたプロジェクトごと</block>
   <block id="f4fb000411fab03ddf611da667916603" category="list-text">*ランサムウェア耐性管理者*: プロジェクト全体のセキュリティチームの監視</block>
-  <block id="8c56ec73753455408a4fdce92050c3a7" category="list-text">**エージェント戦略:** 適切な地理的プロジェクトに関連付けられた地域エージェント</block>
-  <block id="c978064e6c0abe3ea339b837f893d9f4" category="list-text">**利点:** 役割の分離、地域の自治、現地の規制への準拠によるセキュリティの強化</block>
   <block id="1bca43386adb1b5dfd81efdcc80db730" category="section-title">部門別専門化戦略</block>
   <block id="0a63f0954c541e845e88af82c4db6d09" category="paragraph">特定のデータ サービス アクセスを必要とする専門チームを持つ組織の場合は、機能上の責任に基づいて対象を絞ったロールの割り当てを使用します。</block>
-  <block id="aa9752dc69ed187e2810e47002c52751" category="paragraph">**例: TechCorp (中規模テクノロジー企業)**</block>
-  <block id="04baa5867533308bc0cc91388e728ac5" category="list-text">**構造:** 組織 &gt; 部門フォルダ (IT、セキュリティ、開発) &gt; プロジェクト固有のリソース</block>
-  <block id="364d4b2b51f19e1d7f6d176b369d3c65" category="list-text">**専門的な役割:**</block>
   <block id="7b643f4babc14154b240069484f64b94" category="list-text">セキュリティ チーム: *ランサムウェア耐性管理者* および *分類閲覧者* の役割</block>
   <block id="5bdf90c7ab018c993a169377c8a512b0" category="list-text">バックアップ チーム: 包括的なバックアップ操作を担当する *バックアップおよびリカバリ スーパー管理者*</block>
   <block id="cdc9616ac940de001148c939588043e2" category="list-text">開発チーム:テスト環境管理のための *ストレージ管理者*</block>
   <block id="19ac215f6aedb92a065e282a886afcf3" category="list-text">コンプライアンス チーム: 監視およびサポートケース管理を行う *運用サポート アナリスト*</block>
-  <block id="ec09e08f0dad9967f815ea4a6150e06c" category="list-text">**エージェント戦略:** リソースの所有権に基づいて部門プロジェクトにリンクされたエージェント</block>
-  <block id="0ef5ca1d3a2b8ef1e24d12a2a867a4f6" category="list-text">**利点:** カスタマイズされたアクセス制御、運用効率の向上、専門的なタスクに対する明確な説明責任</block>
   <block id="12e01bb1a747f9efa932e4290df47651" category="section-title">NetApp ConsoleでのIAMの次のステップ</block>
   <block id="6f9220ecdca642b0359fd1d526b21090" category="inline-image-macro">複数のシステムを表示するコンソールのスクリーンショット。1 つが選択され、 NetAppデータ サービスを有効にするか、*Enter system* を選択してストレージを管理する機能が表示されます。</block>
   <block id="011d3401e6ecd731f72c9e3afe1df058" category="paragraph"><block ref="011d3401e6ecd731f72c9e3afe1df058" category="inline-image-macro-rx" type="image"></block></block>
@@ -5300,10 +5249,8 @@
   <block id="7ec95d8b18380f61f62a5c7444edbb4d" category="paragraph">メンバー アクセスを変更してリソース アクセスを制御します。フォルダー レベルで割り当てられたロールは、すべての子プロジェクトとフォルダーに継承されることに注意してください。</block>
   <block id="6a070ab9c3d6306fbe1b5def78331465" category="paragraph">フォルダーまたは組織レベルから継承されたメンバー アクセスを下位レベルで変更することはできません。上位階層レベルでメンバーの権限を変更してアクセスを変更するか、 <block ref="2e250d63a19626cb0aeed14260bd2f59" category="inline-link-macro-rx"></block>。</block>
   <block id="692fa8c1472b3f5b389ae8b229a03338" category="doc">NetApp Console組織にユーザーを追加する</block>
-  <block id="9367e759db9275009eaa691f3756abe9" category="paragraph">コンソール内で、アクセス ロールに応じてユーザーにプロジェクトまたはフォルダーへのアクセス権を付与します。_アクセス ロール_ には、メンバー (ユーザーまたはサービス アカウント) がリソース階層の割り当てられたレベルで特定のアクションを実行できるようにする一連の権限が含まれています。</block>
   <block id="e1e51b7c8740497989d96d687d7ce641" category="paragraph">スーパー管理者、組織管理者、またはフォルダーまたはプロジェクトの管理者（管理しているフォルダーとプロジェクトの場合）。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
   <block id="3cbafb79babb187563c0124e2520510c" category="section-title">NetApp Consoleでアクセスを許可する方法を理解する</block>
-  <block id="6006dace312ced6616f59ef5355ec45d" category="paragraph">NetApp Consoleは、ロールベースのアクセス制御 (RBAC) を使用して権限を管理します。ユーザーに個別に、またはフェデレーション グループを通じてロールを割り当てます。各ロールは、特定のリソースに対して許可されるアクションを定義します。</block>
   <block id="34b1f94b77b5bf3b37ba851f10060189" category="paragraph">NetApp Consoleでアクセス権を付与する場合は、次の点に注意してください。</block>
   <block id="2bd8e344bd7b38add589340263927733" category="list-text">ロールが割り当てられたフェデレーション グループのメンバーであっても、ユーザーがリソースにアクセスするには、コンソールで各ユーザーにロールを明示的に割り当てる必要があります。</block>
   <block id="b499ec6fa9977b0ca77f6656a13829bb" category="list-text">コンソールから直接サービス アカウントを追加し、ロールを割り当てることができます。</block>
@@ -5316,7 +5263,6 @@
   <block id="b4a0cb24fc1c2a28e5b0fd5fa8308158" category="paragraph-title">開始する前に：</block>
   <block id="24d7e1e56b09c7376a4a094ec532aeab" category="inline-link-macro">NetApp Consoleにサインアップします。</block>
   <block id="f9f0fc08a28165bf61fdcc6fc990b36c" category="paragraph">ユーザーはNetApp Consoleにすでにサインアップしている必要があります。まだ登録していない場合は、 <block ref="d4374b555d5da28aa40f87ee2182176f" category="inline-link-macro-rx"></block></block>
-  <block id="4b3c98ae86f08a374f95582b9064bd51" category="admonition">フェデレーション グループに属するユーザーを追加する場合は、そのユーザーがすでにNetApp Consoleにサインアップしており、コンソールでロールが明示的に割り当てられていることを確認してください。NetApp、組織閲覧者などの最小限のアクセス ロールを割り当てることを推奨しています。</block>
   <block id="e4c7746ce65f01142bd97bb2d2b4e60c" category="list-text">*ユーザーのメール*には、ユーザーが作成したログインに関連付けられているメール アドレスを入力します。</block>
   <block id="16f19f1862986e5cfa297bf88d518ae8" category="list-text">権限を持つフォルダーとプロジェクトのみを選択できます。</block>
   <block id="af90d2d7644f20dc2d8aec6e0f442367" category="list-text">組織またはフォルダを選択すると、そのすべてのコンテンツに対する権限がメンバーに付与されます。</block>
@@ -5325,15 +5271,12 @@
   <block id="7d3bb6a341c5bcd69e576d8a2d0d4481" category="paragraph">サービス アカウントを使用すると、タスクを自動化し、コンソール API に安全に接続できます。簡単なセットアップの場合はクライアント ID とシークレットを選択し、自動化環境またはクラウドネイティブ環境でのセキュリティを強化する場合は JWT (JSON Web Token) を選択します。セキュリティ要件を満たす方法を選択してください。</block>
   <block id="cf93592d2eb75cefdaf9491c515627ff" category="paragraph">JWT 認証の場合は、公開鍵または証明書を準備します。</block>
   <block id="6b46a99edf68965e5f08add7c63f7189" category="list-text">JWT 認証を使用するには、[*秘密キー JWT 認証を使用する*] を選択し、公開 RSA キーまたは証明書をアップロードします。クライアント ID とシークレットを使用する場合はスキップします。</block>
-  <block id="25054204158c0a8e9ec275453c365690" category="paragraph">X.509 証明書。PEM、CRT、または CER 形式である必要があります。</block>
   <block id="346b70a5bf4a6387b4ab083ced7c39f4" category="list-text">*カテゴリー*を選択し、選択した組織、フォルダ、またはプロジェクト内のリソースに対するメンバー権限を付与する*ロール*を選択します。</block>
-  <block id="b8d2f0ac411b3987f15812871943a838" category="list-text">JWT 認証を使用しない場合は、クライアント ID とクライアント シークレットをダウンロードまたはコピーします。</block>
   <block id="1065e278b83db0baa7239d1c2c89e558" category="paragraph">コンソールにはクライアント シークレットが 1 回だけ表示されます。安全にコピーしておけば、紛失した場合でも後で再作成できます。</block>
   <block id="6c07155a6c5b387b3649e57518b2acbf" category="list-text">JWT 認証を選択した場合は、クライアント ID と JWT オーディエンスをダウンロードまたはコピーします。コンソールにはこの情報が一度だけ表示され、後で取得することはできません。</block>
   <block id="1e5bd0e3b2f8efdd44ff92b7d355c374" category="section-title">組織にフェデレーショングループを追加する</block>
   <block id="1f87469083830ec60b59de86a65908a9" category="inline-link-macro">フェデレーションを設定する方法を学習します。</block>
   <block id="16a2c505069eacd418dca553f5b68d99" category="list-text">*メンバータイプ*では*フェデレーショングループ*を選択します。</block>
-  <block id="00cfd65508d24955faa8b609b29efc15" category="list-text">グループがメンバーである連盟を選択します</block>
   <block id="be1ae879869c7f401beda2410fc2ef42" category="list-text">*グループ名*には、IdP 内のグループの正確な名前を入力します。</block>
   <block id="07de438994544ae30eaf7e2f193c409e" category="summary">NetApp Console組織内のプロジェクトとフォルダにリソースを追加して、ユーザーのリソース アクセスを制御します。プロジェクト レベルでユーザーにアクセス権を付与します。</block>
   <block id="e56038e31d347de9d8efed7b085f0ea0" category="doc">NetApp Consoleのフォルダとプロジェクトにリソースを追加する</block>
@@ -5483,7 +5426,6 @@
   <block id="8e21188f4a561525a629d0158af709a2" category="paragraph">アイデンティティ プロバイダー (IdP) から組織にフェデレーション グループを追加し、それに 1 つ以上のロールを割り当てることができます。フェデレーション グループのメンバーは、コンソールでグループに割り当てたロールを継承します。</block>
   <block id="74339c243d7e2c57c81d3b6eeb492598" category="paragraph">フェデレーション グループにロールを割り当てる前に、次の点を確認してください。</block>
   <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">IdP とコンソール間のフェデレーションを設定します。 <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
-  <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">グループは既に IdP に存在し、コンソールへのアプリ アクセスが割り当てられている必要があります。</block>
   <block id="881a7400da554e794b5b8e9d39c7db4a" category="section-title">ワークロードのエンドポイント</block>
   <block id="7226c299553546c713e6b5ab556098c8" category="paragraph">コンソール エージェントは、 NetAppワークロードの次のエンドポイントにアクセスできる必要があります。</block>
   <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">\https://api.workloads.netapp.com</block>
@@ -5801,7 +5743,6 @@
   <block id="1fee15ed80afdbf61dee051273ed95fd" category="list-text"><block ref="1fee15ed80afdbf61dee051273ed95fd" category="inline-link-rx"></block></block>
   <block id="2b4ee5a3ed1d0d51275a5e7bbd3c9ecf" category="paragraph">IAMロールを設定して、NetApp Consoleのサービスとしてのソフトウェア（SaaS）アプリケーションがそのロールを引き受けられるようにします。</block>
   <block id="3a18e641c4904b34adaf167885cce158" category="admonition">読み取り専用モードは、NetApp Console がプライベート モードの場合は使用できません。<block ref="dfc550bfde7e455e24c09c75b6f9a3cd" category="inline-link-macro-rx"></block>。</block>
-  <block id="dbe35f69a98ad381d73f0e434193aaef" category="paragraph">コンソールにログインし、コンソール エージェントを組織に関連付けます。ログイン方法は、コンソールを使用しているモードによって異なります。コンソールを標準モードで使用している場合は、SaaS Web サイトからログインします。コンソールを制限モードまたはプライベート モードで使用している場合は、コンソール エージェント ホストからローカルにログインします。</block>
   <block id="e6de9ba283a3b88438bc9364ca14a865" category="summary">NetApp Consoleをプライベート モードで導入すると、アウトバウンド接続なしで使用できます。開始するには、Consoleエージェントをインストールし、Consoleエージェントで実行されているユーザー インターフェイスにアクセスしてNetApp Consoleをセットアップしてから、以前にセットアップしたクラウド権限を指定します。</block>
   <block id="ed49d41012410c35755a665e704c51a3" category="doc">Consoleエージェントをプライベートモードで導入する</block>
   <block id="b3d73a3e909120ba0dfb51cbe2327967" category="paragraph">製品のインストーラーをNetApp Support Siteからダウンロードし、自分のLinuxホストにConsoleを手動でインストールします。</block>
@@ -5899,7 +5840,6 @@
   <block id="01440d4fde4475cae0005dbb66b8f907" category="list-text"><block ref="01440d4fde4475cae0005dbb66b8f907" category="inline-link-macro-rx"></block></block>
   <block id="83c2b9a6cf87b54eb30380def11da84d" category="list-text"><block ref="83c2b9a6cf87b54eb30380def11da84d" category="inline-link-macro-rx"></block></block>
   <block id="1bbaa3de74e15060c4e8eab23f5e562e" category="list-text"><block ref="1bbaa3de74e15060c4e8eab23f5e562e" category="inline-link-macro-rx"></block></block>
-  <block id="fa05cdec48b95e7a466d56fb898a127b" category="admonition">コンソールにフェデレーショングループを追加してロールを割り当てると、IdPのグループのメンバーであり、すでにNetApp Consoleにサインアップしてコンソールで明示的にロールが割り当てられているユーザーのみがリソースにアクセスできます。NetAppでは、これらのユーザーには組織ビューアなどの最小限のアクセスロールを割り当てることを推奨します。</block>
   <block id="e40a26e15c2c65355aa43c03560cc632" category="list-text">すべてのユーザーは、たとえ連合グループの一員であっても、リソースへのアクセス権を付与される前に、まずNetApp Consoleにサインアップする必要があります。</block>
   <block id="34df2c4da19b4e31f0349125e9cabfc7" category="section-title">2026年3月10日</block>
   <block id="70f951e26d0f82125c6b126eda96abf3" category="list-text">インストール中、NetAppは、エージェントホストに、ディスク全体の空き容量の少なくとも80パーセントがあることを確認します。これには、<block ref="68ab1268abb7e5f5688810968df97d6b" prefix=" " category="inline-code"></block>に48 GB、<block ref="ca905eb4a00d34150573153a09e2e79b" prefix=" " category="inline-code"></block>に32 GBが含まれます（合計80 GB）。インストール後、ディスク全体の少なくとも20パーセントが利用可能である必要があり、これには、<block ref="68ab1268abb7e5f5688810968df97d6b" prefix=" " category="inline-code"></block>に12 GB、<block ref="ca905eb4a00d34150573153a09e2e79b" prefix=" " category="inline-code"></block>に8 GBが含まれます（合計20 GB）。</block>
@@ -6009,24 +5949,17 @@
   <block id="aeca4fcd51c0f41739e5fa7ba1ef3fcf" category="list-text">_サービスアカウント_：アプリケーションまたはサービスが API 経由で NetApp Console とやり取りするために使用する非人間アカウント。サービス アカウントは、Console 組織に直接追加できます。</block>
   <block id="3cdd926d835528850a500619db932838" category="list-text">_フェデレーショングループ_：IDプロバイダー（IdP）から同期されるグループで、複数のユーザーのアクセスをまとめて管理できます。フェデレーショングループ内の各ユーザーは、NetApp Consoleにサインアップし、アクセスロールを持つ組織に追加されてからでないと、グループに付与されたリソースにアクセスできません。</block>
   <block id="b5d97030cd1280a71643f1aac21775e2" category="paragraph">リソースは階層構造で整理されます。最上位に組織があり、その下にフォルダ（フォルダ内には他のフォルダやプロジェクトが含まれる）、そしてプロジェクトが続きます。プロジェクトにはストレージ システム、ワークロード、エージェントが含まれます。</block>
-  <block id="65659b876104048995f473c6d61584fe" category="admonition">NetApp Console で IAM を管理するには、_スーパー管理者_、_組織管理者_、または _フォルダまたはプロジェクト管理者_ のロールが必要です。</block>
   <block id="0642d6783c4254d0630aae1c47f2e5b2" category="paragraph"><block ref="0642d6783c4254d0630aae1c47f2e5b2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7e91a6a14eddff5211a6fa18ba41e3ac" category="paragraph">NetApp Console IAMは、階層構造を定義する組織コンポーネント、その階層構造内に割り当てられるリソース、そして誰が何にアクセスできるかを制御するメンバーとロールという、3種類のコンポーネントに基づいて構築されています。</block>
   <block id="cd6aee4291d019f321fb0650b4239e7a" category="section-title">NetApp Consoleの組織コンポーネント</block>
   <block id="f0c2a3eb67b8830e12786543e7d9d344" category="paragraph">組織構成要素（組織、フォルダ、プロジェクト）は階層構造を形成し、リソースのグループ化方法とアクセス権の委任方法を決定します。</block>
   <block id="f394fd451b02f013bf9a8b7533fe2076" category="list-text">_組織_は、Console IAMシステムの最上位レベルであり、通常は会社を表します。組織は、フォルダ、プロジェクト、メンバー、ロール、およびリソースで構成されています。リソースはプロジェクトに関連付けられ、メンバーには組織、フォルダ、またはプロジェクトレベルでロールが割り当てられます。</block>
   <block id="c454084e1661e1e6ce1cd0be0d8c648f" category="list-text">プロジェクトはストレージリソースをグループ化します。プロジェクトにリソースを割り当て、プロジェクトレベルでユーザーにアクセス権を付与します。リソースは複数のプロジェクトに属することができます。プロジェクトへのアクセス権を持つユーザーは、そのリソースを利用できます。</block>
-  <block id="921d4719452855c619e84d308554529d" category="list-text">関連するプロジェクトを_フォルダ_にグループ化して、場所、拠点、または事業部門ごとに整理します。リソースをフォルダに直接関連付けることはできませんが、フォルダレベルでユーザーにロールを割り当てると、そのフォルダ内のすべてのプロジェクトへのアクセス権が付与されます。</block>
-  <block id="4f5194fa1771b8ebe6101a8e9e4f034a" category="admonition">組織管理者ロールを持つユーザーは、リソースをフォルダーに追加することで、そのリソースをプロジェクトに関連付けるタスクを、該当するフォルダーのフォルダー管理者またはプロジェクト管理者に委任できます。<block ref="af70645a2ec4694e18976ffdc9418df7" category="inline-link-macro-rx"></block>。</block>
   <block id="710b5da64a715399d91f81d7b679da8b" category="paragraph">プロジェクトにリソースを関連付けることで、プロジェクトへのアクセス権を持つユーザーがそのリソースを使用できるようになります。</block>
   <block id="66fcef27e5a8418109136d024e454e07" category="list-text">ストレージシステムは、NetApp Console で管理する主要なリソースです。NetApp Console は、オンプレミスとクラウドの両方のストレージシステムの管理をサポートします。プロジェクトにストレージシステムを追加して、プロジェクトへのアクセス権を持つユーザーがアクセスできるようにします。</block>
-  <block id="a1f90944761934e324b18d467e28f970" category="list-text">バックアップおよびリカバリのワークロードの一部も、リソースとみなされます。ユーザーにアクセス権を付与するには、プロジェクトにバックアップおよびリカバリのワークロードを割り当ててください。</block>
   <block id="82df311009003b6f1858213f4d5ff36b" category="list-text">組織管理者は、ストレージシステムを管理し、NetAppデータサービスを有効にするために Console エージェントを作成します。エージェントは最初は作成されたプロジェクトに紐づけられますが、管理者は*エージェント*ページから他のプロジェクトにエージェントを追加できます。</block>
   <block id="1af654a2b7e523c47d1e0ac3f9ac175a" category="paragraph">メンバーとは、組織内のユーザーおよびサービスアカウントのことです。ロールは、組織、フォルダ、プロジェクトといった階層構造のどのレベルで、どのような操作を実行できるかを定義します。</block>
   <block id="f71b4152f594b0b4ed6db49384c364ee" category="paragraph">メンバーがNetApp Consoleに登録した後、組織にメンバーを追加します。追加後、リソースへのアクセス権限を与える役割を割り当ててください。コンソール内からサービス アカウントを手動で追加することも、NetApp Console IAM APIを使用してサービス アカウントの作成と管理を自動化することもできます。</block>
   <block id="217aa9842d84c4deeef09a0417e96663" category="paragraph">メンバーに役割を関連付けると、その役割を組織全体、特定のフォルダ、または特定のプロジェクトに付与できます。選択した役割によって、メンバーは階層構造の選択した部分にあるリソースへのアクセス権限を得ます。</block>
-  <block id="a73b3b527a172ca79dfeff15eebce0f9" category="paragraph">NetApp Consoleは、「最小権限の原則」に準拠したきめ細かなロールを提供します。つまり、アクセスロールは、ユーザーが必要とするもののみにアクセスできるように設計されているということです。</block>
-  <block id="7da2d5e7bf4f39f32e76fd55ec5b269a" category="paragraph">職務範囲が拡大するにつれて、ユーザーは複数の役割を担うようになる可能性がある。</block>
   <block id="2c9cae38402c53cb896043494ce6e921" category="paragraph">適切な IAM 構造は、組織の規模とチームの編成方法によって異なります。以下の例は、さまざまな組織が IAM 階層を使用してアクセスを効果的に管理する方法を示しています。</block>
   <block id="000be3a1a08dc9e78c5fab739204c685" category="paragraph"><block ref="fe22d90ac580c62f8eea5bbabb839850" category="inline-link-macro-rx"></block>。</block>
   <block id="04b5f578246d6d6719e3cb33d880c2b2" category="admonition">NetApp Console を<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>または<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block>で使用する場合は、それぞれの環境で作業を開始するための個別の手順に従ってください。<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
@@ -6130,16 +6063,8 @@
   <block id="b98ee0686e4120fe92ce6300afe0de81" category="list-text"><block ref="6863c249d676553f48927d7d95fd710e" category="inline-link-macro-rx"></block>が必要です。</block>
   <block id="f03765e7c67cd3e0afdcbb02e2df97ae" category="doc">Google Cloud にコンソールエージェントを手動でデプロイする</block>
   <block id="4cf3aefb03cce74960230022eaa4e100" category="paragraph">コンソールエージェントを独自のLinuxホストに手動でデプロイするには、ホストの要件を確認し、ネットワークを設定し、Google Cloudの権限を準備し、Google Cloud APIを有効にし、NetApp Consoleをインストールしてから、準備した権限を付与する必要があります。</block>
-  <block id="54db96db7364d9fb797bdc9d7b164d32" category="doc">vCenterを使用してオンプレミスにConsoleエージェントをデプロイする</block>
-  <block id="20829e61e3540bc01a07bf8c421fdcf6" category="paragraph">VMwareユーザーであれば、OVAを使用してvCenterにConsoleエージェントをデプロイできます。OVAのダウンロードまたはURLは、NetApp Consoleから入手できます。</block>
-  <block id="f4ee8cae9dcc1483831fc714e31a327a" category="admonition">vCenterツールとともにConsoleエージェントをデプロイすると、VMのWebコンソールを使用してメンテナンス作業を実行できます。<block ref="21e15fc43bbac3ef120d8f996828c28e" category="inline-link-macro-rx"></block></block>
-  <block id="d14a65d137d542e4c5b525df633f8463" category="paragraph">NetAppは、vCenter環境へのConsoleエージェントのインストールをサポートしています。OVAファイルには、VMware環境にデプロイできる事前設定済みのVMイメージが含まれています。ファイルのダウンロードまたはURLデプロイは、NetApp Consoleから直接利用できます。これには、Consoleエージェントソフトウェアと自己署名証明書が含まれます。</block>
-  <block id="1d068aaf3e17a864925e3bde9dcd297b" category="section-title">エージェントをVCenter環境にデプロイします</block>
   <block id="c55edff269043bf525a954a4154ec0a3" category="list-text">環境で必要な場合は、自己署名証明書を信頼済み証明書にアップロードします。この証明書はインストール後に置き換えます。</block>
   <block id="e8e9fe3b3946d0efef2689d6b175ac89" category="summary">コンソールエージェントをオンプレミスにデプロイし、ログインしてコンソール組織と連携するように設定します。</block>
-  <block id="fb650b55c60d91a2caf6cc6d1a275439" category="doc">Console エージェントをオンプレミスに手動でデプロイする</block>
-  <block id="a0eb01c340f51daff7ce167933696b14" category="inline-link-macro">vCenterへのエージェントのデプロイの詳細については、こちらをご覧ください。</block>
-  <block id="4f97b869621ba57e0e74b7a49c9a21bf" category="admonition">VMwareユーザーであれば、OVAを使用してvCenterにConsoleエージェントをデプロイできます。<block ref="010c34d4268375df7c2f32f17a975d90" category="inline-link-macro-rx"></block></block>
   <block id="6bdefeb27ef2009862c6af73ba4aa4f9" category="doc">手動でインストールしたコンソールエージェントのVMインスタンスを維持する</block>
   <block id="9845a65d039380c03d0798dc8b86888f" category="paragraph">コンソールエージェントを手動でインストールする場合、エージェントホスト上のオペレーティングシステムの維持管理は、お客様の責任となります。たとえば、お客様は、自社のオペレーティングシステム配布に関する標準手順に従って、エージェントホスト上のオペレーティングシステムにセキュリティアップデートを適用する必要があります。</block>
   <block id="55775d5f288008be574f12b89a4bfa2f" category="section-title">エージェントホストにオペレーティングシステムのアップデートを適用する</block>
@@ -6224,17 +6149,89 @@
   <block id="1a8d41e65cef4d345c50298a70f79734" category="inline-link-macro">リリース ノート</block>
   <block id="ce51f82ecbd933f0a6bf385915be19b8" category="list-text">プライベートモードに対応しているバージョンを選択してください。最新のサポート対象バージョンについては、<block ref="2c36977bb4765b4c1724e0f48d254dff" category="inline-link-macro-rx"></block>を確認してください。</block>
   <block id="bd7c58df65cf13e6d395217af09edfdb" category="list-text">インターネットアクセスのないネットワーク用のオフラインインストーラをダウンロードします。</block>
-  <block id="c8b1b9c2d71ef002d1c50060b2cb083e" category="paragraph">a| https://occmclientinfragov.azurecr.us.io https://bluexpinfraprod.azurecr.io a| Consoleエージェントのアップグレード用のイメージを取得する。</block>
-  <block id="819febf39e28af038c733bae7ff4f55c" category="paragraph">\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io</block>
-  <block id="44915bc5ffc6c8bb2ea6583e61a74d64" category="cell">Console エージェントが AWS Government リージョンにある場合：\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="7d128c30060391a6ee4534fc0d154143" category="cell">コンソールエージェントがAWS Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得する。</block>
-  <block id="1ed1ae4edf03cb57c3163af9c463b4fe" category="cell">Console エージェントが Azure Government リージョンにある場合：\https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us</block>
-  <block id="0b38caea2fd4b746ced14d695c333449" category="cell">Console エージェントが Azure Government リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得します。</block>
-  <block id="60437b7f6fe69c94ccfdf5bf6379a7e3" category="paragraph">コンソールエージェントが商用リージョンまたは主権リージョンにある場合、次の2つのエンドポイントセットから選択できます：</block>
-  <block id="31a8003e522e87e4d487da308c8a6607" category="cell">Console agentが商用リージョンまたはソブリンリージョンにインストールされている場合に、Console agentのアップグレード用イメージを取得するには。[cols=3*,options="header,autowidth"]</block>
-  <block id="4d7feb9606c47cedd755f6afd698f4a3" category="paragraph">|*3.9.55以前のエンドポイント* | *4.0.0以降のエンドポイント* | *目的*</block>
-  <block id="68fd8193be29a61e220fc4162cc03154" category="paragraph">a| * \https://support.netapp.com * \https://mysupport.netapp.com a| * \https://mysupport.netapp.com * \https://signin.b2c.netapp.com * \https://support.netapp.com a| ライセンス取得およびNetAppサポートへのお問い合わせ。 a| * \https://*.api.bluexp.netapp.com * \https://api.bluexp.netapp.com * \https://*.cloudmanager.cloud.netapp.com * \https://cloudmanager.cloud.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://*.console.netapp.com a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.netapp.com * \https://cdn.auth0.com a| 日常業務用。 a| * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io | コンソールエージェントのアップグレード用のイメージを取得するため。</block>
-  <block id="a913a5833b76298a0bccb4d15b796571" category="paragraph">コンソールエージェントが商用リージョンまたは主権リージョンにインストールされている場合に、Console エージェントのアップグレード用のイメージを取得するため。</block>
   <block id="6fddb2ca8b2393be844b4c4153d1f6f7" category="admonition">バージョン4.0.0より前のコンソールエージェントは、異なるエンドポイントをサポートしています。バージョン4.0.0以降にアップグレードした場合は、許可リストから古いエンドポイントを削除できます。<block ref="09d4bc1b829716c1eb9fd392e0198549" category="inline-link-macro-rx"></block></block>
   <block id="225a60e47c64c2fc93ba428341d684ac" category="list-text">*標準モード*：Webブラウザを開いて、<block ref="d99e1eaf406503cf18504dce764c5135" category="inline-link-rx"></block></block>
+  <block id="391b29da4eb9ba5c6bfd16746287d54b" category="open-title">最低限必要なエンドポイント</block>
+  <block id="eb52338366ae902611df52c8dc9e13ab" category="paragraph">これらのエンドポイントは、すべての Console エージェントの導入に必要です。AWS または Azure で NetApp リソースを管理するには、追加のエンドポイントが必要です。</block>
+  <block id="166bcd00a404f81c824f309c699f8f5a" category="cell">目的 &lt;stdin&gt;未解決のディレクティブ - include::endpoints-agent.adoc[tag=nss-endpoints] &lt;stdin&gt;未解決のディレクティブ - include::endpoints-agent.adoc[tag=saas-endpoints] &lt;stdin&gt;未解決のディレクティブ - include::endpoints-agent.adoc[tag=upgrade-endpoints]</block>
+  <block id="8f7bc6fd8595cf1c56d679dee826ac19" category="open-title">AWS リソースの追加エンドポイント</block>
+  <block id="1b3f295607c19bdf644fb1995a008a76" category="paragraph">Console エージェントがオンプレミスにインストールされている場合、AWS にデプロイされた NetApp システム（Cloud Volumes ONTAP など）を管理するために、次の追加の AWS エンドポイントへのネットワーク アクセスが必要です。</block>
+  <block id="5bcf13eb6d4d7bbc4361f648ec58ee8c" category="cell">目的 &lt;stdin&gt; の未解決のディレクティブ - include::endpoints-agent.adoc[tag=aws-endpoints]</block>
+  <block id="25451bca6943f025ef097aa0c0c70f71" category="open-title">Azure リソースの追加エンドポイント</block>
+  <block id="e7d2dd0b43cd16b79ddb3548f37d3df5" category="paragraph">Console エージェントがオンプレミスにインストールされている場合、Azure にデプロイされた NetApp システム（Cloud Volumes ONTAP など）を管理するために、次の追加の Azure エンドポイントへのネットワーク アクセスが必要です。</block>
+  <block id="e2fd67d4fcd16e7460a3b8b3ee0aa4de" category="cell">目的 &lt;stdin&gt; - include::endpoints-agent.adoc[tag=azure-public-endpoints] の未解決のディレクティブ &lt;stdin&gt; - include::endpoints-agent.adoc[tag=azure-china-endpoints] の未解決のディレクティブ</block>
+  <block id="99b8bc2491a2c07ff6120005d1a5a028" category="paragraph">| Amazon FSx for NetApp ONTAP：</block>
+  <block id="a2af45d489d762f28b524fb90576e669" category="paragraph">| Webベースのコンソールはこのエンドポイントに接続し、Workload Factory APIと連携して、FSx for ONTAPベースのワークロードを管理および操作します。</block>
+  <block id="5ad41271522acbc853e7c4a84763f339" category="paragraph">| https://mysupport.netapp.com | ライセンス情報を取得し、AutoSupport メッセージを NetApp サポートに送信するため。| https://signin.b2c.netapp.com | NetApp Support Site（NSS）クレデンシャルを更新する場合、または新しい NSS クレデンシャルを NetApp Console に追加する場合。| https://support.netapp.com | ライセンス情報を取得し、AutoSupport メッセージを NetApp サポートに送信するため、および Cloud Volumes ONTAP のソフトウェア更新を受信するため。</block>
+  <block id="7aed309254b98f77dbd3d77a03d50dfd" category="list-text">オプション1のエンドポイントは、バージョン3.9.47以降でサポートされています。バージョン3.9.47より前のリリースは、下位互換性をサポートしていません。</block>
+  <block id="0077f7d38869cf9790e55cbfea881bf4" category="list-text">Consoleエージェントは、まずオプション2のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、自動的にオプション1のエンドポイントに接続します。</block>
+  <block id="fe419db71f7d4484d61cbf89fbff3ac3" category="paragraph">a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| Console エージェントのアップグレード用のイメージを取得する。</block>
+  <block id="d29ad0dfb0326845a0e0541c9a73346f" category="paragraph">+ * Console エージェントの 3.9.47 リリース以降、システムはオプション 1 に記載されているエンドポイントをサポートします。以前のリリースの Console エージェントは、下位互換性をサポートしていません。* Console エージェントは、まずオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、自動的にオプション 1 のエンドポイントに接続します。* Console エージェントを NetApp Backup and Recovery または Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしていません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止してください。</block>
+  <block id="7c196962ef71a676aa44930111ed62ec" category="paragraph">NetApp Console の Identity and Access Management （ IAM ）を使用して、NetApp リソースを整理し、ビジネス構造（場所、部門、プロジェクトなど）に応じてアクセスを制御できます。</block>
+  <block id="236a948a43c96e218fc04221bf59fe7c" category="admonition">NetApp Console で IAM を管理するには、_Super admin_、_Organization admin_、または _Folder or project admin_ のロールが必要です。</block>
+  <block id="872a8251edc97e7aa1a3d9e26ed6a162" category="paragraph">NetApp Console IAMは、階層構造を定義する組織コンポーネント、その階層構造内に割り当てられるリソース、そして誰が何にアクセスできるかを制御するメンバーとロールという、3種類のコンポーネントに基づいて構築されています。</block>
+  <block id="dbbd0be2ab27e73b122e8161ad90c3da" category="list-text">関連するプロジェクトを_フォルダ_にグループ化して、場所、拠点、または事業部門ごとに整理します。リソースをフォルダに直接関連付けることはできませんが、フォルダレベルでユーザーにロールを割り当てると、そのフォルダ内のすべてのプロジェクトへのアクセス権が付与されます。</block>
+  <block id="cdf2ecd07c1796282166c4bfbe17fed6" category="admonition">Org管理者ロールを持つユーザーは、リソースをフォルダに追加して、リソースをプロジェクトに関連付けるタスクを該当するフォルダのフォルダ管理者またはプロジェクト管理者に委任できます。<block ref="af70645a2ec4694e18976ffdc9418df7" category="inline-link-macro-rx"></block>。</block>
+  <block id="aec6ce56a19a7002f65373a8314e6e25" category="list-text">Keystoneサブスクリプションは、プロジェクトに関連付けてNetApp Consoleでユーザーにサブスクリプションへのアクセスを付与できるリソースでもあります。</block>
+  <block id="9da4c922d7db38500060d57c63434910" category="list-text">一部の NetApp Backup and Recovery ワークロードもリソースとみなされます。ユーザーにアクセス権を付与するには、NetApp Backup and Recovery ワークロードをプロジェクトに割り当ててください。</block>
+  <block id="8a06b621d1c63eae4270e34b0fd42fa9" category="paragraph">NetApp Console は、「最小権限の原則」に準拠したきめ細かなロールを提供します。つまり、アクセス ロールは、ユーザーが必要とするもののみにアクセスできるように設計されているということです。</block>
+  <block id="8effae00cc43618fc81ba89b548abd44" category="paragraph">職務範囲が拡大するにつれて、ユーザーは複数の役割を担うようになる可能性がある。</block>
+  <block id="275202b240f1cb364d5ab0e8a2680360" category="paragraph">*例：ABC Corporation（5人チーム）*</block>
+  <block id="d7146e4cd36f02ae2448df8cc521f590" category="list-text">*構造：* 3つのプロジェクト（本番環境、開発環境、バックアップ環境）を持つ単一組織</block>
+  <block id="34e8b3add89015d48c92c863da1b9382" category="list-text">*ロール：*</block>
+  <block id="2dcc7707e0b7a2417d6248a16d71674b" category="list-text">*エージェント戦略：*共有リソースアクセスのためにすべてのプロジェクトに関連付けられた単一のエージェント</block>
+  <block id="b91643e272c66242b8ec2bdfe74fe27f" category="list-text">*メリット：* 管理の簡素化、ロールの複雑さの軽減、幅広いアクセス権限を必要とするチームに適しています</block>
+  <block id="3a50adf46cb680f8ae6b16910c11f87f" category="paragraph">*例：XYZ Corporation（多国籍企業）*</block>
+  <block id="96dadd078efc043c085026d6d0cdc721" category="list-text">*構造：* 組織 &gt; 地域別フォルダ（北米、ヨーロッパ、アジア太平洋） &gt; 地域別プロジェクトフォルダ</block>
+  <block id="91cdde4b7baf786417932319806e3ad5" category="list-text">*プラットフォームの役割：*</block>
+  <block id="c3a45c38ef17b9161755e336ad86a07e" category="list-text">*地域別のストレージロール：*</block>
+  <block id="06810ff3f5b5e2683cec5b73f4a9e646" category="list-text">*データサービスの役割：*</block>
+  <block id="69c5fe6578fd2522466017c827915c0f" category="list-text">*エージェント戦略：* 適切な地理的プロジェクトに関連付けられた地域エージェント</block>
+  <block id="aa4ce70e70bb70718d9bdb8e759bff7a" category="list-text">*メリット：* ロールベースの分離、地域の自律性、および現地規制の遵守によるセキュリティの強化</block>
+  <block id="205ec85002fdb220cfcfd9a6a72debb3" category="paragraph">*例：TechCorp（中規模テクノロジー企業）*</block>
+  <block id="9805c47776b9778be0108eaeca3e3652" category="list-text">*構造：* 組織 &gt; 部門フォルダ（IT、Security、Development） &gt; プロジェクト固有のリソース</block>
+  <block id="e4202f0f62e2deab07a41e25fa2cca41" category="list-text">*専門的な役割：*</block>
+  <block id="330696b8cdfe7db79f314e9c9fa0b5cd" category="list-text">*エージェント戦略：* リソース所有権に基づいて部門プロジェクトにリンクされたエージェント</block>
+  <block id="a4d7762ee1072c07a2bde7a95b020120" category="list-text">*メリット：*カスタマイズされたアクセス制御、運用効率の向上、および専門業務に対する明確な責任体制</block>
+  <block id="c1ac58b26f0dbec07e54dd23381d77c2" category="cell">ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。</block>
+  <block id="c3274aa38dd5b013993864fa2cdce73c" category="cell">ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。</block>
+  <block id="8b1ab038209571d49cf4c4e0fa3789b4" category="paragraph">Console内で、アクセスロールに基づいてユーザーにプロジェクトまたはフォルダへのアクセス権を付与します。_アクセスロール_には、メンバー（ユーザーまたはサービスアカウント）がリソース階層の割り当てられたレベルで特定のアクションを実行できるようにする一連の権限が含まれています。</block>
+  <block id="b4c7fee49cee13c49bd64fdd3effbc7e" category="paragraph">NetApp Console はロールベースのアクセス制御（RBAC）を使用して権限を管理します。ユーザーには個別に、または連携グループを通じてロールを割り当てることができます。各ロールは、特定のリソースに対して許可される操作を定義します。</block>
+  <block id="b13122277f97832a70d76d5056f56d5f" category="admonition">フェデレーテッドグループの一部であるユーザーを追加する場合は、そのユーザーがすでにNetApp Consoleにサインアップしており、Consoleで明示的にロールが割り当てられていることを確認してください。NetAppでは、Organization viewerなどの最小限のアクセスロールを割り当てることを推奨しています。</block>
+  <block id="621fabf738a7365b6e6e4fec40ad9333" category="paragraph">X.509証明書をPEM、CRT、またはCER形式でアップロードしてください。</block>
+  <block id="be9936af09d33ccb12f036af3b1893a2" category="list-text">JWT認証を使用しなかった場合は、クライアントIDとクライアントシークレットをダウンロードまたはコピーしてください。</block>
+  <block id="9b524da65bb2b0f609845d487764eeeb" category="admonition">コンソールにフェデレーション グループを追加してロールを割り当てると、IdP のグループのメンバーであり、すでにNetApp Console にサインアップして、Console で明示的にロールが割り当てられているユーザーのみがリソースにアクセスできます。NetApp では、これらのユーザーに組織閲覧者などの最小限のアクセス ロールを割り当てることを推奨します。</block>
+  <block id="70cc602cb32b439167c100b750b90db7" category="list-text">グループは既にIdPに存在し、NetApp Consoleへのアプリアクセス権が割り当てられている必要があります。</block>
+  <block id="de2e12bab272a383e50c82e6db720e1a" category="list-text">グループが所属するフェデレーションを選択します。</block>
+  <block id="638830a7a7650769f13f50f7e38847aa" category="paragraph">Amazon FSx for NetApp ONTAP：</block>
+  <block id="3061f722b98c817165d840b0b3c4ca74" category="summary">Google Cloud で Console エージェントを作成するには、NetApp Console を使用する場合、または Google Cloud を使用する場合は、ネットワークの設定、Google Cloud のアクセス許可の準備、Google Cloud API の有効化を行い、その後 Console エージェントを作成する必要があります。</block>
+  <block id="79ab6de6d7af9498ce230874b07b91b0" category="list-text">ネットワーク要件を満たすVPCとサブネット。</block>
+  <block id="0802b3988d6692bbc8803c22d7457bb5" category="list-text">*概要*ページで、*エージェントのデプロイ &gt; Google Cloud*を選択します。</block>
+  <block id="aa76fe61bd34580b8be1ddf26b13b03f" category="list-text">*ネットワークタグ*：透過プロキシを使用する場合は、Consoleエージェントインスタンスにネットワークタグを追加します。ネットワークタグは小文字で始まり、小文字、数字、ハイフンを含めることができます。タグは小文字の英字または数字で終わる必要があります。たとえば、タグ<block ref="161a9320ce99f3d8d035c9c74f62c4a2" prefix=" " category="inline-code"></block>を使用できます。</block>
+  <block id="fb1591c260dca92b4b768bb1b983b2f0" category="list-text">* ファイアウォール ポリシー * ：新しいファイアウォール ポリシーを作成するか、必要なインバウンド ルールとアウトバウンド ルールを許可する既存のファイアウォール ポリシーを選択するかを選択します。</block>
+  <block id="e4c07f2bba651b4e0cbb7e5ba8fefde5" category="paragraph">コンソールエージェントを作成したのと同じ Google Cloud アカウントに Google Cloud Storage バケットがある場合、Google Cloud Storage システムが [システム] ページに自動的に表示されます<block ref="aefa7bc54c105a94a586917b309a8039" category="inline-link-rx"></block>。</block>
+  <block id="c6757fa1172212bd89b40c339b1bf042" category="summary">VMware ユーザーであれば、OVA を使用して vCenter にコンソール エージェントをインストールできます。OVA のダウンロードまたは URL は NetApp Console から入手できます。</block>
+  <block id="ad8b6fe2e7c4886f2851470625537eee" category="doc">vCenterを使用してオンプレミスにConsoleエージェントをインストールする</block>
+  <block id="6b3d86b99e2472a8ac2d2fee0825f8f7" category="paragraph">VMware ユーザーであれば、OVA を使用して vCenter に Console エージェントをデプロイできます。OVA のダウンロードまたは URL は NetApp Console から入手できます。</block>
+  <block id="dd610cd3b2866d7fae9848317b06c03a" category="admonition">vCenterツールを使用してConsoleエージェントを導入すると、VM Webコンソールでメンテナンスタスクを実行できます。<block ref="21e15fc43bbac3ef120d8f996828c28e" category="inline-link-macro-rx"></block></block>
+  <block id="c12234e7a9633d15fc94f2e9e5a62020" category="admonition">オンプレミスにコンソールエージェントをインストールした場合、Google Cloud のリソースを管理することはできません。Google Cloud のリソースを管理するには、Google Cloud にエージェントをインストールしてください。</block>
+  <block id="2fb6a017af3c563d56e613e8ea4ee09d" category="paragraph">これで、必要な権限を持つIAMユーザーアクセスキーが取得できたはずです。Console エージェントをインストールしたら、Console からこれらの認証情報を Console エージェントに関連付けてください。</block>
+  <block id="921ae55e5c2b5e87538bf54f5c0f01fd" category="section-title">vCenter 環境に Console エージェントをインストールします</block>
+  <block id="f004c411956efe28eb41af4e4a6796a2" category="paragraph">NetAppは、vCenter環境へのConsoleエージェントのインストールをサポートしています。OVAファイルには、VMware環境にデプロイできる事前設定済みのVMイメージが含まれています。ファイルのダウンロードまたはURLデプロイは、NetApp Consoleから直接利用できます。これには、Consoleエージェントソフトウェアと自己署名証明書が含まれます。</block>
+  <block id="80071b5dd04fea2b57f2d0458a123abb" category="list-text">OVAをダウンロードするか、URLをコピーしてvCenterで使用するかを選択してください。</block>
+  <block id="411778edcadad2051fb2f2f8f0141278" category="section-title">vCenter 環境にエージェントを導入します</block>
+  <block id="cd6791f3f6e2d00838c61156dabf40db" category="paragraph">vCenter 環境にログインして、エージェントをデプロイします。</block>
+  <block id="e1b143775fd4087c8f3fffb22a2a2569" category="list-text">*テンプレートのカスタマイズ*ウィンドウで、以下のフィールドを入力します：</block>
+  <block id="bc034cec8cb739e162c51b83d98a9ef3" category="list-text">明示的なプロキシを選択した場合は、プロキシ サーバのホスト名またはIPアドレスとポート番号、およびユーザー名とパスワードを入力します。</block>
+  <block id="98dbea02ec20e1831e2915d673cc2bf1" category="list-text">NetAppでは、インストール時にエージェントの構成チェックが含まれるように、このチェックボックスはオフのままにしておくことを推奨しています。構成チェックでは、エージェントが必要なエンドポイントへのネットワーク アクセスを持っていることを検証します。接続の問題が原因でデプロイが失敗した場合は、エージェントホストから検証レポートとログにアクセスできます。場合によっては、エージェントがネットワーク アクセスを持っていることが確実であれば、チェックをスキップすることもできます。たとえば、エージェントのアップグレードに使用される<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>をまだ使用している場合、検証はエラーで失敗します。これを回避するには、検証チェックなしでインストールするチェックボックスを選択してください。<block ref="b264fb455cda46e4971383987c8dce4c" category="inline-link-macro-rx"></block>。</block>
+  <block id="edabaa51109677782cdc888020f003e7" category="list-text">*検索ドメイン*：ホスト名を解決する際に使用する検索ドメイン名を指定します。たとえば、FQDNがconsole10.searchdomain.company.comの場合は、searchdomain.company.comと入力します。</block>
+  <block id="a00934a51dbe54d47384700021b22f60" category="list-text">*Ready to complete* ウィンドウで詳細を確認し、 *Finish* を選択します。</block>
+  <block id="33b00baea9888ae292647c1d8318232b" category="inline-link-macro">vCenter でのエージェントの導入の詳細については、こちらをご覧ください。</block>
+  <block id="7c2d9322114c41d28850168cecda47f7" category="admonition">VMware ユーザーであれば、OVA を使用して vCenter に Console エージェントをデプロイできます。<block ref="23fc758734f5912042688b767c3b4435" category="inline-link-macro-rx"></block></block>
+  <block id="4e707198c6fee050412596404ea671d4" category="paragraph">インストールを開始する前に、ホスト（VMまたはLinuxホスト）が要件を満たしていることを確認し、Consoleエージェントがインターネットおよび対象ネットワークへのアウトバウンドアクセス権限を持っていることを確認する必要があります。NetAppデータサービス、またはCloud Volumes ONTAPなどのクラウドストレージオプションを使用する予定がある場合は、クラウド プロバイダで認証情報を作成してConsoleに追加する必要があります。これにより、Consoleエージェントがお客様に代わってクラウド上でアクションを実行できるようになります。</block>
+  <block id="a74d80332e62085141abb7a8a3de1bc6" category="paragraph">オペレーティング システム、RAM、ポートの要件を満たすx86ホスト上でConsoleエージェントを実行してください。Consoleエージェントをインストールする前に、ホストがこれらの要件を満たしていることを確認してください。</block>
+  <block id="b41ade2d0668c4a3c6c4653a8c1568e5" category="paragraph">オンプレミスの Console エージェントを使用して AWS または Azure で NetApp データサービスを使用する場合は、クラウド プロバイダで権限を設定してから、インストール後に Console エージェントに認証情報を追加する必要があります。</block>
+  <block id="d8e5d9d1a33224933545d36e4faf51b7" category="paragraph">Consoleエージェントを手動でインストールする場合は、要件を満たすようにマシン環境を準備する必要があります。Linuxマシンが必要で、使用しているLinuxオペレーティングシステムに応じて、PodmanまたはDockerをインストールする必要があります。</block>
+  <block id="2552e760bfd559114f774764e252b989" category="paragraph">Console にログインし、 Console エージェントを組織に関連付けます。ログイン方法は、 Console を使用するモードによって異なります。Console を標準モードで使用する場合は、 SaaS Web サイトからログインします。Console を制限モードまたはプライベート モードで使用する場合は、 Console エージェント ホストからローカルでログインします。</block>
+  <block id="fb59f8559d6e02ab987af7bae9902d30" category="paragraph">Azureの認証情報を作成したばかりの場合は、利用可能になるまで数分かかる場合があります。Console エージェントに認証情報を追加する前に、数分待ってください。</block>
 </blocks>

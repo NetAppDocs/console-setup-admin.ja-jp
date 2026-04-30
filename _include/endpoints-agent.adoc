@@ -22,12 +22,12 @@
 
 | AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細についてはAWSドキュメントを参照してください"^]
 
-| NetApp ONTAP向け Amazon FsX:
+| Amazon FSx for NetApp ONTAP：
 
 * api.workloads.netapp.com
 
 
-| Web ベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
+| Webベースのコンソールはこのエンドポイントに接続し、Workload Factory APIと連携して、FSx for ONTAPベースのワークロードを管理および操作します。
 
 | \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
 
@@ -49,7 +49,7 @@
 
 | Google Cloud 内のリソースを管理します。
 
-| \https://mysupport.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。| \https://signin.b2c.netapp.com | NetAppサポートサイト（NSS）の資格情報を更新したり、 NetApp Consoleに新しいNSS資格情報を追加したりします。| \https://support.netapp.com | ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信し、 Cloud Volumes ONTAPのソフトウェアアップデートを受信します。
+| https://mysupport.netapp.com | ライセンス情報を取得し、AutoSupport メッセージを NetApp サポートに送信するため。| https://signin.b2c.netapp.com | NetApp Support Site（NSS）クレデンシャルを更新する場合、または新しい NSS クレデンシャルを NetApp Console に追加する場合。| https://support.netapp.com | ライセンス情報を取得し、AutoSupport メッセージを NetApp サポートに送信するため、および Cloud Volumes ONTAP のソフトウェア更新を受信するため。
 
 | https://api.bluexp.netapp.com https://netapp-cloud-account.auth0.com https://netapp-cloud-account.us.auth0.com https://console.netapp.com https://components.console.netapp.com https://cdn.auth0.com | NetApp Console内で機能とサービスを提供するため。
 
@@ -87,8 +87,8 @@
 
 NetApp、ランサムウェア耐性またはバックアップとリカバリを使用していない限り、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
 
-* オプション 1 エンドポイントは 3.9.47 以降でサポートされます。  3.9.47 より前のリリースでは下位互換性がサポートされていません。
-* コンソール エージェントは、まずオプション 2 のエンドポイントとの接続を開始します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。
+* オプション1のエンドポイントは、バージョン3.9.47以降でサポートされています。バージョン3.9.47より前のリリースは、下位互換性をサポートしていません。
+* Consoleエージェントは、まずオプション2のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、自動的にオプション1のエンドポイントに接続します。
 * コンソール エージェントをNetApp Backup and Recoveryまたは Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
 
 
@@ -102,7 +102,7 @@ a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azu
 * ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
 
 
-a| https://occmclientinfragov.azurecr.us.io https://bluexpinfraprod.azurecr.io a| Consoleエージェントのアップグレード用のイメージを取得する。
+a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| Console エージェントのアップグレード用のイメージを取得する。
 
 * 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
 +
@@ -113,7 +113,7 @@ a| https://occmclientinfragov.azurecr.us.io https://bluexpinfraprod.azurecr.io a
 
 ^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
 
-+ * コンソール エージェントの 3.9.47 リリース以降、システムはオプション 1 にリストされているエンドポイントをサポートします。コンソール エージェントの以前のリリースでは、下位互換性はサポートされていません。 * コンソール エージェントは、最初にオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、オプション 1 のエンドポイントに自動的に接続します。 * NetApp Backup and Recoveryまたは Ransomware Resilience でコンソール エージェントを使用する場合、システムはオプション 1 のエンドポイントをサポートしません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止します。
++ * Console エージェントの 3.9.47 リリース以降、システムはオプション 1 に記載されているエンドポイントをサポートします。以前のリリースの Console エージェントは、下位互換性をサポートしていません。* Console エージェントは、まずオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、自動的にオプション 1 のエンドポイントに接続します。* Console エージェントを NetApp Backup and Recovery または Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしていません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止してください。
 
 | コンソールエージェントがAWS Governmentリージョンにある場合: \https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
 

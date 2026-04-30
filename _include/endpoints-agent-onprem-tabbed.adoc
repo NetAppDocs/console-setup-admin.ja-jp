@@ -1,0 +1,34 @@
+= 
+:allow-uri-read: 
+
+
+[role="tabbed-block"]
+====
+.最低限必要なエンドポイント
+--
+これらのエンドポイントは、すべての Console エージェントの導入に必要です。AWS または Azure で NetApp リソースを管理するには、追加のエンドポイントが必要です。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 <stdin>未解決のディレクティブ - include::endpoints-agent.adoc[tag=nss-endpoints] <stdin>未解決のディレクティブ - include::endpoints-agent.adoc[tag=saas-endpoints] <stdin>未解決のディレクティブ - include::endpoints-agent.adoc[tag=upgrade-endpoints] 
+|===
+--
+.AWS リソースの追加エンドポイント
+--
+Console エージェントがオンプレミスにインストールされている場合、AWS にデプロイされた NetApp システム（Cloud Volumes ONTAP など）を管理するために、次の追加の AWS エンドポイントへのネットワーク アクセスが必要です。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 <stdin> の未解決のディレクティブ - include::endpoints-agent.adoc[tag=aws-endpoints] 
+|===
+--
+.Azure リソースの追加エンドポイント
+--
+Console エージェントがオンプレミスにインストールされている場合、Azure にデプロイされた NetApp システム（Cloud Volumes ONTAP など）を管理するために、次の追加の Azure エンドポイントへのネットワーク アクセスが必要です。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 <stdin> - include::endpoints-agent.adoc[tag=azure-public-endpoints] の未解決のディレクティブ <stdin> - include::endpoints-agent.adoc[tag=azure-china-endpoints] の未解決のディレクティブ 
+|===
+--
+====
