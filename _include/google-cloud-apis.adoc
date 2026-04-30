@@ -9,6 +9,6 @@
 * クラウド リソース マネージャー API
 * コンピューティングエンジン API
 * アイデンティティとアクセス管理 (IAM) API
-* Cloud Key Management Service（KMS）API（お客様が管理する暗号化キー（CMEK）でNetApp Backup and Recoveryを使用する予定の場合のみ必要）
+* Cloud Key Management Service（KMS）API（NetApp Backup and Recoveryを顧客管理暗号化キー（CMEK）で使用する予定がある場合のみ必要）
 * Cloud Quotas API（Infrastructure Managerを使用したCloud Volumes ONTAPデプロイメントに必要）
 

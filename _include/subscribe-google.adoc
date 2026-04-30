@@ -20,7 +20,7 @@ image:screenshot_gcp_associate.gif["Google Cloud 認証情報用に選択され�
 NOTE: 次の手順を完了する前に、Google Cloud アカウントの課金管理者権限とNetApp Consoleのログイン権限の両方があることを確認してください。
 
 +
-.. リダイレクトされたら https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace のNetApp Intelligent Servicesページ"^]上部のナビゲーション メニューで正しいプロジェクトが選択されていることを確認します。
+..  https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["Google Cloud Marketplace のNetApp Intelligent Servicesページ"^]にリダイレクトされた後、上部のナビゲーションメニューで正しいプロジェクトが選択されていることを確認してください。
 +
 image:screenshot_gcp_cvo_marketplace.png["Google Cloud のCloud Volumes ONTAPマーケットプレイス ページのスクリーンショット。"]
 
@@ -40,7 +40,7 @@ image:screenshot_gcp_marketplace_register.png["登録ポップアップのスク
 .. *サブスクリプションの割り当て* ページの手順を完了します。
 +
 
-NOTE: 組織内の誰かが既に請求先アカウントからマーケットプレイスサブスクリプションを利用している場合は、次のページにリダイレクトされます。 https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console内のCloud Volumes ONTAPページ"^]その代わり。予期しない事態が発生した場合は、 NetAppの営業チームにお問い合わせください。  Google では、Google 請求先アカウントごとに 1 つのサブスクリプションのみ有効になります。
+NOTE: 組織内の誰かが既に請求アカウントからマーケットプレイスのサブスクリプションを取得している場合は、代わりに https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["NetApp Console内のCloud Volumes ONTAPページ"^]にリダイレクトされます。予期しない場合は、NetApp営業チームにお問い合わせください。Googleでは、Google請求アカウントごとに1つのサブスクリプションのみが有効です。
 
 +
 *** このサブスクリプションを関連付けるコンソール組織を選択します。

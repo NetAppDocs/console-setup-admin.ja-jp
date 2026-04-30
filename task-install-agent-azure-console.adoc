@@ -120,7 +120,7 @@ NetApp Console内で機能とサービスを提供します。
 NetAppコンソールから接続されたエンドポイント:: WebベースのNetApp Console SaaSアプリケーションを使用すると、データ管理タスクを完了するために複数のエンドポイントに接続します。これには、ConsoleからConsoleエージェントを導入するために接続されるエンドポイントが含まれます。
 +
 --
-link:reference-networking-saas-console.html["NetAppコンソールから接続されたエンドポイントのリストを表示します"] 。
+link:reference-networking-saas-console.html["NetApp Console から接続されたエンドポイントのリストを表示します"]。
 
 --
 
@@ -136,7 +136,7 @@ link:reference-networking-saas-console.html["NetAppコンソールから接続�
 --
 
 
-ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
+ポート:: コンソールエージェントへの受信トラフィックはありません。ただし、ユーザーが開始した場合、またはプロキシとして使用してAutoSupportメッセージをCloud Volumes ONTAPからNetAppサポートに送信する場合は除きます。
 +
 --
 * HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
@@ -150,7 +150,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業データソースをスキャンする予定がある場合は、コンソールエージェントとNetApp Data Classificationシステムの両方でネットワークタイムプロトコル（NTP）サービスを有効にして、システム間で時刻が同期されるようにする必要があります https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetApp Data Classificationの詳細については、こちらをご覧ください"^]。
 +
 --
 コンソール エージェントを作成した後、このネットワーク要件を実装する必要があります。
@@ -396,7 +396,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure サービス管理 API �
 . *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
 . *アプリケーション (クライアント) ID* と *ディレクトリ (テナント) ID* をコピーします。
 +
-image:screenshot_azure_app_ids.gif["Microsoft Entra IDy 内のアプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を示すスクリーンショット。"]
+image:screenshot_azure_app_ids.gif["Microsoft Entra ID におけるアプリケーションのアプリケーション（クライアント）ID とディレクトリ（テナント）ID を表示するスクリーンショット。"]
 
 +
 Azure アカウントをコンソールに追加するときは、アプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を指定する必要があります。コンソールは ID を使用してプログラムでサインインします。
@@ -498,15 +498,15 @@ link:reference-ports-azure.html["Azure のセキュリティ グループ ルー
 
 
 
-. 選択内容を確認して、セットアップが正しいことを確認します。
+. 選択内容を確認し、セットアップが正しいことを確認してください。
 +
-.. *エージェント構成の検証* チェック ボックスはデフォルトでオンになっており、展開時にコンソールによってネットワーク接続要件が検証されます。コンソールがエージェントの展開に失敗した場合、トラブルシューティングに役立つレポートが提供されます。デプロイメントが成功した場合、レポートは提供されません。
+.. *エージェント構成を検証する*チェックボックスは、デフォルトで選択されており、デプロイ時にNetApp Consoleがネットワーク接続要件を検証するようになっています。NetApp Consoleがエージェントのデプロイに失敗した場合、トラブルシューティングに役立つレポートが提供されます。デプロイが成功した場合、レポートは提供されません。
 
 
 +
-[]
+[NOTE]
 ====
-** まだ使用している場合はlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]エージェントのアップグレードに使用すると、検証が失敗し、エラーが発生します。これを回避するには、チェックボックスをオフにして検証チェックをスキップします。
+** エージェントのアップグレードに使用されるlink:reference-networking-saas-console-previous.html["以前のエンドポイント"]をまだ使用している場合、検証はエラーで失敗します。これを回避するには、チェックボックスをオフにして検証チェックをスキップしてください。
 ** インストール中、NetAppは、エージェントホストに、ディスク全体の空き容量の少なくとも80パーセントがあることを確認します。これには、 `/opt`に48 GB、 `/var`に32 GBが含まれます（合計80 GB）。インストール後、ディスク全体の少なくとも20パーセントが利用可能である必要があり、これには、 `/opt`に12 GB、 `/var`に8 GBが含まれます（合計20 GB）。
 
 

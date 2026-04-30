@@ -102,7 +102,7 @@ NetApp Console内で機能とサービスを提供します。
 NetAppコンソールから接続されたエンドポイント:: WebベースのNetApp Console SaaSアプリケーションを使用すると、データ管理タスクを完了するために複数のエンドポイントに接続します。これには、ConsoleからConsoleエージェントを導入するために接続されるエンドポイントが含まれます。
 +
 --
-link:reference-networking-saas-console.html["NetAppコンソールから接続されたエンドポイントのリストを表示します"] 。
+link:reference-networking-saas-console.html["NetApp Console から接続されたエンドポイントのリストを表示します"]。
 
 --
 
@@ -118,7 +118,7 @@ link:reference-networking-saas-console.html["NetAppコンソールから接続�
 --
 
 
-ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
+ポート:: コンソールエージェントへの受信トラフィックはありません。ただし、ユーザーが開始した場合、またはプロキシとして使用してAutoSupportメッセージをCloud Volumes ONTAPからNetAppサポートに送信する場合は除きます。
 +
 --
 * HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
@@ -132,7 +132,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業データソースをスキャンする予定がある場合は、コンソールエージェントとNetApp Data Classificationシステムの両方でネットワークタイムプロトコル（NTP）サービスを有効にして、システム間で時刻が同期されるようにする必要があります https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetApp Data Classificationの詳細については、こちらをご覧ください"^]。
 +
 --
 コンソール エージェントを作成した後、このネットワーク要件を実装します。
@@ -280,8 +280,10 @@ Google Cloud 内のリソースを管理するためにコンソールが必要�
 次の例では、プロジェクト レベルで「agent」という名前のロールを作成します。
 
 +
-`gcloud iam roles create connector --project=myproject --file=agent.yaml`
-
+[source, shell]
+----
+gcloud iam roles create agent --project=myproject --file=agent.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud ドキュメント: カスタムロールの作成と管理"^]
 
@@ -292,13 +294,13 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. IAM & Admin サービスから、*サービス アカウント > サービス アカウントの作成* を選択します。
 .. サービス アカウントの詳細を入力し、[作成して続行] を選択します。
 .. 作成したロールを選択します。
-.. 残りの手順を完了してロールを作成します。
+.. 残りの手順を完了して、サービスアカウントを作成します。
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud ドキュメント: サービス アカウントの作成"^]
 
 
 
-. コンソール エージェントが存在するプロジェクトとは異なるプロジェクトにCloud Volumes ONTAPシステムを展開する予定の場合は、コンソール エージェントのサービス アカウントにそれらのプロジェクトへのアクセス権を付与する必要があります。
+. コンソールエージェントが存在するプロジェクト以外のプロジェクトに Cloud Volumes ONTAP システムを導入する場合は、コンソールエージェントのサービスアカウントにそれらのプロジェクトへのアクセス権を付与する必要があります。
 +
 たとえば、コンソール エージェントがプロジェクト 1 にあり、プロジェクト 2 にCloud Volumes ONTAPシステムを作成するとします。プロジェクト 2 のサービス アカウントにアクセス権を付与する必要があります。
 
@@ -364,9 +366,9 @@ compute.networkUser
 |===
 注：
 
-. ファイアウォール ルールをデプロイメントに渡さず、コンソールで自動的に作成するように選択した場合にのみ、ホスト プロジェクトで deploymentmanager.editor が必要になります。ルールが指定されていない場合、 NetApp Consoleは、VPC0 ファイアウォール ルールを含むデプロイメントをホスト プロジェクトに作成します。
-. firewall.create と firewall.delete は、デプロイメントにファイアウォール ルールを渡さず、コンソールで自動的に作成するように選択した場合にのみ必要です。これらの権限は、コンソール アカウントの .yaml ファイルにあります。共有 VPC を使用して HA ペアを展開する場合、これらの権限は VPC1、2、3 のファイアウォール ルールを作成するために使用されます。他のすべてのデプロイメントでは、これらの権限は VPC0 のルールの作成にも使用されます。
-. クラウド階層化の場合、階層化サービス アカウントには、プロジェクト レベルだけでなく、サービス アカウントに対する serviceAccount.user ロールが必要です。現在、プロジェクト レベルで serviceAccount.user を割り当てると、getIAMPolicy を使用してサービス アカウントをクエリしても権限が表示されません。
+. `deploymentmanager.editor`ファイアウォールルールをデプロイメントに渡さず、NetApp Consoleに作成させることを選択した場合にのみ、ホストプロジェクトで必要になります。NetApp Consoleは、ルールが指定されていない場合、VPC0ファイアウォールルールを含むデプロイメントをホストプロジェクト内に作成します。
+. `firewall.create`および `firewall.delete`は、ファイアウォールルールをデプロイメントに渡さず、NetApp Consoleに作成させる場合にのみ必要です。これらの権限は、NetApp Consoleアカウントの.yamlファイルに記述されています。共有VPCを使用してHAペアをデプロイする場合、これらの権限はVPC1、2、および3のファイアウォールルールを作成するために使用されます。その他のすべてのデプロイメントにおいても、これらの権限はVPC0のルールを作成するために使用されます。
+. Cloud Tieringの場合、階層化サービスアカウントには、プロジェクトレベルだけでなく、サービスアカウントに対する `serviceAccount.user`ロールが必要です。プロジェクトレベルで `serviceAccount.user`を割り当てた場合、 `getIAMPolicy`でサービスアカウントをクエリしても権限は表示されません。
 
 
 ====
@@ -386,7 +388,7 @@ Console エージェントとCloud Volumes ONTAP をデプロイする前に、�
 ** クラウド リソース マネージャー API
 ** コンピューティングエンジン API
 ** アイデンティティとアクセス管理 (IAM) API
-** Cloud Key Management Service（KMS）API（お客様が管理する暗号化キー（CMEK）でNetApp Backup and Recoveryを使用する予定の場合のみ必要）
+** Cloud Key Management Service（KMS）API（NetApp Backup and Recoveryを顧客管理暗号化キー（CMEK）で使用する予定がある場合のみ必要）
 ** Cloud Quotas API（Infrastructure Managerを使用したCloud Volumes ONTAPデプロイメントに必要）
 
 

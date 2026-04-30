@@ -60,7 +60,7 @@ AWS または Azure Marketplace からコンソールエージェントをデプ
 
 ** `/var`: 40 GiBの空き容量が必要です
 +
-コンソールエージェントにはこのスペースが必要です `/var`Podman または Docker は、このディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリと `/var/lib/docker`Docker用。このスペースでは外部マウントまたはシンボリックリンクは機能しません。
+Console エージェントには `/var`このスペースが必要です。これは、Podman または Docker がこのディレクトリ内にコンテナを作成するように設計されているためです。具体的には、 `/var/lib/containers/storage`ディレクトリと Docker の場合は `/var/lib/docker`にコンテナを作成します。このスペースでは、外部マウントやシンボリックリンクは機能しません。
 
 
 
@@ -154,7 +154,7 @@ Ubuntu
  a| 
 3.9.45 以降、 NetApp Consoleが標準モードまたは制限モード
  a| 
-Docker エンジン 23.06 から 28.0.0。
+Docker エンジン 23.0.6 から 28.0.0。
  a| 
 サポート対象外
 
@@ -198,7 +198,7 @@ Podman をインストールして設定するには、次の手順に従いま�
 
 * podman.socket サービスを有効にして起動します
 * Python3をインストールする
-* podman-compose パッケージ バージョン 1.0.6 をインストールします。
+* podman-composeパッケージをインストールします（Red Hatのバージョンによって異なります）
 * podman-composeをPATH環境変数に追加する
 * Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。
 
@@ -529,7 +529,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 
 
-ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
+ポート:: コンソールエージェントへの受信トラフィックはありません。ただし、ユーザーが開始した場合、またはプロキシとして使用してAutoSupportメッセージをCloud Volumes ONTAPからNetAppサポートに送信する場合は除きます。
 +
 --
 * HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
@@ -543,7 +543,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業データソースをスキャンする予定がある場合は、コンソールエージェントとNetApp Data Classificationシステムの両方でネットワークタイムプロトコル（NTP）サービスを有効にして、システム間で時刻が同期されるようにする必要があります https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetApp Data Classificationの詳細については、こちらをご覧ください"^]。
 +
 --
 クラウド プロバイダーのマーケットプレイスからコンソール エージェントを作成する予定の場合は、コンソール エージェントを作成した後にこのネットワーク要件を実装します。
@@ -796,7 +796,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure サービス管理 API �
 . *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
 . *アプリケーション (クライアント) ID* と *ディレクトリ (テナント) ID* をコピーします。
 +
-image:screenshot_azure_app_ids.gif["Microsoft Entra IDy 内のアプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を示すスクリーンショット。"]
+image:screenshot_azure_app_ids.gif["Microsoft Entra ID におけるアプリケーションのアプリケーション（クライアント）ID とディレクトリ（テナント）ID を表示するスクリーンショット。"]
 
 +
 Azure アカウントをコンソールに追加するときは、アプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を指定する必要があります。コンソールは ID を使用してプログラムでサインインします。
@@ -848,7 +848,7 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. IAM & Admin サービスから、*サービス アカウント > サービス アカウントの作成* を選択します。
 .. サービス アカウントの詳細を入力し、[作成して続行] を選択します。
 .. 作成したロールを選択します。
-.. 残りの手順を完了してロールを作成します。
+.. 残りの手順を完了して、サービスアカウントを作成します。
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud ドキュメント: サービス アカウントの作成"^]
 
@@ -874,7 +874,7 @@ Google Cloud にCloud Volumes ONTAPをデプロイするには、いくつかの
 ** クラウド リソース マネージャー API
 ** コンピューティングエンジン API
 ** アイデンティティとアクセス管理 (IAM) API
-** Cloud Key Management Service（KMS）API（お客様が管理する暗号化キー（CMEK）でNetApp Backup and Recoveryを使用する予定の場合のみ必要）
+** Cloud Key Management Service（KMS）API（NetApp Backup and Recoveryを顧客管理暗号化キー（CMEK）で使用する予定がある場合のみ必要）
 ** Cloud Quotas API（Infrastructure Managerを使用したCloud Volumes ONTAPデプロイメントに必要）
 
 

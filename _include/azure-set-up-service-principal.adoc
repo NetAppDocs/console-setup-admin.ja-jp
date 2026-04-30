@@ -120,7 +120,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure サービス管理 API �
 . *Microsoft Entra ID* サービスで、*アプリの登録* を選択し、アプリケーションを選択します。
 . *アプリケーション (クライアント) ID* と *ディレクトリ (テナント) ID* をコピーします。
 +
-image:screenshot_azure_app_ids.gif["Microsoft Entra IDy 内のアプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を示すスクリーンショット。"]
+image:screenshot_azure_app_ids.gif["Microsoft Entra ID におけるアプリケーションのアプリケーション（クライアント）ID とディレクトリ（テナント）ID を表示するスクリーンショット。"]
 
 +
 Azure アカウントをコンソールに追加するときは、アプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を指定する必要があります。コンソールは ID を使用してプログラムでサインインします。

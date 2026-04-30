@@ -128,7 +128,7 @@ NetApp Console内で機能とサービスを提供します。
 --
 
 
-ポート:: ユーザーが開始した場合、またはCloud Volumes ONTAPからNetAppサポートにAutoSupportメッセージを送信するためのプロキシとして使用された場合を除いて、コンソール エージェントへの着信トラフィックはありません。
+ポート:: コンソールエージェントへの受信トラフィックはありません。ただし、ユーザーが開始した場合、またはプロキシとして使用してAutoSupportメッセージをCloud Volumes ONTAPからNetAppサポートに送信する場合は除きます。
 +
 --
 * HTTP (80) と HTTPS (443) は、まれにしか使用されないローカル UI へのアクセスを提供します。
@@ -142,7 +142,7 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 --
 
 
-NTP を有効にする:: NetApp Data Classificationを使用して企業のデータ ソースをスキャンする予定の場合は、システム間で時刻が同期されるように、コンソール エージェントとNetApp Data Classificationシステムの両方で Network Time Protocol (NTP) サービスを有効にする必要があります。 https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetAppデータ分類の詳細"^]
+NTP を有効にする:: NetApp Data Classificationを使用して企業データソースをスキャンする予定がある場合は、コンソールエージェントとNetApp Data Classificationシステムの両方でネットワークタイムプロトコル（NTP）サービスを有効にして、システム間で時刻が同期されるようにする必要があります https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetApp Data Classificationの詳細については、こちらをご覧ください"^]。
 +
 --
 コンソール エージェントを作成した後、このネットワーク アクセスを実装します。
@@ -212,7 +212,7 @@ AWS Marketplace からコンソールエージェントを作成すると、デ�
 
 
 .手順
-. に行く https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace でのNetApp Consoleエージェントのリスト"^]
+.  https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace でのNetApp Consoleエージェントのリスト"^]に移動します。
 . マーケットプレイス ページで、[サブスクリプションを続行] を選択します。
 . ソフトウェアをサブスクライブするには、「*利用規約に同意*」を選択します。
 +

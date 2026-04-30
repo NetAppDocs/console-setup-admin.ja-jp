@@ -5,9 +5,9 @@
 WebベースのNetApp Consoleを使用する際にコンピュータから接続されるエンドポイント::
 +
 --
-Web ブラウザからコンソールにアクセスするコンピュータは、複数のエンドポイントに接続できる必要があります。コンソール エージェントを設定し、コンソールを日常的に使用するには、コンソールを使用する必要があります。
+WebブラウザからNetApp Consoleにアクセスするコンピュータは、複数のエンドポイントに接続できる機能を備えている必要があります。
 
-link:reference-networking-saas-console.html["NetAppコンソールのネットワークを準備する"] 。
+link:reference-networking-saas-console.html["NetApp Console のネットワークを準備"]。
 
 --
 

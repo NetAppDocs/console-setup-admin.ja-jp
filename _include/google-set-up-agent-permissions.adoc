@@ -17,8 +17,10 @@ Google Cloud 内のリソースを管理するためにコンソールが必要�
 次の例では、プロジェクト レベルで「agent」という名前のロールを作成します。
 
 +
-`gcloud iam roles create connector --project=myproject --file=agent.yaml`
-
+[source, shell]
+----
+gcloud iam roles create agent --project=myproject --file=agent.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud ドキュメント: カスタムロールの作成と管理"^]
 
@@ -29,13 +31,13 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. IAM & Admin サービスから、*サービス アカウント > サービス アカウントの作成* を選択します。
 .. サービス アカウントの詳細を入力し、[作成して続行] を選択します。
 .. 作成したロールを選択します。
-.. 残りの手順を完了してロールを作成します。
+.. 残りの手順を完了して、サービスアカウントを作成します。
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud ドキュメント: サービス アカウントの作成"^]
 
 
 
-. コンソール エージェントが存在するプロジェクトとは異なるプロジェクトにCloud Volumes ONTAPシステムを展開する予定の場合は、コンソール エージェントのサービス アカウントにそれらのプロジェクトへのアクセス権を付与する必要があります。
+. コンソールエージェントが存在するプロジェクト以外のプロジェクトに Cloud Volumes ONTAP システムを導入する場合は、コンソールエージェントのサービスアカウントにそれらのプロジェクトへのアクセス権を付与する必要があります。
 +
 たとえば、コンソール エージェントがプロジェクト 1 にあり、プロジェクト 2 にCloud Volumes ONTAPシステムを作成するとします。プロジェクト 2 のサービス アカウントにアクセス権を付与する必要があります。
 
