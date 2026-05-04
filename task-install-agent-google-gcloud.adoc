@@ -19,7 +19,7 @@ Google Cloud を使用して Google Cloud に Console エージェントをデ�
 Google Cloud にエージェントを導入すると、選択した VPC 内で Linux と NetApp Console エージェントソフトウェアを実行する VM インスタンスが起動します。
 
 .開始する前に
-* link:concept-agents.html["コンソールエージェントについて学ぶ"]が必要です。
+* link:concept-agents.html["コンソールエージェントについて学ぶ"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 
@@ -147,7 +147,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 Google Cloud ユーザーが Google Cloud からコンソール エージェント VM をデプロイするための権限を設定します。
 
 .手順
-. Google プラットフォームでカスタムロールを作成します。
+. Google Cloud でカスタムロールを作成します。
 +
 .. 次の権限を含む YAML ファイルを作成します。
 +
@@ -248,8 +248,10 @@ includedPermissions:
 次の例では、プロジェクト レベルで「connectorDeployment」という名前のロールを作成します。
 
 +
-gcloud iam ロール コネクタデプロイメントを作成 --project=myproject --file=connector-deployment.yaml
-
+[source, bash]
+----
+gcloud iam roles create connectorDeployment --project=myproject --file=connector-deployment.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud ドキュメント: カスタムロールの作成と管理"^]
 

@@ -8,9 +8,10 @@ summary: 必要に応じて、 NetApp Console組織の名前を変更できま�
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
-:icons: font
+:icons: 
 :linkattrs: 
 :imagesdir: ./media/
+:icontype: fontapp
 
 
 [role="lead"]
@@ -20,14 +21,14 @@ NetApp Console組織には名前と ID があります。組織を識別しや�
 
 == 組織名を変更する
 
-組織の名前を変更できます。複数の組織をサポートする場合に役立ちます。
+組織名を変更できます。複数の組織をサポートしている場合に役立ちます。
 
 .手順
 . *管理 > IDとアクセス*を選択します。
 . *組織*を選択します。
 . *組織*ページで、表の最初の行に移動し、image:icon-action.png["3つの点が並んだアイコン"]次に、[組織の編集] を選択します。
 +
-image:screenshot-iam-edit-organization.png["アクション アイコンと組織の編集オプションが表示されている概要ページのスクリーンショット。"]
+image:screenshot-iam-edit-organization.png["アクションアイコンと「組織の編集」オプションが表示された組織ページのスクリーンショット。"]
 
 . 新しい組織名を入力し、「適用」を選択します。
 

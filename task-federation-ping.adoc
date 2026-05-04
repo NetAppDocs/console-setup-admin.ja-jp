@@ -17,14 +17,14 @@ summary: 'PingFederate IdP プロバイダーと連携して、 NetApp Console�
 PingFederate IdP プロバイダーと連携して、 NetApp Consoleのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。
 
 .必要な役割
-フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+フェデレーションの作成と管理には、フェデレーション管理者ロールが必要です。フェデレーション ビューアは、フェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
 
 
 NOTE: 企業の IdP またはNetAppサポート サイトと連携できます。  NetApp、両方ではなく、どちらか一方を選択することを推奨しています。
 
 NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成する必要があります。次に、コンソールで ID プロバイダーの構成を使用する接続を作成できます。
 
-PingFederate とのフェデレーション接続を設定して、コンソールのシングル サインオン (SSO) を有効にすることができます。このプロセスでは、コンソールをサービス プロバイダーとして信頼するように PingFederate サーバーを構成し、コンソールで接続を作成します。
+PingFederateとのフェデレーション接続を設定して、コンソールのシングル サインオン（SSO）を有効にすることができます。このプロセスでは、PingFederateサーバがコンソールをサービス プロバイダとして信頼するように設定し、その後コンソールで接続を作成します。
 
 .開始する前に
 * 管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。
@@ -51,7 +51,7 @@ PingFederate とのフェデレーション接続を設定して、コンソー�
 +
 *** *返信URL*または*アサーションコンシューマーサービス（ACS）URL*の場合は、 `https://netapp-cloud-account.auth0.com/login/callback`
 *** *ログアウトURL*には、 `https://netapp-cloud-account.auth0.com/logout`
-*** *オーディエンス/エンティティID*には、 `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>`ここで、<fed-domain-name-pingfederate> はフェデレーションのドメイン名です。たとえば、ドメインが `example.com`オーディエンス/エンティティIDは次のようになります。 `urn:auth0:netappcloud-account:fed-example-com-pingfederate` 。
+*** *オーディエンス/エンティティID*には、 `urn:auth0:netapp-cloud-account:<fed-domain-name-pingfederate>`を使用します。ここで、<fed-domain-name-pingfederate>はフェデレーションのドメイン名です。たとえば、ドメインが `example.com`の場合、オーディエンス/エンティティIDは `urn:auth0:netapp-cloud-account:fed-example-com-pingfederate`になります。
 
 
 .. PingFederate サーバーの URL をコピーします。コンソールで接続を作成するときに、この URL が必要になります。
@@ -59,7 +59,7 @@ PingFederate とのフェデレーション接続を設定して、コンソー�
 
 
 . コンソールに戻り、[次へ] を選択して接続を作成します。
-. PingFederateで接続を作成する
+. PingFederateとの接続を作成します。
 +
 .. 前の手順でコピーした PingFederate サーバーの URL を入力します。
 .. X.509 署名証明書をアップロードします。証明書は PEM、CER、または CRT 形式である必要があります。

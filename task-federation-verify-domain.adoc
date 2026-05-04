@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-federation-verify-domain.html 
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: フェデレーションには検証済みのドメインのみを使用できます。電子メール ドメインとは異なるドメインとフェデレーションを行う場合は、まずそのドメインを所有していることを確認する必要があります。フェデレーションには検証済みのドメインのみを使用できます。 
+summary: メールアドレスのドメインとは異なるドメインと連携したい場合は、まずそのドメインの所有権を確認する必要があります。フェデレーションには、認証済みのドメインのみを使用できます。 
 ---
 = フェデレーション接続のメールドメインを確認する
 :hardbreaks:
@@ -14,14 +14,14 @@ summary: フェデレーションには検証済みのドメインのみを使�
 
 
 [role="lead"]
-電子メール ドメインとは異なるドメインとフェデレーションを行う場合は、まずそのドメインを所有していることを確認する必要があります。フェデレーションには検証済みのドメインのみを使用できます。
+メールアドレスのドメインとは異なるドメインと連携したい場合は、まずそのドメインの所有権を確認する必要があります。フェデレーションには、認証済みのドメインのみを使用できます。
 
 .必要な役割
-フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+フェデレーションの作成と管理には、フェデレーション管理者ロールが必要です。フェデレーション ビューアは、フェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
 
 ドメインを確認するには、ドメインの DNS 設定に TXT レコードを追加する必要があります。このレコードは、ドメインを所有していることを証明するために使用され、 NetApp Consoleがフェデレーションのためにドメインを信頼できるようにします。この手順を完了するには、IT またはネットワーク管理者との調整が必要になる場合があります。
 
-たとえば、Microsoft Entra IDを使用している場合は、Microsoftのドキュメントlink:https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["Microsoft Entra ID でドメインを追加する"]の手順に従ってください。
+例えば、Microsoft Entra IDを使用する場合は、Microsoftのドキュメントに記載されている手順に従ってください https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["Microsoft Entra ID でドメインを追加する"^]。
 
 .手順
 . *管理 > IDとアクセス*を選択します。

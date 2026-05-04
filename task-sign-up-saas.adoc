@@ -23,7 +23,7 @@ summary: コンソールを使い始めるには、まずNetApp Support Siteの�
 会社にNetApp Console組織がない場合は、サインアップして作成してください。最初のユーザーは組織管理者となり、ユーザー アカウントと権限を管理します。後からロールを更新したり、管理者を追加したりすることもできます。
 
 .手順
-. ウェブブラウザを開いて、 https://console.netapp.com["NetApp Console"^]
+. Webブラウザを開いて、 https://console.netapp.com["NetApp Console"^]にアクセスします。
 . NetApp Support Siteのアカウントをお持ちの場合は、*ログイン* ページでアカウントに関連付けられている電子メール アドレスを直接入力します。
 +
 コンソールは、この最初のログインの一部として、NetApp Support Siteの資格情報を使用してサインアップします。
@@ -58,7 +58,7 @@ NOTE: サインアップフォームでは英語の文字のみ使用できま�
 会社にすでにNetApp Console組織がある場合は、サインアップまたはログインしてアクセスしてください。サインアップまたはログインの方法は、会社が ID フェデレーションを使用しているか、 NetApp Support Siteの認証情報を持っているかによって異なります。そうでない場合は、 NetApp Consoleログインを作成します。
 
 .手順
-. ウェブブラウザを開いて、 https://console.netapp.com["NetApp Console"^]
+. Webブラウザを開いて、 https://console.netapp.com["NetApp Console"^]にアクセスします。
 . NetApp Support Siteのアカウントをお持ちの場合、または会社でシングル サインオン(SSO) を設定している場合は、[*ログイン*] ページに関連付けられている電子メール アドレスまたは SSO 資格情報を入力します。指示に従ってログインを完了してください。
 +
 どちらの場合も、最初のログインの一環としてコンソールにサインアップされます。

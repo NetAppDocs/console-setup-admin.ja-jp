@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-agent-maint-console-proxy.html 
-keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
+keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy, agent proxy 
 summary: コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。 
 ---
 = NetApp Console のコンソールエージェントの透過プロキシコマンド
@@ -20,7 +20,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 == エージェントメンテナンスコンソールにアクセスする
 
-コンソール エージェント ホストからメンテナンス コンソールにアクセスできます。次のディレクトリに移動します。
+コンソールエージェントホストからメンテナンスコンソールにアクセスできます。次のディレクトリに移動します：
 
 [source, cli]
 ----
@@ -45,8 +45,6 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 
 === プロキシ取得の例
-
-現在の透過プロキシ サーバーの構成を表示するには、次のコマンドを使用します。
 
 [source, cli]
 ----
@@ -111,7 +109,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 === プロキシ削除の例
 
-透過プロキシ サーバーを削除するには、次のコマンドを使用します。
+透明プロキシ サーバを削除するには、次のコマンドを使用します：
 
 [source, cli]
 ----

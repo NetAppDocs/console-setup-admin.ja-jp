@@ -39,7 +39,7 @@ NOTE: ホーム ページで正確なメトリックを得るには、適切な�
 
 ペインにアクセスする権限がない場合は、そのペインを使用する権限がないことを示すメッセージが表示されます。
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["NetApp Consoleのアクセス ロールについて学習します。"] 。
+link:reference-iam-predefined-roles.html["NetApp Consoleのアクセスロールについて学ぶ"]。
 
 .手順
 . NetApp Consoleメニューから、[*ホーム*] を選択します。

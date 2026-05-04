@@ -14,7 +14,7 @@ summary: 'AWS 認証情報を追加および管理して、 NetApp Consoleに AW
 
 
 [role="lead"]
-AWS 認証情報を追加および管理して、 NetApp Consoleから AWS アカウント内のクラウド リソースを展開および管理できるようにします。複数の AWS Marketplace サブスクリプションを管理する場合は、[認証情報] ページから各サブスクリプションを異なる AWS 認証情報に割り当てることができます。
+AWS 認証情報を追加および管理して、NetApp Console から AWS アカウントのクラウド リソースをデプロイおよび管理できるようにします。複数の AWS Marketplace サブスクリプションを管理している場合は、認証情報ページからそれぞれに異なる AWS 認証情報を割り当てることができます。
 
 
 
@@ -99,7 +99,7 @@ IAM ロールを使用して、コンソールエージェントをデプロイ�
 
 ==== AWSキーを提供して権限を付与する
 
-コンソールに IAM ユーザーの AWS キーを提供する場合は、そのユーザーに必要な権限を付与する必要があります。コンソール IAM ポリシーは、コンソールが使用できる AWS アクションとリソースを定義します。
+IAMユーザーのAWSキーをNetApp Consoleに提供する場合は、そのユーザーに必要な権限を付与する必要があります。NetApp Console IAMポリシーは、NetApp Consoleが使用を許可されているAWSアクションとリソースを定義します。
 
 コンソール エージェントがオンプレミスにインストールされている場合は、この認証方法を使用する必要があります。  IAM ロールは使用できません。
 
@@ -189,7 +189,7 @@ IAMロールを設定して、NetApp Consoleのサービスとしてのソフト
 }
 ----
 +
-参照link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["AWS Identity and Access Management (IAM) ドキュメント"^] IAM でのクロスアカウント リソース アクセスの詳細については、こちらをご覧ください。
+IAMにおけるアカウント間リソースアクセスの詳細については、link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["AWS Identity and Access Management（IAM）のドキュメント"^]を参照してください。
 
 ** コンソール エージェントを作成するために必要な権限を含むポリシーを作成します。
 +
@@ -212,7 +212,7 @@ IAM ロールに必要な権限が付与されました。<<add-the-credentials,
 IAM ロールに必要な権限を付与したら、ロール ARN をコンソールに追加します。
 
 .開始する前に
-IAM ロールを作成したばかりの場合は、使用できるようになるまでに数分かかることがあります。資格情報をコンソールに追加する前に、数分お待ちください。
+IAMロールを作成したばかりの場合は、使用可能になるまで数分かかる場合があります。NetApp Consoleに認証情報を追加する前に、数分待ってください。
 
 .手順
 . *管理 > 資格情報*を選択します。
@@ -232,7 +232,7 @@ image:screenshot-settings-icon-organization.png["コンソールの右上にあ�
 
 == Amazon FSx for ONTAPのコンソールに認証情報を追加する
 
-詳細については、 https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAPのコンソールドキュメント"^]
+詳細については、 https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAPのコンソールドキュメント"^]を参照してください。
 
 
 
@@ -292,7 +292,7 @@ NetApp Consoleにリダイレクトされます。
 
 == 既存のサブスクリプションを組織に関連付ける
 
-AWS Marketplace からサブスクライブする場合、プロセスの最後のステップは、サブスクリプションを組織に関連付けることです。この手順を完了しなかった場合、組織でサブスクリプションを使用することはできません。
+AWS Marketplace からサブスクリプションを申し込む場合、プロセスの最後のステップは、そのサブスクリプションを組織に関連付けることです。この手順を完了していない場合、組織でこのサブスクリプションを使用することはできません。
 
 * link:concept-modes.html["コンソールの展開モードについて学ぶ"]
 * link:concept-identity-and-access-management.html["コンソールのIDとアクセス管理について学ぶ"]

@@ -78,16 +78,16 @@ NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサ�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"]IdP を設定して、 NetApp をサービス プロバイダーとして信頼します。
 [role="quick-margin-para"]
-新しいアプリケーションを作成し、ACS URL、エンティティ ID、その他の資格情報などの詳細を指定して、 NetAppを信頼するように ID プロバイダーを構成します。サービス プロバイダー情報は ID プロバイダーによって異なるため、詳細については特定の ID プロバイダーのドキュメントを参照してください。この手順を完了するには、IdP 管理者と協力する必要があります。
+新しいアプリケーションを作成し、ACS URL、エンティティID、その他の認証情報などの詳細情報を提供することで、NetAppを信頼するようにIDプロバイダを設定します。サービスプロバイダの情報はIDプロバイダによって異なるため、詳細については、使用しているIDプロバイダのドキュメントを参照してください。この手順を完了するには、IdP管理者と連携する必要があります。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"]コンソールでフェデレーション接続を作成する
 [role="quick-margin-para"]
 接続を作成するには、ID プロバイダーからの SAML メタデータ URL またはファイルを指定します。この情報は、コンソールと ID プロバイダー間の信頼関係を確立するために使用されます。提供する情報は、使用している IdP によって異なります。たとえば、Microsoft Entra ID を使用している場合は、クライアント ID、シークレット、ドメインを指定する必要があります。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["三つ"]コンソールでフェデレーションをテストする
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"] NetApp Consoleでフェデレーションをテストする
 [role="quick-margin-para"]
 フェデレーション接続を有効にする前にテストしてください。コンソールのフェデレーション ページのテスト オプションを使用して、テスト ユーザーが正常に認証できることを確認します。テストが成功した場合は、接続を有効にできます。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["三つ"]コンソールで接続を有効にする
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] NetApp Consoleで接続を有効にする
 [role="quick-margin-para"]
 接続を有効にすると、ユーザーは企業の資格情報を使用してコンソールにログインできるようになります。

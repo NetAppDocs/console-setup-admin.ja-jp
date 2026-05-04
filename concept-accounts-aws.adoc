@@ -20,9 +20,9 @@ summary: NetApp Consoleを使用すると、コンソール エージェント�
 
 == 初期AWS認証情報
 
-コンソールからコンソールエージェントをデプロイする場合は、IAM ロールの ARN または IAM ユーザーのアクセスキーを指定する必要があります。認証方法には、AWS にコンソールエージェントをデプロイするための権限が必要です。必要な権限は、link:task-install-agent-aws-console.html#aws-permissions-agent["AWS のエージェント展開ポリシー"] 。
+コンソールからコンソールエージェントをデプロイする場合、IAMロールのARN、またはIAMユーザーのアクセスキーを指定する必要があります。認証方法には、AWSにコンソールエージェントをデプロイするための権限が必要です。必要な権限はlink:task-install-agent-aws-console.html#aws-permissions-agent["AWS のエージェント展開ポリシー"]に記載されています。
 
-コンソールが AWS でコンソールエージェントを起動すると、エージェントの IAM ロールとプロファイルが作成されます。また、コンソールエージェントにその AWS アカウント内のリソースとプロセスを管理するための権限を付与するポリシーも添付します。link:reference-permissions-aws.html["エージェントが権限をどのように使用するか確認する"]。
+ConsoleがAWSでConsole agentを起動すると、agent用のIAMロールとプロファイルが作成されます。また、そのAWSアカウント内のリソースとプロセスを管理する権限をConsole agentに付与するポリシーもアタッチされます。link:reference-permissions-aws.html["エージェントが権限をどのように使用しているかを確認する"]。
 
 image:diagram_permissions_initial_aws.png["コンソールが AWS アカウントにコンソールエージェントを展開する様子を示す概念図。"]
 
@@ -30,7 +30,7 @@ image:diagram_permissions_initial_aws.png["コンソールが AWS アカウン�
 
 image:screenshot_accounts_select_aws.gif["詳細と資格情報ページのアカウントの切り替えオプションを示すスクリーンショット。"]
 
-初期の AWS 認証情報を使用してすべてのCloud Volumes ONTAPシステムを展開するか、追加の認証情報を追加することができます。
+初期のAWS認証情報を使用してすべてのCloud Volumes ONTAPシステムを導入することも、認証情報を追加することもできます。
 
 
 
@@ -131,7 +131,7 @@ link:task-adding-aws-accounts.html#subscribe["AWSサブスクリプションを�
 
 === マーケットプレイスの展開とオンプレミスの展開では資格情報はどのように機能しますか?
 
-上記のセクションでは、コンソールからのコンソール エージェントの推奨展開方法について説明しています。また、AWS Marketplace から AWS にエージェントを展開し、独自の Linux ホストまたは VCenter にコンソールエージェントソフトウェアを手動でインストールすることもできます。
+上記のセクションでは、Consoleエージェントの推奨されるデプロイ方法である、Consoleからのデプロイ方法について説明しています。AWS Marketplaceから AWS にエージェントをデプロイすることもできます。また、Consoleエージェントソフトウェアを独自のLinuxホストまたはvCenterに手動でインストールすることもできます。
 
 Marketplace を使用する場合も、同様の方法で権限が提供されます。  IAM ロールを手動で作成して設定し、追加のアカウントに権限を付与するだけです。
 

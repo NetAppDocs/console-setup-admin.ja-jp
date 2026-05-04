@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-gcnv-roles.html 
 keywords: gcp, google cloud, Google Cloud NetApp Volumes, gcnv, permissions, access control, role-based access control, rbac, role-based access 
-summary: NetApp ConsoleのID とアクセス管理では、Google Cloud NetApp Volumesへのアクセスを必要とする組織のメンバーに割り当てることができる管理者ロールが提供されます。 
+summary: NetApp Console IDとアクセス管理では、Google Cloud NetApp Volumesへのアクセスが必要な組織のメンバーに割り当てることができる管理者ロールを提供します。 
 ---
 = NetApp ConsoleのGoogle Cloud NetApp Volumesロール
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: NetApp ConsoleのID とアクセス管理では、Google Cloud NetApp V
 [role="lead"]
 ユーザーに次のロールを割り当てて、 NetApp ConsoleでGoogle Cloud NetApp Volumesにアクセスできるようにすることができます。
 
-Google Cloud NetApp Volumes は次のロールを使用します。
+Google Cloud NetApp Volumes では、以下の役割が使用されます。
 
 * * Google Cloud NetApp Volumes管理者*: コンソールでGoogle Cloud NetApp Volumes を検出し、管理します。
 * * Google Cloud NetApp Volumes閲覧者*: コンソールでGoogle Cloud NetApp Volumesを表示します。

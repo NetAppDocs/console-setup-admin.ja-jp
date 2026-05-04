@@ -20,7 +20,7 @@ Consoleエージェントは、アウトバウンド接続がある場合に自�
 
 == コンソールエージェントをアップグレードする
 
-アップグレード プロセス中にコンソール エージェントを再起動する必要があるため、アップグレード中はNetApp Consoleは使用できません。
+アップグレード処理中にコンソールエージェントを再起動する必要があるため、アップグレード中はNetApp Consoleを使用できません。
 
 .手順
 . コンソールエージェントソフトウェアを以下からダウンロードします。 https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetAppサポート サイト"^] 。

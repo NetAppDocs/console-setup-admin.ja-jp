@@ -498,7 +498,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 .. *JSON*を選択し、その内容をコピーして貼り付けます。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシー"] 。
 .. 残りの手順を完了してポリシーを作成します。
 +
-使用する予定のNetAppデータ サービスによっては、2 番目のポリシーを作成する必要がある場合があります。標準リージョンの場合、権限は 2 つのポリシーに分散されます。 AWS の管理ポリシーの最大文字サイズ制限により、2 つのポリシーが必要になります。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシーの詳細"] 。
+使用予定のNetAppデータサービスによっては、2つ目のポリシーを作成する必要があるかもしれません。標準リージョンでは、権限は2つのポリシーに分散されています。AWSのマネージドポリシーには文字数制限があるため、2つのポリシーが必要です。link:reference-permissions-aws.html["コンソールエージェントのIAMポリシーの詳細"]。
 
 
 
@@ -695,7 +695,7 @@ https://_ipaddress_[]
 
 
 
-コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、[システム] ページに Amazon S3 ストレージ システムが自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["NetApp ConsolePからS3バケットを管理する方法を学ぶ"^]
+Console エージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合、Amazon S3 ストレージ システムが *Systems* ページに自動的に表示されます。 https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["NetApp Consoleから S3 バケットを管理する方法を学びます"^]
 
 
 

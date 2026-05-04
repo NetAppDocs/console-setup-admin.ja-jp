@@ -17,14 +17,14 @@ summary: 'Microsoft Entra ID IdP プロバイダーと連携して、 NetApp Con
 Microsoft Entra ID IdP プロバイダーと連携して、 NetApp Consoleのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してログインできるようになります。
 
 .必要な役割
-フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+フェデレーションの作成と管理には、フェデレーション管理者ロールが必要です。フェデレーション ビューアは、フェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
 
 
 NOTE: 企業の IdP またはNetAppサポート サイトと連携できます。  NetApp、両方ではなく、どちらか一方を選択することを推奨しています。
 
 NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成する必要があります。次に、コンソールで ID プロバイダーの構成を使用する接続を作成できます。
 
-Microsoft Entra ID とのフェデレーション接続を設定して、コンソールのシングル サインオン (SSO) を有効にすることができます。このプロセスでは、コンソールをサービス プロバイダーとして信頼するように Microsoft Entra ID を構成し、コンソールで接続を作成します。
+Microsoft Entra ID とのフェデレーション接続を設定して、Console のシングル サインオン（SSO）を有効にすることができます。このプロセスでは、Console をサービス プロバイダとして信頼するように Microsoft Entra ID を設定してから、Console で接続を作成します。
 
 .開始する前に
 * 管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。
@@ -64,7 +64,7 @@ Microsoft Entra ID とのフェデレーション接続を設定して、コン�
 +
 .. コンソールを信頼するには、Microsoft Entra ID アプリを登録するときに次の値を使用します。
 +
-*** *リダイレクトURL*には、 `https://services.cloud.netapp.com`
+*** *リダイレクト URL* には、以下を使用してください。 `https://services.cloud.netapp.com`
 *** *返信URL*には、 `https://netapp-cloud-account.auth0.com/login/callback`
 
 
@@ -77,9 +77,9 @@ Microsoft Entra ID とのフェデレーション接続を設定して、コン�
 [discrete]
 ====== 接続を作成
 
-. Microsoft Entra IDで接続を作成する
+. Microsoft Entra IDとの接続を作成します。
 +
-.. 前の手順で作成したクライアント ID とクライアント シークレットを入力します。
+.. 前の手順で作成したクライアントIDとクライアントシークレットを入力します。
 .. Microsoft Entra ID ドメイン名を入力します。
 
 

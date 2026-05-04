@@ -19,13 +19,13 @@ summary: コンソール内でNetApp Backup and Recoveryにアクセスできる
 このサービスは、NetApp Backup and Recoveryに固有の次のロールを使用します。
 
 * *バックアップおよびリカバリ スーパー管理者*: NetApp Backup and Recoveryであらゆるアクションを実行します。
-* *バックアップとリカバリ バックアップ管理者*: NetApp Backup and Recoveryで、ローカル スナップショットへのバックアップ、セカンダリ ストレージへの複製、オブジェクト ストレージへのバックアップ アクションを実行します。
-* *バックアップおよびリカバリの復元管理者*: NetApp Backup and Recoveryを使用してワークロードを復元します。
-* *バックアップおよびリカバリ クローン管理者*: NetApp Backup and Recoveryを使用してアプリケーションとデータをクローンします。
+* *バックアップとリカバリバックアップ管理者*：ローカルスナップショットへのバックアップ、セカンダリストレージへのレプリケーション、NetApp Backup and Recoveryでのオブジェクトストレージへのバックアップアクションを実行します。
+* *バックアップとリカバリ復元管理者*：NetApp Backup and Recoveryを使用してワークロードを復元します。
+* *バックアップとリカバリクローン管理者*：NetApp Backup and Recoveryを使用してアプリケーションとデータをクローニングします。
 * *バックアップおよびリカバリ ビューア*: NetApp Backup and Recoveryの情報を表示しますが、アクションは実行しません。
 
 
-NetApp Consoleのアクセスロールの詳細については、 https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["コンソールのセットアップと管理に関するドキュメント"^] 。
+すべてのNetApp Consoleアクセスロールの詳細については、link:reference-iam-predefined-roles.html["アクセス ロール"]を参照してください。
 
 
 

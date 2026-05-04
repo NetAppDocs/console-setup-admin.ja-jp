@@ -140,13 +140,13 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 | NetApp 分類 | はい 
 
 
-| NetAppコピーと同期 | はい 
+| NetApp Copy and Sync | はい 
 
 
 | NetApp Disaster Recovery | はい 
 
 
-| NetApp ランサムウェア対策 | はい 
+| NetApp Ransomware Resilience | はい 
 
 
 | NetApp Replication | いいえ 
@@ -188,7 +188,7 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
  a| 
 Licenses and subscriptionsの管理
 
-* マーケットプレイスのサブスクリプションと BYOL は標準モードでサポートされていますが、サポートされるライセンス オプションは使用しているNetAppデータ サービスによって異なります。利用可能なライセンス オプションの詳細については、各サービスのドキュメントを確認してください。
+* マーケットプレイスのサブスクリプションとBYOLは標準モードでサポートされていますが、サポートされるライセンスオプションは、使用しているNetAppデータサービスによって異なります。各サービスのドキュメントを確認して、利用可能なライセンスオプションの詳細を確認してください。
 
 | いいえ 
 
@@ -209,9 +209,6 @@ Licenses and subscriptionsの管理
 
 
 | 読み取り専用モード | いいえ 
-
-
-| 通知 | いいえ 
 |===
 
 
@@ -306,7 +303,7 @@ NetApp Replication
 
 * 制限モードの政府地域でサポートされます。商用地域または制限モードのソブリン地域ではサポートされません。
 
-| はい*（ONTAP オンプレミスからONTAP オンプレミスへのレプリケーションの場合は不要） 
+| はい*（ONTAPオンプレミスからONTAPオンプレミスへのレプリケーションの場合は不要） 
 
 
 | *NetApp サポート契約の特徴* | なし | 該当なし 
@@ -359,9 +356,6 @@ Cloud Volumes ONTAPの場合、容量ベースのライセンスとノードベ�
 
 
 | 読み取り専用モード | はい 
-
-
-| 通知 | いいえ 
 |===
 
 
@@ -615,7 +609,7 @@ NOTE: 標準モード（NetApp Console SaaS アプリケーション）は、す
 | Google Cloud Storage | いいえ | いいえ 
 
 
-| オンプレミス ONTAP クラスター | はい | はい 
+| オンプレミスのONTAPクラスタ | はい | はい 
 
 
 | Eシリーズ | いいえ | いいえ 
@@ -624,7 +618,7 @@ NOTE: 標準モード（NetApp Console SaaS アプリケーション）は、す
 | StorageGRID | いいえ | いいえ 
 
 
-| ワークロードファクトリー | いいえ | いいえ 
+| ワークロード | いいえ | いいえ 
 
 
 .8+| *データサービス* | バックアップとリカバリ | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] 
@@ -633,13 +627,13 @@ NOTE: 標準モード（NetApp Console SaaS アプリケーション）は、す
 | NetApp 分類 | はい | はい 
 
 
-| コピーと同期 | いいえ | いいえ 
+| NetApp Copy and Sync | いいえ | いいえ 
 
 
 | NetApp Disaster Recovery | いいえ | いいえ 
 
 
-| NetApp ランサムウェア対策 | いいえ | いいえ 
+| NetApp Ransomware Resilience | いいえ | いいえ 
 
 
 | NetApp Replication | はい | はい 

@@ -605,7 +605,7 @@ includedPermissions:
 | ログ記録.privateLogEntries.リスト | はい | はい | いいえ 
 
 
-| ログ記録.logEntries.create .2+| 監視、デバッグ、監査のためにログエントリを作成してルーティングします。 | はい | はい | いいえ 
+| ログ記録.logEntries.create .2+| 監視、デバッグ、監査のためのログエントリを作成し、ルーティングします。 | はい | はい | いいえ 
 
 
 | ログ記録.logEntries.ルート | はい | はい | いいえ 

@@ -625,7 +625,7 @@ IAM ユーザーの権限とアクセスキーを設定します。コンソー�
 --
 必要な権限を持つ Azure カスタム ロールを作成します。このロールをコンソール エージェント VM に割り当てます。
 
-Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して、Azure カスタム ロールを作成できます。次の手順は、Azure CLI を使用してロールを作成する方法を示しています。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]
+Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して Azure カスタム ロールを作成できることに注意してください。以下の手順では、Azure CLI を使用してロールを作成する方法を示します。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]を参照してください。
 
 .手順
 . 独自のホストにソフトウェアを手動でインストールする予定の場合は、カスタム ロールを通じて必要な Azure アクセス許可を提供できるように、VM でシステム割り当てマネージド ID を有効にします。

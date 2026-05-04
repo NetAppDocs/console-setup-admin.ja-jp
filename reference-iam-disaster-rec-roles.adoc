@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-iam-disaster-rec-roles.html 
-keywords: disaster recovery, role-based access control, failover admin, replication plans, job- monitoring, business continuity, compliance- management, operational governance, access delegation, rbac, IAM roles 
+keywords: disaster recovery, role-based access control, failover admin, replication plans, job monitoring, business continuity, compliance management, operational governance, access delegation, rbac, IAM roles 
 summary: コンソール内でNetApp Disaster Recoveryにアクセスできるように、ユーザーに次のロールを割り当てることができます。災害復旧ロールを使用すると、組織内でユーザーが実行する必要があるタスクに固有のロールを柔軟に割り当てることができます。ロールの割り当て方法は、独自のビジネスおよびストレージ管理の実践によって異なります。 
 ---
 = NetApp ConsoleのNetApp Disaster Recoveryロール

@@ -30,7 +30,7 @@ NOTE: Cloud Volumes ONTAPシステムを管理するコンソールエージェ�
 
 == ステップ1: ネットワークを設定する
 
-コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件により、コンソール エージェントはハイブリッド クラウド内のリソースを管理できるようになります。
+コンソールエージェントをインストールする予定のネットワークロケーションが、以下の要件を満たしていることを確認してください。これらの要件を満たすことで、コンソールエージェントはハイブリッドクラウド内のリソースを管理できるようになります。
 
 Azureリージョン:: Cloud Volumes ONTAPを使用する場合、コンソールエージェントは、管理するCloud Volumes ONTAPシステムと同じAzureリージョン、または https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure リージョン ペア"^]Cloud Volumes ONTAPシステム用。この要件により、 Cloud Volumes ONTAPとそれに関連付けられたストレージ アカウント間で Azure Private Link 接続が使用されるようになります。
 +
@@ -417,7 +417,7 @@ VM を構成する際には、次の点に注意してください。
 +
 link:reference-ports-azure.html["Azure のセキュリティ グループ ルールを表示する"] 。
 
-** ID*: *管理* の下で、*システム割り当てマネージド ID を有効にする* を選択します。
+** *ID*: *管理* の下で、*システム割り当てマネージド ID を有効にする* を選択します。
 +
 この設定は重要です。マネージド ID を使用すると、コンソール エージェント仮想マシンは資格情報を提供せずに Microsoft Entra ID に対して自身を識別できるためです。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Azure リソースのマネージド ID の詳細"^] 。
 
@@ -449,7 +449,7 @@ https://_ipaddress_[]
 
 
 .結果
-これで、コンソール エージェントがインストールされ、コンソール組織で設定されました。
+これで Console エージェントのインストールと、 Console 組織とのセットアップが完了しました。
 
 コンソール エージェントを作成したのと同じ Azure サブスクリプションに Azure Blob ストレージがある場合は、*システム* ページに Azure Blob ストレージ システムが自動的に表示されます。 https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["コンソールから Azure Blob ストレージを管理する方法を学びます"^]
 

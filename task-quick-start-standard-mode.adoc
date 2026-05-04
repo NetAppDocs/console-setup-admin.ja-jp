@@ -18,18 +18,18 @@ NetApp Console(SaaS) の使用を開始するには、コンソールのネッ�
 
 NetAppの Software-as-a-service (SaaS) 製品としてホストされているWebベースのコンソールにアクセスします。コンソールを使用して、ハイブリッド クラウド ストレージ環境を管理し、 NetAppデータ サービスを使用できます。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] link:reference-networking-saas-console.html["NetAppコンソールを使用するためのネットワークの準備"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] link:reference-networking-saas-console.html["NetApp Consoleを使用するためのネットワークの準備"]
 [role="quick-margin-para"]
-NetAppコンソールにアクセスするコンピューターが必要なエンドポイントにネットワーク アクセスできることを確認します。
+NetApp Consoleにアクセスするコンピュータが、必要なエンドポイントへのネットワーク アクセスを持っていることを確認してください。
 
-link:reference-networking-saas-console.html["NetAppコンソールのネットワークを準備する方法を学びます。"]
+link:reference-networking-saas-console.html["NetApp Consoleのネットワークを準備する方法について説明します。"]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"] link:task-sign-up-saas.html["サインアップして組織を作成する"]
 [role="quick-margin-para"]
-に行く https://console.netapp.com["NetAppコンソール"^] そしてサインアップしてください。組織を作成するように求められた場合、会社にすでに組織が存在すると思われる場合は、ダイアログ ボックスを閉じて、組織の管理者に連絡してください。現在、会社に組織管理者がいない場合は、この役割を申請できます。 link:task-user-settings.html#contact-admin["組織管理者に連絡する方法について説明します。"^]
+ https://console.netapp.com["NetApp Console"^]にアクセスしてサインアップしてください。組織の作成を求められ、会社の組織がすでに存在すると思われる場合は、ダイアログボックスを閉じて組織管理者に連絡してください。現在、会社に組織管理者がいない場合は、この役割を引き受けることができます。link:task-user-settings.html#contact-admin["組織管理者に連絡する方法について説明します。"^]
 
 [role="quick-margin-para"]
-この時点でログインしており、 NetAppアシスタントを使用してコンソールの構成を開始できます。まず、 NetAppサポート アカウントとコンソール エージェントを関連付けて、完全な機能を有効にします。
+この時点でログインは完了しており、NetAppアシスタントを使用してコンソールの設定を開始できます。開始するには、すべての機能を有効にするために、NetApp Support Siteアカウントとコンソールエージェントを関連付けます。
 
 NetAppアシスタントを使用しない、またはコンソール エージェントをインストールしない場合は、ストレージの管理を開始し、 Digital Advisor、 Amazon FSx for ONTAP、 Azure NetApp Filesなどのサービスを使用できます。link:concept-agents.html["コンソールエージェントなしで何ができるかを学ぶ"]。
 

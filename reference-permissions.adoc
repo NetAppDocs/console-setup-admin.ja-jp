@@ -160,7 +160,7 @@ NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアッ�
 |===
 
 
-=== NetAppコピーと同期
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===

@@ -168,7 +168,7 @@ Azure アカウントまたは Microsoft Entra サービス プリンシパル�
 
 コンソールはAzureにコンソールエージェントVMを展開し、 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["システム割り当てマネージドID"^]必要なロールを作成し、それを VM に割り当てます。link:reference-permissions-azure.html["コンソールが権限をどのように使用するかを確認します"] 。
 
-Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して、Azure カスタム ロールを作成できます。次の手順は、Azure CLI を使用してロールを作成する方法を示しています。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]
+Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して Azure カスタム ロールを作成できることに注意してください。以下の手順では、Azure CLI を使用してロールを作成する方法を示します。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]を参照してください。
 
 .手順
 . Azure の新しいカスタム ロールに必要なアクセス許可をコピーし、JSON ファイルに保存します。
@@ -457,7 +457,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 . *管理 > エージェント*を選択します。
 . *概要*ページで、*エージェントのデプロイ > Azure*を選択します。
 . *レビュー* ページで、エージェントを展開するための要件を確認します。これらの要件についてはこのページの上部にも詳しく記載されています。
-. *仮想マシン認証*ページで、Azure のアクセス許可の設定方法に一致する認証オプションを選択します。
+. *仮想マシン認証*ページで、Azure権限の設定方法に一致する認証オプションを選択します：
 +
 ** *ログイン* を選択して、必要な権限を持つ Microsoft アカウントにログインします。
 +
@@ -481,22 +481,19 @@ TIP: すでに Azure アカウントにログインしている場合は、コ�
 
 . *仮想マシン認証* ページで、Azure サブスクリプション、場所、新しいリソース グループまたは既存のリソース グループを選択し、作成するコンソール エージェント仮想マシンの認証方法を選択します。
 +
-仮想マシンの認証方法は、パスワードまたは SSH 公開キーです。
+仮想マシンの認証方法は、パスワードまたはSSH公開鍵のいずれかです。
 
 +
-https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Azure の Linux VM への接続について学習します"^]
++ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Azure の Linux VM への接続について学習します"^]
 
-. *詳細*ページで、エージェントの名前を入力し、タグを指定して、コンソールで必要な権限を持つ新しいロールを作成するか、または既存のロールを選択するかを選択します。link:reference-permissions-azure.html["必要な権限"] 。
+. *詳細*ページで、エージェントの名前を入力し、タグを指定し、NetApp Consoleが必要な権限を持つ新しいロールを作成するか、またはlink:reference-permissions-azure.html["必要な権限"]で設定済みの既存のロールを選択するかを選択します。
 +
 このロールに関連付けられた Azure サブスクリプションを選択できることに注意してください。選択した各サブスクリプションは、そのサブスクリプション内のリソースを管理するためのコンソール エージェント権限を付与します (たとえば、 Cloud Volumes ONTAP)。
 
 . *ネットワーク* ページで、VNet とサブネットを選択し、パブリック IP アドレスを有効にするかどうかを選択し、必要に応じてプロキシ構成を指定します。
-+
-** *セキュリティ グループ* ページで、新しいセキュリティ グループを作成するか、必要な受信ルールと送信ルールを許可する既存のセキュリティ グループを選択するかを選択します。
+. *セキュリティ グループ* ページで、新しいセキュリティ グループを作成するか、必要な受信ルールと送信ルールを許可する既存のセキュリティ グループを選択するかを選択します。
 +
 link:reference-ports-azure.html["Azure のセキュリティ グループ ルールを表示する"] 。
-
-
 
 . 選択内容を確認し、セットアップが正しいことを確認してください。
 +

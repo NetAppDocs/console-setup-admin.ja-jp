@@ -62,7 +62,7 @@ link:reference-agent-default-config.html["エージェントのデフォルト�
 たとえば、エージェント リソース (CPU、RAM、またはディスク領域) が 30 分間連続して合計容量の 90% を超えると、コンソールから通知が届きます。その後、リソース使用量がそのしきい値を下回ると、通知センターに通知が解決済み (緑) として表示されます。
 
 
-NOTE: エージェント VM の変更について質問がある場合は、 NetAppサポートにお問い合わせください。
+NOTE: エージェントVMの変更に関してご質問がある場合は、NetAppサポートにお問い合わせください。
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#notification-center["詳細情報"^]
 

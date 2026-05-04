@@ -19,7 +19,7 @@ summary: 独自の Linux ホストに Console エージェントを手動でイ�
 Google Cloud にエージェントを導入すると、選択した VPC 内で Linux と NetApp Console エージェントソフトウェアを実行する VM インスタンスが起動します。
 
 .開始する前に
-* link:concept-agent-install-options.html#agent-cloud-manual-deploy["Google Cloud で手動でデプロイするタイミングを学ぶ"]。
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy["Google Cloud で手動でデプロイするタイミングを確認する"]。
 * 確認すべきlink:reference-limitations.html["コンソールエージェントの制限"]。
 
 
@@ -154,14 +154,6 @@ Docker エンジン 23.0.6 から 28.0.0。
 サポート対象外
 
 |===
-Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタンス タイプ。NetAppn2-standard-8 を推奨しています。
-+
---
-コンソールエージェントは、Google Cloud の VM インスタンスで、以下の OS がサポートする環境でサポートされます。 https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["シールドされたVMの機能"^]
-
---
-
-
 
 
 == ステップ2: PodmanまたはDocker Engineをインストールする

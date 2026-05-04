@@ -408,7 +408,7 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 * Credentials
 * HTTPS証明書
 +
-プライベートモードでは、NetApp Consoleがアウトバウンドトラフィックを送信するのは、Cloud Volumes ONTAPシステムを作成するためにクラウド プロバイダに対してのみです。
+プライベートモードでは、NetApp Console がアウトバウンドトラフィックを送信するのは、Cloud Volumes ONTAP システムを作成するためにクラウド プロバイダに送信する場合のみです。
 
 
 
@@ -428,7 +428,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 == ステップ6: クラウド権限を準備する
 
-コンソールエージェントがクラウドにインストールされており、Cloud Volumes ONTAPシステムを作成する予定がある場合、NetApp Consoleにはクラウド プロバイダの権限が必要です。クラウド プロバイダで権限を設定してから、インストール後にそれらの権限をコンソール エージェント インスタンスに関連付ける必要があります。
+コンソールエージェントがクラウドにインストールされていて、Cloud Volumes ONTAPシステムを作成する予定がある場合、NetAppコンソールにはクラウド プロバイダ権限が必要です。クラウド プロバイダで権限を設定し、インストール後にそれらの権限をコンソールエージェントインスタンスに関連付ける必要があります。
 
 必要な手順を確認するには、クラウド プロバイダに使用する認証オプションを選択してください。
 
@@ -497,7 +497,7 @@ IAM ユーザーの権限とアクセスキーを設定します。Console エ�
 --
 必要な権限を持つ Azure カスタム ロールを作成します。このロールを Console エージェント VM に割り当てます。
 
-Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して、Azure カスタム ロールを作成できます。次の手順は、Azure CLI を使用してロールを作成する方法を示しています。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]
+Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して Azure カスタム ロールを作成できることに注意してください。以下の手順では、Azure CLI を使用してロールを作成する方法を示します。別の方法をご希望の場合は、 https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azureドキュメント"^]を参照してください。
 
 .手順
 . Console エージェントをインストールする予定の VM でシステム割り当てマネージド ID を有効にして、カスタム ロールを通じて必要な Azure アクセス許可を提供できるようにします。
@@ -688,7 +688,7 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 
 
 .結果
-これでサービス プリンシパルが設定され、アプリケーション（クライアント）ID、ディレクトリ（テナント）ID、およびクライアント シークレットの値がコピーされているはずです。Azure クレデンシャルを追加するときに、この情報を NetApp Console に入力します。
+サービスプリンシパルのセットアップが完了しました。アプリケーション（クライアント）ID、ディレクトリ（テナント）ID、およびクライアントシークレットの値をコピーしておく必要があります。Azureクレデンシャルを追加する際に、この情報をNetApp Consoleに入力します。
 
 --
 .Google Cloud サービス アカウント

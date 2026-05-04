@@ -297,7 +297,7 @@ Azure アカウントに必要な権限を付与したら、そのアカウン�
 
 
 .結果
-詳細と資格情報ページから別の資格情報セットに切り替えることができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["コンソールにシステムを追加するとき"^]
+「詳細と認証情報」ページから、別の認証情報に切り替えることができます https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["コンソールにシステムを追加するとき"^]。
 
 image:screenshot_accounts_switch_azure.gif["「詳細と資格情報」ページで「資格情報の編集」を選択した後、資格情報を選択する様子を示すスクリーンショット。"]
 

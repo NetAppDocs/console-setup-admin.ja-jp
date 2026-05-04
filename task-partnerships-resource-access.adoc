@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-partnerships-resource-access.html 
-keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization 
+keywords: role-based access, partnership access, partner resources, resource access, grant access, provide partner access, partnership organization 
 summary: 組織内のフォルダやプロジェクトに対する特定のロールをパートナーシップ ユーザーに割り当てることで、パートナーシップ ユーザーにアクセス権を付与できます。 
 ---
 = パートナーシップユーザーにリソースへのアクセスを提供する
@@ -27,7 +27,7 @@ summary: 組織内のフォルダやプロジェクトに対する特定のロ�
 
 自分の組織の場合と同じ方法で、パートナー組織のメンバーの役割を管理できます。ただし、パートナーシップ ユーザーはすべてのロールを利用できるわけではありません。特に、パートナー ユーザーにソフトウェアの更新を許可するロールを付与することはできません。通常、 ONTAPソフトウェアを更新するには、直接ネットワーク アクセスが必要です。
 
-パートナー ユーザーには次のロールを割り当てることができます。
+パートナーユーザーには、以下の役割を割り当てることができます：
 
 * link:reference-iam-platform-roles.html#organization-admin-roles["組織管理者"]
 * link:reference-iam-platform-roles.html#organization-admin-roles["フォルダまたはプロジェクトの管理者"]
@@ -61,7 +61,7 @@ link:reference-iam-predefined-roles.html["定義済みロールの詳細"]
 . *管理 > IDとアクセス*を選択します。
 . *パートナーシップ*を選択します。
 . *パートナーシップ開始*タブを選択します。
-. アクションメニューを選択image:icon-action.png["縦に3つの点があるアイコン"]表示する確立されたパートナーシップの横にある をクリックし、[詳細を表示] を選択します。
+. 表示する既存のパートナーシップの横にあるアクションメニューimage:icon-action.png["縦に3つの点があるアイコン"]を選択し、*詳細を表示*を選択します。
 +
 *メンバー* リストには、パートナー組織がパートナーシップに追加したメンバーが表示されます。
 
@@ -90,7 +90,7 @@ link:reference-iam-predefined-roles.html["定義済みロールの詳細"]
 . *管理 > IDとアクセス*を選択します。
 . *パートナーシップ*を選択します。
 . *パートナーシップ開始*タブを選択します。
-. アクションメニューを選択image:icon-action.png["縦に3つの点があるアイコン"]表示する確立されたパートナーシップの横にある をクリックし、[詳細を表示] を選択します。
+. 表示する既存のパートナーシップの横にあるアクションメニューimage:icon-action.png["縦に3つの点があるアイコン"]を選択し、*詳細を表示*を選択します。
 +
 *メンバー* リストには、パートナー組織がパートナーシップに追加したメンバーが表示されます。
 

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: reference-agent-maint-console-config-checker.html 
-keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
-summary: コンソール エージェント メンテナンス コンソールを使用して、透過プロキシ サーバーを使用するようにコンソール エージェントを構成できます。 
+keywords: agent maintenance console, agent troubleshooting, network connectivity validation, agent validation, hardware requirements, deployment readiness, operational compliance, installation troubleshooting 
+summary: コンソール エージェント メンテナンス コンソールを使用して、コンソール エージェントのインストールと構成を検証できます。 
 ---
 = NetApp Console のメンテナンスコンソールを使用したコンソールエージェントの検証
 :hardbreaks:
@@ -20,7 +20,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 == エージェントメンテナンスコンソールにアクセスする
 
-コンソール エージェント ホストからメンテナンス コンソールにアクセスできます。次のディレクトリに移動します。
+コンソールエージェントホストからメンテナンスコンソールにアクセスできます。次のディレクトリに移動します：
 
 [source, cli]
 ----
@@ -41,9 +41,10 @@ summary: コンソール エージェント メンテナンス コンソール�
 [role="quick-margin-para"]
 検証するサービスを1つ以上選択してください。有効なサービス名は次のとおりです：
 
-*`PLATFORM`これは、必要なNetApp Consoleエンドポイントへのネットワーク接続を検証するとともに、NetApp Consoleエージェントに必要なポートが開いているかどうかも検証します。
+* `PLATFORM`これは、必要なNetApp Consoleエンドポイントへのネットワーク接続を検証するとともに、NetApp Consoleエージェントに必要なポートが開いているかどうかも検証します。
 
-`--validationTypes <comma-separated list validation types to run>` --*REQUIRED*-- 実行する検証タイプを1つ以上選択してください。有効な検証タイプは次のとおりです：
+
+`--validationTypes <comma-separated list of validation types to run>` --*REQUIRED*-- 実行する検証タイプを1つ以上選択してください。有効な検証タイプは次のとおりです：
 
 * `NETWORK`これは、必要な Console エンドポイントへのネットワーク接続を検証します。
 * `HARDWARE`これは、エージェントホストが NetApp Console エージェントの最小ハードウェア要件を満たしていることを検証するものです。
@@ -67,7 +68,7 @@ NOTE: インストール中、NetAppは、エージェントホストに、デ�
 
 === 構成チェッカーの検証例
 
-以下の例には、ネットワーク接続、必要なポート、ハードウェア要件の検証と、プロキシ サーバおよびカスタム証明書のさまざまな組み合わせの使用が含まれます。
+以下の例には、ネットワーク接続、必要なポート、ハードウェア要件の検証、およびプロキシ サーバとカスタム証明書のさまざまな組み合わせの使用が含まれます。
 
 .ネットワーク接続性およびハードウェア要件の検証：
 [source, cli]

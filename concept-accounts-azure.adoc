@@ -44,7 +44,7 @@ image:screenshot_accounts_select_azure.gif["詳細と資格情報ページのア
 
 コンソールで異なるAzure資格情報を使用する場合は、必要な権限を付与する必要があります。link:task-adding-azure-accounts.html["Microsoft Entra ID でサービス プリンシパルを作成して設定する"] Azure アカウントごとに。次の図は、それぞれサービス プリンシパルと、アクセス許可を提供するカスタム ロールが設定された 2 つの追加アカウントを示しています。
 
-image:diagram_permissions_multiple_azure.png["カスタム ロールとマネージド ID を通じてアクセス許可を受け取る最初の Azure アカウントと、カスタム ロールとサービス プリンシパルを通じてアクセス許可を受け取る 2 つの追加アカウントを示す概念図。"]
+image:diagram_permissions_multiple_azure.png["カスタムロールとマネージドIDを通じてアクセス許可を受け取る最初のAzureアカウントと、カスタムロールとサービスプリンシパルを通じてアクセス許可を受け取る2つの追加アカウントを示す概念図。"]
 
 そうするとlink:task-adding-azure-accounts.html#add-credentials-azure["コンソールにアカウント資格情報を追加する"]AD サービス プリンシパルに関する詳細を提供します。
 

@@ -756,7 +756,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 | 作成時にストレージ アカウントを暗号化する | Microsoft.ManagedIdentity/userAssignedIdentities/割り当て/アクション | はい | はい | いいえ 
 
 
-.3+| Cloud Volumes ONTAPの特定のゾーンを指定するには、柔軟なオーケストレーション モードで仮想マシン スケール セットを使用します。 | Microsoft.Compute/仮想マシンスケールセット/書き込み | はい | いいえ | いいえ 
+.3+| 柔軟なオーケストレーションモードで仮想マシン スケール セットを使用して、Cloud Volumes ONTAPの特定のゾーンを指定します | Microsoft.Compute/仮想マシンスケールセット/書き込み | はい | いいえ | いいえ 
 
 
 | Microsoft.Compute/仮想マシンスケールセット/読み取り | はい | いいえ | いいえ 

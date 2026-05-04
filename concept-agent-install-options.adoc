@@ -41,7 +41,7 @@ NetAppでは、標準モードを使用する場合は、NetApp Consoleから導
 * クラウド導入方法の中で最も手動の手順が少ない
 
  a| 
-* オンプレミス、制限モード、またはエアギャップ環境では利用できません
+* オンプレミス、制限モード、またはエアギャップ環境では使用できません
 
 
 |===
@@ -81,7 +81,7 @@ link:task-install-agent-aws-marketplace.html["AWS マーケットプレイスか
 
 == クラウド上のLinuxホストに手動でインストールする
 
-手動インストールでは、AWS、Azure、Google Cloud、またはオンプレミスで提供および管理する Linux ホストに Console エージェント ソフトウェアを直接インストールできます。
+手動インストールでは、AWS、Azure、Google Cloud、またはオンプレミスで提供および管理するLinuxホストに、NetApp Consoleエージェント ソフトウェアを直接インストールできます。
 
 以下の場合はこの方法を選択してください。
 
@@ -100,7 +100,7 @@ link:task-install-agent-aws-marketplace.html["AWS マーケットプレイスか
 
  a| 
 * あらゆる展開方法のほとんどのステップ。ホストを準備し、PodmanまたはDockerをインストールし、ネットワークを設定し、ソフトウェアをインストールし、権限を手動で付与する必要があります
-* * 導入は NetApp Console の外部で開始されるため、ガイド付きワークフローは使用できません
+* 展開はNetApp Console の外部で開始されるため、ガイド付きワークフローは利用できません
 
 
 |===
@@ -108,9 +108,9 @@ link:task-install-agent-aws-manual.html["AWSにConsoleエージェントを手�
 
 
 
-== VCenter（OVA）を使用してオンプレミスに手動でインストールする
+== vCenter（OVA）を使用してオンプレミスに手動でインストール
 
-VMware vCenterを使用している場合は、OVA（Open Virtual Appliance）ファイルをインポートすることでConsoleエージェントをデプロイできます。OVAは、Linuxをインストールしたり、コンテナランタイムを設定したりすることなく、vSphereクライアントでデプロイする事前設定済みのVMイメージです。
+VMware vCenterを使用している場合、OVA（Open Virtual Appliance）ファイルをインポートすることで、Consoleエージェントをデプロイできます。OVAは、Linuxをインストールしたり、コンテナランタイムを設定したりすることなく、vSphereクライアントでデプロイする事前設定済みのVMイメージです。
 
 以下の場合はこの方法を選択してください。
 
@@ -131,18 +131,18 @@ NOTE: オンプレミスの Console エージェントから Google Cloud リソ
 * オンプレミスのみ。クラウド環境では利用できません
 * エージェントのメンテナンス作業を行うためのメニュー駆動型のメンテナンスコンソールが含まれています
 * VMware 管理者にとって馴染みのあるデプロイメント ワークフロー
-* * 事前設定済みのVMイメージは、ミスを防ぎ、メンテナンスを容易にします
+* 事前設定済みのVMイメージは、ミスを防ぎ、メンテナンスを容易にします
 
  a| 
-* vCenterが必要です。ベアESXiホストには直接インストールできません
+* vCenterが必要です。ベアESXiホストに直接インストールすることはできません
 
 
 |===
-link:task-install-agent-on-prem-ova.html["vCenter を使用してオンプレミスに導入する"]
+link:task-install-agent-on-prem-ova.html["vCenterを使用してオンプレミスに導入"]
 
 
 
-== 手動でオンプレミスにインストール（vCenter なし）
+== オンプレミスに手動でインストール（vCenterなし）
 
 Consoleエージェントは、任意のオンプレミスLinuxホストに手動でインストールできます。Linuxホストとコンテナランタイム（DockerまたはPodman）をセットアップしてから、Consoleエージェントをインストールする必要があります。
 

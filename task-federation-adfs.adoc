@@ -17,14 +17,14 @@ summary: 'Active Directory フェデレーション サービス (AD FS) と連�
 Active Directory フェデレーション サービス (AD FS) をNetApp Consoleと連携させて、 NetApp Consoleのシングル サインオン (SSO) を有効にします。これにより、ユーザーは企業の資格情報を使用してコンソールにログインできるようになります。
 
 .必要な役割
-フェデレーションを作成および管理するには、フェデレーション管理者ロールが必要です。フェデレーション ビューアーはフェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
+フェデレーションの作成と管理には、フェデレーション管理者ロールが必要です。フェデレーション ビューアは、フェデレーション ページを表示できます。link:reference-iam-predefined-roles.html["アクセス ロールの詳細について説明します。"]
 
 
 NOTE: 企業の IdP またはNetAppサポート サイトと連携できます。  NetApp、両方ではなく、どちらか一方を選択することを推奨しています。
 
 NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetApp Consoleをサービス プロバイダーとして信頼するように ID プロバイダーを構成します。次に、ID プロバイダーの構成を使用してコンソールで接続を作成します。
 
-AD FS サーバーとのフェデレーションを設定して、 NetApp Consoleのシングル サインオン (SSO) を有効にすることができます。このプロセスでは、コンソールをサービス プロバイダーとして信頼するように AD FS を構成し、 NetApp Consoleで接続を作成します。
+AD FSサーバーとのフェデレーションを設定することで、NetApp Consoleのシングルサインオン（SSO）を有効にできます。このプロセスでは、AD FSを構成してConsoleをサービスプロバイダーとして信頼し、次にNetApp Consoleで接続を作成します。
 
 .開始する前に
 * 管理者権限を持つ IdP アカウントが必要です。  IdP 管理者と調整して手順を完了してください。
@@ -47,7 +47,7 @@ AD FS サーバーとのフェデレーションを設定して、 NetApp Consol
 . *次へ*を選択します。
 . AD FS サーバーに証明書利用者信頼を作成します。 PowerShell を使用することも、AD FS サーバー上で手動で構成することもできます。証明書利用者信頼を作成する方法の詳細については、AD FS のドキュメントを参照してください。
 +
-.. 次のスクリプトを使用して PowerShell を使用して信頼を作成します。
+.. PowerShellを使用して次のスクリプトを実行し、信頼関係を作成します。
 +
 [source, powershell]
 ----
@@ -56,8 +56,8 @@ AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.a
 ----
 .. または、AD FS 管理コンソールで信頼を手動で作成することもできます。信頼を作成するときは、次のNetApp Consoleの値を使用します。
 +
-*** 信頼信頼識別子を作成するときは、**YOUR_TENANT** 値を使用します。 `netapp-cloud-account`
-*** *WS-Federation のサポートを有効にする* を選択した場合は、**YOUR_AUTH0_DOMAIN** 値を使用します。 `netapp-cloud-account.auth0.com`
+*** 信頼関係識別子を作成する際は、*YOUR_TENANT* の値を使用してください： `netapp-cloud-account`
+*** *Enable support for the WS-Federation*を選択する場合は、*YOUR_AUTH0_DOMAIN*の値を使用します： `netapp-cloud-account.auth0.com`
 
 
 .. 信頼を作成した後、AD FS サーバーからメタデータ URL をコピーするか、フェデレーション メタデータ ファイルをダウンロードします。コンソールで接続を完了するには、この URL またはファイルが必要になります。
