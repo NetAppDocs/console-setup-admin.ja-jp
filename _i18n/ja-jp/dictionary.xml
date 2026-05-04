@@ -165,19 +165,11 @@
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| Google Cloud 内のリソースを管理します。</block>
   <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| コンソールエージェントのアップグレード用のイメージを取得します。</block>
   <block id="4691a33bfa50c006ca907ff0f1c2ff22" category="inline-link-macro">エンドポイントリストを更新する方法を学ぶ</block>
-  <block id="6e9c9d81baee7aa9e962024fc724b7ca" category="paragraph">以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。<block ref="b264fb455cda46e4971383987c8dce4c" category="inline-link-macro-rx"></block> 。</block>
   <block id="b44e4956810f4ddc108ea4c7e1339c8b" category="list-text">ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。</block>
   <block id="27ef411618dcaaeae6016b6063099cd3" category="paragraph">^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。</block>
-  <block id="9d8771d45517bfb98492c1863dcd84e6" category="paragraph">| コンソールエージェントがAWS Governmentリージョンにある場合: \https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="d69547f8da7a3fc1f1750b21a40b4d81" category="paragraph">| コンソールエージェントが AWS Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得します。</block>
-  <block id="e1e00fbff5d8f3eda49d54653859b8dc" category="paragraph">| コンソールエージェントがAzure Governmentリージョンにある場合: \https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us</block>
-  <block id="95c562cec08a4fe5f10bc4bf63bcd8b1" category="paragraph">| コンソール エージェントが Azure Government リージョンにインストールされている場合に、コンソール エージェントのアップグレード用のイメージを取得します。</block>
-  <block id="a69993e3de4e29e60253494f1d804482" category="paragraph">a| コンソール エージェントが商用リージョンまたはソブリン リージョンにある場合は、次の 2 つのエンドポイント セットから選択できます。</block>
-  <block id="5f6428bd6c6248b828101aca600e81cd" category="list-text">オプション 1 (推奨) ^1^</block>
   <block id="7d9fb0da2a7d9c9f4e35c19e20d063fa" category="paragraph">\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io</block>
   <block id="e24963e40778134b357f4a5eac58e1f5" category="list-text">オプション2</block>
   <block id="136fa3635085015cd64da15749cb05d3" category="paragraph">\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="6e4b673e0b468e69f5eee0cd8a1bc7be" category="paragraph">| コンソール エージェントが商用リージョンまたはソブリン リージョンにインストールされている場合に、コンソール エージェントのアップグレード用のイメージを取得します。</block>
   <block id="e30145628db8e56b12ce8e660f2e5fda" category="inline-link-macro">ここに記載</block>
   <block id="cf6ace098b5e91cbdb744b6c08dce9e8" category="inline-link-macro">ネットワークをアップデートする方法を学ぶ</block>
   <block id="5ba4013e86db68ef909f6a62fad996ec" category="list-text">ファイアウォールのエンドポイントを更新しても、既存のエージェントは引き続き動作します。</block>
@@ -4073,7 +4065,6 @@
   <block id="0960e06fac3e48e6403802fb4aa8fbde" category="paragraph">コンソール エージェント診断へのアクセスの詳細については、次のトピックを参照してください。</block>
   <block id="a25b82d4083e9054d77530a1b1771861" category="inline-link-macro">コンソール エージェントのステータスを確認する (Linux ホスト展開の場合)</block>
   <block id="fb418088b41b8e87851b52debc27d47c" category="list-text"><block ref="fb418088b41b8e87851b52debc27d47c" category="inline-link-macro-rx"></block></block>
-  <block id="0b73ccbc949b18b9ec9f895e07294e36" category="list-text">Podman (RedHat Enterprise Linux デプロイメント用)</block>
   <block id="7456d0b67dfbe48185fc6410c811e1dc" category="section-title">コンソールエージェントのバージョンを表示する</block>
   <block id="23fc9bc00056f19d24e4c3ab8b5ca0c6" category="paragraph">コンソール エージェントのバージョンを表示してアップグレードを確認するか、 NetApp の担当者と共有してください。</block>
   <block id="b9b50a4a67814c748f85c0dd361e7931" category="list-text">*管理 &gt; サポート &gt; エージェント*を選択します。</block>
@@ -4340,7 +4331,6 @@
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">ランサムウェア レジリエンス ロールは、ユーザーにNetApp Ransomware Resilienceへのアクセスを提供します。ランサムウェア耐性は次の役割をサポートします。</block>
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">ランサムウェア耐性の役割</block>
-  <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block>、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。</block>
   <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">バックアップとリカバリの役割</block>
   <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">災害復旧の役割</block>
   <block id="fffc92a6b6a3b44b650e6669aa797cac" category="summary">Ransomware Resilience では、設定、アクション、レポートへのアクセスを管理するためのさまざまなユーザー ロールが提供されます。</block>
@@ -6192,11 +6182,17 @@
   <block id="fffc3b17829167ae6b45a4b144c7bad7" category="list-text"><block ref="fffc3b17829167ae6b45a4b144c7bad7" category="inline-link-macro-rx"></block></block>
   <block id="3081a7b6bb95ec0d5cf84dc2ea835174" category="list-text">Docker（Ubuntu およびvCenter展開用）</block>
   <block id="0128c0d35d7f984db85c5d65138fb691" category="section-title">Console エージェントが要件を満たしていることを検証する</block>
-  <block id="787bde807a1a57661aeb1e9aa8557b03" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block></block>
   <block id="c45122f09d565aa9c39277ed8a04fe96" category="paragraph">コンソールエージェントの問題を解決できない場合は、NetAppサポートに連絡することを推奨します。NetAppサポート担当者は、コンソールエージェントIDを要求するか、コンソールエージェントのログをまだ持っていない場合は、ログの送信を求める場合があります。</block>
   <block id="550db41d5673daf8fdbc4334a1fbff87" category="paragraph">問題が発生している場合は、NetAppからトラブルシューティングのためにAutoSupportメッセージをNetAppサポートに送信するよう依頼されることがあります。</block>
   <block id="97c06a2bee370a00309be22a5d370be9" category="summary">コンソールエージェントをアンインストールすると、問題のトラブルシューティングを行ったり、ホストから完全に削除したりできます。必要な手順は、使用しているデプロイモードによって異なります。環境からコンソールエージェントを削除したら、コンソールからも削除できます。</block>
   <block id="42e88fe3980dba2a9d6c7e65cc1f3a04" category="list-text">*概要*ページで、切断されたエージェントのアクションメニューを選択し、*エージェントの削除*を選択します。</block>
   <block id="6b0481da6e57f7d61d264eda118c6c5b" category="paragraph">ネットワーク要件が変更された場合は、コンソールエージェントのURIを更新してください。これにより、ストレージインフラの中断のない安全でコンプライアンスに準拠した管理が保証されます。</block>
   <block id="55a14e6b296f723d13dead096a169722" category="paragraph">アップグレード処理中にコンソールエージェントを再起動する必要があるため、アップグレード中はNetApp Consoleを使用できません。</block>
+  <block id="530df3726781395191a4e890157aa779" category="list-text">\https://occmclientinfragov.azurecr.us.io （制限モード環境の場合）</block>
+  <block id="a3bf5c90fa71fd1dac8e77c19a0cae5c" category="inline-link-macro">ホスト要件の詳細をご覧ください。</block>
+  <block id="ed637bdd25ff9b3d6cdb12d0b3117fd4" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block> <block ref="2cf3600481d00e694d39bf1acae4604c" category="inline-link-macro-rx"></block></block>
+  <block id="51bc5a08850d61e055a088db3581d040" category="paragraph">\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io</block>
+  <block id="db454f9269515bb4dec7a10f7a86bc01" category="list-text">Podman（Red Hat Enterprise Linux 環境向け）</block>
+  <block id="d92105d2e9772b92b6c636fbe0cfdf2c" category="inline-link-macro">制限モードに必要なネットワーク アクセス ポイントの詳細をご覧ください。</block>
+  <block id="befec105cd1e8a7f9d2e63f216085cb8" category="admonition">政府機関のクラウド顧客向け（制限モード）、NetApp Console は、制限モードのアップグレードエンドポイントを検証しません。ファイアウォールルールでこのエンドポイントへのアクセスが許可されていることを手動で確認する必要があります。<block ref="df5e5876be260d9f3642c620299197c9" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -95,47 +95,14 @@ NetApp、ランサムウェア耐性またはバックアップとリカバリ�
 |===
 a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| コンソールエージェントのアップグレード用のイメージを取得します。
 
-* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
-+
-以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
-
 * ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
 
 
 a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| Console エージェントのアップグレード用のイメージを取得する。
 
-* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
-+
-以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
-
-* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
-
-
 ^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
 
 + * Console エージェントの 3.9.47 リリース以降、システムはオプション 1 に記載されているエンドポイントをサポートします。以前のリリースの Console エージェントは、下位互換性をサポートしていません。* Console エージェントは、まずオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、自動的にオプション 1 のエンドポイントに接続します。* Console エージェントを NetApp Backup and Recovery または Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしていません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止してください。
-
-| コンソールエージェントがAWS Governmentリージョンにある場合: \https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-| コンソールエージェントが AWS Government リージョンにインストールされている場合に、コンソールエージェントのアップグレード用のイメージを取得します。
-
-| コンソールエージェントがAzure Governmentリージョンにある場合: \https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
-
-| コンソール エージェントが Azure Government リージョンにインストールされている場合に、コンソール エージェントのアップグレード用のイメージを取得します。
-
-a| コンソール エージェントが商用リージョンまたはソブリン リージョンにある場合は、次の 2 つのエンドポイント セットから選択できます。
-
-* オプション 1 (推奨) ^1^
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* オプション2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
-
-| コンソール エージェントが商用リージョンまたはソブリン リージョンにインストールされている場合に、コンソール エージェントのアップグレード用のイメージを取得します。
 
 [cols="3*"]
 |===
@@ -186,6 +153,7 @@ a| コンソール エージェントが商用リージョンまたはソブリ�
  a| 
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io
+* \https://occmclientinfragov.azurecr.us.io （制限モード環境の場合）
 
 | コンソール エージェントのアップグレード用のイメージを取得します。 
 |===

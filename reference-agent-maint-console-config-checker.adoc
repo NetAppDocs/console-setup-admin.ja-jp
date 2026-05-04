@@ -32,6 +32,8 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 その `config-checker validate`コマンドを使用すると、コンソール エージェントの構成を検証できます。
 
+link:reference-networking-saas-console.html["必要なネットワーク アクセス ポイントの詳細について説明します。"] link:task-install-agent-on-prem.html#os-req-agent["ホスト要件の詳細をご覧ください。"]
+
 
 
 === パラメータ

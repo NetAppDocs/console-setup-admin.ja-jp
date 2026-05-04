@@ -82,6 +82,7 @@ NetApp、ファイアウォール ルールを更新して、サイズが小さ�
  a| 
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io
+* \https://occmclientinfragov.azurecr.us.io （制限モード環境の場合）
 
 | コンソール エージェントのアップグレード用のイメージを取得します。 
 |===

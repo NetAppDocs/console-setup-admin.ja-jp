@@ -491,16 +491,9 @@ NetApp Console内で機能とサービスを提供します。
 
 
  a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io
  a| 
 コンソール エージェントのアップグレード用のイメージを取得します。
-
-* 新しいエージェントを展開すると、検証チェックによって現在のエンドポイントへの接続がテストされます。使用する場合link:reference-networking-saas-console-previous.html["以前のエンドポイント"]、検証チェックは失敗します。この失敗を回避するには、検証チェックをスキップします。
-+
-以前のエンドポイントも引き続きサポートされますが、 NetApp、ファイアウォール ルールをできるだけ早く現在のエンドポイントに更新することをお勧めします。link:reference-networking-saas-console-previous.html#update-endpoint-list["エンドポイントリストを更新する方法を学ぶ"] 。
-
-* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
-
 
 |===
 --
