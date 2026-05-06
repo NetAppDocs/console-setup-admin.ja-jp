@@ -491,7 +491,7 @@ NetApp Console内で機能とサービスを提供します。
 
 
  a| 
-\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io
+\https://occmclientinfragov.azurecr.us
  a| 
 コンソール エージェントのアップグレード用のイメージを取得します。
 

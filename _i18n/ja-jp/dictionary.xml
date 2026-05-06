@@ -163,9 +163,7 @@
   <block id="2b7f6d951b3a705af72cb63a7d0788dd" category="paragraph">| \https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn</block>
   <block id="6fc418bd4d8d26d716d678ffb2c516e9" category="paragraph">| Azure China リージョンのリソースを管理します。</block>
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| Google Cloud 内のリソースを管理します。</block>
-  <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| コンソールエージェントのアップグレード用のイメージを取得します。</block>
   <block id="4691a33bfa50c006ca907ff0f1c2ff22" category="inline-link-macro">エンドポイントリストを更新する方法を学ぶ</block>
-  <block id="b44e4956810f4ddc108ea4c7e1339c8b" category="list-text">ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。</block>
   <block id="27ef411618dcaaeae6016b6063099cd3" category="paragraph">^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。</block>
   <block id="7d9fb0da2a7d9c9f4e35c19e20d063fa" category="paragraph">\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io</block>
   <block id="e24963e40778134b357f4a5eac58e1f5" category="list-text">オプション2</block>
@@ -180,29 +178,18 @@
   <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">目的</block>
   <block id="d03b3625d28d43168905850da108e917" category="cell">\https://mysupport.netapp.com</block>
   <block id="9cc9c0e125bb6d31323499f95f0c430e" category="cell">\https://signin.b2c.netapp.com</block>
-  <block id="9989a1605407297325e31ec5b9d20c1b" category="cell">（このエンドポイントは\https://mysupport.netapp.comのCNAME URLです）</block>
   <block id="648b7f3d6699305c92d33129e6ea00fe" category="cell">\https://cloudmanager.cloud.netapp.com/tenancy</block>
   <block id="aeed9abd051a5ff37a94ee8ea302bdd8" category="cell">\https://stream.cloudmanager.cloud.netapp.com</block>
   <block id="49fa0b884bb05dfb3678aff69fc2a90f" category="cell">\https://production-artifacts.cloudmanager.cloud.netapp.com</block>
-  <block id="947479331852b9cc69da9bbd894654d1" category="list-text">オプション 1 (推奨):</block>
   <block id="534d469c55031860cef85b868a9332d8" category="list-text">\https://bluexpinfraprod.eastus2.data.azurecr.io</block>
   <block id="a86a33f4f6d9c203eb747987b6d104ca" category="list-text">\https://bluexpinfraprod.azurecr.io</block>
-  <block id="eb499f7aadd76ba50d5925ea6552dcff" category="list-text">オプション2：</block>
   <block id="f55e31da35f47937201bdbf54e964315" category="list-text">\https://*.blob.core.windows.net</block>
   <block id="9dcb0a1d3281e001a6085626a264be49" category="list-text">\https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="f229192e27e1c177beb735ee19edb0e5" category="paragraph">イメージを取得するには、インストーラーがこれら 2 つのエンドポイント セットのいずれかにアクセスできる必要があります。 ^1^ オプション 1 にリストされているエンドポイントは、より安全であるため推奨されます。オプション 1 にリストされているエンドポイントを許可し、オプション 2 にリストされているエンドポイントを禁止するようにファイアウォールを設定することをお勧めします。これらのエンドポイントについては、次の点に注意してください。</block>
-  <block id="4049213cb8cd68d3d11532c6f66c0ae4" category="list-text">コンソール エージェントは、まずオプション 2 にリストされているエンドポイントに接続します。これらのエンドポイントにアクセスできない場合、コンソール エージェントはオプション 1 にリストされているエンドポイントに自動的に接続します。</block>
-  <block id="cf192a52b6f25a28eb967a03444e7da2" category="list-text">コンソール エージェントをNetApp Backup and RecoveryまたはNetApp Ransomware Resilienceと共に使用する場合、オプション 1 のエンドポイントはサポートされません。この場合、オプション 1 にリストされているエンドポイントを禁止し、オプション 2 にリストされているエンドポイントを許可することができます。</block>
   <block id="3af42b7f858ea75013b8facec6ca0048" category="list-text">独自の Linux ホストにコンソール エージェントを手動でインストールする場合、コンソール エージェントのインストーラーはインストール プロセス中にいくつかの URL にアクセスする必要があります。</block>
   <block id="9f116bfe192eb1d0b2c905df5d192487" category="cell">このエンドポイントは\https://mysupport.netapp.comのCNAME URLです。</block>
   <block id="b2a31fe7605db4877c0f7d8023478b76" category="cell">*AWS Government リージョン* コンソールエージェントを AWS Government リージョンにインストールする場合、インストーラーは次のエンドポイントにもアクセスできる必要があります。</block>
   <block id="130e683d238653858967a73af6293939" category="cell">*Azure Government リージョン* コンソール エージェントを Azure Government リージョンにインストールする場合、インストーラーは次のエンドポイントにもアクセスできる必要があります。</block>
   <block id="1f29f58c7cdabd46095c6ad242933991" category="paragraph">\https://occmclientinfragov.azurecr.us</block>
-  <block id="5ba19e583c755396882d30a7b2586fd7" category="cell">*商用リージョンまたはソブリン リージョン* コンソール エージェントを商用リージョンまたはソブリン リージョンにインストールする場合は、次の 2 セットのエンドポイントから選択できます。</block>
-  <block id="12e72c401fe49717131f2676bb6a8099" category="paragraph">**オプション1（推奨）:** * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io</block>
-  <block id="b31abacefc029dd7ae51036ddd3ad27a" category="paragraph">**オプション2:** * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io</block>
-  <block id="f079ba6f508e4d8fffaecae1a59c5bf3" category="paragraph">オプション 1 にリストされているエンドポイントは、より安全であるため推奨されます。オプション 1 にリストされているエンドポイントを許可し、オプション 2 にリストされているエンドポイントを禁止するようにファイアウォールを設定することをお勧めします。これらのエンドポイントについては、次の点に注意してください。</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="35bd57a4dcfbd7a695f9beb7d01913c6" category="paragraph">ホストはインストール中にオペレーティング システム パッケージの更新を試みる場合があります。ホストは、これらの OS パッケージのさまざまなミラーリング サイトに接続できます。</block>
   <block id="4d3e424d70b837e22ea9a110aa0a155d" category="list-text">*管理 &gt; IDとアクセス*を選択します。</block>
   <block id="398721ebe5d01d65e8258e9cb90c48d2" category="list-text">*Federation* ページを表示するには、*Federation* を選択します。</block>
@@ -3108,7 +3095,6 @@
   <block id="4edfdeb74f014e9408efa692c71a9d2e" category="admonition">ユーザーには少なくとも 1 つのロールが割り当てられている必要があります。ユーザーからすべてのロールを削除することはできません。すべてのロールを削除する必要がある場合は、組織からユーザーを削除する必要があります。</block>
   <block id="2be01e6baa22b9b0a4f0a2c054fe7289" category="summary">必要に応じて、 NetApp Console組織の名前を変更できます。</block>
   <block id="1920da3586c2e2872f88b02997c971c3" category="doc">組織IDとプロジェクトID</block>
-  <block id="d1f35fea71ad4d3c53dfce45e3c8b312" category="paragraph">NetApp Console組織には名前と ID があります。組織を識別しやすいように、組織の名前を選択できます。特定の統合では組織 ID を取得する必要がある場合もあります。</block>
   <block id="902a8ce7390bb726da2910b3ec25aae6" category="section-title">組織名を変更する</block>
   <block id="8bf336ab115156eac88db2970ab0e70d" category="list-text">*組織*ページで、表の最初の行に移動し、<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block>次に、[組織の編集] を選択します。</block>
   <block id="b9669849e9961b7f3f4dc1a2f6787c34" category="list-text">新しい組織名を入力し、「適用」を選択します。</block>
@@ -4850,7 +4836,6 @@
   <block id="5d3a908b240fe98ac0740455635b4cc0" category="list-text">それでも問題が解決しない場合は、サポートにお問い合わせください。</block>
   <block id="13ab9425db1c4ad9c7ca529999f6de24" category="list-text">エージェントが必要なエンドポイントへの送信アクセス権を持っていることを確認します。<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
   <block id="cb4e992a592d7b26e6c218cdde9ee1b5" category="inline-link-macro">config-checker validate コマンドの使用について詳しく学習します。</block>
-  <block id="2c8b526b02d94d86279aebb87311c90d" category="admonition">ステータスが「*接続済み*」であるエージェントのみを検証できます。</block>
   <block id="2256ce9e5331fffeb7ded438ec67c9bf" category="list-title">コンソールからの手順</block>
   <block id="80ed8e269497520c11a5f07aaac10ca9" category="list-text">確認するコンソール エージェントのアクション メニューを選択し、[検証] を選択します。</block>
   <block id="5dfebfd3b68f37eb76c1cbde60947384" category="inline-image-macro">エージェントの「アクション」メニューの「検証」オプションを示すスクリーンショット。</block>
@@ -5213,12 +5198,6 @@
   <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
   <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">デフォルトのエージェント構成</block>
   <block id="cf6adff661a596f01b211beffb99d879" category="paragraph">ネットワークでインターネットアクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。インストール中に明示的にプロキシを追加できます。<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block>および<block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix=" " category="inline-code"></block>パラメータはオプションであり、追加を要求されることはありません。明示的なプロキシ サーバがある場合は、示されているようにパラメータを入力する必要があります。</block>
-  <block id="55ccbb5c67dea0ea25dc1703475c6f80" category="paragraph">+<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> 次のいずれかの形式を使用して、Console エージェントが HTTP または HTTPS プロキシ サーバを使用するように設定します：</block>
-  <block id="f1c3efde333f7f855c03b55ae236bf19" category="paragraph">+ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port</block>
-  <block id="b968056bd5b82381c88e0c9d86ac33b7" category="paragraph">+ 以下の点に注意してください：</block>
-  <block id="40555c907279e68c131ed885fbd297f2" category="paragraph">+ ** ユーザーは、ローカル ユーザーまたはドメイン ユーザーにすることができます。** ドメイン ユーザーの場合は、上記のように \ の ASCII コードを使用する必要があります。** Console エージェントは、@ 文字を含むユーザー名またはパスワードをサポートしていません。** パスワードに次の特殊文字が含まれている場合は、その特殊文字の前にバックスラッシュを付けてエスケープする必要があります：&amp; または !</block>
-  <block id="2c21faf59a15a9c898da7576148c66a6" category="paragraph">+ 例：</block>
-  <block id="3f8f6b484a02379b30f40e52234f6023" category="paragraph">+ \http://bxpproxyuser:netapp1\!@address:3128</block>
   <block id="b7dbcbc4cff4a1c8e5622a89842cfa05" category="section-title">SSL 復号化は Cloud Volumes ONTAP でのみサポートされます</block>
   <block id="8b497b868891e9ffde67fbc8a398c594" category="paragraph">透過プロキシ サーバは、Cloud Volumes ONTAP に関連付けられたエージェントでのみサポートされます。他のNetAppデータサービスで使用されているエージェントでは、透過プロキシを使用できません。NetAppデータサービスを Cloud Volumes ONTAP と併用する場合は、透過プロキシ サーバを使用できる Cloud Volumes ONTAP 専用のエージェントを作成してください。</block>
   <block id="362cb79b6626c8ace583ce4914bc2e72" category="list-text">Cloud Quotas API（Infrastructure Managerを使用したCloud Volumes ONTAPデプロイメントに必要）</block>
@@ -5898,7 +5877,6 @@
   <block id="5ad41271522acbc853e7c4a84763f339" category="paragraph">| https://mysupport.netapp.com | ライセンス情報を取得し、AutoSupport メッセージを NetApp サポートに送信するため。| https://signin.b2c.netapp.com | NetApp Support Site（NSS）クレデンシャルを更新する場合、または新しい NSS クレデンシャルを NetApp Console に追加する場合。| https://support.netapp.com | ライセンス情報を取得し、AutoSupport メッセージを NetApp サポートに送信するため、および Cloud Volumes ONTAP のソフトウェア更新を受信するため。</block>
   <block id="7aed309254b98f77dbd3d77a03d50dfd" category="list-text">オプション1のエンドポイントは、バージョン3.9.47以降でサポートされています。バージョン3.9.47より前のリリースは、下位互換性をサポートしていません。</block>
   <block id="0077f7d38869cf9790e55cbfea881bf4" category="list-text">Consoleエージェントは、まずオプション2のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、自動的にオプション1のエンドポイントに接続します。</block>
-  <block id="fe419db71f7d4484d61cbf89fbff3ac3" category="paragraph">a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| Console エージェントのアップグレード用のイメージを取得する。</block>
   <block id="d29ad0dfb0326845a0e0541c9a73346f" category="paragraph">+ * Console エージェントの 3.9.47 リリース以降、システムはオプション 1 に記載されているエンドポイントをサポートします。以前のリリースの Console エージェントは、下位互換性をサポートしていません。* Console エージェントは、まずオプション 2 のエンドポイントに接続します。これらのエンドポイントにアクセスできない場合は、自動的にオプション 1 のエンドポイントに接続します。* Console エージェントを NetApp Backup and Recovery または Ransomware Resilience と併用する場合、システムはオプション 1 のエンドポイントをサポートしていません。オプション 2 のエンドポイントを許可し、オプション 1 を禁止してください。</block>
   <block id="7c196962ef71a676aa44930111ed62ec" category="paragraph">NetApp Console の Identity and Access Management （ IAM ）を使用して、NetApp リソースを整理し、ビジネス構造（場所、部門、プロジェクトなど）に応じてアクセスを制御できます。</block>
   <block id="236a948a43c96e218fc04221bf59fe7c" category="admonition">NetApp Console で IAM を管理するには、_Super admin_、_Organization admin_、または _Folder or project admin_ のロールが必要です。</block>
@@ -5980,7 +5958,6 @@
   <block id="3f58924667abe02b47c4307cb9e4e753" category="paragraph">WebブラウザからNetApp Consoleにアクセスするコンピュータは、複数のエンドポイントに接続できる機能を備えている必要があります。</block>
   <block id="b26bd0592d66bf1b967e5025cc7e96c3" category="inline-link-macro">NetApp Console のネットワークを準備</block>
   <block id="9ce61524b745e886629d67ddbb08ee3e" category="paragraph"><block ref="2dfc71fdb1a842a2b8ee7de31773f262" category="inline-link-macro-rx"></block>。</block>
-  <block id="e300d744e1b89447a4e57c3fbb6b3fa0" category="list-text">オプション1に記載されているエンドポイントは、NetApp Consoleエージェントのバージョン3.9.47以降でサポートされています。NetApp Consoleエージェントの以前のリリースとの下位互換性はありません。</block>
   <block id="59fa89c2d49dac7f3b6283af4e1b1dc3" category="paragraph">オプション1に記載されているエンドポイントは、より安全であるため推奨されます。オプション1に記載されているエンドポイントは許可し、オプション2に記載されているエンドポイントは許可しないようにファイアウォールを設定することをお勧めします。これらのエンドポイントについて、次の点に注意してください：** オプション1に記載されているエンドポイントは、Consoleエージェントの3.9.47リリース以降でサポートされています。Consoleエージェントの以前のリリースとの下位互換性はありません。** Consoleエージェントは、まずオプション2に記載されているエンドポイントに接続します。これらのエンドポイントにアクセスできない場合、Consoleエージェントはオプション1に記載されているエンドポイントに自動的に接続します。** ConsoleエージェントをNetApp Backup and RecoveryまたはNetApp Ransomware Resilienceで使用する場合、オプション1のエンドポイントはサポートされません。この場合、オプション1に記載されているエンドポイントを禁止し、オプション2に記載されているエンドポイントを許可することができます。</block>
   <block id="895fdfe24bf789e2a45f045a3443011e" category="list-text">フェデレーションに使用するドメインを特定してください。ご自身のメールアドレスのドメイン、またはご自身が所有する別のドメインを使用できます。メールアドレスのドメインとは異なるドメインを使用する場合は、まずコンソールでドメインを認証する必要があります。手順については、<block ref="a68d68e2e08ca1853c0f2263bccee217" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="45b2b872ee5cb2fa766d4ab5c4451342" category="paragraph">7日間または30日間からお選びください。システムは、有効期限切れの通知をメールで送信し、NetApp Consoleにも表示します。通知は、スーパー管理者、組織管理者、フェデレーション管理者、フェデレーション閲覧者といった役割を持つすべてのユーザーに送信されます。</block>
@@ -5991,10 +5968,7 @@
   <block id="9a5f3d4381ce332c8b92e567534cdb88" category="list-text"><block ref="127cc614fbbd5bfdd0ad1b9430ba08a2" prefix="" category="inline-code"></block>および<block ref="0a1e90fbac878c626fcbb9b711662537" prefix=" " category="inline-code"></block>は、ファイアウォールルールをデプロイメントに渡さず、NetApp Consoleに作成させる場合にのみ必要です。これらの権限は、NetApp Consoleアカウントの.yamlファイルに記述されています。共有VPCを使用してHAペアをデプロイする場合、これらの権限はVPC1、2、および3のファイアウォールルールを作成するために使用されます。その他のすべてのデプロイメントにおいても、これらの権限はVPC0のルールを作成するために使用されます。</block>
   <block id="5586272ca2c6ac3a947d6cccf01cb688" category="list-text">Cloud Tieringの場合、階層化サービスアカウントには、プロジェクトレベルだけでなく、サービスアカウントに対する<block ref="661d15e88341890f914791eec787fafe" prefix=" " category="inline-code"></block>ロールが必要です。プロジェクトレベルで<block ref="661d15e88341890f914791eec787fafe" prefix=" " category="inline-code"></block>を割り当てた場合、<block ref="b217a89ca684f0fb2ae2f7f82fe418d7" prefix=" " category="inline-code"></block>でサービスアカウントをクエリしても権限は表示されません。</block>
   <block id="f174003cd34dc666bc8120b29dba1f69" category="paragraph">インストール後にプロキシ サーバを設定するオプションがありますが、設定するにはコンソールエージェントを再起動する必要があります。</block>
-  <block id="885de3bc2ca310ecf49094adf9282e3e" category="list-text">NetApp Console：*エージェント &gt; 管理 &gt; エージェントのデプロイ &gt; オンプレミス &gt; 手動インストール* に移動します。</block>
-  <block id="5f2d178dade1e587f0c5b302a46d5d72" category="paragraph">エージェントインストーラファイルをダウンロードするか、ファイルへのURLをコピーするかを選択します。</block>
   <block id="5c19c0b3e9745eb746921a1fc863ab91" category="list-text">NetApp Support Site（まだコンソールへのアクセス権がない場合に必要）<block ref="384f9db5f56c00fd1d970f44502ee5ff" category="inline-link-rx"></block>。</block>
-  <block id="b637fd6d14e4a1c48316685c43af8a64" category="admonition">透過プロキシを設定する場合は、エージェントのインストール後に設定できます。<block ref="42ec89ae005e4bc718304f7a7f9af7dd" category="inline-link-macro-rx"></block>。</block>
   <block id="0a9b0507398801ef01d10f518148ac6e" category="paragraph">CA署名付き証明書を使用した明示的なプロキシ サーバの設定例を以下に示します：</block>
   <block id="9afc01c988c194f02dd8ec3c4164bd92" category="list-text">WebベースのNetApp Console SaaSアプリケーションを使用すると、データ管理タスクを完了するために複数のエンドポイントに接続します。これには、ConsoleからConsoleエージェントを導入するために接続されるエンドポイントが含まれます。</block>
   <block id="ffc31afe0a5232a754bf2085a6d1bf12" category="inline-link-macro">NetApp Console から接続されたエンドポイントのリストを表示します</block>
@@ -6191,8 +6165,65 @@
   <block id="530df3726781395191a4e890157aa779" category="list-text">\https://occmclientinfragov.azurecr.us.io （制限モード環境の場合）</block>
   <block id="a3bf5c90fa71fd1dac8e77c19a0cae5c" category="inline-link-macro">ホスト要件の詳細をご覧ください。</block>
   <block id="ed637bdd25ff9b3d6cdb12d0b3117fd4" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block> <block ref="2cf3600481d00e694d39bf1acae4604c" category="inline-link-macro-rx"></block></block>
-  <block id="51bc5a08850d61e055a088db3581d040" category="paragraph">\https://occmclientinfragov.azurecr.us \https://bluexpinfraprod.azurecr.io</block>
   <block id="db454f9269515bb4dec7a10f7a86bc01" category="list-text">Podman（Red Hat Enterprise Linux 環境向け）</block>
   <block id="d92105d2e9772b92b6c636fbe0cfdf2c" category="inline-link-macro">制限モードに必要なネットワーク アクセス ポイントの詳細をご覧ください。</block>
   <block id="befec105cd1e8a7f9d2e63f216085cb8" category="admonition">政府機関のクラウド顧客向け（制限モード）、NetApp Console は、制限モードのアップグレードエンドポイントを検証しません。ファイアウォールルールでこのエンドポイントへのアクセスが許可されていることを手動で確認する必要があります。<block ref="df5e5876be260d9f3642c620299197c9" category="inline-link-macro-rx"></block></block>
+  <block id="99ca42bfc6bfad2df77c5ab4bf57cb70" category="paragraph">a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （制限モード展開に必要） a| Console エージェントのアップグレード用のイメージを取得します。</block>
+  <block id="f16ca1b460c0ee9da8dd26e4cae6606e" category="paragraph">a| \https://occmclientinfragov.azurecr.us a| Console エージェントのアップグレード用のイメージを取得する。</block>
+  <block id="870fc4eea7b10cb55e0e6bea798136a1" category="cell">ライセンスの取得およびNetAppサポートへの問い合わせ。（このエンドポイントはhttps://mysupport.netapp.comのCNAME URLです）</block>
+  <block id="a2673a90bf397cfa57dd425d35f5c038" category="cell">*商用地域または主権地域* 商用地域または主権地域にConsoleエージェントをインストールする場合、インストーラーはこれらのエンドポイントにアクセスする必要があります：</block>
+  <block id="38925d58699eec7d5d74bfebcba5d84f" category="list-text">NetApp Console：*エージェント &gt; 管理 &gt; エージェントのデプロイ &gt; オンプレミス &gt; 手動インストール* に移動します。</block>
+  <block id="06f42bb69fed27c52f7bae78f3878026" category="paragraph">エージェント インストーラ ファイルをダウンロードするか、ファイルへの URL を選択します。</block>
+  <block id="60e7ba99c48e4a33bc9667d29215abf4" category="list-text"><block ref="cc1982049b8c474853940566dc79ded1" category="inline-link-rx"></block>（NetApp Consoleへのアクセス権をまだ持っていない場合に必要です）。</block>
+  <block id="ba56355010a4d2b7a9f84d9cd9154231" category="admonition">透過プロキシを設定したい場合は、インストール後に設定できます。<block ref="42ec89ae005e4bc718304f7a7f9af7dd" category="inline-link-macro-rx"></block>。</block>
+  <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block>次のいずれかの形式を使用して、HTTPまたはHTTPSプロキシ サーバを使用するようにConsoleエージェントを設定します：</block>
+  <block id="63e61b342d17ed1b9128b82afdcaa55e" category="list-text">コンソールエージェントは、@文字を含むユーザー名またはパスワードをサポートしていません。</block>
+  <block id="c67fc0b337f1a4a940497d14b954a64b" category="inline-link-macro">NetApp Consoleで認証された組織について学ぶ</block>
+  <block id="418740347c100d5f65ec6fdae40039ab" category="paragraph">組織を認証してNetAppビジネスアカウントIDとリンクし、NetAppシステム全体で一貫したガバナンスを実現することもできます。<block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block>。</block>
+  <block id="a0868ee8ba25b4a31561be0443ebf933" category="summary">認証された組織は、NetApp Console組織をNetAppビジネスアカウントにリンクすることで、システム間でIDとガバナンスの一貫性が保たれます。</block>
+  <block id="48cf25e26ffebb2bb495d369d230e558" category="paragraph">認証済み組織は、NetApp Console内のあなたの組織をNetAppビジネスアカウントの識別情報（例：CMAT ID）にリンクします。これにより、Consoleは一貫した組織アイデンティティとガバナンスモデルをNetAppシステム全体に適用できます。</block>
+  <block id="30a203cb96c50fefbc17611dc5c228ac" category="section-title">組織を認証する理由</block>
+  <block id="5895e55252be33d4a8c0a3f2fed70ae9" category="paragraph">組織の認証を行うことで、以下のことが可能になります：</block>
+  <block id="619827fbf7b134d07776d964ca418ef2" category="list-text">コンソール組織をNetAppビジネスアカウントIDに合わせます。</block>
+  <block id="ea4a402c177478c80f1fd6987232b900" category="list-text">管理、レポート、およびサポートのワークフローの一貫性を向上させる。</block>
+  <block id="bbe78e0920e9bb47f8f85fdccf397e62" category="list-text">複数のNetAppサービスにわたってチームが作業する際の曖昧さを軽減します。</block>
+  <block id="f1883c3d9fd07e5c6274f9c0f795b6c5" category="list-text">信頼できる組織IDに依存するガバナンス制御をサポートします。</block>
+  <block id="62a9515152e6d7ec6e3c394287acb594" category="section-title">検証後の変更点</block>
+  <block id="7c11a53e44d8f76aeb151f87a95cd80b" category="paragraph">組織の認証後：</block>
+  <block id="cb56792a5e15f62a1f62723585cad786" category="list-text">この組織はNetAppビジネスアカウントのIDに関連付けられています。</block>
+  <block id="cab3888d6123cd3a318da7afcbce12bd" category="list-text">NetApp Consoleは、その組織IDをビジネスレベルのマッピングにおける信頼できる情報として扱うことができます。</block>
+  <block id="bdde811059b4457d759f661bfe34084d" category="list-text">ソースシステムによって管理されている組織プロファイルの変更は、NetApp Consoleでは制限される場合があります。</block>
+  <block id="192e00466c0b488c77c731b828ab5e1e" category="section-title">確認する前に</block>
+  <block id="31862d7570d9062614fe4d5b544b3059" category="paragraph">組織の認証を行う前に、以下の点を確認してください：</block>
+  <block id="4eee70687da5ea2684317c0660041669" category="list-text">組織に必要な管理者ロールがあります。</block>
+  <block id="4a1b2fdd5fd46224c3cab8b448abdaf7" category="list-text">確認に必要な組織情報は揃っています。</block>
+  <block id="073b3141ff007e2e7c9e7770dbb5c013" category="list-text">ビジネス アカウント マッピングの検証が必要な場合は、NetApp アカウント チームと調整済みです。</block>
+  <block id="ff79cbea9f2efa42d53fff27506cf26d" category="inline-link-macro">組織を確認してください</block>
+  <block id="cd61b05fa0ea90bca24f6c4068c70af2" category="list-text"><block ref="cd61b05fa0ea90bca24f6c4068c70af2" category="inline-link-macro-rx"></block></block>
+  <block id="a813b69ac531b0701ca879b788271f1d" category="list-text"><block ref="a813b69ac531b0701ca879b788271f1d" category="inline-link-macro-rx"></block></block>
+  <block id="0ad3148d437ad1c27c46470f823dd1b5" category="paragraph">\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （制限付きモードでの展開に必要）</block>
+  <block id="10c97f048a09dcded54f8b476a81ea96" category="inline-link-macro">組織を確認する方法を学ぶ</block>
+  <block id="f56da6e3ae650bf113d86ed1707a0cd5" category="paragraph">このドメイン検証ワークフローは、組織検証とは異なります。<block ref="72ae1679f86197db823e7993d8e7864f" category="inline-link-macro-rx"></block>。</block>
+  <block id="35ea601a80ea7b092eea5094e5acf0bf" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 組織の認証（任意）</block>
+  <block id="1c5b44eb32f9d12f80011dc0daf0c723" category="paragraph">チームで組織認証を使用している場合は、Console組織をNetAppビジネスアカウントのIDにリンクしてください。</block>
+  <block id="f628652f1454cbcdff49a07bde8f26d6" category="paragraph"><block ref="72ae1679f86197db823e7993d8e7864f" category="inline-link-macro-rx"></block>。</block>
+  <block id="92388bda5755f2ce99ab8ec4678c3808" category="list-text"><block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block></block>
+  <block id="3d48cd486159d7ff770d2ac9604cb64a" category="paragraph">NetApp Console組織には名前とIDがあります。組織を識別しやすくするために、組織の名前を選択できます。API呼び出しに使用する組織IDを知っておく必要がある場合もあります。</block>
+  <block id="155e00b589db80072de70532ce7a50ce" category="doc">NetApp Console 組織を確認します</block>
+  <block id="70f8e756c039de370c35c76171faf5fa" category="paragraph">Digital Advisorを使用している場合、会社がNetAppで複数のビジネスアカウントを持っているときは、コンソール組織を確認する必要があります。Digital Advisorには、コンソール組織に関連しない複数のNetAppアカウントが表示される場合があります。コンソール組織に関連付けられたリソースのみが表示されるようにするには、コンソール組織に関連付けるビジネスIDを確認できます。</block>
+  <block id="7934ae571b929618df901b492ff84198" category="inline-link-macro">NSS アカウントを関連付ける方法を確認します</block>
+  <block id="c86741a1bc67570a8cd0cbb1e0a4b533" category="paragraph">組織を検証するには組織管理者ロールが必要であり、ユーザーもNetApp Support Site（NSS）アカウントに関連付けられている必要があります。<block ref="6d5ad2096c24e0befb1e89a3a2137e15" category="inline-link-macro-rx"></block>。</block>
+  <block id="8035b26370273d0ee0090f65ae1d3a71" category="admonition">会社にビジネス アカウントが 1 つしかなく、ユーザーが NetApp Support Site アカウントに関連付けられている場合、組織は自動的に認証されます。</block>
+  <block id="7a1bd24cabea42f3fe04b753aec5d8ba" category="list-text">ユーザーが複数の組織にアクセスできる場合は、「組織」ドロップダウンメニューから検証する組織を選択してください。</block>
+  <block id="01b73db22fadaa534984d5a80ed20a2e" category="list-text">*管理 &gt; IDとアクセス*で確認できます。</block>
+  <block id="10296e23827c1a60c2f8d75482c4a075" category="summary">NetApp Console組織をNetAppビジネスアカウントIDにリンクするには、組織を認証します。</block>
+  <block id="80333c8b0e0d35357d14ab44c8c5f4f9" category="doc">NetApp Console で組織を確認</block>
+  <block id="43c3b1d18eaf47add23da2905752381b" category="paragraph">組織を確認すると、Console組織がNetAppビジネスアカウントIDとリンクされます。これにより、Digital AdvisorやAIQの推奨事項などの機能を使用できます。</block>
+  <block id="0a2f38a239e81a08f5b837f81513a9bc" category="paragraph">組織管理者またはスーパー管理者。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
+  <block id="45c6d1bd46ddc19876bfc91687471ea2" category="paragraph">貴社がNetAppで複数のビジネスアカウントをお持ちの場合は、組織を確認し、正しいビジネスアカウントに関連付ける必要があります。貴社がNetAppでビジネスアカウントを1つしかお持ちでない場合は、組織は自動的に検証され、そのビジネスアカウントにリンクされます。</block>
+  <block id="c6a431b7786ec48067cfa83374b99c0a" category="paragraph">Console組織がビジネスアカウントに関連付けられている場合、Digital Advisorにはそのアカウントに関連付けられているリソースのみが表示されます。複数のビジネスアカウントをお持ちの場合は、Console組織に関連付けるアカウントを1つ選択する必要があります。関連付けを変更する必要がある場合は、組織を再度確認し、別のビジネスアカウントを選択してください。</block>
+  <block id="8d6d948cdc13e069b613284450d2961f" category="list-text">*組織*ページで、ページタイトルの横にある*確認*を選択します。</block>
+  <block id="36cb56591d62e53ed37d02c1e0cf2a57" category="inline-image-macro">組織ページのスクリーンショット。ページタイトルの横に「確認」ボタンが表示されています。</block>
+  <block id="0bddf0553f7265d90da078ccd7865d6a" category="paragraph"><block ref="0bddf0553f7265d90da078ccd7865d6a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="812c2b994db82152161eb7a216b75550" category="list-text">*Associate business account* ダイアログから、組織に関連付けるビジネスアカウントを選択します。</block>
 </blocks>

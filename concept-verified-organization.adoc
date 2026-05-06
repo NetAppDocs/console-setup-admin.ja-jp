@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: concept-verified-organization.html 
+keywords: verified organization, organization verification, cmat, crm id, business account, identity and access management, iam, organization governance 
+summary: 認証された組織は、NetApp Console組織をNetAppビジネスアカウントにリンクすることで、システム間でIDとガバナンスの一貫性が保たれます。 
+---
+= NetApp Consoleで認証された組織について学ぶ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+認証済み組織は、NetApp Console内のあなたの組織をNetAppビジネスアカウントの識別情報（例：CMAT ID）にリンクします。これにより、Consoleは一貫した組織アイデンティティとガバナンスモデルをNetAppシステム全体に適用できます。
+
+
+
+== 組織を認証する理由
+
+組織の認証を行うことで、以下のことが可能になります：
+
+* コンソール組織をNetAppビジネスアカウントIDに合わせます。
+* 管理、レポート、およびサポートのワークフローの一貫性を向上させる。
+* 複数のNetAppサービスにわたってチームが作業する際の曖昧さを軽減します。
+* 信頼できる組織IDに依存するガバナンス制御をサポートします。
+
+
+
+
+== 検証後の変更点
+
+組織の認証後：
+
+* この組織はNetAppビジネスアカウントのIDに関連付けられています。
+* NetApp Consoleは、その組織IDをビジネスレベルのマッピングにおける信頼できる情報として扱うことができます。
+* ソースシステムによって管理されている組織プロファイルの変更は、NetApp Consoleでは制限される場合があります。
+
+
+
+
+== 確認する前に
+
+組織の認証を行う前に、以下の点を確認してください：
+
+* 組織に必要な管理者ロールがあります。
+* 確認に必要な組織情報は揃っています。
+* ビジネス アカウント マッピングの検証が必要な場合は、NetApp アカウント チームと調整済みです。
+
+
+
+
+== 関連情報
+
+* link:task-verify-organization.html["組織を確認してください"]
+* link:concept-identity-and-access-management.html["アイデンティティとアクセス管理について学ぶ"]
+* link:task-iam-rename-organization.html["組織IDとプロジェクトID"]
+

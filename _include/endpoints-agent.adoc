@@ -93,12 +93,9 @@ NetApp、ランサムウェア耐性またはバックアップとリカバリ�
 
 
 |===
-a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| コンソールエージェントのアップグレード用のイメージを取得します。
+a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （制限モード展開に必要） a| Console エージェントのアップグレード用のイメージを取得します。
 
-* ファイアウォールの現在のエンドポイントに更新すると、既存のエージェントは引き続き動作します。
-
-
-a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| Console エージェントのアップグレード用のイメージを取得する。
+a| \https://occmclientinfragov.azurecr.us a| Console エージェントのアップグレード用のイメージを取得する。
 
 ^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
 

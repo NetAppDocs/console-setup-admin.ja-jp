@@ -34,15 +34,13 @@ unset https_proxy
 +
 ** NetApp Console：*エージェント > 管理 > エージェントのデプロイ > オンプレミス > 手動インストール* に移動します。
 +
-エージェントインストーラファイルをダウンロードするか、ファイルへのURLをコピーするかを選択します。
+エージェント インストーラ ファイルをダウンロードするか、ファイルへの URL を選択します。
 
-
-
+** https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetAppサポート サイト"^]（NetApp Consoleへのアクセス権をまだ持っていない場合に必要です）。
 +
 
 NOTE: ネットワークまたはクラウドで使用するための「オンライン」エージェント インストーラーをダウンロードします。NetApp Console エージェントには別の「オフライン」インストーラーが用意されていますが、プライベート モードの展開でのみサポートされます。
 
-+
 ** NetApp Support Site（まだコンソールへのアクセス権がない場合に必要） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetAppサポート サイト"^]。
 
 
@@ -65,33 +63,46 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 ネットワークでインターネットアクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。インストール中に明示的にプロキシを追加できます。 `--proxy`および `--cacert`パラメータはオプションであり、追加を要求されることはありません。明示的なプロキシ サーバがある場合は、示されているようにパラメータを入力する必要があります。
 
-
-
-
-NOTE: 透過プロキシを設定する場合は、エージェントのインストール後に設定できます。link:reference-agent-maint-console-proxy.html["エージェントメンテナンスコンソールについて学ぶ"]。
-
 +
 
+NOTE: 透過プロキシを設定したい場合は、インストール後に設定できます。link:reference-agent-maint-console-proxy.html["エージェントメンテナンスコンソールについて学ぶ"]。
+
++
 CA署名付き証明書を使用した明示的なプロキシ サーバの設定例を以下に示します：
 
 +
-
 [source, cli]
 ----
 ./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
-`--proxy` 次のいずれかの形式を使用して、Console エージェントが HTTP または HTTPS プロキシ サーバを使用するように設定します：
+`--proxy`次のいずれかの形式を使用して、HTTPまたはHTTPSプロキシ サーバを使用するようにConsoleエージェントを設定します：
 
-+ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port
++
+** \http://アドレス:ポート
+** \http://ユーザー名:パスワード@アドレス:ポート
+** \http://ドメイン名%92ユーザー名:パスワード@アドレス:ポート
+** \https://アドレス:ポート
+** \https://ユーザー名:パスワード@アドレス:ポート
+** \https://ドメイン名%92ユーザー名:パスワード@アドレス:ポート
++
+次の点に注意してください。
 
-+ 以下の点に注意してください：
++
+*** ユーザーはローカル ユーザーまたはドメイン ユーザーになります。
+*** ドメイン ユーザーの場合は、上記のように \ の ASCII コードを使用する必要があります。
+*** コンソールエージェントは、@文字を含むユーザー名またはパスワードをサポートしていません。
+*** パスワードに以下の特殊文字が含まれている場合は、その特殊文字の前にバックスラッシュ ( & または ! ) を付けてエスケープする必要があります。
++
+例えば：
 
-+ ** ユーザーは、ローカル ユーザーまたはドメイン ユーザーにすることができます。** ドメイン ユーザーの場合は、上記のように \ の ASCII コードを使用する必要があります。** Console エージェントは、@ 文字を含むユーザー名またはパスワードをサポートしていません。** パスワードに次の特殊文字が含まれている場合は、その特殊文字の前にバックスラッシュを付けてエスケープする必要があります：& または !
++
+\http://bxpproxyuser:netapp1\!@アドレス:3128
 
-+ 例：
 
-+ \http://bxpproxyuser:netapp1\!@address:3128
+
+
 
 . Podman を使用した場合は、aardvark-dns ポートを調整する必要があります。
 +
@@ -124,8 +135,7 @@ dns_bind_port = 54
 +
 プロキシ サーバーを指定した場合、インストールの最後に、コンソール エージェント サービス (occm) が 2 回再起動します。
 
-
-
++
 
 NOTE: インストールが失敗した場合は、インストール レポートとログを表示して問題の解決に役立てることができます。link:task-troubleshoot-agent.html#troubleshoot-installation["インストールの問題をトラブルシューティングする方法を学びます。"]
 

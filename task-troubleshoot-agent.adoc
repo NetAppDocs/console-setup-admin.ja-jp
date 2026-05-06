@@ -128,15 +128,10 @@ podman ps -a
 
 link:reference-networking-saas-console.html["必要なネットワーク アクセス ポイントの詳細について説明します。"] link:task-install-agent-on-prem.html#os-req-agent["ホスト要件の詳細をご覧ください。"]
 
-インストール中、NetAppは、エージェントホストに、ディスク全体の空き容量の少なくとも80パーセントがあることを確認します。これには、 `/opt`に48 GB、 `/var`に32 GBが含まれます（合計80 GB）。インストール後、ディスク全体の少なくとも20パーセントが利用可能である必要があり、これには、 `/opt`に12 GB、 `/var`に8 GBが含まれます（合計20 GB）。
-
 エージェントメンテナンスコンソールを使用して検証チェックを実行することもできます。link:reference-agent-maint-console-config-checker.html["config-checker validate コマンドの使用について詳しく学習します。"]
 
 
 IMPORTANT: 政府機関のクラウド顧客向け（制限モード）、NetApp Console は、制限モードのアップグレードエンドポイントを検証しません。ファイアウォールルールでこのエンドポイントへのアクセスが許可されていることを手動で確認する必要があります。link:task-prepare-restricted-mode.html["制限モードに必要なネットワーク アクセス ポイントの詳細をご覧ください。"]
-
-
-NOTE: ステータスが「*接続済み*」であるエージェントのみを検証できます。
 
 .コンソールからの手順
 . *管理 > エージェント*を選択します。

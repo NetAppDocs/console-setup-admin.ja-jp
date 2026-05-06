@@ -51,7 +51,7 @@ NOTE: 4.0.0 では、 NetApp はコンソールとコンソール エージェ�
 
 
  a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （制限付きモードでの展開に必要）
  a| 
 コンソール エージェントのアップグレード用のイメージを取得します。
 
