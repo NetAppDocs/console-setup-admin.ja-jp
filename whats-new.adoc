@@ -18,6 +18,27 @@ NetApp Console管理機能の新機能（アイデンティティおよびアク
 
 
 
+== 2026年5月11日
+
+
+
+=== Console エージェント 4.7.0
+
+4.7.0 リリースでは、標準モードと制限モードの両方がサポートされています。
+
+Console エージェントのこのリリースには、セキュリティの改善とバグ修正が含まれています。
+
+
+
+=== NetApp Console管理
+
+今回のリリースには、以下の新機能が含まれています。
+
+.コンソール組織を確認してください
+デフォルトでは、Digital Advisorは、コンソール組織だけでなく、会社に関連付けられたすべてのNetAppアカウントを表示します。Digital Advisorで表示される内容を特定のアカウントに制限するには、コンソール組織で使用するビジネスアカウントを確認してください。link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-organization-verify.html["Console 組織を検証する方法を確認する"^]
+
+
+
 == 2026年4月13日
 
 
@@ -51,7 +72,7 @@ OVA を使用して vCenter に Console エージェントをデプロイした�
 
 
 
-=== コンソール管理
+=== NetApp Console管理
 
 パートナーユーザーにKeystoneロールを割り当てて、そのユーザーがパートナー組織内のKeystoneリソースを管理できるようにすることができます。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["パートナー ユーザーへの Keystone ロールの割り当てについて詳しく説明します。"]
 

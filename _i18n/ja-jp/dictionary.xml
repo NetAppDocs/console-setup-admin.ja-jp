@@ -5578,7 +5578,6 @@
   <block id="de3b44fa9f294325dd837b3f15773cd6" category="paragraph">4.5.0 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
   <block id="8d40f2642d0505b33483f580f9515a11" category="paragraph">コンソール エージェントのこのリリースには、セキュリティの改善とバグ修正に加えて、次の新機能が含まれています。</block>
   <block id="e6aa0876ac72372fe4102974fad02f9e" category="inline-link-macro">Console エージェントで構成チェックを実行する方法の詳細について説明します。</block>
-  <block id="2de08c251ba5c647be79f6b565692ba4" category="section-title">コンソール管理</block>
   <block id="2bdd9842a1d8845c8d1b9f13695c4ac5" category="inline-link-macro">パートナー ユーザーへの Keystone ロールの割り当てについて詳しく説明します。</block>
   <block id="01440d4fde4475cae0005dbb66b8f907" category="list-text"><block ref="01440d4fde4475cae0005dbb66b8f907" category="inline-link-macro-rx"></block></block>
   <block id="83c2b9a6cf87b54eb30380def11da84d" category="list-text"><block ref="83c2b9a6cf87b54eb30380def11da84d" category="inline-link-macro-rx"></block></block>
@@ -6210,10 +6209,7 @@
   <block id="92388bda5755f2ce99ab8ec4678c3808" category="list-text"><block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block></block>
   <block id="3d48cd486159d7ff770d2ac9604cb64a" category="paragraph">NetApp Console組織には名前とIDがあります。組織を識別しやすくするために、組織の名前を選択できます。API呼び出しに使用する組織IDを知っておく必要がある場合もあります。</block>
   <block id="155e00b589db80072de70532ce7a50ce" category="doc">NetApp Console 組織を確認します</block>
-  <block id="70f8e756c039de370c35c76171faf5fa" category="paragraph">Digital Advisorを使用している場合、会社がNetAppで複数のビジネスアカウントを持っているときは、コンソール組織を確認する必要があります。Digital Advisorには、コンソール組織に関連しない複数のNetAppアカウントが表示される場合があります。コンソール組織に関連付けられたリソースのみが表示されるようにするには、コンソール組織に関連付けるビジネスIDを確認できます。</block>
   <block id="7934ae571b929618df901b492ff84198" category="inline-link-macro">NSS アカウントを関連付ける方法を確認します</block>
-  <block id="c86741a1bc67570a8cd0cbb1e0a4b533" category="paragraph">組織を検証するには組織管理者ロールが必要であり、ユーザーもNetApp Support Site（NSS）アカウントに関連付けられている必要があります。<block ref="6d5ad2096c24e0befb1e89a3a2137e15" category="inline-link-macro-rx"></block>。</block>
-  <block id="8035b26370273d0ee0090f65ae1d3a71" category="admonition">会社にビジネス アカウントが 1 つしかなく、ユーザーが NetApp Support Site アカウントに関連付けられている場合、組織は自動的に認証されます。</block>
   <block id="7a1bd24cabea42f3fe04b753aec5d8ba" category="list-text">ユーザーが複数の組織にアクセスできる場合は、「組織」ドロップダウンメニューから検証する組織を選択してください。</block>
   <block id="01b73db22fadaa534984d5a80ed20a2e" category="list-text">*管理 &gt; IDとアクセス*で確認できます。</block>
   <block id="10296e23827c1a60c2f8d75482c4a075" category="summary">NetApp Console組織をNetAppビジネスアカウントIDにリンクするには、組織を認証します。</block>
@@ -6226,4 +6222,19 @@
   <block id="36cb56591d62e53ed37d02c1e0cf2a57" category="inline-image-macro">組織ページのスクリーンショット。ページタイトルの横に「確認」ボタンが表示されています。</block>
   <block id="0bddf0553f7265d90da078ccd7865d6a" category="paragraph"><block ref="0bddf0553f7265d90da078ccd7865d6a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="812c2b994db82152161eb7a216b75550" category="list-text">*Associate business account* ダイアログから、組織に関連付けるビジネスアカウントを選択します。</block>
+  <block id="e337542e72a609caf56b5e5fdf59c9ff" category="doc">Console エージェント 4.7.0</block>
+  <block id="99c4637fed7022fa029be07f2fddc9af" category="paragraph">4.7.0 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
+  <block id="c36716f3e716cc1af0c491f3d55d650b" category="paragraph">今回のリリースには、以下の新機能が含まれています。</block>
+  <block id="2359613eeef582462b02e31edd2c83e1" category="paragraph-title">コンソール組織を確認してください</block>
+  <block id="43dc49af1a8157f71040baeb30324e66" category="inline-link-macro">Console 組織を検証する方法を確認する</block>
+  <block id="d1bdb7b91f1071f7a7fbbe9cc229a6cd" category="paragraph">デフォルトでは、Digital Advisorは、コンソール組織だけでなく、会社に関連付けられたすべてのNetAppアカウントを表示します。Digital Advisorで表示される内容を特定のアカウントに制限するには、コンソール組織で使用するビジネスアカウントを確認してください。<block ref="804fccc7ef3790a6c6eaa859500c3cdb" category="inline-link-macro-rx"></block></block>
+  <block id="397ee69a18e46b4765d0f43baecebbd0" category="summary">デフォルトでは、Digital Advisorには、コンソール組織だけでなく、会社に関連付けられているすべてのNetAppアカウントが表示されます。Digital Advisorに表示される内容を特定のアカウントに制限するには、コンソール組織で使用するビジネスアカウントを確認してください。</block>
+  <block id="f64284915c2f23896843250a06524f58" category="paragraph">組織を認証するには、組織管理者権限が必要です。ユーザーはNetApp Support Site（NSS）アカウントに関連付けられている必要があります。<block ref="6d5ad2096c24e0befb1e89a3a2137e15" category="inline-link-macro-rx"></block>。</block>
+  <block id="c8979336fc54afd4915c72626c1abdc0" category="admonition">会社にビジネスアカウントが1つしかなく、ユーザーがNetApp Support Siteアカウントに関連付けられている場合、コンソールは自動的に組織を確認します。</block>
+  <block id="6a22a47669484a4fac663dfd1d8c5cc1" category="list-text">ページタイトルの横にある * Verify * を選択します。</block>
+  <block id="71e0d11af7cdf3d188d279b78ad7e4e4" category="inline-image-macro">組織ページの「確認」ボタンがハイライト表示されているスクリーンショット。</block>
+  <block id="509fdee4d6d23c1e25c2b167682c87df" category="paragraph"><block ref="509fdee4d6d23c1e25c2b167682c87df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4b07d8c632f7928fdf0e60a617989db7" category="admonition">貴社がビジネスアカウントを1つしか持っていない場合、ページヘッダーの横のタグに*Verified*と表示され、特に何もする必要はありません。</block>
+  <block id="3d07160a1a5d13a62207154073e62d4b" category="list-text">*Associate business account*ダイアログで、ドロップダウンメニューからConsole組織に関連付けるビジネスアカウントを選択します。次に*Associate*を選択します。</block>
+  <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026年5月11日</block>
 </blocks>

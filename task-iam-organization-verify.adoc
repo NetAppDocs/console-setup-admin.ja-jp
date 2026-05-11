@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: task-iam-organization-verify.html 
+keywords: verify Console organization, associate business account, CMAT account, digital advisor, filtering, organization verification,, business account management, multi-account NetApp customers, organization governance, account ownership verification, resource visibility control 
+summary: デフォルトでは、Digital Advisorには、コンソール組織だけでなく、会社に関連付けられているすべてのNetAppアカウントが表示されます。Digital Advisorに表示される内容を特定のアカウントに制限するには、コンソール組織で使用するビジネスアカウントを確認してください。 
+---
+= NetApp Console 組織を確認します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+デフォルトでは、Digital Advisorには、コンソール組織だけでなく、会社に関連付けられているすべてのNetAppアカウントが表示されます。Digital Advisorに表示される内容を特定のアカウントに制限するには、コンソール組織で使用するビジネスアカウントを確認してください。
+
+
+
+== 開始する前に
+
+組織を認証するには、組織管理者権限が必要です。ユーザーはNetApp Support Site（NSS）アカウントに関連付けられている必要があります。link:task-adding-nss-accounts["NSS アカウントを関連付ける方法を確認します"]。
+
+
+NOTE: 会社にビジネスアカウントが1つしかなく、ユーザーがNetApp Support Siteアカウントに関連付けられている場合、コンソールは自動的に組織を確認します。
+
+
+
+== 組織を確認してください
+
+.手順
+. ユーザーが複数の組織にアクセスできる場合は、「組織」ドロップダウンメニューから検証する組織を選択してください。
+. *管理 > IDとアクセス*で確認できます。
+. *組織*を選択します。
+. ページタイトルの横にある * Verify * を選択します。
++
+image:screenshot-iam-verify-org.png["組織ページの「確認」ボタンがハイライト表示されているスクリーンショット。"]
+
++
+
+NOTE: 貴社がビジネスアカウントを1つしか持っていない場合、ページヘッダーの横のタグに*Verified*と表示され、特に何もする必要はありません。
+
+. *Associate business account*ダイアログで、ドロップダウンメニューからConsole組織に関連付けるビジネスアカウントを選択します。次に*Associate*を選択します。
+

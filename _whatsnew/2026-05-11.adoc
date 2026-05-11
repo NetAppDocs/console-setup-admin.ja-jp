@@ -1,0 +1,20 @@
+= Console エージェント 4.7.0
+:allow-uri-read: 
+
+
+
+
+=== Console エージェント 4.7.0
+
+4.7.0 リリースでは、標準モードと制限モードの両方がサポートされています。
+
+Console エージェントのこのリリースには、セキュリティの改善とバグ修正が含まれています。
+
+
+
+=== NetApp Console管理
+
+今回のリリースには、以下の新機能が含まれています。
+
+.コンソール組織を確認してください
+デフォルトでは、Digital Advisorは、コンソール組織だけでなく、会社に関連付けられたすべてのNetAppアカウントを表示します。Digital Advisorで表示される内容を特定のアカウントに制限するには、コンソール組織で使用するビジネスアカウントを確認してください。link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-organization-verify.html["Console 組織を検証する方法を確認する"^]
