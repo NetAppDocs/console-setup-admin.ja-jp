@@ -5244,7 +5244,6 @@
   <block id="1bad3fa525f7b2c60b554cc8a36a911c" category="list-text">cloudformation：ListStacks</block>
   <block id="a09b37992441a5c2061c0ef135b80024" category="section-title">2026年2月24日</block>
   <block id="51b31e1901c03d4b274f371dd730c779" category="paragraph">データ分類には次の権限が必要になりました：</block>
-  <block id="9ba1f0e426e643179b44f5146f795c55" category="cell">ユーザーがNetApp Data Classificationスキャン結果を表示できるようにします。このロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つリソースのレポートを生成できます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。Data Classificationには管理者ロールがありません。</block>
   <block id="9320804217d782369dccfe3cfe90fd29" category="inline-link">Data Classification ドキュメント</block>
   <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
   <block id="c19e034a7ae60fb90287c5050a076d5a" category="inline-link">Licenses and subscriptionsドキュメント</block>
@@ -6237,4 +6236,21 @@
   <block id="4b07d8c632f7928fdf0e60a617989db7" category="admonition">貴社がビジネスアカウントを1つしか持っていない場合、ページヘッダーの横のタグに*Verified*と表示され、特に何もする必要はありません。</block>
   <block id="3d07160a1a5d13a62207154073e62d4b" category="list-text">*Associate business account*ダイアログで、ドロップダウンメニューからConsole組織に関連付けるビジネスアカウントを選択します。次に*Associate*を選択します。</block>
   <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">2026年5月11日</block>
+  <block id="de30fd3780cc78f3815357af7be9582f" category="summary">NetApp Data Classificationは、アセットへの読み取りおよび書き込みアクセスを管理するための2つのロールをサポートしています。</block>
+  <block id="cfc16ea75f5fe37fc225466703a3e96a" category="doc">NetApp ConsoleのNetApp Data Classificationロール</block>
+  <block id="c7142c29e40d2d08c7f6837910052a0d" category="paragraph">NetApp Data Classificationは、アクセス管理ロールをサポートしており、組織内でユーザーが実行する必要があるタスクに特化したロールを柔軟に割り当てることができます。ロールの割り当て方法は、貴社のビジネス慣行およびストレージ管理方法によって異なります。</block>
+  <block id="cf045f1c49e0697a2bf307b157804096" category="paragraph">Data Classificationは、次の2つの役割をサポートします：</block>
+  <block id="cdbb30b6fb90f85be1fbc19b17c2c986" category="list-text">コンプライアンス管理者</block>
+  <block id="5308b341304a681aa5133cab92637fa3" category="paragraph">コンプライアンス管理者ロールは、組織レベルでのみ機能し、NetApp Data Classificationリソースへのアクセスを管理します。組織管理者よりも権限の低いユーザーの場合、NetApp Data Classificationをインストールするにはコンプライアンス管理者ロールが必要です。</block>
+  <block id="649d32860b6e76fc8dac7eb5040880b7" category="admonition">コンプライアンス管理者の役割は、単独の役割ではありません。コンプライアンス管理者ロールを持つユーザーは、少なくとも1つの<block ref="336c7f0741b180c58df89adadda6c36f" category="inline-link-macro-rx"></block>に関連付けられている必要があります。</block>
+  <block id="afb0c02ddaf124b42741f1794d2a3702" category="admonition">コンプライアンス管理者機能は、バージョン1.54でNetApp Data Classificationに追加されました。このリリースより前にNetApp Data Classificationを導入していて、組織管理者よりもアクセス権限の低いプラットフォームロールを付与していた場合、コンプライアンス管理者ロールは自動的にユーザーアカウントに関連付けられていました。</block>
+  <block id="f0f2ac698359c5e4834475e633063b01" category="paragraph">分類ビューアは、Data Classificationにおけるスキャン結果へのアクセスは必要だが、構成リソースへのアクセスは必要ないユーザー向けに設計されています。分類ビューアの役割を持つユーザーは、マッピングとフルスキャンの結果を表示して、ストレージ容量の節約や潜在的なデータリスクのある領域を評価できます。分類ビューアロールを持つユーザーは、アクセス権のあるリソースに関するレポートを生成することもできます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。</block>
+  <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="section-title">詳細情報</block>
+  <block id="4964a8f5f86e15358c2fc765883fe9b2" category="inline-link-macro">NetApp Data Classificationについて学ぶ</block>
+  <block id="5ced687e00d6efd9bda8689abae14e58" category="list-text"><block ref="5ced687e00d6efd9bda8689abae14e58" category="inline-link-macro-rx"></block></block>
+  <block id="ae8e202976179a823c177023962ba12a" category="cell"><block ref="ae8e202976179a823c177023962ba12a" category="inline-link-macro-rx"></block></block>
+  <block id="c1e616bcb4ff762399549fa457f2d29b" category="cell">NetApp Data Classificationのインストール、およびNetApp Data Classificationにおける組織レベルの権限の関連付けに必要です。</block>
+  <block id="47a46671c1a0773fed715c3799195b7f" category="cell"><block ref="47a46671c1a0773fed715c3799195b7f" category="inline-link-macro-rx"></block></block>
+  <block id="d1bd98b9d900098c018b826ca4e6bd65" category="cell">ユーザーがNetApp Data Classificationスキャン結果を表示できるようにします。このロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つリソースのレポートを生成できます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。</block>
+  <block id="eeeb9dcaeb66c431b51b12eff19105f3" category="sidebar">Data Classification ロール</block>
 </blocks>

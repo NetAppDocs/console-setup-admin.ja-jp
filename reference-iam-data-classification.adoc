@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-data-classification.html 
+keywords: role-based access control, IAM roles, access delegation, data classification, cloud data sense, compliance admin, classification viewer 
+summary: NetApp Data Classificationは、アセットへの読み取りおよび書き込みアクセスを管理するための2つのロールをサポートしています。 
+---
+= NetApp ConsoleのNetApp Data Classificationロール
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classificationは、アクセス管理ロールをサポートしており、組織内でユーザーが実行する必要があるタスクに特化したロールを柔軟に割り当てることができます。ロールの割り当て方法は、貴社のビジネス慣行およびストレージ管理方法によって異なります。
+
+Data Classificationは、次の2つの役割をサポートします：
+
+* コンプライアンス管理者
+* 分類ビューア
+
+
+
+
+== コンプライアンス管理者
+
+コンプライアンス管理者ロールは、組織レベルでのみ機能し、NetApp Data Classificationリソースへのアクセスを管理します。組織管理者よりも権限の低いユーザーの場合、NetApp Data Classificationをインストールするにはコンプライアンス管理者ロールが必要です。
+
+
+IMPORTANT: コンプライアンス管理者の役割は、単独の役割ではありません。コンプライアンス管理者ロールを持つユーザーは、少なくとも1つのlink:reference-iam-platform-roles.html["プラットフォームの役割"]に関連付けられている必要があります。
+
+
+NOTE: コンプライアンス管理者機能は、バージョン1.54でNetApp Data Classificationに追加されました。このリリースより前にNetApp Data Classificationを導入していて、組織管理者よりもアクセス権限の低いプラットフォームロールを付与していた場合、コンプライアンス管理者ロールは自動的にユーザーアカウントに関連付けられていました。
+
+
+
+== 分類ビューア
+
+分類ビューアは、Data Classificationにおけるスキャン結果へのアクセスは必要だが、構成リソースへのアクセスは必要ないユーザー向けに設計されています。分類ビューアの役割を持つユーザーは、マッピングとフルスキャンの結果を表示して、ストレージ容量の節約や潜在的なデータリスクのある領域を評価できます。分類ビューアロールを持つユーザーは、アクセス権のあるリソースに関するレポートを生成することもできます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。
+
+
+
+== 詳細情報
+
+* link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["NetApp Data Classificationについて学ぶ"^]
+
