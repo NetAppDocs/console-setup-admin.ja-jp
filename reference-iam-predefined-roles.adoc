@@ -73,6 +73,12 @@ NetApp Consoleの ID およびアクセス管理 (IAM) では、リソース階�
 | link:reference-iam-keystone-roles.html["Keystoneビューア"] | Keystoneビューア ロールを持つユーザーは、サービス リクエストを作成できません。ユーザーがアクセスしているKeystoneテナント内の消費量、資産、管理情報を監視および表示できるようにします。 
 
 
+| link:reference-iam-licenses-subscriptions.html["ライセンスおよびサブスクリプション管理者"] | ライセンスおよびサブスクリプション管理者ロールを持つユーザーは、NetApp Console および関連データサービスの直接ライセンスおよびマーケットプレイスサブスクリプションを作成、更新、削除できます。 
+
+
+| link:reference-iam-licenses-subscriptions.html["ライセンスとサブスクリプションビューア"] | ライセンスおよびサブスクリプション閲覧者ロールを持つユーザーは、NetApp コンソールおよび関連データサービスの直接ライセンスおよびマーケットプレイスサブスクリプションを表示できます。 
+
+
 | ONTAPメディエーターのセットアップロール | ONTAP Mediator セットアップ ロールを持つサービス アカウントは、サービス リクエストを作成できます。このロールは、サービスアカウントでインスタンスを構成するために必要です。link:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html["ONTAPクラウドメディエーター"^] 。 
 
 

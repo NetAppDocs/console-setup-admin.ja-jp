@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-licenses-subscriptions.html 
+keywords: licenses, subscriptions, digital wallet, operational governance, access delegation, rbac, IAM roles 
+summary: NetApp Licenses and Subscriptionsの役割を使用すると、ライセンスおよびサブスクリプション管理に必要なタスクを実行するために、NetApp Consoleでユーザーに異なる役割を割り当てることができます。 
+---
+= NetApp ConsoleのLicenses and subscriptionsロール
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp ConsoleでLicenses and subscriptionsを管理するには、ユーザーに適切な権限があることを確認する必要があります。Licenses and subscriptionsの管理は、Consoleでのサービスの効果的な導入と継続性を確保するために不可欠です。ロールの割り当て方法は、お客様のビジネスおよびストレージ管理の慣行によって異なります。
+
+Licenses and subscriptionsは以下の役割を使用します：
+
+* *Licenses and subscriptions管理者*
+* *Licenses and subscriptionsビューア*
+
+
+[cols="40,30,30"]
+|===
+| 機能 | ライセンスとサブスクリプションの管理者 | Licenses and subscriptionsビューア 
+
+
+| ライセンスを追加 | はい | いいえ 
+
+
+| ライセンスを表示 | はい | はい 
+
+
+| ライセンスの更新 | はい | いいえ 
+
+
+| サブスクリプションを追加 | はい | いいえ 
+
+
+| サブスクリプションを変更 | はい | いいえ 
+
+
+| サブスクリプションを表示 | はい | はい 
+
+
+| サブスクリプションを削除 | はい | いいえ 
+
+
+| ライセンスを削除 | はい | いいえ 
+|===

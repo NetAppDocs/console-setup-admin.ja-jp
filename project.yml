@@ -204,6 +204,8 @@ sidebar:
           entries:
           - title: Google Cloud NetApp Volumes のロール
             url: "/reference-iam-gcnv-roles.html"
+          - title: ライセンスとサブスクリプションの役割
+            url: "/reference-iam-licenses-subscriptions.html"
           - title: Keystoneの役割
             url: "/reference-iam-keystone-roles.html"
           - title: オペレーションサポートアナリスト
