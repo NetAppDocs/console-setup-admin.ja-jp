@@ -243,7 +243,7 @@ APIエンドポイント:: API呼び出しは次のエンドポイントに対�
 
 に行く https://console.netapp.com["NetApp Console"^]そしてサインアップしてください。
 
-+link:task-quick-start-standard-mode.html["標準モードの開始方法を学ぶ"]。
+link:task-quick-start-standard-mode.html["標準モードの開始方法を学ぶ"]。
 
 
 
@@ -255,7 +255,7 @@ APIエンドポイント:: API呼び出しは次のエンドポイントに対�
 
 使用する予定のデータ サービスと機能に応じて、Console組織管理者は、ハイブリッド クラウド環境内のデータを管理するための追加のConsoleエージェントを作成します。
 
-<<制限モード,NetApp Console APIへのアウトバウンド接続の詳細>>。
+link:task-install-restricted-mode.html["NetApp Console APIへのアウトバウンド接続の詳細"]。
 
 次の画像は、制限モードの展開の例です。
 

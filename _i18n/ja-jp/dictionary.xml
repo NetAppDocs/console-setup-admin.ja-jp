@@ -1539,7 +1539,6 @@
   <block id="1aff819a8dc16b341c309ebd6cc37f98" category="list-text">Google Cloud NetApp Volumes閲覧者</block>
   <block id="1b8af7dd682b66a57a953c80c4b1a22c" category="summary">NetApp ConsoleのID およびアクセス管理には、組織のメンバーに割り当てることができる定義済みのロールが含まれています。</block>
   <block id="5ed613d5969e54b01e0691f040afb027" category="doc">NetApp Consoleのアクセスロールについて学ぶ</block>
-  <block id="1fd5cc749e7150dcdba3870e8dddd968" category="paragraph">NetApp Consoleの ID およびアクセス管理 (IAM) では、リソース階層のさまざまなレベルにわたって組織のメンバーに割り当てることができる定義済みのロールが提供されます。これらのロールを割り当てる前に、各ロールに含まれる権限を理解しておく必要があります。ロールは、プラットフォーム、アプリケーション、データ サービスというカテゴリに分類されます。</block>
   <block id="cb9e27422b343274f9974efbc9c3dbc1" category="section-title">プラットフォームの役割</block>
   <block id="17dd3fc9247e5f8def4f8dd38ae667ff" category="paragraph">プラットフォーム ロールは、ロールの割り当てやユーザー管理などのNetApp Console管理権限を付与します。コンソールにはいくつかのプラットフォーム ロールがあります。</block>
   <block id="3aba2887bff41f744b43940b1b82080a" category="cell">プラットフォームの役割</block>
@@ -1569,8 +1568,6 @@
   <block id="5cc5248d8f5f2a5831a23c2c1c7ba338" category="cell">ONTAPメディエーターのセットアップロール</block>
   <block id="b3aa67ea8b077eb2b67ff9a0651b5426" category="inline-link-macro">ONTAPクラウドメディエーター</block>
   <block id="04799ba9193d1752205122631a125181" category="cell">ONTAP Mediator セットアップ ロールを持つサービス アカウントは、サービス リクエストを作成できます。このロールは、サービスアカウントでインスタンスを構成するために必要です。<block ref="a95914b5fa4d5193b1ebdf5a17356faa" category="inline-link-macro-rx"></block> 。</block>
-  <block id="0321c70517c9c78cf799c7075b2ab9de" category="inline-link-macro">オペレーションサポートアナリスト</block>
-  <block id="406a1f2f1940a9f2563b8c2e2ba639da" category="cell"><block ref="406a1f2f1940a9f2563b8c2e2ba639da" category="inline-link-macro-rx"></block></block>
   <block id="f6b9aba95e329090662ec51c688d6d77" category="cell">アラートおよび監視ツールへのアクセスと、サポートケースの入力および管理機能を提供します。</block>
   <block id="1a137246f35bc1bb21510edbe9caad21" category="cell"><block ref="1a137246f35bc1bb21510edbe9caad21" category="inline-link-macro-rx"></block></block>
   <block id="00887a306e7c01c69b56fa9f82030618" category="cell">ストレージの健全性とガバナンス機能を管理し、ストレージ リソースを検出し、既存のシステムを変更および削除します。</block>
@@ -5350,13 +5347,11 @@
   <block id="af6715a71d6494b4d95a731d8f2326c0" category="list-text">NetApp はエージェント ソフトウェアを毎月自動的にアップグレードします。</block>
   <block id="4d5d1212bd0be52b0f06612ab0868e2b" category="list-text">ユーザインターフェイスには、パブリックインターネット経由で利用できる Console SaaS アプリケーションからアクセスします。</block>
   <block id="5981099db8f6a5f0ede8f01d1c46b020" category="list-text">NetApp Consoleは、auth0またはNetApp Support Site（NSS）ログインによる認証を提供します。アイデンティティフェデレーションが利用可能です。</block>
-  <block id="f7edecd71600ffc14fed18b4fac58cb4" category="paragraph">+<block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block>。</block>
   <block id="18ce407df84b9b3b6a37f37949068013" category="section-title">NetApp Console（制限モード）（独自のパブリック クラウドにインストール）</block>
   <block id="1bab4d9f19f78d9293b2c57776f8b486" category="paragraph">コンソールエージェントをクラウド（政府、主権、または商業地域）にインストールし、NetApp Console API エンドポイント（SaaS アプリケーションでホスト）への限定的なアウトバウンド接続を持ちます。</block>
   <block id="8aba565c1287faf0e1ca4932525d434a" category="paragraph">ユーザは、SaaS アプリケーションではなく、Console エージェントによって提供されるローカル UI にアクセスします。</block>
   <block id="6db08dac0b67e028e51d8ac5e5a62432" category="paragraph">使用する予定のデータ サービスと機能に応じて、Console組織管理者は、ハイブリッド クラウド環境内のデータを管理するための追加のConsoleエージェントを作成します。</block>
   <block id="074dab9c82d3474cf642c9f99e7d5a26" category="inline-xref">NetApp Console APIへのアウトバウンド接続の詳細</block>
-  <block id="014c03d6e48ef20c47b3fd17154a6d54" category="paragraph"><block ref="a77e3fdf9a749a1e7ea79c8e4fb20767" category="inline-xref-macro-rx"></block>。</block>
   <block id="56899b78a8e10c53c1560d7de57c34e8" category="inline-image-macro">SaaSアプリケーションとauth0認証が利用可能なパブリックインターネット、エージェントが実行されてWebベースのコンソールへのアクセスを提供しているクラウド内の仮想ネットワーク、およびオンプレミスデータセンター内のCloud Volumes ONTAPとAFFクラスタを管理している様子を示す概念図。</block>
   <block id="785d30430f94fe799a20dd723658310c" category="paragraph"><block ref="785d30430f94fe799a20dd723658310c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d2a6f3b571c873d3d99d18749793c049" category="section-title">制限モードの NetApp Console でサポートされている機能とサービス</block>
@@ -6277,4 +6272,42 @@
   <block id="72917a7c676383ff6b788b1412017021" category="cell"><block ref="72917a7c676383ff6b788b1412017021" category="inline-link-macro-rx"></block></block>
   <block id="e2b838aa3390b536f83cc6ce3e1a2748" category="cell">ライセンスおよびサブスクリプション閲覧者ロールを持つユーザーは、NetApp コンソールおよび関連データサービスの直接ライセンスおよびマーケットプレイスサブスクリプションを表示できます。</block>
   <block id="5ec2925c394689c97be1228f67a49b85" category="sidebar">ライセンスとサブスクリプションの役割</block>
+  <block id="52599219f6b08bb2ce3fc85743943c5e" category="paragraph"><block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block>。</block>
+  <block id="2550db9aaa48d21b3c6e2051eb610223" category="paragraph"><block ref="7c12d9abb1f60d196a4cd5e699bed565" category="inline-link-macro-rx"></block>。</block>
+  <block id="ef4c9807306cc53f9292ed7a239eeaa7" category="paragraph">NetApp Console のアイデンティティとアクセス管理（IAM）には、組織内のリソース階層のさまざまなレベルのメンバーに割り当てることができる、事前定義された役割が用意されています。これらの役割を割り当てる前に、それぞれの役割に含まれる権限を理解しておく必要があります。役割は、プラットフォーム、アプリケーション、データサービスの3つのカテゴリに分類されます。これらの表には、APIを使用して役割の割り当てを管理する顧客向けに、各役割のAPI名も含まれています。</block>
+  <block id="81be82a027b82e849a37f5d6236fd170" category="paragraph">*API名は、APIで使用される役割識別子です。表示されているとおりに値を正確にコピーしてください（大文字と小文字、アンダースコアも含む）。</block>
+  <block id="17f15167b5660a249617ea94aa6d9d22" category="cell">API名*</block>
+  <block id="bf0d50e0ceb480c4356aa15afd8f46f2" category="cell">ORGANIZATION_ADMIN</block>
+  <block id="c57c74449515f098b0771d80be257585" category="cell">FOLDER_OR_PROJECT_ADMIN</block>
+  <block id="fd810da79c458f535206eb152d85f49a" category="cell">FEDERATION_ADMIN</block>
+  <block id="18f551f3ef804a123c4afd52f4b81cf2" category="cell">FEDERATION_VIEWER</block>
+  <block id="1009830b82a14f129f4e4fe247bfd3a9" category="cell">PARTNERSHIP_ADMIN</block>
+  <block id="41178155e278fcb0872000619462de8c" category="cell">PARTNERSHIP_VIEWER</block>
+  <block id="fb10f0238035c2b31076223dc45beea0" category="cell">SUPER_ADMIN</block>
+  <block id="6fab4e3d2b56faa8eb39ac7b6a1197c8" category="cell">SUPER_VIEWER</block>
+  <block id="7f46ae3923acb3e1c9a053c547677f98" category="cell">GCNV_ADMIN</block>
+  <block id="18bd19ad68d219d2a11aa468a1cc89fa" category="cell">GCNV_VIEWER</block>
+  <block id="70e312b7130aab755fc1b7285f3ce9a0" category="cell">KEYSTONE_ADMIN</block>
+  <block id="f566c3f80b38166af64295a26184a32f" category="cell">KEYSTONE_VIEWER</block>
+  <block id="6f80e1ba07524b620f9ac3ab70a9f846" category="cell">ONTAP_MEDIATOR_SETUP</block>
+  <block id="f4090d772571520ccc8fd7caa2042019" category="cell"><block ref="f4090d772571520ccc8fd7caa2042019" category="inline-link-macro-rx"></block></block>
+  <block id="3b846a37d0c85419e50ecd7c10c0ddba" category="cell">OPERATIONS_SUPPORT_ANALYST</block>
+  <block id="a06d75f2be53002fd7ecebe794bad111" category="cell">STORAGE_ADMIN</block>
+  <block id="fe37126842449c75ba0d4df263b08491" category="cell">STORAGE_VIEWER</block>
+  <block id="407be222835100079630428a5af78b74" category="cell">SYSTEM_HEALTH_SPECIALIST</block>
+  <block id="629e62d45e24564a18d793b49363d3a9" category="cell">BACKUP_SUPER_ADMIN</block>
+  <block id="5d54ab26b22a109b2881e9549f4378ef" category="cell">BACKUP_ADMIN</block>
+  <block id="034df2d2ba1de0d80e8c260c4530197f" category="cell">RESTORE_ADMIN</block>
+  <block id="b68963c2b53fa2c7991241f6f3e240e4" category="cell">CLONE_ADMIN</block>
+  <block id="da2d82be703db381b6dcd6391c0cc02b" category="cell">BACKUP_VIEWER</block>
+  <block id="ac686ff21b4074cf049db71604cb97af" category="cell">DISASTER_RECOVERY_ADMIN</block>
+  <block id="c76b372cec1939f6fb6d752bed882919" category="cell">DISASTER_RECOVERY_FAILOVER_ADMIN</block>
+  <block id="f1a38d3c8e34eeaf097c7789d2d074a9" category="cell">DISASTER_RECOVERY_APPLICATION_ADMIN</block>
+  <block id="dd1ad3d92ec6d3df74d3fceee4ebb1bd" category="cell">DISASTER_RECOVERY_VIEWER</block>
+  <block id="d3a63d7bea99ba9fb20d05753b51a65d" category="cell">CLASSIFICATION_VIEWER</block>
+  <block id="ebeadd2261cd842bc1fd55bdb9d73b1f" category="cell">RANSOMWARE_PROTECTION_ADMIN</block>
+  <block id="5712b685a85dbcca1d3a2c5b2e15bc46" category="cell">RANSOMWARE_PROTECTION_VIEWER</block>
+  <block id="3726f34b9bf1c6c6d98054942b244313" category="cell">RANSOMWARE_RESILIENCE_USER_BEHAVIOR_ADMIN</block>
+  <block id="91a470b0f7bf1c1702a23ad6d9d4159d" category="cell">RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER</block>
+  <block id="a67d722a1a98561bf88726ffcf6ecda7" category="cell">SNAPCENTER_ADMIN</block>
 </blocks>
