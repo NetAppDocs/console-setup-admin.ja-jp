@@ -3733,7 +3733,6 @@
   <block id="9677e2cfcf9bc5456798a21522590a93" category="paragraph">個々の通知を閉じるには、通知の上にカーソルを移動し、[閉じる] を選択します。</block>
   <block id="def7f3eac7eed1dada5cdcd2951ede36" category="section-title">メール通知設定を設定する</block>
   <block id="a6ca8d5aaf648abdbc2d400cc1275aed" category="paragraph">特定の種類の通知を電子メールで送信できるため、ログインしていないときでも重要なシステム アクティビティについて通知を受けることができます。電子メールは、組織またはアカウントに属するすべてのユーザー、または特定の種類のシステム アクティビティを認識する必要があるその他の受信者に送信できます。</block>
-  <block id="1989e58795a64829ac69121bb1b0c591" category="list-text">コンソールは、エージェント、ライセンスとサブスクリプション、 NetApp Copy and Sync、およびNetApp Backup and Recoveryに関する電子メール通知を送信します。</block>
   <block id="73e3e67a2ad49cc81c8aa84272ebe07c" category="list-text">コンソール エージェントがインターネットにアクセスできないサイトにインストールされている場合、電子メール通知の送信はサポートされません。</block>
   <block id="e879b7fea6cc39a26268d3c9029be021" category="paragraph">通知センターで設定したフィルターによって、電子メールで受信する通知の種類が決まるわけではありません。デフォルトでは、すべての組織管理者はすべての「重要」および「推奨事項」通知のメールを受信します。これらの通知はすべてのサービスに渡されるため、エージェントやNetApp Backup and Recoveryなどの特定のサービスについてのみ通知を受信するように選択することはできません。</block>
   <block id="7fcffcce675dad706dbf53d68f1f86f2" category="paragraph">他のすべてのユーザーと受信者は通知メールを受信しないように設定されているため、追加のユーザーに対して通知設定を構成する必要があります。</block>
@@ -6310,4 +6309,5 @@
   <block id="3726f34b9bf1c6c6d98054942b244313" category="cell">RANSOMWARE_RESILIENCE_USER_BEHAVIOR_ADMIN</block>
   <block id="91a470b0f7bf1c1702a23ad6d9d4159d" category="cell">RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER</block>
   <block id="a67d722a1a98561bf88726ffcf6ecda7" category="cell">SNAPCENTER_ADMIN</block>
+  <block id="6b0a56bcf40e8d005fd8e9e5b2559479" category="list-text">Consoleは、エージェント、ライセンスとサブスクリプション、NetApp Copy and Sync、NetApp Backup and Recovery、およびNetApp Ransomware Resilienceに関する電子メール通知を送信します。</block>
 </blocks>

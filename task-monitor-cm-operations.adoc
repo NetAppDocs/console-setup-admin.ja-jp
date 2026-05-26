@@ -142,7 +142,7 @@ image:screenshot_notification_filters.png["通知センターで使用できる 
 
 [NOTE]
 ====
-* コンソールは、エージェント、ライセンスとサブスクリプション、 NetApp Copy and Sync、およびNetApp Backup and Recoveryに関する電子メール通知を送信します。
+* Consoleは、エージェント、ライセンスとサブスクリプション、NetApp Copy and Sync、NetApp Backup and Recovery、およびNetApp Ransomware Resilienceに関する電子メール通知を送信します。
 * コンソール エージェントがインターネットにアクセスできないサイトにインストールされている場合、電子メール通知の送信はサポートされません。
 
 
