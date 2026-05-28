@@ -6020,10 +6020,6 @@
   <block id="04dfc56baea30e6c894320e91c84aa02" category="summary">NetApp Console IDとアクセス管理では、Google Cloud NetApp Volumesへのアクセスが必要な組織のメンバーに割り当てることができる管理者ロールを提供します。</block>
   <block id="c629aa034e9fdba04e68dcb224bc9576" category="paragraph">Google Cloud NetApp Volumes では、以下の役割が使用されます。</block>
   <block id="cff9a72837846d57cb2d651523721cc6" category="cell">コンソールからシステムを作成、変更、または削除します（システムの追加または検出）</block>
-  <block id="62d9c2659cf0ad00c633675f8170cede" category="cell">組織内のすべてのプロジェクトとフォルダへの無制限のアクセスをユーザーに許可します。明示的なロールが関連付けられていない任意のプロジェクトまたはフォルダにメンバーを追加したり、任意のタスクを実行したり、任意のデータ サービスを使用したりできます。このロールを持つユーザーは、適切なクレデンシャルがあれば、フォルダとプロジェクトの作成、ロールの割り当て、ユーザーの追加、システムの管理を行うことで組織を管理します。これは、NetApp Consoleエージェントを作成できる唯一のアクセス ロールです。</block>
-  <block id="11242816a2212aaec156e393f611d6a4" category="cell">ユーザーに閲覧者ロールのサブセットを付与します。このロールは、NetApp Consoleの責任を複数のユーザーに分散する必要がない小規模な組織向けに設計されています。</block>
-  <block id="b73b9bb1076e1557f19d367a133b14f9" category="cell">Backup and Recoveryでワークロードをリストアします。</block>
-  <block id="9bc794a51a7dec822701191ea93b64bd" category="cell">NetApp Backup and Recoveryでアプリケーションとデータをクローニングします。</block>
   <block id="84deda971835a8442abb48d0c88d2e97" category="paragraph">*ベースライン ロール*</block>
   <block id="7e47bfd1d8d1b989cf845ab6724b608b" category="paragraph">*ユーザー行動アクティビティの役割* <block ref="885ef4a0557ed3cd017b2efccb0c3de5" category="inline-link-macro-rx"></block> アラートは、ファイルアクティビティイベントなどのデータに関する可視性を提供します。これらのアラートには、ファイル名や、ユーザーが実行したファイル操作（読み取り、書き込み、削除、名前変更など）が含まれます。このデータの表示を制限するため、これらの役割を持つユーザーのみがこれらのアラートを管理または表示できます。</block>
   <block id="6f5db1c938d25fcc5e43ec9d050769ac" category="paragraph">ユーザー行動ロールは、既存のRansomware Resilience管理者または閲覧者権限を持ち、<block ref="dabde4cfb2462919536551734d022527" category="inline-link-macro-rx"></block>へのアクセスが必要なユーザーに付与する必要があります。例えば、Ransomware Resilience管理者ロールを持つユーザーは、ユーザーアクティビティエージェントの設定やユーザーのブロック/ブロック解除を行うために、Ransomware Resilienceユーザー行動管理者ロールも付与されるべきです。Ransomware Resilienceユーザー行動管理者ロールは、Ransomware Resilience閲覧者には付与しないでください。</block>
@@ -6170,51 +6166,13 @@
   <block id="ba56355010a4d2b7a9f84d9cd9154231" category="admonition">透過プロキシを設定したい場合は、インストール後に設定できます。<block ref="42ec89ae005e4bc718304f7a7f9af7dd" category="inline-link-macro-rx"></block>。</block>
   <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block>次のいずれかの形式を使用して、HTTPまたはHTTPSプロキシ サーバを使用するようにConsoleエージェントを設定します：</block>
   <block id="63e61b342d17ed1b9128b82afdcaa55e" category="list-text">コンソールエージェントは、@文字を含むユーザー名またはパスワードをサポートしていません。</block>
-  <block id="c67fc0b337f1a4a940497d14b954a64b" category="inline-link-macro">NetApp Consoleで認証された組織について学ぶ</block>
-  <block id="418740347c100d5f65ec6fdae40039ab" category="paragraph">組織を認証してNetAppビジネスアカウントIDとリンクし、NetAppシステム全体で一貫したガバナンスを実現することもできます。<block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block>。</block>
-  <block id="a0868ee8ba25b4a31561be0443ebf933" category="summary">認証された組織は、NetApp Console組織をNetAppビジネスアカウントにリンクすることで、システム間でIDとガバナンスの一貫性が保たれます。</block>
-  <block id="48cf25e26ffebb2bb495d369d230e558" category="paragraph">認証済み組織は、NetApp Console内のあなたの組織をNetAppビジネスアカウントの識別情報（例：CMAT ID）にリンクします。これにより、Consoleは一貫した組織アイデンティティとガバナンスモデルをNetAppシステム全体に適用できます。</block>
-  <block id="30a203cb96c50fefbc17611dc5c228ac" category="section-title">組織を認証する理由</block>
-  <block id="5895e55252be33d4a8c0a3f2fed70ae9" category="paragraph">組織の認証を行うことで、以下のことが可能になります：</block>
-  <block id="619827fbf7b134d07776d964ca418ef2" category="list-text">コンソール組織をNetAppビジネスアカウントIDに合わせます。</block>
-  <block id="ea4a402c177478c80f1fd6987232b900" category="list-text">管理、レポート、およびサポートのワークフローの一貫性を向上させる。</block>
-  <block id="bbe78e0920e9bb47f8f85fdccf397e62" category="list-text">複数のNetAppサービスにわたってチームが作業する際の曖昧さを軽減します。</block>
-  <block id="f1883c3d9fd07e5c6274f9c0f795b6c5" category="list-text">信頼できる組織IDに依存するガバナンス制御をサポートします。</block>
-  <block id="62a9515152e6d7ec6e3c394287acb594" category="section-title">検証後の変更点</block>
-  <block id="7c11a53e44d8f76aeb151f87a95cd80b" category="paragraph">組織の認証後：</block>
-  <block id="cb56792a5e15f62a1f62723585cad786" category="list-text">この組織はNetAppビジネスアカウントのIDに関連付けられています。</block>
-  <block id="cab3888d6123cd3a318da7afcbce12bd" category="list-text">NetApp Consoleは、その組織IDをビジネスレベルのマッピングにおける信頼できる情報として扱うことができます。</block>
-  <block id="bdde811059b4457d759f661bfe34084d" category="list-text">ソースシステムによって管理されている組織プロファイルの変更は、NetApp Consoleでは制限される場合があります。</block>
-  <block id="192e00466c0b488c77c731b828ab5e1e" category="section-title">確認する前に</block>
-  <block id="31862d7570d9062614fe4d5b544b3059" category="paragraph">組織の認証を行う前に、以下の点を確認してください：</block>
-  <block id="4eee70687da5ea2684317c0660041669" category="list-text">組織に必要な管理者ロールがあります。</block>
-  <block id="4a1b2fdd5fd46224c3cab8b448abdaf7" category="list-text">確認に必要な組織情報は揃っています。</block>
-  <block id="073b3141ff007e2e7c9e7770dbb5c013" category="list-text">ビジネス アカウント マッピングの検証が必要な場合は、NetApp アカウント チームと調整済みです。</block>
   <block id="ff79cbea9f2efa42d53fff27506cf26d" category="inline-link-macro">組織を確認してください</block>
-  <block id="cd61b05fa0ea90bca24f6c4068c70af2" category="list-text"><block ref="cd61b05fa0ea90bca24f6c4068c70af2" category="inline-link-macro-rx"></block></block>
-  <block id="a813b69ac531b0701ca879b788271f1d" category="list-text"><block ref="a813b69ac531b0701ca879b788271f1d" category="inline-link-macro-rx"></block></block>
   <block id="0ad3148d437ad1c27c46470f823dd1b5" category="paragraph">\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （制限付きモードでの展開に必要）</block>
-  <block id="10c97f048a09dcded54f8b476a81ea96" category="inline-link-macro">組織を確認する方法を学ぶ</block>
-  <block id="f56da6e3ae650bf113d86ed1707a0cd5" category="paragraph">このドメイン検証ワークフローは、組織検証とは異なります。<block ref="72ae1679f86197db823e7993d8e7864f" category="inline-link-macro-rx"></block>。</block>
-  <block id="35ea601a80ea7b092eea5094e5acf0bf" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 組織の認証（任意）</block>
-  <block id="1c5b44eb32f9d12f80011dc0daf0c723" category="paragraph">チームで組織認証を使用している場合は、Console組織をNetAppビジネスアカウントのIDにリンクしてください。</block>
-  <block id="f628652f1454cbcdff49a07bde8f26d6" category="paragraph"><block ref="72ae1679f86197db823e7993d8e7864f" category="inline-link-macro-rx"></block>。</block>
-  <block id="92388bda5755f2ce99ab8ec4678c3808" category="list-text"><block ref="92388bda5755f2ce99ab8ec4678c3808" category="inline-link-macro-rx"></block></block>
   <block id="3d48cd486159d7ff770d2ac9604cb64a" category="paragraph">NetApp Console組織には名前とIDがあります。組織を識別しやすくするために、組織の名前を選択できます。API呼び出しに使用する組織IDを知っておく必要がある場合もあります。</block>
   <block id="155e00b589db80072de70532ce7a50ce" category="doc">NetApp Console 組織を確認します</block>
   <block id="7934ae571b929618df901b492ff84198" category="inline-link-macro">NSS アカウントを関連付ける方法を確認します</block>
   <block id="7a1bd24cabea42f3fe04b753aec5d8ba" category="list-text">ユーザーが複数の組織にアクセスできる場合は、「組織」ドロップダウンメニューから検証する組織を選択してください。</block>
   <block id="01b73db22fadaa534984d5a80ed20a2e" category="list-text">*管理 &gt; IDとアクセス*で確認できます。</block>
-  <block id="10296e23827c1a60c2f8d75482c4a075" category="summary">NetApp Console組織をNetAppビジネスアカウントIDにリンクするには、組織を認証します。</block>
-  <block id="80333c8b0e0d35357d14ab44c8c5f4f9" category="doc">NetApp Console で組織を確認</block>
-  <block id="43c3b1d18eaf47add23da2905752381b" category="paragraph">組織を確認すると、Console組織がNetAppビジネスアカウントIDとリンクされます。これにより、Digital AdvisorやAIQの推奨事項などの機能を使用できます。</block>
-  <block id="0a2f38a239e81a08f5b837f81513a9bc" category="paragraph">組織管理者またはスーパー管理者。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
-  <block id="45c6d1bd46ddc19876bfc91687471ea2" category="paragraph">貴社がNetAppで複数のビジネスアカウントをお持ちの場合は、組織を確認し、正しいビジネスアカウントに関連付ける必要があります。貴社がNetAppでビジネスアカウントを1つしかお持ちでない場合は、組織は自動的に検証され、そのビジネスアカウントにリンクされます。</block>
-  <block id="c6a431b7786ec48067cfa83374b99c0a" category="paragraph">Console組織がビジネスアカウントに関連付けられている場合、Digital Advisorにはそのアカウントに関連付けられているリソースのみが表示されます。複数のビジネスアカウントをお持ちの場合は、Console組織に関連付けるアカウントを1つ選択する必要があります。関連付けを変更する必要がある場合は、組織を再度確認し、別のビジネスアカウントを選択してください。</block>
-  <block id="8d6d948cdc13e069b613284450d2961f" category="list-text">*組織*ページで、ページタイトルの横にある*確認*を選択します。</block>
-  <block id="36cb56591d62e53ed37d02c1e0cf2a57" category="inline-image-macro">組織ページのスクリーンショット。ページタイトルの横に「確認」ボタンが表示されています。</block>
-  <block id="0bddf0553f7265d90da078ccd7865d6a" category="paragraph"><block ref="0bddf0553f7265d90da078ccd7865d6a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="812c2b994db82152161eb7a216b75550" category="list-text">*Associate business account* ダイアログから、組織に関連付けるビジネスアカウントを選択します。</block>
   <block id="e337542e72a609caf56b5e5fdf59c9ff" category="doc">Console エージェント 4.7.0</block>
   <block id="99c4637fed7022fa029be07f2fddc9af" category="paragraph">4.7.0 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
   <block id="c36716f3e716cc1af0c491f3d55d650b" category="paragraph">今回のリリースには、以下の新機能が含まれています。</block>
@@ -6242,10 +6200,6 @@
   <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="section-title">詳細情報</block>
   <block id="4964a8f5f86e15358c2fc765883fe9b2" category="inline-link-macro">NetApp Data Classificationについて学ぶ</block>
   <block id="5ced687e00d6efd9bda8689abae14e58" category="list-text"><block ref="5ced687e00d6efd9bda8689abae14e58" category="inline-link-macro-rx"></block></block>
-  <block id="ae8e202976179a823c177023962ba12a" category="cell"><block ref="ae8e202976179a823c177023962ba12a" category="inline-link-macro-rx"></block></block>
-  <block id="c1e616bcb4ff762399549fa457f2d29b" category="cell">NetApp Data Classificationのインストール、およびNetApp Data Classificationにおける組織レベルの権限の関連付けに必要です。</block>
-  <block id="47a46671c1a0773fed715c3799195b7f" category="cell"><block ref="47a46671c1a0773fed715c3799195b7f" category="inline-link-macro-rx"></block></block>
-  <block id="d1bd98b9d900098c018b826ca4e6bd65" category="cell">ユーザーがNetApp Data Classificationスキャン結果を表示できるようにします。このロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つリソースのレポートを生成できます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。</block>
   <block id="eeeb9dcaeb66c431b51b12eff19105f3" category="sidebar">Data Classification ロール</block>
   <block id="f879dc19b8d807f7185039a4bd14f8f8" category="summary">NetApp Licenses and Subscriptionsの役割を使用すると、ライセンスおよびサブスクリプション管理に必要なタスクを実行するために、NetApp Consoleでユーザーに異なる役割を割り当てることができます。</block>
   <block id="6f147a6113c5afec8776bf72f44f87d5" category="doc">NetApp ConsoleのLicenses and subscriptionsロール</block>
@@ -6264,17 +6218,10 @@
   <block id="e1e396fcbcea3e57f0efa53c64e39e2e" category="cell">サブスクリプションを表示</block>
   <block id="9ffbfdd088029bc08ac68a7e8204d3d0" category="cell">サブスクリプションを削除</block>
   <block id="f06ea6495b1fd2d6a469a12a5dc9f68b" category="cell">ライセンスを削除</block>
-  <block id="cdc482262618604a335f0c4343ec2ea8" category="inline-link-macro">ライセンスおよびサブスクリプション管理者</block>
-  <block id="0d89f22c7458cba55f94b24b9c15e6d0" category="cell"><block ref="0d89f22c7458cba55f94b24b9c15e6d0" category="inline-link-macro-rx"></block></block>
-  <block id="a40769dfb91b2027074e15e64eff6c7c" category="cell">ライセンスおよびサブスクリプション管理者ロールを持つユーザーは、NetApp Console および関連データサービスの直接ライセンスおよびマーケットプレイスサブスクリプションを作成、更新、削除できます。</block>
-  <block id="bbbb1967c36266ce01e7c3f89d283ee5" category="inline-link-macro">ライセンスとサブスクリプションビューア</block>
-  <block id="72917a7c676383ff6b788b1412017021" category="cell"><block ref="72917a7c676383ff6b788b1412017021" category="inline-link-macro-rx"></block></block>
-  <block id="e2b838aa3390b536f83cc6ce3e1a2748" category="cell">ライセンスおよびサブスクリプション閲覧者ロールを持つユーザーは、NetApp コンソールおよび関連データサービスの直接ライセンスおよびマーケットプレイスサブスクリプションを表示できます。</block>
   <block id="5ec2925c394689c97be1228f67a49b85" category="sidebar">ライセンスとサブスクリプションの役割</block>
   <block id="52599219f6b08bb2ce3fc85743943c5e" category="paragraph"><block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block>。</block>
   <block id="2550db9aaa48d21b3c6e2051eb610223" category="paragraph"><block ref="7c12d9abb1f60d196a4cd5e699bed565" category="inline-link-macro-rx"></block>。</block>
   <block id="ef4c9807306cc53f9292ed7a239eeaa7" category="paragraph">NetApp Console のアイデンティティとアクセス管理（IAM）には、組織内のリソース階層のさまざまなレベルのメンバーに割り当てることができる、事前定義された役割が用意されています。これらの役割を割り当てる前に、それぞれの役割に含まれる権限を理解しておく必要があります。役割は、プラットフォーム、アプリケーション、データサービスの3つのカテゴリに分類されます。これらの表には、APIを使用して役割の割り当てを管理する顧客向けに、各役割のAPI名も含まれています。</block>
-  <block id="81be82a027b82e849a37f5d6236fd170" category="paragraph">*API名は、APIで使用される役割識別子です。表示されているとおりに値を正確にコピーしてください（大文字と小文字、アンダースコアも含む）。</block>
   <block id="17f15167b5660a249617ea94aa6d9d22" category="cell">API名*</block>
   <block id="bf0d50e0ceb480c4356aa15afd8f46f2" category="cell">ORGANIZATION_ADMIN</block>
   <block id="c57c74449515f098b0771d80be257585" category="cell">FOLDER_OR_PROJECT_ADMIN</block>
@@ -6289,7 +6236,6 @@
   <block id="70e312b7130aab755fc1b7285f3ce9a0" category="cell">KEYSTONE_ADMIN</block>
   <block id="f566c3f80b38166af64295a26184a32f" category="cell">KEYSTONE_VIEWER</block>
   <block id="6f80e1ba07524b620f9ac3ab70a9f846" category="cell">ONTAP_MEDIATOR_SETUP</block>
-  <block id="f4090d772571520ccc8fd7caa2042019" category="cell"><block ref="f4090d772571520ccc8fd7caa2042019" category="inline-link-macro-rx"></block></block>
   <block id="3b846a37d0c85419e50ecd7c10c0ddba" category="cell">OPERATIONS_SUPPORT_ANALYST</block>
   <block id="a06d75f2be53002fd7ecebe794bad111" category="cell">STORAGE_ADMIN</block>
   <block id="fe37126842449c75ba0d4df263b08491" category="cell">STORAGE_VIEWER</block>
@@ -6310,4 +6256,21 @@
   <block id="91a470b0f7bf1c1702a23ad6d9d4159d" category="cell">RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER</block>
   <block id="a67d722a1a98561bf88726ffcf6ecda7" category="cell">SNAPCENTER_ADMIN</block>
   <block id="6b0a56bcf40e8d005fd8e9e5b2559479" category="list-text">Consoleは、エージェント、ライセンスとサブスクリプション、NetApp Copy and Sync、NetApp Backup and Recovery、およびNetApp Ransomware Resilienceに関する電子メール通知を送信します。</block>
+  <block id="9ac912c60697a1237d12bdfad1ed975f" category="cell">Keystoneサブスクリプションアクセス</block>
+  <block id="6d2986515ca8666b77fb12051944388d" category="cell">API名* *API名は、APIで使用される役割識別子です。表示されているとおりに値を正確にコピーしてください（大文字と小文字、アンダースコアも含む）。</block>
+  <block id="bfb78ce9833860669efdf093e894f0d5" category="cell">モードの可用性</block>
+  <block id="73e5d1355567cd0f538ddabf3cf26be3" category="cell">標準、制限付き、プライベート</block>
+  <block id="f2ad52479c9d7a5dc51ed3f3ab03e45a" category="cell">組織内のすべてのプロジェクトとフォルダへの無制限のアクセス、任意のプロジェクトまたはフォルダへのメンバーの追加、明示的なロールが関連付けられていないタスクの実行、およびデータサービスの使用をユーザに許可します。このロールを持つユーザは、適切なクレデンシャルがあれば、フォルダやプロジェクトの作成、ロールの割り当て、ユーザの追加、システムの管理などによって組織を管理します。これは、Consoleエージェントを作成できる唯一のアクセスロールです。</block>
+  <block id="331dfa1e0a93d1ecb14265311c06848f" category="cell">標準、制限付き</block>
+  <block id="0c59885a322273fa1fb3ebe78010c852" category="cell">ユーザーに閲覧者ロールのサブセットを付与します。この役割は、Console関連の責任を複数のユーザーに分散させる必要がない小規模な組織向けに設計されています。</block>
+  <block id="370187cecb3fe8ea0ece4a9d95fb222e" category="cell">割り当てられた階層レベルの範囲内にある組織レベルの情報およびリソースに対する読み取り専用の可視性をユーザーに付与します。</block>
+  <block id="eb6d8ae6f20283755b339c0dc273988b" category="cell">Standard</block>
+  <block id="0321c70517c9c78cf799c7075b2ab9de" category="inline-link-macro">オペレーションサポートアナリスト</block>
+  <block id="406a1f2f1940a9f2563b8c2e2ba639da" category="cell"><block ref="406a1f2f1940a9f2563b8c2e2ba639da" category="inline-link-macro-rx"></block></block>
+  <block id="55a6c46602496366e85545482ddb9ca2" category="cell">バックアップとリカバリでワークロードを復元します。</block>
+  <block id="65af4793a6fa01700ec78442d5b2626f" category="cell">バックアップとリカバリでアプリケーションとデータをクローニングします。</block>
+  <block id="9ba1f0e426e643179b44f5146f795c55" category="cell">ユーザーがNetApp Data Classificationスキャン結果を表示できるようにします。このロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つリソースのレポートを生成できます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。Data Classificationには管理者ロールがありません。</block>
+  <block id="19ba82eae8f218642333800aab8dc1c9" category="cell">標準、プライベート</block>
+  <block id="31c8c9293a24d211fe8df6780c3b5864" category="list-text">ユーザーまたはサービスアカウントにロールを割り当てる際は、サポートされているロールの中から選択できます。</block>
+  <block id="b4c25e4423bb6dcb1445deb7b10e93fb" category="paragraph">ドロップダウンリストには、サポートされているロールのみが表示されます。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
 </blocks>

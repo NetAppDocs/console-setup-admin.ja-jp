@@ -125,16 +125,19 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 | Google Cloud Storage | はい 
 
 
+| Keystoneサブスクリプションアクセス | はい 
+
+
 | オンプレミスのONTAPクラスタ | 検出と管理に必要です。Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。 
 
 
 | StorageGRID | はい 
 
 
-| ワークロード | いいえ 
+| ワークロード | いいえ .8+| *データサービス* 
 
 
-.8+| *データサービス* | NetApp Backup and Recovery | はい 
+| NetApp Backup and Recovery | はい 
 
 
 | NetApp 分類 | はい 
@@ -155,10 +158,10 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 | NetApp Cloud Tiering | はい 
 
 
-| NetApp Volume Caching | はい 
+| NetApp Volume Caching | はい .5+| *NetApp サポート契約の特徴* 
 
 
-.5+| *NetApp サポート契約の特徴* | デジタルアドバイザー | はい 
+| デジタルアドバイザー | はい 
 
 
 | 経済効率 | はい 
@@ -170,10 +173,10 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 | ソフトウェアアップデート | いいえ 
 
 
-| 持続可能性 | はい 
+| 持続可能性 | はい .12+| *管理機能* 
 
 
-.12+| *管理機能* | 監査 | いいえ 
+| 監査 | いいえ 
 
 
 | 自動化ハブ | いいえ 

@@ -59,15 +59,7 @@ link:task-iam-manage-members-permissions.html["メンバーとその権限を管
 * link:task-iam-associate-agents.html["コンソールエージェントをフォルダまたはプロジェクトに関連付ける方法を学びます"] 。
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 組織の認証（任意）
-[role="quick-margin-para"]
-チームで組織認証を使用している場合は、Console組織をNetAppビジネスアカウントのIDにリンクしてください。
-
-[role="quick-margin-para"]
-link:task-verify-organization.html["組織を確認する方法を学ぶ"]。
-
 .関連情報
 * link:concept-identity-and-access-management.html["NetApp Consoleのアイデンティティとアクセス管理について学ぶ"]
-* link:concept-verified-organization.html["NetApp Consoleで認証された組織について学ぶ"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["IDとアクセスのためのAPIについて学ぶ"^]
 

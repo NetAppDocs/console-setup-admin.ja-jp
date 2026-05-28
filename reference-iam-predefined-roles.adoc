@@ -22,35 +22,36 @@ NetApp Console のアイデンティティとアクセス管理（IAM）には�
 
 プラットフォーム ロールは、ロールの割り当てやユーザー管理などのNetApp Console管理権限を付与します。コンソールにはいくつかのプラットフォーム ロールがあります。
 
-*API名は、APIで使用される役割識別子です。表示されているとおりに値を正確にコピーしてください（大文字と小文字、アンダースコアも含む）。
-
-[cols="1,2,3"]
+[cols="1,1,1,2"]
 |===
-| プラットフォームの役割 | API名* | 責任 
+| プラットフォームの役割 | API名* *API名は、APIで使用される役割識別子です。表示されているとおりに値を正確にコピーしてください（大文字と小文字、アンダースコアも含む）。 | モードの可用性 | 責任 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["組織管理者"] | ORGANIZATION_ADMIN | 組織内のすべてのプロジェクトとフォルダへの無制限のアクセスをユーザーに許可します。明示的なロールが関連付けられていない任意のプロジェクトまたはフォルダにメンバーを追加したり、任意のタスクを実行したり、任意のデータ サービスを使用したりできます。このロールを持つユーザーは、適切なクレデンシャルがあれば、フォルダとプロジェクトの作成、ロールの割り当て、ユーザーの追加、システムの管理を行うことで組織を管理します。これは、NetApp Consoleエージェントを作成できる唯一のアクセス ロールです。 
+| link:reference-iam-platform-roles.html#organization-admin-roles["組織管理者"] | ORGANIZATION_ADMIN | 標準、制限付き、プライベート | 組織内のすべてのプロジェクトとフォルダへの無制限のアクセス、任意のプロジェクトまたはフォルダへのメンバーの追加、明示的なロールが関連付けられていないタスクの実行、およびデータサービスの使用をユーザに許可します。このロールを持つユーザは、適切なクレデンシャルがあれば、フォルダやプロジェクトの作成、ロールの割り当て、ユーザの追加、システムの管理などによって組織を管理します。これは、Consoleエージェントを作成できる唯一のアクセスロールです。 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["フォルダまたはプロジェクトの管理者"] | FOLDER_OR_PROJECT_ADMIN | 割り当てられたプロジェクトとフォルダーへのユーザーの無制限アクセスを許可します。管理するフォルダーまたはプロジェクトにメンバーを追加できるほか、割り当てられたフォルダーまたはプロジェクト内のリソースに対して任意のタスクを実行したり、任意のデータ サービスやアプリケーションを使用したりすることもできます。フォルダーまたはプロジェクト管理者はコンソール エージェントを作成できません。 
+| link:reference-iam-platform-roles.html#organization-admin-roles["フォルダまたはプロジェクトの管理者"] | FOLDER_OR_PROJECT_ADMIN | 標準、制限付き、プライベート | 割り当てられたプロジェクトとフォルダーへのユーザーの無制限アクセスを許可します。管理するフォルダーまたはプロジェクトにメンバーを追加できるほか、割り当てられたフォルダーまたはプロジェクト内のリソースに対して任意のタスクを実行したり、任意のデータ サービスやアプリケーションを使用したりすることもできます。フォルダーまたはプロジェクト管理者はコンソール エージェントを作成できません。 
 
 
-| link:reference-iam-platform-roles.html#federation-roles["連盟管理者"] | FEDERATION_ADMIN | ユーザーがコンソールを使用してフェデレーションを作成および管理し、シングル サインオン (SSO) を有効にすることを許可します。 
+| link:reference-iam-platform-roles.html#federation-roles["連盟管理者"] | FEDERATION_ADMIN | 標準、制限付き | ユーザーがコンソールを使用してフェデレーションを作成および管理し、シングル サインオン (SSO) を有効にすることを許可します。 
 
 
-| link:reference-iam-platform-roles.html#federation-roles["連盟ビューア"] | FEDERATION_VIEWER | ユーザーがコンソールを使用して既存のフェデレーションを表示できるようにします。フェデレーションを作成または管理できません。 
+| link:reference-iam-platform-roles.html#federation-roles["連盟ビューア"] | FEDERATION_VIEWER | 標準、制限付き | ユーザーがコンソールを使用して既存のフェデレーションを表示できるようにします。フェデレーションを作成または管理できません。 
 
 
-| link:reference-iam-platform-roles.html#partnership-roles["パートナーシップ管理者"] | PARTNERSHIP_ADMIN | ユーザーがパートナーシップを作成および管理できるようにします。 
+| link:reference-iam-platform-roles.html#partnership-roles["パートナーシップ管理者"] | PARTNERSHIP_ADMIN | 標準、制限付き | ユーザーがパートナーシップを作成および管理できるようにします。 
 
 
-| link:reference-iam-platform-roles.html#partnership-roles["パートナーシップビューアー"] | PARTNERSHIP_VIEWER | ユーザーが既存のパートナーシップを表示できるようにします。パートナーシップを作成または管理することはできません。 
+| link:reference-iam-platform-roles.html#partnership-roles["パートナーシップビューアー"] | PARTNERSHIP_VIEWER | 標準、制限付き | ユーザーが既存のパートナーシップを表示できるようにします。パートナーシップを作成または管理することはできません。 
 
 
-| link:reference-iam-platform-roles.html#super-admin-roles["スーパー管理者"] | SUPER_ADMIN | ユーザーに管理者ロールのサブセットを付与します。この役割は、コンソールの責任を複数のユーザーに分散する必要がない小規模な組織向けに設計されています。 
+| link:reference-iam-platform-roles.html#super-admin-roles["スーパー管理者"] | SUPER_ADMIN | 標準、制限付き、プライベート | ユーザーに管理者ロールのサブセットを付与します。この役割は、コンソールの責任を複数のユーザーに分散する必要がない小規模な組織向けに設計されています。 
 
 
-| link:reference-iam-platform-roles.html#super-admin-roles["スーパービューアー"] | SUPER_VIEWER | ユーザーに閲覧者ロールのサブセットを付与します。このロールは、NetApp Consoleの責任を複数のユーザーに分散する必要がない小規模な組織向けに設計されています。 
+| link:reference-iam-platform-roles.html#super-admin-roles["スーパービューアー"] | SUPER_VIEWER | 標準、制限付き、プライベート | ユーザーに閲覧者ロールのサブセットを付与します。この役割は、Console関連の責任を複数のユーザーに分散させる必要がない小規模な組織向けに設計されています。 
+
+
+| 組織閲覧者 |  | 標準、制限付き、プライベート | 割り当てられた階層レベルの範囲内にある組織レベルの情報およびリソースに対する読み取り専用の可視性をユーザーに付与します。 
 |===
 
 
@@ -58,42 +59,36 @@ NetApp Console のアイデンティティとアクセス管理（IAM）には�
 
 以下は、アプリケーション カテゴリ内のロールの一覧です。各ロールは、指定された範囲内で特定の権限を付与します。必要なアプリケーションまたはプラットフォームのロールを持たないユーザーは、それぞれのアプリケーションにアクセスできません。
 
-[cols="1,2,3"]
+[cols="1,1,1,2"]
 |===
-| アプリケーションロール | API名* | 責任 
+| アプリケーションロール | API名* | モードの可用性 | 責任 
 
 
-| link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes管理者"] | GCNV_ADMIN | Google Cloud NetApp Volumesロールを持つユーザーは、Google Cloud NetApp Volumes を検出して管理できます。 
+| link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes管理者"] | GCNV_ADMIN | Standard | Google Cloud NetApp Volumesロールを持つユーザーは、Google Cloud NetApp Volumes を検出して管理できます。 
 
 
-| link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes閲覧者"] | GCNV_VIEWER | Google Cloud NetApp Volumesユーザーロールを持つユーザーは、 Google Cloud NetApp Volumes を表示できます。 
+| link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes閲覧者"] | GCNV_VIEWER | Standard | Google Cloud NetApp Volumesユーザーロールを持つユーザーは、 Google Cloud NetApp Volumes を表示できます。 
 
 
-| link:reference-iam-keystone-roles.html["Keystone管理者"] | KEYSTONE_ADMIN | Keystone管理者ロールを持つユーザーは、サービス リクエストを作成できます。ユーザーがアクセスしているKeystoneテナント内の使用状況、リソース、および管理の詳細を監視および表示できるようにします。 
+| link:reference-iam-keystone-roles.html["Keystone管理者"] | KEYSTONE_ADMIN | Standard | Keystone管理者ロールを持つユーザーは、サービス リクエストを作成できます。ユーザーがアクセスしているKeystoneテナント内の使用状況、リソース、および管理の詳細を監視および表示できるようにします。 
 
 
-| link:reference-iam-keystone-roles.html["Keystoneビューア"] | KEYSTONE_VIEWER | Keystoneビューア ロールを持つユーザーは、サービス リクエストを作成できません。ユーザーがアクセスしているKeystoneテナント内の消費量、資産、管理情報を監視および表示できるようにします。 
+| link:reference-iam-keystone-roles.html["Keystoneビューア"] | KEYSTONE_VIEWER | Standard | Keystoneビューア ロールを持つユーザーは、サービス リクエストを作成できません。ユーザーがアクセスしているKeystoneテナント内の消費量、資産、管理情報を監視および表示できるようにします。 
 
 
-| link:reference-iam-licenses-subscriptions.html["ライセンスおよびサブスクリプション管理者"] |  | ライセンスおよびサブスクリプション管理者ロールを持つユーザーは、NetApp Console および関連データサービスの直接ライセンスおよびマーケットプレイスサブスクリプションを作成、更新、削除できます。 
+| ONTAPメディエーターのセットアップロール | ONTAP_MEDIATOR_SETUP | Standard | ONTAP Mediator セットアップ ロールを持つサービス アカウントは、サービス リクエストを作成できます。このロールは、サービスアカウントでインスタンスを構成するために必要です。link:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html["ONTAPクラウドメディエーター"^] 。 
 
 
-| link:reference-iam-licenses-subscriptions.html["ライセンスとサブスクリプションビューア"] |  | ライセンスおよびサブスクリプション閲覧者ロールを持つユーザーは、NetApp コンソールおよび関連データサービスの直接ライセンスおよびマーケットプレイスサブスクリプションを表示できます。 
+| link:reference-iam-analyst-roles.html["オペレーションサポートアナリスト"] | OPERATIONS_SUPPORT_ANALYST | 標準、制限付き、プライベート | アラートおよび監視ツールへのアクセスと、サポートケースの入力および管理機能を提供します。 
 
 
-| ONTAPメディエーターのセットアップロール | ONTAP_MEDIATOR_SETUP | ONTAP Mediator セットアップ ロールを持つサービス アカウントは、サービス リクエストを作成できます。このロールは、サービスアカウントでインスタンスを構成するために必要です。link:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html["ONTAPクラウドメディエーター"^] 。 
+| link:reference-iam-storage-roles.html["Storage Admin"] | STORAGE_ADMIN | 標準、制限付き | ストレージの健全性とガバナンス機能を管理し、ストレージ リソースを検出し、既存のシステムを変更および削除します。 
 
 
-| link:reference-iam-analyst-roles.html["オペレーションサポートアナリスト"] | OPERATIONS_SUPPORT_ANALYST | アラートおよび監視ツールへのアクセスと、サポートケースの入力および管理機能を提供します。 
+| link:reference-iam-storage-roles.html["ストレージビューア"] | STORAGE_VIEWER | 標準、制限付き | ストレージの健全性とガバナンス機能を表示し、以前に検出されたストレージ リソースも表示します。既存のストレージ システムを検出、変更、または削除することはできません。 
 
 
-| link:reference-iam-storage-roles.html["Storage Admin"] | STORAGE_ADMIN | ストレージの健全性とガバナンス機能を管理し、ストレージ リソースを検出し、既存のシステムを変更および削除します。 
-
-
-| link:reference-iam-storage-roles.html["ストレージビューア"] | STORAGE_VIEWER | ストレージの健全性とガバナンス機能を表示し、以前に検出されたストレージ リソースも表示します。既存のストレージ システムを検出、変更、または削除することはできません。 
-
-
-| link:reference-iam-storage-roles.html["システムヘルススペシャリスト"] | SYSTEM_HEALTH_SPECIALIST | ストレージとヘルスおよびガバナンス機能を管理します。ストレージ管理者のすべての権限がありますが、既存のシステムを変更または削除することはできません。 
+| link:reference-iam-storage-roles.html["システムヘルススペシャリスト"] | SYSTEM_HEALTH_SPECIALIST | 標準、制限付き | ストレージとヘルスおよびガバナンス機能を管理します。ストレージ管理者のすべての権限がありますが、既存のシステムを変更または削除することはできません。 
 |===
 
 
@@ -101,57 +96,54 @@ NetApp Console のアイデンティティとアクセス管理（IAM）には�
 
 以下は、データ サービス カテゴリのロールの一覧です。各ロールは、指定された範囲内で特定の権限を付与します。必要なデータ サービス ロールまたはプラットフォーム ロールを持たないユーザーは、データ サービスにアクセスできません。
 
-[cols="1,2,3"]
+[cols="1,1,1,2"]
 |===
-| データサービスの役割 | API名* | 責任 
+| データサービスの役割 | API名* | モードの可用性 | 責任 
 
 
-| link:reference-iam-backup-rec-roles.html["バックアップとリカバリのスーパー管理者"] | BACKUP_SUPER_ADMIN | NetApp Backup and Recoveryで任意のアクションを実行します。 
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリのスーパー管理者"] | BACKUP_SUPER_ADMIN | 標準、制限付き、プライベート | NetApp Backup and Recoveryで任意のアクションを実行します。 
 
 
-| link:reference-iam-backup-rec-roles.html["バックアップとリカバリの管理者"] | BACKUP_ADMIN | ローカル スナップショットへのバックアップ、セカンダリ ストレージへの複製、オブジェクト ストレージへのバックアップを実行します。 
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリの管理者"] | BACKUP_ADMIN | 標準、制限付き、プライベート | ローカル スナップショットへのバックアップ、セカンダリ ストレージへの複製、オブジェクト ストレージへのバックアップを実行します。 
 
 
-| link:reference-iam-backup-rec-roles.html["バックアップとリカバリの復元管理者"] | RESTORE_ADMIN | Backup and Recoveryでワークロードをリストアします。 
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリの復元管理者"] | RESTORE_ADMIN | 標準、制限付き、プライベート | バックアップとリカバリでワークロードを復元します。 
 
 
-| link:reference-iam-backup-rec-roles.html["バックアップとリカバリのクローン管理者"] | CLONE_ADMIN | NetApp Backup and Recoveryでアプリケーションとデータをクローニングします。 
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリのクローン管理者"] | CLONE_ADMIN | 標準、制限付き、プライベート | バックアップとリカバリでアプリケーションとデータをクローニングします。 
 
 
-| link:reference-iam-backup-rec-roles.html["バックアップとリカバリビューア"] | BACKUP_VIEWER | バックアップとリカバリの情報を表示します。 
+| link:reference-iam-backup-rec-roles.html["バックアップとリカバリビューア"] | BACKUP_VIEWER | 標準、制限付き、プライベート | バックアップとリカバリの情報を表示します。 
 
 
-| link:reference-iam-disaster-rec-roles.html["災害復旧管理者"] | DISASTER_RECOVERY_ADMIN | NetApp Disaster Recoveryサービスで任意のアクションを実行します。 
+| link:reference-iam-disaster-rec-roles.html["災害復旧管理者"] | DISASTER_RECOVERY_ADMIN | Standard | NetApp Disaster Recoveryサービスで任意のアクションを実行します。 
 
 
-| link:reference-iam-disaster-rec-roles.html["災害復旧フェイルオーバー管理者"] | DISASTER_RECOVERY_FAILOVER_ADMIN | フェイルオーバーと移行を実行します。 
+| link:reference-iam-disaster-rec-roles.html["災害復旧フェイルオーバー管理者"] | DISASTER_RECOVERY_FAILOVER_ADMIN | Standard | フェイルオーバーと移行を実行します。 
 
 
-| link:reference-iam-disaster-rec-roles.html["災害復旧アプリケーション管理者"] | DISASTER_RECOVERY_APPLICATION_ADMIN | レプリケーション プランを作成し、レプリケーション プランを変更し、テスト フェイルオーバーを開始します。 
+| link:reference-iam-disaster-rec-roles.html["災害復旧アプリケーション管理者"] | DISASTER_RECOVERY_APPLICATION_ADMIN | Standard | レプリケーション プランを作成し、レプリケーション プランを変更し、テスト フェイルオーバーを開始します。 
 
 
-| link:reference-iam-disaster-rec-roles.html["災害復旧ビューア"] | DISASTER_RECOVERY_VIEWER | 情報の表示のみ。 
+| link:reference-iam-disaster-rec-roles.html["災害復旧ビューア"] | DISASTER_RECOVERY_VIEWER | Standard | 情報の表示のみ。 
 
 
-| link:reference-iam-data-classification.html["コンプライアンス管理者"] |  | NetApp Data Classificationのインストール、およびNetApp Data Classificationにおける組織レベルの権限の関連付けに必要です。 
+| 分類ビューア | CLASSIFICATION_VIEWER | 標準、制限付き、プライベート | ユーザーがNetApp Data Classificationスキャン結果を表示できるようにします。このロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つリソースのレポートを生成できます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。Data Classificationには管理者ロールがありません。 
 
 
-| link:reference-iam-data-classification.html["分類ビューア"] | CLASSIFICATION_VIEWER | ユーザーがNetApp Data Classificationスキャン結果を表示できるようにします。このロールを持つユーザーは、コンプライアンス情報を表示し、アクセス権限を持つリソースのレポートを生成できます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。 
+| link:reference-iam-ransomware-roles.html["ランサムウェア耐性管理者"] | RANSOMWARE_PROTECTION_ADMIN | Standard | NetApp Ransomware Resilienceの「保護」、「アラート」、「回復」、「設定」、「レポート」タブでアクションを管理します。 
 
 
-| link:reference-iam-ransomware-roles.html["ランサムウェア耐性管理者"] | RANSOMWARE_PROTECTION_ADMIN | NetApp Ransomware Resilienceの「保護」、「アラート」、「回復」、「設定」、「レポート」タブでアクションを管理します。 
+| link:reference-iam-ransomware-roles.html["ランサムウェア耐性ビューア"] | RANSOMWARE_PROTECTION_VIEWER | Standard | ランサムウェア耐性で、ワークロード データを表示し、アラート データを表示し、回復データをダウンロードし、レポートをダウンロードします。 
 
 
-| link:reference-iam-ransomware-roles.html["ランサムウェア耐性ビューア"] | RANSOMWARE_PROTECTION_VIEWER | ランサムウェア耐性で、ワークロード データを表示し、アラート データを表示し、回復データをダウンロードし、レポートをダウンロードします。 
+| link:reference-iam-ransomware-roles.html["ランサムウェア耐性ユーザー行動管理者"] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_ADMIN | Standard | Ransomware Resilience で、疑わしいユーザー行動の検出、アラート、監視を構成、管理、表示します。 
 
 
-| link:reference-iam-ransomware-roles.html["ランサムウェア耐性ユーザー行動管理者"] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_ADMIN | Ransomware Resilience で、疑わしいユーザー行動の検出、アラート、監視を構成、管理、表示します。 
+| link:reference-iam-ransomware-roles.html["ランサムウェア耐性ユーザー行動ビューア"] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER | Standard | ランサムウェア耐性で疑わしいユーザー行動のアラートと分析情報を表示します。 
 
 
-| link:reference-iam-ransomware-roles.html["ランサムウェア耐性ユーザー行動ビューア"] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER | ランサムウェア耐性で疑わしいユーザー行動のアラートと分析情報を表示します。 
-
-
-| SnapCenter管理者 | SNAPCENTER_ADMIN | NetApp Backup and Recovery for Applications を使用してオンプレミスのONTAPクラスターからスナップショットをバックアップする機能を提供します。このロールを持つメンバーは、次のアクションを実行できます。 * [バックアップとリカバリ] > [アプリケーション] から任意のアクションを実行する * 権限を持つプロジェクトおよびフォルダ内のすべてのシステムを管理する * すべてのNetApp Consoleサービスを使用するSnapCenterには、閲覧者ロールはありません。 
+| SnapCenter管理者 | SNAPCENTER_ADMIN | 標準、プライベート | NetApp Backup and Recovery for Applications を使用してオンプレミスのONTAPクラスターからスナップショットをバックアップする機能を提供します。このロールを持つメンバーは、次のアクションを実行できます。 * [バックアップとリカバリ] > [アプリケーション] から任意のアクションを実行する * 権限を持つプロジェクトおよびフォルダ内のすべてのシステムを管理する * すべてのNetApp Consoleサービスを使用するSnapCenterには、閲覧者ロールはありません。 
 |===
 
 
