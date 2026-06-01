@@ -170,9 +170,12 @@ image:screenshot-agent-validate.png["エージェントの「アクション」�
 
 === 手動インストールの構成チェックを無効にする
 
+
+
+=== 手動インストールの構成チェックを無効にする
+
 インストール中に送信接続を検証する構成チェックを無効にする必要がある場合があります。たとえば、Government Cloud 環境にエージェントを手動でインストールする場合は、構成チェックを無効にする必要があります。無効にしないと、インストールは失敗します。
 
-.手順
 _com/opt/application/netapp/service-manager-2/config.json_ ファイルで _skipConfigCheck_ フラグを設定することで、構成チェックを無効にします。デフォルトでは、このフラグは false に設定されており、構成チェックによってエージェントの送信アクセスが検証されます。チェックを無効にするには、このフラグを true に設定します。この手順を完了する前に、JSON 構文を理解しておいてください。
 
 構成チェックを再度有効にするには、次の手順に従い、_skipConfigCheck_ フラグを false に設定します。
@@ -181,8 +184,7 @@ _com/opt/application/netapp/service-manager-2/config.json_ ファイルで _skip
 . コンソール エージェント ホストに root または sudo 権限でアクセスします。
 . 変更を元に戻せるように、_/opt/application/netapp/service-manager-2/config.json_ ファイルのバックアップ コピーを作成します。
 . 次のコマンドを実行して、サービス マネージャー 2 サービスを停止します。
-
-
++
 [source, cli]
 ----
 systemctl stop netapp-service-manager.service
