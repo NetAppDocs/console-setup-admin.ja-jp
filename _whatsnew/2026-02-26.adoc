@@ -28,8 +28,8 @@ NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され
 | コンソールエージェント | 4.4.0 |  https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-02-09.html["NetApp Console ページの新機能"^]に移動し、バージョン 4.4.0 に含まれる変更を参照してください。 
 
 
-| バックアップとリカバリ | 5.0.3（2026年3月2日） |  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recoveryの新機能ページ"^]に移動します。 
+| NetApp Backup and Recovery | 5.0.3（2026年3月2日） |  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recoveryの新機能ページ"^]に移動します。 
 
 
-| 分類 | 1.5.1（2026年2月9日） |  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification の新機能ページ"^]に移動します。 
+| NetApp Data Classification | 1.5.1（2026年2月9日） |  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification の新機能ページ"^]に移動します。 
 |===

@@ -406,8 +406,6 @@
   <block id="0930e6e62078c5446e99045f0a678607" category="paragraph">Docker エンジン 23.0.6 から 28.0.0。</block>
   <block id="8f06b143b878ae3919ba41cd38ea7380" category="list-text">コンソールをプライベート モードで使用する場合、コンソール エージェントは次のオペレーティング システムでサポートされます。エージェントをインストールする前に、コンテナ オーケストレーション ツールが必要です。</block>
   <block id="1a3d8802d280d4ec910f54042cd62998" category="cell">SELinux</block>
-  <block id="730752c250979031a3c93723f75e0b07" category="paragraph">3.9.42 以降、コンソールがプライベート モードの場合</block>
-  <block id="607262a04e5c4340fc8d641e874a5695" category="paragraph">3.9.29以降</block>
   <block id="a3336db0e9f7b6341a12794c144076b6" category="paragraph">Docker エンジン 23.0.6 から 26.0.0</block>
   <block id="5556c95763913c6cfa8f61d9cab4f4f2" category="paragraph">26.0.0は、_新しい_エージェント3.9.44以降のインストールでサポートされます。</block>
   <block id="afaf0577b469adb0296b4fcfa6f2af91" category="list-text">コンソール エージェントは、これらのオペレーティング システムの英語版でサポートされています。</block>
@@ -1325,7 +1323,6 @@
   <block id="c3a964b5dfacd9501abc103bfcc4c98f" category="paragraph">2024 年 6 月 30 日に、RHEL 7 はメンテナンス終了 (EOM) に達し、CentOS 7 はサポート終了 (EOL) に達しました。  NetApp は、2024 年 6 月 30 日にこれらの Linux ディストリビューション上のエージェントのサポートを終了しました。</block>
   <block id="7eba69a7025f97bec42a74bd138b395e" category="inline-link">Red Hat: Red Hat Enterprise Linux 7 のメンテナンス終了について知っておくべきこと</block>
   <block id="ebc4aba90c33f7558582b9bbf738fdd9" category="paragraph"><block ref="ebc4aba90c33f7558582b9bbf738fdd9" category="inline-link-rx"></block></block>
-  <block id="f9c4366c4eb9ae998e18094001111005" category="paragraph">RHEL 7 または CentOS 7 で既存のエージェントが実行されている場合、 NetApp はオペレーティング システムを RHEL 8 または 9 にアップグレードまたは変換することをサポートしていません。サポートされているオペレーティング システムで新しいエージェントを作成する必要があります。</block>
   <block id="0f50cd1079cb24de2b4571c09546a2e1" category="list-text">RHEL 8 または 9 ホストをセットアップします。</block>
   <block id="8c9215e1b963f63a463d468347c9cc12" category="list-text">新しいエージェントをインストールします。</block>
   <block id="b8bb8aa40b62692dd726a6effbbb7c2a" category="list-text">以前のエージェントが管理していたシステムを検出するようにエージェントを構成します。</block>
@@ -4160,7 +4157,6 @@
   <block id="c64c773fbe16e4df6ae417c106a467ef" category="inline-link">Docker Engineの要件について詳しく見る</block>
   <block id="395f31b2f1bc9cb3993acbb14cf4fb1f" category="paragraph"><block ref="724b4d6e1bb3e6bea768572a2ce7c10e" category="inline-link-rx"></block> 。</block>
   <block id="15ba9bb026c53a148756b12826c46f8b" category="paragraph-title">ローカル UI アクセス用の SSL 証明書を更新しました</block>
-  <block id="b96edd49155123375756b26e44b38121" category="paragraph">BlueXP を制限モードまたはプライベート モードで使用する場合、クラウド リージョンまたはオンプレミスにデプロイされているコネクタ仮想マシンからユーザー インターフェイスにアクセスできます。デフォルトでは、 BlueXP は自己署名 SSL 証明書を使用して、コネクタ上で実行されている Web ベースのコンソールへの安全な HTTPS アクセスを提供します。</block>
   <block id="2737440e84d6c8a13a097fa583a6e67a" category="paragraph">このリリースでは、新規および既存のコネクタの SSL 証明書に変更を加えました。</block>
   <block id="6cb49682fd1f125736d18f28cbce1f23" category="list-text">証明書の共通名が短縮ホスト名と一致するようになりました</block>
   <block id="982638142d38ac9441736ff5402f4e2a" category="list-text">証明書サブジェクト代替名は、ホストマシンの完全修飾ドメイン名（FQDN）です。</block>
@@ -4175,7 +4171,6 @@
   <block id="d0f584a070c78efb8fff64b377dbf729" category="paragraph">サポートされている Podman バージョンの更新されたリストには、Red Hat Enterprise Linux ホストの 4.6.1 および 4.9.4 が含まれています。</block>
   <block id="fef89f8fc6e9d583565954d5abe02ec4" category="paragraph">コネクタの 3.9.40 リリース以降の RHEL ホストには Podman が必要です。</block>
   <block id="842ce6e5c3bdb8cf81ffbd4f90a57649" category="section-title">AWSとAzureの権限の更新</block>
-  <block id="c1f46e9419a384f29f23682739cc8d58" category="paragraph">コネクタの AWS および Azure ポリシーを更新し、不要になった権限を削除しました。これらの権限はBlueXPエッジ キャッシングと Kubernetes クラスターの検出および管理に関連するものでしたが、2024 年 8 月をもってサポートされなくなりました。</block>
   <block id="d201eff65f4516de2c618efea5a7edde" category="inline-link">AWSポリシーの変更点を確認する</block>
   <block id="b0c050c316c776928b8b8bc0c327449e" category="list-text"><block ref="aff0e765a5d2f4e281feabd61d1dd500" category="inline-link-rx"></block> 。</block>
   <block id="2f036a4385aa02ab7c67e7932bd4036f" category="inline-link">Azureポリシーの変更点を確認する</block>
@@ -4183,7 +4178,6 @@
   <block id="335b63351c39337de35ede84c3852d4d" category="section-title">コネクタ 3.9.43 パッチ</block>
   <block id="262115d0d4a65fe9bcd074ab5666018a" category="paragraph">Cloud Volumes ONTAP 9.15.1 リリースをサポートするためにコネクタを更新しました。</block>
   <block id="ede74fed38968a6f0c0dcebc3102b859" category="paragraph">このリリースのサポートには、Azure のコネクタ ポリシーの更新が含まれます。ポリシーには次の権限が含まれるようになりました。</block>
-  <block id="c78a856f5972910d86f9b588fe9783e6" category="paragraph">これらの権限は、仮想マシン スケール セットのCloud Volumes ONTAPサポートに必要です。既存のコネクタがあり、この新しい機能を使用する場合は、Azure 資格情報に関連付けられているカスタム ロールにこれらのアクセス許可を追加する必要があります。</block>
   <block id="1b41af4e937fd3b48c53451988ba06b5" category="inline-link">Cloud Volumes ONTAP 9.15.1リリースについて</block>
   <block id="dcc26903c10160517882b9dad3e9f26f" category="list-text"><block ref="dcc26903c10160517882b9dad3e9f26f" category="inline-link-rx"></block></block>
   <block id="21952e368aec0a06297b408b56d39588" category="inline-link">コネクタの Azure 権限を表示する</block>
@@ -4246,20 +4240,6 @@
   <block id="4f56b8c7a0f62edc59659cfaecc68958" category="paragraph">このプライベート モード リリースには、Red Hat Enterprise Linux 8 および 9 のコネクタのサポートは含まれていないことに注意してください。</block>
   <block id="f691a3ef752f6e51a74183a6b7b1c432" category="cell">3.9.40</block>
   <block id="188fd7f75e50a8a882a75c15dcb630a1" category="cell">2024年5月17日</block>
-  <block id="81f58b484d838909a5fedb3486f3a8e2" category="section-title">コネクタ 3.9.40</block>
-  <block id="32d1e3d3ebe78d37dbdfcf9933b0cf90" category="paragraph">BlueXPコネクタのこのリリースには、追加のオペレーティング システムのサポート、マイナーなセキュリティの改善、およびバグ修正が含まれています。</block>
-  <block id="94f95548313e6f5528b5011a7d10e19f" category="paragraph">現時点では、3.9.40 リリースは標準モードと制限モードで利用できます。</block>
-  <block id="3eb0b1a8f5c259c6baffd4acbc27dc9b" category="paragraph">コネクタは、 BlueXP を標準モードまたは制限モードで使用する場合、_新しい_コネクタ インストールを備えた次のバージョンの Red Hat Enterprise Linux を実行しているホストでサポートされるようになりました。</block>
-  <block id="f335f00e1188cffe57c3d9416ce23c84" category="list-text">8.6～8.9</block>
-  <block id="16051bd228f38a4877773f8f795d59a9" category="paragraph">2024 年 6 月 30 日に、RHEL 7 はメンテナンス終了 (EOM) を迎え、CentOS 7 はサポート終了 (EOL) を迎えます。NetApp は、2024 年 6 月 30 日までこれらの Linux ディストリビューション上のコネクタのサポートを継続します。</block>
-  <block id="cc33fea72b72b4631424774600dd1785" category="inline-link">RHEL 7 または CentOS 7 で既存のコネクタを実行している場合の対処方法を学びます</block>
-  <block id="ab95c14710d4a4d5d91375c4a1b3315b" category="paragraph"><block ref="079fd36262e0750841aa2ea8902cdc7a" category="inline-link-rx"></block> 。</block>
-  <block id="4cc078461f1763cdb13efec9da8a6a3f" category="paragraph-title">AWS 権限の更新</block>
-  <block id="2f4b86d46e79a7a3f22d1c784c12799e" category="paragraph">3.9.38 リリースでは、AWS のコネクタ ポリシーを更新し、「ec2:DescribeAvailabilityZones」権限を追加しました。Cloud Volumes ONTAPで AWS Local Zones をサポートするには、この権限が必要になりました。</block>
-  <block id="7595af352964f2b06057ab6310fdff44" category="inline-link">コネクタの AWS 権限を表示する</block>
-  <block id="bad85d32b5f3e46e956809c13b502817" category="list-text"><block ref="7e42187d6259f740c2e1915df5429efc" category="inline-link-rx"></block> 。</block>
-  <block id="364a4ff52cd92f16374019cdedf6b91c" category="inline-link">AWS Local Zonesのサポートについて詳しくはこちら</block>
-  <block id="d3cdb39411bce89027162422ffb460a4" category="list-text"><block ref="d3cdb39411bce89027162422ffb460a4" category="inline-link-rx"></block></block>
   <block id="5483a2359dc6447c026002b1f7426d4e" category="sidebar">NetApp Consoleを使い始めると、オンプレミスとクラウド環境全体でデータの構築、保護、管理を開始できます。セットアップが完了すると、ID およびアクセス管理 (IAM) を使用してリソースへのアクセスを制御したり、コンソール エージェントやクラウド プロバイダー アカウントなどを管理したりできるようになります。</block>
   <block id="55744ccea4ab827ad5f363c0ec39e8bf" category="sidebar">NetApp Consoleのセットアップと管理に関するドキュメント</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">始めましょう</block>
@@ -6273,4 +6253,17 @@
   <block id="19ba82eae8f218642333800aab8dc1c9" category="cell">標準、プライベート</block>
   <block id="31c8c9293a24d211fe8df6780c3b5864" category="list-text">ユーザーまたはサービスアカウントにロールを割り当てる際は、サポートされているロールの中から選択できます。</block>
   <block id="b4c25e4423bb6dcb1445deb7b10e93fb" category="paragraph">ドロップダウンリストには、サポートされているロールのみが表示されます。<block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>。</block>
+  <block id="7ea105aee574037d5e6af21567c8c3dc" category="paragraph">コンソールがプライベートモードの場合、バージョン4.0.0以降</block>
+  <block id="5d818424eacea237d3f2053aafd60fbe" category="paragraph">4.0.0以降</block>
+  <block id="b39dc14a008a29a5ead42173a9e0c598" category="doc">プライベートモードリリース（4.7.0）</block>
+  <block id="2c0d034db2b48e2c24de792e5f537a36" category="paragraph">4.7.0リリースには、以下のNetApp Consoleコンポーネントおよびサービスに対するアップデートが含まれています。</block>
+  <block id="d794a9cd24f47c508609ee13d758511f" category="cell">4.7.0</block>
+  <block id="59daf18c0a626a4e9dde08f3ce934dba" category="cell"><block ref="96a354291689d74da1dc3c76f5332e6f" category="inline-link-rx"></block>に移動し、バージョン 4.7.0 に含まれる変更を参照してください。</block>
+  <block id="225461e659003503fb35b495b5008e09" category="cell">5.4.0（2026年6月8日）</block>
+  <block id="dec411cd5f201e22bcbd7d9f4569efcc" category="cell">1.54.0 (2026年5月11日)</block>
+  <block id="15957f5a10d7c37b0a0a1daa1c46013a" category="section-title">2026年6月15日</block>
+  <block id="8d2fe627427775fd995055c612f4724b" category="paragraph">BlueXPを制限モードまたはプライベートモードで使用する場合、ユーザーインターフェイスは、クラウドリージョンまたはオンプレミスにデプロイされたコネクタ仮想マシンからアクセスできます。デフォルトでは、BlueXPはローカルのWebブラウザから安全なHTTPSアクセスを提供するために、自己署名SSL証明書を使用します。</block>
+  <block id="81ba052a80f6ca03940e96b958459737" category="paragraph">コネクタに関するAWSおよびAzureのポリシーを更新し、不要になった権限を削除しました。これらの権限は、BlueXPエッジキャッシングおよびAzureとAWSにおけるKubernetesクラスターの検出と管理に関連していました。</block>
+  <block id="8b8a789c0e7d6b190da84177b5130948" category="paragraph">これらの権限は、Cloud Volumes ONTAP の仮想マシン スケール セットのサポートに必要です。既存のコネクタがあり、この新機能を使用する場合は、Azure 認証情報に関連付けられているカスタム ポリシーにこれらのアクセス許可を追加する必要があります。</block>
+  <block id="e68cc6c646a8fcaf6b506961e2280d76" category="paragraph">RHEL 7 または CentOS 7 上で既にエージェントが実行されている場合は、NetApp はオペレーティングシステムを RHEL 8 または 9 にアップグレードまたは変換することをサポートしていません。サポートされているオペレーティングシステム上に新しいエージェントを作成する必要があります。切り替えを行うには、以下の概要手順に従ってください：</block>
 </blocks>

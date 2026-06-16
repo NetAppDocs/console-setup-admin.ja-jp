@@ -18,6 +18,31 @@ NetApp Console管理機能の新機能（アイデンティティおよびアク
 
 
 
+== 2026年6月15日
+
+
+
+=== プライベートモードリリース（4.7.0）
+
+新しいプライベートモードリリースがダウンロード可能になりました。 https://mysupport.netapp.com/site/downloads["NetAppサポート サイト"^]
+
+4.7.0リリースには、以下のNetApp Consoleコンポーネントおよびサービスに対するアップデートが含まれています。
+
+[cols="3*"]
+|===
+| コンポーネントまたはサービス | このリリースに含まれるバージョン | 前回のプライベートモードリリース以降の変更点 
+
+
+| コンソールエージェント | 4.7.0 |  https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-05-11.html["NetApp Console ページの新機能"^]に移動し、バージョン 4.7.0 に含まれる変更を参照してください。 
+
+
+| NetApp Backup and Recovery | 5.4.0（2026年6月8日） |  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recoveryの新機能ページ"^]に移動します。 
+
+
+| NetApp Data Classification | 1.54.0 (2026年5月11日) |  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification の新機能ページ"^]に移動します。 
+|===
+
+
 == 2026年5月11日
 
 
@@ -106,10 +131,10 @@ NetApp Consoleは、強化され再構築されたBlueXP基盤上に構築され
 | コンソールエージェント | 4.4.0 |  https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-02-09.html["NetApp Console ページの新機能"^]に移動し、バージョン 4.4.0 に含まれる変更を参照してください。 
 
 
-| バックアップとリカバリ | 5.0.3（2026年3月2日） |  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recoveryの新機能ページ"^]に移動します。 
+| NetApp Backup and Recovery | 5.0.3（2026年3月2日） |  https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["NetApp Backup and Recoveryの新機能ページ"^]に移動します。 
 
 
-| 分類 | 1.5.1（2026年2月9日） |  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification の新機能ページ"^]に移動します。 
+| NetApp Data Classification | 1.5.1（2026年2月9日） |  https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["NetApp Classification の新機能ページ"^]に移動します。 
 |===
 
 
@@ -1333,7 +1358,7 @@ https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_s
 https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["Docker Engineの要件について詳しく見る"] 。
 
 .ローカル UI アクセス用の SSL 証明書を更新しました
-BlueXP を制限モードまたはプライベート モードで使用する場合、クラウド リージョンまたはオンプレミスにデプロイされているコネクタ仮想マシンからユーザー インターフェイスにアクセスできます。デフォルトでは、 BlueXP は自己署名 SSL 証明書を使用して、コネクタ上で実行されている Web ベースのコンソールへの安全な HTTPS アクセスを提供します。
+BlueXPを制限モードまたはプライベートモードで使用する場合、ユーザーインターフェイスは、クラウドリージョンまたはオンプレミスにデプロイされたコネクタ仮想マシンからアクセスできます。デフォルトでは、BlueXPはローカルのWebブラウザから安全なHTTPSアクセスを提供するために、自己署名SSL証明書を使用します。
 
 このリリースでは、新規および既存のコネクタの SSL 証明書に変更を加えました。
 
@@ -1373,7 +1398,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-s
 
 === AWSとAzureの権限の更新
 
-コネクタの AWS および Azure ポリシーを更新し、不要になった権限を削除しました。これらの権限はBlueXPエッジ キャッシングと Kubernetes クラスターの検出および管理に関連するものでしたが、2024 年 8 月をもってサポートされなくなりました。
+コネクタに関するAWSおよびAzureのポリシーを更新し、不要になった権限を削除しました。これらの権限は、BlueXPエッジキャッシングおよびAzureとAWSにおけるKubernetesクラスターの検出と管理に関連していました。
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html#change-log["AWSポリシーの変更点を確認する"] 。
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#change-log["Azureポリシーの変更点を確認する"] 。
@@ -1397,7 +1422,7 @@ Cloud Volumes ONTAP 9.15.1 リリースをサポートするためにコネク�
 "Microsoft.Compute/virtualMachineScaleSets/read",
 "Microsoft.Compute/virtualMachineScaleSets/delete"
 ----
-これらの権限は、仮想マシン スケール セットのCloud Volumes ONTAPサポートに必要です。既存のコネクタがあり、この新しい機能を使用する場合は、Azure 資格情報に関連付けられているカスタム ロールにこれらのアクセス許可を追加する必要があります。
+これらの権限は、Cloud Volumes ONTAP の仮想マシン スケール セットのサポートに必要です。既存のコネクタがあり、この新機能を使用する場合は、Azure 認証情報に関連付けられているカスタム ポリシーにこれらのアクセス許可を追加する必要があります。
 
 * https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes["Cloud Volumes ONTAP 9.15.1リリースについて"^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["コネクタの Azure 権限を表示する"] 。
@@ -1569,7 +1594,7 @@ BlueXPコネクタのこのリリースには、マイナーなセキュリテ�
 
 https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/rhel-7-end-of-maintenance["Red Hat: Red Hat Enterprise Linux 7 のメンテナンス終了について知っておくべきこと"^]
 
-RHEL 7 または CentOS 7 で既存のエージェントが実行されている場合、 NetApp はオペレーティング システムを RHEL 8 または 9 にアップグレードまたは変換することをサポートしていません。サポートされているオペレーティング システムで新しいエージェントを作成する必要があります。
+RHEL 7 または CentOS 7 上で既にエージェントが実行されている場合は、NetApp はオペレーティングシステムを RHEL 8 または 9 にアップグレードまたは変換することをサポートしていません。サポートされているオペレーティングシステム上に新しいエージェントを作成する必要があります。切り替えを行うには、以下の概要手順に従ってください：
 
 . RHEL 8 または 9 ホストをセットアップします。
 . Podman をインストールします。
@@ -1635,41 +1660,4 @@ RHEL 7 または CentOS 7 で既存のエージェントが実行されている
 * https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["BlueXP backup and recoveryの新機能について"^]
 * https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["BlueXP classificationの新機能について学ぶ"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["BlueXPのCloud Volumes ONTAP管理の新機能について学ぶ"^]
-
-
-
-
-== 2024年5月17日
-
-
-
-=== コネクタ 3.9.40
-
-BlueXPコネクタのこのリリースには、追加のオペレーティング システムのサポート、マイナーなセキュリティの改善、およびバグ修正が含まれています。
-
-現時点では、3.9.40 リリースは標準モードと制限モードで利用できます。
-
-.RHEL 8および9のサポート
-コネクタは、 BlueXP を標準モードまたは制限モードで使用する場合、_新しい_コネクタ インストールを備えた次のバージョンの Red Hat Enterprise Linux を実行しているホストでサポートされるようになりました。
-
-* 8.6～8.9
-* 9.1～9.3
-
-
-これらのオペレーティング システムでは、コンテナー オーケストレーション ツールとして Podman が必要です。
-
-Podman の要件、既知の制限、オペレーティング システムのサポートの概要、RHEL 7 ホストがある場合の対処方法、開始方法などについて知っておく必要があります。
-
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html["コネクタによる RHEL 8 および 9 のサポートについて学ぶ"] 。
-
-.RHEL 7およびCentOS 7のサポート終了
-2024 年 6 月 30 日に、RHEL 7 はメンテナンス終了 (EOM) を迎え、CentOS 7 はサポート終了 (EOL) を迎えます。NetApp は、2024 年 6 月 30 日までこれらの Linux ディストリビューション上のコネクタのサポートを継続します。
-
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html["RHEL 7 または CentOS 7 で既存のコネクタを実行している場合の対処方法を学びます"] 。
-
-.AWS 権限の更新
-3.9.38 リリースでは、AWS のコネクタ ポリシーを更新し、「ec2:DescribeAvailabilityZones」権限を追加しました。Cloud Volumes ONTAPで AWS Local Zones をサポートするには、この権限が必要になりました。
-
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["コネクタの AWS 権限を表示する"] 。
-* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["AWS Local Zonesのサポートについて詳しくはこちら"^]
 
