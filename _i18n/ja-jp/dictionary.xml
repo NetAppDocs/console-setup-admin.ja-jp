@@ -334,7 +334,6 @@
   <block id="6b3c54310d91533691ce16baaa9837f0" category="list-text">エージェント仮想マシンに接続しているホストから Web ブラウザを開き、次の URL を入力します。</block>
   <block id="3293e21593be380370a4f8e9a0276cf0" category="list-text">ログイン後、エージェントを設定します。</block>
   <block id="d3ba93ec4220d1e4a340375deaf3e56f" category="list-text">エージェントに関連付けるコンソール組織を指定します。</block>
-  <block id="a9dfefd15be7ad32808b46019adfc86c" category="paragraph">以下の手順ではコンソールを標準モードで使用する方法について説明しているため、制限モードは無効にしておく必要があります。安全な環境があり、このアカウントをコンソールのバックエンド サービスから切断する場合にのみ、制限モードを有効にする必要があります。もしそうなら、<block ref="8e08e3d2c03bbf8727fd164a23b99107" category="inline-link-macro-rx"></block> 。</block>
   <block id="9cf68904e16d6d689d242f4868ec6c3f" category="list-text">専用ホスト</block>
   <block id="a041f8c4c0a670570730d7d087d863ba" category="list-text">エージェントは、他のアプリケーションと共有されているホストではサポートされません。ホストは専用ホストである必要があります。</block>
   <block id="acb3a31b8e79039416f86dfe140a002a" category="list-text">VPCとサブネット</block>
@@ -6160,7 +6159,6 @@
   <block id="43dc49af1a8157f71040baeb30324e66" category="inline-link-macro">Console 組織を検証する方法を確認する</block>
   <block id="d1bdb7b91f1071f7a7fbbe9cc229a6cd" category="paragraph">デフォルトでは、Digital Advisorは、コンソール組織だけでなく、会社に関連付けられたすべてのNetAppアカウントを表示します。Digital Advisorで表示される内容を特定のアカウントに制限するには、コンソール組織で使用するビジネスアカウントを確認してください。<block ref="804fccc7ef3790a6c6eaa859500c3cdb" category="inline-link-macro-rx"></block></block>
   <block id="397ee69a18e46b4765d0f43baecebbd0" category="summary">デフォルトでは、Digital Advisorには、コンソール組織だけでなく、会社に関連付けられているすべてのNetAppアカウントが表示されます。Digital Advisorに表示される内容を特定のアカウントに制限するには、コンソール組織で使用するビジネスアカウントを確認してください。</block>
-  <block id="f64284915c2f23896843250a06524f58" category="paragraph">組織を認証するには、組織管理者権限が必要です。ユーザーはNetApp Support Site（NSS）アカウントに関連付けられている必要があります。<block ref="6d5ad2096c24e0befb1e89a3a2137e15" category="inline-link-macro-rx"></block>。</block>
   <block id="c8979336fc54afd4915c72626c1abdc0" category="admonition">会社にビジネスアカウントが1つしかなく、ユーザーがNetApp Support Siteアカウントに関連付けられている場合、コンソールは自動的に組織を確認します。</block>
   <block id="6a22a47669484a4fac663dfd1d8c5cc1" category="list-text">ページタイトルの横にある * Verify * を選択します。</block>
   <block id="71e0d11af7cdf3d188d279b78ad7e4e4" category="inline-image-macro">組織ページの「確認」ボタンがハイライト表示されているスクリーンショット。</block>
@@ -6266,4 +6264,7 @@
   <block id="81ba052a80f6ca03940e96b958459737" category="paragraph">コネクタに関するAWSおよびAzureのポリシーを更新し、不要になった権限を削除しました。これらの権限は、BlueXPエッジキャッシングおよびAzureとAWSにおけるKubernetesクラスターの検出と管理に関連していました。</block>
   <block id="8b8a789c0e7d6b190da84177b5130948" category="paragraph">これらの権限は、Cloud Volumes ONTAP の仮想マシン スケール セットのサポートに必要です。既存のコネクタがあり、この新機能を使用する場合は、Azure 認証情報に関連付けられているカスタム ポリシーにこれらのアクセス許可を追加する必要があります。</block>
   <block id="e68cc6c646a8fcaf6b506961e2280d76" category="paragraph">RHEL 7 または CentOS 7 上で既にエージェントが実行されている場合は、NetApp はオペレーティングシステムを RHEL 8 または 9 にアップグレードまたは変換することをサポートしていません。サポートされているオペレーティングシステム上に新しいエージェントを作成する必要があります。切り替えを行うには、以下の概要手順に従ってください：</block>
+  <block id="8463984f3743dad5519ea83a4212420e" category="list-text">フェデレーションに使用するドメインを特定してください。ご自身のメールアドレスのドメイン、またはご自身が所有する別のドメインを使用できます。メールアドレスのドメインとは異なるドメインを使用する場合は、まずコンソールでドメインを認証する必要があります。手順については、<block ref="f906f28217a34b35861fd69657ab52aa" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="0d87cc65e1228aa5387b06020c227945" category="paragraph">これらの手順では標準モードでのコンソールの使用方法を説明しているため、制限モードは無効にしておく必要があります。安全な環境が整っていて、このアカウントをコンソールのバックエンドサービスから切断したい場合にのみ、制限モードを有効にしてください。もしそうなら、<block ref="c0aad04133307e9daa144c5fbbd6274a" category="inline-link-macro-rx"></block>。</block>
+  <block id="783781dfce7d40d62cedb10d8445eca9" category="paragraph">組織を認証するには、組織管理者権限が必要です。ユーザーはNetApp Support Site（NSS）アカウントに関連付けられている必要があります。<block ref="e27e8a258f84be720108170f748a0bb6" category="inline-link-macro-rx"></block>.</block>
 </blocks>
