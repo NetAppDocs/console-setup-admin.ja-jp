@@ -100,4 +100,11 @@ NOTE: 4.0.0 では、 NetApp はコンソールとコンソール エージェ�
  a| 
 Webベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
 
+
+
+ a| 
+\https://ws.workloads.bluexp.netapp.com
+ a| 
+Workload Factory バックエンドがONTAP操作のためにコンソールエージェントをポーリングするために使用します。
+
 |===
