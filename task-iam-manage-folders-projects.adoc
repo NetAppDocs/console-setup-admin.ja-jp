@@ -20,12 +20,14 @@ summary: ビジネス構造に合わせてフォルダーとプロジェクト�
 
 
 
+[[using-folders-and-projects-to-organize-resources]]
 == フォルダーとプロジェクトを使用してリソースを整理する
 
 NetApp Consoleでは、組織にはリソースを整理するのに役立つフォルダーとプロジェクトが含まれています。フォルダーは関連するプロジェクトをグループ化するのに役立ち、プロジェクトはリソースとメンバーのアクセスを管理するのに役立ちます。
 
 
 
+[[folders]]
 === フォルダ
 
 フォルダーは関連するプロジェクトを整理するのに役立ちます。ネストされたフォルダーを作成して、組織の構造のさまざまなレベルを表すことができます。たとえば、各ビジネス ユニットの最上位フォルダーを作成し、そのビジネス ユニット内のさまざまなチームに対してサブフォルダーを作成することができます。次に、フォルダー内にプロジェクトを作成します。
@@ -64,6 +66,7 @@ image:diagram-iam-resource-association-folder-3.png["フォルダー内にプロ
 ====
 
 
+[[projects]]
 === プロジェクト
 
 リソースをプロジェクトに関連付けて、メンバーが管理できるようにします。管理とユーザー アクセスのために、リソースをプロジェクトに関連付ける必要があります。
@@ -74,6 +77,7 @@ image:diagram-iam-resource-association-folder-3.png["フォルダー内にプロ
 
 
 
+[[add-a-folder-or-project]]
 == フォルダまたはプロジェクトを追加する
 
 リソースを管理するプロジェクトと、関連するプロジェクトをグループ化するフォルダーを追加します。新しい組織を作成すると、コンソールに 1 つのプロジェクトが含まれます。
@@ -107,6 +111,7 @@ link:reference-iam-predefined-roles.html["アクセスロールについて学�
 
 
 
+[[rename-a-folder-or-project]]
 == フォルダまたはプロジェクトの名前を変更する
 
 必要に応じてフォルダーまたはプロジェクトの名前を変更します。名前を変更しても、関連付けられているリソースやメンバー アクセスには影響しません。
@@ -118,6 +123,7 @@ link:reference-iam-predefined-roles.html["アクセスロールについて学�
 
 
 
+[[delete-a-folder-or-project]]
 == フォルダまたはプロジェクトを削除する
 
 チームの再編成やプロジェクトの完了後など、不要になったフォルダーやプロジェクトを削除します。
@@ -131,6 +137,8 @@ link:reference-iam-predefined-roles.html["アクセスロールについて学�
 
 
 
+[[view-the-resources-associated-with-a-folder-or-project]]
+[[view-associated-resources-members]]
 == フォルダまたはプロジェクトに関連付けられたリソースを表示する
 
 フォルダーまたはプロジェクトに関連付けられているリソースとメンバーを表示します。
@@ -152,6 +160,8 @@ image:screenshot-iam-allocated-resources.png["プロジェクトに関連付け�
 
 
 
+[[change-the-resources-associated-with-a-folder-or-project]]
+[[modify-resources]]
 == フォルダまたはプロジェクトに関連付けられたリソースを変更する
 
 組織のニーズの変化に応じて、フォルダーまたはプロジェクトに関連付けられているリソースを変更できます。
@@ -172,6 +182,7 @@ image:screenshot-iam-associate-resources.png["現在関連付けられていな�
 
 
 
+[[view-members-associated-with-a-folder-or-project]]
 == フォルダまたはプロジェクトに関連付けられたメンバーを表示する
 
 *組織* ページから、フォルダーまたはプロジェクトに関連付けられているメンバーを表示できます。
@@ -190,6 +201,8 @@ image:screenshot-iam-member-access.png["プロジェクトにアクセスでき�
 
 
 
+[[modify-member-access-to-a-folder-or-project]]
+[[modify-members]]
 == フォルダまたはプロジェクトへのメンバーアクセスを変更する
 
 メンバー アクセスを変更してリソース アクセスを制御します。フォルダー レベルで割り当てられたロールは、すべての子プロジェクトとフォルダーに継承されることに注意してください。
@@ -211,6 +224,7 @@ image:screenshot-iam-member-access.png["プロジェクトにアクセスでき�
 
 
 
+[[related-information]]
 == 関連情報
 
 * link:concept-identity-and-access-management.html["NetApp ConsoleのIDとアクセスについて学ぶ"]

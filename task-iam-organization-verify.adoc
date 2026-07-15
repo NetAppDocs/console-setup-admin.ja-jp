@@ -18,6 +18,7 @@ summary: デフォルトでは、Digital Advisorには、コンソール組織�
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 組織を認証するには、組織管理者権限が必要です。ユーザーはNetApp Support Site（NSS）アカウントに関連付けられている必要があります。link:task-adding-nss-accounts.html["NSS アカウントを関連付ける方法を確認します"].
@@ -27,6 +28,7 @@ NOTE: 会社にビジネスアカウントが1つしかなく、ユーザーがN
 
 
 
+[[verify-your-organization]]
 == 組織を確認してください
 
 .手順

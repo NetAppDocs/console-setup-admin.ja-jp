@@ -25,6 +25,8 @@ AWSにエージェントをデプロイすると、選択したVPC内でLinuxと
 
 
 
+[[step-1-set-up-networking-for-deploying-a-console-agent-in-aws]]
+[[networking-aws-agent]]
 == ステップ1: AWSにコンソールエージェントを展開するためのネットワークを設定する
 
 コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件により、コンソール エージェントはハイブリッド クラウド内のリソースとプロセスを管理できるようになります。
@@ -153,6 +155,8 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-2-set-up-aws-permissions-for-the-console-agent]]
+[[aws-permissions-agent]]
 == ステップ2: コンソールエージェントのAWS権限を設定する
 
 コンソールは、VPC にコンソールエージェントをデプロイする前に、AWS で認証する必要があります。次のいずれかの認証方法を選択できます。
@@ -282,6 +286,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-3-create-the-console-agent]]
 == ステップ3: コンソールエージェントを作成する
 
 NetApp ConsoleのWebベースのコンソールから直接Consoleエージェントを作成します。

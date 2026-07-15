@@ -32,12 +32,14 @@ NetApp Console は、オンプレミスまたはセキュアなクラウド環�
 
 
 
+[[supported-features-and-services-for-netapp-console-in-private-mode]]
 == プライベートモードのNetApp Consoleでサポートされている機能とサービス
 
 次の表は、プライベートモードでインストールした場合にNetApp Consoleで利用可能なストレージ管理機能、データサービス、および管理機能の一覧です。NetApp Consoleをクラウドにインストールする場合とオンプレミスにインストールする場合では、機能が異なります。
 
 
 
+[[private-mode-installed-in-the-cloud]]
 === クラウドにインストールされたプライベートモード
 
 [cols="3*"]
@@ -112,6 +114,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 |===
 
 
+[[private-mode-installed-on-premises]]
 === プライベートモードがオンプレミスにインストールされました
 
 [cols="3*"]

@@ -20,10 +20,12 @@ summary: 今回のリリースでサポートされていない、または今�
 
 
 
+[[console-agent-limitations]]
 == コンソールエージェントの制限
 
 
 
+[[possible-conflict-with-ip-addresses-in-the-172-range]]
 === 172番台のIPアドレスとの競合の可能性
 
 NetApp Consoleは、172.17.0.0/16 および 172.18.0.0/16 の範囲の IP アドレスを持つ 2 つのインターフェースを持つエージェントを展開します。
@@ -34,6 +36,7 @@ NetApp Consoleは、172.17.0.0/16 および 172.18.0.0/16 の範囲の IP アド
 
 
 
+[[ssl-decryption-supported-only-for-cloud-volumes-ontap]]
 === SSL 復号化は Cloud Volumes ONTAP でのみサポートされます
 
 透過プロキシ サーバは、Cloud Volumes ONTAP に関連付けられたエージェントでのみサポートされます。他のNetAppデータサービスで使用されているエージェントでは、透過プロキシを使用できません。NetAppデータサービスを Cloud Volumes ONTAP と併用する場合は、透過プロキシ サーバを使用できる Cloud Volumes ONTAP 専用のエージェントを作成してください。
@@ -42,6 +45,7 @@ NetApp Consoleは、172.17.0.0/16 および 172.18.0.0/16 の範囲の IP アド
 
 
 
+[[blank-page-when-loading-the-local-ui]]
 === ローカルUIを読み込むときに空白ページが表示される
 
 エージェント上で実行されている Web ベースのコンソールをロードすると、インターフェイスが表示されず、空白のページが表示される場合があります。
@@ -50,12 +54,14 @@ NetApp Consoleは、172.17.0.0/16 および 172.18.0.0/16 の範囲の IP アド
 
 
 
+[[shared-linux-hosts-are-not-supported]]
 === 共有Linuxホストはサポートされていません
 
 エージェントは、他のアプリケーションと共有されている VM ではサポートされません。  VM はエージェント ソフトウェア専用にする必要があります。
 
 
 
+[[third-party-agents-and-extensions]]
 === サードパーティのエージェントと拡張機能
 
 エージェント VM では、サードパーティ エージェントまたは VM 拡張機能はサポートされません。

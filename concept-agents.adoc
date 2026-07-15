@@ -18,6 +18,7 @@ summary: コンソールエージェントは、ストレージインフラス�
 
 
 
+[[what-a-console-agent-does]]
 == コンソールエージェントの機能
 
 コンソールエージェントは、ストレージシステムとNetApp Consoleの間の接続ギャップを埋めます。インフラストラクチャをNetApp APIとConsoleに安全に接続し、次のことが可能になります：
@@ -30,6 +31,7 @@ summary: コンソールエージェントは、ストレージインフラス�
 
 
 
+[[console-agent-architecture]]
 === Console エージェントアーキテクチャ
 
 エージェントは次のような軽量プロセスで動作します：
@@ -42,6 +44,8 @@ summary: コンソールエージェントは、ストレージインフラス�
 
 
 
+[[console-agent-availability-and-operational-requirements]]
+[[agents-must-be-operational-at-all-times]]
 === Console エージェントの可用性と運用要件
 
 コンソールエージェントは、NetApp Consoleにとって重要です。エージェントは、管理およびデータサービスを中断なく提供するために、常に稼働状態を維持し、到達可能な状態にしておく必要があります。お客様は以下を確実に実行する責任があります：
@@ -54,6 +58,7 @@ summary: コンソールエージェントは、ストレージインフラス�
 
 
 
+[[when-you-need-a-console-agent]]
 == Console エージェントが必要な場合
 
 以下の場合には、少なくとも 1 つの Console エージェントを展開する必要があります：
@@ -290,6 +295,7 @@ link:concept-modes.html["NetApp Consoleの導入モードについて学ぶ"]エ
 
 
 
+[[deployment-options-for-console-agents]]
 == Console エージェントの導入オプション
 
 Console エージェントは次の場所に導入できます：
@@ -309,6 +315,7 @@ NetApp Consoleの導入モード、ストレージ環境、およびデータ主
 
 
 
+[[agents-for-the-netapp-console-saas-application-standard-mode]]
 === NetApp Console SaaS アプリケーション（標準モード）のエージェント
 
 クラウドまたはオンプレミスにエージェントを導入して、クラウドでホストされる Console SaaS アプリケーションへの接続をブリッジします。エージェントは高度な機能を有効にしますが、Console UI はどこからでもアクセスできます。
@@ -317,6 +324,7 @@ SaaSアプリケーション（標準モード）を使用している場合は�
 
 
 
+[[agents-for-netapp-console-in-restricted-mode]]
 === 制限モードのNetApp ConsoleのエージェントNetApp
 
 制限モードでは、ユーザーはクラウドでホストされているSaaSアプリケーションからではなく、インストール済みのエージェントから直接NetApp Consoleにアクセスします。Consoleアクセスポイントとして機能するエージェントを少なくとも1つインストールする必要があります。データサービスを有効にし、ストレージシステムを管理するには、追加のエージェントが必要です。
@@ -325,6 +333,7 @@ SaaSアプリケーション（標準モード）を使用している場合は�
 
 
 
+[[agents-for-netapp-console-in-private-mode-on-premises-or-in-the-cloud-with-no-outbound-connectivity]]
 === プライベートモードのNetApp Console用エージェント（オンプレミスまたはアウトバウンド接続のないクラウド内）
 
 プライベートモードでは、ユーザーはインストール済みのエージェントからNetApp Consoleに直接アクセスします。Consoleアクセスポイントとして機能するエージェントを少なくとも1つインストールする必要があります。データサービスを有効にし、ストレージシステムを管理するには、追加のエージェントが必要です。
@@ -333,6 +342,7 @@ SaaSアプリケーション（標準モード）を使用している場合は�
 
 
 
+[[use-multiple-agents-when-needed]]
 === 必要に応じて複数のエージェントを使用する
 
 各エージェントは独立して動作し、複数のストレージ システムとデータ サービスを管理できます。次の場合は複数のエージェントを導入します：
@@ -349,6 +359,7 @@ SaaSアプリケーション（標準モード）を使用している場合は�
 
 
 
+[[console-agent-upgrades]]
 == コンソールエージェントのアップグレード
 
 クラウド上のエージェントは、インターネットへの外部アクセスが可能になると自動的にアップグレードされます。インターネットにアクセスできないエージェント（プライベートモード）については、link:task-upgrade-agent.html["コンソールエージェントのアップグレードを管理する"]手動アップグレードの手順を参照してください。

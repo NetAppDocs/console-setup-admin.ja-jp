@@ -51,6 +51,7 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 ====
 
 
+[[supported-features-and-services-for-netapp-console-in-restricted-mode]]
 == 制限モードの NetApp Console でサポートされている機能とサービス
 
 次の表は、制限モードでインストールした場合にNetApp Consoleで利用可能なストレージ管理機能、データサービス、および管理機能の一覧です。

@@ -27,6 +27,8 @@ NOTE: このトピックでは、 NetApp Console標準モード 3.9.55 以下の
 
 
 
+[[update-your-endpoint-list-to-the-revised-list-for-4-0-0-and-higher]]
+[[update-endpoint-list]]
 == エンドポイント リストを 4.0.0 以降の改訂リストに更新します。
 
 バージョン 4.0.0 以降、コンソール エージェントに必要なエンドポイントが少なくなります。  4.0.0 より前の既存のデプロイメントは引き続きサポートされます。  4.0.0 以降にアップグレードした後、都合の良いときに古いエンドポイントを許可リストから削除できます。
@@ -106,6 +108,7 @@ systemctl status netapp-service-manager.service
 
 
 
+[[endpoints-for-netapp-console-and-console-agents-for-3-9-55-and-below]]
 == NetApp Consoleおよびコンソール エージェント 3.9.55 以前のエンドポイント
 
 これらのエンドポイントは、コンソール エージェント 3.9.55 以下に使用されます。
@@ -152,6 +155,7 @@ NetApp、ランサムウェア耐性またはバックアップとリカバリ�
 |===
 
 
+[[cloud-provider-endpoints-contacted-by-the-console-agent]]
 == コンソールエージェントが接続するクラウドプロバイダーエンドポイント
 
 コンソール エージェントがクラウド プロバイダーに展開されている場合、追加のエンドポイントにアクセスできる必要があります。
@@ -167,12 +171,14 @@ NetApp、ランサムウェア耐性またはバックアップとリカバリ�
 
 
 
+[[data-services-endpoints-contacted-by-the-console-agent]]
 == コンソールエージェントが接続するデータサービスエンドポイント
 
 コンソール エージェントでは、一部のNetAppデータ サービスとCloud Volumes ONTAP をサポートするために、追加の送信インターネット アクセスが必要です。
 
 
 
+[[endpoints-for-cloud-volumes-ontap]]
 === Cloud Volumes ONTAPのエンドポイント
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS のCloud Volumes ONTAPのエンドポイント"]

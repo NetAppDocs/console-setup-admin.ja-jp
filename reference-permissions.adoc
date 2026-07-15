@@ -18,12 +18,14 @@ summary: NetApp Consoleの機能とサービスを使用するには、コンソ
 
 
 
+[[aws-permissions]]
 == AWS 権限
 
 NetApp Consoleには、コンソールエージェントと個々のサービスに対する AWS 権限が必要です。
 
 
 
+[[console-agents]]
 === コンソールエージェント
 
 [cols="20,60,20"]
@@ -35,6 +37,7 @@ NetApp Consoleには、コンソールエージェントと個々のサービス
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -46,6 +49,7 @@ NetApp Consoleには、コンソールエージェントと個々のサービス
 |===
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 [cols="20,60,20"]
@@ -57,6 +61,7 @@ NetApp Consoleには、コンソールエージェントと個々のサービス
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -74,6 +79,7 @@ NetApp Consoleには、コンソールエージェントと個々のサービス
 |===
 
 
+[[fsx-for-ontap]]
 === ONTAP向け FSx
 
 [cols="20,60,20"]
@@ -85,6 +91,7 @@ NetApp Consoleには、コンソールエージェントと個々のサービス
 |===
 
 
+[[netapp-cloud-tiering]]
 === NetApp Cloud Tiering
 
 [NOTE]
@@ -109,12 +116,14 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 |===
 
 
+[[azure-permissions]]
 == Azure のアクセス許可
 
 コンソールには、コンソール エージェントと個々のサービスに対する Azure アクセス許可が必要です。
 
 
 
+[[console-agent]]
 === コンソールエージェント
 
 [cols="20,60,20"]
@@ -137,6 +146,7 @@ link:reference-permissions-azure.html["コンソールエージェントの Azur
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -160,6 +170,7 @@ NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアッ�
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -171,12 +182,14 @@ NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアッ�
 |===
 
 
+[[google-cloud-permissions]]
 == Google Cloud の権限
 
 コンソールでは、コンソール エージェントと個々のサービスに対する Google Cloud 権限が必要です。
 
 
 
+[[console-agents]]
 === コンソールエージェント
 
 [cols="20,60,20"]
@@ -191,6 +204,7 @@ NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアッ�
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -215,6 +229,7 @@ NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアッ�
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -229,12 +244,14 @@ NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアッ�
 |===
 
 
+[[storagegrid-permissions]]
 == StorageGRID権限
 
 コンソールには、2 つのサービスに対するStorageGRID権限が必要です。
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -246,6 +263,7 @@ NetApp Backup and Recoveryを使用してCloud Volumes ONTAPをバックアッ�
 |===
 
 
+[[netapp-cloud-tiering]]
 === NetApp Cloud Tiering
 
 [NOTE]

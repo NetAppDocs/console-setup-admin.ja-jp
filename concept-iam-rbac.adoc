@@ -26,6 +26,7 @@ NetAppは、各ロールがそのタスクに必要な権限のみを含むよ�
 
 
 
+[[types-of-console-organization-members]]
 == コンソール組織メンバーの種類
 
 NetApp Console 組織には、3 種類のメンバーがあります：
@@ -39,6 +40,7 @@ link:task-iam-manage-members-permissions.html#add-members["組織にメンバー
 
 
 
+[[predefined-roles-in-netapp-console]]
 == NetApp Consoleの事前定義されたロール
 
 NetApp Consoleには、組織のメンバーに割り当てることができる定義済みのロールが含まれています。各ロールには、割り当てられた範囲 (組織、フォルダ、またはプロジェクト) 内でメンバーが実行できるアクションを指定する権限が含まれています。

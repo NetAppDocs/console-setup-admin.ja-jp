@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-52]]
 === コネクタ 3.9.52
 
 BlueXPコネクタのこのリリースには、マイナーなセキュリティの改善とバグ修正、およびいくつかの追加の更新が含まれています。
@@ -24,12 +25,14 @@ BlueXPコネクタのこのリリースには、マイナーなセキュリテ�
 
 
 
+[[keystone-administration-available-in-bluexp]]
 === BlueXPでKeystone管理が利用可能
 
 BlueXPのNetApp Keystoneベータ版では、 Keystone管理へのアクセスが追加されました。  BlueXPの左側のナビゲーション バーから、 NetApp Keystoneベータ版のサインアップ ページにアクセスできます。
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXPアイデンティティおよびアクセス管理 (IAM)
 
 

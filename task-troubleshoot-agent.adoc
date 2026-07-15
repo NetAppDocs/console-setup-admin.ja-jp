@@ -20,6 +20,7 @@ NetAppサポートサイトのアカウントをお持ちの場合は、link:htt
 
 
 
+[[common-error-messages-and-resolutions]]
 == 一般的なエラーメッセージと解決策
 
 次の表に、一般的なエラー メッセージとその修正方法を示します。
@@ -76,6 +77,8 @@ NetAppエージェントUIにアクセスできません
 |===
 
 
+[[check-the-console-agent-status]]
+[[check-agent-status]]
 == コンソールエージェントのステータスを確認する
 
 次のいずれかのコマンドを使用して、Consoleエージェントを確認します。すべてのサービスのステータスが_Running_である必要があります。そうでない場合は、NetAppサポートにお問い合わせください。
@@ -109,6 +112,7 @@ podman ps -a
 
 
 
+[[view-the-console-agent-version]]
 == コンソールエージェントのバージョンを表示する
 
 コンソール エージェントのバージョンを表示してアップグレードを確認するか、 NetApp の担当者と共有してください。
@@ -122,6 +126,7 @@ podman ps -a
 
 
 
+[[validate-that-the-console-agent-meets-requirements]]
 == Console エージェントが要件を満たしていることを検証する
 
 コンソールエージェントは、特定のネットワークエンドポイントへのアクセス権限を必要とし、複数のポートを開放する必要があり、ハードウェア要件を満たさなければなりません。コンソールから、またはエージェントメンテナンスコンソールを使用して、コンソールエージェントがこれらの要件を満たしているかどうかを確認できます。
@@ -146,6 +151,8 @@ image:screenshot-agent-validate.png["エージェントの「アクション」�
 
 
 
+[[console-agent-installation-issues]]
+[[troubleshoot-installation]]
 == コンソールエージェントのインストールに関する問題
 
 インストールに失敗した場合は、レポートとログを表示して問題を解決してください。
@@ -168,10 +175,13 @@ image:screenshot-agent-validate.png["エージェントの「アクション」�
 ====
 
 
+[[disable-configuration-checks-for-manual-installations]]
+[[disable-config-check]]
 === 手動インストールの構成チェックを無効にする
 
 
 
+[[disable-configuration-checks-for-manual-installations]]
 === 手動インストールの構成チェックを無効にする
 
 インストール中に送信接続を検証する構成チェックを無効にする必要がある場合があります。たとえば、Government Cloud 環境にエージェントを手動でインストールする場合は、構成チェックを無効にする必要があります。無効にしないと、インストールは失敗します。
@@ -206,12 +216,14 @@ systemctl restart netapp-service-manager.service
 
 
 
+[[work-with-netapp-support]]
 == NetAppサポートと連携する
 
 コンソールエージェントの問題を解決できない場合は、NetAppサポートに連絡することを推奨します。NetAppサポート担当者は、コンソールエージェントIDを要求するか、コンソールエージェントのログをまだ持っていない場合は、ログの送信を求める場合があります。
 
 
 
+[[find-the-console-agent-id]]
 === コンソールエージェントIDを見つける
 
 作業を開始するには、コンソール エージェントのシステム ID が必要になる場合があります。  ID は通常、ライセンスとトラブルシューティングの目的で使用されます。
@@ -232,6 +244,7 @@ image:screenshot-system-id.png["サポート ダッシュボードに表示さ�
 
 
 
+[[download-or-send-an-autosupport-message]]
 === AutoSupportメッセージをダウンロードまたは送信する
 
 問題が発生している場合は、NetAppからトラブルシューティングのためにAutoSupportメッセージをNetAppサポートに送信するよう依頼されることがあります。
@@ -251,6 +264,7 @@ NOTE: NetApp Consoleは、負荷分散のため、 AutoSupportメッセージを
 
 
 
+[[fix-download-failures-when-using-a-google-cloud-nat-gateway]]
 == Google Cloud NAT ゲートウェイ使用時のダウンロード失敗を修正
 
 コンソール エージェントは、 Cloud Volumes ONTAPのソフトウェア アップデートを自動的にダウンロードします。 Google Cloud NAT ゲートウェイを使用している場合、設定によりダウンロードが失敗する可能性があります。ソフトウェア イメージを分割する部分の数を制限することで、この問題を修正できます。この手順は API を使用して完了する必要があります。
@@ -276,6 +290,7 @@ https://docs.netapp.com/us-en/console-automation/cm/api_ref_resources.html#occmc
 
 
 
+[[get-help-from-the-netapp-knowledge-base]]
 == NetAppナレッジベースからヘルプを入手する
 
 https://kb.netapp.com/Special:Search?path=Cloud%2FBlueXP&query=connector&type=wiki["NetAppサポートチームが作成したトラブルシューティング情報を表示します"] 。

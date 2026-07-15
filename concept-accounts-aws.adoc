@@ -18,6 +18,7 @@ summary: NetApp Consoleを使用すると、コンソール エージェント�
 
 
 
+[[initial-aws-credentials]]
 == 初期AWS認証情報
 
 コンソールからコンソールエージェントをデプロイする場合、IAMロールのARN、またはIAMユーザーのアクセスキーを指定する必要があります。認証方法には、AWSにコンソールエージェントをデプロイするための権限が必要です。必要な権限はlink:task-install-agent-aws-console.html#aws-permissions-agent["AWS のエージェント展開ポリシー"]に記載されています。
@@ -34,6 +35,7 @@ image:screenshot_accounts_select_aws.gif["詳細と資格情報ページのア�
 
 
 
+[[additional-aws-credentials]]
 == 追加のAWS認証情報
 
 次の場合には、コンソールに追加の AWS 認証情報を追加する必要があるかもしれません。
@@ -47,6 +49,7 @@ image:screenshot_accounts_select_aws.gif["詳細と資格情報ページのア�
 
 
 
+[[add-aws-credentials-to-use-a-console-agent-with-another-aws-account]]
 === 別の AWS アカウントでコンソールエージェントを使用するには、AWS 認証情報を追加します。
 
 追加の AWS アカウントでコンソールを使用するには、信頼できるアカウントの AWS キーまたはロールの ARN を指定します。次の図は、信頼できるアカウントの IAM ロールを通じて権限を提供するアカウントと、IAM ユーザーの AWS キーを通じて権限を提供するアカウントの 2 つの追加アカウントを示しています。
@@ -63,6 +66,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["既存のエージ
 
 
 
+[[add-aws-credentials-to-create-a-console-agent]]
 === コンソールエージェントを作成するにはAWS認証情報を追加します
 
 AWS 認証情報を追加すると、コンソールエージェントを作成するための権限が付与されます。
@@ -71,6 +75,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["コンソールエ
 
 
 
+[[add-aws-credentials-for-fsx-for-ontap]]
 === FSx for ONTAPに AWS 認証情報を追加する
 
 FSx for ONTAPシステムを作成および管理するために必要な権限を付与するには、コンソールに AWS 認証情報を追加します。
@@ -79,6 +84,7 @@ https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-set
 
 
 
+[[credentials-and-marketplace-subscriptions]]
 == 資格情報とマーケットプレイスのサブスクリプション
 
 Cloud Volumes ONTAPやその他のNetAppデータ サービスの料金を時間単位 (PAYGO) または年間契約で支払うには、コンソール エージェントに追加する認証情報を AWS Marketplace サブスクリプションに関連付ける必要があります。link:task-adding-aws-accounts.html#subscribe["AWSサブスクリプションを関連付ける方法を学ぶ"]。
@@ -91,12 +97,14 @@ AWS 認証情報とマーケットプレイスサブスクリプションにつ�
 
 
 
+[[faq]]
 == FAQ
 
 次の質問は、資格情報とサブスクリプションに関連しています。
 
 
 
+[[how-can-i-securely-rotate-my-aws-credentials]]
 === AWS 認証情報を安全にローテーションするにはどうすればよいですか?
 
 上のセクションで説明したように、コンソールでは、コンソールエージェントに関連付けられた IAM ロール、信頼できるアカウントでの IAM ロールの引き受け、または AWS アクセスキーの提供など、いくつかの方法で AWS 認証情報を提供できます。
@@ -107,6 +115,7 @@ AWS 認証情報とマーケットプレイスサブスクリプションにつ�
 
 
 
+[[can-i-change-the-aws-marketplace-subscription-for-cloud-volumes-ontap-systems]]
 === Cloud Volumes ONTAPシステムの AWS Marketplace サブスクリプションを変更できますか?
 
 はい、できます。認証情報セットに関連付けられている AWS Marketplace サブスクリプションを変更すると、既存および新規のすべてのCloud Volumes ONTAPシステムに新しいサブスクリプションの料金が課金されます。
@@ -115,6 +124,7 @@ link:task-adding-aws-accounts.html#subscribe["AWSサブスクリプションを�
 
 
 
+[[can-i-add-multiple-aws-credentials-each-with-different-marketplace-subscriptions]]
 === それぞれ異なるマーケットプレイスサブスクリプションを持つ複数の AWS 認証情報を追加できますか?
 
 同じ AWS アカウントに属するすべての AWS 認証情報は、同じ AWS Marketplace サブスクリプションに関連付けられます。
@@ -123,12 +133,14 @@ link:task-adding-aws-accounts.html#subscribe["AWSサブスクリプションを�
 
 
 
+[[can-i-move-existing-cloud-volumes-ontap-systems-to-a-different-aws-account]]
 === 既存のCloud Volumes ONTAPシステムを別の AWS アカウントに移動できますか?
 
 いいえ、 Cloud Volumes ONTAPシステムに関連付けられている AWS リソースを別の AWS アカウントに移動することはできません。
 
 
 
+[[how-do-credentials-work-for-marketplace-deployments-and-on-premises-deployments]]
 === マーケットプレイスの展開とオンプレミスの展開では資格情報はどのように機能しますか?
 
 上記のセクションでは、Consoleエージェントの推奨されるデプロイ方法である、Consoleからのデプロイ方法について説明しています。AWS Marketplaceから AWS にエージェントをデプロイすることもできます。また、Consoleエージェントソフトウェアを独自のLinuxホストまたはvCenterに手動でインストールすることもできます。

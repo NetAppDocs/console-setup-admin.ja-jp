@@ -22,6 +22,7 @@ NetApp Consoleとそのストレージ ソリューションおよびデータ �
 
 
 
+[[support-registration-overview]]
 == サポート登録の概要
 
 サポート資格を有効にするには、次の 2 つの登録形式があります。
@@ -40,12 +41,14 @@ NetApp Consoleとそのストレージ ソリューションおよびデータ �
 
 
 
+[[register-netapp-console-for-netapp-support]]
 == NetAppサポートのためにNetApp Consoleを登録する
 
 サポートに登録し、サポート資格を有効にするには、 NetApp Consoleアカウントの 1 人のユーザーがNetAppサポート サイト アカウントをコンソール ログインに関連付ける必要があります。  NetAppサポートに登録する方法は、 NetAppサポート サイト (NSS) アカウントをすでにお持ちかどうかによって異なります。
 
 
 
+[[existing-customer-with-an-nss-account]]
 === NSSアカウントをお持ちの既存顧客
 
 NSS アカウントをお持ちのNetApp のお客様の場合は、コンソールからサポートに登録するだけです。
@@ -65,6 +68,7 @@ NSS アカウントをお持ちのNetApp のお客様の場合は、コンソー
 
 
 
+[[existing-customer-but-no-nss-account]]
 === 既存の顧客だがNSSアカウントがない
 
 既存のNetApp顧客であり、既存のライセンスとシリアル番号を持っているものの、NSS アカウントを持っていない場合は、NSS アカウントを作成し、それをコンソール ログインに関連付ける必要があります。
@@ -81,6 +85,7 @@ NSS アカウントをお持ちのNetApp のお客様の場合は、コンソー
 
 
 
+[[brand-new-to-netapp]]
 === NetAppの新着情報
 
 NetAppを初めて使用し、NSS アカウントをお持ちでない場合は、以下の手順に従ってください。
@@ -117,6 +122,7 @@ NetAppサポートサイトのアカウントを取得したら、以下の手�
 
 
 
+[[associate-nss-credentials-for-cloud-volumes-ontap-support]]
 == Cloud Volumes ONTAPサポートに NSS 認証情報を関連付ける
 
 Cloud Volumes ONTAPの次の主要なワークフローを有効にするには、 NetAppサポート サイトの認証情報をコンソール アカウントに関連付ける必要があります。

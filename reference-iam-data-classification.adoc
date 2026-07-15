@@ -22,6 +22,7 @@ Data Classificationは、次の2つの役割をサポートします：
 
 
 
+[[compliance-admin]]
 == コンプライアンス管理者
 
 コンプライアンス管理者ロールは、組織レベルでのみ機能し、NetApp Data Classificationリソースへのアクセスを管理します。組織管理者よりも権限の低いユーザーの場合、NetApp Data Classificationをインストールするにはコンプライアンス管理者ロールが必要です。
@@ -34,12 +35,14 @@ NOTE: コンプライアンス管理者機能は、バージョン1.54でNetApp 
 
 
 
+[[classification-viewer]]
 == 分類ビューア
 
 分類ビューアは、Data Classificationにおけるスキャン結果へのアクセスは必要だが、構成リソースへのアクセスは必要ないユーザー向けに設計されています。分類ビューアの役割を持つユーザーは、マッピングとフルスキャンの結果を表示して、ストレージ容量の節約や潜在的なデータリスクのある領域を評価できます。分類ビューアロールを持つユーザーは、アクセス権のあるリソースに関するレポートを生成することもできます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。
 
 
 
+[[more-information]]
 == 詳細情報
 
 * link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["NetApp Data Classificationについて学ぶ"^]

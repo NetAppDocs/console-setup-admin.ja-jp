@@ -18,6 +18,7 @@ Consoleエージェントは、アウトバウンド接続がある場合に自�
 
 
 
+[[upgrade-the-console-agent]]
 == コンソールエージェントをアップグレードする
 
 アップグレード処理中にコンソールエージェントを再起動する必要があるため、アップグレード中はNetApp Consoleを使用できません。
@@ -48,6 +49,7 @@ sudo /path/NetApp-Console-Agent-Offline-<version>
 
 
 
+[[upgrade-a-vcenter-deployed-console-agent-using-an-iso]]
 == ISOを使用してvCenterにデプロイされたConsoleエージェントをアップグレードする
 
 コンソールエージェントがOVAを使用してvCenterにデプロイされている場合、ISOをVMにマウントし、VMメンテナンスコンソールからアップグレードを実行することで、新しいバージョンにアップグレードできます。

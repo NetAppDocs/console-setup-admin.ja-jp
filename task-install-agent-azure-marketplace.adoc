@@ -28,6 +28,7 @@ NOTE: Cloud Volumes ONTAPシステムを管理するコンソールエージェ�
 
 
 
+[[step-1-set-up-networking]]
 == ステップ1: ネットワークを設定する
 
 コンソールエージェントをインストールする予定のネットワークロケーションが、以下の要件を満たしていることを確認してください。これらの要件を満たすことで、コンソールエージェントはハイブリッドクラウド内のリソースを管理できるようになります。
@@ -145,6 +146,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-2-review-vm-requirements]]
 == ステップ2: VMの要件を確認する
 
 コンソール エージェントを作成するときは、次の要件を満たす仮想マシンの種類を選択します。
@@ -156,6 +158,7 @@ Azure VM サイズ:: CPU と RAM の要件を満たすインスタンス タイ�
 
 
 
+[[step-3-set-up-permissions]]
 == ステップ3: 権限を設定する
 
 権限は次の方法で付与できます。
@@ -364,6 +367,7 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 ====
 
 
+[[step-4-create-the-console-agent]]
 == ステップ4: コンソールエージェントを作成する
 
 Azure Marketplace からコンソール エージェントを直接起動します。
@@ -448,6 +452,7 @@ https://_ipaddress_[]
 
 
 
+[[step-5-provide-permissions-to-the-console-agent]]
 == ステップ5: コンソールエージェントに権限を付与する
 
 コンソール エージェントを作成したので、以前に設定した権限をエージェントに付与する必要があります。権限を付与すると、コンソール エージェントは Azure 内のデータとストレージ インフラストラクチャを管理できるようになります。

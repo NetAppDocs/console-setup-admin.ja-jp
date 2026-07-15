@@ -176,12 +176,14 @@ Azure Marketplace からエージェントをデプロイする場合、また�
 ----
 
 
+[[how-azure-permissions-are-used]]
 == Azure の権限の使用方法
 
 次のセクションでは、各NetAppストレージ システムおよびデータ サービスに対する権限の使用方法について説明します。この情報は、必要な場合にのみ権限を付与するように企業ポリシーで定められている場合に役立ちます。
 
 
 
+[[azure-netapp-files]]
 === Azure NetApp Files
 
 NetApp Data Classification を使用してAzure NetApp Filesデータをスキャンすると、エージェントは次の API 要求を行います。
@@ -195,6 +197,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 次のセクションでは、NetApp Backup and Recoveryで権限がどのように使用されるかについて説明します。
@@ -299,6 +302,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 
 
 
+[[netapp-data-classification]]
 === NetApp Data Classification
 
 データ分類を使用する場合、エージェントは次の API リクエストを行います。
@@ -444,6 +448,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 |===
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 エージェントは、Azure でCloud Volumes ONTAP をデプロイおよび管理するために、次の API 要求を行います。
@@ -766,6 +771,7 @@ NetApp Data Classification を使用してAzure NetApp Filesデータをスキ�
 |===
 
 
+[[tiering]]
 === 階層化
 
 NetApp Cloud Tieringをセットアップすると、エージェントは次の API 要求を行います。
@@ -798,12 +804,14 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 ====
 
 
+[[change-log]]
 == 変更ログ
 
 権限が追加または削除されると、以下のセクションでその旨を記録します。
 
 
 
+[[11-november-2025]]
 === 2025年11月11日
 
 可能な限り少ない権限と可能な限り狭い範囲を反映するカスタム JSON ポリシーが追加されました。
@@ -845,6 +853,7 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 
 
 
+[[9-september-2024]]
 === 2024年9月9日
 
 コンソールでは Kubernetes クラスターの検出と管理がサポートされなくなったため、次の権限が JSON ポリシーから削除されました。
@@ -855,6 +864,7 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 
 
 
+[[22-august-2024]]
 === 2024年8月22日
 
 仮想マシン スケール セットのCloud Volumes ONTAPサポートに必要なため、次の権限が JSON ポリシーに追加されました。
@@ -866,6 +876,7 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 
 
 
+[[5-december-2023]]
 === 2023年12月5日
 
 ボリューム データを Azure Blob ストレージにバックアップする場合、 NetApp Backup and Recoveryでは次の権限は不要になりました。
@@ -881,6 +892,7 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 
 
 
+[[12-may-2023]]
 === 2023年5月12日
 
 Cloud Volumes ONTAP管理に必要なため、次の権限が JSON ポリシーに追加されました。
@@ -897,6 +909,7 @@ Cloud Volumes ONTAP管理に必要なため、次の権限が JSON ポリシー�
 
 
 
+[[23-march-2023]]
 === 2023年3月23日
 
 データ分類には「Microsoft.Storage/storageAccounts/delete」アクセス許可は不要になりました。
@@ -905,6 +918,7 @@ Cloud Volumes ONTAP管理に必要なため、次の権限が JSON ポリシー�
 
 
 
+[[5-january-2023]]
 === 2023年1月5日
 
 次の権限が JSON ポリシーに追加されました。

@@ -25,6 +25,7 @@ Google Cloud にエージェントを導入すると、選択した VPC 内で L
 
 
 
+[[step-1-review-host-requirements]]
 == ステップ1: ホストの要件を確認する
 
 コンソール エージェント ソフトウェアは、特定のオペレーティング システム要件、RAM 要件、ポート要件などを満たすホスト上で実行する必要があります。
@@ -156,6 +157,8 @@ Docker エンジン 23.0.6 から 28.0.0。
 |===
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == ステップ2: PodmanまたはDocker Engineをインストールする
 
 オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要になります。
@@ -341,6 +344,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == ステップ3: ネットワークを設定する
 
 コンソール エージェントがハイブリッド クラウド環境内のリソースとプロセスを管理できるようにネットワークを設定します。たとえば、ターゲット ネットワークへの接続が利用可能であること、および発信インターネット アクセスが利用可能であることを確認する必要があります。
@@ -445,6 +449,8 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-4-set-up-permissions-for-the-console-agent]]
+[[agent-permissions-google]]
 == ステップ4: コンソールエージェントの権限を設定する
 
 Google Cloud 内のリソースを管理するためにコンソールが必要とする権限をコンソール エージェントに付与するには、Google Cloud サービス アカウントが必要です。コンソール エージェントを作成するときは、このサービス アカウントをコンソール エージェント VM に関連付ける必要があります。
@@ -504,6 +510,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 
 
+[[step-5-set-up-shared-vpc-permissions]]
 == ステップ5: 共有VPC権限を設定する
 
 共有 VPC を使用してリソースをサービス プロジェクトにデプロイする場合は、権限を準備する必要があります。
@@ -556,6 +563,7 @@ compute.networkUser
 ====
 
 
+[[step-6-enable-google-cloud-apis]]
 == ステップ6: Google Cloud APIを有効にする
 
 Google Cloud にコンソール エージェントをデプロイする前に、いくつかの Google Cloud API を有効にする必要があります。
@@ -580,6 +588,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 
 
+[[step-7-install-the-console-agent]]
 == ステップ7: コンソールエージェントをインストールする
 
 前提条件が完了したら、独自の Linux ホストにソフトウェアを手動でインストールできます。
@@ -746,6 +755,7 @@ NOTE: インストールが失敗した場合は、トラブルシューティ�
 
 
 
+[[step-8-provide-permissions-to-console-agent]]
 == ステップ8: コンソールエージェントに権限を付与する
 
 以前に設定した Google Cloud 権限をコンソール エージェントに提供する必要があります。権限を付与すると、コンソール エージェントが Google Cloud 内のデータとストレージ インフラストラクチャを管理できるようになります。

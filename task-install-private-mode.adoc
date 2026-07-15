@@ -18,6 +18,7 @@ NetApp Consoleをプライベート モードで導入すると、アウトバ�
 
 
 
+[[step-1-install-the-console-agent]]
 == ステップ1: コンソールエージェントをインストールする
 
 製品のインストーラーをNetApp Support Siteからダウンロードし、自分のLinuxホストにConsoleを手動でインストールします。
@@ -62,6 +63,7 @@ sudo /path/NetApp-Console-Private-Mode-<version>
 
 
 
+[[step-2-set-up-netapp-console]]
 == ステップ2: NetApp Consoleをセットアップする
 
 NetApp Consoleに初めてアクセスすると、NetApp Consoleのセットアップを求められます。
@@ -88,6 +90,7 @@ Console エージェントがインストールされました。Web ブラウ�
 
 
 
+[[step-3-provide-permissions-to-console-agent]]
 == ステップ3：Consoleエージェントに権限を付与する
 
 Cloud Volumes ONTAP 作業環境を作成する場合は、以前に設定したクラウド プロバイダの権限をコンソールエージェントに付与する必要があります。

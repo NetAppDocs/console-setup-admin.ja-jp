@@ -19,6 +19,7 @@ NetApp Console組織には名前とIDがあります。組織を識別しやす�
 
 
 
+[[rename-your-organization]]
 == 組織名を変更する
 
 組織名を変更できます。複数の組織をサポートしている場合に役立ちます。
@@ -35,6 +36,7 @@ image:screenshot-iam-edit-organization.png["アクションアイコンと「組
 
 
 
+[[get-the-organization-id]]
 == 組織IDを取得する
 
 組織 ID は、コンソールとの特定の統合に使用されます。
@@ -48,6 +50,8 @@ image:screenshot-iam-edit-organization.png["アクションアイコンと「組
 
 
 
+[[obtain-the-id-for-a-project]]
+[[project-id]]
 == プロジェクトのIDを取得する
 
 API を使用している場合は、プロジェクトの ID を取得する必要があります。たとえば、 Cloud Volumes ONTAPシステムを作成する場合などです。

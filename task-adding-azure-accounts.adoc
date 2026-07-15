@@ -18,6 +18,7 @@ Azure 資格情報を追加および管理して、 NetApp ConsoleがAzure サ�
 
 
 
+[[overview]]
 == 概要
 
 コンソールで追加の Azure サブスクリプションと資格情報を追加するには、2 つの方法があります。
@@ -28,6 +29,7 @@ Azure 資格情報を追加および管理して、 NetApp ConsoleがAzure サ�
 
 
 
+[[associate-additional-azure-subscriptions-with-a-managed-identity]]
 == 追加の Azure サブスクリプションをマネージド ID に関連付ける
 
 コンソールを使用すると、Cloud Volumes ONTAPをデプロイする Azure 資格情報と Azure サブスクリプションを選択できます。マネージドIDプロファイルに別のAzureサブスクリプションを選択することはできません。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["マネージドID"^]それらのサブスクリプションで。
@@ -65,6 +67,8 @@ image:screenshot_accounts_switch_azure_subscription.gif["Microsoft Azure プロ�
 
 
 
+[[add-additional-azure-credentials-to-netapp-console]]
+[[add-credentials-azure]]
 == NetApp Consoleに Azure 資格情報を追加する
 
 コンソールからコンソール エージェントを展開すると、コンソールは必要なアクセス許可を持つ仮想マシン上でシステム割り当てのマネージド ID を有効にします。  Cloud Volumes ONTAPの新しいシステムを作成するときに、コンソールはデフォルトでこれらの Azure 資格情報を選択します。
@@ -76,6 +80,7 @@ TIP: 既存のシステムにコンソール エージェント ソフトウェ�
 
 
 
+[[grant-azure-permissions-using-a-service-principal]]
 === サービス プリンシパルを使用して Azure 権限を付与する
 
 コンソールには、Azure でアクションを実行するための権限が必要です。  Microsoft Entra ID でサービス プリンシパルを作成して設定し、コンソールに必要な Azure 資格情報を取得することで、Azure アカウントに必要な権限を付与できます。
@@ -231,6 +236,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Azure サービス管理 API �
 
 
 
+[[ids]]
 ==== アプリケーションIDとディレクトリIDを取得する
 
 Azure アカウントをコンソールに追加するときは、アプリケーションのアプリケーション (クライアント) ID とディレクトリ (テナント) ID を指定する必要があります。コンソールは ID を使用してプログラムでサインインします。
@@ -269,6 +275,7 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 
 
 
+[[add-the-credentials-to-the-console]]
 === コンソールに資格情報を追加する
 
 Azure アカウントに必要な権限を付与したら、そのアカウントの資格情報をコンソールに追加できます。この手順を完了すると、さまざまな Azure 資格情報を使用してCloud Volumes ONTAP を起動できるようになります。
@@ -303,12 +310,15 @@ image:screenshot_accounts_switch_azure.gif["「詳細と資格情報」ページ
 
 
 
+[[manage-existing-credentials]]
 == 既存の資格情報を管理する
 
 Marketplace サブスクリプションを関連付けたり、資格情報を編集したり、削除したりすることで、コンソールに既に追加した Azure 資格情報を管理します。
 
 
 
+[[associate-an-azure-marketplace-subscription-to-credentials]]
+[[subscribe]]
 === Azure Marketplace サブスクリプションを資格情報に関連付ける
 
 Azure 資格情報をコンソールに追加したら、Azure Marketplace サブスクリプションをそれらの資格情報に関連付けることができます。サブスクリプションを使用すると、従量課金制のCloud Volumes ONTAPシステムを作成し、 NetAppデータ サービスにアクセスできます。
@@ -358,6 +368,7 @@ NetApp Consoleにリダイレクトされます。
 
 
 
+[[edit-credentials]]
 === 資格情報を編集する
 
 コンソールで Azure 資格情報を編集します。たとえば、サービス プリンシパル アプリケーションに新しいシークレットが作成された場合は、クライアント シークレットを更新できます。
@@ -371,6 +382,7 @@ NetApp Consoleにリダイレクトされます。
 
 
 
+[[delete-credentials]]
 === 資格情報を削除する
 
 資格情報セットが不要になった場合は、削除できます。システムに関連付けられていない資格情報のみを削除できます。

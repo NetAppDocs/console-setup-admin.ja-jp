@@ -18,12 +18,14 @@ AWS、Azure、Google Cloud 全体の標準展開（インターネット アク�
 
 
 
+[[default-configuration-with-internet-access]]
 == インターネットアクセスを備えたデフォルト構成
 
 次の構成の詳細は、 NetApp Consoleから、クラウド プロバイダーのマーケットプレイスからコンソール エージェントを展開した場合、またはインターネットにアクセスできるオンプレミスの Linux ホストにコンソール エージェントを手動でインストールした場合に適用されます。
 
 
 
+[[console-agent-vm-details-for-aws]]
 === AWS のコンソールエージェント VM の詳細
 
 コンソールまたはクラウド プロバイダーのマーケットプレイスからコンソール エージェントを展開した場合は、次の点に注意してください。
@@ -40,6 +42,7 @@ AWS、Azure、Google Cloud 全体の標準展開（インターネット アク�
 
 
 
+[[console-agent-vm-details-for-azure]]
 === Azure のコンソール エージェント VM の詳細
 
 コンソールまたはクラウド プロバイダーのマーケットプレイスからコンソール エージェントを展開した場合は、次の点に注意してください。
@@ -55,6 +58,7 @@ AWS、Azure、Google Cloud 全体の標準展開（インターネット アク�
 
 
 
+[[console-agent-vm-details-for-google-cloud]]
 === Google Cloud のコンソール エージェント VM の詳細
 
 コンソールからコンソール エージェントを展開した場合は、次の点に注意してください。
@@ -70,6 +74,7 @@ AWS、Azure、Google Cloud 全体の標準展開（インターネット アク�
 
 
 
+[[installation-folder]]
 === インストールフォルダ
 
 エージェントのインストール フォルダーは次の場所にあります。
@@ -78,6 +83,7 @@ AWS、Azure、Google Cloud 全体の標準展開（インターネット アク�
 
 
 
+[[log-files]]
 === ログ ファイル
 
 ログ ファイルは次のフォルダーに保存されます。
@@ -95,6 +101,7 @@ AWS、Azure、Google Cloud 全体の標準展開（インターネット アク�
 
 
 
+[[console-agent-service]]
 === コンソールエージェントサービス
 
 * Console エージェントサービスの名前は `occm`です。
@@ -106,6 +113,7 @@ MySQL サービスがダウンしている場合、 `occm` サービスも停止
 
 
 
+[[ports]]
 === ポート
 
 エージェントは Linux ホスト上で次のポートを使用します。
@@ -116,6 +124,7 @@ MySQL サービスがダウンしている場合、 `occm` サービスも停止
 
 
 
+[[default-configuration-without-internet-access]]
 == インターネットアクセスなしのデフォルト設定
 
 インターネットにアクセスできないオンプレミスの Linux ホストにコンソール エージェントを手動でインストールした場合は、次の構成が適用されます。link:task-quick-start-private-mode.html["このインストールオプションの詳細"] 。

@@ -25,6 +25,7 @@ AWSにエージェントをデプロイすると、選択したVPC内でLinuxと
 
 
 
+[[step-1-set-up-networking]]
 == ステップ1: ネットワークを設定する
 
 ハイブリッド クラウド リソースを管理するには、コンソール エージェントのネットワークの場所が次の要件を満たしていることを確認します。
@@ -145,6 +146,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-2-set-up-aws-permissions]]
 == ステップ2: AWS権限を設定する
 
 マーケットプレイスの展開を準備するには、AWS で IAM ポリシーを作成し、それを IAM ロールにアタッチします。  AWS Marketplace からコンソールエージェントを作成すると、その IAM ロールを選択するように求められます。
@@ -176,6 +178,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-3-review-instance-requirements]]
 == ステップ3: インスタンス要件を確認する
 
 コンソールエージェントを作成するときは、次の要件を満たす EC2 インスタンスタイプを選択する必要があります。
@@ -187,6 +190,7 @@ AWS EC2インスタンスタイプ:: CPU と RAM の要件を満たすインス�
 
 
 
+[[step-4-create-the-console-agent]]
 == ステップ4: コンソールエージェントを作成する
 
 AWS Marketplace から直接コンソールエージェントを作成します。

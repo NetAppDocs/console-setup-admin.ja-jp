@@ -28,6 +28,7 @@ NOTE: Cloud Volumes ONTAPシステムを管理するコンソールエージェ�
 
 
 
+[[step-1-review-host-requirements]]
 == ステップ1: ホストの要件を確認する
 
 コンソール エージェント ソフトウェアは、特定のオペレーティング システム要件、RAM 要件、ポート要件などを満たすホスト上で実行する必要があります。
@@ -154,6 +155,8 @@ Docker エンジン 23.0.6 から 28.0.0。
 |===
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == ステップ2: PodmanまたはDocker Engineをインストールする
 
 オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要になります。
@@ -339,6 +342,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == ステップ3: ネットワークを設定する
 
 コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件を満たすことで、コンソール エージェントはハイブリッド クラウド環境内のリソースとプロセスを管理できるようになります。
@@ -458,6 +462,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-4-set-up-console-agent-deployment-permissions]]
 == ステップ4: コンソールエージェントの展開権限を設定する
 
 次のいずれかのオプションを使用して、コンソール エージェントに Azure 権限を付与する必要があります。
@@ -669,6 +674,7 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 ====
 
 
+[[step-5-install-the-console-agent]]
 == ステップ5: コンソールエージェントをインストールする
 
 前提条件が完了したら、独自の Linux ホストにソフトウェアを手動でインストールできます。
@@ -835,6 +841,7 @@ https://_ipaddress_[]
 
 
 
+[[step-6-provide-permissions-to-netapp-console]]
 == ステップ6: NetApp Consoleに権限を付与する
 
 コンソール エージェントをインストールしたので、以前に設定した Azure アクセス許可をコンソール エージェントに付与する必要があります。権限を付与すると、コンソールで Azure のデータとストレージ インフラストラクチャを管理できるようになります。

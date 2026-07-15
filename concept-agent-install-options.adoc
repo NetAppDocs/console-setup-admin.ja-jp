@@ -20,6 +20,8 @@ NetApp Console、クラウド プロバイダのマーケットプレイス、�
 
 
 
+[[deploy-from-the-netapp-console]]
+[[agent-console-deploy]]
 == NetApp Console からデプロイします
 
 NetAppでは、標準モードを使用する場合は、NetApp Consoleから導入することを推奨します。NetApp Consoleでは、ネットワークと権限の設定をガイドし、クラウド プロバイダでVMまたはインスタンスを自動的に起動します。Consoleでは、ネットワークと権限の設定をガイドし、クラウド プロバイダでVMまたはインスタンスを自動的に起動します。
@@ -49,6 +51,8 @@ link:task-install-agent-aws-console.html["NetApp Console から AWS に Console 
 
 
 
+[[deploy-from-a-cloud-provider-marketplace]]
+[[agent-marketplace-deploy]]
 == クラウド プロバイダのマーケットプレイスからデプロイする
 
 AWS Marketplace または Azure Marketplace からデプロイすると、エージェントのインストールがマーケットプレイスから直接開始され、NetApp Console からは開始されません。
@@ -79,6 +83,8 @@ link:task-install-agent-aws-marketplace.html["AWS マーケットプレイスか
 
 
 
+[[manually-install-on-a-linux-host-in-the-cloud]]
+[[agent-cloud-manual-deploy]]
 == クラウド上のLinuxホストに手動でインストールする
 
 手動インストールでは、AWS、Azure、Google Cloud、またはオンプレミスで提供および管理するLinuxホストに、NetApp Consoleエージェント ソフトウェアを直接インストールできます。
@@ -108,6 +114,8 @@ link:task-install-agent-aws-manual.html["AWSにConsoleエージェントを手�
 
 
 
+[[manually-install-on-premises-using-vcenter-ova]]
+[[agent-ova-on-prem-deploy]]
 == vCenter（OVA）を使用してオンプレミスに手動でインストール
 
 VMware vCenterを使用している場合、OVA（Open Virtual Appliance）ファイルをインポートすることで、Consoleエージェントをデプロイできます。OVAは、Linuxをインストールしたり、コンテナランタイムを設定したりすることなく、vSphereクライアントでデプロイする事前設定済みのVMイメージです。
@@ -142,6 +150,8 @@ link:task-install-agent-on-prem-ova.html["vCenterを使用してオンプレミ�
 
 
 
+[[manually-install-on-premises-without-vcenter]]
+[[agent-manual-on-prem-deploy]]
 == オンプレミスに手動でインストール（vCenterなし）
 
 Consoleエージェントは、任意のオンプレミスLinuxホストに手動でインストールできます。Linuxホストとコンテナランタイム（DockerまたはPodman）をセットアップしてから、Consoleエージェントをインストールする必要があります。

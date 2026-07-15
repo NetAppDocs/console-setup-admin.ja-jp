@@ -24,6 +24,7 @@ NOTE: フェデレーションは、NetApp Consoleがプライベート モー�
 
 
 
+[[single-sign-on-with-netapp-support-site]]
 == NetApp Support Site でのシングルサインオン
 
 NetAppサポート サイトと連携すると、ユーザーは同じ資格情報を使用してコンソール、 Active IQ Digital Advisor、およびその他の関連アプリケーションにログインできるようになります。
@@ -41,6 +42,7 @@ NetAppサポート チームがお客様のリクエストを確認し、処理�
 
 
 
+[[single-sign-on-with-your-identity-provider]]
 == IDプロバイダーによるシングルサインオン
 
 コンソールのシングル サインオン (SSO) を有効にするには、ID プロバイダーとのフェデレーション接続を設定できます。このプロセスでは、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成し、コンソールで接続を作成します。
@@ -50,6 +52,7 @@ NOTE: 以前にNetApp Cloud Central (コンソールの外部アプリケーシ�
 
 
 
+[[supported-identity-providers]]
 === サポートされているIDプロバイダー
 
 NetApp は、フェデレーション用に次のプロトコルと ID プロバイダーをサポートしています。
@@ -66,6 +69,7 @@ NetApp は、フェデレーション用に次のプロトコルと ID プロバ
 
 
 
+[[federation-with-netapp-console-workflow]]
 === NetApp Consoleワークフローとの連携
 
 NetApp は、サービス プロバイダー開始 (SP開始) SSO のみをサポートします。まず、 NetApp をサービス プロバイダーとして信頼するように ID プロバイダーを構成する必要があります。次に、コンソールで ID プロバイダーの構成を使用する接続を作成できます。

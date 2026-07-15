@@ -18,6 +18,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 
 
 
+[[access-the-agent-maintenance-console]]
 == エージェントメンテナンスコンソールにアクセスする
 
 コンソールエージェントホストからメンテナンスコンソールにアクセスできます。次のディレクトリに移動します：
@@ -28,6 +29,7 @@ summary: コンソール エージェント メンテナンス コンソール�
 ----
 
 
+[[config-checker-validate]]
 == 構成チェッカーの検証
 
 その `config-checker validate`コマンドを使用すると、コンソール エージェントの構成を検証できます。
@@ -36,6 +38,7 @@ link:reference-networking-saas-console.html["必要なネットワーク アク�
 
 
 
+[[parameters]]
 === パラメータ
 
 `--services <comma-separated list of services to validate>` - *必須* - 
@@ -68,6 +71,7 @@ NOTE: インストール中、NetAppは、エージェントホストに、デ�
 
 
 
+[[config-checker-validate-examples]]
 === 構成チェッカーの検証例
 
 以下の例には、ネットワーク接続、必要なポート、ハードウェア要件の検証、およびプロキシ サーバとカスタム証明書のさまざまな組み合わせの使用が含まれます。
@@ -89,6 +93,7 @@ NOTE: インストール中、NetAppは、エージェントホストに、デ�
 ----
 
 
+[[view-help-for-any-command]]
 === 任意のコマンドのヘルプを表示する
 
 コマンドのヘルプを表示するには、 `--help`コマンドに。たとえば、 `proxy add`コマンドを実行するには、次のコマンドを使用します。

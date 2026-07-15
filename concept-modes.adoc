@@ -68,6 +68,7 @@ NOTE: NetApp Console は制限モードとプライベート モードでデー�
 
 
 
+[[netapp-console-in-standard-mode-saas-application]]
 == NetApp Console の標準モード（Saas アプリケーション）
 
 次の図は、標準モードの導入を示しています。
@@ -76,6 +77,7 @@ image:diagram-standard-mode.png["パブリックインターネット（Webベ�
 
 
 
+[[supported-features-and-services-for-netapp-console-in-standard-mode]]
 === 標準モードのNetApp Consoleでサポートされている機能とサービス
 
 次の表は、NetApp Console SaaS アプリケーション（標準モード）で使用可能なストレージ管理機能、データサービス、および管理機能の一覧です。
@@ -215,6 +217,7 @@ Licenses and subscriptionsの管理
 |===
 
 
+[[how-netapp-console-works-in-standard-mode]]
 === NetApp Console が標準モードでどのように動作するか
 
 コンソールは標準モードでは次のように動作します。
@@ -242,6 +245,7 @@ APIエンドポイント:: API呼び出しは次のエンドポイントに対�
 
 
 
+[[how-to-get-started-with-standard-mode]]
 === 標準モードの開始方法
 
 に行く https://console.netapp.com["NetApp Console"^]そしてサインアップしてください。
@@ -250,6 +254,7 @@ link:task-quick-start-standard-mode.html["標準モードの開始方法を学�
 
 
 
+[[netapp-console-in-restricted-mode-installed-in-your-own-public-cloud]]
 == NetApp Console（制限モード）（独自のパブリック クラウドにインストール）
 
 コンソールエージェントをクラウド（政府、主権、または商業地域）にインストールし、NetApp Console API エンドポイント（SaaS アプリケーションでホスト）への限定的なアウトバウンド接続を持ちます。
@@ -266,6 +271,7 @@ image:diagram-restricted-mode.png["SaaSアプリケーションとauth0認証が
 
 
 
+[[supported-features-and-services-for-netapp-console-in-restricted-mode]]
 === 制限モードの NetApp Console でサポートされている機能とサービス
 
 次の表は、制限モードでインストールした場合にNetApp Consoleで利用可能なストレージ管理機能、データサービス、および管理機能の一覧です。
@@ -362,6 +368,7 @@ Cloud Volumes ONTAPの場合、容量ベースのライセンスとノードベ�
 |===
 
 
+[[how-netapp-console-works-in-restricted-mode]]
 === 制限モードでのNetApp Consoleの動作
 
 制限モードではコンソールは次のように動作します。
@@ -383,6 +390,7 @@ APIエンドポイント:: API 呼び出しはエージェント仮想マシン�
 
 
 
+[[how-to-get-started-with-restricted-mode]]
 === 制限モードの開始方法
 
 NetApp Console アカウントを作成するときに、制限モードを有効にする必要があります。組織がない場合は、インストールした Console エージェントに初めてログインするときに、組織を作成して制限モードを有効にするように求められます。
@@ -391,6 +399,8 @@ NetApp Console アカウントを作成するときに、制限モードを有�
 
 
 
+[[netapp-console-in-private-mode]]
+[[private-mode]]
 == プライベートモードのNetApp Console
 
 プライベートモードでは、オンプレミスまたはクラウドにConsoleエージェントをインストールし、NetApp Consoleを使用してハイブリッド クラウド全体のデータを管理します。NetApp Console APIエンドポイントまたはNetApp Console SaaSアプリケーションへの接続はないため、Consoleエージェントによって提供されるローカルUIからConsoleにアクセスします。
@@ -405,6 +415,7 @@ image:diagram-private-mode-onprem.png["エージェントが稼働し、Webベ�
 
 
 
+[[supported-features-and-services-for-netapp-console-in-private-mode]]
 === プライベートモードのNetApp Consoleでサポートされている機能とサービス
 
 次の表は、プライベートモードでインストールした場合にNetApp Consoleで利用可能なストレージ管理機能、データサービス、および管理機能の一覧です。NetApp Consoleをクラウドにインストールする場合とオンプレミスにインストールする場合では、機能が異なります。
@@ -549,6 +560,7 @@ Licenses and subscriptionsの管理
 |===
 
 
+[[how-netapp-console-works-in-private-mode]]
 === NetApp Console がプライベートモードで動作する仕組み
 
 NetApp Console はプライベート モードでは次のように動作します：
@@ -563,6 +575,7 @@ APIエンドポイント:: API 呼び出しは、 Console エージェント仮�
 
 
 
+[[how-to-get-started-with-private-mode]]
 === プライベートモードの使用を開始する方法
 
 プライベートモードは、NetApp Support Siteから「オフライン」インストーラーをダウンロードすることで利用できます。
@@ -574,6 +587,7 @@ NOTE: NetApp Console を https://aws.amazon.com/federal/secret-cloud/["AWS Secre
 
 
 
+[[netapp-console-service-and-feature-comparison]]
 == NetApp Consoleのサービスと機能の比較
 
 この表は、制限モードとプライベート モードでサポートされているサービスと機能を示しています。

@@ -18,6 +18,7 @@ NetApp Console のアイデンティティとアクセス管理（IAM）には�
 
 
 
+[[platform-roles]]
 == プラットフォームの役割
 
 プラットフォーム ロールは、ロールの割り当てやユーザー管理などのNetApp Console管理権限を付与します。コンソールにはいくつかのプラットフォーム ロールがあります。
@@ -55,6 +56,7 @@ NetApp Console のアイデンティティとアクセス管理（IAM）には�
 |===
 
 
+[[application-roles]]
 == アプリケーションロール
 
 以下は、アプリケーション カテゴリ内のロールの一覧です。各ロールは、指定された範囲内で特定の権限を付与します。必要なアプリケーションまたはプラットフォームのロールを持たないユーザーは、それぞれのアプリケーションにアクセスできません。
@@ -92,6 +94,7 @@ NetApp Console のアイデンティティとアクセス管理（IAM）には�
 |===
 
 
+[[data-service-roles]]
 == データサービスの役割
 
 以下は、データ サービス カテゴリのロールの一覧です。各ロールは、指定された範囲内で特定の権限を付与します。必要なデータ サービス ロールまたはプラットフォーム ロールを持たないユーザーは、データ サービスにアクセスできません。
@@ -114,6 +117,15 @@ NetApp Console のアイデンティティとアクセス管理（IAM）には�
 
 
 | link:reference-iam-backup-rec-roles.html["バックアップとリカバリビューア"] | BACKUP_VIEWER | 標準、制限付き、プライベート | バックアップとリカバリの情報を表示します。 
+
+
+| link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP管理者"] | CVO_ADMIN | 標準、制限付き、プライベート | すべての Cloud Volumes ONTAP 操作へのフルアクセスを提供します。 
+
+
+| link:reference-iam-cvo-roles.html["Cloud Volumes ONTAPオペレーター"] | CVO_OPERATOR | 標準、制限付き、プライベート | ボリュームの追加、レプリケーションの設定、ストレージの管理など、日常的な管理タスクを可能にします。 
+
+
+| link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP ビューア"] | CVO_VIEWER | 標準、制限付き、プライベート | Cloud Volumes ONTAP 情報への読み取り専用アクセスを提供します。このロールでは、アクティブな操作は実行できません。 
 
 
 | link:reference-iam-disaster-rec-roles.html["災害復旧管理者"] | DISASTER_RECOVERY_ADMIN | Standard | NetApp Disaster Recoveryサービスで任意のアクションを実行します。 
@@ -147,6 +159,7 @@ NetApp Console のアイデンティティとアクセス管理（IAM）には�
 |===
 
 
+[[related-links]]
 == 関連リンク
 
 * link:concept-identity-and-access-management.html["NetApp Consoleのアイデンティティとアクセス管理について学ぶ"]

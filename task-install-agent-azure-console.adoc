@@ -28,6 +28,8 @@ NOTE: Cloud Volumes ONTAPシステムを管理するコンソールエージェ�
 
 
 
+[[step-1-set-up-networking]]
+[[networking-azure-agent]]
 == ステップ1: ネットワークを設定する
 
 コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件により、コンソール エージェントはハイブリッド クラウド リソースを管理できるようになります。
@@ -153,6 +155,8 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-2-create-a-console-agent-deployment-policy-custom-role]]
+[[agent-custom-role]]
 == ステップ 2: コンソール エージェント展開ポリシー (カスタム ロール) を作成する
 
 Azure にコンソール エージェントをデプロイする権限を持つカスタム ロールを作成する必要があります。
@@ -275,6 +279,7 @@ az role definition create --role-definition Policy_for_Setup_As_Service_Azure.js
 
 
 
+[[step-3-set-up-authentication]]
 == ステップ3: 認証を設定する
 
 コンソールからコンソール エージェントを作成するときは、コンソールが Azure で認証して VM をデプロイできるようにするためのログインを提供する必要があります。次の 2 つのオプションがあります。
@@ -415,6 +420,7 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 ====
 
 
+[[step-4-create-the-console-agent]]
 == ステップ4: コンソールエージェントを作成する
 
 NetApp Consoleから直接コンソール エージェントを作成します。

@@ -21,6 +21,7 @@ NOTE: NetApp Consoleを https://aws.amazon.com/federal/secret-cloud/["AWS Secret
 
 
 
+[[step-1-understand-how-private-mode-works]]
 == ステップ1：プライベートモードの仕組みを理解する
 
 プライベートモードでは、オンプレミスまたはクラウドにコンソールエージェントをインストールし、NetApp Console を使用してストレージシステム（ONTAP オンプレミスおよび Cloud Volumes ONTAP）を管理します。NetApp Console API エンドポイントまたは NetApp Console SaaS アプリケーションへの接続はないため、コンソールエージェントによって提供されるローカル UI からコンソールにアクセスします。
@@ -29,6 +30,7 @@ link:concept-modes.html["プライベートモードの仕組みを学ぶ"]。
 
 
 
+[[step-2-review-installation-options]]
 == ステップ2: インストールオプションを確認する
 
 プライベートモードでは、独自の Linux ホストにエージェントを手動でインストールすることで、Console エージェントをオンプレミスまたはクラウドにインストールできます。
@@ -37,6 +39,7 @@ link:concept-modes.html["プライベートモードの仕組みを学ぶ"]。
 
 
 
+[[step-3-review-host-requirements]]
 == ステップ3: ホストの要件を確認する
 
 NetApp Console エージェントを実行するには、ホストが特定のオペレーティング システム要件、RAM 要件、ポート要件などを満たしている必要があります。
@@ -134,6 +137,8 @@ Google Cloud マシンタイプ:: CPU と RAM の要件を満たすインスタ�
 
 
 
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == ステップ4: PodmanまたはDocker Engineをインストールする
 
 Podman または Docker Engine をインストールして、Console エージェント用のホストを準備する必要があります。
@@ -321,6 +326,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-5-prepare-networking]]
 == ステップ5：ネットワークを準備する
 
 コンソール エージェントがパブリック クラウド内のリソースを管理できるようにネットワークを設定します。コンソール エージェント用の仮想ネットワークとサブネットを用意するほか、次の要件が満たされていることを確認してください。
@@ -426,6 +432,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-6-prepare-cloud-permissions]]
 == ステップ6: クラウド権限を準備する
 
 コンソールエージェントがクラウドにインストールされていて、Cloud Volumes ONTAPシステムを作成する予定がある場合、NetAppコンソールにはクラウド プロバイダ権限が必要です。クラウド プロバイダで権限を設定し、インストール後にそれらの権限をコンソールエージェントインスタンスに関連付ける必要があります。
@@ -732,6 +739,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 ====
 
 
+[[step-7-enable-google-cloud-apis]]
 == ステップ7: Google Cloud APIを有効にする
 
 Google Cloud に Cloud Volumes ONTAP をデプロイするには、いくつかの API を有効にする必要があります。

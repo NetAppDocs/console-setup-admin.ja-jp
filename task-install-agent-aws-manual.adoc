@@ -25,6 +25,7 @@ AWSにエージェントをデプロイすると、選択したVPC内でLinuxと
 
 
 
+[[step-1-review-host-requirements]]
 == ステップ1: ホストの要件を確認する
 
 コンソール エージェント ソフトウェアを実行しているホストが、オペレーティング システム、RAM、およびポートの要件を満たしていることを確認します。
@@ -162,6 +163,8 @@ IMDSv2 使用時の PUT 応答ホップ制限:: IMDSv2 が有効になってい�
 
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == ステップ2: PodmanまたはDocker Engineをインストールする
 
 オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要になります。
@@ -347,6 +350,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == ステップ3: ネットワークを設定する
 
 コンソール エージェントがハイブリッド クラウド内のリソースを管理できるように、ネットワークの場所が次の要件をサポートしていることを確認します。
@@ -469,6 +473,8 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-4-set-up-aws-permissions-for-the-console]]
+[[console-permissions-aws]]
 == ステップ4: コンソールのAWS権限を設定する
 
 次のいずれかのオプションを使用して、 NetApp Consoleに AWS 権限を付与します。
@@ -542,6 +548,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 ====
 
 
+[[step-5-install-the-console-agent]]
 == ステップ5: コンソールエージェントをインストールする
 
 前提条件を満たしたら、Linux ホストにソフトウェアを手動でインストールします。
@@ -702,6 +709,7 @@ Console エージェントを作成したのと同じ AWS アカウントに Ama
 
 
 
+[[step-6-provide-permissions-to-netapp-console]]
 == ステップ6: NetApp Consoleに権限を付与する
 
 コンソールエージェントをインストールした後、コンソールエージェントが AWS 内のデータとストレージインフラストラクチャを管理できるように、設定した AWS 権限を提供します。

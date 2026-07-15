@@ -22,6 +22,7 @@ NetApp Consoleは、すべてのクラウドおよびオンプレミスシステ
 
 
 
+[[choose-how-to-access-netapp-console]]
 == NetApp Console へのアクセス方法を選択
 
 NetApp Console の使用を開始するには、SaaS アプリケーションにサインアップするか（標準モード）、クラウドにインストールするか（制限モード）、オンプレミスにインストールします（プライベート モード）。一部の機能は、制限モードまたはプライベート モードでは使用できません。
@@ -30,6 +31,7 @@ link:concept-modes.html["展開モードの詳細"] 。
 
 
 
+[[extend-console-capabilities-with-console-agents]]
 == Console エージェントで Console 機能を拡張する
 
 コンソールエージェントは、NetApp Console SaaSアプリケーションとクラウドベースのAPIへの接続を提供する軽量なソフトウェアコンポーネントであり、高度な機能とデータサービスを実現します。
@@ -40,6 +42,7 @@ link:concept-agents.html["コンソールエージェントの詳細"] 。
 
 
 
+[[manage-user-access-and-permissions-in-netapp-console]]
 == NetApp Console でユーザーのアクセスと権限を管理する
 
 コンソールは、アイデンティティとアクセス管理（IAM）を提供し、データ インフラストラクチャ全体のセキュリティと制御を向上させます。組織の役割と責任に基づいてストレージとデータ サービスを編成し、運用効率を維持しながら不正アクセスのリスクを軽減します：
@@ -54,6 +57,7 @@ link:concept-identity-and-access-management.html["NetApp ConsoleのIAMの詳細"
 
 
 
+[[security-and-compliance-in-netapp-console]]
 == NetApp Console のセキュリティとコンプライアンス
 
 シングル サインオン（SSO）などのセキュリティとコンプライアンス機能を有効にして、ストレージおよびデータ サービスへのアクセスを制御します。組織管理者ロールを持つユーザーは、デフォルトで読み取り専用モードを設定できます。これにより、ユーザーはストレージ システムに変更を加えたりデータ サービスを使用したりするために、昇格された権限を要求する必要があります。NetApp Consoleを使用して、ストレージ管理とユーザー アクティビティを監視することもできます。NetApp ConsoleはSOC 2 Type 2認証を取得しており、NetAppは顧客にSOC 2レポートを提供します。
@@ -62,12 +66,14 @@ https://www.netapp.com/company/trust-center/compliance/soc-2/["NetAppのSOC 2レ
 
 
 
+[[netapp-console-capabilities-and-supported-storage]]
 == NetApp Consoleの機能とサポートされるストレージ
 
 NetApp Consoleは、オンプレミス環境とクラウド環境全体で、幅広いストレージタイプ、機能、データサービスをサポートします。Consoleを使用して、ストレージシステムを管理し、その健全性とパフォーマンスを監視し、データサービスを有効にしてデータを保護および最適化します。
 
 
 
+[[supported-cloud-and-on-premises-storage-in-netapp-console]]
 === NetApp Console でサポートされているクラウドおよびオンプレミスのストレージ
 
 コンソールから次のストレージ タイプを管理します：
@@ -104,6 +110,7 @@ NetApp Consoleは、オンプレミス環境とクラウド環境全体で、幅
 
 
 
+[[storage-management-and-health-services-in-netapp-console]]
 === NetApp Console のストレージ管理とヘルスサービス
 
 NetApp Consoleは、単一のインターフェースを介してNetAppストレージ インフラストラクチャの統合管理を提供します。
@@ -126,6 +133,7 @@ NetAppデジタルアドバイザー (Active IQ):: 予測分析とプロアク�
 
 
 
+[[data-security-and-protection-services-in-netapp-console]]
 === NetApp コンソールのデータセキュリティと保護サービス
 
 組み込みのデータサービスを使用して、重要なデータを保護し、ストレージ効率を最適化します。
@@ -139,6 +147,7 @@ NetApp Replication:: バックアップと災害復旧をサポートするた�
 
 
 
+[[cost-and-compliance-management-services-in-netapp-console]]
 === NetApp Console のコストとコンプライアンス管理サービス
 
 すべてのシステムにわたって契約ステータスを追跡し、コスト管理、コンプライアンス、購入の意思決定を改善します。
@@ -167,6 +176,7 @@ NetAppワークロード:: Amazon FSx for NetApp ONTAP を使用して主要な�
 
 
 
+[[netapp-console-cost]]
 === NetApp Consoleのコスト
 
 NetAppはConsoleに対して料金を請求しません。Consoleエージェントを導入したり、クラウドで制限モードを使用したりすると、コストが発生します。一部のNetAppデータ サービスにも関連コストがあります。https://bluexp.netapp.com/pricing["NetAppデータサービスの価格について"^]

@@ -25,6 +25,7 @@ NOTE: ホーム ページで正確なメトリックを得るには、適切な�
 
 
 
+[[required-netapp-console-roles]]
 == 必要なNetApp Consoleのロール
 
 ホーム ページの各ペインには、異なるユーザー ロールが必要です。
@@ -59,6 +60,7 @@ image:screenshot-home-metrics.png["NetApp Consoleのホームページにメト�
 
 
 
+[[enable-metrics-to-appear-on-the-home-page]]
 == ホーム ページに指標が表示されるようにする
 
 次の条件が満たされると、ホーム ページでメトリックを表示できます。
@@ -77,6 +79,7 @@ image:screenshot-home-metrics.png["NetApp Consoleのホームページにメト�
 
 
 
+[[view-the-overall-storage-capacity]]
 == 全体のストレージ容量を表示する
 
 ストレージ容量ペインには、 ONTAPクラスターとCloud Volumes ONTAPシステム全体の次の情報が表示されます。
@@ -102,6 +105,7 @@ TIP: 複数のプロジェクトがある場合、システム ページと比�
 
 
 
+[[view-ontap-alerts]]
 == ONTAPアラートを表示する
 
 NetAppオンプレミスONTAP環境における問題または潜在的なリスクを表示します。  EMS 以外のアラートと EMS アラートがいくつか表示されます。
@@ -149,6 +153,7 @@ ONTAPアラートの詳細については、 https://docs.netapp.com/us-en/conso
 
 
 
+[[view-storage-performance-capacity]]
 == ストレージパフォーマンス容量を表示
 
 クラスターまたはCloud Volumes ONTAPシステムごとに使用されているストレージ パフォーマンス容量を確認し、パフォーマンス容量、レイテンシ、および IOPS がワークロードにどのような影響を与えているかを判断します。たとえば、重要なワークロードのレイテンシを最小限に抑え、IOPS とスループットを最大化するために、ワークロードをシフトする必要があることがわかる場合があります。
@@ -166,6 +171,7 @@ TIP: キャッシュによりパフォーマンスが最適化されますが、
 
 
 
+[[view-the-licenses-and-subscriptions-that-you-have]]
 == 所有しているライセンスとサブスクリプションを表示する
 
 [Licenses and subscriptions]ペインで次の情報を確認します。
@@ -188,6 +194,7 @@ TIP: キャッシュによりパフォーマンスが最適化されますが、
 
 
 
+[[view-ransomware-resilience-status]]
 == ランサムウェア耐性ステータスの表示
 
 NetApp Ransomware Resilienceデータ サービスを使用して、ワークロードがランサムウェア攻撃のリスクにさらされているかどうか、または保護されているかどうかを確認します。保護されているデータの合計量を確認したり、推奨されるアクションの数を表示したり、ランサムウェア保護に関連するアラートの数を表示したりできます。
@@ -209,6 +216,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 
 
 
+[[view-backup-and-recovery-status]]
 == バックアップとリカバリのステータスを表示する
 
 NetApp Backup and Recoveryからのバックアップと復元の全体的なステータスを確認します。保護されているリソースと保護されていないリソースの数を確認できます。ワークロードの保護のためのバックアップと復元操作の割合を確認することもできます。パーセンテージが高いほど、データ保護が強化されていることを示します。

@@ -22,6 +22,7 @@ _リソース_ は、ストレージ リソース、コンソール エージェ
 
 
 
+[[console-resource-types]]
 == コンソールリソースの種類
 
 NetApp Console組織内のプロジェクトには、いくつかの種類のリソースを関連付けることができます。
@@ -40,6 +41,7 @@ Keystoneのサブスクリプション:: 組織内にKeystoneサブスクリプ�
 
 
 
+[[view-the-resources-in-your-organization]]
 == 組織内のリソースを表示する
 
 組織に関連付けられている検出されたリソースと未検出のリソースの両方を表示できます。システムはストレージ リソースを検出し、コンソールに追加されるまでそれらを未検出としてマークします。
@@ -64,6 +66,8 @@ NOTE: ユーザーがAmazon FSx for NetApp ONTAPリソースが除外されま�
 
 
 
+[[associate-a-resource-with-folders-and-projects]]
+[[associate-resource]]
 == リソースをフォルダやプロジェクトに関連付ける
 
 リソースをフォルダーまたはプロジェクトに関連付けると、そのフォルダーまたはプロジェクトに対する権限を持つメンバーがリソースを利用できるようになります。
@@ -90,6 +94,8 @@ link:task-iam-associate-agents.html["コンソールエージェントをフォ�
 
 
 
+[[view-the-folders-and-projects-associated-with-a-resource]]
+[[view-folders-and-projects]]
 == リソースに関連付けられたフォルダとプロジェクトを表示する
 
 特定のリソースに関連付けられているフォルダーとプロジェクトを表示できます。
@@ -110,6 +116,8 @@ NOTE: どの組織メンバーがリソースにアクセスできるのかを�
 
 
 
+[[remove-a-resource-from-a-folder-or-project]]
+[[remove-resource]]
 == フォルダまたはプロジェクトからリソースを削除する
 
 フォルダーまたはプロジェクトからリソースを削除するには、その関連付けを削除します。これにより、メンバーはそのフォルダーまたはプロジェクト内のリソースを管理できなくなります。
@@ -125,6 +133,7 @@ NOTE: 検出されたリソースを組織全体から削除するには、「*�
 
 
 
+[[related-information]]
 == 関連情報
 
 * link:concept-identity-and-access-management.html["NetApp ConsoleのIDとアクセスについて学ぶ"]

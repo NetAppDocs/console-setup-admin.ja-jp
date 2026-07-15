@@ -29,6 +29,7 @@ summary: コンソール内でNetApp Backup and Recoveryにアクセスできる
 
 
 
+[[roles-used-for-common-actions]]
 == 一般的なアクションに使用されるロール
 
 次の表は、すべてのワークロードに対して各NetApp Backup and Recoveryロールが実行できるアクションを示しています。
@@ -291,12 +292,14 @@ summary: コンソール内でNetApp Backup and Recoveryにアクセスできる
 |===
 
 
+[[roles-used-for-workload-specific-actions]]
 == ワークロード固有のアクションに使用されるロール
 
 次の表は、各NetApp Backup and Recoveryロールが特定のワークロードに対して実行できるアクションを示しています。
 
 
 
+[[kubernetes-workloads]]
 === Kubernetes ワークロード
 
 この表は、Kubernetes ワークロードに固有のアクションに対して各NetApp Backup and Recoveryロールが実行できるアクションを示しています。

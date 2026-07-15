@@ -18,6 +18,7 @@ summary: コンソールを使い始めるには、まずNetApp Support Siteの�
 
 
 
+[[sign-up-for-netapp-console-as-the-initial-organization-administrator]]
 == NetApp Consoleに初期組織管理者としてサインアップする
 
 会社にNetApp Console組織がない場合は、サインアップして作成してください。最初のユーザーは組織管理者となり、ユーザー アカウントと権限を管理します。後からロールを更新したり、管理者を追加したりすることもできます。
@@ -53,6 +54,7 @@ NOTE: サインアップフォームでは英語の文字のみ使用できま�
 
 
 
+[[sign-up-or-login-to-netapp-console-when-an-organization-already-exists]]
 == 組織がすでに存在する場合は、 NetApp Consoleにサインアップまたはログインしてください
 
 会社にすでにNetApp Console組織がある場合は、サインアップまたはログインしてアクセスしてください。サインアップまたはログインの方法は、会社が ID フェデレーションを使用しているか、 NetApp Support Siteの認証情報を持っているかによって異なります。そうでない場合は、 NetApp Consoleログインを作成します。

@@ -18,6 +18,7 @@ summary: 制限されたアウトバウンド接続でNetApp Consoleを使用で
 
 
 
+[[step-1-install-the-console-agent]]
 == ステップ1: コンソールエージェントをインストールする
 
 コンソール エージェントをクラウド プロバイダーのマーケットプレイスからインストールするか、Linux ホストに手動でインストールします。
@@ -354,6 +355,7 @@ NetApp Consoleをセットアップします。
 ====
 
 
+[[step-2-set-up-netapp-console]]
 == ステップ2: NetApp Consoleをセットアップする
 
 コンソールに初めてアクセスすると、コンソール エージェントの組織を選択するように求められ、制限モードを有効にする必要があります。
@@ -391,6 +393,7 @@ NetApp Consoleをセットアップします。
 
 
 
+[[step-3-provide-permissions-to-the-console-agent]]
 == ステップ3: コンソールエージェントに権限を付与する
 
 コンソール エージェントを Azure Marketplace から、または手動でインストールした場合は、以前に設定したアクセス許可を付与する必要があります。

@@ -20,6 +20,7 @@ NetApp Consoleを制限モードまたはプライベートモードで使用す
 
 
 
+[[install-an-https-certificate]]
 == HTTPS証明書をインストールする
 
 コンソール エージェント上で実行されている Web ベースのコンソールに安全にアクセスするために、CA によって署名された証明書をインストールします。
@@ -82,6 +83,7 @@ image:screenshot_https_cert.gif["スクリーン ショット: 署名された�
 
 
 
+[[renew-the-console-https-certificate]]
 == コンソールのHTTPS証明書を更新する
 
 安全なアクセスを確保するには、エージェントの HTTPS 証明書が期限切れになる前に更新する必要があります。証明書の有効期限が切れる前に更新しないと、ユーザーが HTTPS を使用して Web コンソールにアクセスしたときに警告が表示されます。

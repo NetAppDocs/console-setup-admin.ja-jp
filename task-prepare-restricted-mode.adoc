@@ -18,6 +18,7 @@ NetApp Consoleを制限モードで展開する前に、環境を準備します
 
 
 
+[[step-1-understand-how-restricted-mode-works]]
 == ステップ1: 制限モードの仕組みを理解する
 
 開始する前に、 NetApp Consoleが制限モードでどのように動作するかを理解してください。
@@ -30,6 +31,7 @@ link:concept-modes.html["制限モードの仕組みを学ぶ"] 。
 
 
 
+[[step-2-review-installation-options]]
 == ステップ2: インストールオプションを確認する
 
 制限モードでは、コンソール エージェントをクラウドにのみインストールできます。次のインストール オプションが利用可能です。
@@ -41,6 +43,7 @@ link:concept-modes.html["制限モードの仕組みを学ぶ"] 。
 
 
 
+[[step-3-review-host-requirements]]
 == ステップ3: ホストの要件を確認する
 
 コンソール エージェントを実行するには、ホストが特定の OS、RAM、およびポートの要件を満たしている必要があります。
@@ -173,6 +176,8 @@ Docker エンジン 23.0.6 から 28.0.0。
 |===
 
 
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == ステップ4: PodmanまたはDocker Engineをインストールする
 
 コンソール エージェントを手動でインストールするには、Podman または Docker Engine をインストールしてホストを準備します。
@@ -360,6 +365,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-5-prepare-network-access]]
 == ステップ5: ネットワークアクセスを準備する
 
 コンソール エージェントがパブリック クラウド内のリソースを管理できるように、ネットワーク アクセスを設定します。コンソール エージェント用の仮想ネットワークとサブネットがあることに加えて、次の要件が満たされていることを確認する必要があります。
@@ -546,6 +552,7 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-6-prepare-cloud-permissions]]
 == ステップ6: クラウド権限を準備する
 
 コンソール エージェントには、仮想ネットワークにCloud Volumes ONTAPを展開し、 NetAppデータ サービスを使用するために、クラウド プロバイダーからの権限が必要です。クラウド プロバイダーで権限を設定し、それらの権限をコンソール エージェントに関連付ける必要があります。
@@ -853,6 +860,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 ====
 
 
+[[step-7-enable-google-cloud-apis]]
 == ステップ7: Google Cloud APIを有効にする
 
 Google Cloud にCloud Volumes ONTAPをデプロイするには、いくつかの API が必要です。

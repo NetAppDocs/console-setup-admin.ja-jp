@@ -20,6 +20,7 @@ summary: Cloud Volumes ONTAPの主要なワークフローを有効にするに�
 
 
 
+[[overview]]
 == 概要
 
 次のタスクを有効にするには、 NetAppサポート サイトの資格情報を特定のコンソール アカウントのシリアル番号に関連付ける必要があります。
@@ -39,6 +40,7 @@ summary: Cloud Volumes ONTAPの主要なワークフローを有効にするに�
 
 
 
+[[add-an-nss-account]]
 == NSSアカウントを追加する
 
 コンソール内のサポート ダッシュボードから、コンソールで使用するNetAppサポート サイト アカウントを追加および管理できます。
@@ -82,6 +84,7 @@ NOTE: NetApp は、サポートとライセンスに固有の認証サービス�
 
 
 
+[[update-nss-credentials]]
 == NSSクレデンシャルの更新
 
 セキュリティ上の理由から、NSS 認証情報は 90 日ごとに更新する必要があります。 NSS 認証情報の有効期限が切れた場合は、コンソールの通知センターで通知されます。link:task-monitor-cm-operations.html#notification-center["通知センターについて学ぶ"^] 。
@@ -107,6 +110,8 @@ NetApp は、サポートおよびライセンスに関連する認証サービ�
 
 
 
+[[attach-a-system-to-a-different-nss-account]]
+[[attach-system-nss-account]]
 == システムを別のNSSアカウントに接続する
 
 組織に複数のNetAppサポート サイト アカウントがある場合は、 Cloud Volumes ONTAPシステムに関連付けるアカウントを変更できます。
@@ -131,6 +136,7 @@ image:screenshot-nss-change-account.png["NetAppサポート サイト アカウ�
 
 
 
+[[display-the-email-address-for-an-nss-account]]
 == NSSアカウントのメールアドレスを表示する
 
 セキュリティ上の理由から、NSS アカウントに関連付けられた電子メール アドレスはデフォルトでは表示されません。  NSS アカウントの電子メール アドレスと関連付けられたユーザー名を表示できます。
@@ -146,6 +152,7 @@ TIP: NSS 管理ページに移動すると、コンソールはテーブル内�
 
 
 
+[[remove-an-nss-account]]
 == NSSアカウントを削除する
 
 コンソールで使用しなくなった NSS アカウントを削除します。

@@ -4,6 +4,7 @@
 
 
 
+[[bluexp-identity-and-access-management]]
 === BlueXPアイデンティティおよびアクセス管理
 
 BlueXP ID およびアクセス管理 (IAM) は、 BlueXP を標準モードで使用するときにBlueXPアカウントによって提供されていた以前の機能を置き換え、強化する新しいリソースおよびアクセス管理モデルです。
@@ -57,6 +58,7 @@ BlueXP を標準モードで使用する場合、 BlueXP IAM がサポートさ�
 
 
 
+[[connector-3-9-45]]
 === コネクタ 3.9.45
 
 このリリースには、拡張されたオペレーティング システムのサポートとバグ修正が含まれています。
@@ -70,6 +72,7 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.
 
 
 
+[[support-for-selinux-with-rhel-hosts]]
 === RHELホストでのSELinuxのサポート
 
 BlueXP は、強制モードまたは許可モードのいずれかで SELinux が有効になっている Red Hat Enterprise Linux ホストでコネクタをサポートするようになりました。

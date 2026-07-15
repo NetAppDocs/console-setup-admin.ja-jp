@@ -18,6 +18,7 @@ NetApp ConsoleがGoogle Cloud 認証情報を使用してユーザーに代わ�
 
 
 
+[[project-and-permissions-for-netapp-console]]
 == NetApp Consoleのプロジェクトと権限
 
 コンソールを使用して Google Cloud プロジェクト内のリソースを管理する前に、まずコンソール エージェントをデプロイする必要があります。エージェントは、オンプレミスまたは別のクラウド プロバイダーで実行することはできません。
@@ -41,6 +42,7 @@ image:diagram_permissions_gcp.png["Cloud Volumes ONTAPをデプロイするた�
 
 
 
+[[credentials-and-marketplace-subscriptions]]
 == 資格情報とマーケットプレイスのサブスクリプション
 
 Google Cloud にコンソール エージェントをデプロイすると、コンソールは、コンソール エージェントが存在するプロジェクト内の Google Cloud サービス アカウントのデフォルトの認証情報セットを作成します。  Cloud Volumes ONTAPおよびNetAppデータサービスの料金を支払うには、これらの認証情報を Google Cloud Marketplace サブスクリプションに関連付ける必要があります。
@@ -56,6 +58,7 @@ Google Cloud の認証情報とマーケットプレイスのサブスクリプ�
 
 
 
+[[project-for-cloud-volumes-ontap]]
 == Cloud Volumes ONTAPプロジェクト
 
 Cloud Volumes ONTAP は、コンソール エージェントと同じプロジェクトに存在することも、別のプロジェクトに存在することもできます。  Cloud Volumes ONTAP を別のプロジェクトにデプロイするには、まずそのプロジェクトにコンソール エージェントのサービス アカウントとロールを追加する必要があります。

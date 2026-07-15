@@ -29,12 +29,14 @@ image:diagram-iam-resource-hierarchy.png["リソース管理の構成要素を�
 
 
 
+[[identity-and-access-management-components]]
 == アイデンティティおよびアクセス管理コンポーネント
 
 NetApp Console IAMは、階層構造を定義する組織コンポーネント、その階層構造内に割り当てられるリソース、そして誰が何にアクセスできるかを制御するメンバーとロールという、3種類のコンポーネントに基づいて構築されています。
 
 
 
+[[netapp-console-organizational-components]]
 === NetApp Consoleの組織コンポーネント
 
 組織構成要素（組織、フォルダ、プロジェクト）は階層構造を形成し、リソースのグループ化方法とアクセス権の委任方法を決定します。
@@ -56,6 +58,7 @@ NOTE: Org管理者ロールを持つユーザーは、リソースをフォル�
 
 
 
+[[resources]]
 === リソース
 
 _リソース_ は、コンソールが認識し、プロジェクトに割り当てることができるエンティティです。_リソース_ には、ストレージシステム、Keystone サブスクリプション、一部のバックアップおよびリカバリのワークロード、および Console エージェントが含まれます。
@@ -87,6 +90,7 @@ link:task-iam-associate-agents.html["エージェントをプロジェクトに�
 
 
 
+[[members-and-roles]]
 === メンバーと役割
 
 メンバーとは、組織内のユーザーおよびサービスアカウントのことです。ロールは、組織、フォルダ、プロジェクトといった階層構造のどのレベルで、どのような操作を実行できるかを定義します。
@@ -115,12 +119,14 @@ link:reference-iam-predefined-roles.html["アクセスロールについて学�
 
 
 
+[[iam-strategy-examples]]
 == IAM戦略の例
 
 適切な IAM 構造は、組織の規模とチームの編成方法によって異なります。以下の例は、さまざまな組織が IAM 階層を使用してアクセスを効果的に管理する方法を示しています。
 
 
 
+[[small-organization-strategy]]
 === 小規模組織戦略
 
 ユーザー数が 50 人未満で、ストレージ管理が集中している組織の場合は、スーパー管理者とスーパー閲覧者のロールを使用した簡素化されたアプローチを検討してください。
@@ -140,6 +146,7 @@ link:reference-iam-predefined-roles.html["アクセスロールについて学�
 
 
 
+[[multi-regional-enterprise-strategy]]
 === 多地域企業戦略
 
 地域的な事業や専門チームを持つ大規模な組織の場合は、地理的または事業部門の境界を表すフォルダーを使用して階層的なアプローチを実装します。
@@ -173,6 +180,7 @@ link:reference-iam-predefined-roles.html["アクセスロールについて学�
 
 
 
+[[departmental-specialization-strategy]]
 === 部門別専門化戦略
 
 特定のデータ サービス アクセスを必要とする専門チームを持つ組織の場合は、機能上の責任に基づいて対象を絞ったロールの割り当てを使用します。
@@ -194,6 +202,7 @@ link:reference-iam-predefined-roles.html["アクセスロールについて学�
 
 
 
+[[next-steps-with-iam-in-netapp-console]]
 == NetApp ConsoleでのIAMの次のステップ
 
 * link:task-iam-get-started.html["NetApp ConsoleでIAMを使い始める"]

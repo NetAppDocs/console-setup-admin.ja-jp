@@ -25,6 +25,7 @@ Google Cloud にエージェントを導入すると、選択した VPC 内で L
 
 
 
+[[step-1-set-up-networking]]
 == ステップ1: ネットワークを設定する
 
 コンソール エージェントがリソースを管理し、ターゲット ネットワークおよびインターネットに接続できるようにネットワークを設定します。
@@ -135,6 +136,8 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[step-2-set-up-permissions-to-create-the-console-agent]]
+[[agent-permissions-google]]
 == ステップ2: コンソールエージェントを作成するための権限を設定する
 
 Google Cloud ユーザーが Google Cloud からコンソール エージェント VM をデプロイするための権限を設定します。
@@ -258,6 +261,8 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 
 
 
+[[step-3-set-up-permissions-for-the-console-agent-operations]]
+[[console-permissions-google]]
 == ステップ3: コンソールエージェント操作の権限を設定する
 
 Google Cloud 内のリソースを管理するためにコンソールが必要とする権限をコンソール エージェントに付与するには、Google Cloud サービス アカウントが必要です。コンソール エージェントを作成するときは、このサービス アカウントをコンソール エージェント VM に関連付ける必要があります。
@@ -317,6 +322,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 
 
+[[step-4-set-up-shared-vpc-permissions]]
 == ステップ4: 共有VPC権限を設定する
 
 共有 VPC を使用してリソースをサービス プロジェクトにデプロイする場合は、権限を準備する必要があります。
@@ -369,6 +375,7 @@ compute.networkUser
 ====
 
 
+[[step-5-enable-google-cloud-apis]]
 == ステップ5: Google Cloud APIを有効にする
 
 Console エージェントとCloud Volumes ONTAP をデプロイする前に、いくつかの Google Cloud API を有効にします。
@@ -393,6 +400,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud �
 
 
 
+[[step-6-create-the-console-agent]]
 == ステップ6: コンソールエージェントを作成する
 
 Google Cloud を使用してコンソール エージェントを作成します。

@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-5-0]]
 === Console エージェント 4.5.0
 
 4.5.0 リリースでは、標準モードと制限モードの両方がサポートされています。
@@ -15,6 +16,7 @@
 
 
 
+[[netapp-console-administration]]
 === NetApp Console管理
 
 パートナーユーザーにKeystoneロールを割り当てて、そのユーザーがパートナー組織内のKeystoneリソースを管理できるようにすることができます。link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["パートナー ユーザーへの Keystone ロールの割り当てについて詳しく説明します。"]

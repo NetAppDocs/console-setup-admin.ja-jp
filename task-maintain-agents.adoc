@@ -18,6 +18,7 @@ summary: エージェント ホスト上のオペレーティング システム
 
 
 
+[[apply-operating-system-updates-to-the-agent-host]]
 == エージェントホストにオペレーティングシステムのアップデートを適用する
 
 エージェント ホスト サービスを停止せずに OS セキュリティ パッチを適用します。
@@ -41,6 +42,7 @@ sudo apt upgrade
 ----
 
 
+[[vm-or-instance-type]]
 == VMまたはインスタンスタイプ
 
 コンソールからコンソール エージェントを作成すると、デフォルトの構成でクラウド プロバイダーに VM インスタンスがデプロイされます。エージェントを作成した後は、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。
@@ -55,6 +57,8 @@ link:reference-agent-default-config.html["エージェントのデフォルト�
 
 
 
+[[monitor-the-agent]]
+[[monitor-disk-space]]
 == エージェントを監視する
 
 コンソールは、ディスク容量、RAM、CPU の問題など、エージェント VM に異常がある場合に通知します。コンソール内の通知センターでこれらの通知を監視するか、電子メール通知を構成します。ディスク容量、メモリ、CPU 使用率が時々増加するのは正常ですが、頻繁に発生する場合は、解決するための手順を実行する必要があります。
@@ -81,6 +85,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
 |===
 
 
+[[stopping-and-starting-the-agent-vm]]
 == エージェントVMの停止と起動
 
 必要に応じて、クラウド プロバイダーのコンソールまたは標準のオンプレミス手順を使用して、エージェント VM を停止および起動します。
@@ -89,6 +94,8 @@ link:concept-agents.html#agents-must-be-operational-at-all-times["コンソー�
 
 
 
+[[connect-to-the-linux-vm]]
+[[connect-linux-host]]
 == Linux VMに接続する
 
 エージェントが実行される Linux VM に接続する必要がある場合は、クラウド プロバイダーの接続オプションを使用します。

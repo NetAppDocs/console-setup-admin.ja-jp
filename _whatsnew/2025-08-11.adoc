@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-55]]
 === コネクタ 3.9.55
 
 BlueXPコネクタのこのリリースには、セキュリティの改善とバグ修正が含まれています。
@@ -12,24 +13,28 @@ BlueXPコネクタのこのリリースには、セキュリティの改善と�
 
 
 
+[[japanese-language-support]]
 === 日本語サポート
 
 BlueXP UI が日本語で利用できるようになりました。ブラウザの言語が日本語の場合、 BlueXP は日本語で表示されます。日本語のドキュメントにアクセスするには、ドキュメント Web サイトの言語メニューを使用します。
 
 
 
+[[operational-resiliency-feature]]
 === 運用回復力機能
 
 運用回復力機能はBlueXPから削除されました。問題が発生した場合は、 NetAppサポートにお問い合わせください。
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXPアイデンティティおよびアクセス管理 (IAM)
 
 BlueXPの ID およびアクセス管理では、次の機能が提供されるようになりました。
 
 
 
+[[new-access-role-for-operational-support]]
 === 運用サポートのための新しいアクセスロール
 
 BlueXP は、運用サポートアナリストの役割をサポートするようになりました。このロールは、ストレージアラートを監視し、 BlueXP監査タイムラインを表示し、 NetAppサポートケースを入力および追跡する権限をユーザーに付与します。

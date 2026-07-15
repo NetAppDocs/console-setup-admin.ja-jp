@@ -18,6 +18,7 @@ summary: コンソール エージェントには、クラウド プロバイダ
 
 
 
+[[google-cloud-user-account-permissions]]
 == Google Cloud ユーザー アカウントの権限
 
 以下のカスタムロールは、Google Cloud ユーザーにエージェントのデプロイに必要な権限を付与します。このカスタム ロールを、エージェントを展開するユーザーに適用します。
@@ -115,6 +116,7 @@ includedPermissions:
 ====
 
 
+[[service-account-permissions]]
 == サービスアカウントの権限
 
 以下のカスタムロールは、コンソール エージェントに接続された Google Cloud サービス アカウントに、Google Cloud ネットワーク内のリソースとプロセスを管理するために必要な権限を付与します。
@@ -302,12 +304,14 @@ includedPermissions:
 ====
 
 
+[[how-google-cloud-permissions-are-used]]
 == Google Cloud の権限の使用方法
 
 コンソール エージェントは、カスタムロールの権限を使用して、Google Cloud ネットワーク内のCloud Volumes ONTAPリソースとNetAppデータサービス プロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。
 
 
 
+[[permissions-used-for-cloud-volumes-ontap]]
 === Cloud Volumes ONTAPで使用される権限
 
 コンソール エージェントは、カスタム ロールの権限を使用して、Google Cloud ネットワーク内のCloud Volumes ONTAP のリソースとプロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。
@@ -748,6 +752,7 @@ includedPermissions:
 ====
 
 
+[[permissions-used-for-netapp-backup-and-recovery]]
 === NetApp Backup and Recoveryに使用される権限
 
 コンソール エージェントは、カスタムロールの権限を使用して、Google Cloud ネットワーク内のNetApp Backup and Recovery のリソースとプロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。
@@ -777,6 +782,7 @@ includedPermissions:
 ====
 
 
+[[permissions-used-for-netapp-data-classification]]
 === NetApp Data Classificationに使用される権限
 
 コンソール エージェントは、カスタムロールの権限を使用して、Google Cloud ネットワーク内のNetApp Data Classification のリソースとプロセスを管理します。次のセクションでは、エージェントがこれらの権限をどのように使用するかについて説明します。
@@ -801,30 +807,36 @@ includedPermissions:
 ====
 
 
+[[change-log]]
+[[gcp-permissions-change-log]]
 == 変更ログ
 
 追加された権限と削除された権限は以下に記載されています。
 
 
 
+[[13-april-2026]]
 === 2026年4月13日
 
  `compute.disks.update`権限が追加され、Cloud Volumes ONTAP システムの Hyperdisk Balanced アグリゲートまたはディスクの IOPS およびスループット パラメータを更新できるようになりました。
 
 
 
+[[26-february-2026]]
 === 2026年2月26日
 
  `cloudbuild.workerpools.get`および `cloudbuild.workerpools.list`の権限は、Google CloudでのCloud Volumes ONTAPのプライベートモード導入におけるInfrastructure Managerをサポートするために追加されました。
 
 
 
+[[09-february-2026]]
 === 2026年2月9日
 
  `compute.forwardingRules.update`権限は、Google Cloud での Cloud Volumes ONTAP 導入において Infrastructure Manager をサポートするために追加されました。
 
 
 
+[[08-december-2025]]
 === 2025年12月8日
 
 NetApp は、Google Cloud でコンソール エージェントをデプロイおよび実行するために、Google Cloud Deployment Manager から Google Cloud Infrastructure Manager（IM）に移行しています。この変更をサポートするために、次の権限が追加されました。
@@ -916,12 +928,14 @@ Cloud Volumes ONTAPの日常的な運用に使用するサービス アカウン
 
 
 
+[[26-november-2025]]
 === 2025年11月26日
 
 権限は使用法を明確にするために更新されていますが、権限の追加や削除は行われていません。各権限がデプロイメント、日常的な操作、または削除のいずれに使用されるかを示す 3 つの列が追加されます。これとは別に、 NetApp Data ClassificationおよびNetApp Backup and Recoveryでの使用に基づいて、いくつかの権限が分離されています。
 
 
 
+[[06-february-2023]]
 === 2023年2月6日
 
 このポリシーに次の権限が追加されました:
@@ -933,6 +947,7 @@ Cloud Volumes ONTAPの日常的な運用に使用するサービス アカウン
 
 
 
+[[27-january-2023]]
 === 2023/01/27
 
 このポリシーには次の権限が追加されました:

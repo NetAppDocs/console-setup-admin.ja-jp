@@ -21,12 +21,14 @@ NOTE: vCenterツールを使用してConsoleエージェントを導入すると
 
 
 
+[[prepare-to-install-the-console-agent]]
 == コンソールエージェントのインストールの準備
 
 インストールする前に、VM ホストが要件を満たしており、コンソール エージェントがインターネットおよび対象のネットワークにアクセスできることを確認してください。  NetAppデータ サービスまたはCloud Volumes ONTAP を使用するには、コンソール エージェントがユーザーに代わってアクションを実行できるように、クラウド プロバイダの資格情報を作成します。
 
 
 
+[[review-console-agent-host-requirements]]
 === コンソールエージェントホストの要件を確認する
 
 コンソール エージェントをインストールする前に、ホスト マシンがインストール要件を満たしていることを確認してください。
@@ -43,6 +45,8 @@ NOTE: エージェントを ESXi ホストに直接インストールするの�
 
 
 
+[[set-up-network-access-for-the-console-agent]]
+[[network-access-agent]]
 === コンソールエージェントのネットワークアクセスを設定する
 
 ネットワーク管理者と協力して、コンソール エージェントが必要なエンドポイントへの送信アクセスと対象ネットワークへの接続を持っていることを確認します。
@@ -208,6 +212,8 @@ NTP を有効にする:: NetApp Data Classificationを使用して企業デー�
 
 
 
+[[create-console-agent-cloud-permissions-for-aws-or-azure]]
+[[agent-permission-aws-azure]]
 === AWS または Azure のコンソール エージェント クラウド権限を作成する
 
 オンプレミスのコンソールエージェントを使用して AWS または Azure のNetAppデータ サービスを使用する場合は、インストール後にコンソールエージェントに資格情報を追加できるように、クラウド プロバイダーで権限を設定する必要があります。
@@ -400,12 +406,14 @@ image:screenshot_azure_client_secret.gif["Microsoft Entra サービス プリン
 ====
 
 
+[[install-a-console-agent-in-your-vcenter-environment]]
 == vCenter 環境に Console エージェントをインストールします
 
 NetAppは、vCenter環境へのConsoleエージェントのインストールをサポートしています。OVAファイルには、VMware環境にデプロイできる事前設定済みのVMイメージが含まれています。ファイルのダウンロードまたはURLデプロイは、NetApp Consoleから直接利用できます。これには、Consoleエージェントソフトウェアと自己署名証明書が含まれます。
 
 
 
+[[download-the-ova-or-copy-the-url]]
 === OVAをダウンロードするかURLをコピーしてください
 
 OVA をダウンロードするか、 NetApp Consoleから OVA URL を直接コピーします。
@@ -418,6 +426,7 @@ OVA をダウンロードするか、 NetApp Consoleから OVA URL を直接コ�
 
 
 
+[[deploy-the-agent-in-your-vcenter-environment]]
 === vCenter 環境にエージェントを導入します
 
 vCenter 環境にログインして、エージェントをデプロイします。
@@ -483,6 +492,7 @@ NOTE: デプロイメントが失敗した場合は、エージェント ホス�
 
 
 
+[[register-the-console-agent-with-netapp-console]]
 == NetApp Consoleにコンソールエージェントを登録する
 
 NetApp Consoleにログインし、NetApp Consoleエージェントを組織に関連付けてください。ログイン方法は、NetApp Consoleを使用するモードによって異なります。NetApp Consoleを標準モードで使用する場合は、SaaSウェブサイトからログインします。NetApp Consoleを制限モードまたはプライベートモードで使用する場合は、NetApp Consoleエージェントホストからローカルでログインします。
@@ -508,6 +518,7 @@ NetApp Consoleにログインし、NetApp Consoleエージェントを組織に�
 
 
 
+[[add-cloud-provider-credentials-to-the-console]]
 == コンソールにクラウドプロバイダーの資格情報を追加する
 
 コンソール エージェントをインストールしてセットアップしたら、コンソール エージェントが AWS または Azure でアクションを実行するために必要な権限を持つように、クラウド資格情報を追加します。

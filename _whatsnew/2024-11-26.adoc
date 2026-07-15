@@ -4,6 +4,7 @@
 
 
 
+[[private-mode-release-3-9-46]]
 === プライベートモードリリース（3.9.46）
 
 新しいプライベートモードリリースがダウンロード可能になりました。 https://mysupport.netapp.com/site/downloads["NetAppサポート サイト"^]

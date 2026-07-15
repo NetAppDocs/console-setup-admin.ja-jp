@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-49]]
 === コネクタ 3.9.49
 
 BlueXPコネクタのこのリリースには、マイナーなセキュリティの改善とバグ修正が含まれています。
@@ -12,6 +13,7 @@ BlueXPコネクタのこのリリースには、マイナーなセキュリテ�
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXPアイデンティティおよびアクセス管理 (IAM)
 
 * BlueXPユーザーに複数のロールを割り当てるためのサポート。
@@ -76,6 +78,7 @@ BlueXP IAM は、 BlueXP を標準モードおよび制限モードで使用す�
 
 
 
+[[private-mode-release-3-9-48]]
 === プライベートモードリリース（3.9.48）
 
 新しいプライベートモードリリースがダウンロード可能になりました。 https://mysupport.netapp.com/site/downloads["NetAppサポート サイト"^]

@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-53]]
 === コネクタ 3.9.53
 
 BlueXPコネクタのこのリリースには、セキュリティの改善とバグ修正が含まれています。
@@ -12,18 +13,21 @@ BlueXPコネクタのこのリリースには、セキュリティの改善と�
 
 
 
+[[disk-space-usage-alerts]]
 === ディスク容量使用状況アラート
 
 通知センターに、コネクタのディスク領域の使用状況に関するアラートが含まれるようになりました。link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#monitor-disk-space["詳細情報"^]
 
 
 
+[[audit-improvements]]
 === 監査の改善
 
 タイムラインに、ユーザーのログイン イベントとログアウト イベントが含まれるようになりました。ログインアクティビティがいつ行われたかを確認できるため、監査やセキュリティ監視に役立ちます。組織管理者のロールを持つAPIユーザーは、次の情報を含めることでログインしたユーザーのメールアドレスを表示できます。 `includeUserData=true``パラメータは次のようになります。 `/audit/<account_id>?includeUserData=true` 。
 
 
 
+[[keystone-subscription-management-available-in-bluexp]]
 === BlueXPでKeystoneサブスクリプション管理が利用可能
 
 BlueXPからNetApp Keystoneサブスクリプションを管理できます。
@@ -32,6 +36,7 @@ link:https://docs.netapp.com/us-en/keystone-staas/index.html["BlueXPでのKeysto
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXPアイデンティティおよびアクセス管理 (IAM)
 
 
@@ -44,6 +49,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#ta
 
 
 
+[[workloads]]
 === ワークロード
 
 BlueXPの認証情報ページからAmazon FSx for NetApp ONTAP の認証情報を表示および削除できるようになりました。

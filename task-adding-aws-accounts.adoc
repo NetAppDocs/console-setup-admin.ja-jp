@@ -18,6 +18,7 @@ AWS 認証情報を追加および管理して、NetApp Console から AWS ア�
 
 
 
+[[overview]]
 == 概要
 
 AWS 認証情報を既存のコンソールエージェントに追加することも、コンソールに直接追加することもできます。
@@ -38,6 +39,7 @@ FSx for ONTAPを作成および管理するには、コンソールに新しい 
 
 
 
+[[how-to-rotate-credentials]]
 == 資格情報をローテーションする方法
 
 NetApp Consoleを使用すると、エージェント インスタンスに関連付けられた IAM ロール、信頼できるアカウントでの IAM ロールの引き受け、または AWS アクセス キーの提供など、いくつかの方法で AWS 認証情報を提供できます。link:concept-accounts-aws.html["AWS の認証情報と権限について詳しく見る"] 。
@@ -48,6 +50,8 @@ NetApp Consoleを使用すると、エージェント インスタンスに関�
 
 
 
+[[add-additional-credentials-to-a-console-agent]]
+[[add-credentials-agent-aws]]
 == コンソールエージェントに追加の資格情報を追加する
 
 コンソールエージェントに追加の AWS 認証情報を追加して、パブリッククラウド環境内のリソースとプロセスを管理するために必要な権限を付与します。別のアカウントの IAM ロールの ARN を提供するか、AWS アクセスキーを提供することができます。
@@ -56,6 +60,7 @@ link:concept-accounts-aws.html["NetApp ConsoleがAWS認証情報と権限を使�
 
 
 
+[[grant-permissions]]
 === 権限を付与する
 
 コンソールエージェントに AWS 認証情報を追加する前に、権限を付与します。権限により、コンソールエージェントはその AWS アカウント内のリソースとプロセスを管理できるようになります。信頼できるアカウントのロールの ARN または AWS キーを使用して、アクセス許可を付与できます。
@@ -118,6 +123,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AW
 
 
 
+[[add-the-credentials-to-an-existing-agent]]
 === 既存のエージェントに資格情報を追加する
 
 AWS アカウントに必要な権限を付与したら、そのアカウントの認証情報を既存のエージェントに追加できます。これにより、同じエージェントを使用してそのアカウントでCloud Volumes ONTAPシステムを起動できるようになります。
@@ -148,12 +154,15 @@ image:screenshot_accounts_switch_aws.png["詳細と資格情報ページでア�
 
 
 
+[[add-credentials-to-the-console-for-creating-a-console-agent]]
+[[add-aws-credentials-agent-creation]]
 == コンソールエージェントを作成するためにコンソールに資格情報を追加します
 
 コンソールエージェントの作成に必要な権限を付与する IAM ロールの ARN を指定して、AWS 認証情報を追加します。新しいエージェントを作成するときに、これらの資格情報を選択できます。
 
 
 
+[[set-up-the-iam-role]]
 === IAMロールを設定する
 
 IAMロールを設定して、NetApp Consoleのサービスとしてのソフトウェア（SaaS）アプリケーションがそのロールを引き受けられるようにします。
@@ -207,6 +216,7 @@ IAM ロールに必要な権限が付与されました。<<add-the-credentials,
 
 
 
+[[add-the-credentials]]
 === 資格情報を追加する
 
 IAM ロールに必要な権限を付与したら、ロール ARN をコンソールに追加します。
@@ -230,12 +240,15 @@ image:screenshot-settings-icon-organization.png["コンソールの右上にあ�
 
 
 
+[[add-credentials-to-the-console-for-amazon-fsx-for-ontap]]
 == Amazon FSx for ONTAPのコンソールに認証情報を追加する
 
 詳細については、 https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Amazon FSx for ONTAPのコンソールドキュメント"^]を参照してください。
 
 
 
+[[configure-an-aws-subscription]]
+[[subscribe]]
 == AWSサブスクリプションを設定する
 
 AWS 認証情報を追加したら、その認証情報を使用して AWS Marketplace サブスクリプションを設定できます。サブスクリプションを使用すると、 NetAppデータ サービスとCloud Volumes ONTAPの料金を時間単位 (PAYGO) または年間契約で支払うことができます。
@@ -290,6 +303,7 @@ NetApp Consoleにリダイレクトされます。
 
 
 
+[[associate-an-existing-subscription-with-your-organization]]
 == 既存のサブスクリプションを組織に関連付ける
 
 AWS Marketplace からサブスクリプションを申し込む場合、プロセスの最後のステップは、そのサブスクリプションを組織に関連付けることです。この手順を完了していない場合、組織でこのサブスクリプションを使用することはできません。
@@ -368,6 +382,7 @@ image:screenshot-credentials-with-subscription.png["コンソールアカウン�
 
 
 
+[[edit-credentials]]
 == 資格情報を編集する
 
 アカウントの種類 (AWS キーまたはロールの引き受け) を変更したり、名前を編集したり、認証情報自体 (キーまたはロール ARN) を更新したりして、AWS 認証情報を編集します。
@@ -383,6 +398,7 @@ NOTE: コンソールエージェントインスタンスまたはAmazon FSx for
 
 
 
+[[delete-credentials]]
 == 資格情報を削除する
 
 資格情報セットが不要になった場合は、削除できます。システムに関連付けられていない資格情報のみを削除できます。

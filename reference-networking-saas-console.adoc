@@ -27,6 +27,7 @@ NOTE: 4.0.0 では、 NetApp はコンソールとコンソール エージェ�
 
 
 
+[[endpoints-contacted-by-netapp-console-and-console-agents]]
 == NetApp Consoleおよびコンソールエージェントが接続するエンドポイント
 
 導入する各エージェントとNetApp Consoleにアクセスする各コンピューターは、以下にリストされているエンドポイントに接続する必要があります。
@@ -58,6 +59,7 @@ NOTE: 4.0.0 では、 NetApp はコンソールとコンソール エージェ�
 |===
 
 
+[[cloud-provider-endpoints-contacted-the-console-agent]]
 == クラウドプロバイダーのエンドポイントがコンソールエージェントに接続しました
 
 コンソール エージェントがクラウド プロバイダーに展開されている場合、追加のエンドポイントにアクセスできる必要があります。
@@ -71,12 +73,14 @@ NOTE: 4.0.0 では、 NetApp はコンソールとコンソール エージェ�
 
 
 
+[[data-services-endpoints-contacted-by-the-console-agent]]
 == コンソールエージェントが接続するデータサービスエンドポイント
 
 一部のNetAppデータ サービスとCloud Volumes ONTAP、エージェントに追加のアウトバウンド インターネット アクセスが必要です。
 
 
 
+[[endpoints-for-cloud-volumes-ontap]]
 === Cloud Volumes ONTAPのエンドポイント
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["AWS のCloud Volumes ONTAPのエンドポイント"]
@@ -86,6 +90,7 @@ NOTE: 4.0.0 では、 NetApp はコンソールとコンソール エージェ�
 
 
 
+[[endpoints-for-workloads]]
 === ワークロードのエンドポイント
 
 コンソール エージェントは、 NetAppワークロードの次のエンドポイントにアクセスできる必要があります。

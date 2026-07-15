@@ -18,6 +18,7 @@ NetApp ConsoleがAzure 資格情報を使用してユーザーに代わってア
 
 
 
+[[initial-azure-credentials]]
 == 初期の Azure 資格情報
 
 コンソールからコンソール エージェントを展開する場合は、コンソール エージェント仮想マシンを展開する権限を持つ Azure アカウントまたはサービス プリンシパルを使用する必要があります。必要な権限は、link:task-install-agent-azure-console.html#agent-custom-role["Azure のエージェント展開ポリシー"] 。
@@ -34,12 +35,14 @@ image:screenshot_accounts_select_azure.gif["詳細と資格情報ページのア
 
 
 
+[[additional-azure-subscriptions-for-a-managed-identity]]
 == マネージド ID 用の追加の Azure サブスクリプション
 
 コンソール エージェント VM に割り当てられたシステム割り当てマネージド ID は、コンソール エージェントを起動したサブスクリプションに関連付けられています。別のAzureサブスクリプションを選択する場合は、link:task-adding-azure-accounts.html#associate-additional-azure-subscriptions-with-a-managed-identity["マネージドIDをそれらのサブスクリプションに関連付ける"] 。
 
 
 
+[[additional-azure-credentials]]
 == 追加のAzure資格情報
 
 コンソールで異なるAzure資格情報を使用する場合は、必要な権限を付与する必要があります。link:task-adding-azure-accounts.html["Microsoft Entra ID でサービス プリンシパルを作成して設定する"] Azure アカウントごとに。次の図は、それぞれサービス プリンシパルと、アクセス許可を提供するカスタム ロールが設定された 2 つの追加アカウントを示しています。
@@ -54,6 +57,7 @@ image:screenshot_accounts_switch_azure.gif["詳細と資格情報ページでア
 
 
 
+[[credentials-and-marketplace-subscriptions]]
 == 資格情報とマーケットプレイスのサブスクリプション
 
 コンソール エージェントに追加する資格情報は、Azure Marketplace サブスクリプションに関連付ける必要があります。これにより、 Cloud Volumes ONTAPの料金を時間単位 (PAYGO) またはNetAppデータ サービス、あるいは年間契約で支払うことができます。
@@ -68,12 +72,14 @@ Azure 資格情報とマーケットプレース サブスクリプションに�
 
 
 
+[[faq]]
 == FAQ
 
 次の質問は、資格情報とサブスクリプションに関連しています。
 
 
 
+[[can-i-change-the-azure-marketplace-subscription-for-cloud-volumes-ontap-systems]]
 === Cloud Volumes ONTAPシステムの Azure Marketplace サブスクリプションを変更できますか?
 
 はい、できます。  Azure 資格情報のセットに関連付けられている Azure Marketplace サブスクリプションを変更すると、既存および新しいすべてのCloud Volumes ONTAPシステムに新しいサブスクリプションに対して課金されます。
@@ -82,6 +88,7 @@ link:task-adding-azure-accounts.html#subscribe["Azureサブスクリプション
 
 
 
+[[can-i-add-multiple-azure-credentials-each-with-different-marketplace-subscriptions]]
 === それぞれ異なるマーケットプレイス サブスクリプションを持つ複数の Azure 資格情報を追加できますか?
 
 同じ Azure サブスクリプションに属するすべての Azure 資格情報は、同じ Azure Marketplace サブスクリプションに関連付けられます。
@@ -90,12 +97,14 @@ link:task-adding-azure-accounts.html#subscribe["Azureサブスクリプション
 
 
 
+[[can-i-move-existing-cloud-volumes-ontap-systems-to-a-different-azure-subscription]]
 === 既存のCloud Volumes ONTAPシステムを別の Azure サブスクリプションに移動できますか?
 
 いいえ、 Cloud Volumes ONTAPシステムに関連付けられている Azure リソースを別の Azure サブスクリプションに移動することはできません。
 
 
 
+[[how-do-credentials-work-for-marketplace-deployments-and-on-premises-deployments]]
 === マーケットプレイスの展開とオンプレミスの展開では資格情報はどのように機能しますか?
 
 上記のセクションでは、コンソールからのコンソール エージェントの推奨展開方法について説明しています。  Azure Marketplace から Azure にコンソール エージェントをデプロイし、独自の Linux ホストにコンソール エージェント ソフトウェアをインストールすることもできます。

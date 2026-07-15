@@ -18,6 +18,7 @@ NetApp Console エージェント VM インスタンスに関連付けられて�
 
 
 
+[[associate-a-marketplace-subscription-with-google-cloud-credentials]]
 == Marketplace サブスクリプションを Google Cloud クレデンシャルに関連付ける
 
 Google Cloud にConsoleエージェントをデプロイすると、ConsoleはConsoleエージェントVMインスタンスに関連付けられたデフォルトの認証情報セットを作成します。これらの認証情報に関連付けられているGoogle Cloud Marketplaceサブスクリプションはいつでも変更できます。サブスクリプションでは、従量課金制Cloud Volumes ONTAPシステムを作成し、その他のデータサービスを使用できます。
@@ -88,6 +89,7 @@ image:screenshot_gcp_associate.gif["サブスクリプション割り当てペ�
 
 
 
+[[troubleshoot-the-marketplace-subscription-process]]
 == Marketplaceのサブスクリプションプロセスのトラブルシューティング
 
 Google Cloud Marketplaceを通じてNetAppデータサービスにサブスクライブする際、権限が正しくない場合や誤ってNetApp Consoleへのリダイレクトに従わなかった場合、プロセスが断片化されることがあります。このような場合は、次の手順に従ってサブスクリプションプロセスを完了してください。

@@ -18,6 +18,7 @@ summary: ユーザーに運用サポートアナリストの役割を割り当�
 
 
 
+[[operational-support-analyst]]
 == 運用サポートアナリスト
 
 [cols="1,2"]

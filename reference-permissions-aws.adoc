@@ -18,6 +18,7 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
 
 
 
+[[iam-policies]]
 == IAMポリシー
 
 以下の IAM ポリシーは、AWS リージョンに基づいてパブリッククラウド環境内のリソースとプロセスを管理するためにコンソールエージェントに必要な権限を提供します。
@@ -745,12 +746,14 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
 ====
 
 
+[[how-the-aws-permissions-are-used]]
 == AWS権限の使用方法
 
 次のセクションでは、各NetApp Console管理サービスまたはデータ サービスに対して権限がどのように使用されるかについて説明します。この情報は、必要な場合にのみ権限を付与するように企業ポリシーで定められている場合に役立ちます。
 
 
 
+[[amazon-fsx-for-ontap]]
 === Amazon FSx for ONTAP
 
 コンソールエージェントは、 Amazon FSx for ONTAPファイルシステムを管理するために次の API リクエストを行います。
@@ -785,6 +788,7 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
 
 
 
+[[amazon-s3-bucket-discovery]]
 === Amazon S3 バケット検出
 
 コンソールエージェントは、Amazon S3 バケットを検出するために次の API リクエストを行います。
@@ -793,6 +797,7 @@ s3:暗号化設定の取得
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 エージェントは、Amazon S3 内のバックアップを管理するために次の API リクエストを行います。
@@ -886,6 +891,7 @@ Cloud Volumes ONTAPバックアップにソースボリュームに使用して�
 
 
 
+[[netapp-data-classification]]
 === NetApp Data Classification
 
 エージェントは、NetApp Data Classificationを展開するために次の API 要求を行います。
@@ -939,6 +945,7 @@ NetApp Data Classificationを使用する場合、エージェントは次の AP
 
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 エージェントは、AWS でCloud Volumes ONTAP をデプロイおよび管理するために、次の API リクエストを行います。
@@ -1198,12 +1205,14 @@ NetApp Data Classificationを使用する場合、エージェントは次の AP
 |===
 
 
+[[change-log]]
 == 変更ログ
 
 権限が追加または削除されると、以下のセクションでその旨を記録します。
 
 
 
+[[24-february-2026]]
 === 2026年2月24日
 
 データ分類には次の権限が必要になりました：
@@ -1212,6 +1221,7 @@ cloudformation：ListStacks
 
 
 
+[[11-november-2025]]
 === 2025年11月11日
 
 従来のインデックスを使用しない限り、 NetApp Backup and Recoveryには次の権限は不要になりました。このページのポリシーから次の権限が削除されました:
@@ -1229,6 +1239,7 @@ cloudformation：ListStacks
 
 
 
+[[9-september-2024]]
 === 2024年9月9日
 
 NetApp ConsoleはNetAppエッジ キャッシングと Kubernetes クラスターの検出および管理をサポートしなくなったため、標準リージョンのポリシー #2 から権限が削除されました。
@@ -1280,6 +1291,7 @@ NetApp ConsoleはNetAppエッジ キャッシングと Kubernetes クラスタ�
 ====
 
 
+[[9-may-2024]]
 === 2024年5月9日
 
 Cloud Volumes ONTAPには次の権限が必要になりました。
@@ -1288,6 +1300,7 @@ ec2:アベイラビリティゾーンの説明
 
 
 
+[[6-june-2023]]
 === 2023年6月6日
 
 Cloud Volumes ONTAPには次の権限が必要になりました。
@@ -1296,6 +1309,7 @@ kms:プレーンテキストなしでデータキーを生成する
 
 
 
+[[14-february-2023]]
 === 2023年2月14日
 
 NetApp Cloud Tieringには次の権限が必要になりました。

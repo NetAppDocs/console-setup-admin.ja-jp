@@ -6273,4 +6273,88 @@
   <block id="c352b7fbc4bc73fdf6c2e56c32996413" category="paragraph">4.8.0 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
   <block id="179021adb01b0c7bf08f12ed1f7e4cea" category="paragraph">今回のリリースには、セキュリティの改善とバグ修正が含まれています。</block>
   <block id="36864a323861d58f15ec5fb9c0a62095" category="section-title">2026年6月8日</block>
+  <block id="b52a1b50313551938bf7b6520c957f67" category="doc">Console エージェント 4.9.0</block>
+  <block id="8643cb7b1a266632b3ce870a592c9aed" category="paragraph">4.9.0 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
+  <block id="148954cf851ed4aa263eb6cd90ea3000" category="paragraph-title">Cloud Volumes ONTAP のロールベースアクセスのサポート</block>
+  <block id="bfc35791f70b3b115636ea79999bc1e3" category="paragraph">コンソールは Cloud Volumes ONTAP のロールベースアクセスをサポートしています。</block>
+  <block id="a849f909985995e89c42154f270a1245" category="inline-link-macro">Cloud Volumes ONTAP のロールベースアクセスの詳細については、こちらをご覧ください</block>
+  <block id="ea256e0ef091d570fc3443bfdb29b124" category="paragraph"><block ref="8c5db5921f383526df21d84d3b1bfd83" category="inline-link-macro-rx"></block>。</block>
+  <block id="e0bcb2ebdbad366327cfe5a2bb3842af" category="summary">ユーザーに以下のロールを割り当てることで、コンソール内の Cloud Volumes ONTAP へのアクセス権を付与できます。Cloud Volumes ONTAP のロールを使用することで、組織内でユーザーが実行する必要のあるタスクに特化したロールを柔軟に割り当てることができます。</block>
+  <block id="38231d7ab948e14954505c434dbc3406" category="doc">Cloud Volumes ONTAP の NetApp Console におけるアクセスロール</block>
+  <block id="cf1bb4e2b95630bcd705b5ed0583a3f6" category="paragraph">ユーザーに以下のロールを割り当てることで、コンソール内の Cloud Volumes ONTAP へのアクセス権を付与できます。Cloud Volumes ONTAP のロール機能を使用することで、組織内でユーザーが遂行する必要のあるタスクに特化したロールを柔軟に割り当てることができます。ロールの割り当て方法は、貴社のビジネス慣行およびストレージ管理方法によって異なります。</block>
+  <block id="0ef7f8c52a11ca17c940eb122edda23d" category="paragraph">Cloud Volumes ONTAP は以下のロールを使用します：</block>
+  <block id="ccb8cf6de876397f5af5fd2969199a4c" category="list-text">*Cloud Volumes ONTAP admin*：すべての Cloud Volumes ONTAP 操作へのフルアクセスを提供します。</block>
+  <block id="f89da74408fedae3ccfafd61cfb7bbd0" category="list-text">*Cloud Volumes ONTAP operator*：Cloud Volumes ONTAP システムの検出と管理（ボリューム、アグリゲート、スナップショット、レプリケーションの追加、一部の構成の変更、Cloud Volumes ONTAP バージョンのアップグレードなど）を含む重要なストレージ操作を実行します。</block>
+  <block id="0d01873a225e72f3074f310aae6b4cd1" category="list-text">*Cloud Volumes ONTAP ビューア*：Cloud Volumes ONTAP 情報への読み取り専用アクセスを提供します。このロールでは、アクティブな操作は実行できません。設定情報を含む一部のタブや画面は、ビューアには表示されない場合があります。</block>
+  <block id="e612ed3cf7a0977aec6f993000cc46f1" category="section-title">ロールの変更が反映される仕組み</block>
+  <block id="283d45b1cce5ad68028d1e4ccf0bbb68" category="paragraph">Cloud Volumes ONTAP は、各ロール割り当てのローカルキャッシュを使用して、ロールベースアクセス制御（RBAC）を適用します。キャッシュは1時間ごとに自動的に更新されます。ロールが新たに割り当てられたり変更されたりした場合、変更が反映されるまでに最大1時間かかることがあります。更新が完了すると、コンソールはそのロールで許可されているワークフローを有効にします。</block>
+  <block id="99f9bec3d41eefb18e9b6540df4c9630" category="admonition">Console エージェントが初めてデプロイされるとき、または既存の Console エージェントが Console 4.9.0 以降にアップグレードされるとき、Console は、組織内の既存ユーザーに Cloud Volumes ONTAP ロールを割り当てる1回限りのシード処理を実行します。この処理が完了するまでに最大30分かかる場合があります。</block>
+  <block id="fee3007030dccd80255a7211926472b7" category="section-title">Cloud Volumes ONTAP ロールの権限</block>
+  <block id="04133a29798abb95ff37ba8c50cf2155" category="cell">Cloud Volumes ONTAP ビューア</block>
+  <block id="eddfc9398b9966908680fb984db5a4af" category="cell">Cloud Volumes ONTAPオペレーター</block>
+  <block id="f8ce0c164ea8a4e0ddd34253df0f4d02" category="cell">Cloud Volumes ONTAP管理者</block>
+  <block id="70c96718d28204569b4d506719f1b08c" category="paragraph">*システムページ*：</block>
+  <block id="68508a9dfe7d188ddfacdf20bf897e7f" category="paragraph">システムを入力します</block>
+  <block id="6b3c1595afc04f7a21a3249b677c0c9b" category="paragraph">ボリュームを表示する</block>
+  <block id="bf4d918de9d256d487afb992811ca965" category="paragraph">システムを検出する</block>
+  <block id="3cbb7699679cf8ac6bb42f2d93fd4d72" category="paragraph">ボリュームの追加</block>
+  <block id="ef86e727369acd14c1154ae70c7818c2" category="paragraph">*レプリケーション*を使用します（FSx for ONTAPまたはオンプレミスシステムには適用されません）</block>
+  <block id="ebfc655a9ee5a72608591f3c5fc9a2c5" category="paragraph">*レプリケーション*にドラッグ アンド ドロップを使用する（Cloud Volumes ONTAP をソースまたはデスティネーションとして使用する場合）</block>
+  <block id="770e6e1d37ec8e564116ac215a622e66" category="paragraph">システムを追加する</block>
+  <block id="34d606f181de5f7ebc55948eff861656" category="paragraph">*コストとパフォーマンスの最適化* にアクセスします</block>
+  <block id="a319340d2793ad3feb216caae04b1972" category="paragraph">System Manager を開きます</block>
+  <block id="78428d7e57376db0e62744220d91520f" category="paragraph">Cloud Volumes ONTAP をオンにする</block>
+  <block id="ae52ff2fa45ec695a0eb4dddc56142e2" category="paragraph">システムを削除する</block>
+  <block id="77c36d637ce6be24a47b2084784aaa2c" category="paragraph">*エージェントページ*：</block>
+  <block id="c15cd722e8101855682f654bf1796e4f" category="paragraph">Cloud Volumes ONTAP 設定の表示</block>
+  <block id="afe14dca9719a7fe52b49677da4d8814" category="paragraph">Cloud Volumes ONTAP 設定の編集</block>
+  <block id="dc586dfa749e8f2723104b54cbd24e88" category="paragraph">*概要タブ*：</block>
+  <block id="5288a56300efd1e1c3e2751aa731a390" category="paragraph">アグリゲートを追加</block>
+  <block id="39ca4d74366a4f92b22ffc56ae7560da" category="paragraph">* 今すぐアップグレード * を使用します</block>
+  <block id="905cb7c01c2c938fc7dfb74be192c7fe" category="paragraph">ONTAPバージョンを更新する</block>
+  <block id="6e30995a6a4455f38520c4967a6891dc" category="paragraph">鉛筆メニューから「CIFS設定」を編集します</block>
+  <block id="50384ef287bf4f3284ec6c4fdcbb197d" category="paragraph">オン / オフボタンを使用する</block>
+  <block id="cc940bf2667209e4d71ddc12d8f2e5ed" category="paragraph">パスワードを設定</block>
+  <block id="89d30dd0d2abc48eac8a8820c224f0cb" category="paragraph">ワークスペースからシステムを削除します</block>
+  <block id="611740b36c016d17e48d1933b790fbcd" category="paragraph">システムを削除する</block>
+  <block id="dd1f6e9949dfffc643a8da7aace730ca" category="paragraph">右側のペインにある鉛筆アイコンを使用して、以下を編集してください。</block>
+  <block id="e9b2a4ceea8a7547d6acff51725a45d5" category="list-text">*システムタグ*</block>
+  <block id="7b59bf185ead08ea8d76e9e065d0c541" category="list-text">*計画的なシステム停止*</block>
+  <block id="57a30152ed2185b0f66d4deefe98895f" category="list-text">*ストレージクラス*</block>
+  <block id="49d174862d061ffc45b535cfe19aa675" category="list-text">*インスタンスタイプ*</block>
+  <block id="351998bce1715b24f1ec7084565d4a3e" category="list-text">*充電方法*</block>
+  <block id="84d510d425e276dc06d673c0b4026179" category="list-text">*書き込み速度*</block>
+  <block id="47cf4ae2e1f94cc06b1198ad70feadf4" category="list-text">*ランサムウェア対策*</block>
+  <block id="8c93fb65447e8e41a5b80cede16835fb" category="list-text">*サポート登録*</block>
+  <block id="78000761f276b3432ac1a0954ead15d0" category="list-text">*WORM*</block>
+  <block id="57361aebcdd7b8f5bd95eef8f458ca7d" category="paragraph">*Volumes タブ*：</block>
+  <block id="d50044469c0bf9ab38eff9cf7243fb25" category="paragraph">ボリュームをクローニングする</block>
+  <block id="5b5eeee4d1e6b7007829d66c8b144064" category="paragraph">Snapshot コピーを作成する</block>
+  <block id="9e32a435d22aa5cbc195e861b5fe629f" category="paragraph">ボリューム設定を編集</block>
+  <block id="8e9a64bda9d21f945b6489df2e7946e1" category="paragraph">ボリュームを削除する</block>
+  <block id="ff1652826450f50c76cdfdda64d94e2f" category="paragraph">Snapshot コピーからリストアする</block>
+  <block id="98ac35c4695c65fda5915fe55d337301" category="paragraph">ディスクの種類を変更する</block>
+  <block id="9f4aa892debf403a854859b0ca9c9ff6" category="paragraph">階層化ポリシーを変更する</block>
+  <block id="fdb328de5591e0e1226752360851ec3c" category="paragraph">*アグリゲートタブ*：</block>
+  <block id="261c95ed5d454ef55df25657c605d472" category="paragraph">容量の追加</block>
+  <block id="8ce62ed0fdfe7abb736c3597956922c2" category="paragraph">アグリゲートを削除する</block>
+  <block id="08cce486a8251110d0aa4356efa31acd" category="paragraph">*レプリケーションページ*（Cloud Volumes ONTAP を送信元または送信先とする場合）：</block>
+  <block id="444c64ac4c351f349e58d8d514287ab4" category="paragraph">レプリケーションを解除</block>
+  <block id="892027dedcdbb237fc210b3a00cf2ae5" category="paragraph">レプリケーションの再同期</block>
+  <block id="78c8c117652a47404403fff983b2f82f" category="paragraph">逆方向の再同期レプリケーション</block>
+  <block id="51f4afdf17b1f2127b36e48896363c41" category="paragraph">スケジュールを編集する</block>
+  <block id="487bfcf1a1cc5511a69fc77de0b7b697" category="paragraph">最大転送速度を編集します</block>
+  <block id="d93259d25822e675cbf5c2324eca93de" category="paragraph">レプリケーションを更新</block>
+  <block id="62ef027c0c691039af4f8f02b7fbb023" category="paragraph">レプリケーションを削除</block>
+  <block id="b56d101e2f90a7d1325719cb29a94d92" category="cell"><block ref="b56d101e2f90a7d1325719cb29a94d92" category="inline-link-macro-rx"></block></block>
+  <block id="2c4d9923a9d5b3c3a767052959fd8136" category="cell">CVO_ADMIN</block>
+  <block id="88158c4b6ccecd89ab78e336e14d21e2" category="cell">すべての Cloud Volumes ONTAP 操作へのフルアクセスを提供します。</block>
+  <block id="e3a725b478c365e353fb71da352b5528" category="cell"><block ref="e3a725b478c365e353fb71da352b5528" category="inline-link-macro-rx"></block></block>
+  <block id="c56cd6f914d687294a94bb04b6ac445f" category="cell">CVO_OPERATOR</block>
+  <block id="354977cef76cb978943529851a22368a" category="cell">ボリュームの追加、レプリケーションの設定、ストレージの管理など、日常的な管理タスクを可能にします。</block>
+  <block id="78672301082003054933c3ae90d2a937" category="cell"><block ref="78672301082003054933c3ae90d2a937" category="inline-link-macro-rx"></block></block>
+  <block id="a705354c1854b9d3509c237079d3020f" category="cell">CVO_VIEWER</block>
+  <block id="6f9b7785bb9c36940a328cc9b5ee0194" category="cell">Cloud Volumes ONTAP 情報への読み取り専用アクセスを提供します。このロールでは、アクティブな操作は実行できません。</block>
+  <block id="593b7503b2bb0ab3939f80c599e28d01" category="section-title">2026年7月15日</block>
+  <block id="82ee751249da8a12693a499bea6987f2" category="sidebar">Cloud Volumes ONTAP のロール</block>
 </blocks>
