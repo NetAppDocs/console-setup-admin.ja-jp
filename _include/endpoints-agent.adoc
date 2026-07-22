@@ -51,7 +51,7 @@
 
 | https://mysupport.netapp.com | ライセンス情報を取得し、AutoSupport メッセージを NetApp サポートに送信するため。| https://signin.b2c.netapp.com | NetApp Support Site（NSS）クレデンシャルを更新する場合、または新しい NSS クレデンシャルを NetApp Console に追加する場合。| https://support.netapp.com | ライセンス情報を取得し、AutoSupport メッセージを NetApp サポートに送信するため、および Cloud Volumes ONTAP のソフトウェア更新を受信するため。
 
-| https://api.bluexp.netapp.com https://netapp-cloud-account.auth0.com https://netapp-cloud-account.us.auth0.com https://console.netapp.com https://components.console.netapp.com https://cdn.auth0.com | NetApp Console内で機能とサービスを提供するため。
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetApp Console 内で機能とサービスを提供するため。
 
 [cols="2*"]
 |===
@@ -135,7 +135,7 @@ a| \https://occmclientinfragov.azurecr.us a| Console エージェントのアッ
 * \https://netapp-cloud-account.auth0.com
 * \https://netapp-cloud-account.us.auth0.com
 * \https://console.netapp.com
-* \https://components.console.netapp.com
+* \https://components.console.bluexp.netapp.com
 * \https://cdn.auth0.com
 
  a| 

@@ -16,6 +16,8 @@ Console エージェントのこのリリースには、セキュリティの改
 [[netapp-console-administration]]
 === NetApp Console管理
 
+NetApp Console 4.9.0の管理機能には、以下の新機能が含まれています。
+
 .Cloud Volumes ONTAP のロールベースアクセスのサポート
 コンソールは Cloud Volumes ONTAP のロールベースアクセスをサポートしています。
 
