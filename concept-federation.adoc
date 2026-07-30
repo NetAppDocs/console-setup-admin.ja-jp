@@ -29,9 +29,6 @@ NOTE: フェデレーションは、NetApp Consoleがプライベート モー�
 
 NetAppサポート サイトと連携すると、ユーザーは同じ資格情報を使用してコンソール、 Active IQ Digital Advisor、およびその他の関連アプリケーションにログインできるようになります。
 
-
-NOTE: NetAppサポート サイトと連携する場合、企業の ID 管理プロバイダーとも連携することはできません。組織に最適なものを選択してください。
-
 .手順
 . ダウンロードして完了 https://kb.netapp.com/@api/deki/files/98382/NetApp-B2C-Federation-Request-Form-April-2022.docx?revision=1["NetAppフェデレーション リクエスト フォーム"^]。
 . フォームに指定されたメールアドレスにフォームを送信します。
