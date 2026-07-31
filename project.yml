@@ -44,6 +44,8 @@ sidebar:
         url: "/task-sign-up-saas.html"
       - title: NetApp Consoleアシスタントを使用する
         url: "/task-console-assistant.html"
+      - title: NetApp Intelligent Servicesにご登録ください
+        url: "/task-subscribe-standard-mode.html"
     - title: NetApp Consoleの使用を開始する (制限モード)
       entries:
       - title: 制限モードの使用開始ワークフロー
