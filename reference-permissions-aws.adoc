@@ -124,6 +124,7 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
         "iam:DeleteInstanceProfile",
         "iam:GetRolePolicy",
         "iam:GetRole",
+        "iam:TagRole",
         "sts:DecodeAuthorizationMessage",
         "sts:AssumeRole",
         "s3:GetBucketTagging",
@@ -362,6 +363,7 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -558,6 +560,7 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -678,6 +681,7 @@ NetApp ConsoleがAWS でコンソールエージェントを起動すると、�
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -955,7 +959,7 @@ NetApp Data Classificationを使用する場合、エージェントは次の AP
 | 目的 | アクション | 展開に使用されますか? | 日常業務に使用されますか? | 削除に使用されますか? 
 
 
-.13+| Cloud Volumes ONTAPインスタンスのIAMロールとインスタンスプロファイルを作成および管理します | iam:ListInstanceProfiles | はい | はい | いいえ 
+.14+| Cloud Volumes ONTAPインスタンスのIAMロールとインスタンスプロファイルを作成および管理します | iam:ListInstanceProfiles | はい | はい | いいえ 
 
 
 | iam:CreateRole | はい | いいえ | いいえ 
@@ -965,6 +969,9 @@ NetApp Data Classificationを使用する場合、エージェントは次の AP
 
 
 | iam:PutRolePolicy | はい | いいえ | いいえ 
+
+
+| iam：TagRole | はい | いいえ | いいえ 
 
 
 | iam:インスタンスプロファイルの作成 | はい | いいえ | いいえ 

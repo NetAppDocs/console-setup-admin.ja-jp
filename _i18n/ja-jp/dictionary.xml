@@ -1089,7 +1089,6 @@
   <block id="c4173993f088503294e79bbbe0bb63d6" category="paragraph-title">必要な役割</block>
   <block id="4610064cac3ad84114cc400649031071" category="paragraph">組織管理者、フェデレーション管理者、フェデレーション閲覧者。<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
   <block id="89a60a6294b7338e14dd136c35959073" category="paragraph">NetAppサポート サイトと連携すると、ユーザーは同じ資格情報を使用してコンソール、 Active IQ Digital Advisor、およびその他の関連アプリケーションにログインできるようになります。</block>
-  <block id="465e770e13636214d49910bb014b1053" category="admonition">NetAppサポート サイトと連携する場合、企業の ID 管理プロバイダーとも連携することはできません。組織に最適なものを選択してください。</block>
   <block id="0a3bde973847d35b12a69e1debea9ca9" category="inline-link">NetAppフェデレーション リクエスト フォーム</block>
   <block id="2364b4b1093b706141a365b97b678a4d" category="list-text">ダウンロードして完了<block ref="82f36446881e14fa28b945cd41d2b383" category="inline-link-rx"></block>。</block>
   <block id="28ff396d9aacc41256de2a2d064386fd" category="list-text">フォームに指定されたメールアドレスにフォームを送信します。</block>
@@ -6358,4 +6357,5 @@
   <block id="9ebf544c1d9c2833a9338e1e70ee31de" category="list-text">\https://components.console.bluexp.netapp.com</block>
   <block id="e4f459430f502d8d3158a4b206057282" category="paragraph">NetApp Console 4.9.0の管理機能には、以下の新機能が含まれています。</block>
   <block id="1daedeccee3ce9bebdac02815a88e596" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com</block>
+  <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">iam：TagRole</block>
 </blocks>
