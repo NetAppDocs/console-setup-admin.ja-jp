@@ -20,6 +20,8 @@ sidebar:
       url: "/whats-new.html"
     - title: 既知の制限事項
       url: "/reference-limitations.html"
+    - title: NetApp Console と NetApp Console ローカル展開の比較
+      url: "/console-differences.html"
   - title: 始めましょう
     entries:
     - title: 基本を学ぶ

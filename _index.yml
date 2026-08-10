@@ -18,6 +18,8 @@ indexpage:
       url: concept-identity-and-access-management.html
     - title: 展開モードについて学ぶ
       url: concept-modes.html
+    - title: NetApp Console と NetApp Console ローカル展開の比較
+      url: console-differences.html
   - title: 始めましょう
     links:
     - title: NetApp Console(SaaS) の使用開始
