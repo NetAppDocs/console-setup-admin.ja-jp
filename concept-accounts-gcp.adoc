@@ -4,7 +4,7 @@ permalink: concept-accounts-gcp.html
 keywords: cloud provider accounts, gcp, gcp accounts, google cloud platform, google accounts, google cloud platform accounts, permissions, project, google cloud project, credential, bluexp 
 summary: NetApp ConsoleがGoogle Cloud 認証情報を使用してユーザーに代わってアクションを実行する方法と、それらの認証情報がマーケットプレイスのサブスクリプションとどのように関連付けられるかについて説明します。これらの詳細を理解しておくと、1 つ以上の Google Cloud プロジェクトの認証情報を管理するときに役立ちます。たとえば、コンソール エージェント VM に関連付けられているサービス アカウントについて知りたい場合があります。 
 ---
-= Google Cloud プロジェクトと権限について学ぶ
+= NetApp ConsoleにおけるGoogle Cloudのプロジェクトと権限について説明します
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

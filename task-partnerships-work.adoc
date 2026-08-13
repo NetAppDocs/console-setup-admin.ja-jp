@@ -4,7 +4,7 @@ permalink: task-partnerships-work.html
 keywords: partner organizations, create partnership, MSPs, service provider access 
 summary: パートナー組織でロールが付与されると、その組織に切り替えて、実行権限があるアクションを実行できるようになります。 
 ---
-= パートナー組織で働く
+= NetApp Console のパートナー組織で作業する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

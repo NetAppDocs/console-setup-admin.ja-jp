@@ -4,7 +4,7 @@ permalink: reference-ports-azure.html
 keywords: ports, security group, http, https, inbound, outbound 
 summary: エージェント用の Azure セキュリティ グループには、受信ルールと送信ルールの両方が必要です。NetApp Console からコンソール エージェントを作成すると、NetApp Console はこのセキュリティ グループを自動的に作成します。その他のインストール オプションを選択する場合は、このセキュリティ グループを手動で設定する必要があります。 
 ---
-= Azure のコンソール エージェント セキュリティ グループ ルール
+= NetApp Console の Azure エージェントセキュリティグループルール
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

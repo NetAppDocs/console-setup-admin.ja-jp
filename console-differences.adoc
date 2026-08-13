@@ -4,7 +4,7 @@ permalink: console-differences.html
 keywords: netapp console, netapp console local deployment, comparison, saas, self-hosted, deployment modes, on-premises, cloud, storage management, data sovereignty, agentless, ONTAP fleet management, policy enforcement, storage class policies, data residency, vCenter, fleet management, workload analyzer, identity federation, autonomous, active directory, bring-your-own-license, local 
 summary: NetApp Console は、Console エージェントを使用してクラウドとオンプレミスのストレージシステムを管理する SaaS アプリケーションです。NetApp Console ローカル展開は、ポリシーの適用、ドリフトの修正、および完全なデータ主権を備えたエンタープライズ規模の ONTAP フリート管理のための、セルフホスト型エージェントレス仮想マシンです。 
 ---
-= NetApp Console と NetApp Console ローカル展開の比較
+= NetApp Console と NetApp Console のローカル展開の違い
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -13,3 +13,141 @@ summary: NetApp Console は、Console エージェントを使用してクラウ
 :imagesdir: ./media/
 
 
+
+NOTE: クラウドとオンプレミス環境を管理し、プラットフォームインフラストラクチャを NetApp に任せたい場合は、NetApp Console を選択してください。大規模なオンプレミス ONTAP 環境を管理し、完全なデータ主権とポリシーベースのストレージ管理が必要な場合は、NetApp Console ローカル展開を選択してください。
+
+
+
+[[netapp-console]]
+== NetApp Console
+
+NetAppは、NetApp ConsoleをSaaSアプリケーションとしてホストおよびメンテナンスします。登録後すぐにストレージの管理を開始できます。ストレージシステムを管理するには、クラウドまたはオンプレミス環境に軽量のコンソールエージェントをデプロイします。エージェントはNetApp Consoleプラットフォームにアウトバウンド接続し、NetAppがプラットフォームの認証、アップグレード、および可用性を自動的に処理します。
+
+NetApp Console は、制限モード（独自のパブリッククラウドにインストールされ、アウトバウンド接続が制限されている）とプライベートモード（オンプレミスまたはクラウドにインストールされ、エアギャップ環境を含む NetApp Console プラットフォームへの接続がない）もサポートしています。
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp Consoleの導入モードについて学ぶ"]。
+
+NetApp Consoleは、Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3、Google Cloud Storage、Eシリーズ、StorageGRID、オンプレミスONTAPクラスターなどのクラウドストレージを含む、幅広いストレージシステムをサポートしています。NetApp Backup and Recovery、NetApp Disaster Recovery、NetApp Ransomware Resilience、NetApp Copy and Sync、NetApp Data Classificationなど、NetAppデータサービスのフルスイートへのアクセスを提供します。NetApp Consoleは、Digital Advisor、ライフサイクルプランニング、サステナビリティダッシュボードなどのサポート契約機能も提供しています。
+
+NetApp Consoleは、ハイブリッドクラウド環境を管理し、最大限の機能、運用維持の手間軽減、そして柔軟なライセンス体系を求める組織に最適です。
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console^について説明します。"]
+
+
+
+[[netapp-console-local-deployment]]
+== NetApp Console ローカル展開
+
+NetApp Console のローカル展開では、NetApp Console のコントロールプレーンをお客様自身のオンプレミスインフラストラクチャ内で完全に実行でき、管理トラフィックが環境外に流出することはありません。仮想アプライアンスイメージを使用してコンソールを仮想マシンとしてデプロイし、vCenter環境内の他の仮想マシンと同様に管理します。コンソールエージェントは不要です。仮想マシンは、お客様の ONTAP クラスターと直接通信します。
+
+NetApp Console のプライベートモードはエアギャップおよびオンプレミスデプロイメントもサポートしていますが、Console ローカルデプロイメントは、エンタープライズ規模の ONTAP フリート管理に特化して設計されています。これは、どの NetApp Console デプロイメントモードでも利用できない機能を追加するものです：
+
+ストレージクラスポリシー:: パフォーマンス、容量、階層化の要件をまとめた再利用可能なテンプレートとして、ストレージ標準を一度定義します。すべてのプロビジョニングは承認済みのクラスを使用し、Console のローカル展開はワークロードのコンプライアンスを継続的に監視し、ドリフトを特定します。
+フリート管理:: ビジネス構造を反映したフォルダとフリートにクラスターを整理し、組織、フォルダ、またはフリートのスコープで管理を委任します。
+ワークロードアナライザー:: レイテンシ、スループット、1秒あたりの入出力操作数、および構成変更を時系列で相関させることで、ワークロードに影響が出る前にパフォーマンスの問題を特定します。
+大規模言語モデル統合:: 独自の大規模言語モデルに接続することで、自然言語を使用してストレージをプロビジョニングしたり、アラートを調査したり、ストレージ環境に関する状況に応じた回答を取得したりできます。
+ガイド付きおよび自動化された修復:: ワークロードがストレージクラスから逸脱したり、アラートが発生したりした場合、Console のローカル展開では修正推奨事項が提供されます。ガイド付き手順またはワンクリック自動修復機能を使用して、手動操作なしでコンプライアンスを回復できます。
+メールとウェブフックによるアラート配信:: 保管状況が変化した際に、適切なチームにアラートが届くように、メールとWebhookの通知チャネルを設定してください。Webhookは、既存の監視ツールやインシデント管理ツールと連携します。
+
+
+コンソールのローカル展開は、オンプレミス ONTAP クラスターと NetApp Backup and Recovery をサポートしています。Active Directory と連携してフェデレーション認証を実現し、ローカルユーザー向けの多要素認証もサポートしています。
+
+コンソールローカル展開は、ポリシーベースのプロビジョニング、自動コンプライアンスチェック、および完全なデータ主権を必要とする大規模なオンプレミス ONTAP 環境を持つ組織に最適です。
+
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["NetApp Console のローカルデプロイメントについて説明します^。"]
+
+
+
+[[feature-comparison]]
+== 機能比較
+
+
+
+[[storage-management]]
+=== ストレージ管理
+
+[cols="3,2,2"]
+|===
+| 機能 | NetApp Console | NetApp Console ローカル展開 
+
+
+| オンプレミスのONTAPクラスタ | はい（Console エージェントが必要です） | はい（コンソール仮想マシンからの直接通信） 
+
+
+| クラウドストレージシステム（Amazon FSx for ONTAP、Cloud Volumes ONTAP、Amazon S3、およびその他） | はい | いいえ 
+
+
+| EシリーズとStorageGRID | はい | いいえ 
+
+
+| NetApp Backup and Recovery | はい | はい 
+
+
+| NetApp Disaster Recovery | はい | いいえ 
+
+
+| NetApp Ransomware Resilience | はい | いいえ 
+
+
+| NetApp Copy and Sync | はい | いいえ 
+
+
+| NetApp Data Classification | はい | いいえ 
+
+
+| Digital Advisor、Lifecycle Planning、Sustainability | はい | いいえ 
+
+
+| ストレージクラスポリシーとコンプライアンス監視 | いいえ | はい 
+
+
+| ガイド付きおよび自動化された修復 | いいえ | はい 
+
+
+| フリート管理（フォルダとフリート） | いいえ | はい 
+
+
+| ワークロードアナライザー | いいえ | はい 
+
+
+| AI支援オペレーションのための大規模言語モデルの統合 | いいえ | はい 
+|===
+
+
+[[console-setup-and-security]]
+=== コンソールの設定とセキュリティ
+
+[cols="3,2,2"]
+|===
+| 機能 | NetApp Console | NetApp Console ローカル展開 
+
+
+| 展開モデル | NetAppがホストするSoftware as a Service（さまざまなデプロイモードを利用可能） | 自社インフラストラクチャ内でホストされる仮想マシン 
+
+
+| コンソールエージェントが必要です | はい | いいえ 
+
+
+| ソフトウェアのアップグレード | NetAppによる自動管理 | 手動 
+
+
+| ユーザーインターフェースアクセス | NetApp Consoleアプリケーション（インターネットまたは仮想マシンからのアクセス） | コンソール仮想マシン（ローカル、インターネット不要） 
+
+
+| データ主権 | 管理トラフィックはNetApp Consoleプラットフォームに送られます | データや管理トラフィックがお客様の環境から外部に出ることはありません。 
+
+
+| Active Directoryとの統合 | いいえ | はい 
+
+
+| アイデンティティ連携 | はい | いいえ 
+
+
+| 多要素認証（ローカルユーザ） | はい | はい 
+
+
+| 監査ロギング | はい | はい 
+
+
+| ライセンス | マーケットプレイスのサブスクリプションとライセンス持ち込み | ライセンス持ち込み（BYOL） 
+|===

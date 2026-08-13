@@ -4,7 +4,7 @@ permalink: reference-ports-gcp.html
 keywords: ports, firewall rules, http, https, inbound, outbound, connector, agent 
 summary: エージェントのGoogle Cloudファイアウォールルールには、インバウンドルールとアウトバウンドルールの両方が必要です。ConsoleからConsoleエージェントを作成すると、NetApp Consoleはこのセキュリティグループを自動的に作成します。その他のインストールオプションについては、このセキュリティグループを手動でセットアップする必要があります。 
 ---
-= Google Cloud のコンソール エージェント ファイアウォール ルール
+= NetApp Console エージェントファイアウォールルール（Google Cloud）
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

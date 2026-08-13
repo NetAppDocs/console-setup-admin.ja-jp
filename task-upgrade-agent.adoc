@@ -4,7 +4,7 @@ permalink: task-upgrade-agent.html
 keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade, vcenter upgrade, OVA upgrade, ISO upgrade, vsphere upgrade 
 summary: コンソールエージェントは、アウトバウンド接続が確立されると自動的にアップグレードされます。コンソールエージェントにアウトバウンド接続機能がない場合は、手動でアップグレードできます。エージェントがvCenterに導入されている場合は、ISOを使用してアップグレードできます。 
 ---
-= コンソールエージェントをアップグレードする
+= NetApp Console エージェントをアップグレードする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

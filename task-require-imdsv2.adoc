@@ -4,7 +4,7 @@ permalink: task-require-imdsv2.html
 keywords: managing connectors, uninstall connector, switch connectors, switch between connectors, local interface, local connector, local cloud manager, local ui, go to local ui 
 summary: NetApp Consoleは、コンソール エージェントとCloud Volumes ONTAPを使用して IMDSv2 をサポートします。ほとんどの場合、IMDSv2 は新しい EC2 インスタンスで自動的に構成されます。 IMDSv1 は 2024 年 3 月より前に有効化されました。セキュリティ ポリシーで必要な場合は、EC2 インスタンスで IMDSv2 を手動で設定する必要がある場合があります。 
 ---
-= Amazon EC2 インスタンスで IMDSv2 の使用を必須にする
+= NetApp ConsoleにおけるAmazon EC2インスタンスでのIMDSv2の使用を必須にする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-federation-verify-domain.html
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
 summary: メールアドレスのドメインとは異なるドメインと連携したい場合は、まずそのドメインの所有権を確認する必要があります。フェデレーションには、認証済みのドメインのみを使用できます。 
 ---
-= フェデレーション接続のメールドメインを確認する
+= NetApp Console でフェデレーション用のメールドメインを確認する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-agent-vm-config.html
 keywords: agent VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, agent maintenance, agent operating system, agent host 
 summary: コンソール エージェントをデプロイした後、既存のvCenterまたはESXiホストに変更を加えることができます。たとえば、コンソール エージェントをホストするVMインスタンスのCPUまたはRAMを増やすことができます。 
 ---
-= Console エージェント用の vCenter または ESXi ホストを維持する
+= NetApp Consoleエージェント用のvCenterまたはESXiホストをメンテナンスする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

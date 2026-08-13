@@ -4,7 +4,7 @@ permalink: task-configuring-proxy.html
 keywords: proxy, proxy server, proxy, internet, HTTP, http, https, bluexp 
 summary: 企業ポリシーでインターネットへのすべての通信にプロキシ サーバーの使用が求められている場合は、そのプロキシ サーバーを使用するようにエージェントを構成する必要があります。インストール時にコンソール エージェントがプロキシ サーバーを使用するように構成しなかった場合は、いつでもそのプロキシ サーバーを使用するようにコンソール エージェントを構成できます。 
 ---
-= プロキシサーバーを使用するようにコンソールエージェントを構成する
+= NetApp Console エージェントがプロキシ サーバを使用するように設定する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

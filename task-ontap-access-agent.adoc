@@ -4,7 +4,7 @@ permalink: task-ontap-access-agent.html
 keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-premises, roles, permissions, console agent, agent 
 summary: 管理者は、ユーザーにONTAP資格情報の入力を求めるようにNetApp Consoleを設定できます。 
 ---
-= ONTAP Advanced View（ONTAP System Manager）のONTAP権限を適用する
+= NetApp ConsoleでのONTAP System Managerに対するONTAP権限の適用
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

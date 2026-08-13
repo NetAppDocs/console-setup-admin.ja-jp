@@ -4,7 +4,7 @@ permalink: task-install-agent-on-prem.html
 keywords: deploy agent, on prem agent deployment, on prem agent, deploy connector on prem, manual deployment 
 summary: コンソールエージェントをオンプレミスにデプロイし、ログインしてコンソール組織と連携するように設定します。 
 ---
-= オンプレミスにコンソールエージェントを手動でインストールする
+= オンプレミスに NetApp Console エージェントを手動でインストールする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

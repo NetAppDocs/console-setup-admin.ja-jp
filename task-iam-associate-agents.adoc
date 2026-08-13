@@ -4,7 +4,7 @@ permalink: task-iam-associate-agents.html
 keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
 summary: 組織のメンバーが別のプロジェクトでコンソール エージェントを使用する必要がある場合は、そのコンソール エージェントをそれぞれのプロジェクトに関連付ける必要があります。 
 ---
-= コンソールエージェントを他のフォルダやプロジェクトに関連付ける
+= NetApp Console エージェントを他のフォルダーやプロジェクトに関連付ける
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-iam-switch-organizations-projects.html
 keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
 summary: 複数のコンソール組織に属している場合や、組織内の複数のプロジェクトまたはエージェントにアクセスする権限を持っている場合があります。必要に応じて、組織、プロジェクト、コンソール エージェント間を簡単に切り替えて、その組織、プロジェクト、またはエージェントに関連付けられているリソースにアクセスできます。 
 ---
-= コンソールの組織、プロジェクト、エージェントを切り替える
+= NetApp Console の組織、プロジェクト、およびエージェントを切り替える
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

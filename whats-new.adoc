@@ -4,7 +4,7 @@ permalink: whats-new.html
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console' 
 summary: NetApp Console管理の最新情報をご確認ください。 
 ---
-= 新着情報
+= NetApp Consoleの最新情報
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,6 +15,33 @@ summary: NetApp Console管理の最新情報をご確認ください。
 
 [role="lead"]
 NetApp Console管理機能の新機能（アイデンティティおよびアクセス管理 (IAM)、コンソール エージェント、クラウド プロバイダーの認証情報など）について説明します。
+
+
+
+[[13-august-2026]]
+== 2026年8月13日
+
+
+
+[[console-agent-4-10-0]]
+=== Console エージェント 4.10.0
+
+4.10.0 リリースでは、標準モードと制限モードの両方がサポートされています。
+
+Console エージェントのこのリリースには、セキュリティの改善とバグ修正が含まれています。
+
+
+
+==== クラウドメディエーターの応答性と信頼性が向上しました
+
+サービスはクラスタのステータスの更新をより効率的に処理するようになり、断続的なタイムアウトやダウンタイムを削減し、SMaS関係における自動的な計画外フェイルオーバーの仲介機能を強化します。
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+NetApp Console 4.10.0の管理機能には、セキュリティとバグ修正が含まれています。
 
 
 

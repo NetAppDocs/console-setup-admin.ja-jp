@@ -4,7 +4,7 @@ permalink: task-installing-https-cert.html
 keywords: https certificate, certificate, adding, installing, ca, certificate authority, format, encoding, restricted mode, access 
 summary: NetApp Consoleを制限モードで使用する場合は、Web ベースのコンソールへのユーザー アクセス用に CA 署名付き証明書をインストールします。 
 ---
-= Webベースのコンソールアクセス用にCA署名証明書をインストールする
+= CA署名証明書をインストールしてNetApp Consoleにアクセスする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

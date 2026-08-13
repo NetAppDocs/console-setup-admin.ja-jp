@@ -4,7 +4,7 @@ permalink: task-install-private-mode.html
 keywords: install dark site, deploy dark site, install private mode, deploy private mode, install agent dark site, agent dark site, dark site, private mode, no internet 
 summary: NetApp Consoleをプライベート モードで導入すると、アウトバウンド接続なしで使用できます。開始するには、Consoleエージェントをインストールし、Consoleエージェントで実行されているユーザー インターフェイスにアクセスしてNetApp Consoleをセットアップしてから、以前にセットアップしたクラウド権限を指定します。 
 ---
-= Consoleエージェントをプライベートモードで導入する
+= プライベートモードで NetApp Console エージェントをデプロイする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

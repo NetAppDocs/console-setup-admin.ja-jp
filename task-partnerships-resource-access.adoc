@@ -4,7 +4,7 @@ permalink: task-partnerships-resource-access.html
 keywords: role-based access, partnership access, partner resources, resource access, grant access, provide partner access, partnership organization 
 summary: 組織内のフォルダやプロジェクトに対する特定のロールをパートナーシップ ユーザーに割り当てることで、パートナーシップ ユーザーにアクセス権を付与できます。 
 ---
-= パートナーシップユーザーにリソースへのアクセスを提供する
+= NetApp Console でパートナーシップユーザーにリソースアクセスを提供する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

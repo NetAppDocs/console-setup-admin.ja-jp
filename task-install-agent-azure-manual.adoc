@@ -4,7 +4,7 @@ permalink: task-install-agent-azure-manual.html
 keywords: install connector, azure connector installation, azure connector, install connector in azure, manual install 
 summary: 独自の Linux ホストにコンソール エージェントを手動でインストールするには、ホストの要件を確認し、ネットワークを設定し、Azure のアクセス許可を準備し、コンソール エージェントをインストールして、準備したアクセス許可を付与する必要があります。 
 ---
-= Azure にコンソール エージェントを手動でインストールする
+= Azure に NetApp Console エージェントを手動でインストールする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

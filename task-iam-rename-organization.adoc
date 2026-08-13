@@ -4,7 +4,7 @@ permalink: task-iam-rename-organization.html
 keywords: rename organization, change organization name, name change, rename, change name, iam, ID, integration, project, organization, API, identity and access management 
 summary: 必要に応じて、 NetApp Console組織の名前を変更できます。 
 ---
-= 組織IDとプロジェクトID
+= NetApp Console の組織名を変更してIDを取得する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-iam-user-security.html
 keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management 
 summary: 組織のメンバーを管理して、組織のリソース階層のさまざまなレベルにわたって権限を付与します。 
 ---
-= ユーザーセキュリティ
+= NetApp Console でユーザーセキュリティを管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

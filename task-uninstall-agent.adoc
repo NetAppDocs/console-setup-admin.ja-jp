@@ -4,7 +4,7 @@ permalink: task-uninstall-agent.html
 keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
 summary: コンソールエージェントをアンインストールすると、問題のトラブルシューティングを行ったり、ホストから完全に削除したりできます。必要な手順は、使用しているデプロイモードによって異なります。環境からコンソールエージェントを削除したら、コンソールからも削除できます。 
 ---
-= コンソールエージェントをアンインストールして削除する
+= NetApp Console エージェントのアンインストールと削除
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

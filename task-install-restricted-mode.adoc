@@ -4,7 +4,7 @@ permalink: task-install-restricted-mode.html
 keywords: government region, gov, govcloud, connector, sovereign cloud 
 summary: 制限されたアウトバウンド接続でNetApp Consoleを使用できるように、コンソール エージェントを制限モードで展開します。開始するには、コンソール エージェントをインストールし、コンソール エージェントで実行されているユーザー インターフェイスにアクセスしてコンソールをセットアップし、以前に設定したクラウド権限を提供します。 
 ---
-= 制限モードでコンソールエージェントを展開する
+= 制限モードで NetApp Console エージェントをデプロイする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

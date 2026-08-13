@@ -4,7 +4,7 @@ permalink: task-install-agent-google-gcloud.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
 summary: Google Cloud を使用して Google Cloud にコンソール エージェントを作成するには、ネットワークを設定し、Google Cloud の権限を準備し、Google Cloud API を有効にして、コンソール エージェントを作成する必要があります。 
 ---
-= Google Cloud から Console エージェントをデプロイする
+= Google Cloud から NetApp Console エージェントをデプロイする
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

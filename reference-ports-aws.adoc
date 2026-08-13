@@ -4,7 +4,7 @@ permalink: reference-ports-aws.html
 keywords: ports, security group, http, https, inbound, outbound 
 summary: コンソールエージェントの AWS セキュリティグループには、インバウンドルールとアウトバウンドルールの両方が必要です。 NetApp Consoleは、コンソールからコンソール エージェントを作成すると、このセキュリティ グループを自動的に作成します。他のすべてのインストール オプションに対して、このセキュリティ グループを設定する必要があります。 
 ---
-= AWS のコンソールエージェントのセキュリティグループルール
+= NetApp Console エージェントのセキュリティグループルール（AWS）
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

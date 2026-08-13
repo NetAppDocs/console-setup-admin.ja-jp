@@ -4,7 +4,7 @@ permalink: concept-iam-rbac.html
 keywords: roles, permissions, role-based access control, rbac, iam, identity and access management, least privilege, access control, NetApp Console access, organization access, folder access, project access, resource access 
 summary: 'ロールベースのアクセス制御 (RBAC) を使用してNetApp Consoleへのユーザー アクセスを管理し、組織、フォルダ、またはプロジェクト レベルで事前定義されたロールを割り当てます。各ロールは、割り当てられたスコープ内でユーザーが実行できるアクションを定義する特定の権限を付与します。' 
 ---
-= NetApp Consoleのロールベースアクセス制御（RBAC）について学ぶ
+= NetApp Console のロールベースアクセス制御について
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

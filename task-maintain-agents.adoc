@@ -4,7 +4,7 @@ permalink: task-maintain-agents.html
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
 summary: エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、会社の標準的なオペレーティング システムの配布手順に従って、コンソール エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。 
 ---
-= 手動でインストールしたコンソールエージェントのVMインスタンスを維持する
+= 手動でインストールした NetApp Console エージェントの VM を管理する
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
