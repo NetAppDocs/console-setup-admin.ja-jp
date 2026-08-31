@@ -5104,7 +5104,6 @@
   <block id="f19aee9e6e2e5954d2de8e30cbe4751d" category="sidebar">IDプロバイダーとの連携</block>
   <block id="444cf9807eaf5ac0945edfce9108c729" category="sidebar">読み取り専用モードを有効にする</block>
   <block id="320b734c12631424ce316d6953d1dedc" category="sidebar">コンソールのアクティビティを監視する</block>
-  <block id="650a6b9660e523c1a925feddd83c0c4d" category="sidebar">NetApp Consoleを制限モードで導入する (ソブリン クラウド導入)</block>
   <block id="d71a2025aa5d19fc2c3bab8a7d5d1bc1" category="sidebar">SOC-2コンプライアンス</block>
   <block id="aa201c2db7dd29fb5926c96c4006fa2d" category="sidebar">コンソールパートナーシップ</block>
   <block id="c595922d1b033b7101399b8ddff46d28" category="sidebar">NetAppサポート アカウント</block>
@@ -6441,4 +6440,118 @@
   <block id="1ffdd70508b45fa8740a4e5db3fed667" category="doc">NetApp Console エージェントをアップグレードする</block>
   <block id="88119fcc4c91e2769610d7732f2d8876" category="doc">NetApp Consoleの最新情報</block>
   <block id="01b8b50c6af6a26d04385207f4b3c02e" category="section-title">2026年8月13日</block>
+  <block id="1058dc5369c0908359aaf95158dd0d0f" category="summary">NetApp Console のデプロイメント、ユーザーアクセス、コンソールエージェント、およびストレージ管理操作を保護する方法について説明します。</block>
+  <block id="5d7fcd9743b1dc5a7dfb8167192a0a56" category="doc">NetApp Console のセキュリティ保護</block>
+  <block id="bdd077838c93e11800ec4f06eb3a835b" category="paragraph">NetApp Console へのアクセスを制限し、Console エージェントを保護し、不正または意図しない変更がないかアクティビティを監視することで、ストレージ操作を保護します。</block>
+  <block id="f89e189eab4b0a84dde6088f4027e6e1" category="paragraph">セキュリティは共同責任です。NetApp はコンソール サービスのセキュリティを確保しますが、適切な展開モードの選択、ユーザーおよびサービス アカウントへのアクセス制御、コンソール エージェントを展開する環境のセキュリティ確保、および組織内のアクティビティの監視はお客様の責任となります。</block>
+  <block id="3173168275b216d053bdec7a280ec461" category="section-title">適切な展開モードを選択してください</block>
+  <block id="0e73d1e9e7747b1b1b4b3b143c68f576" category="paragraph">接続性、隔離性、および運用要件に基づいて、展開モードを選択してください。</block>
+  <block id="26c0fd0d76bb5a678c4cca1b2ab14d60" category="list-text">標準モードでは、クラウド上でホストされているSaaSアプリケーションを使用します。</block>
+  <block id="7dd7f9cd8bdd5ebb53ba16dcb7ec7947" category="list-text">制限モードでは、NetApp API への外部接続が制限されたパブリッククラウド環境にコンソールをインストールします。</block>
+  <block id="94671ddee001ed58f550c5dec055e5ae" category="list-text">プライベートモードでは、コンソールをオンプレミスまたは NetApp へのアウトバウンド接続のないエアギャップ環境にインストールします。</block>
+  <block id="9c1615767d701966b45379b7c58e3d62" category="paragraph">各モードには、利用可能な機能やセキュリティ要件が異なります。<block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block>。</block>
+  <block id="466fe6a37480f459dfb29f33029949a8" category="section-title">IDとアクセスの制御</block>
+  <block id="ec8357a35950f72e7cf816a40f21b7be" category="paragraph">IDおよびアクセス管理（IAM）を使用して、ユーザーとサービスアカウントに、タスクを実行するために必要なアクセス権限のみを付与します：</block>
+  <block id="8356ca0d1248293dffe430b44a9dc8aa" category="list-text">リソースはプロジェクトごとに整理し、必要に応じて、ビジネスや業務の範囲を反映したフォルダを作成してください。</block>
+  <block id="dabb178434082180a8558f051e774a03" category="list-text">組織階層の最下位レベルにおいて、必要なアクセス権限を提供する事前定義された役割を割り当てます。</block>
+  <block id="54ff18ce569c4f91f21af8d6abcef91b" category="list-text">組織メンバー、サービスアカウント、およびそれぞれの役割を定期的に見直してください。不要になったアクセス権を削除してください。</block>
+  <block id="81dc9345250f1f6289b7a8cc34fef322" category="list-text">組織の要件を満たす場合は、シングル サインオンにIDフェデレーションを使用します。フェデレーションはプライベートモードでは利用できません。</block>
+  <block id="1ddb29d678b51b4e086a8e3bba08b740" category="list-text">ローカルユーザーには多要素認証（MFA）の使用を義務付け、サービスアカウントの認証情報をシークレットとして保護してください。サービスアカウントの認証情報が紛失した場合、またはローテーションが必要な場合は、サービスアカウントの認証情報を再作成してください。</block>
+  <block id="8abf9a466e4c9494ea94af378cf41efe" category="inline-link-macro">NetApp Console の IAM について</block>
+  <block id="0ff7aecca234ce48c5524a55697a2ab4" category="paragraph"><block ref="8f4dacc1355f6b0f32454c70c7a5554f" category="inline-link-macro-rx"></block>。</block>
+  <block id="20d82496be37603c3aa358f272b228b8" category="section-title">セキュアコンソールエージェント</block>
+  <block id="93f61e19d062d5546ce06f1a3d7b08e0" category="paragraph">コンソール エージェントは、コンソールとストレージ システム、クラウドまたはオンプレミス環境との間を橋渡しします。エージェントはコンソールとの通信を開始します。コンソールはエージェントへの接続を開始しません。</block>
+  <block id="2dbde24776bdf42975eef846402c2bbc" category="paragraph">各エージェントに以下の制御を適用します。</block>
+  <block id="5442403e707d9578ed32c3be54184634" category="list-text">組織のホスト、ネットワーク、およびアクセス制御の要件を満たす環境にエージェントをデプロイしてください。</block>
+  <block id="8cfb226c3d3449da4e7e84f027c3ab24" category="list-text">必要なアウトバウンド ネットワーク接続と必要なクラウド権限のみを許可します。展開前に、プロバイダー固有の権限とポート要件を確認してください。</block>
+  <block id="34a1e4720a42b92622003bfb676aabe2" category="list-text">送信トラフィックがプロキシ サーバを経由する必要がある場合は、サポートされているプロキシ構成を使用してください。</block>
+  <block id="85214b639a9dc16f16c9fff3b343aad4" category="list-text">ユーザーがHTTPS経由でエージェントのWebコンソールにアクセスする場合は、CA署名付き証明書をインストールしてください。</block>
+  <block id="5d079d8b3bdd2a21cd919b281144297c" category="list-text">エージェントソフトウェアを常に最新の状態に保ってください。プライベートモードのエージェントは手動でアップグレードする必要があります。</block>
+  <block id="1284c01df79967e9a9cb0fa34a8fc1d0" category="list-text">AWS では、Console エージェントをホストする EC2 インスタンスに IMDSv2 を必須とすることを検討してください。</block>
+  <block id="510c458f335c9e63f10ead0565bc2160" category="section-title">意図しない変更を減らす</block>
+  <block id="9cdb404f81065f4fe2888a384f99999e" category="paragraph">組織管理者は、組織の読み取り専用モードを有効にすることができます。読み取り専用モードは、ユーザーが昇格した権限を要求するまで、ストレージ システムへの変更やデータ サービスの使用を防止するのに役立ちます。</block>
+  <block id="5a883dfb4caaaf143ab7d8771e1a98f4" category="inline-link-macro">読み取り専用モードを有効にする方法を説明します</block>
+  <block id="734b33d0a32bbd9e142a6daf22f123b0" category="paragraph"><block ref="de3e3793ad80a364bdc4648dc1cedccd" category="inline-link-macro-rx"></block>。</block>
+  <block id="802ad0d8de017224a428aaf6dc70e614" category="section-title">アクティビティの監視とレビュー</block>
+  <block id="46aaf6874279db1f02b13d9345965a72" category="paragraph">コンソールでストレージ管理とユーザーアクティビティを確認するには、操作タイムラインを使用してください。組織のセキュリティプロセスの一環として、メンバーのアクセス権限、役割の割り当て、サービスアカウントの認証情報、エージェントのステータス、および最近の操作状況を定期的に確認してください。</block>
+  <block id="acf4d569e85ba4f07dee65d868e312db" category="inline-link-macro">コンソール操作を監視する方法を説明します</block>
+  <block id="8c87e344e1cb6ec1fa88a41d9b58b050" category="paragraph"><block ref="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="inline-link-macro-rx"></block>。</block>
+  <block id="dde081281e2bc1099c59a3a9abd2ab3b" category="section-title">関連するセキュリティトピック</block>
+  <block id="0d16e0fa8385f4ecca48c87b54700eff" category="inline-link-macro">ユーザーセキュリティの管理</block>
+  <block id="c0dc5bcd7d24bdf49727fa822a80ff00" category="list-text"><block ref="3b3467491ef8ae505b09e60553381f2c" category="inline-link-macro-rx"></block>、MFAやサービスアカウントの認証情報なども含まれます。</block>
+  <block id="3ea31604ad2a4d3b7cfe571d0fc5b898" category="list-text"><block ref="484813cc457e81afea222e9c4c55417e" category="inline-link-macro-rx"></block>。</block>
+  <block id="bace6dfef8b8b6bdc38f380797a8ac13" category="list-text"><block ref="c231010d3250b37fefa79e49c7fac573" category="inline-link-macro-rx"></block>。</block>
+  <block id="114871ac953b22269534be5463d5bed4" category="inline-link-macro">SaaS アプリケーションのネットワーク アクセス要件を確認する</block>
+  <block id="e48c9dcd823413ddca6e3e2dceabdf12" category="list-text"><block ref="acba60e5cc3ccbd1da8e2e4daa0251aa" category="inline-link-macro-rx"></block>。</block>
+  <block id="66ea689c24dc9ab9ecf7b3dcbdf2d2bb" category="inline-link-macro">クラウド プロバイダの権限とネットワーク要件を確認する</block>
+  <block id="1772f0b91f03cc431bd437e649681bdc" category="list-text"><block ref="ac7ed8f265c73428987eae567f5a25a0" category="inline-link-macro-rx"></block>。</block>
+  <block id="f8866b2b7454ef2769d5caa0375ad400" category="inline-link-macro">NetApp Console のセキュリティコンプライアンスについて</block>
+  <block id="838ed343eb419ca177b29290cfa5cea7" category="list-text"><block ref="7de827dce0dc8582e4b10f433db46dd9" category="inline-link-macro-rx"></block>。</block>
+  <block id="50e8f64941e4c6ae32b514644df19767" category="summary">NetApp Console、IAM、アイデンティティ フェデレーション、読み取り専用モード、サービス アカウント、Console エージェント、および ONTAP System Manager へのアクセスを保護するための推奨手順に従ってください。</block>
+  <block id="fa6cced3b6fa7ad524a13722716b4e25" category="doc">安全なNetApp Console</block>
+  <block id="91d6f99841f27c7d4ae8a576545136e3" category="paragraph">組織のセキュリティ基準を設定するには、以下の手順に従ってください。以下のセキュリティ対策を適用する前に、展開モードに応じたセットアップ手順に従ってください。<block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block>。</block>
+  <block id="ca77259f0411c49133e28233f7e0a594" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> NetApp Console の展開モードを選択して、初期設定を完了します</block>
+  <block id="6643f0fc063b73ae7cb00644017cef4a" category="paragraph">組織を作成し、最初の組織管理者を設定します。導入環境に合ったセットアップワークフローを完了してください。</block>
+  <block id="22f7b8c9e3cec45bb0909cca22e4e862" category="inline-link-macro">標準モードで NetApp Console を使い始める</block>
+  <block id="1b04b04eae157b7a2e94f5fe3a41ed68" category="list-text"><block ref="1b04b04eae157b7a2e94f5fe3a41ed68" category="inline-link-macro-rx"></block></block>
+  <block id="bb052ff727ad3405f9e377f005178fd8" category="inline-link-macro">制限モードで NetApp Console を使い始める</block>
+  <block id="07a84f2a895ff5384ba250bbd0694216" category="list-text"><block ref="07a84f2a895ff5384ba250bbd0694216" category="inline-link-macro-rx"></block></block>
+  <block id="43a0f032817197132c98b19efcb2283f" category="inline-link-macro">プライベートモードで NetApp Console を使い始める</block>
+  <block id="894324cb3dad3c4c463e07e85ea7dc44" category="list-text"><block ref="894324cb3dad3c4c463e07e85ea7dc44" category="inline-link-macro-rx"></block></block>
+  <block id="4ca59768f21f1460981bd735f1baac9d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Secure Console エージェントの権限、ネットワーク アクセス、およびホスト</block>
+  <block id="35da275a1ecec991e7323642d414234d" category="paragraph">各コンソール エージェントのクラウド権限とネットワーク アクセスを必要最低限に制限してください。ウェブ コンソールのトラフィックを保護し、コンソール エージェント ソフトウェアを維持管理してください。</block>
+  <block id="ac7ed8f265c73428987eae567f5a25a0" category="list-text"><block ref="ac7ed8f265c73428987eae567f5a25a0" category="inline-link-macro-rx"></block></block>
+  <block id="487d3f01749236f4a1c63ceebd697397" category="inline-link-macro">ネットワーク アクセス要件の確認</block>
+  <block id="1c05e14c7de8a7f8cd966ad66b4b3e01" category="list-text"><block ref="1c05e14c7de8a7f8cd966ad66b4b3e01" category="inline-link-macro-rx"></block></block>
+  <block id="b56591a52f1058d1f87b24f5b185e077" category="inline-link-macro">CA署名証明書をインストールする</block>
+  <block id="739a0d5d95bf9c38769b463ca19accaa" category="list-text"><block ref="739a0d5d95bf9c38769b463ca19accaa" category="inline-link-macro-rx"></block></block>
+  <block id="72e9c60a82606c5e5b157cc82e336351" category="inline-link-macro">プロキシ サーバを設定する</block>
+  <block id="8d296f5cd8486485175e81f9eb156ece" category="list-text"><block ref="8d296f5cd8486485175e81f9eb156ece" category="inline-link-macro-rx"></block></block>
+  <block id="dbfecc969c3a84fbdcd91e50bdd86a68" category="list-text"><block ref="dbfecc969c3a84fbdcd91e50bdd86a68" category="inline-link-macro-rx"></block></block>
+  <block id="35bf205af05d718bb2b7b145e4c400fa" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> NetApp ConsoleのIAM階層を整理する</block>
+  <block id="902e832c587f1279a5acf65feaf1211e" category="paragraph">チームの働き方に合わせて組織階層を設定します。ストレージ システム、データ サービス、および Console エージェントの範囲を、それらを管理するプロジェクトに割り当てます。</block>
+  <block id="0e6ece2237e7f9e1f9a0aa6ba9e9b5d9" category="inline-link-macro">フォルダとプロジェクトを作成します。</block>
+  <block id="04c98a584416c40d70b3f74fc101a548" category="list-text"><block ref="04c98a584416c40d70b3f74fc101a548" category="inline-link-macro-rx"></block></block>
+  <block id="5cab9254ce355b5c287938249b28816e" category="inline-link-macro">リソースをプロジェクトに関連付けます。</block>
+  <block id="df91e596a0ec0af0359838f6f8db8c62" category="list-text"><block ref="df91e596a0ec0af0359838f6f8db8c62" category="inline-link-macro-rx"></block></block>
+  <block id="839425f36147da7d1cc666e9089039b1" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>NetApp Consoleのアイデンティティ フェデレーションとフェデレーション グループを設定します</block>
+  <block id="9a52c08293d409a842184acb141eb8de" category="paragraph">NetApp Console を企業の ID プロバイダー（IdP）に接続することで、ユーザーは企業の認証情報を使用してサインインでき、IdP が認証ポリシーを適用できるようになります。NetApp Console は、AD FS、Microsoft Entra ID、PingFederate、および汎用 SAML ID プロバイダーをサポートしています。</block>
+  <block id="01ad1d46d1fca1a4c36d506b90b391ec" category="inline-link-macro">フェデレーテッド グループを追加する方法を確認します</block>
+  <block id="420464487a0edfeb41fd919551a6272d" category="paragraph">フェデレーションユーザーとグループをコンソール組織に追加し、コンソールロールを割り当てます。フェデレーションは、コンソールメンバーシップや役割割り当てに取って代わるものではありません。<block ref="c0efbcf589f6ac5b125ed3ce815ba603" category="inline-link-macro-rx"></block>。</block>
+  <block id="2b765ea4ff3da54728d8447c5c6571b8" category="list-text"><block ref="2b765ea4ff3da54728d8447c5c6571b8" category="inline-link-macro-rx"></block></block>
+  <block id="1fa77426337802b6d8934e569c4ca014" category="inline-link-macro">AD FSと連携する</block>
+  <block id="b027d5096fb538387f89c4209d60f160" category="list-text"><block ref="b027d5096fb538387f89c4209d60f160" category="inline-link-macro-rx"></block></block>
+  <block id="390ed3aa4df4a47d3c0287b8903016f5" category="inline-link-macro">Microsoft Entra ID とのフェデレーション</block>
+  <block id="73b73bc1a7e29b791c85daa4e26a58bb" category="list-text"><block ref="73b73bc1a7e29b791c85daa4e26a58bb" category="inline-link-macro-rx"></block></block>
+  <block id="5cfe4565ad097684341bd371674bcb66" category="list-text"><block ref="5cfe4565ad097684341bd371674bcb66" category="inline-link-macro-rx"></block></block>
+  <block id="f76ee8d03e827ecd67d8fd3a7f399659" category="list-text"><block ref="f76ee8d03e827ecd67d8fd3a7f399659" category="inline-link-macro-rx"></block></block>
+  <block id="7f267bf56eb86142c609448d2b6fa486" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> NetApp Console メンバーを追加し、最小権限のロールを割り当てます</block>
+  <block id="0adafca284bb085118cee75938fe8cf1" category="paragraph">各ユーザー、サービスアカウント、および連合グループには、それぞれの責任に必要なアクセス権のみを付与してください。業務をサポートする最も狭い組織、フォルダ、またはプロジェクトのスコープでロールを割り当ててください。ローカルユーザーに対して多要素認証を有効にしてください。</block>
+  <block id="73af05182f26c2bb0c80203ab811f740" category="inline-link-macro">コンソール組織にメンバーを追加する</block>
+  <block id="d9e6b511fcd1aac84cc476d56001fce8" category="list-text"><block ref="d9e6b511fcd1aac84cc476d56001fce8" category="inline-link-macro-rx"></block></block>
+  <block id="22f29f8030a62c2c0af6b4e6b6f606e4" category="inline-link-macro">ロールベースアクセス制御について学ぶ</block>
+  <block id="3b2e25af1bea98c2b0ae625453e6f096" category="list-text"><block ref="3b2e25af1bea98c2b0ae625453e6f096" category="inline-link-macro-rx"></block></block>
+  <block id="195648ee3edf3d90376eb60ce8982563" category="inline-link-macro">定義済みの役割を確認する</block>
+  <block id="b727bb2ef69c2fcbbd990168c72ee6ca" category="list-text"><block ref="b727bb2ef69c2fcbbd990168c72ee6ca" category="inline-link-macro-rx"></block></block>
+  <block id="a1a6242d2d072d6e6fdd57f576b606ed" category="list-text"><block ref="a1a6242d2d072d6e6fdd57f576b606ed" category="inline-link-macro-rx"></block></block>
+  <block id="2d44ec90fe255157950694f5d9085d23" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> サービスアカウントを使用した NetApp Console の自動化のセキュリティ保護</block>
+  <block id="79f7a42800700476b37ddd6e61cfe43e" category="paragraph">自動化されたアカウントと人間のアカウントは分けて管理してください。各サービスアカウントに、必要最低限の役割と範囲を割り当ててください。認証情報は安全に保管し、紛失または変更された場合は再作成してください。</block>
+  <block id="3f507ae6cfa9c8dd23848c7ac6318097" category="inline-link-macro">サービスアカウントを追加する方法を説明します</block>
+  <block id="f44d55cb0b77f0ef3a3b8c6b63aebf33" category="paragraph"><block ref="f44d55cb0b77f0ef3a3b8c6b63aebf33" category="inline-link-macro-rx"></block></block>
+  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">セブン</block>
+  <block id="d3d636e2f07c73c47ceb409e33a007f6" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> NetApp Console 組織の読み取り専用モードを有効にする</block>
+  <block id="916b3d0ae2a38a356dac81b21f0aadb9" category="paragraph">変更を行う前に、管理者に権限の昇格を義務付けます。このコントロールにより、ストレージ システムおよびデータ サービスへの意図しない変更が軽減されます。</block>
+  <block id="de3e3793ad80a364bdc4648dc1cedccd" category="paragraph"><block ref="de3e3793ad80a364bdc4648dc1cedccd" category="inline-link-macro-rx"></block></block>
+  <block id="4a03ba8153e8c5adf50924eb1148e173" category="admonition">読み取り専用モードは、NetApp Console がプライベート モードの場合は使用できません。</block>
+  <block id="baca0ca6729684fd54206793ae4b5bd5" category="inline-image-macro">8</block>
+  <block id="b65c76d2d63a4b6eda425db31ce4a506" category="paragraph-title"><block ref="430057c670c01688e904ed2ba129a0b5" category="inline-image-macro-rx" type="image"></block> ONTAP System Manager に対して ONTAP 権限を適用する</block>
+  <block id="077e2c69447d026f0fd6df0117d66f5a" category="paragraph">本番環境の ONTAP システムを管理するアクティブなコンソール エージェントで「Force Credentials」を有効にします。ユーザーが ONTAP System Manager を開くと、ONTAP クラスターの認証情報を入力し、ONTAP がそのアクセス許可を適用します。</block>
+  <block id="7956c3d473c153fa708c836ff115cf1f" category="inline-link-macro">ONTAP System Manager の ONTAP 権限を適用する方法を確認します</block>
+  <block id="183e4774dd06af5ef46d71d3a6f8b5bf" category="paragraph"><block ref="183e4774dd06af5ef46d71d3a6f8b5bf" category="inline-link-macro-rx"></block></block>
+  <block id="24db11216549ee55172c33cf3def2f3f" category="inline-image-macro">9</block>
+  <block id="d09dec5c2df9a4ff4cb80a7d3198cc65" category="paragraph-title"><block ref="b37b448eff4f65237cf47b29bdd2817c" category="inline-image-macro-rx" type="image"></block> NetApp Consoleの監査アクティビティとセキュリティ コントロールを確認します</block>
+  <block id="d1a2ee8ff075a4679389e2746373a22a" category="paragraph">メンバー、グループマッピング、ロール、クレデンシャル、エージェント、および最近の操作について、定期的なレビュープロセスを確立してください。不要になったアクセス権を削除し、予期しないアクティビティを調査してください。</block>
+  <block id="03e21ac1acdd1f03c79cf52cd9cf7e75" category="inline-link-macro">コンソール操作の監査方法について説明します</block>
+  <block id="e64d42268f0853ee74265280546a395b" category="list-text"><block ref="e64d42268f0853ee74265280546a395b" category="inline-link-macro-rx"></block></block>
+  <block id="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="list-text"><block ref="19f12f26a8f3bcda1c7b8ec8dd09d6b1" category="inline-link-macro-rx"></block></block>
 </blocks>

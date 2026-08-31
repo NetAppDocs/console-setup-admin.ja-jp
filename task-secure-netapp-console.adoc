@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: task-secure-netapp-console.html 
+keywords: security, hardening, netapp console, console agent, identity and access management, iam, rbac, federation, mfa, read-only mode, ontap system manager 
+summary: NetApp Console、IAM、アイデンティティ フェデレーション、読み取り専用モード、サービス アカウント、Console エージェント、および ONTAP System Manager へのアクセスを保護するための推奨手順に従ってください。 
+---
+= 安全なNetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Console へのアクセスを制限し、Console エージェントを保護し、不正または意図しない変更がないかアクティビティを監視することで、ストレージ操作を保護します。
+
+組織のセキュリティ基準を設定するには、以下の手順に従ってください。以下のセキュリティ対策を適用する前に、展開モードに応じたセットアップ手順に従ってください。link:concept-modes.html["NetApp Consoleの導入モードについて学ぶ"]。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] NetApp Console の展開モードを選択して、初期設定を完了します
+[role="quick-margin-para"]
+組織を作成し、最初の組織管理者を設定します。導入環境に合ったセットアップワークフローを完了してください。
+
+[role="quick-margin-list"]
+* link:task-quick-start-standard-mode.html["標準モードで NetApp Console を使い始める"]
+* link:task-quick-start-restricted-mode.html["制限モードで NetApp Console を使い始める"]
+* link:task-quick-start-private-mode.html["プライベートモードで NetApp Console を使い始める"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"] Secure Console エージェントの権限、ネットワーク アクセス、およびホスト
+[role="quick-margin-para"]
+各コンソール エージェントのクラウド権限とネットワーク アクセスを必要最低限に制限してください。ウェブ コンソールのトラフィックを保護し、コンソール エージェント ソフトウェアを維持管理してください。
+
+[role="quick-margin-list"]
+* link:reference-permissions.html["クラウド プロバイダの権限とネットワーク要件を確認する"]
+* link:reference-networking-saas-console.html["ネットワーク アクセス要件の確認"]
+* link:task-installing-https-cert.html["CA署名証明書をインストールする"]
+* link:task-configuring-proxy.html["プロキシ サーバを設定する"]
+* link:task-upgrade-agent.html["コンソールエージェントをアップグレードする"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"] NetApp ConsoleのIAM階層を整理する
+[role="quick-margin-para"]
+チームの働き方に合わせて組織階層を設定します。ストレージ システム、データ サービス、および Console エージェントの範囲を、それらを管理するプロジェクトに割り当てます。
+
+[role="quick-margin-list"]
+* link:task-iam-manage-folders-projects.html["フォルダとプロジェクトを作成します。"]
+* link:task-iam-manage-resources.html["リソースをプロジェクトに関連付けます。"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4"]NetApp Consoleのアイデンティティ フェデレーションとフェデレーション グループを設定します
+[role="quick-margin-para"]
+NetApp Console を企業の ID プロバイダー（IdP）に接続することで、ユーザーは企業の認証情報を使用してサインインでき、IdP が認証ポリシーを適用できるようになります。NetApp Console は、AD FS、Microsoft Entra ID、PingFederate、および汎用 SAML ID プロバイダーをサポートしています。
+
+[role="quick-margin-para"]
+フェデレーションユーザーとグループをコンソール組織に追加し、コンソールロールを割り当てます。フェデレーションは、コンソールメンバーシップや役割割り当てに取って代わるものではありません。link:task-iam-manage-members-permissions.html#add-members["フェデレーテッド グループを追加する方法を確認します"]。
+
+[role="quick-margin-list"]
+* link:task-federation-verify-domain.html["ドメインを確認する"]
+* link:task-federation-adfs.html["AD FSと連携する"]
+* link:task-federation-entra-id.html["Microsoft Entra ID とのフェデレーション"]
+* link:task-federation-ping.html["PingFederateとの連携"]
+* link:task-federation-saml.html["SAML ID プロバイダとの連携"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] NetApp Console メンバーを追加し、最小権限のロールを割り当てます
+[role="quick-margin-para"]
+各ユーザー、サービスアカウント、および連合グループには、それぞれの責任に必要なアクセス権のみを付与してください。業務をサポートする最も狭い組織、フォルダ、またはプロジェクトのスコープでロールを割り当ててください。ローカルユーザーに対して多要素認証を有効にしてください。
+
+[role="quick-margin-list"]
+* link:task-iam-manage-members-permissions.html["コンソール組織にメンバーを追加する"]
+* link:concept-iam-rbac.html["ロールベースアクセス制御について学ぶ"]
+* link:reference-iam-predefined-roles.html["定義済みの役割を確認する"]
+* link:task-iam-user-security.html["メンバーのセキュリティを管理する"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"] サービスアカウントを使用した NetApp Console の自動化のセキュリティ保護
+[role="quick-margin-para"]
+自動化されたアカウントと人間のアカウントは分けて管理してください。各サービスアカウントに、必要最低限の役割と範囲を割り当ててください。認証情報は安全に保管し、紛失または変更された場合は再作成してください。
+
+link:task-iam-manage-members-permissions.html#service-account["サービスアカウントを追加する方法を説明します"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["セブン"] NetApp Console 組織の読み取り専用モードを有効にする
+[role="quick-margin-para"]
+変更を行う前に、管理者に権限の昇格を義務付けます。このコントロールにより、ストレージ システムおよびデータ サービスへの意図しない変更が軽減されます。
+
+link:task-enable-read-only-mode.html["読み取り専用モードを有効にする方法を説明します"]
+
+
+NOTE: 読み取り専用モードは、NetApp Console がプライベート モードの場合は使用できません。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png["8"] ONTAP System Manager に対して ONTAP 権限を適用する
+[role="quick-margin-para"]
+本番環境の ONTAP システムを管理するアクティブなコンソール エージェントで「Force Credentials」を有効にします。ユーザーが ONTAP System Manager を開くと、ONTAP クラスターの認証情報を入力し、ONTAP がそのアクセス許可を適用します。
+
+link:task-ontap-access-agent.html["ONTAP System Manager の ONTAP 権限を適用する方法を確認します"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png["9"] NetApp Consoleの監査アクティビティとセキュリティ コントロールを確認します
+[role="quick-margin-para"]
+メンバー、グループマッピング、ロール、クレデンシャル、エージェント、および最近の操作について、定期的なレビュープロセスを確立してください。不要になったアクセス権を削除し、予期しないアクティビティを調査してください。
+
+[role="quick-margin-list"]
+* link:task-iam-audit-actions-timeline.html["コンソール操作の監査方法について説明します"]
+* link:task-monitor-cm-operations.html["コンソール操作を監視する方法を説明します"]
+

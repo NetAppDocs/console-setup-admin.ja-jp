@@ -54,14 +54,14 @@ indexpage:
       url: "/task-maintain-agents.html"
   - title: セキュリティとコンプライアンス
     links:
+    - title: 安全なNetApp Console
+      url: task-secure-netapp-console.html
     - title: IDプロバイダーとの連携
       url: "/concept-federation.html"
     - title: 読み取り専用モードを有効にする
       url: task-enable-read-only-mode.html
     - title: コンソールのアクティビティを監視する
       url: "/task-monitor-cm-operations.html"
-    - title: NetApp Consoleを制限モードで導入する (ソブリン クラウド導入)
-      url: "/task-quick-start-restricted-mode.html"
     - title: SOC-2コンプライアンス
       url: https://www.netapp.com/company/trust-center/compliance/soc-2/
   - title: コンソールパートナーシップ

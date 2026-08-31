@@ -236,6 +236,8 @@ sidebar:
           url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
     - title: セキュリティとコンプライアンス
       entries:
+      - title: 安全なNetApp Console
+        url: "/task-secure-netapp-console.html"
       - title: アイデンティティ連携
         entries:
         - title: アイデンティティ連携について学ぶ
