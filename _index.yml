@@ -55,7 +55,7 @@ indexpage:
   - title: セキュリティとコンプライアンス
     links:
     - title: 安全なNetApp Console
-      url: task-secure-netapp-console.html
+      url: "/task-secure-netapp-console.html"
     - title: IDプロバイダーとの連携
       url: "/concept-federation.html"
     - title: 読み取り専用モードを有効にする
