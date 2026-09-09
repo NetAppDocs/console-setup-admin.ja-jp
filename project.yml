@@ -36,7 +36,7 @@ sidebar:
         url: "/concept-agents.html"
       - title: アイデンティティとアクセス管理
         url: "/concept-identity-and-access-management.html"
-    - title: NetApp Console（SaaS）の使用を開始する
+    - title: NetApp Console（標準モード）の開始
       entries:
       - title: 開始ワークフロー
         url: "/task-quick-start-standard-mode.html"
@@ -221,7 +221,11 @@ sidebar:
           - title: バックアップとリカバリの役割
             url: "/reference-iam-backup-rec-roles.html"
           - title: Cloud Volumes ONTAP のロール
-            url: "/reference-iam-cvo-roles.html"
+            entries:
+            - title: Cloud Volumes ONTAP のロール
+              url: "/reference-iam-cvo-roles.html"
+            - title: Cloud Volumes ONTAP のロールベースアクセスを設定する
+              url: "/task-cvo-rbac-setup.html"
           - title: Data Classification ロール
             url: "/reference-iam-data-classification.html"
           - title: 災害復旧の役割
@@ -236,8 +240,6 @@ sidebar:
           url: https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html
     - title: セキュリティとコンプライアンス
       entries:
-      - title: 安全なNetApp Console
-        url: "/task-secure-netapp-console.html"
       - title: アイデンティティ連携
         entries:
         - title: アイデンティティ連携について学ぶ

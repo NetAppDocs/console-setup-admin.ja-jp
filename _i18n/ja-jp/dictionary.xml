@@ -5511,7 +5511,6 @@
   <block id="1b2b35b59eb889c82041c85d020846da" category="list-text">Linux ホストから、古い未使用のコンテナ イメージ ファイルを削除して、再インストール用に /var ディレクトリの領域を解放します。</block>
   <block id="c5fd214cdd0d2b3b4272e73b022ba5c2" category="open-title">Docker</block>
   <block id="3b240599579798c1fd8c4e7b4aa36e0e" category="sidebar">プライベートモードでNetApp Consoleを導入する</block>
-  <block id="754dab26f37da0666d18d084eeb9cac1" category="sidebar">NetApp Console（SaaS）の使用を開始する</block>
   <block id="fc2bd25c4501ebc9670b599a0996c243" category="sidebar">制限モードの使用開始ワークフロー</block>
   <block id="d9f6b701b4e6e8fa39df2310070b5bad" category="sidebar">NetApp Console（プライベートモード）の使用を開始する</block>
   <block id="cc1e97b9fe18a374eacd6937d0fd1f20" category="sidebar">プライベートモードの使用開始ワークフロー</block>
@@ -6240,14 +6239,9 @@
   <block id="ea256e0ef091d570fc3443bfdb29b124" category="paragraph"><block ref="8c5db5921f383526df21d84d3b1bfd83" category="inline-link-macro-rx"></block>。</block>
   <block id="e0bcb2ebdbad366327cfe5a2bb3842af" category="summary">ユーザーに以下のロールを割り当てることで、コンソール内の Cloud Volumes ONTAP へのアクセス権を付与できます。Cloud Volumes ONTAP のロールを使用することで、組織内でユーザーが実行する必要のあるタスクに特化したロールを柔軟に割り当てることができます。</block>
   <block id="38231d7ab948e14954505c434dbc3406" category="doc">Cloud Volumes ONTAP の NetApp Console におけるアクセスロール</block>
-  <block id="cf1bb4e2b95630bcd705b5ed0583a3f6" category="paragraph">ユーザーに以下のロールを割り当てることで、コンソール内の Cloud Volumes ONTAP へのアクセス権を付与できます。Cloud Volumes ONTAP のロール機能を使用することで、組織内でユーザーが遂行する必要のあるタスクに特化したロールを柔軟に割り当てることができます。ロールの割り当て方法は、貴社のビジネス慣行およびストレージ管理方法によって異なります。</block>
-  <block id="0ef7f8c52a11ca17c940eb122edda23d" category="paragraph">Cloud Volumes ONTAP は以下のロールを使用します：</block>
   <block id="ccb8cf6de876397f5af5fd2969199a4c" category="list-text">*Cloud Volumes ONTAP admin*：すべての Cloud Volumes ONTAP 操作へのフルアクセスを提供します。</block>
-  <block id="f89da74408fedae3ccfafd61cfb7bbd0" category="list-text">*Cloud Volumes ONTAP operator*：Cloud Volumes ONTAP システムの検出と管理（ボリューム、アグリゲート、スナップショット、レプリケーションの追加、一部の構成の変更、Cloud Volumes ONTAP バージョンのアップグレードなど）を含む重要なストレージ操作を実行します。</block>
   <block id="0d01873a225e72f3074f310aae6b4cd1" category="list-text">*Cloud Volumes ONTAP ビューア*：Cloud Volumes ONTAP 情報への読み取り専用アクセスを提供します。このロールでは、アクティブな操作は実行できません。設定情報を含む一部のタブや画面は、ビューアには表示されない場合があります。</block>
   <block id="e612ed3cf7a0977aec6f993000cc46f1" category="section-title">ロールの変更が反映される仕組み</block>
-  <block id="283d45b1cce5ad68028d1e4ccf0bbb68" category="paragraph">Cloud Volumes ONTAP は、各ロール割り当てのローカルキャッシュを使用して、ロールベースアクセス制御（RBAC）を適用します。キャッシュは1時間ごとに自動的に更新されます。ロールが新たに割り当てられたり変更されたりした場合、変更が反映されるまでに最大1時間かかることがあります。更新が完了すると、コンソールはそのロールで許可されているワークフローを有効にします。</block>
-  <block id="99f9bec3d41eefb18e9b6540df4c9630" category="admonition">Console エージェントが初めてデプロイされるとき、または既存の Console エージェントが Console 4.9.0 以降にアップグレードされるとき、Console は、組織内の既存ユーザーに Cloud Volumes ONTAP ロールを割り当てる1回限りのシード処理を実行します。この処理が完了するまでに最大30分かかる場合があります。</block>
   <block id="fee3007030dccd80255a7211926472b7" category="section-title">Cloud Volumes ONTAP ロールの権限</block>
   <block id="04133a29798abb95ff37ba8c50cf2155" category="cell">Cloud Volumes ONTAP ビューア</block>
   <block id="eddfc9398b9966908680fb984db5a4af" category="cell">Cloud Volumes ONTAPオペレーター</block>
@@ -6555,4 +6549,64 @@
   <block id="733d9ddc09fa607fb9b3bbef86e35834" category="paragraph">コンプライアンス管理者ロールは、組織レベルでのみ機能し、NetApp Data Classificationリソースへのアクセスを管理します。組織管理者よりも権限の低いユーザーの場合、NetApp Data Classificationをインストールするにはコンプライアンス管理者ロールが必要です。</block>
   <block id="59ac75cc0e747987fa0f0c6397dcfd96" category="paragraph">Classification viewer は、Data Classification のスキャン結果へのアクセスは必要だが、構成リソースへのアクセスは必要ないユーザー向けに設計されています。Classification viewer ロールを持つユーザーは、マッピングとフルスキャンの結果を表示して、ストレージ容量の節約や潜在的なデータリスクのある領域を評価できます。Classification viewer ロールを持つユーザーは、アクセス権のあるリソースに関するレポートを生成することもできます。これらのユーザーは、ボリューム、バケット、またはデータベーススキーマのスキャンを有効または無効にすることはできません。</block>
   <block id="47a46671c1a0773fed715c3799195b7f" category="cell"><block ref="47a46671c1a0773fed715c3799195b7f" category="inline-link-macro-rx"></block></block>
+  <block id="713c4ed0e52a1fe2c5526d82611b299d" category="paragraph">ユーザーに次のロールを割り当てて、NetApp Console内のCloud Volumes ONTAPへのアクセス権を付与できます。</block>
+  <block id="e4a3525277e1b4371bb89478f9422b67" category="list-text">*Cloud Volumes ONTAP operator*：Cloud Volumes ONTAP システムの検出と管理（ボリューム、アグリゲート、スナップショット、レプリケーションの追加、一部の設定変更、Cloud Volumes ONTAP バージョンのアップグレードなど）を含む重要なストレージ操作を実行します。</block>
+  <block id="769bcb1b917e9456afc908e3923e871d" category="inline-link-macro">Cloud Volumes ONTAP のロールベースアクセスを設定する</block>
+  <block id="460200b9d3d05ac8165deb4aceb3eee1" category="paragraph">システムが含まれる組織、フォルダ、またはプロジェクトレベルで Cloud Volumes ONTAP ロールを割り当てます。プラットフォームロールを使用すると、ユーザーは NetApp Console リソースを管理でき、Cloud Volumes ONTAP ロールを使用すると、ユーザーは Cloud Volumes ONTAP システムを管理できます。ロール割り当ての計画に関するガイダンスについては、<block ref="4fa2aa48d2bde5e7446b8c98acc74eca" category="inline-link-macro-rx"></block> を参照してください。</block>
+  <block id="477c09cb5610382ea6fb7978147584f0" category="section-title">既存ユーザーのロール移行</block>
+  <block id="2144a74d9bd9b04e77b26ea6f662072b" category="paragraph">Console エージェントをバージョン 4.9.0 以降にアップグレードすると、Console はプラットフォームロールに基づいて既存ユーザーに追加の Cloud Volumes ONTAP ロールを割り当てます。</block>
+  <block id="8f07835784615aa819dfff43f4ab0f2e" category="inline-link-macro">コンソールエージェントのアップグレード後にロールを確認する</block>
+  <block id="4935d39c33b785da4c7add3d08807c1b" category="admonition">既存の Console エージェントが Console 4.9.0 以降にアップグレードされると、Console は、組織内の既存ユーザーに Cloud Volumes ONTAP ロールを割り当てるワンタイムのシード処理を実行します。この処理には最大 30 分かかる場合があります。シード済みのロールを確認および調整するには、<block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="cc4d5362d4db1743065e85867391e3f7" category="paragraph">以下のマッピングは、この一度限りの移行プロセスにのみ適用されます。</block>
+  <block id="9426ecd2d551af7bd95369b07facce3c" category="cell">既存のプラットフォームロール</block>
+  <block id="996d0510bc51c1b8c7ecf1631282579f" category="cell">Cloud Volumes ONTAPシード処理中に割り当てられるロール</block>
+  <block id="b04e504847ef6b67f0727b490728c90b" category="cell">フォルダーまたはプロジェクトビューア</block>
+  <block id="a5177570255a467a81cc5b270323bf23" category="cell">その他のプラットフォームロール</block>
+  <block id="bdb1e832e4cad8743cbdc77c5df5a31f" category="paragraph">コンソールは、既存のプラットフォームロールと同じ階層レベルで Cloud Volumes ONTAP ロールを割り当てます。これらのマッピングは、新規のロール割り当てには適用されません。シード済みのロールを確認および調整するには、<block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="3f7ab73d3f47101c9e838bfe8c2a50d2" category="admonition">既知の問題により、現在、*Organization viewer* と *Cloud Volumes ONTAP viewer* のロールの組み合わせは組織スコープで機能しません。一時的な回避策として、*Organization admin* または *Folder or project admin* ロールを使用してください。</block>
+  <block id="d60cbf1b12a9509c3a6fb176c7c8123b" category="paragraph">新規または更新されたロールの割り当てが有効になるまで、最大1時間お待ちください。Cloud Volumes ONTAP はロールの割り当てを1時間ごとに更新します。</block>
+  <block id="d568a44ac338b3ea56bc14cb36214438" category="summary">プロジェクトを整理し、Console メンバーを追加して、Cloud Volumes ONTAP のロールを割り当てることで、Cloud Volumes ONTAP のロールベースアクセスを設定します。</block>
+  <block id="07ee22b21ec2682df904eeff73509ddc" category="doc">Cloud Volumes ONTAP のロールベースアクセスを NetApp Console で設定する</block>
+  <block id="142e9620e2aacfc60d7561bde28567c0" category="paragraph">Cloud Volumes ONTAP へのアクセスを設定することで、既存のコンソールユーザーは必要なアクセス権を維持でき、新規サブスクライバーは適切な権限を持つユーザーを追加できるようになります。</block>
+  <block id="a5920babebe582015da790ccc67be5bf" category="paragraph">以下のいずれかのセクションを使用してください。</block>
+  <block id="0c46210548ea7cc3e40ed04b862f53db" category="list-text">*NetApp Console と Cloud Volumes ONTAP を初めて使用する場合*：新規ユーザーと Cloud Volumes ONTAP システムに対してロールベースのアクセスを設定します。</block>
+  <block id="158466de67fff7e0b90ec8e9e87b13c7" category="list-text">*ロールをサポートするコンソールエージェントバージョンへのアップグレード*：既存のユーザーに自動的に割り当てられたロールを確認し、必要に応じて調整します。</block>
+  <block id="2341e1cc07b0106e2056a8af81fb8a1b" category="section-title">Cloud Volumes ONTAP の初期設定後にユーザーのアクセスを設定する</block>
+  <block id="e5ad8424726cd3ef5ad94078b728fe5f" category="paragraph">新規登録者は、まずコンソール組織を作成することから始めます。最初の加入者には組織管理者の役割が与えられます。<block ref="374de56592e527dd57d0a643704cfd56" category="inline-link-macro-rx"></block>。</block>
+  <block id="e98f776839d9f87f3b210fb6ac4d0340" category="section-title">Cloud Volumes ONTAP のロール割り当ての計画</block>
+  <block id="5ad3e14437f822dcd072b98cf44a0577" category="paragraph">システムが含まれる組織、フォルダ、またはプロジェクトレベルで Cloud Volumes ONTAP ロールを割り当てます。プラットフォームロールにより、ユーザーは組織、フォルダー、プロジェクト、メンバー、リソースアクセスなどのNetApp Console リソースを管理できます。Cloud Volumes ONTAP ロールにより、ユーザーは Cloud Volumes ONTAP システムを管理できます。</block>
+  <block id="322d7aefe31d726cf13f102053d1df5f" category="paragraph">各ユーザーには必要なロールのみを割り当ててください。ユーザーがコンソールリソースを管理し、Cloud Volumes ONTAPシステムを管理する場合は、プラットフォームロールとCloud Volumes ONTAPロールの両方を割り当ててください。プラットフォームロールは、Cloud Volumes ONTAP操作においてCloud Volumes ONTAPロールの代わりにはなりません。</block>
+  <block id="f24b1735a3176a7ad1fbba21c7388a1e" category="list-text">例えば、プロジェクトへのアクセスを管理し、そのプロジェクト内の Cloud Volumes ONTAP システムを管理するユーザーに、*フォルダーまたはプロジェクト管理者*と *Cloud Volumes ONTAP 管理者*のロールを割り当てます。</block>
+  <block id="439d5037841a1298b4bfa06e8ee9018e" category="list-text">組織全体でコンソールエージェント設定とCloud Volumes ONTAPシステムを管理するユーザーに、*Organization admin*と*Cloud Volumes ONTAP operator*のロールを割り当てます。</block>
+  <block id="b040657c933d705e3125a1feba70b2b5" category="list-text">ユーザーがコンソールリソースを管理する必要がない場合は、Cloud Volumes ONTAPシステムの管理に必要なアクセスレベルに一致するCloud Volumes ONTAPロールのみを割り当ててください。</block>
+  <block id="351c8850d75e0b32f3d24c9257b1eb10" category="section-title">ユーザーがコンソールリソースも管理する必要がある場合の推奨ロール割り当て</block>
+  <block id="9591e478e33e1de6226ea625992365dd" category="paragraph">ユーザーがコンソールリソースを管理し、Cloud Volumes ONTAPにのみNetApp Consoleを使用している組織でCloud Volumes ONTAPシステムを管理する必要がある場合は、これらのロール割り当てを使用します。</block>
+  <block id="5d113f2038d289f391614c39043629e8" category="cell">Scope</block>
+  <block id="e9ab643bb6c260c4f19bf4a811b9c8b3" category="cell">Cloud Volumes ONTAPロール</block>
+  <block id="8fb5d7210dd422a7e9e0f471d0a39cf1" category="cell">ユーザーがコンソールリソース（コンソールエージェント設定を含む）を管理し、Cloud Volumes ONTAPシステムを管理する必要がある場合</block>
+  <block id="fcb3814409d2682ae50017c18f3b14dd" category="cell">フォルダーまたはプロジェクト</block>
+  <block id="52d2dc16d6a4a8f511f37815cb33c180" category="cell">ユーザーが特定のフォルダーまたはプロジェクトでコンソールリソースを管理し、Cloud Volumes ONTAPシステムを管理する必要がある場合</block>
+  <block id="effd7d5fd7d2cac2f3d0d95b98f17ea1" category="cell">ユーザーが特定のフォルダーまたはプロジェクトでコンソールリソースを管理し、Cloud Volumes ONTAPシステムを管理する必要がある場合</block>
+  <block id="a08b8cf4df5b3c6fda96a1fb4906297e" category="cell">ユーザーが特定のフォルダーまたはプロジェクトでコンソールリソースを管理する必要があり、Cloud Volumes ONTAPシステムへの読み取り専用アクセスのみが必要な場合</block>
+  <block id="8098ec6f5787193792e961bb2ba74d3f" category="list-text">NetApp Console に登録し、組織を作成してください。</block>
+  <block id="b4d1c3b934af48fc44bcf78aa4fd3811" category="list-text">デフォルトのプロジェクトを使用するか、Cloud Volumes ONTAPシステムを整理する方法に合わせてフォルダーとプロジェクトを作成します。</block>
+  <block id="1cc65e4e48091f8ea1b9e212f32611c3" category="list-text">Cloud Volumes ONTAP サブスクリプションを設定または関連付けします。</block>
+  <block id="27bc211be7d783bfcd5b8d9ce7a7eb6c" category="inline-link-macro">NetApp Console 組織にメンバーを追加する方法をご説明します</block>
+  <block id="6eefbd6ca18934d45ca4ce0afe585f26" category="list-text">組織にユーザー、サービスアカウント、またはフェデレーショングループを追加します。<block ref="97aa6b5098386082207e66769bcc9b4e" category="inline-link-macro-rx"></block>。</block>
+  <block id="6cff925d59f6f8a9fa840fe3bac1e2b6" category="list-text">システムが管理される組織、フォルダ、またはプロジェクトレベルのユーザーに Cloud Volumes ONTAP ロールを割り当てます。メンバーが Console リソースを管理し、他のユーザーにアクセス権を割り当てる必要がある場合は、適切なプラットフォームロールを割り当ててください。</block>
+  <block id="2386e129e4fecc93195657ea4dc87101" category="list-text">管理対象となるプロジェクトに Cloud Volumes ONTAP システムを追加または検出します。<block ref="b68463f6d3bf4cfc966dc5504bb09dac" category="inline-link-rx"></block>について学びます。</block>
+  <block id="1b6d320c6cc19b18ed20adf7b7cc1588" category="inline-link-macro">リソースをフォルダーやプロジェクトに関連付ける方法をご確認ください。</block>
+  <block id="28ced76b7b3a01b510c263591f1042c0" category="list-text">システムまたはそのコンソールエージェントを他のプロジェクトでも利用可能にする必要がある場合は、それらのリソースを該当するプロジェクトに関連付けます。<block ref="3a0f5c999f52d199bd3e8bda7f8df4b1" category="inline-link-macro-rx"></block>.</block>
+  <block id="1ae34a1a97c96fb501df108f0ccaaa50" category="paragraph">Console エージェントをバージョン 4.9.0 以降にアップグレードすると、Console は既存のユーザーに対して、プラットフォームロールに基づいて Cloud Volumes ONTAP ロールを自動的に割り当てます。シーディングと呼ばれるこの一度限りの割り当ては、管理者が各ロールを手動で割り当てることなく、ユーザーが適切な Cloud Volumes ONTAP アクセス権を保持できるようにするためのものです。シーディングでは、ユーザーの既存のプラットフォームロールに基づいて、Cloud Volumes ONTAP の管理者または閲覧者ロールが割り当てられます。マッピングは移行中にのみ適用されます。プラットフォームロールは、新しい割り当てに対する明示的な Cloud Volumes ONTAP ロールを置き換えるものではありません。シーディングされたロールを確認し、ユーザーが必要なアクセス権限のみを保持していることを確認してください。</block>
+  <block id="87a572687e882fc98097f9c9f4575d8d" category="list-text">各 Cloud Volumes ONTAP システムが含まれる組織、フォルダー、またはプロジェクトを特定します。</block>
+  <block id="9e3d1d8d81f1830befbef42ebbb854bf" category="inline-link-macro">既存ユーザー向けのシードマッピング</block>
+  <block id="124f3b8b4925d1f284c981a3d0766bbc" category="list-text">各ユーザーに割り当てられている Cloud Volumes ONTAP ロールを確認し、そのロールがシステムを含む組織、フォルダ、またはプロジェクトレベルで割り当てられていることを確認してください。想定されるシードロールについては、<block ref="45c304ee1ade93cf85129ebc868db872" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="7bd571056c71556ed1cf73ce3020ca53" category="list-text">シードされたロールがユーザーの責任と一致しない場合に、Cloud Volumes ONTAP ロールを割り当てるか変更します。シード処理では、ユーザーの既存のプラットフォームロールに基づいて、Cloud Volumes ONTAP の管理者ロールまたは閲覧者ロールが割り当てられます。ユーザーがオペレーターレベルの権限を必要とする場合は、シード処理後に Cloud Volumes ONTAP オペレーターロールを明示的に割り当ててください。</block>
+  <block id="5774c29530ef3d00986577fe09901f16" category="list-text">ユーザーに Cloud Volumes ONTAP システムへのアクセスを許可し、利用可能な操作が割り当てられたロールと一致していることを確認します。</block>
+  <block id="a065f8eda24e666f32ca8b894d69f8fd" category="paragraph">ユーザーがシステムにアクセスできない場合は、組織、フォルダ、またはプロジェクトレベルでユーザーにCloud Volumes ONTAPロールが付与されていることを確認してください。</block>
+  <block id="39790cbad3274fc855ec89bb7a2570da" category="inline-link-macro">Cloud Volumes ONTAPアクセスロール</block>
+  <block id="f9e99a029007c22da4c2ef4b0a4878b5" category="list-text"><block ref="f9e99a029007c22da4c2ef4b0a4878b5" category="inline-link-macro-rx"></block></block>
+  <block id="7f9913169b42b8f5d52af4ca9c8717f1" category="list-text"><block ref="7f9913169b42b8f5d52af4ca9c8717f1" category="inline-link-macro-rx"></block></block>
+  <block id="0482ab4442a9ba22f7c194297a8cb1f2" category="list-text"><block ref="0482ab4442a9ba22f7c194297a8cb1f2" category="inline-link-macro-rx"></block></block>
+  <block id="0b4dbf2063bf2cee842f6213a668ca13" category="sidebar">NetApp Console（標準モード）の開始</block>
 </blocks>

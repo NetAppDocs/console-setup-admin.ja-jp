@@ -14,26 +14,71 @@ summary: ユーザーに以下のロールを割り当てることで、コン�
 
 
 [role="lead"]
-ユーザーに以下のロールを割り当てることで、コンソール内の Cloud Volumes ONTAP へのアクセス権を付与できます。Cloud Volumes ONTAP のロール機能を使用することで、組織内でユーザーが遂行する必要のあるタスクに特化したロールを柔軟に割り当てることができます。ロールの割り当て方法は、貴社のビジネス慣行およびストレージ管理方法によって異なります。
-
-Cloud Volumes ONTAP は以下のロールを使用します：
+ユーザーに次のロールを割り当てて、NetApp Console内のCloud Volumes ONTAPへのアクセス権を付与できます。
 
 * *Cloud Volumes ONTAP admin*：すべての Cloud Volumes ONTAP 操作へのフルアクセスを提供します。
-* *Cloud Volumes ONTAP operator*：Cloud Volumes ONTAP システムの検出と管理（ボリューム、アグリゲート、スナップショット、レプリケーションの追加、一部の構成の変更、Cloud Volumes ONTAP バージョンのアップグレードなど）を含む重要なストレージ操作を実行します。
+* *Cloud Volumes ONTAP operator*：Cloud Volumes ONTAP システムの検出と管理（ボリューム、アグリゲート、スナップショット、レプリケーションの追加、一部の設定変更、Cloud Volumes ONTAP バージョンのアップグレードなど）を含む重要なストレージ操作を実行します。
 * *Cloud Volumes ONTAP ビューア*：Cloud Volumes ONTAP 情報への読み取り専用アクセスを提供します。このロールでは、アクティブな操作は実行できません。設定情報を含む一部のタブや画面は、ビューアには表示されない場合があります。
 
 
-すべてのNetApp Consoleアクセスロールの詳細については、link:reference-iam-predefined-roles.html["アクセス ロール"]を参照してください。
+link:reference-iam-predefined-roles.html["アクセスロールについて学ぶ"] 。
+
+システムが含まれる組織、フォルダ、またはプロジェクトレベルで Cloud Volumes ONTAP ロールを割り当てます。プラットフォームロールを使用すると、ユーザーは NetApp Console リソースを管理でき、Cloud Volumes ONTAP ロールを使用すると、ユーザーは Cloud Volumes ONTAP システムを管理できます。ロール割り当ての計画に関するガイダンスについては、link:task-cvo-rbac-setup.html#plan-cloud-volumes-ontap-role-assignments["Cloud Volumes ONTAP のロールベースアクセスを設定する"] を参照してください。
+
+
+
+[[role-migrations-for-existing-users]]
+== 既存ユーザーのロール移行
+
+Console エージェントをバージョン 4.9.0 以降にアップグレードすると、Console はプラットフォームロールに基づいて既存ユーザーに追加の Cloud Volumes ONTAP ロールを割り当てます。
+
+
+NOTE: 既存の Console エージェントが Console 4.9.0 以降にアップグレードされると、Console は、組織内の既存ユーザーに Cloud Volumes ONTAP ロールを割り当てるワンタイムのシード処理を実行します。この処理には最大 30 分かかる場合があります。シード済みのロールを確認および調整するには、link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["コンソールエージェントのアップグレード後にロールを確認する"]を参照してください。
+
+以下のマッピングは、この一度限りの移行プロセスにのみ適用されます。
+
+[cols="50,50"]
+|===
+| 既存のプラットフォームロール | Cloud Volumes ONTAPシード処理中に割り当てられるロール 
+
+
+| スーパー管理者 | Cloud Volumes ONTAP管理者 
+
+
+| 組織管理者 | Cloud Volumes ONTAP管理者 
+
+
+| 連盟管理者 | Cloud Volumes ONTAP管理者 
+
+
+| フォルダまたはプロジェクトの管理者 | Cloud Volumes ONTAP管理者 
+
+
+| スーパービューアー | Cloud Volumes ONTAP ビューア 
+
+
+| 組織閲覧者 | Cloud Volumes ONTAP ビューア 
+
+
+| 連盟ビューア | Cloud Volumes ONTAP ビューア 
+
+
+| フォルダーまたはプロジェクトビューア | Cloud Volumes ONTAP ビューア 
+
+
+| その他のプラットフォームロール | Cloud Volumes ONTAP ビューア 
+|===
+コンソールは、既存のプラットフォームロールと同じ階層レベルで Cloud Volumes ONTAP ロールを割り当てます。これらのマッピングは、新規のロール割り当てには適用されません。シード済みのロールを確認および調整するには、link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["コンソールエージェントのアップグレード後にロールを確認する"]を参照してください。
+
+
+NOTE: 既知の問題により、現在、*Organization viewer* と *Cloud Volumes ONTAP viewer* のロールの組み合わせは組織スコープで機能しません。一時的な回避策として、*Organization admin* または *Folder or project admin* ロールを使用してください。
 
 
 
 [[how-role-changes-take-effect]]
 == ロールの変更が反映される仕組み
 
-Cloud Volumes ONTAP は、各ロール割り当てのローカルキャッシュを使用して、ロールベースアクセス制御（RBAC）を適用します。キャッシュは1時間ごとに自動的に更新されます。ロールが新たに割り当てられたり変更されたりした場合、変更が反映されるまでに最大1時間かかることがあります。更新が完了すると、コンソールはそのロールで許可されているワークフローを有効にします。
-
-
-NOTE: Console エージェントが初めてデプロイされるとき、または既存の Console エージェントが Console 4.9.0 以降にアップグレードされるとき、Console は、組織内の既存ユーザーに Cloud Volumes ONTAP ロールを割り当てる1回限りのシード処理を実行します。この処理が完了するまでに最大30分かかる場合があります。
+新規または更新されたロールの割り当てが有効になるまで、最大1時間お待ちください。Cloud Volumes ONTAP はロールの割り当てを1時間ごとに更新します。
 
 
 
@@ -44,7 +89,7 @@ NOTE: Console エージェントが初めてデプロイされるとき、また
 
 [cols="40a,20a,20a,20a"]
 |===
-| 特徴とアクション | Cloud Volumes ONTAP ビューア | Cloud Volumes ONTAPオペレーター | Cloud Volumes ONTAP管理者 
+| 特徴とアクション | Cloud Volumes ONTAP管理者 | Cloud Volumes ONTAPオペレーター | Cloud Volumes ONTAP ビューア 
 
 
  a| 
@@ -77,99 +122,99 @@ NOTE: Console エージェントが初めてデプロイされるとき、また
  a| 
 システムを検出する
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 ボリュームの追加
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 *レプリケーション*を使用します（FSx for ONTAPまたはオンプレミスシステムには適用されません）
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 *レプリケーション*にドラッグ アンド ドロップを使用する（Cloud Volumes ONTAP をソースまたはデスティネーションとして使用する場合）
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 システムを追加する
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 *コストとパフォーマンスの最適化* にアクセスします
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 System Manager を開きます
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 Cloud Volumes ONTAP をオンにする
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 システムを削除する
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
@@ -192,11 +237,11 @@ Cloud Volumes ONTAP 設定の表示
  a| 
 Cloud Volumes ONTAP 設定の編集
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
@@ -208,110 +253,110 @@ Cloud Volumes ONTAP 設定の編集
  a| 
 ボリュームの追加
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 アグリゲートを追加
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 * 今すぐアップグレード * を使用します
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 ONTAPバージョンを更新する
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 鉛筆メニューから「CIFS設定」を編集します
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 System Manager を開きます
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 オン / オフボタンを使用する
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 パスワードを設定
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 ワークスペースからシステムを削除します
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 システムを削除する
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
@@ -329,11 +374,11 @@ System Manager を開きます
 * *WORM*
 
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
@@ -345,88 +390,88 @@ System Manager を開きます
  a| 
 ボリュームの追加
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 ボリュームをクローニングする
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 Snapshot コピーを作成する
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 ボリューム設定を編集
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 ボリュームを削除する
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 Snapshot コピーからリストアする
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 ディスクの種類を変更する
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 階層化ポリシーを変更する
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
@@ -438,44 +483,44 @@ Snapshot コピーからリストアする
  a| 
 アグリゲートを追加
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 ボリュームの追加
  a| 
+はい
+ a| 
+はい
+ a| 
 いいえ
- a| 
-はい
- a| 
-はい
 
 
 
  a| 
 容量の追加
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 アグリゲートを削除する
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
@@ -487,76 +532,76 @@ Snapshot コピーからリストアする
  a| 
 レプリケーションを解除
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 レプリケーションの再同期
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 逆方向の再同期レプリケーション
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 スケジュールを編集する
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 最大転送速度を編集します
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 レプリケーションを更新
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 
 
  a| 
 レプリケーションを削除
  a| 
-いいえ
- a| 
-いいえ
- a| 
 はい
+ a| 
+いいえ
+ a| 
+いいえ
 
 |===
