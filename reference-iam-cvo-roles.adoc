@@ -28,18 +28,19 @@ link:reference-iam-predefined-roles.html["アクセスロールについて学�
 
 
 [[role-migrations-for-existing-users]]
+[[seeding-mappings-for-existing-users]]
 == 既存ユーザーのロール移行
 
 Console エージェントをバージョン 4.9.0 以降にアップグレードすると、Console はプラットフォームロールに基づいて既存ユーザーに追加の Cloud Volumes ONTAP ロールを割り当てます。
 
 
-NOTE: 既存の Console エージェントが Console 4.9.0 以降にアップグレードされると、Console は、組織内の既存ユーザーに Cloud Volumes ONTAP ロールを割り当てるワンタイムのシード処理を実行します。この処理には最大 30 分かかる場合があります。シード済みのロールを確認および調整するには、link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["コンソールエージェントのアップグレード後にロールを確認する"]を参照してください。
+NOTE: 既存の Console エージェントが Console 4.9.0 以降にアップグレードされると、Console は、組織内の既存ユーザーに Cloud Volumes ONTAP のロールを割り当てる 1 回限りの移行プロセスを実行します。この処理には最大 30 分かかる場合があります。移行中に割り当てられたロールを確認および調整するには、link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["コンソールエージェントのアップグレード後にロールを確認する"]を参照してください。
 
 以下のマッピングは、この一度限りの移行プロセスにのみ適用されます。
 
 [cols="50,50"]
 |===
-| 既存のプラットフォームロール | Cloud Volumes ONTAPシード処理中に割り当てられるロール 
+| 既存のプラットフォームロール | アップグレード中に割り当てられるCloud Volumes ONTAPロール 
 
 
 | スーパー管理者 | Cloud Volumes ONTAP管理者 

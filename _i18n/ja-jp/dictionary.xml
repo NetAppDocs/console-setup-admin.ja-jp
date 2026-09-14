@@ -6556,10 +6556,8 @@
   <block id="477c09cb5610382ea6fb7978147584f0" category="section-title">既存ユーザーのロール移行</block>
   <block id="2144a74d9bd9b04e77b26ea6f662072b" category="paragraph">Console エージェントをバージョン 4.9.0 以降にアップグレードすると、Console はプラットフォームロールに基づいて既存ユーザーに追加の Cloud Volumes ONTAP ロールを割り当てます。</block>
   <block id="8f07835784615aa819dfff43f4ab0f2e" category="inline-link-macro">コンソールエージェントのアップグレード後にロールを確認する</block>
-  <block id="4935d39c33b785da4c7add3d08807c1b" category="admonition">既存の Console エージェントが Console 4.9.0 以降にアップグレードされると、Console は、組織内の既存ユーザーに Cloud Volumes ONTAP ロールを割り当てるワンタイムのシード処理を実行します。この処理には最大 30 分かかる場合があります。シード済みのロールを確認および調整するには、<block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="cc4d5362d4db1743065e85867391e3f7" category="paragraph">以下のマッピングは、この一度限りの移行プロセスにのみ適用されます。</block>
   <block id="9426ecd2d551af7bd95369b07facce3c" category="cell">既存のプラットフォームロール</block>
-  <block id="996d0510bc51c1b8c7ecf1631282579f" category="cell">Cloud Volumes ONTAPシード処理中に割り当てられるロール</block>
   <block id="b04e504847ef6b67f0727b490728c90b" category="cell">フォルダーまたはプロジェクトビューア</block>
   <block id="a5177570255a467a81cc5b270323bf23" category="cell">その他のプラットフォームロール</block>
   <block id="bdb1e832e4cad8743cbdc77c5df5a31f" category="paragraph">コンソールは、既存のプラットフォームロールと同じ階層レベルで Cloud Volumes ONTAP ロールを割り当てます。これらのマッピングは、新規のロール割り当てには適用されません。シード済みのロールを確認および調整するには、<block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>を参照してください。</block>
@@ -6597,10 +6595,7 @@
   <block id="2386e129e4fecc93195657ea4dc87101" category="list-text">管理対象となるプロジェクトに Cloud Volumes ONTAP システムを追加または検出します。<block ref="b68463f6d3bf4cfc966dc5504bb09dac" category="inline-link-rx"></block>について学びます。</block>
   <block id="1b6d320c6cc19b18ed20adf7b7cc1588" category="inline-link-macro">リソースをフォルダーやプロジェクトに関連付ける方法をご確認ください。</block>
   <block id="28ced76b7b3a01b510c263591f1042c0" category="list-text">システムまたはそのコンソールエージェントを他のプロジェクトでも利用可能にする必要がある場合は、それらのリソースを該当するプロジェクトに関連付けます。<block ref="3a0f5c999f52d199bd3e8bda7f8df4b1" category="inline-link-macro-rx"></block>.</block>
-  <block id="1ae34a1a97c96fb501df108f0ccaaa50" category="paragraph">Console エージェントをバージョン 4.9.0 以降にアップグレードすると、Console は既存のユーザーに対して、プラットフォームロールに基づいて Cloud Volumes ONTAP ロールを自動的に割り当てます。シーディングと呼ばれるこの一度限りの割り当ては、管理者が各ロールを手動で割り当てることなく、ユーザーが適切な Cloud Volumes ONTAP アクセス権を保持できるようにするためのものです。シーディングでは、ユーザーの既存のプラットフォームロールに基づいて、Cloud Volumes ONTAP の管理者または閲覧者ロールが割り当てられます。マッピングは移行中にのみ適用されます。プラットフォームロールは、新しい割り当てに対する明示的な Cloud Volumes ONTAP ロールを置き換えるものではありません。シーディングされたロールを確認し、ユーザーが必要なアクセス権限のみを保持していることを確認してください。</block>
   <block id="87a572687e882fc98097f9c9f4575d8d" category="list-text">各 Cloud Volumes ONTAP システムが含まれる組織、フォルダー、またはプロジェクトを特定します。</block>
-  <block id="9e3d1d8d81f1830befbef42ebbb854bf" category="inline-link-macro">既存ユーザー向けのシードマッピング</block>
-  <block id="124f3b8b4925d1f284c981a3d0766bbc" category="list-text">各ユーザーに割り当てられている Cloud Volumes ONTAP ロールを確認し、そのロールがシステムを含む組織、フォルダ、またはプロジェクトレベルで割り当てられていることを確認してください。想定されるシードロールについては、<block ref="45c304ee1ade93cf85129ebc868db872" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="7bd571056c71556ed1cf73ce3020ca53" category="list-text">シードされたロールがユーザーの責任と一致しない場合に、Cloud Volumes ONTAP ロールを割り当てるか変更します。シード処理では、ユーザーの既存のプラットフォームロールに基づいて、Cloud Volumes ONTAP の管理者ロールまたは閲覧者ロールが割り当てられます。ユーザーがオペレーターレベルの権限を必要とする場合は、シード処理後に Cloud Volumes ONTAP オペレーターロールを明示的に割り当ててください。</block>
   <block id="5774c29530ef3d00986577fe09901f16" category="list-text">ユーザーに Cloud Volumes ONTAP システムへのアクセスを許可し、利用可能な操作が割り当てられたロールと一致していることを確認します。</block>
   <block id="a065f8eda24e666f32ca8b894d69f8fd" category="paragraph">ユーザーがシステムにアクセスできない場合は、組織、フォルダ、またはプロジェクトレベルでユーザーにCloud Volumes ONTAPロールが付与されていることを確認してください。</block>
@@ -6609,4 +6604,11 @@
   <block id="7f9913169b42b8f5d52af4ca9c8717f1" category="list-text"><block ref="7f9913169b42b8f5d52af4ca9c8717f1" category="inline-link-macro-rx"></block></block>
   <block id="0482ab4442a9ba22f7c194297a8cb1f2" category="list-text"><block ref="0482ab4442a9ba22f7c194297a8cb1f2" category="inline-link-macro-rx"></block></block>
   <block id="0b4dbf2063bf2cee842f6213a668ca13" category="sidebar">NetApp Console（標準モード）の開始</block>
+  <block id="54383aac445d39de2e8c245040d07b5f" category="inline-link-macro">エージェントのコンテナスレッド制限の増加について</block>
+  <block id="d2c88e74d3861db30d07ea7d5b32f8b4" category="list-text">このエージェントを Cloud Volumes ONTAP システムに関連付ける場合は、パフォーマンスを向上させるために、エージェントに関連付けられたスレッド数を増やすことを検討してください。<block ref="19d35f1710aa989f7c51ec017381d272" category="inline-link-macro-rx"></block>。</block>
+  <block id="3f5270815134250876b4de79ab285ee2" category="admonition">既存の Console エージェントが Console 4.9.0 以降にアップグレードされると、Console は、組織内の既存ユーザーに Cloud Volumes ONTAP のロールを割り当てる 1 回限りの移行プロセスを実行します。この処理には最大 30 分かかる場合があります。移行中に割り当てられたロールを確認および調整するには、<block ref="9c6eb0f6ef6d33dd56540127f1739544" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="43caa104b2be33274574693f687b3b8a" category="cell">アップグレード中に割り当てられるCloud Volumes ONTAPロール</block>
+  <block id="867f6306ad030ade00b2b5d1be06a297" category="paragraph">Console エージェントをバージョン 4.9.0 以降にアップグレードすると、Console はプラットフォームロールに基づいて、既存のユーザーに Cloud Volumes ONTAP ロールを自動的に割り当てます。この一度限りの割り当てにより、管理者が各ロールを手動で割り当てることなく、ユーザーは適切な Cloud Volumes ONTAP アクセス権を維持できます。ユーザーには、既存のプラットフォームロールに基づいて Cloud Volumes ONTAP ロールが自動的に割り当てられます。マッピングは移行中にのみ適用されます。プラットフォームロールは、新しい割り当てにおける明示的な Cloud Volumes ONTAP ロールの代替にはなりません。新しいロールを確認して、ユーザーが必要なアクセス権限のみを保持していることを確認してください。</block>
+  <block id="acbaf21f08d26739d3a0e3645fd4f7c1" category="inline-link-macro">アップグレード後に自動的に割り当てられる Cloud Volumes ONTAP のロールについて</block>
+  <block id="a7f237db4808db8f7d7e3569c4c90eba" category="list-text">各ユーザーに割り当てられている Cloud Volumes ONTAP ロールを確認し、そのロールがシステムを含む組織、フォルダ、またはプロジェクトレベルで割り当てられていることを確認してください。<block ref="943ee494db9e9617f80c85c45c5ec678" category="inline-link-macro-rx"></block>。</block>
 </blocks>

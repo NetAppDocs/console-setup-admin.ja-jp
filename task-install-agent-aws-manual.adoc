@@ -315,6 +315,7 @@ podman info | grep networkBackend
 
 
 
+. このエージェントを Cloud Volumes ONTAP システムに関連付ける場合は、パフォーマンスを向上させるために、エージェントに関連付けられたスレッド数を増やすことを検討してください。link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["エージェントのコンテナスレッド制限の増加について"^]。
 
 
 --
