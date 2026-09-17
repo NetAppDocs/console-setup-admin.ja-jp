@@ -92,9 +92,6 @@ NetApp 分類
 Licenses and subscriptionsの管理
 
 * プライベート モードでは BYOL のみがサポートされます。
-+
-Cloud Volumes ONTAP BYOL では、ノードベースのライセンスのみがサポートされます。容量ベースのライセンスはサポートされていません。アウトバウンドインターネット接続が利用できないため、Cloud Volumes ONTAP ライセンスファイルをコンソールに手動でアップロードする必要があります。
-
 
 
 https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses["ライセンスを追加する方法を確認する"^]

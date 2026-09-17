@@ -1602,7 +1602,6 @@
   <block id="be3e2e05d81fbbe5328217c66f55042d" category="cell"><block ref="be3e2e05d81fbbe5328217c66f55042d" category="inline-link-macro-rx"></block></block>
   <block id="da19f72933d8074d76c7f923694c67fd" category="cell">ランサムウェア耐性で疑わしいユーザー行動のアラートと分析情報を表示します。</block>
   <block id="36910b765d93c29f4611f725c05faabe" category="cell">SnapCenter管理者</block>
-  <block id="49016d07ca0d0bf92d598d1c92a187e1" category="cell">NetApp Backup and Recovery for Applications を使用してオンプレミスのONTAPクラスターからスナップショットをバックアップする機能を提供します。このロールを持つメンバーは、次のアクションを実行できます。 * [バックアップとリカバリ] &gt; [アプリケーション] から任意のアクションを実行する * 権限を持つプロジェクトおよびフォルダ内のすべてのシステムを管理する * すべてのNetApp Consoleサービスを使用するSnapCenterには、閲覧者ロールはありません。</block>
   <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="section-title">関連リンク</block>
   <block id="05271cfa0bdeea693a59837fb97cbc3b" category="list-text"><block ref="05271cfa0bdeea693a59837fb97cbc3b" category="inline-link-macro-rx"></block></block>
   <block id="d5c64a8daa89e747afab2353c532cfd0" category="inline-link-macro">NetApp ConsoleIAMを使い始める</block>
@@ -6611,4 +6610,22 @@
   <block id="867f6306ad030ade00b2b5d1be06a297" category="paragraph">Console エージェントをバージョン 4.9.0 以降にアップグレードすると、Console はプラットフォームロールに基づいて、既存のユーザーに Cloud Volumes ONTAP ロールを自動的に割り当てます。この一度限りの割り当てにより、管理者が各ロールを手動で割り当てることなく、ユーザーは適切な Cloud Volumes ONTAP アクセス権を維持できます。ユーザーには、既存のプラットフォームロールに基づいて Cloud Volumes ONTAP ロールが自動的に割り当てられます。マッピングは移行中にのみ適用されます。プラットフォームロールは、新しい割り当てにおける明示的な Cloud Volumes ONTAP ロールの代替にはなりません。新しいロールを確認して、ユーザーが必要なアクセス権限のみを保持していることを確認してください。</block>
   <block id="acbaf21f08d26739d3a0e3645fd4f7c1" category="inline-link-macro">アップグレード後に自動的に割り当てられる Cloud Volumes ONTAP のロールについて</block>
   <block id="a7f237db4808db8f7d7e3569c4c90eba" category="list-text">各ユーザーに割り当てられている Cloud Volumes ONTAP ロールを確認し、そのロールがシステムを含む組織、フォルダ、またはプロジェクトレベルで割り当てられていることを確認してください。<block ref="943ee494db9e9617f80c85c45c5ec678" category="inline-link-macro-rx"></block>。</block>
+  <block id="b6b21e530c678e5cd4c26f8b75ff76e8" category="doc">Console エージェント 4.11.0</block>
+  <block id="734697dbdbd312c3dd63c9c68317e6e9" category="paragraph">4.11.0 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
+  <block id="60fd42d7efe4262e8d79051a1c47bc4f" category="section-title">AWS Marketplace における Cloud Volumes ONTAP サブスクライバー向けエージェント展開フローの簡素化</block>
+  <block id="8bc5216f012502c8f371bc0ccb7e4b58" category="inline-link-macro">スタンドアロンCloud Volumes ONTAP AWS Marketplaceでのサブスクリプション</block>
+  <block id="7f5d42097032ab5af27aa2c77a23c33b" category="paragraph">新規サブスクライバーの場合<block ref="f4efe2873d568d07f96208e96f91d863" category="inline-link-macro-rx"></block>、NetApp Consoleにより、エージェントのデプロイが簡素化されました。AWSのロール、ポリシー、認証情報をより少ない手順で設定でき、1つのページでデフォルト値を自動的に使用して、セットアップをより迅速に進めることができます。</block>
+  <block id="b889961c81eec2cb76cc8efad7794a80" category="doc">プライベートモードリリース（4.10.0）</block>
+  <block id="a22ba5cede201b398675ddfd63c9864d" category="paragraph">4.10.0リリースには、以下のNetApp Consoleコンポーネントおよびサービスに対するアップデートが含まれています。</block>
+  <block id="c1b9fde9363d4906a9e67eb0862e9fc7" category="cell">4.10.0</block>
+  <block id="5ff195749703fc07b830e8ce460f4513" category="cell"><block ref="9d354d50c04a9174ec71f0d3d8410a23" category="inline-link-rx"></block>に移動し、バージョン 4.10.0 に含まれる変更を参照してください。</block>
+  <block id="c87dd127a9f46f1b24fd3cf0f74c6588" category="cell">5.6.2（2026年8月17日）</block>
+  <block id="669d8c7c23d7c1df9de525a93369bb8f" category="cell">1.546.0（2026年8月10日）</block>
+  <block id="99eb4ee0a56c7fb9d9fef77053e43af4" category="paragraph">アプリケーション向けNetApp Backup and Recoveryを使用して、オンプレミスのONTAPクラスターからスナップショットをバックアップする機能を提供します。このロールを持つメンバーは、次のアクションを実行できます。</block>
+  <block id="f44c611b4162cee5fdf2ee447ed48192" category="list-text">バックアップとリカバリ &gt; アプリケーションから任意のアクションを実行します。</block>
+  <block id="e88871c7007d89688acdcb7ffa4922fe" category="list-text">権限を持つプロジェクトおよびフォルダー内のすべてのシステムを管理する</block>
+  <block id="50683e47eb84069af1a5abcad6f30c6b" category="list-text">すべてのNetApp Consoleサービスを使用する</block>
+  <block id="4d2ba7b1416b46d72e4a391ee901ec54" category="paragraph">SnapCenterにはビューアロールがありません。</block>
+  <block id="1e464951e7ffdbf5ba8f20ee5038f44f" category="section-title">2026年9月17日</block>
+  <block id="9d26347bf9049c082d482aa87b79d702" category="section-title">2026年9月16日</block>
 </blocks>

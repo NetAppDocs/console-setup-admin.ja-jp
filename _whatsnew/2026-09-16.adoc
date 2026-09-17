@@ -1,0 +1,23 @@
+= Console エージェント 4.11.0
+:allow-uri-read: 
+
+
+
+
+[[console-agent-4-11-0]]
+=== Console エージェント 4.11.0
+
+4.11.0 リリースでは、標準モードと制限モードの両方がサポートされています。
+
+Console エージェントのこのリリースには、セキュリティの改善とバグ修正が含まれています。
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console管理
+
+
+
+==== AWS Marketplace における Cloud Volumes ONTAP サブスクライバー向けエージェント展開フローの簡素化
+
+新規サブスクライバーの場合link:https://us-east-1.console.aws.amazon.com/marketplace/search/listing/prodview-yi43o6oz7bf32?sr=0-2&ref_=ucaf&applicationId=AWS-Marketplace-Console["スタンドアロンCloud Volumes ONTAP AWS Marketplaceでのサブスクリプション"]、NetApp Consoleにより、エージェントのデプロイが簡素化されました。AWSのロール、ポリシー、認証情報をより少ない手順で設定でき、1つのページでデフォルト値を自動的に使用して、セットアップをより迅速に進めることができます。

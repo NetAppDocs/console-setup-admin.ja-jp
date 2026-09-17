@@ -155,7 +155,16 @@ NetApp Console のアイデンティティとアクセス管理（IAM）には�
 | link:reference-iam-ransomware-roles.html["ランサムウェア耐性ユーザー行動ビューア"] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER | Standard | ランサムウェア耐性で疑わしいユーザー行動のアラートと分析情報を表示します。 
 
 
-| SnapCenter管理者 | SNAPCENTER_ADMIN | 標準、プライベート | NetApp Backup and Recovery for Applications を使用してオンプレミスのONTAPクラスターからスナップショットをバックアップする機能を提供します。このロールを持つメンバーは、次のアクションを実行できます。 * [バックアップとリカバリ] > [アプリケーション] から任意のアクションを実行する * 権限を持つプロジェクトおよびフォルダ内のすべてのシステムを管理する * すべてのNetApp Consoleサービスを使用するSnapCenterには、閲覧者ロールはありません。 
+| SnapCenter管理者 | SNAPCENTER_ADMIN | 標準、プライベート  a| 
+アプリケーション向けNetApp Backup and Recoveryを使用して、オンプレミスのONTAPクラスターからスナップショットをバックアップする機能を提供します。このロールを持つメンバーは、次のアクションを実行できます。
+
+* バックアップとリカバリ > アプリケーションから任意のアクションを実行します。
+* 権限を持つプロジェクトおよびフォルダー内のすべてのシステムを管理する
+* すべてのNetApp Consoleサービスを使用する
+
+
+SnapCenterにはビューアロールがありません。
+
 |===
 
 
