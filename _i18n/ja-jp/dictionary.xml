@@ -392,7 +392,6 @@
   <block id="9156858ddc064ea9e8b1cad5a7866d77" category="list-text">英語版のみ。</block>
   <block id="1be928fabd45691f13e3586545b02c3e" category="list-text">ホストは Red Hat Subscription Management に登録されている必要があります。登録されていない場合、ホストはエージェントのインストール中に必要なサードパーティ製ソフトウェアを更新するためにリポジトリにアクセスできません。</block>
   <block id="e44d9eacbf65213e16b5bcf9aded9506" category="paragraph">3.9.50 以降、コンソールが標準モードまたは制限モード</block>
-  <block id="4a7c3449c74a5d09f39518a207c28558" category="paragraph">Podman バージョン 4.6.1 または 4.9.4</block>
   <block id="98119697a8c596d6a586655f867a2cda" category="inline-xref">Podman の構成要件を表示する</block>
   <block id="a4facfb2d16d1ed97d33467440808582" category="paragraph"><block ref="70e106a4b5e10c3f8e254a047f7ddb34" category="inline-xref-macro-rx"></block> 。</block>
   <block id="80626b31c22fa123b11c56011b1f23b6" category="paragraph">強制モードまたは許可モードでサポートされます</block>
@@ -6636,4 +6635,8 @@
   <block id="7a9f450627f543cbbf6905a038ee81e9" category="cell">リソース変換を作成または変更する</block>
   <block id="79c41e65b3e3fb5093fc621f469ff380" category="cell">*リソースグループ*</block>
   <block id="96c0a395cdcf92a7d93eb46b049601ad" category="cell">*ジョブモニタリング*</block>
+  <block id="97f185bdb4d83a1c34a87fc7edc58f9c" category="paragraph">コンソールがプライベートモードの場合、バージョン4.10.0以降</block>
+  <block id="ffc6d9152a780992794d0684b51c6723" category="section-title">プライベートモード4.10.0は、Red Hat Enterprise Linux (RHEL) 9.6をサポートしています。</block>
+  <block id="e8df4a2f18a880c577818fb8618fed77" category="inline-link-macro">プライベートモードのホスト要件について</block>
+  <block id="a40f09cfdf03cc6659d4d7e08024fda0" category="paragraph">プライベートモードがRed Hat Enterprise Linux（RHEL）9.6にインストールおよび実行できるようになり、お客様はセキュリティとパフォーマンスが向上した最新のサポート対象オペレーティングシステムを利用できるようになります。<block ref="0ce7e93392d1f71f6b7bb5b508ff4113" category="inline-link-macro-rx"></block></block>
 </blocks>

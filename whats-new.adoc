@@ -45,6 +45,13 @@ NetApp Console管理機能の新機能（アイデンティティおよびアク
 |===
 
 
+[[private-mode-4-10-0-supports-red-hat-enterprise-linux-rhel-9-6]]
+=== プライベートモード4.10.0は、Red Hat Enterprise Linux (RHEL) 9.6をサポートしています。
+
+プライベートモードがRed Hat Enterprise Linux（RHEL）9.6にインストールおよび実行できるようになり、お客様はセキュリティとパフォーマンスが向上した最新のサポート対象オペレーティングシステムを利用できるようになります。link:https://docs.netapp.com/us-en/console-setup-admin/task-prepare-private-mode.html#step-3-review-host-requirements["プライベートモードのホスト要件について"^]
+
+
+
 [[16-september-2026]]
 == 2026年9月16日
 
