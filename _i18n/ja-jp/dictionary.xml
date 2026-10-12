@@ -6534,7 +6534,6 @@
   <block id="e4a3525277e1b4371bb89478f9422b67" category="list-text">*Cloud Volumes ONTAP operator*：Cloud Volumes ONTAP システムの検出と管理（ボリューム、アグリゲート、スナップショット、レプリケーションの追加、一部の設定変更、Cloud Volumes ONTAP バージョンのアップグレードなど）を含む重要なストレージ操作を実行します。</block>
   <block id="769bcb1b917e9456afc908e3923e871d" category="inline-link-macro">Cloud Volumes ONTAP のロールベースアクセスを設定する</block>
   <block id="460200b9d3d05ac8165deb4aceb3eee1" category="paragraph">システムが含まれる組織、フォルダ、またはプロジェクトレベルで Cloud Volumes ONTAP ロールを割り当てます。プラットフォームロールを使用すると、ユーザーは NetApp Console リソースを管理でき、Cloud Volumes ONTAP ロールを使用すると、ユーザーは Cloud Volumes ONTAP システムを管理できます。ロール割り当ての計画に関するガイダンスについては、<block ref="4fa2aa48d2bde5e7446b8c98acc74eca" category="inline-link-macro-rx"></block> を参照してください。</block>
-  <block id="477c09cb5610382ea6fb7978147584f0" category="section-title">既存ユーザーのロール移行</block>
   <block id="2144a74d9bd9b04e77b26ea6f662072b" category="paragraph">Console エージェントをバージョン 4.9.0 以降にアップグレードすると、Console はプラットフォームロールに基づいて既存ユーザーに追加の Cloud Volumes ONTAP ロールを割り当てます。</block>
   <block id="8f07835784615aa819dfff43f4ab0f2e" category="inline-link-macro">コンソールエージェントのアップグレード後にロールを確認する</block>
   <block id="cc4d5362d4db1743065e85867391e3f7" category="paragraph">以下のマッピングは、この一度限りの移行プロセスにのみ適用されます。</block>
@@ -6663,4 +6662,6 @@
   <block id="f195c3b76464876e0848dadd15d334f6" category="inline-link-macro">VCenterで実行されているオンプレミスエージェントのサイズを拡張する方法について説明します</block>
   <block id="4cbf31d3afff31a0915f41b3987e9479" category="list-text"><block ref="706e14d3d1493bd7bc93630a70dd883a" category="inline-link-macro-rx"></block>。</block>
   <block id="83ea5433d56d3644fb56d0b6b799c35e" category="sidebar">vCenterインストール済みエージェントの保守</block>
+  <block id="5d9476182acf1146ab60b631fc72ec99" category="admonition">Cloud Volumes ONTAPのアクセスロールは、コンソールエージェントのバージョン4.9.0以降を実行している場合に利用可能です。</block>
+  <block id="7be2d306061e806c6a2cf1ac2026ea93" category="section-title">Console agentバージョン4.9.0以降へのアップグレード後の既存ユーザーに対するロール移行</block>
 </blocks>

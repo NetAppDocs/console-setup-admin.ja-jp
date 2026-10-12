@@ -16,6 +16,9 @@ summary: ユーザーに以下のロールを割り当てることで、コン�
 [role="lead"]
 ユーザーに次のロールを割り当てて、NetApp Console内のCloud Volumes ONTAPへのアクセス権を付与できます。
 
+
+NOTE: Cloud Volumes ONTAPのアクセスロールは、コンソールエージェントのバージョン4.9.0以降を実行している場合に利用可能です。
+
 * *Cloud Volumes ONTAP admin*：すべての Cloud Volumes ONTAP 操作へのフルアクセスを提供します。
 * *Cloud Volumes ONTAP operator*：Cloud Volumes ONTAP システムの検出と管理（ボリューム、アグリゲート、スナップショット、レプリケーションの追加、一部の設定変更、Cloud Volumes ONTAP バージョンのアップグレードなど）を含む重要なストレージ操作を実行します。
 * *Cloud Volumes ONTAP ビューア*：Cloud Volumes ONTAP 情報への読み取り専用アクセスを提供します。このロールでは、アクティブな操作は実行できません。設定情報を含む一部のタブや画面は、ビューアには表示されない場合があります。
@@ -27,9 +30,9 @@ link:reference-iam-predefined-roles.html["アクセスロールについて学�
 
 
 
-[[role-migrations-for-existing-users]]
+[[role-migrations-for-existing-users-after-upgrading-to-console-agent-version-4-9-0-or-later]]
 [[seeding-mappings-for-existing-users]]
-== 既存ユーザーのロール移行
+== Console agentバージョン4.9.0以降へのアップグレード後の既存ユーザーに対するロール移行
 
 Console エージェントをバージョン 4.9.0 以降にアップグレードすると、Console はプラットフォームロールに基づいて既存ユーザーに追加の Cloud Volumes ONTAP ロールを割り当てます。
 

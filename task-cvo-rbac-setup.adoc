@@ -16,6 +16,9 @@ summary: プロジェクトを整理し、Console メンバーを追加して、
 [role="lead"]
 Cloud Volumes ONTAP へのアクセスを設定することで、既存のコンソールユーザーは必要なアクセス権を維持でき、新規サブスクライバーは適切な権限を持つユーザーを追加できるようになります。
 
+
+NOTE: Cloud Volumes ONTAPのアクセスロールは、コンソールエージェントのバージョン4.9.0以降を実行している場合に利用可能です。
+
 以下のいずれかのセクションを使用してください。
 
 * *NetApp Console と Cloud Volumes ONTAP を初めて使用する場合*：新規ユーザーと Cloud Volumes ONTAP システムに対してロールベースのアクセスを設定します。
