@@ -28,7 +28,7 @@ AWS、Azure、Google Cloud 全体の標準展開（インターネット アク�
 [[console-agent-vm-details-for-aws]]
 === AWS のコンソールエージェント VM の詳細
 
-コンソールまたはクラウド プロバイダーのマーケットプレイスからコンソール エージェントを展開した場合は、次の点に注意してください。
+コンソールまたはAWSマーケットプレイスからコンソールエージェントをデプロイした場合は、次の点に注意してください：
 
 * EC2 インスタンスタイプは t3.2xlarge です。
 * イメージのオペレーティング システムは Ubuntu 22.04 LTS です。
@@ -45,7 +45,7 @@ AWS、Azure、Google Cloud 全体の標準展開（インターネット アク�
 [[console-agent-vm-details-for-azure]]
 === Azure のコンソール エージェント VM の詳細
 
-コンソールまたはクラウド プロバイダーのマーケットプレイスからコンソール エージェントを展開した場合は、次の点に注意してください。
+コンソールまたは Azure marketplace からコンソール エージェントをデプロイした場合は、次の点に注意してください：
 
 * VM タイプは Standard_D8s_v3 です。
 * イメージのオペレーティング システムは Ubuntu 22.04 LTS です。
@@ -61,7 +61,7 @@ AWS、Azure、Google Cloud 全体の標準展開（インターネット アク�
 [[console-agent-vm-details-for-google-cloud]]
 === Google Cloud のコンソール エージェント VM の詳細
 
-コンソールからコンソール エージェントを展開した場合は、次の点に注意してください。
+ConsoleまたはGoogle Cloud marketplaceからConsoleエージェントをデプロイした場合は、次の点に注意してください：
 
 * VM インスタンスは n2-standard-8 です。
 * イメージのオペレーティング システムは Ubuntu 22.04 LTS です。

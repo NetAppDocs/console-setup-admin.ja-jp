@@ -130,24 +130,24 @@ sidebar:
         url: "/concept-agents.html"
       - title: コンソールエージェントのメンテナンス
         entries:
-        - title: 手動でインストールされたNetApp Consoleエージェントを保守する
-          entries:
-          - title: VCenter にインストールされたエージェントを維持する
-            url: "/task-agent-vm-config.html"
-          - title: 手動でインストールしたエージェントを保守する
-            url: "/task-maintain-agents.html"
+        - title: vCenterインストール済みエージェントの保守
+          url: "/task-agent-vm-config.html"
+        - title: NetApp ConsoleエージェントVMの保守
+          url: "/task-maintain-agents.html"
+      - title: セキュアコンソールエージェント
+        entries:
         - title: エージェントのアドレスとURIを更新する
           url: "/task-update-agent-addressing.html"
         - title: Webコンソールへのアクセス用にCA署名証明書をインストールする
           url: "/task-installing-https-cert.html"
         - title: プロキシサーバーを使用するようにコンソールエージェントを構成する
           url: "/task-configuring-proxy.html"
-        - title: コンソールエージェントのトラブルシューティング
-          url: "/task-troubleshoot-agent.html"
-        - title: コンソールエージェントをアップグレードする
-          url: "/task-upgrade-agent.html"
-        - title: コンソールエージェントをアンインストールして削除する
-          url: "/task-uninstall-agent.html"
+      - title: コンソールエージェントのトラブルシューティング
+        url: "/task-troubleshoot-agent.html"
+      - title: コンソールエージェントをアップグレードする
+        url: "/task-upgrade-agent.html"
+      - title: コンソールエージェントをアンインストールして削除する
+        url: "/task-uninstall-agent.html"
       - title: クラウド プロバイダの資格情報を管理する
         entries:
         - title: AWS

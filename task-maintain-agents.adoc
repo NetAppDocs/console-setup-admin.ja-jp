@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-maintain-agents.html 
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
-summary: エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、会社の標準的なオペレーティング システムの配布手順に従って、コンソール エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。 
+summary: 手動でインストールされたエージェントのOSセキュリティアップデート、推奨されるCPUとRAMのサイジング、リソースの健全性通知、VMの起動および停止手順など、NetApp ConsoleエージェントVMを保守する方法について説明します。 
 ---
-= 手動でインストールした NetApp Console エージェントの VM を管理する
+= NetApp ConsoleエージェントVMの保守
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,12 +14,19 @@ summary: エージェント ホスト上のオペレーティング システム
 
 
 [role="lead"]
+手動でインストールしたエージェントにOSセキュリティアップデートを適用したり、CPU、RAM、ディスク容量のアラートに対応したり、必要に応じてVMのサイズ変更や停止、起動を行ったりして、NetApp ConsoleエージェントVMを保守します。
+
 コンソールエージェントを手動でインストールする場合、エージェントホスト上のオペレーティングシステムの維持管理は、お客様の責任となります。たとえば、お客様は、自社のオペレーティングシステム配布に関する標準手順に従って、エージェントホスト上のオペレーティングシステムにセキュリティアップデートを適用する必要があります。
 
+エージェントVMのリソースが不足したり、パフォーマンスの問題が発生した場合は、VMリソースをアップグレードするための適切な措置を講じる必要があります。
 
 
-[[apply-operating-system-updates-to-the-agent-host]]
-== エージェントホストにオペレーティングシステムのアップデートを適用する
+NOTE: vCenterにエージェントをインストールした場合は、コンソールメンテナンスツールを使用してVMインスタンスのサイズを変更します。link:task-agent-vm-config.html["vCenter でエージェント VM を保守する方法"^]。
+
+
+
+[[apply-operating-system-updates-to-the-manually-installed-agent-hosts]]
+== 手動でインストールしたエージェントホストにオペレーティングシステムのアップデートを適用します
 
 エージェント ホスト サービスを停止せずに OS セキュリティ パッチを適用します。
 
@@ -42,19 +49,33 @@ sudo apt upgrade
 ----
 
 
-[[vm-or-instance-type]]
-== VMまたはインスタンスタイプ
+[[resizing-the-vm-or-instance-type]]
+== VMまたはインスタンスタイプのサイズ変更
 
 コンソールからコンソール エージェントを作成すると、デフォルトの構成でクラウド プロバイダーに VM インスタンスがデプロイされます。エージェントを作成した後は、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。
 
-次の表に、CPU と RAM の要件を示します。
+エージェントVMのプロビジョニングが不足しているという通知を受け取った場合は、最適なパフォーマンスを確保するために、より多くのCPUまたはRAMを備えた大規模なVMインスタンスへのアップグレードをご検討ください。
 
-CPU:: 8コアまたは8vCPU
-RAM:: 32 GB
 
+NOTE: エージェントを VCenter にインストールした場合は、コンソールメンテナンスツールを使用してVMインスタンスのサイズを変更します。link:task-agent-vm-config.html["VCenterでエージェントVMのサイズを変更する方法"^]。
 
 link:reference-agent-default-config.html["エージェントのデフォルト設定について学ぶ"] 。
 
+エージェントVMのCPUまたはRAMを増やす必要がある場合は、クラウド プロバイダまたはオンプレミスの仮想化プラットフォームが提供する手順に従って、VMインスタンスのサイズを変更してください。NetAppは、最適なパフォーマンスを確保するために、現在のCPUとRAMの割り当てを2倍にすることを推奨しています。以下の表は推奨されるサイジング階層を示しており、各階層は前の階層のCPUとRAMの2倍になっています。
+
+[cols="1,1,1"]
+|===
+| 階層 | CPU（コア数またはvCPU数） | RAM 
+
+
+| 最小 | 8 | 32 GB 
+
+
+| 中 | 16 | 64 GB 
+
+
+| 大規模 | 32 | 128 GB 
+|===
 
 
 [[monitor-the-agent]]
@@ -78,10 +99,30 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
 | ディスク容量が多すぎる | link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Manager/How_to_resolve_disk_space_issues_on_BlueXP_connector_VM["NetAppナレッジベースの記事を確認する"^] 。 
 
 
-| CPU使用率が高すぎる | インストールした場所に応じて、クラウド プロバイダーまたはオンプレミスのエージェント VM の CPU サイズを増やします。または、追加のエージェントを作成し、ワークロードを複数のエージェントに分散します。  RAM の使用率は、環境、 ONTAPワークロード、 Cloud Volumes ONTAPシステムの数、および使用しているデータ サービスによって異なります。 
+ a| 
+CPU使用率が高すぎる
+ a| 
+インストールした場所に応じて、クラウド プロバイダーまたはオンプレミスのエージェント VM の CPU サイズを増やします。または、追加のエージェントを作成し、ワークロードを複数のエージェントに分散します。  RAM の使用率は、環境、 ONTAPワークロード、 Cloud Volumes ONTAPシステムの数、および使用しているデータ サービスによって異なります。
+
+* link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["AWSでエージェントVMのサイズを増やす方法を学びましょう"^]。
+* link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["AzureでエージェントVMのサイズを増やす方法"^]。
+* link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["Google CloudでエージェントVMのサイズを増やす方法"^]。
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["VCenterで実行されているオンプレミスエージェントのサイズを拡張する方法について説明します"]。
 
 
-| RAM使用量が高すぎる | インストールした場所に応じて、クラウド プロバイダーまたはオンプレミスのエージェント VM の RAM を増やします。または、追加のエージェントを作成し、ワークロードを複数のエージェントに分散します。  RAM の使用率は、環境、 ONTAPワークロード、 Cloud Volumes ONTAPシステムの数、および使用しているデータ サービスによって異なります。 
+
+
+ a| 
+RAM使用量が高すぎる
+ a| 
+インストールした場所に応じて、クラウド プロバイダーまたはオンプレミスのエージェント VM の RAM を増やします。または、追加のエージェントを作成し、ワークロードを複数のエージェントに分散します。  RAM の使用率は、環境、 ONTAPワークロード、 Cloud Volumes ONTAPシステムの数、および使用しているデータ サービスによって異なります。
+
+* link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["AWSでエージェントVMのサイズを増やす方法を学びましょう"^]。
+* link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["AzureでエージェントVMのサイズを増やす方法"^]。
+* link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["Google CloudでエージェントVMのサイズを増やす方法"^]。
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["VCenterで実行されているオンプレミスエージェントのサイズを拡張する方法について説明します"]。
+
+
 |===
 
 
