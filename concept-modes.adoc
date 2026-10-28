@@ -19,7 +19,7 @@ NetApp Console は、SaaS アプリケーションを介して使用すること
 NetApp では、これらのユースケースを_デプロイメント モード_と呼びます。各モードでは、ビジネスとセキュリティのニーズに合わせて、さまざまな接続性、機能、サービスが提供されます。
 
 標準モード（SaaS）:: NetApp Console SaaS（ソフトウェア・アズ・ア・サービス）アプリケーションは、すべてのNetAppデータサービスへのアクセス、自動アップデート、アイデンティティフェデレーションやNetApp Support Siteログインなどの柔軟な認証オプションを可能にします。このモードはマーケットプレイスサブスクリプションおよびBYOLライセンスに対応しています。このモードは、特にNetApp Consoleで利用可能な最も多くの機能やサービスを求めるユーザや組織に最適です。
-制限モード（独自のパブリック クラウドにインストール）:: 制限モードは、政府機関や規制対象の企業など、セキュリティの強化と接続の制限を必要とする組織向けです。NetApp Console を独自のパブリック クラウド（政府、主権、または商業地域）にインストールすると、NetApp Console API エンドポイント（SaaS アプリケーションでホスト）への外部接続が制限されます。制限モードでは、Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（政府および商業地域）、データ分類などの主要なデータ サービスと、自動化されたソフトウェア アップグレードおよび ID フェデレーションにアクセスできます。
+制限モード（独自のパブリック クラウドにインストール）:: 制限モードは、政府機関や規制対象企業など、セキュリティ強化と接続制限を必要とする組織向けです。お客様は、独自のパブリッククラウド（政府、ソブリン、または商用リージョン）にNetApp Consoleをインストールします。このコンソールは、（SaaSアプリケーションでホストされている）NetApp Console APIエンドポイントへのアウトバウンド接続が制限されています。制限モードでは、AI Data Engine、Cloud Volumes ONTAP、Azure NetApp Files、NetApp Backup and Recovery（政府および商用リージョン）、データ分類などの主要なデータサービスへのアクセスに加えて、自動化されたソフトウェアアップグレードやIDフェデレーションが提供されます。
 プライベートモード（オンプレミスまたはクラウドにインストール）:: プライベート モードは、AWS Secret Cloud、AWS Top Secret Cloud、Azure IL6、エアギャップ環境などの厳格なセキュリティ ニーズを持つ組織向けです。NetApp Console SaaSアプリケーションやNetAppクラウドベースのAPIには接続せず、完全な制御が可能になり、外部との通信をブロックできます。サポートされているデータ サービスには、NetApp Backup and Recovery、NetApp Data Classification、NetApp Replication、Cloud Volumes ONTAPが含まれます。すべてのストレージと認証はローカルのままであり、データは環境内に保持されます。このモードは、防衛請負業者、厳格なデータ保存規則を持つ金融機関、機密システムを持つ政府機関に使用します。
 
 
@@ -139,7 +139,10 @@ NetAppでは、お客様がNetAppの担当者と協力して、既存の階層�
 | ワークロード | いいえ 
 
 
-.8+| *データサービス* | NetApp Backup and Recovery | はい 
+.9+| *データサービス* | NetApp AI Data Engine | はい 
+
+
+| NetApp Backup and Recovery | はい 
 
 
 | NetApp 分類 | はい 
@@ -290,7 +293,10 @@ image:diagram-restricted-mode.png["SaaSアプリケーションとauth0認証が
 | オンプレミスのONTAPクラスタ | 検出と管理に必要です。Console エージェントがなくても直接検出を使用できますが、管理機能を使用するにはエージェントが必要です。 
 
 
-.3+| *データ サービス*（制限モードでは、標準モードよりもサポートされるデータ サービスが少なくなります）  a| 
+.4+| *データ サービス*（制限モードでは、標準モードよりもサポートされるデータ サービスが少なくなります） | AI Data Engine | はい 
+
+
+ a| 
 バックアップとリカバリ
 
 * 制限モードの政府地域および商用地域でサポートされます。制限モードのソブリン地域ではサポートされません。
@@ -638,7 +644,10 @@ NOTE: 標準モード（NetApp Console SaaS アプリケーション）は、す
 | ワークロード | いいえ | いいえ 
 
 
-.8+| *データサービス* | バックアップとリカバリ | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] 
+.9+| *データサービス* | AI Data Engine | はい | いいえ 
+
+
+| バックアップとリカバリ | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] | はいhttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["ONTAPボリュームデータのサポートされているバックアップ先のリストを表示します"^] 
 
 
 | NetApp 分類 | はい | はい 

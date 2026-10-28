@@ -54,7 +54,7 @@ NetApp Console のプライベートモードはエアギャップおよびオ�
 
 コンソールローカル展開は、ポリシーベースのプロビジョニング、自動コンプライアンスチェック、および完全なデータ主権を必要とする大規模なオンプレミス ONTAP 環境を持つ組織に最適です。
 
-link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["NetApp Console のローカルデプロイメントについて説明します^。"]
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["NetApp Consoleのローカル展開について説明します。"^]
 
 
 
