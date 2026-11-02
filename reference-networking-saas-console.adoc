@@ -4,7 +4,7 @@ permalink: reference-networking-saas-console.html
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
 summary: NetApp Console、 NetApp Consoleエージェント、およびNetAppデータ サービスには、アウトバウンド インターネット アクセスと、必要なエンドポイントに接続する機能が必要です。 
 ---
-= NetApp Console のネットワークアクセス
+= 標準モードのNetApp Consoleのネットワーク アクセス
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ NetApp Console、 NetApp Consoleエージェント、およびNetAppデータ �
 次のネットワーク アクセスを設定する必要があります。
 
 * NetApp Consoleに SaaS (Software as a Service) としてアクセスするコンピュータ
-* オンプレミスまたはクラウドにインストールするコンソール エージェント。コンソールエージェント。
+* オンプレミスまたはクラウドにインストールするコンソール エージェント。
 
 
 
@@ -39,22 +39,49 @@ NOTE: 4.0.0 では、 NetApp はコンソールとコンソール エージェ�
 | エンドポイント | 目的 
 
 
-| \https://mysupport.netapp.com | ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。 
+ a| 
+* \https://mysupport.netapp.com
 
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。
 
-| \https://signin.b2c.netapp.com | NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。 
-
-
-| \https://support.netapp.com | ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。 
-
-
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetApp Console内で機能とサービスを提供します。 
 
 
  a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （制限付きモードでの展開に必要）
+* \https://signin.b2c.netapp.com
+
  a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
+
+
+
+ a| 
+* \https://support.netapp.com
+
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
+
+
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+NetApp Console内で機能とサービスを提供します。
+
+
+
+ a| 
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+ a| 
+Consoleエージェントの展開とアップグレード用のイメージを取得するため。
 
 |===
 

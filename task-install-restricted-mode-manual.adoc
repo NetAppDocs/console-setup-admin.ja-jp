@@ -1,0 +1,721 @@
+---
+sidebar: sidebar 
+permalink: task-install-restricted-mode-manual.html 
+keywords: restricted mode, manual install, AWS, Azure, Google Cloud, Linux host, Console agent 
+summary: AWS、Azure、またはGoogle Cloudの専用Linuxホストに制限モードでConsoleエージェントを手動でインストールし、Consoleを設定してクラウドのアクセス許可を割り当てます。 
+---
+= 制限モードでNetApp Consoleエージェントを手動でデプロイする
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+発信接続が制限された環境でNetApp Consoleを使用する場合は、制限モードでConsoleエージェントを手動で展開する必要があります。
+
+マーケットプレイスのサブスクリプションを使用しない場合、またはGoogle Cloudをデプロイする場合は、Consoleエージェントを手動でインストールする必要があります。
+
+
+
+[[step-1-prepare-cloud-permissions]]
+== ステップ1：クラウド権限を準備する
+
+Consoleエージェントをインストールする前に、リソースの管理に必要なクラウド プロバイダの権限を準備してください。
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["クラウド権限の準備方法を学ぶ"] 。
+
+
+
+[[step-2-enable-google-cloud-apis-google-cloud-only]]
+[[restricted-mode-google-cloud-apis]]
+== ステップ2：Google Cloud APIを有効にする（Google Cloudのみ）
+
+Google CloudにConsoleエージェントをインストールする場合は、インストールの前にプロジェクトで必要なAPIを有効にしてください。これらのAPIは、特定のCloud Volumes ONTAP機能に必要です。
+
+.手順
+. https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud プロジェクトで API を有効にする"^]
++
+** Cloud Build API（Infrastructure Managerを使用したプライベートモードCloud Volumes ONTAPデプロイメントに必要）
+** クラウド デプロイメント マネージャー V2 API
+** クラウド インフラストラクチャ マネージャー API
+** クラウドロギングAPI
+** クラウド リソース マネージャー API
+** コンピューティングエンジン API
+** アイデンティティとアクセス管理 (IAM) API
+** Cloud Key Management Service（KMS）API（NetApp Backup and Recoveryを顧客管理暗号化キー（CMEK）で使用する予定がある場合のみ必要）
+** Cloud Quotas API（Infrastructure Managerを使用したCloud Volumes ONTAPデプロイメントに必要）
+
+
+
+
+
+
+[[step-3-prepare-network-access]]
+== ステップ3：ネットワーク アクセスの準備
+
+Consoleエージェントをインストールするクラウド プロバイダに必要な発信エンドポイントを許可します。
+
+
+
+[[cloud-provider-endpoints]]
+=== クラウド プロバイダのエンドポイント
+
+
+
+==== AWS環境
+
+これらのAWSサービスエンドポイントが、FSx for ONTAPを含むAWSリソースを管理できるようにします。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+AWS サービス (amazonaws.com):
+
+* クラウドフォーメーション
+* エラスティックコンピューティングクラウド (EC2)
+* アイデンティティとアクセス管理（IAM）
+* キー管理サービス (KMS)
+* セキュリティトークンサービス（STS）
+* シンプルストレージサービス（S3）
+
+ a| 
+AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細についてはAWSドキュメントを参照してください"^]
+
+
+
+ a| 
+Amazon FSx for NetApp ONTAP：
+
+* api.workloads.netapp.com
+
+ a| 
+Webベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
+
+|===
+
+
+==== Azure環境
+
+ご利用のAzureリージョンに該当するエンドポイントを許可してください：パブリック、政府機関、または中国。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
+
+ a| 
+Azure パブリック リージョン内のリソースを管理します。
+
+
+
+ a| 
+* \https://management.usgovcloudapi.net
+* \https://login.microsoftonline.us
+* \https://*.blob.core.usgovcloudapi.net
+* \https://core.usgovcloudapi.net
+
+ a| 
+Azure Government リージョン内のリソースを管理します。
+
+
+
+ a| 
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
+ a| 
+Azure China リージョンのリソースを管理します。
+
+|===
+
+
+==== Google Cloud環境
+
+これらのGoogle Cloud APIエンドポイントに、プロジェクト内のリソースの管理を許可します。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+* \https://www.googleapis.com/compute/v1/
+* \https://compute.googleapis.com/compute/v1
+* \https://cloudresourcemanager.googleapis.com/v1/projects
+* \https://www.googleapis.com/compute/beta
+* \https://storage.googleapis.com/storage/v1
+* \https://www.googleapis.com/storage/v1
+* \https://iam.googleapis.com/v1
+* \https://cloudkms.googleapis.com/v1
+* \https://config.googleapis.com/v1/projects
+
+ a| 
+Google Cloud 内のリソースを管理します。
+
+|===
+
+
+[[netapp-console-endpoints]]
+=== NetApp Consoleエンドポイント
+
+NetAppサポート、Console機能、およびConsoleエージェントの展開とアップグレードのための共有エンドポイントを許可します。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+* \https://mysupport.netapp.com
+
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
+* \https://signin.b2c.netapp.com
+
+ a| 
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
+
+
+
+ a| 
+* \https://support.netapp.com
+
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
+
+
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+NetApp Console内で機能とサービスを提供します。
+
+
+
+ a| 
+政府機関以外の地域では、以下のエンドポイントを使用してください：
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+政府機関の管轄区域の場合は、代わりに以下のエンドポイントを使用してください：
+
+* \https://occmclientinfragov.azurecr.us
+
+ a| 
+Consoleエージェントの展開とアップグレード用のイメージを取得するため。
+
+|===
+ブラウザアクセスおよびその他のネットワーク要件については、link:task-prepare-restricted-mode.html#step-5-prepare-network-access["制限モードのネットワーク アクセスを準備する"]を参照してください。
+
+
+
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
+== ステップ4: PodmanまたはDocker Engineをインストールする
+
+オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要になります。
+
+* Red Hat Enterprise Linux 8 および 9 には Podman が必要です。
++
+<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
+* Ubuntu には Docker Engine が必要です。
++
+<<podman-versions,サポートされている Docker エンジンのバージョンを表示する>> 。
+
+
+
+.手順
+[role="tabbed-block"]
+====
+.ポッドマン
+--
+Podman をインストールして設定するには、次の手順に従います。
+
+* podman.socket サービスを有効にして起動します
+* Python3をインストールする
+* podman-composeパッケージをインストールします（Red Hatのバージョンによって異なります）
+* podman-composeをPATH環境変数に追加する
+* Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。
+
+
+
+NOTE: DNS ポートの競合を避けるために、エージェントをインストールした後、aardvark-dns ポート (デフォルト: 53) を調整します。指示に従ってポートを構成します。
+
+.手順
+. ホストに podman-docker パッケージがインストールされている場合は削除します。
++
+[source, cli]
+----
+dnf remove podman-docker
+rm /var/run/docker.sock
+----
+. Podman をインストールします。
++
+Podman は、公式の Red Hat Enterprise Linux リポジトリから入手できます。
+
++
+.. Red Hat Enterprise Linux 9.6 の場合:
++
+[source, cli]
+----
+sudo dnf install podman-5:<version>
+----
++
+<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
+.. Red Hat Enterprise Linux 9.1 から 9.4 の場合:
++
+[source, cli]
+----
+sudo dnf install podman-4:<version>
+----
++
+<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
+.. Red Hat Enterprise Linux 8 の場合:
++
+[source, cli]
+----
+sudo dnf install podman-4:<version>
+----
++
+<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
+
+
+
+. podman.socket サービスを有効にして起動します。
++
+[source, cli]
+----
+sudo systemctl enable --now podman.socket
+----
+. python3 をインストールします。
++
+[source, cli]
+----
+sudo dnf install python3
+----
+. システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。
++
+podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。
+
+. Red Hat Enterprise 9 を使用している場合:
++
+.. EPEL リポジトリ パッケージをインストールします。
+
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
++
+.. podman-compose パッケージ 1.5.0 をインストールします。
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.5.0
+----
+
+
+. Red Hat Enterprise Linux 8 を使用している場合:
++
+.. EPEL リポジトリ パッケージをインストールします。
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+----
+.. podman-compose パッケージ 1.0.6 をインストールします。
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.0.6
+----
++
+
+NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-compose を追加するための要件を満たしています。インストールコマンドは、すでにインストールされているpodman-composeを/usr/binに追加します。 `secure_path`ホスト上のオプション。
+
+.. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
++
+... 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+... networkBackendが `CNI`、それを変更する必要があります `netavark`。
+... インストール `netavark`そして `aardvark-dns`次のコマンドを使用します。
++
+[source, cli]
+----
+dnf install aardvark-dns netavark
+----
+... 開く `/etc/containers/containers.conf`ファイルを編集し、network_backend オプションを変更して、「cni」の代わりに「netavark」を使用します。
++
+もし `/etc/containers/containers.conf`存在しない場合は、設定を変更してください `/usr/share/containers/containers.conf`。
+
+... podman を再起動します。
++
+[source, cli]
+----
+systemctl restart podman
+----
+... 次のコマンドを使用して、networkBackend が「netavark」に変更されていることを確認します。
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+
+
+
+
+. このエージェントを Cloud Volumes ONTAP システムに関連付ける場合は、パフォーマンスを向上させるために、エージェントに関連付けられたスレッド数を増やすことを検討してください。link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["エージェントのコンテナスレッド制限の増加について"^]。
+
+
+--
+.Dockerエンジン
+--
+Docker のドキュメントに従って Docker Engine をインストールします。
+
+.手順
+. https://docs.docker.com/engine/install/["Dockerからのインストール手順を見る"^]
++
+サポートされている Docker エンジン バージョンをインストールするには、手順に従ってください。最新バージョンはコンソールでサポートされていないため、インストールしないでください。
+
+. Docker が有効になっていて実行されていることを確認します。
++
+[source, cli]
+----
+sudo systemctl enable docker && sudo systemctl start docker
+----
+
+
+--
+====
+
+
+[[step-5-manually-install-the-netapp-console-restricted-mode-in-your-cloud-environment-must-use-for-google-cloud]]
+== ステップ 5：クラウド環境にNetApp Console制限モードを手動でインストールします（Google Cloudでは必須）
+
+AWS、Azure、または Google Cloud で実行されている独自の Linux ホストに、コンソール エージェントを手動でインストールできます。
+
+.開始する前に
+次のものが必要です:
+
+* コンソール エージェントをインストールするためのルート権限。
+* コンソール エージェントからのインターネット アクセスにプロキシが必要な場合のプロキシ サーバーの詳細。
++
+インストール後にプロキシ サーバを設定するオプションがありますが、設定するにはコンソールエージェントを再起動する必要があります。
+
+* プロキシ サーバーが HTTPS を使用する場合、またはプロキシがインターセプト プロキシである場合は、CA 署名証明書。
+
+
+
+NOTE: コンソール エージェントを手動でインストールする場合、透過プロキシ サーバーの証明書を設定することはできません。透過プロキシ サーバーの証明書を設定する必要がある場合は、インストール後にメンテナンス コンソールを使用する必要があります。詳細はこちら link:reference-agent-maint-console-proxy.html["エージェントメンテナンスコンソール"]。
+
+* インストール中に送信接続を検証する構成チェックを無効にする必要があります。このチェックが無効になっていない場合、手動インストールは失敗します。link:task-troubleshoot-agent.html["手動インストールの構成チェックを無効にする方法を説明します。"]
+
+
+.タスク概要
+インストール後、新しいバージョンが利用可能な場合、コンソール エージェントは自動的に更新されます。
+
+.手順
+. ホストに _http_proxy_ または _https_proxy_ システム変数が設定されている場合は、それらを削除します。
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+これらのシステム変数を削除しないと、インストールは失敗します。
+
+. コンソール エージェント ソフトウェアをダウンロードし、Linux ホストにコピーします。  NetApp ConsoleまたはNetAppサポート サイトからダウンロードできます。
++
+** NetApp Console：*エージェント > 管理 > エージェントのデプロイ > オンプレミス > 手動インストール* に移動します。
++
+エージェント インストーラ ファイルをダウンロードするか、ファイルへの URL を選択します。
+
+** https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetAppサポート サイト"^]（NetApp Consoleへのアクセス権をまだ持っていない場合に必要です）。
++
+
+NOTE: ネットワークまたはクラウドで使用するための「オンライン」エージェント インストーラーをダウンロードします。NetApp Console エージェントには別の「オフライン」インストーラーが用意されていますが、プライベート モードの展開でのみサポートされます。
+
+** NetApp Support Site（まだコンソールへのアクセス権がない場合に必要） https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetAppサポート サイト"^]。
+
+
+. スクリプトを実行するための権限を割り当てます。
++
+[source, cli]
+----
+chmod +x NetApp_Console_Agent_Cloud_<version>
+----
++
+<version> は、ダウンロードしたコンソール エージェントのバージョンです。
+
+. Government Cloud 環境にインストールする場合は、構成チェックを無効にします。link:task-troubleshoot-agent.html#disable-config-check["手動インストールの構成チェックを無効にする方法を説明します。"]
+. インストール スクリプトを実行します。
++
+[source, cli]
+----
+./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+ネットワークでインターネットアクセスにプロキシが必要な場合は、プロキシ情報を追加する必要があります。インストール中に明示的にプロキシを追加できます。 `--proxy`および `--cacert`パラメータはオプションであり、追加を要求されることはありません。明示的なプロキシ サーバがある場合は、示されているようにパラメータを入力する必要があります。
+
++
+
+NOTE: 透過プロキシを設定したい場合は、インストール後に設定できます。link:reference-agent-maint-console-proxy.html["エージェントメンテナンスコンソールについて学ぶ"]。
+
++
+CA署名付き証明書を使用した明示的なプロキシ サーバの設定例を以下に示します：
+
++
+[source, cli]
+----
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy`次のいずれかの形式を使用して、HTTPまたはHTTPSプロキシ サーバを使用するようにConsoleエージェントを設定します：
+
++
+** \http://アドレス:ポート
+** \http://ユーザー名:パスワード@アドレス:ポート
+** \http://ドメイン名%92ユーザー名:パスワード@アドレス:ポート
+** \https://アドレス:ポート
+** \https://ユーザー名:パスワード@アドレス:ポート
+** \https://ドメイン名%92ユーザー名:パスワード@アドレス:ポート
++
+次の点に注意してください。
+
++
+*** ユーザーはローカル ユーザーまたはドメイン ユーザーになります。
+*** ドメイン ユーザーの場合は、上記のように \ の ASCII コードを使用する必要があります。
+*** コンソールエージェントは、@文字を含むユーザー名またはパスワードをサポートしていません。
+*** パスワードに以下の特殊文字が含まれている場合は、その特殊文字の前にバックスラッシュ ( & または ! ) を付けてエスケープする必要があります。
++
+例えば：
+
++
+\http://bxpproxyuser:netapp1\!@アドレス:3128
+
+
+
+
+
+. Podman を使用した場合は、aardvark-dns ポートを調整する必要があります。
++
+.. コンソール エージェント仮想マシンに SSH で接続します。
+.. podman _/usr/share/containers/containers.conf_ ファイルを開き、Aardvark DNS サービス用に選択したポートを変更します。たとえば、54 に変更します。
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+----
++
+例えば：
+
++
+[source, text]
+----
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+----
+.. コンソール エージェント仮想マシンを再起動します。
+
+
+
+
+.結果
+コンソール エージェントがインストールされました。プロキシ サーバーを指定した場合、インストールの最後に、コンソール エージェント サービス (occm) が 2 回再起動します。
+
+.次の手順
+NetApp Consoleをセットアップします。
+
+
+
+[[step-6-set-up-netapp-console]]
+== ステップ6：NetApp Consoleのセットアップ
+
+コンソールに初めてアクセスすると、コンソール エージェントの組織を選択するように求められ、制限モードを有効にする必要があります。
+
+.開始する前に
+コンソール エージェントを設定するユーザーは、コンソール組織に属していないログインを使用してコンソールにログインする必要があります。
+
+ログインが別の組織に関連付けられている場合は、新しいログインでサインアップする必要があります。そうしないと、セットアップ画面に制限モードを有効にするオプションが表示されません。
+
+.手順
+. コンソール エージェント インスタンスに接続しているホストから Web ブラウザを開き、インストールしたコンソール エージェントの次の URL を入力します。
+. NetApp Consoleにサインアップまたはログインします。
+. ログインしたら、コンソールを設定します。
++
+.. コンソール エージェントの名前を入力します。
+.. 新しいコンソール組織の名前を入力します。
+.. *安全な環境で実行していますか?* を選択します。
+.. *このアカウントで制限モードを有効にする*を選択します。
++
+アカウントの作成後はこの設定を変更できないことに注意してください。制限モードを後から有効にしたり無効にしたりすることはできません。
+
++
+コンソール エージェントを政府リージョンに展開した場合、チェック ボックスは既に有効になっており、変更できません。これは、制限モードが政府地域でサポートされている唯一のモードであるためです。
+
+.. *始めましょう*を選択します。
+
+
+
+
+.結果
+コンソール エージェントがインストールされ、コンソール組織に設定されました。すべてのユーザーは、コンソール エージェント インスタンスの IP アドレスを使用してコンソールにアクセスする必要があります。
+
+.次の手順
+以前に設定した権限をコンソールに提供します。
+
+
+
+[[step-7-provide-permissions-to-the-console-agent]]
+== ステップ7：Consoleエージェントに権限を付与する
+
+Consoleエージェントを手動でインストールした場合は、以前に設定した権限を付与する必要があります。
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["クラウド権限の準備方法を学ぶ"] 。
+
+[role="tabbed-block"]
+====
+.AWS IAM ロール
+--
+以前に作成した IAM ロールを、コンソールエージェントをインストールした EC2 インスタンスにアタッチします。
+
+これらの手順は、AWS にコンソールエージェントを手動でインストールした場合にのみ適用されます。  AWS Marketplace のデプロイメントでは、コンソールエージェントインスタンスは、必要な権限を含む IAM ロールにすでに関連付けられています。
+
+.手順
+. Amazon EC2 コンソールに移動します。
+. *インスタンス*を選択します。
+. コンソール エージェント インスタンスを選択します。
+. *アクション > セキュリティ > IAM ロールの変更*を選択します。
+. IAM ロールを選択し、*IAM ロールの更新*を選択します。
+
+
+--
+.AWS アクセスキー
+--
+必要な権限を持つ IAM ユーザーの AWS アクセス キーをNetApp Consoleに提供します。
+
+.手順
+. *管理 > 資格情報*を選択します。
+. *組織の資格情報*を選択します。
+. *資格情報の追加*を選択し、ウィザードの手順に従います。
++
+.. *資格情報の場所*: *Amazon Web Services > エージェント*を選択します。
+.. *資格情報の定義*: AWS アクセスキーとシークレットキーを入力します。
+.. *マーケットプレイス サブスクリプション*: 今すぐサブスクライブするか、既存のサブスクリプションを選択して、マーケットプレイス サブスクリプションをこれらの資格情報に関連付けます。
+.. *確認*: 新しい資格情報の詳細を確認し、[*追加*] を選択します。
+
+
+
+
+--
+.Azure ロール
+--
+Azure ポータルに移動し、1 つ以上のサブスクリプションのコンソール エージェント仮想マシンに Azure カスタム ロールを割り当てます。
+
+.手順
+. Azure ポータルから *サブスクリプション* サービスを開き、サブスクリプションを選択します。
++
+*サブスクリプション* サービスからロールを割り当てることが重要です。これは、サブスクリプション レベルでのロール割り当ての範囲を指定するためです。 _scope_ は、アクセスが適用されるリソースのセットを定義します。別のレベル (たとえば、仮想マシン レベル) でスコープを指定すると、 NetApp Console内からアクションを完了する機能に影響します。
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure ドキュメント: Azure RBAC のスコープを理解する"^]
+
+. *アクセス制御 (IAM)* > *追加* > *ロール割り当ての追加* を選択します。
+. *役割*タブで、*コンソールオペレーター*役割を選択し、*次へ*を選択します。
++
+
+NOTE: コンソール オペレーターは、ポリシーで提供されるデフォルト名です。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
+
+. *メンバー*タブで、次の手順を実行します。
++
+.. *マネージド ID* へのアクセスを割り当てます。
+.. *メンバーの選択*を選択し、コンソール エージェント仮想マシンが作成されたサブスクリプションを選択し、*マネージド ID*の下で*仮想マシン*を選択して、コンソール エージェント仮想マシンを選択します。
+.. *選択*を選択します。
+.. *次へ*を選択します。
+.. *レビュー + 割り当て*を選択します。
+.. 追加の Azure サブスクリプションのリソースを管理する場合は、そのサブスクリプションに切り替えて、これらの手順を繰り返します。
+
+
+
+
+--
+.Azure サービスプリンシパル
+--
+以前に設定したAzureサービスプリンシパルのクレデンシャルをNetApp Consoleに入力します。
+
+.手順
+. *管理 > 資格情報*を選択します。
+. *資格情報の追加*を選択し、ウィザードの手順に従います。
++
+.. *資格情報の場所*: *Microsoft Azure > エージェント* を選択します。
+.. *資格情報の定義*: 必要な権限を付与する Microsoft Entra サービス プリンシパルに関する情報を入力します。
++
+*** アプリケーション（クライアント）ID
+*** ディレクトリ（テナント）ID
+*** クライアントシークレット
+
+
+.. *マーケットプレイス サブスクリプション*: 今すぐサブスクライブするか、既存のサブスクリプションを選択して、マーケットプレイス サブスクリプションをこれらの資格情報に関連付けます。
+.. *確認*: 新しい資格情報の詳細を確認し、[*追加*] を選択します。
+
+
+
+
+.結果
+NetApp Consoleに、ユーザーに代わってAzureで操作を実行するために必要な権限が付与されました。
+
+--
+.Google Cloud サービス アカウント
+--
+サービス アカウントをコンソール エージェント VM に関連付けます。
+
+.手順
+. Google Cloud ポータルに移動し、サービス アカウントをコンソール エージェント VM インスタンスに割り当てます。
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud ドキュメント: インスタンスのサービス アカウントとアクセス スコープの変更"^]
+
+. 他のプロジェクトのリソースを管理する場合は、コンソール エージェント ロールを持つサービス アカウントをそのプロジェクトに追加してアクセスを許可します。プロジェクトごとにこの手順を繰り返す必要があります。
+
+
+--
+====

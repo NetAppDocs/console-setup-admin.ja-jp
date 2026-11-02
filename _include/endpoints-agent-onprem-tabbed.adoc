@@ -10,7 +10,7 @@
 
 [cols="2a,1a"]
 |===
-| エンドポイント | 目的 <stdin>未解決のディレクティブ - include::endpoints-agent.adoc[tag=nss-endpoints] <stdin>未解決のディレクティブ - include::endpoints-agent.adoc[tag=saas-endpoints] <stdin>未解決のディレクティブ - include::endpoints-agent.adoc[tag=upgrade-endpoints] 
+| エンドポイント | 目的 未解決のディレクティブ <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] 未解決のディレクティブ <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] 未解決のディレクティブ <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints-saas] 
 |===
 --
 .AWS リソースの追加エンドポイント

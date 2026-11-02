@@ -1,0 +1,330 @@
+---
+sidebar: sidebar 
+permalink: task-install-restricted-mode-azure.html 
+keywords: restricted mode, Azure, Azure Government, Azure Marketplace, Console agent 
+summary: MarketplaceからAzureに制限付きモードでConsoleエージェントを展開するか、AWS、Azure、またはGoogle Cloudホストの手動インストールのトピックを参照してください。 
+---
+= Azureの制限モードでNetApp Consoleエージェントを展開する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+制限されたアウトバウンド接続でNetApp Consoleを使用できるように、コンソール エージェントを制限モードで展開します。開始するには、コンソール エージェントをインストールし、コンソール エージェントで実行されているユーザー インターフェイスにアクセスしてコンソールをセットアップし、以前に設定したクラウド権限を提供します。
+
+
+
+[[step-1-prepare-cloud-permissions]]
+== ステップ1：クラウド権限を準備する
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["クラウド権限の準備方法を学ぶ"] 。
+
+
+
+[[step-2-prepare-network-access]]
+== ステップ2：ネットワーク アクセスの準備
+
+ConsoleエージェントがAzureリソースを管理し、NetApp Consoleサービスにアクセスできるように、次の送信エンドポイントを許可します。
+
+
+
+[[azure-endpoints]]
+=== Azureエンドポイント
+
+ご利用のAzureリージョンに該当するエンドポイントを許可してください：パブリック、政府機関、または中国。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
+
+ a| 
+Azure パブリック リージョン内のリソースを管理します。
+
+
+
+ a| 
+* \https://management.usgovcloudapi.net
+* \https://login.microsoftonline.us
+* \https://*.blob.core.usgovcloudapi.net
+* \https://core.usgovcloudapi.net
+
+ a| 
+Azure Government リージョン内のリソースを管理します。
+
+
+
+ a| 
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
+ a| 
+Azure China リージョンのリソースを管理します。
+
+|===
+
+
+[[netapp-console-endpoints]]
+=== NetApp Consoleエンドポイント
+
+NetAppサポート、Console機能、およびConsoleエージェントの展開とアップグレードのための共有エンドポイントを許可します。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+* \https://mysupport.netapp.com
+
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
+* \https://signin.b2c.netapp.com
+
+ a| 
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
+
+
+
+ a| 
+* \https://support.netapp.com
+
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
+
+
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+NetApp Console内で機能とサービスを提供します。
+
+
+
+ a| 
+政府機関以外の地域では、以下のエンドポイントを使用してください：
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+政府機関の管轄区域の場合は、代わりに以下のエンドポイントを使用してください：
+
+* \https://occmclientinfragov.azurecr.us
+
+ a| 
+Consoleエージェントの展開とアップグレード用のイメージを取得するため。
+
+|===
+ブラウザアクセスおよびその他のネットワーク要件については、link:task-prepare-restricted-mode.html#step-5-prepare-network-access["制限モードのネットワーク アクセスを準備する"]を参照してください。
+
+
+
+[[step-3-deploy-the-netapp-console-in-restricted-mode-in-azure]]
+== ステップ3：AzureでNetApp Consoleを制限モードで展開する
+
+Consoleエージェントの展開方法は、Azure Marketplaceを使用するか、Azure環境のLinuxホストに手動でインストールするかによって異なります。
+
+
+
+[[install-netapp-console-restricted-mode-from-the-azure-marketplace]]
+=== Azure Marketplace から NetApp Console 制限モードをインストールする
+
+.開始する前に
+次のものが必要です:
+
+* ネットワーク要件を満たす VNet とサブネット。
++
+link:task-prepare-restricted-mode.html#step-5-prepare-network-access["ネットワーク要件について学ぶ"]
+
+* コンソール エージェントに必要なアクセス許可を含む Azure カスタム ロール。
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Azure の権限を設定する方法を学ぶ"]
+
+
+
+.手順
+. Azure Marketplace のNetApp Consoleエージェント VM ページに移動します。
++
+** https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["商用リージョン向けの Azure Marketplace ページ"^]
+** https://portal.azure.us/#create/netapp.netapp-oncommand-cloud-manageroccm-byol["Azure Government リージョンの Azure Marketplace ページ"^]
+
+
+. *今すぐ入手*を選択し、*続行*を選択します。
+. Azure ポータルから [*作成*] を選択し、手順に従って仮想マシンを構成します。
++
+VM を構成する際には、次の点に注意してください。
+
++
+** *VM サイズ*: CPU と RAM の要件を満たす VM サイズを選択します。  Standard_D8s_v3 をお勧めします。
+** *ディスク*: コンソール エージェントは、HDD ディスクまたは SSD ディスクのいずれでも最適に動作します。
+** *パブリック IP*: コンソール エージェント VM でパブリック IP アドレスを使用するには、Basic SKU を選択します。
++
+image:screenshot-azure-sku.png["SKU フィールドで Basic を選択できる、Azure で新しい IP アドレスを作成するスクリーンショット。"]
+
+
+
++
+代わりに標準 SKU IP アドレスを使用する場合、コンソールはパブリック IP ではなく、コンソール エージェントのプライベート IP アドレスを使用します。コンソールにアクセスするために使用するマシンがプライベート IP アドレスに到達できない場合、コンソールは機能しません。
+
++
++ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure ドキュメント: パブリック IP SKU"^]
+
++
+** *ネットワーク セキュリティ グループ*: コンソール エージェントには、SSH、HTTP、および HTTPS を使用した受信接続が必要です。
++
+link:reference-ports-azure.html["Azure のセキュリティ グループ ルールを表示する"] 。
+
+** *ID*: *管理* の下で、*システム割り当てマネージド ID を有効にする* を選択します。
++
+マネージド ID を使用すると、コンソール エージェント VM は資格情報なしで Microsoft Entra ID に対して自身を識別できます。 https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Azure リソースのマネージド ID の詳細"^] 。
+
+
+
+. *確認 + 作成* ページで選択内容を確認し、*作成* を選択してデプロイを開始します。
+
+
+.結果
+Azure は指定された設定で仮想マシンをデプロイします。仮想マシンとコンソール エージェント ソフトウェアは約 5 分以内に実行されるはずです。
+
+.次の手順
+NetApp Consoleをセットアップします。
+
+
+
+[[manually-install-netapp-console-restricted-mode-in-azure]]
+=== AzureにNetApp Consoleの制限モードを手動でインストールする
+
+手動インストール手順については、link:task-install-restricted-mode-manual.html["制限モードでConsoleエージェントを手動でインストールする"]を参照してください。
+
+
+
+[[step-4-set-up-netapp-console]]
+== ステップ4：NetApp Consoleのセットアップ
+
+コンソールに初めてアクセスすると、コンソール エージェントの組織を選択するように求められ、制限モードを有効にする必要があります。
+
+.開始する前に
+コンソール エージェントを設定するユーザーは、コンソール組織に属していないログインを使用してコンソールにログインする必要があります。
+
+ログインが別の組織に関連付けられている場合は、新しいログインでサインアップする必要があります。そうしないと、セットアップ画面に制限モードを有効にするオプションが表示されません。
+
+.手順
+. コンソール エージェント インスタンスに接続しているホストから Web ブラウザを開き、インストールしたコンソール エージェントの次の URL を入力します。
+. NetApp Consoleにサインアップまたはログインします。
+. ログインしたら、コンソールを設定します。
++
+.. コンソール エージェントの名前を入力します。
+.. 新しいコンソール組織の名前を入力します。
+.. *安全な環境で実行していますか?* を選択します。
+.. *このアカウントで制限モードを有効にする*を選択します。
++
+アカウントの作成後はこの設定を変更できないことに注意してください。制限モードを後から有効にしたり無効にしたりすることはできません。
+
++
+コンソール エージェントを政府リージョンに展開した場合、チェック ボックスは既に有効になっており、変更できません。これは、制限モードが政府地域でサポートされている唯一のモードであるためです。
+
+.. *始めましょう*を選択します。
+
+
+
+
+.結果
+コンソール エージェントがインストールされ、コンソール組織に設定されました。すべてのユーザーは、コンソール エージェント インスタンスの IP アドレスを使用してコンソールにアクセスする必要があります。
+
+.次の手順
+以前に設定した権限をコンソールに提供します。
+
+
+
+[[step-5-provide-permissions-to-the-console-agent]]
+== ステップ5: コンソールエージェントに権限を付与する
+
+コンソール エージェントを Azure Marketplace から、または手動でインストールした場合は、以前に設定したアクセス許可を付与する必要があります。
+
+Azureロールを割り当てるか、Azureサービスプリンシパルの資格情報を提供することで、Consoleエージェントに権限を付与できます。
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["クラウド権限の準備方法を学ぶ"] 。
+
+[role="tabbed-block"]
+====
+.Azure ロール
+--
+Azure ポータルに移動し、1 つ以上のサブスクリプションのコンソール エージェント仮想マシンに Azure カスタム ロールを割り当てます。
+
+.手順
+. Azure ポータルから *サブスクリプション* サービスを開き、サブスクリプションを選択します。
++
+*サブスクリプション* サービスからロールを割り当てることが重要です。これは、サブスクリプション レベルでのロール割り当ての範囲を指定するためです。 _scope_ は、アクセスが適用されるリソースのセットを定義します。別のレベル (たとえば、仮想マシン レベル) でスコープを指定すると、 NetApp Console内からアクションを完了する機能に影響します。
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure ドキュメント: Azure RBAC のスコープを理解する"^]
+
+. *アクセス制御 (IAM)* > *追加* > *ロール割り当ての追加* を選択します。
+. *役割*タブで、*コンソールオペレーター*役割を選択し、*次へ*を選択します。
++
+
+NOTE: コンソール オペレーターは、ポリシーで提供されるデフォルト名です。ロールに別の名前を選択した場合は、代わりにその名前を選択します。
+
+. *メンバー*タブで、次の手順を実行します。
++
+.. *マネージド ID* へのアクセスを割り当てます。
+.. *メンバーの選択*を選択し、コンソール エージェント仮想マシンが作成されたサブスクリプションを選択し、*マネージド ID*の下で*仮想マシン*を選択して、コンソール エージェント仮想マシンを選択します。
+.. *選択*を選択します。
+.. *次へ*を選択します。
+.. *レビュー + 割り当て*を選択します。
+.. 追加の Azure サブスクリプションのリソースを管理する場合は、そのサブスクリプションに切り替えて、これらの手順を繰り返します。
+
+
+
+
+--
+.Azure サービスプリンシパル
+--
+以前に設定したAzureサービスプリンシパルのクレデンシャルをNetApp Consoleに入力します。
+
+.手順
+. *管理 > 資格情報*を選択します。
+. *資格情報の追加*を選択し、ウィザードの手順に従います。
++
+.. *資格情報の場所*: *Microsoft Azure > エージェント* を選択します。
+.. *資格情報の定義*: 必要な権限を付与する Microsoft Entra サービス プリンシパルに関する情報を入力します。
++
+*** アプリケーション（クライアント）ID
+*** ディレクトリ（テナント）ID
+*** クライアントシークレット
+
+
+.. *マーケットプレイス サブスクリプション*: 今すぐサブスクライブするか、既存のサブスクリプションを選択して、マーケットプレイス サブスクリプションをこれらの資格情報に関連付けます。
+.. *確認*: 新しい資格情報の詳細を確認し、[*追加*] を選択します。
+
+
+
+
+.結果
+NetApp Consoleに、ユーザーに代わってAzureで操作を実行するために必要な権限が付与されました。
+
+--
+====

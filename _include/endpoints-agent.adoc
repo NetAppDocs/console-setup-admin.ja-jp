@@ -20,38 +20,38 @@
 * シンプルストレージサービス（S3）
 
 
-| AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細についてはAWSドキュメントを参照してください"^]
+a| AWSリソースを管理する。エンドポイントは、AWSリージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細についてはAWSドキュメントを参照してください"^]
 
 | Amazon FSx for NetApp ONTAP：
 
 * api.workloads.netapp.com
 
 
-| Webベースのコンソールはこのエンドポイントに接続し、Workload Factory APIと連携して、FSx for ONTAPベースのワークロードを管理および操作します。
+a| Webベースのコンソールは、このエンドポイントに接続してWorkload Factory APIと連携し、FSx for ONTAPベースのワークロードを管理および運用します。
 
-| \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
+a| * \https://management.azure.com * \https://login.microsoftonline.com * \https://blob.core.windows.net * \https://core.windows.net
 
-| Azure パブリック リージョン内のリソースを管理します。
+a| Azure パブリックリージョン内のリソースを管理する。
 
-| \https://management.azure.microsoft.scloud \https://login.microsoftonline.microsoft.scloud \https://blob.core.microsoft.scloud \https://core.microsoft.scloud
+a| * \https://management.azure.microsoft.scloud * \https://login.microsoftonline.microsoft.scloud * \https://blob.core.microsoft.scloud * \https://core.microsoft.scloud
 
-| Azure IL6 リージョン内のリソースを管理します。
+a| Azure IL6 リージョン内のリソースを管理します。
 
-| \https://management.usgovcloudapi.net \https://login.microsoftonline.us \https://blob.core.usgovcloudapi.net \https://core.usgovcloudapi.net
+a| * \https://management.usgovcloudapi.net * \https://login.microsoftonline.us * \https://*.blob.core.usgovcloudapi.net * \https://core.usgovcloudapi.net
 
-| Azure Government リージョン内のリソースを管理します。
+a| Azure Government リージョン内のリソースを管理する。
 
-| \https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+a| * \https://management.chinacloudapi.cn * \https://login.chinacloudapi.cn * \https://blob.core.chinacloudapi.cn * \https://core.chinacloudapi.cn
 
-| Azure China リージョンのリソースを管理します。
+a| Azure 中国リージョンのリソースを管理する。
 
-| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://config.googleapis.com/v1/projects
+a| * \https://www.googleapis.com/compute/v1/ * \https://compute.googleapis.com/compute/v1 * \https://cloudresourcemanager.googleapis.com/v1/projects * \https://www.googleapis.com/compute/beta * \https://storage.googleapis.com/storage/v1 * \https://www.googleapis.com/storage/v1 * \https://iam.googleapis.com/v1 * \https://cloudkms.googleapis.com/v1 * \https://config.googleapis.com/v1/projects
 
-| Google Cloud 内のリソースを管理します。
+a| Google Cloud のリソースを管理する。
 
-| https://mysupport.netapp.com | ライセンス情報を取得し、AutoSupport メッセージを NetApp サポートに送信するため。| https://signin.b2c.netapp.com | NetApp Support Site（NSS）クレデンシャルを更新する場合、または新しい NSS クレデンシャルを NetApp Console に追加する場合。| https://support.netapp.com | ライセンス情報を取得し、AutoSupport メッセージを NetApp サポートに送信するため、および Cloud Volumes ONTAP のソフトウェア更新を受信するため。
+a| * \https://mysupport.netapp.com a| ライセンス情報を取得し、AutoSupportメッセージをNetApp Supportに送信するため。 a| * \https://signin.b2c.netapp.com a| NetApp Support Site（NSS）のクレデンシャルを更新するか、新しいNSSクレデンシャルをNetApp Consoleに追加するため。 a| * \https://support.netapp.com a| ライセンス情報を取得し、AutoSupportメッセージをNetApp Supportに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetApp Console 内で機能とサービスを提供するため。
+a| * \https://api.bluexp.netapp.com * \https://netapp-cloud-account.auth0.com * \https://netapp-cloud-account.us.auth0.com * \https://console.netapp.com * \https://components.console.bluexp.netapp.com * \https://cdn.auth0.com a| NetApp Console内で機能とサービスを提供するため。
 
 [cols="2*"]
 |===
@@ -59,28 +59,38 @@
 
 
  a| 
-\https://support.netapp.com \https://mysupport.netapp.com
+* \https://support.netapp.com
+* \https://mysupport.netapp.com
+
  a| 
 ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
 
 
 
  a| 
-\https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com
+* \https://*.api.bluexp.netapp.com
+* \https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \https://cloudmanager.cloud.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+
 | NetApp Console内で機能とサービスを提供します。 
 
 
  a| 
 次の 2 つのエンドポイント セットから選択します。
 
-* オプション1（推奨）
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+オプション1（推奨）
 
-* オプション2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
 
+
+オプション2
+
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
 
  a| 
 コンソール エージェントのアップグレード用のイメージを取得します。
@@ -93,9 +103,20 @@ NetApp、ランサムウェア耐性またはバックアップとリカバリ�
 
 
 |===
-a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （制限モード展開に必要） a| Console エージェントのアップグレード用のイメージを取得します。
+a| * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io
 
-a| \https://occmclientinfragov.azurecr.us a| Console エージェントのアップグレード用のイメージを取得する。
+a| Consoleエージェントの展開およびアップグレード用のイメージを取得するため。
+
+a| 政府機関以外の地域では、以下のエンドポイントを使用してください：
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+政府機関の管轄区域の場合は、代わりに以下のエンドポイントを使用してください：
+
+* \https://occmclientinfragov.azurecr.us a| Consoleエージェントの展開およびアップグレード用のイメージを取得するため。
+
 
 ^1^ NetApp、より安全なオプション 1 のエンドポイントをファイアウォールで許可し、オプション 2 のエンドポイントを禁止することを推奨しています。これらのエンドポイントについては、次の点に注意してください。
 
@@ -148,9 +169,17 @@ a| \https://occmclientinfragov.azurecr.us a| Console エージェントのアッ
 * \https://cloudmanagerinfraprod.azurecr.io
 
  a| 
+標準モードおよび制限モードの非政府地域では、以下のエンドポイントを使用してください：
+
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io
-* \https://occmclientinfragov.azurecr.us.io （制限モード環境の場合）
 
-| コンソール エージェントのアップグレード用のイメージを取得します。 
+
+制限モードのGovernmentリージョンの場合は、代わりに次のエンドポイントを使用してください：
+
+* \https://occmclientinfragov.azurecr.us
+
+ a| 
+Consoleエージェントの展開とアップグレード用のイメージを取得するため。
+
 |===

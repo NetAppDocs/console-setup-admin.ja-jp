@@ -4,7 +4,7 @@ permalink: task-prepare-restricted-mode.html
 keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
 summary: NetApp Consoleを制限モードで展開する前に、環境を準備します。ホストの要件を確認し、ネットワークを準備し、権限を設定するなどする必要があります。 
 ---
-= NetApp Consoleの制限モードでのデプロイを準備する
+= 制限モードでのNetApp Consoleの展開準備
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -31,24 +31,29 @@ link:concept-modes.html["制限モードの仕組みを学ぶ"] 。
 
 
 
-[[step-2-review-installation-options]]
-== ステップ2: インストールオプションを確認する
+[[step-2-choose-a-restricted-mode-installation-method]]
+== ステップ2：制限付きモードのインストール方法を選択する
 
-制限モードでは、コンソール エージェントをクラウドにのみインストールできます。次のインストール オプションが利用可能です。
+制限モードでは、クラウドにConsoleエージェントをインストールし、ローカルにインストールされたエージェントを介してNetApp Consoleにアクセスできます。クラウドマーケットプレイス（AWSまたはAzureのみ）経由でインストールするか、AWS、Azure、またはGoogle Cloudで実行されている独自のLinuxホストに手動でインストールできます。
 
 * AWSマーケットプレイスから
 * Azure Marketplaceから
 * AWS、Azure、または Google Cloud で実行されている独自の Linux ホストにコンソール エージェントを手動でインストールする
++
+
+NOTE: Google Cloudにデプロイする場合は、専用のLinuxホストにConsoleエージェントを手動でインストールする必要があります。
 
 
 
 
+
+[[step-3-review-console-agent-host-requirements]]
 [[step-3-review-host-requirements]]
-== ステップ3: ホストの要件を確認する
-
-コンソール エージェントを実行するには、ホストが特定の OS、RAM、およびポートの要件を満たしている必要があります。
+== ステップ3：Consoleエージェントホストの要件を確認する
 
 AWS または Azure Marketplace からコンソールエージェントをデプロイする場合、イメージには必要な OS およびソフトウェア コンポーネントが含まれます。  CPU と RAM の要件を満たすインスタンス タイプを選択するだけです。
+
+ご自身のLinuxホストに手動でインストールする場合は、ホストが必要なOS、RAM、およびポートの要件を満たしていることを確認してください。
 
 専用ホスト:: コンソール エージェントには専用のホストが必要です。次のサイズ要件を満たすアーキテクチャであれば、どれでもサポートされます。
 +
@@ -165,203 +170,22 @@ Docker エンジン 23.0.6 から 28.0.0。
 |===
 
 
-[[step-4-install-podman-or-docker-engine]]
+[[step-4-prepare-podman-or-docker-engine-for-manual-installation]]
 [[podman-configuration]]
-== ステップ4: PodmanまたはDocker Engineをインストールする
+== ステップ4：PodmanまたはDocker Engineを手動インストール用に準備する
 
-コンソール エージェントを手動でインストールするには、Podman または Docker Engine をインストールしてホストを準備します。
-
-オペレーティング システムに応じて、エージェントをインストールする前に Podman または Docker Engine のいずれかが必要になります。
-
-* Red Hat Enterprise Linux 8 および 9 には Podman が必要です。
-+
-<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
-
-* Ubuntu には Docker Engine が必要です。
-+
-<<podman-versions,サポートされている Docker エンジンのバージョンを表示する>> 。
+手動インストールの場合は、link:task-install-restricted-mode-manual.html#podman-configuration["手動インストールに関するトピック"]の手順に従ってPodmanまたはDocker Engineをインストールして設定します。
 
 
 
-.手順
-[role="tabbed-block"]
-====
-.ポッドマン
---
-Podman をインストールして設定するには、次の手順に従います。
-
-* podman.socket サービスを有効にして起動します
-* Python3をインストールする
-* podman-composeパッケージをインストールします（Red Hatのバージョンによって異なります）
-* podman-composeをPATH環境変数に追加する
-* Red Hat Enterprise Linux を使用している場合は、Podman バージョンが CNI ではなく Netavark Aardvark DNS を使用していることを確認してください。
-
-
-
-NOTE: DNS ポートの競合を避けるために、エージェントをインストールした後、aardvark-dns ポート (デフォルト: 53) を調整します。指示に従ってポートを構成します。
-
-.手順
-. ホストに podman-docker パッケージがインストールされている場合は削除します。
-+
-[source, cli]
-----
-dnf remove podman-docker
-rm /var/run/docker.sock
-----
-. Podman をインストールします。
-+
-Podman は、公式の Red Hat Enterprise Linux リポジトリから入手できます。
-
-+
-.. Red Hat Enterprise Linux 9.6 の場合:
-+
-[source, cli]
-----
-sudo dnf install podman-5:<version>
-----
-+
-<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
-
-.. Red Hat Enterprise Linux 9.1 から 9.4 の場合:
-+
-[source, cli]
-----
-sudo dnf install podman-4:<version>
-----
-+
-<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
-
-.. Red Hat Enterprise Linux 8 の場合:
-+
-[source, cli]
-----
-sudo dnf install podman-4:<version>
-----
-+
-<version> は、インストールする Podman のサポートされているバージョンです。<<podman-versions,サポートされているPodmanのバージョンを表示する>> 。
-
-
-
-. podman.socket サービスを有効にして起動します。
-+
-[source, cli]
-----
-sudo systemctl enable --now podman.socket
-----
-. python3 をインストールします。
-+
-[source, cli]
-----
-sudo dnf install python3
-----
-. システムにまだインストールされていない場合は、EPEL リポジトリ パッケージをインストールします。
-+
-podman-compose は、Extra Packages for Enterprise Linux (EPEL) リポジトリから入手できるため、この手順は必須です。
-
-. Red Hat Enterprise 9 を使用している場合:
-+
-.. EPEL リポジトリ パッケージをインストールします。
-
-
-+
-[source, cli]
-----
-sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
-----
-+
-.. podman-compose パッケージ 1.5.0 をインストールします。
-+
-[source, cli]
-----
-sudo dnf install podman-compose-1.5.0
-----
-
-
-. Red Hat Enterprise Linux 8 を使用している場合:
-+
-.. EPEL リポジトリ パッケージをインストールします。
-+
-[source, cli]
-----
-sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-----
-.. podman-compose パッケージ 1.0.6 をインストールします。
-+
-[source, cli]
-----
-sudo dnf install podman-compose-1.0.6
-----
-+
-
-NOTE: 使用して `dnf install`コマンドは、PATH 環境変数に podman-compose を追加するための要件を満たしています。インストールコマンドは、すでにインストールされているpodman-composeを/usr/binに追加します。 `secure_path`ホスト上のオプション。
-
-.. Red Hat Enterprise Linux 8 を使用している場合は、Podman バージョンが CNI ではなく Aardvark DNS を備えた NetAvark を使用していることを確認します。
-+
-... 次のコマンドを実行して、networkBackend が CNI に設定されているかどうかを確認します。
-+
-[source, cli]
-----
-podman info | grep networkBackend
-----
-... networkBackendが `CNI`、それを変更する必要があります `netavark`。
-... インストール `netavark`そして `aardvark-dns`次のコマンドを使用します。
-+
-[source, cli]
-----
-dnf install aardvark-dns netavark
-----
-... 開く `/etc/containers/containers.conf`ファイルを編集し、network_backend オプションを変更して、「cni」の代わりに「netavark」を使用します。
-+
-もし `/etc/containers/containers.conf`存在しない場合は、設定を変更してください `/usr/share/containers/containers.conf`。
-
-... podman を再起動します。
-+
-[source, cli]
-----
-systemctl restart podman
-----
-... 次のコマンドを使用して、networkBackend が「netavark」に変更されていることを確認します。
-+
-[source, cli]
-----
-podman info | grep networkBackend
-----
-
-
-
-
-. このエージェントを Cloud Volumes ONTAP システムに関連付ける場合は、パフォーマンスを向上させるために、エージェントに関連付けられたスレッド数を増やすことを検討してください。link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["エージェントのコンテナスレッド制限の増加について"^]。
-
-
---
-.Dockerエンジン
---
-Docker のドキュメントに従って Docker Engine をインストールします。
-
-.手順
-. https://docs.docker.com/engine/install/["Dockerからのインストール手順を見る"^]
-+
-サポートされている Docker エンジン バージョンをインストールするには、手順に従ってください。最新バージョンはコンソールでサポートされていないため、インストールしないでください。
-
-. Docker が有効になっていて実行されていることを確認します。
-+
-[source, cli]
-----
-sudo systemctl enable docker && sudo systemctl start docker
-----
-
-
---
-====
-
-
+[[step-5-prepare-network-access-for-restricted-mode]]
 [[step-5-prepare-network-access]]
-== ステップ5: ネットワークアクセスを準備する
+== ステップ5：制限モード用のネットワーク アクセスを準備する
 
 コンソール エージェントがパブリック クラウド内のリソースを管理できるように、ネットワーク アクセスを設定します。コンソール エージェント用の仮想ネットワークとサブネットがあることに加えて、次の要件が満たされていることを確認する必要があります。
 
 ターゲットネットワークへの接続:: コンソール エージェントがストレージの場所へのネットワーク接続を持っていることを確認します。たとえば、 Cloud Volumes ONTAPをデプロイする予定の VPC または VNet、またはオンプレミスのONTAPクラスターが存在するデータセンターなどです。
-NetApp Consoleへのユーザーアクセスのためのネットワークを準備する:: 制限モードでは、ユーザーはコンソール エージェント VM からコンソールにアクセスします。コンソール エージェントは、データ管理タスクを完了するためにいくつかのエンドポイントに接続します。これらのエンドポイントは、コンソールから特定のアクションを完了するときに、ユーザーのコンピューターから接続されます。
+NetApp Consoleへのユーザーアクセスのためのネットワークを準備する:: 制限モードでは、ユーザーはConsoleエージェントVMに接続されたブラウザからConsoleのローカルインターフェースにアクセスします。ユーザーがConsoleで特定のアクションを完了する際、ブラウザは以下のエンドポイントにアクセスできる必要があります。
 
 
 
@@ -372,22 +196,41 @@ NOTE: バージョン4.0.0より前のコンソールエージェントは、異
 | エンドポイント | 目的 
 
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | NetApp Console内で機能とサービスを提供します。 
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+NetApp Console内で機能とサービスを提供します。
 
 
-| \https://cdn.auth0.com \https://services.cloud.netapp.com | Web ブラウザはこれらのエンドポイントに接続し、 NetApp Consoleを通じて集中的なユーザー認証を行います。 
+
+| \https://services.cloud.netapp.com  a| 
+* Web ブラウザはこれらのエンドポイントに接続し、 NetApp Consoleを通じて集中的なユーザー認証を行います。
+
+
 |===
-日常業務のためのアウトバウンドインターネットアクセス:: コンソール エージェントのネットワークの場所には、送信インターネット アクセスが必要です。  NetApp Consoleの SaaS サービスと、それぞれのパブリック クラウド環境内のエンドポイントにアクセスできる必要があります。
-+
---
+
+
+[[outbound-internet-access-for-day-to-day-operations]]
+=== 日常業務のためのアウトバウンドインターネットアクセス
+
+クラウド プロバイダのリソースを管理し、NetApp Consoleサービスを使用するには、Consoleエージェントにインターネットへのアウトバウンドアクセスが必要です。お客様の環境および以下の共有Consoleサービス用のエンドポイントを許可してください。
+
+
+
+[[restricted-mode-aws-endpoints]]
+==== AWS環境
+
+これらのAWSサービスエンドポイントが、FSx for ONTAPを含むAWSリソースを管理できるようにします。
+
 [cols="2a,1a"]
 |===
 | エンドポイント | 目的 
-
-
- a| 
-*AWS 環境*
-
 
 
  a| 
@@ -413,88 +256,51 @@ Amazon FSx for NetApp ONTAP：
  a| 
 Webベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
 
+|===
+
+
+[[restricted-mode-azure-endpoints]]
+==== Azure環境
+
+ご利用のAzureリージョンに該当するエンドポイントを許可してください：パブリック、政府機関、または中国。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
 
 
  a| 
-*Azure 環境*
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
 
-
-
- a| 
-\https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
  a| 
 Azure パブリック リージョン内のリソースを管理します。
 
 
 
  a| 
-\https://management.usgovcloudapi.net \https://login.microsoftonline.us \https://blob.core.usgovcloudapi.net \https://core.usgovcloudapi.net
+* \https://management.usgovcloudapi.net
+* \https://login.microsoftonline.us
+* \https://*.blob.core.usgovcloudapi.net
+* \https://core.usgovcloudapi.net
+
  a| 
 Azure Government リージョン内のリソースを管理します。
 
 
 
  a| 
-\https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
  a| 
 Azure China リージョンのリソースを管理します。
 
-
-
- a| 
-*Google Cloud 環境*
-
-
-
- a| 
-\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://config.googleapis.com/v1/projects
- a| 
-Google Cloud 内のリソースを管理します。
-
-
-
- a| 
-* NetApp Consoleエンドポイント*
-
-
-
- a| 
-\https://mysupport.netapp.com
- a| 
-ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。
-
-
-
- a| 
-\https://signin.b2c.netapp.com
- a| 
-NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
-
-
-
- a| 
-\https://support.netapp.com
- a| 
-ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
- a| 
-NetApp Console内で機能とサービスを提供します。
-
-
-
- a| 
-\https://occmclientinfragov.azurecr.us
- a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
-
 |===
---
-
-
 AzureのパブリックIPアドレス:: Azure のコンソール エージェント VM でパブリック IP アドレスを使用する場合は、コンソールがこのパブリック IP アドレスを使用するように、IP アドレスで Basic SKU を使用する必要があります。
 +
 --
@@ -507,6 +313,97 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 
 
+
+
+[[restricted-mode-google-cloud-endpoints]]
+==== Google Cloud環境
+
+これらのGoogle Cloud APIエンドポイントに、プロジェクト内のリソースの管理を許可します。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+* \https://www.googleapis.com/compute/v1/
+* \https://compute.googleapis.com/compute/v1
+* \https://cloudresourcemanager.googleapis.com/v1/projects
+* \https://www.googleapis.com/compute/beta
+* \https://storage.googleapis.com/storage/v1
+* \https://www.googleapis.com/storage/v1
+* \https://iam.googleapis.com/v1
+* \https://cloudkms.googleapis.com/v1
+* \https://config.googleapis.com/v1/projects
+
+ a| 
+Google Cloud 内のリソースを管理します。
+
+|===
+
+
+[[restricted-mode-console-endpoints]]
+==== NetApp Consoleエンドポイント
+
+NetAppサポート、Console機能、およびConsoleエージェントの展開とアップグレードのための共有エンドポイントを許可します。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+* \https://mysupport.netapp.com
+
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
+* \https://signin.b2c.netapp.com
+
+ a| 
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
+
+
+
+ a| 
+* \https://support.netapp.com
+
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
+
+
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+NetApp Console内で機能とサービスを提供します。
+
+
+
+ a| 
+政府機関以外の地域では、以下のエンドポイントを使用してください：
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+政府機関の管轄区域の場合は、代わりに以下のエンドポイントを使用してください：
+
+* \https://occmclientinfragov.azurecr.us
+
+ a| 
+Consoleエージェントの展開とアップグレード用のイメージを取得するため。
+
+|===
 プロキシ サーバ:: NetApp は明示的プロキシ構成と透過的プロキシ構成の両方をサポートしています。透過プロキシを使用している場合は、プロキシ サーバーの証明書のみを提供する必要があります。明示的なプロキシを使用している場合は、IP アドレスと資格情報も必要になります。
 +
 --
@@ -533,17 +430,13 @@ Cloud Volumes ONTAPシステムにAutoSupportメッセージを送信するた�
 
 
 NTP を有効にする:: NetApp Data Classificationを使用して企業データソースをスキャンする予定がある場合は、コンソールエージェントとNetApp Data Classificationシステムの両方でネットワークタイムプロトコル（NTP）サービスを有効にして、システム間で時刻が同期されるようにする必要があります https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["NetApp Data Classificationの詳細については、こちらをご覧ください"^]。
-+
---
-クラウド プロバイダーのマーケットプレイスからコンソール エージェントを作成する予定の場合は、コンソール エージェントを作成した後にこのネットワーク要件を実装します。
-
---
 
 
 
 
+[[step-6-prepare-cloud-provider-permissions]]
 [[step-6-prepare-cloud-permissions]]
-== ステップ6: クラウド権限を準備する
+== ステップ6：クラウド プロバイダ権限の準備
 
 コンソール エージェントには、仮想ネットワークにCloud Volumes ONTAPを展開し、 NetAppデータ サービスを使用するために、クラウド プロバイダーからの権限が必要です。クラウド プロバイダーで権限を設定し、それらの権限をコンソール エージェントに関連付ける必要があります。
 
@@ -848,25 +741,3 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 --
 ====
-
-
-[[step-7-enable-google-cloud-apis]]
-== ステップ7: Google Cloud APIを有効にする
-
-Google Cloud にCloud Volumes ONTAPをデプロイするには、いくつかの API が必要です。
-
-.手順
-. https://cloud.google.com/apis/docs/getting-started#enabling_apis["プロジェクトで次の Google Cloud API を有効にします"^]
-+
-** Cloud Build API（Infrastructure Managerを使用したプライベートモードCloud Volumes ONTAPデプロイメントに必要）
-** クラウド デプロイメント マネージャー V2 API
-** クラウド インフラストラクチャ マネージャー API
-** クラウドロギングAPI
-** クラウド リソース マネージャー API
-** コンピューティングエンジン API
-** アイデンティティとアクセス管理 (IAM) API
-** Cloud Key Management Service（KMS）API（NetApp Backup and Recoveryを顧客管理暗号化キー（CMEK）で使用する予定がある場合のみ必要）
-** Cloud Quotas API（Infrastructure Managerを使用したCloud Volumes ONTAPデプロイメントに必要）
-
-
-

@@ -62,51 +62,70 @@ VNetとサブネット:: コンソール エージェントを作成するとき
 
 
  a| 
-\https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
+
  a| 
 Azure パブリック リージョン内のリソースを管理します。
 
 
 
  a| 
-\https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
  a| 
 Azure China リージョンのリソースを管理します。
 
 
 
  a| 
-\https://mysupport.netapp.com
+* \https://mysupport.netapp.com
+
  a| 
 ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。
 
 
 
  a| 
-\https://signin.b2c.netapp.com
+* \https://signin.b2c.netapp.com
+
  a| 
 NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
 
 
 
  a| 
-\https://support.netapp.com
+* \https://support.netapp.com
+
  a| 
 ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
 
 
 
  a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
  a| 
 NetApp Console内で機能とサービスを提供します。
 
 
 
  a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io \https://occmclientinfragov.azurecr.us （制限付きモードでの展開に必要）
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
  a| 
-コンソール エージェントのアップグレード用のイメージを取得します。
+Consoleエージェントの展開とアップグレード用のイメージを取得するため。
 
 |===
 --

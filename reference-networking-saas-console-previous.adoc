@@ -82,11 +82,19 @@ NetApp、ファイアウォール ルールを更新して、サイズが小さ�
 * \https://cloudmanagerinfraprod.azurecr.io
 
  a| 
+標準モードおよび制限モードの非政府地域では、以下のエンドポイントを使用してください：
+
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io
-* \https://occmclientinfragov.azurecr.us.io （制限モード環境の場合）
 
-| コンソール エージェントのアップグレード用のイメージを取得します。 
+
+制限モードのGovernmentリージョンの場合は、代わりに次のエンドポイントを使用してください：
+
+* \https://occmclientinfragov.azurecr.us
+
+ a| 
+Consoleエージェントの展開とアップグレード用のイメージを取得するため。
+
 |===
 .手順
 . エージェントのバージョンが 4.0.0 以上であることを確認します。link:task-troubleshoot-agent.html#view-the-console-agent-version["エージェントのバージョンを表示します。"]
@@ -119,28 +127,38 @@ systemctl status netapp-service-manager.service
 
 
  a| 
-\https://support.netapp.com \https://mysupport.netapp.com
+* \https://support.netapp.com
+* \https://mysupport.netapp.com
+
  a| 
 ライセンス情報を取得し、 AutoSupportメッセージをNetAppサポートに送信します。
 
 
 
  a| 
-\https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com
+* \https://*.api.bluexp.netapp.com
+* \https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \https://cloudmanager.cloud.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+
 | NetApp Console内で機能とサービスを提供します。 
 
 
  a| 
 次の 2 つのエンドポイント セットから選択します。
 
-* オプション1（推奨）
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+オプション1（推奨）
 
-* オプション2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
 
+
+オプション2
+
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
 
  a| 
 コンソール エージェントのアップグレード用のイメージを取得します。

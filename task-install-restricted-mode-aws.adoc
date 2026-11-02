@@ -1,0 +1,358 @@
+---
+sidebar: sidebar 
+permalink: task-install-restricted-mode-aws.html 
+keywords: restricted mode, AWS, AWS GovCloud, AWS Marketplace, Console agent, Cloud Volumes ONTAP 
+summary: AWSの商用版または政府機関向けマーケットプレイスから制限付きモードでConsoleエージェントを展開するか、Linuxホストに手動でインストールしてください。 
+---
+= AWSでNetApp Consoleを制限モードで展開する
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+制限されたアウトバウンド接続でNetApp Consoleを使用できるように、コンソール エージェントを制限モードで展開します。開始するには、コンソール エージェントをインストールし、コンソール エージェントで実行されているユーザー インターフェイスにアクセスしてコンソールをセットアップし、以前に設定したクラウド権限を提供します。
+
+ConsoleエージェントをAWS Marketplace（商用版または政府機関向けクラウド版）からインストールするか、Linuxホストに手動でインストールします。
+
+
+
+[[step-1-prepare-network-access]]
+== ステップ1：ネットワーク アクセスの準備
+
+ConsoleエージェントがAWSリソースを管理し、NetApp Consoleサービスにアクセスできるように、次の送信エンドポイントを許可してください。
+
+
+
+[[aws-endpoints]]
+=== AWSエンドポイント
+
+これらのAWSサービスエンドポイントが、FSx for ONTAPを含むAWSリソースを管理できるようにします。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+AWS サービス (amazonaws.com):
+
+* クラウドフォーメーション
+* エラスティックコンピューティングクラウド (EC2)
+* アイデンティティとアクセス管理（IAM）
+* キー管理サービス (KMS)
+* セキュリティトークンサービス（STS）
+* シンプルストレージサービス（S3）
+
+ a| 
+AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。 https://docs.aws.amazon.com/general/latest/gr/rande.html["詳細についてはAWSドキュメントを参照してください"^]
+
+
+
+ a| 
+Amazon FSx for NetApp ONTAP：
+
+* api.workloads.netapp.com
+
+ a| 
+Webベースのコンソールは、このエンドポイントに接続して Workload Factory API と対話し、FSx for ONTAPベースのワークロードを管理および操作します。
+
+|===
+
+
+[[netapp-console-endpoints]]
+=== NetApp Consoleエンドポイント
+
+NetAppサポート、Console機能、およびConsoleエージェントの展開とアップグレードのための共有エンドポイントを許可します。
+
+[cols="2a,1a"]
+|===
+| エンドポイント | 目的 
+
+
+ a| 
+* \https://mysupport.netapp.com
+
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信します。
+
+
+
+ a| 
+* \https://signin.b2c.netapp.com
+
+ a| 
+NetAppサポート サイト (NSS) の資格情報を更新したり、 NetApp Consoleに新しい NSS 資格情報を追加したりします。
+
+
+
+ a| 
+* \https://support.netapp.com
+
+ a| 
+ライセンス情報を取得し、AutoSupportメッセージをNetAppサポートに送信するとともに、Cloud Volumes ONTAPのソフトウェアアップデートを受信するため。
+
+
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+NetApp Console内で機能とサービスを提供します。
+
+
+
+ a| 
+政府機関以外の地域では、以下のエンドポイントを使用してください：
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+政府機関の管轄区域の場合は、代わりに以下のエンドポイントを使用してください：
+
+* \https://occmclientinfragov.azurecr.us
+
+ a| 
+Consoleエージェントの展開とアップグレード用のイメージを取得するため。
+
+|===
+ブラウザアクセスおよびその他のネットワーク要件については、link:task-prepare-restricted-mode.html#step-5-prepare-network-access["制限モードのネットワーク アクセスを準備する"]を参照してください。
+
+
+
+[[step-2-deploy-the-netapp-console-in-restricted-mode-in-aws]]
+== ステップ2：AWSでNetApp Consoleを制限モードで展開する
+
+Consoleエージェントの展開方法は、AWS Commercial Marketplace、AWS Gov Marketplace、またはLinuxホストへの手動インストールのいずれを使用しているかによって異なります。
+
+
+
+[[install-netapp-console-restricted-mode-from-the-aws-commercial-marketplace]]
+=== AWS Commercial Marketplace から NetApp Console 制限モードをインストールする
+
+.開始する前に
+以下のものを用意してください。
+
+* ネットワーク要件を満たす VPC とサブネット。
++
+link:task-prepare-restricted-mode.html#step-5-prepare-network-access["ネットワーク要件について学ぶ"]
+
+* コンソール エージェントに必要な権限を含むポリシーがアタッチされた IAM ロール。
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["AWS権限の設定方法を学ぶ"]
+
+* IAM ユーザーが AWS Marketplace にサブスクライブしたり、サブスクライブ解除したりするための権限。
+* エージェントの CPU および RAM 要件を理解していること。
++
+link:task-prepare-restricted-mode.html#step-3-review-host-requirements["エージェントの要件を確認する"]。
+
+* EC2 インスタンスのキーペア。
+
+
+.手順
+.  https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["AWS Marketplace でのNetApp Consoleエージェントのリスト"^]に移動します。
+. マーケットプレイス ページで、[サブスクリプションを続行] を選択します。
+. ソフトウェアをサブスクライブするには、「*利用規約に同意*」を選択します。
++
+サブスクリプションのプロセスには数分かかる場合があります。
+
+. サブスクリプションプロセスが完了したら、[構成に進む] を選択します。
+. *このソフトウェアを構成する*ページで、正しいリージョンが選択されていることを確認し、*起動を続行*を選択します。
+. *このソフトウェアの起動* ページの *アクションの選択* で、*EC2 経由で起動* を選択し、*起動* を選択します。
++
+EC2 コンソールを使用してインスタンスを起動し、IAM ロールをアタッチします。これは、*Web サイトから起動* アクションでは不可能です。
+
+. プロンプトに従ってインスタンスを構成してデプロイします。
++
+** *名前とタグ*: インスタンスの名前とタグを入力します。
+** *アプリケーションと OS イメージ*: このセクションはスキップします。コンソール エージェント AMI はすでに選択されています。
+** *インスタンス タイプ*: リージョンの可用性に応じて、RAM と CPU の要件を満たすインスタンス タイプを選択します (t3.2xlarge が事前に選択されており、推奨されています)。
+** *キーペア (ログイン)*: インスタンスに安全に接続するために使用するキーペアを選択します。
+** *ネットワーク設定*: 必要に応じてネットワーク設定を編集します。
++
+*** 必要な VPC とサブネットを選択します。
+*** インスタンスにパブリック IP アドレスを割り当てるかどうかを指定します。
+*** コンソール エージェント インスタンスに必要な接続方法 (SSH、HTTP、HTTPS) を有効にするセキュリティ グループ設定を指定します。
++
+link:reference-ports-aws.html["AWS のセキュリティグループルールを表示する"] 。
+
+
+
+** *ストレージの構成*: ルート ボリュームのデフォルトのサイズとディスク タイプを維持します。
++
+ルートボリュームで Amazon EBS 暗号化を有効にする場合は、[*詳細*] を選択し、[*ボリューム 1*] を展開して、[*暗号化*] を選択し、KMS キーを選択します。
+
+** *詳細*: *IAM インスタンス プロファイル* で、コンソール エージェントに必要な権限を含む IAM ロールを選択します。
+** *概要*: 概要を確認し、*インスタンスの起動*を選択します。
+
+
+
+
+.結果
+AWS は指定された設定でソフトウェアを起動します。コンソール エージェントは約 5 分で展開されます。
+
+.次の手順
+NetApp Consoleをセットアップします。
+
+
+
+[[install-netapp-console-restricted-mode-from-the-aws-gov-marketplace]]
+=== AWS Gov MarketplaceからNetApp Console制限モードをインストールする
+
+.開始する前に
+以下のものを用意してください。
+
+* ネットワーク要件を満たす VPC とサブネット。
++
+link:task-prepare-restricted-mode.html#step-5-prepare-network-access["ネットワーク要件について学ぶ"]
+
+* コンソール エージェントに必要な権限を含むポリシーがアタッチされた IAM ロール。
++
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["AWS権限の設定方法を学ぶ"]
+
+* IAM ユーザーが AWS Marketplace にサブスクライブしたり、サブスクライブ解除したりするための権限。
+* EC2 インスタンスのキーペア。
+
+
+.手順
+. AWS Marketplace で提供されているNetApp Consoleエージェントにアクセスします。
++
+.. EC2 サービスを開き、*インスタンスの起動*を選択します。
+.. *AWS Marketplace*を選択します。
+.. NetApp Consoleを検索し、オファリングを選択します。
++
+image:screenshot-gov-cloud-mktp.png["AWS Marketplaceで検索した後のNetApp Consoleの提供を示すスクリーンショット"]
+
+.. *続行*を選択します。
+
+
+. プロンプトに従ってインスタンスをセットアップして起動します。
++
+** *インスタンス タイプを選択*: リージョンの可用性に応じて、サポートされているインスタンス タイプのいずれかを選択します (t3.2xlarge が推奨されます)。
++
+link:task-prepare-restricted-mode.html["インスタンス要件を確認する"] 。
+
+** *インスタンスの詳細の設定*: VPC とサブネットを選択し、手順 1 で作成した IAM ロールを選択し、終了保護を有効にして (推奨)、要件を満たすその他の設定オプションを選択します。
+
+
++
+image:screenshot_aws_iam_role.gif["AWS のインスタンス設定ページのフィールドを示すスクリーンショット。手順 1 で作成した IAM ロールが選択されます。"]
+
++
+** *ストレージの追加*: デフォルトのストレージ オプションをそのままにします。
+** *タグの追加*: 必要に応じて、インスタンスのタグを入力します。
+** *セキュリティ グループの構成*: コンソール エージェント インスタンスに必要な接続方法 (SSH、HTTP、HTTPS) を指定します。
+** *確認*: 選択内容を確認し、*起動*を選択します。
+
+
+
+
+.結果
+AWS は指定された設定でソフトウェアを起動します。コンソール エージェントは約 5 分で展開されます。
+
+.次の手順
+コンソールをセットアップします。
+
+
+
+[[manually-install-the-console-agent-in-aws]]
+=== AWSにConsoleエージェントを手動でインストールする
+
+AWSホストへの手動インストールについては、link:task-install-restricted-mode-manual.html["制限モードでConsoleエージェントを手動でインストールする"]を参照してください。
+
+
+
+[[step-3-set-up-netapp-console]]
+== ステップ3：NetApp Consoleのセットアップ
+
+コンソールに初めてアクセスすると、コンソール エージェントの組織を選択するように求められ、制限モードを有効にする必要があります。
+
+.開始する前に
+コンソール エージェントを設定するユーザーは、コンソール組織に属していないログインを使用してコンソールにログインする必要があります。
+
+ログインが別の組織に関連付けられている場合は、新しいログインでサインアップする必要があります。そうしないと、セットアップ画面に制限モードを有効にするオプションが表示されません。
+
+.手順
+. コンソール エージェント インスタンスに接続しているホストから Web ブラウザを開き、インストールしたコンソール エージェントの次の URL を入力します。
+. NetApp Consoleにサインアップまたはログインします。
+. ログインしたら、コンソールを設定します。
++
+.. コンソール エージェントの名前を入力します。
+.. 新しいコンソール組織の名前を入力します。
+.. *安全な環境で実行していますか?* を選択します。
+.. *このアカウントで制限モードを有効にする*を選択します。
++
+アカウントの作成後はこの設定を変更できないことに注意してください。制限モードを後から有効にしたり無効にしたりすることはできません。
+
++
+コンソール エージェントを政府リージョンに展開した場合、チェック ボックスは既に有効になっており、変更できません。これは、制限モードが政府地域でサポートされている唯一のモードであるためです。
+
+.. *始めましょう*を選択します。
+
+
+
+
+.結果
+コンソール エージェントがインストールされ、コンソール組織に設定されました。すべてのユーザーは、コンソール エージェント インスタンスの IP アドレスを使用してコンソールにアクセスする必要があります。
+
+.次の手順
+以前に設定した権限をコンソールに提供します。
+
+
+
+[[step-4-provide-permissions-to-the-console-agent]]
+== ステップ4：Consoleエージェントに権限を付与する
+
+AWSでConsoleエージェントを手動でインストールした場合は、以前に設定した権限を付与する必要があります。
+
+デプロイ中に必要な IAM ロールを選択したため、AWS Marketplace からコンソールエージェントをデプロイした場合は、これらの手順は適用されません。
+
+EC2インスタンスにIAMロールをアタッチするか、必要な権限を持つIAMユーザーのAWSアクセスキーを提供することで、Consoleエージェントに必要な権限を付与できます。
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["クラウド権限の準備方法を学ぶ"] 。
+
+[role="tabbed-block"]
+====
+.AWS IAM ロール
+--
+以前に作成した IAM ロールを、コンソールエージェントをインストールした EC2 インスタンスにアタッチします。
+
+これらの手順は、AWS にコンソールエージェントを手動でインストールした場合にのみ適用されます。  AWS Marketplace のデプロイメントでは、コンソールエージェントインスタンスは、必要な権限を含む IAM ロールにすでに関連付けられています。
+
+.手順
+. Amazon EC2 コンソールに移動します。
+. *インスタンス*を選択します。
+. コンソール エージェント インスタンスを選択します。
+. *アクション > セキュリティ > IAM ロールの変更*を選択します。
+. IAM ロールを選択し、*IAM ロールの更新*を選択します。
+
+
+--
+.AWS アクセスキー
+--
+必要な権限を持つ IAM ユーザーの AWS アクセス キーをNetApp Consoleに提供します。
+
+.手順
+. *管理 > 資格情報*を選択します。
+. *組織の資格情報*を選択します。
+. *資格情報の追加*を選択し、ウィザードの手順に従います。
++
+.. *資格情報の場所*: *Amazon Web Services > エージェント*を選択します。
+.. *資格情報の定義*: AWS アクセスキーとシークレットキーを入力します。
+.. *マーケットプレイス サブスクリプション*: 今すぐサブスクライブするか、既存のサブスクリプションを選択して、マーケットプレイス サブスクリプションをこれらの資格情報に関連付けます。
+.. *確認*: 新しい資格情報の詳細を確認し、[*追加*] を選択します。
+
+
+
+
+--
+====

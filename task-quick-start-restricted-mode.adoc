@@ -20,16 +20,22 @@ summary: 環境を準備し、コンソール エージェントを展開して�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"] link:task-prepare-restricted-mode.html["展開の準備"]
 [role="quick-margin-list"]
-. CPU、RAM、ディスク容量、コンテナ オーケストレーション ツールなどの要件を満たす専用の Linux ホストを準備します。
+. ホストの要件を確認してください。手動でインストールする場合は、CPU、RAM、ディスク容量、およびコンテナオーケストレーションツールの要件を満たす専用のLinuxホストを用意してください。link:task-prepare-restricted-mode.html#step-3-review-host-requirements["ホスト要件を確認する"]。
 . ターゲット ネットワークへのアクセス、手動インストール用のアウトバウンド インターネット アクセス、および日常的なアクセス用のアウトバウンド インターネットを提供するネットワークをセットアップします。
-. クラウド プロバイダーで権限を設定し、展開後にそれらの権限をコンソール エージェント インスタンスに関連付けることができるようにします。
+. プロバイダとデプロイ方法に必要なクラウド権限を準備してください。
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"] link:task-install-restricted-mode.html["コンソールエージェントを展開する"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2"] Consoleエージェントを展開します
 [role="quick-margin-list"]
-. クラウド プロバイダーのマーケットプレイスからコンソール エージェントをインストールするか、独自の Linux ホストにソフトウェアを手動でインストールします。
+. クラウド環境のデプロイ手順を選択してください：
++
+** AWS：link:task-install-restricted-mode-aws.html["AWSにデプロイする"]
+** Azure：link:task-install-restricted-mode-azure.html["Azureにデプロイする"]
+** 手動インストール：link:task-install-restricted-mode-manual.html["AWS、Azure、またはGoogle Cloudに手動でデプロイする"]
+
+
 . Web ブラウザを開き、Linux ホストの IP アドレスを入力して、 NetApp Consoleを設定します。
-. 以前に設定した権限をコンソール エージェントに提供します。
+. プロバイダ固有の手順に従って、必要な権限をConsoleエージェントに関連付けます。AWS Marketplaceからデプロイする場合は、EC2インスタンスを起動する際にIAMロールを選択してください。
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三つ"] link:task-subscribe-restricted-mode.html["NetApp Intelligent Servicesに加入する（オプション）"]
