@@ -516,12 +516,6 @@
   <block id="9a3441a99feefccc201b51666c68d0d2" category="inline-image-macro">ゴミ箱に似たアイコン</block>
   <block id="d63f1c66d83451eade374ce0e602a4b4" category="list-text">表で、メンバーに割り当てられたロールを表示する組織、フォルダ、またはプロジェクトのそれぞれの行を展開し、「*ロール*」列で「*表示*」を選択します。</block>
   <block id="45e27b9fcac7d60b4663ab56a2bac350" category="paragraph">次のディレクトリにあるコンソール エージェント ホストから、JSON 形式の検証レポートと構成ログに直接アクセスすることもできます。</block>
-  <block id="647fa610609fa01d971d4fbb3656f443" category="paragraph">*レビュー* ページで *エージェント構成の検証* チェックボックスをオンにした場合、コンソールは作成後にコンソール エージェントの構成を検証します。コンソールがエージェントの展開に失敗した場合、トラブルシューティングに役立つダウンロード可能なレポートが提供されます。</block>
-  <block id="86ca8a8c90ac1b3bb3ee0781703dca27" category="admonition">コンソールがエージェントを正常に展開した場合、レポートは生成されず、展開が成功したことを確認する確認ダイアログが表示されます。</block>
-  <block id="9dbc3a54bc2b38732d8c2b0c483d6cfa" category="list-text">*エージェントの展開に失敗しました* ダイアログ ボックスで、*レポートのダウンロード* を選択して、検証レポートを含む PDF ファイルをダウンロードします。</block>
-  <block id="6eefca337b8d129a6a60a608481b8fa0" category="list-text">または、「*最初からやり直す*」を選択して、「エージェントのデプロイ*」ウィザードに戻り、再試行することもできます。</block>
-  <block id="796a270bf063faafbf314a64bc6d45dc" category="paragraph">エージェントを再度展開する場合は、プロセス全体を最初からやり直す必要があります。</block>
-  <block id="1f40a959293314118eb6cd9e626b48d6" category="paragraph">コンソールエージェントホストからレポートとログにアクセスする</block>
   <block id="3dcf5c663cbfb598f8a710902a7eb120" category="paragraph">コンソール エージェント ホスト上のオペレーティング システムの保守はお客様の責任となります。たとえば、お客様側では、会社の標準的なオペレーティング システム配布手順に従って、コンソール エージェント ホスト上のオペレーティング システムにセキュリティ更新を適用する必要があります。</block>
   <block id="1727dc0bbb7fbac9af669b5ee698c1ac" category="paragraph">顧客がコンソール エージェント VM を停止してから起動する必要がある場合は、クラウド プロバイダーのコンソールから実行するか、オンプレミス管理の標準手順を使用して実行する必要があります。</block>
   <block id="0beb94109608ff82d313b33947162f96" category="doc">プライベートモードリリース（3.9.44）</block>
@@ -2341,7 +2335,6 @@
   <block id="3d35bba2e5ea6e739fb94736dc402017" category="inline-link">FSx for ONTAPに必要な権限を表示する</block>
   <block id="68841948fc1b61d494dc523ccae2402a" category="list-text"><block ref="68841948fc1b61d494dc523ccae2402a" category="inline-link-rx"></block></block>
   <block id="c19d1741d0fa79c8b012a7f8b068bc6c" category="inline-link-macro">エージェント展開ポリシーを表示する</block>
-  <block id="6acff1832d6612cd1afefaf53c386a82" category="list-text"><block ref="6acff1832d6612cd1afefaf53c386a82" category="inline-link-macro-rx"></block></block>
   <block id="884fd0826fb740e296bb4324a3742247" category="list-text">次のステップでコンソールに貼り付けることができるように、IAM ロールのロール ARN をコピーします。</block>
   <block id="d04fbc50c09432c35c0eb302581b70e6" category="inline-xref">コンソールに追加できるようになりました</block>
   <block id="75d520940839feb20c7009bf3a4913f6" category="paragraph">IAM ロールに必要な権限を付与したら、ロール ARN をコンソールに追加します。</block>
@@ -3093,14 +3086,9 @@
   <block id="52b5b2b5dbfa5254101b42416d1a8773" category="paragraph"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block> 。</block>
   <block id="59451d5b1be51c2e522deb585360baaf" category="doc">NetApp ConsoleからAWSにコンソールエージェントを作成する</block>
   <block id="035f13f16b03eaaa0e6f9e50510bada8" category="list-text">確認すべき<block ref="2c29232fcf7d2d4af34b1c675a642823" category="inline-link-macro-rx"></block>。</block>
-  <block id="ece2bb18919ce5ae01a5179cefd722b3" category="section-title">ステップ1: AWSにコンソールエージェントを展開するためのネットワークを設定する</block>
-  <block id="3622d53137f09c5a1f41ab1c1500f461" category="paragraph">コンソール エージェントをインストールする予定のネットワークの場所が次の要件をサポートしていることを確認します。これらの要件により、コンソール エージェントはハイブリッド クラウド内のリソースとプロセスを管理できるようになります。</block>
   <block id="b3f4a5004c2a10094d2af8bd28589cbf" category="paragraph">AWS サービス (amazonaws.com):</block>
   <block id="46db632d39e89f845984f05056817700" category="paragraph">AWS リソースを管理します。エンドポイントは AWS リージョンによって異なります。<block ref="04572646466baf6f86d09965eb5c3c86" category="inline-link-rx"></block></block>
   <block id="dc648d2a312f61564f5f6beb2e95a5cc" category="paragraph">コンソール エージェントを作成した後、このネットワーク要件を実装する必要があります。</block>
-  <block id="fe34c82f62d8c19159528f702fa22a96" category="section-title">ステップ2: コンソールエージェントのAWS権限を設定する</block>
-  <block id="eeda2f4307e522dfb736cc96eb303e27" category="list-text">コンソールに必要な権限を持つIAMロールを割り当てます</block>
-  <block id="4964e9eef6df2fe316a2618afd8cd963" category="list-text">必要な権限を持つIAMユーザーにAWSアクセスキーとシークレットキーを提供します</block>
   <block id="15f7c3376619ce497205d543fd1d7767" category="paragraph">必要に応じて、IAMを使用してIAMポリシーを制限することができます。<block ref="9e2941b3c81256fac10392aaca4ccfde" prefix=" " category="inline-code"></block>要素。<block ref="19ffef022087e160f1e54b9948795943" category="inline-link-rx"></block></block>
   <block id="1e71ce7defc90d8f5a2c46c08ba968df" category="list-text">AWS IAM コンソールに移動します。</block>
   <block id="d36ec2dc8acd5ade1fda1b4397ccc99a" category="list-text">「JSON」を選択します。</block>
@@ -3109,38 +3097,25 @@
   <block id="01de2e1a7f136c3eeda419bfb07814da" category="list-text">*次へ*を選択し、名前と説明を入力します。</block>
   <block id="db92c743d97601150bbdfa11bf3cf66b" category="list-text">*ポリシーの作成*を選択します。</block>
   <block id="1829da9b52c1f3e7152aa60a47e70046" category="list-text">コンソールが引き受けることができる IAM ロールまたは IAM ユーザーにポリシーをアタッチして、コンソールにアクセスキーを提供できるようにします。</block>
-  <block id="5d2e64dfdb803f8ad6ebad1af3e82afb" category="list-text">(オプション 1) コンソールが引き受けることができる IAM ロールを設定します。</block>
   <block id="0e78dc7220ea8b6abafe6ef7aaad9998" category="list-text">ターゲットアカウントの AWS IAM コンソールに移動します。</block>
   <block id="83786519cfff82cadf61b5802dbc3e96" category="list-text">*別のAWSアカウント*を選択し、コンソールSaaSアカウントのIDを入力します: 952013314444</block>
   <block id="dbab690717fb052924566c13e8768748" category="list-text">前のセクションで作成したポリシーを選択します。</block>
   <block id="077eba020cf13e24bf6f5121e9f6be99" category="list-text">ロールを作成したら、コンソール エージェントを作成するときにコンソールに貼り付けることができるように、ロール ARN をコピーします。</block>
-  <block id="3aa44d82675acc53c059d6b7f6d5b53c" category="list-text">(オプション 2) コンソールにアクセスキーを提供できるように、IAM ユーザーの権限を設定します。</block>
   <block id="ab9ad001a35a833243a30f3acf6417eb" category="list-text">AWS IAM コンソールから [*ユーザー*] を選択し、ユーザー名を選択します。</block>
   <block id="93583a9b95fb527997b95ba8db57df14" category="list-text">*権限の追加 &gt; 既存のポリシーを直接添付*を選択します。</block>
   <block id="8bcbf62e98416780ffe2095559aba87a" category="list-text">作成したポリシーを選択します。</block>
   <block id="0a6bca3addac2684ad319713b9fb22ed" category="list-text">*次へ*を選択し、*権限の追加*を選択します。</block>
   <block id="c34ab4140439856fda51871a0f20b53c" category="list-text">IAM ユーザーのアクセスキーとシークレットキーがあることを確認します。</block>
-  <block id="bbba7638debc60d9989ee9d0b3f92713" category="paragraph">これで、必要な権限を持つ IAM ロールまたは必要な権限を持つ IAM ユーザーが作成されているはずです。コンソールからコンソール エージェントを作成するときに、ロールまたはアクセス キーに関する情報を提供できます。</block>
-  <block id="a5d705a0b67c1b72cfaf22a7b055e724" category="section-title">ステップ3: コンソールエージェントを作成する</block>
   <block id="5f951668599865c2dd2220fcb0617434" category="inline-link-macro">コンソールエージェントのデフォルト構成について学習します</block>
   <block id="6b02626fac3ccb06150290f9d284c115" category="list-text">コンソールからコンソール エージェントを作成すると、デフォルト設定を使用して AWS に EC2 インスタンスがデプロイされます。コンソールエージェントを作成した後、CPU や RAM が少ない小さな EC2 インスタンスに切り替えないでください。<block ref="29c6b59463611f41ce7d1e55e2554b51" category="inline-link-macro-rx"></block> 。</block>
   <block id="5b648a602c64391c13459b2242feaccf" category="inline-link-macro">コンソールエージェントのIAMポリシーの詳細</block>
-  <block id="aca02eea323174e41d57225a762eb959" category="list-text">AWS 認証方法: 必要な権限を持つ IAM ユーザーの IAM ロールまたはアクセスキーのいずれか。</block>
   <block id="482049a2c27830202c448327d329f378" category="list-text">ネットワーク要件を満たす VPC とサブネット。</block>
   <block id="b16e9971e18d4e63cd90cc2dc398c39e" category="list-text">EC2 インスタンスのキーペア。</block>
-  <block id="f28438646c4a6dc83acec91c3242235c" category="inline-link-macro">ネットワーク要件</block>
-  <block id="e07d32ad7020a93e690821c42ba3112e" category="list-text">設定<block ref="aeef43fcefe3ad151bacb8d8f811157c" category="inline-link-macro-rx"></block>。</block>
-  <block id="74e3fd473af4965ff33c6bdccf60d41f" category="list-text">設定<block ref="24eff8afdaae8d04c3eb2e1328f5234f" category="inline-link-macro-rx"></block>。</block>
   <block id="f5a67c5390424014ada0320046007eec" category="list-text">ウィザードの手順に従ってコンソール エージェントを作成します。</block>
-  <block id="8b8f36850755c4ac43a0df238add8748" category="inline-link-macro">追加の資格情報を追加する方法を学ぶ</block>
-  <block id="a92469e7b4819b542d643764a5f08089" category="admonition">*役割を引き受ける* を選択した場合は、コンソール エージェント展開ウィザードから最初の資格情報セットを作成できます。追加の資格情報セットは、「資格情報」ページから作成する必要があります。これらはウィザードのドロップダウン リストで利用できるようになります。<block ref="21eba73392ef6be6fd6da758f5bd2e93" category="inline-link-macro-rx"></block> 。</block>
-  <block id="f07116b379707ffd76d2b1be3d766311" category="list-text">*詳細*ページで、コンソール エージェントに関する詳細を入力します。</block>
   <block id="a6100ac4fa5cb7bbb1c49e95165b96b2" category="inline-link-macro">必要な権限</block>
-  <block id="603cd6f77a8d8d20e21808a8ba4480ea" category="list-text">コンソールで必要な権限を持つ新しいロールを作成するか、または既存のロールを選択するかを選択します。<block ref="8b098a06817becf62c06297dd76999b5" category="inline-link-macro-rx"></block> 。</block>
   <block id="a7dcc75dc3cacce63a6952fff1a50f65" category="list-text">コンソール エージェントの EBS ディスクを暗号化するかどうかを選択します。デフォルトの暗号化キーを使用するか、カスタム キーを使用するかを選択できます。</block>
   <block id="a2f078803960d5d37e3fe024b9a33315" category="paragraph">コンソール エージェント仮想マシンにアクセスするための正しいキー ペアがあることを確認します。キーペアがないとアクセスできません。</block>
   <block id="39dbd35a18bfa38cac810c0be826b561" category="paragraph">プロセスが完了すると、コンソール エージェントはコンソールから使用できるようになります。</block>
-  <block id="1cc84d19a969a49be773baf953e6565c" category="admonition">デプロイメントが失敗した場合は、コンソールからレポートとログをダウンロードして、問題の解決に役立てることができます。<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="510a2d4afe6727bcdbafc74a103f9f16" category="inline-link">NetApp Consoleから S3 バケットを管理する方法を学びます</block>
   <block id="68105c97320cc4f91ac35396075a2ebb" category="paragraph">コンソールエージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合は、*システム* ページに Amazon S3 作業環境が自動的に表示されます。<block ref="74eed29a16619fe7bd97e3bf2235caa0" category="inline-link-rx"></block></block>
   <block id="3b46ada3c2c8fc9685f33a61ccf996e6" category="summary">AWS で実行されている Linux ホストにコンソールエージェントを手動でインストールできます。独自の Linux ホストにコンソールエージェントを手動でインストールするには、ホスト要件を確認し、ネットワークを設定し、AWS 権限を準備し、コンソールエージェントをインストールして、準備した権限を付与する必要があります。</block>
@@ -3552,10 +3527,6 @@
   <block id="19df8bb4b5a805b23aeac731605bdf21" category="list-text">既存のNetAppサポートサイト（NSS）の認証情報</block>
   <block id="912ae110aa8df4a37c4331859a5e502a" category="list-text">メールアドレスとパスワードを使用したNetApp Consoleアカウント</block>
   <block id="03eb7e8aedd1ad900f6996ff1a9cf8dd" category="list-text">*ログイン*ページで、ログインに関連付けられているメールアドレスを入力します。</block>
-  <block id="e841c125c9e210ed4ede7a3ae1c5ada8" category="paragraph">エージェント ホスト サービスを停止せずに OS セキュリティ パッチを適用します。</block>
-  <block id="d69b367407abdea589b8942156f4e07a" category="paragraph">コンソールからコンソール エージェントを作成すると、デフォルトの構成でクラウド プロバイダーに VM インスタンスがデプロイされます。エージェントを作成した後は、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。</block>
-  <block id="a97c9ede934c84f0e97d896b05cd1ae0" category="inline-link-macro">エージェントのデフォルト設定について学ぶ</block>
-  <block id="4203742da4cdc7c1dd82452f22078923" category="paragraph"><block ref="6644ee05b73ff616838ce63980e80332" category="inline-link-macro-rx"></block> 。</block>
   <block id="3eecd3f04a3aed6d69a686b8c6860e44" category="section-title">エージェントを監視する</block>
   <block id="317906a769f89601a484794c64e9042d" category="paragraph">コンソールは、ディスク容量、RAM、CPU の問題など、エージェント VM に異常がある場合に通知します。コンソール内の通知センターでこれらの通知を監視するか、電子メール通知を構成します。ディスク容量、メモリ、CPU 使用率が時々増加するのは正常ですが、頻繁に発生する場合は、解決するための手順を実行する必要があります。</block>
   <block id="1ea31e4b3b5747148fd4f93da267694f" category="paragraph">たとえば、エージェント リソース (CPU、RAM、またはディスク領域) が 30 分間連続して合計容量の 90% を超えると、コンソールから通知が届きます。その後、リソース使用量がそのしきい値を下回ると、通知センターに通知が解決済み (緑) として表示されます。</block>
@@ -3565,10 +3536,8 @@
   <block id="373df0df4c9bf458b635c60e6bd81875" category="inline-link-macro">NetAppナレッジベースの記事を確認する</block>
   <block id="8ca3660780f744c30c74aa618432df0d" category="cell"><block ref="f6f7f11517faa4caaf22eb279fe6cff9" category="inline-link-macro-rx"></block> 。</block>
   <block id="72200965fbc3c379905f503caa91b909" category="cell">CPU使用率が高すぎる</block>
-  <block id="bf18babce135cfcba99582e4e84f2f5c" category="cell">インストールした場所に応じて、クラウド プロバイダーまたはオンプレミスのエージェント VM の CPU サイズを増やします。または、追加のエージェントを作成し、ワークロードを複数のエージェントに分散します。  RAM の使用率は、環境、 ONTAPワークロード、 Cloud Volumes ONTAPシステムの数、および使用しているデータ サービスによって異なります。</block>
   <block id="d77ff27143770c407f290ec9ffcbc917" category="cell">RAM使用量が高すぎる</block>
   <block id="988964edbbb2132f905be0d293cd66c4" category="cell">インストールした場所に応じて、クラウド プロバイダーまたはオンプレミスのエージェント VM の RAM を増やします。または、追加のエージェントを作成し、ワークロードを複数のエージェントに分散します。  RAM の使用率は、環境、 ONTAPワークロード、 Cloud Volumes ONTAPシステムの数、および使用しているデータ サービスによって異なります。</block>
-  <block id="0d75592eefb72eac4699a1f49bd7769a" category="section-title">エージェントVMの停止と起動</block>
   <block id="665e5fcb7c888a6273d0761790d05ed5" category="paragraph">必要に応じて、クラウド プロバイダーのコンソールまたは標準のオンプレミス手順を使用して、エージェント VM を停止および起動します。</block>
   <block id="fab2977be6b57a804b266fd2b7996179" category="inline-link-macro">コンソールエージェントは常に動作している必要があることに注意してください</block>
   <block id="d9ae58af06fdcaab9da3f43fe827c682" category="paragraph"><block ref="b4ea7ed3eae261783526e5f0a6706763" category="inline-link-macro-rx"></block> 。</block>
@@ -4299,14 +4268,8 @@
   <block id="63355a9119047d0bb5216fe09819ed76" category="admonition">コンソールエージェントインスタンスまたはAmazon FSx for ONTAPインスタンスに関連付けられているインスタンスプロファイルの認証情報を編集することはできません。FSx for ONTAPインスタンスの資格情報の名前のみを変更できます。</block>
   <block id="f2a10e059f22d2e4e590bf375629f82c" category="list-text">*組織の資格情報*ページで、資格情報セットのアクション メニューを選択し、*資格情報の編集*を選択します。</block>
   <block id="76f673856509040ebe6f53809741b891" category="admonition">コンソール エージェントに関連付けられているインスタンス プロファイルの資格情報を削除することはできません。</block>
-  <block id="743026d6272c7eac4898bf78c6a0ec00" category="paragraph">コンソールは、VPC にコンソールエージェントをデプロイする前に、AWS で認証する必要があります。次のいずれかの認証方法を選択できます。</block>
-  <block id="3c3077c55d74474a96914d3933e99034" category="paragraph">どちらのオプションを使用する場合でも、最初のステップは IAM ポリシーを作成することです。このポリシーには、コンソールから AWS のコンソールエージェントを起動するために必要な権限のみが含まれています。</block>
-  <block id="a6ff8031b9b97942fbb164a958bb15cb" category="inline-link-macro">コンソールエージェント自体に必要な権限の表示</block>
-  <block id="f09d39b62bcd3db5dbab86ed9186dad9" category="paragraph">このポリシーには、コンソールから AWS のコンソールエージェントを起動するために必要な権限のみが含まれています。コンソールがコンソールエージェントを作成すると、コンソールエージェントが AWS リソースを管理できるようにする新しい権限セットがコンソールエージェントに適用されます。<block ref="909ec4de2b545730e300a321f5abea2f" category="inline-link-macro-rx"></block>。</block>
-  <block id="318bbdd390cdff7f023b8038a3fb0070" category="list-text">コンソールがコンソール エージェントを作成すると、エージェントの IAM ロールとプロファイルが作成されます。このロールには、コンソールエージェントが AWS リソースを管理できるようにする権限が含まれています。将来のリリースで新しい権限が追加されたら、ロールが更新されるようにしてください。<block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block>。</block>
   <block id="dd74de0d68eefd1c10bd1501afbc8b46" category="list-text">名前を入力してください。</block>
   <block id="cc12b07ff25c8e9f0f635a74e2d22a82" category="list-text">カスタム タグ (メタデータ) を追加します。</block>
-  <block id="193563612f46c81d99f9d364d74518c6" category="paragraph">コンソールは約 10 分でエージェントを展開します。プロセスが完了するまでこのページに留まります。</block>
   <block id="0cbff45e0f71134dbbfed8f2ba0d6f76" category="paragraph">Azure アカウントまたは Microsoft Entra サービス プリンシパルに割り当てることができる Azure カスタム ロールを作成します。コンソールは Azure で認証し、これらのアクセス許可を使用してユーザーに代わってコンソール エージェントを作成します。</block>
   <block id="a07294e253f6aa6ecfa69e1864aed3dc" category="paragraph">これらの権限は、コンソール エージェント自体に適用されます。これは、コンソール エージェント VM を展開するために以前に設定した権限セットとは異なります。</block>
   <block id="19ffcd7024175b13282f800ea3adbed2" category="paragraph">コンソールは約 10 分でエージェントを準備します。プロセスが完了するまでこのページに留まります。</block>
@@ -4417,7 +4380,6 @@
   <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">次の権限は、最小限の構成では必要ないため、「追加のバックアップおよび回復権限」セクションに移動されました。</block>
   <block id="fd45d2e80d190b12659f895ff5aa6e01" category="summary">NetApp Consoleを使用すると、コンソール エージェントの導入時に適切な IAM 認証情報を提供し、それらを AWS Marketplace サブスクリプションに関連付けて単一または複数の AWS アカウントに課金することで、AWS 認証情報とマーケットプレイス サブスクリプションを管理し、 Cloud Volumes ONTAPやその他のデータ サービスを安全かつコスト効率よく導入できます。</block>
   <block id="1efd890aee5019c9dd6a5ca79812af47" category="paragraph">コンソールエージェントの導入時に適切な IAM 認証情報を提供し、課金のためにそれらを AWS Marketplace サブスクリプションに関連付けることで、 NetApp Consoleから AWS 認証情報とマーケットプレイス サブスクリプションを直接管理し、 Cloud Volumes ONTAPやその他のデータ サービスの安全な導入を確保します。</block>
-  <block id="e2df328564731e7d9ccff77a0ccc21d0" category="inline-link-macro">AWS のエージェント展開ポリシー</block>
   <block id="1b87d5ac2b76ff03a714cd78cd28bf3b" category="list-text">既存のコンソールエージェントを追加のAWSアカウントで使用するには</block>
   <block id="93b7ab66bd8976eacd3146faac726986" category="paragraph">追加の AWS アカウントでコンソールを使用するには、信頼できるアカウントの AWS キーまたはロールの ARN を指定します。次の図は、信頼できるアカウントの IAM ロールを通じて権限を提供するアカウントと、IAM ユーザーの AWS キーを通じて権限を提供するアカウントの 2 つの追加アカウントを示しています。</block>
   <block id="1bd60f6ffbfbe027889fb2ff7fd8f14c" category="paragraph">IAM ロールの Amazon リソースネーム (ARN) または IAM ユーザーの AWS キーを指定して、コンソールにアカウント認証情報を追加します。</block>
@@ -5649,7 +5611,6 @@
   <block id="e773bf9ef8fd07284aa97da5bcac5b10" category="list-text">Console エージェントを使用してストレージシステムを検出した場合は、そのエージェントをストレージシステムと同じプロジェクトに追加してください。これにより、ユーザーはデータサービスや Console ネイティブのストレージ管理など、エージェント対応の機能を実行できるようになります。Console の *Agents* ページから、プロジェクトにエージェントを追加できます。<block ref="9575d7837a709e4ae8a4165fa6169eb2" category="inline-link-macro-rx"></block>。</block>
   <block id="f84bc6d9d13416ccde14b675c20b3fe0" category="list-text">組織内にKeystoneサブスクリプションがある場合は、*リソース*ページで確認できます。Keystoneサブスクリプションをプロジェクトに関連付けて、それらのプロジェクトに対する権限を持つメンバーにアクセスを提供できます。</block>
   <block id="e828183af99bbe9f55b9edafa7e11282" category="list-text">バックアップおよびリカバリのワークロード</block>
-  <block id="5ac9b947c65653cf6d02fe3c59e7fa2f" category="summary">AWSのコンソール エージェントは、NetApp Consoleから直接デプロイできます。ConsoleからAWSにコンソール エージェントをデプロイする前に、ネットワークをセットアップし、AWSの権限を準備する必要があります。</block>
   <block id="dc06977a17baa1d2ac30423086ded05e" category="doc">NetApp ConsoleからAWSにConsoleエージェントをデプロイする</block>
   <block id="21bc24ad9112fe84642a352511c8c896" category="paragraph">AWSにエージェントをデプロイすると、選択したVPC内でLinuxとNetApp Consoleエージェントソフトウェアを実行するEC2インスタンスが起動します。</block>
   <block id="3f0527499a34df287448340f6ef53274" category="paragraph">AWS で実行されている Linux ホストに Console エージェントを手動でデプロイできます。独自の Linux ホストに Console エージェントを手動でデプロイするには、ホストの要件を確認し、ネットワークをセットアップし、AWS 権限を準備し、Console エージェントをデプロイしてから、準備した権限を指定する必要があります。</block>
@@ -5665,8 +5626,6 @@
   <block id="4cf3aefb03cce74960230022eaa4e100" category="paragraph">コンソールエージェントを独自のLinuxホストに手動でデプロイするには、ホストの要件を確認し、ネットワークを設定し、Google Cloudの権限を準備し、Google Cloud APIを有効にし、NetApp Consoleをインストールしてから、準備した権限を付与する必要があります。</block>
   <block id="c55edff269043bf525a954a4154ec0a3" category="list-text">環境で必要な場合は、自己署名証明書を信頼済み証明書にアップロードします。この証明書はインストール後に置き換えます。</block>
   <block id="e8e9fe3b3946d0efef2689d6b175ac89" category="summary">コンソールエージェントをオンプレミスにデプロイし、ログインしてコンソール組織と連携するように設定します。</block>
-  <block id="9845a65d039380c03d0798dc8b86888f" category="paragraph">コンソールエージェントを手動でインストールする場合、エージェントホスト上のオペレーティングシステムの維持管理は、お客様の責任となります。たとえば、お客様は、自社のオペレーティングシステム配布に関する標準手順に従って、エージェントホスト上のオペレーティングシステムにセキュリティアップデートを適用する必要があります。</block>
-  <block id="3ce4474c24a93038aca82b41eaebbafa" category="paragraph">サポートされている構成との互換性を維持するため、定期的なOSパッチ適用時にDockerまたはPodmanがアップグレードされないようにしてください。これは、アップデート時にDockerまたはPodmanを一時的に除外するか、パッケージマネージャーを永続的に設定してDockerまたはPodmanのアップデートをスキップすることで実現できます。</block>
   <block id="1df03cb601702d6a5780de5b5b3fad56" category="paragraph">以下は、さまざまなLinuxディストリビューションでDockerまたはPodmanのアップデートを除外する方法の例です。パッケージをアップデートから除外する方法に関する最新の手順については、お使いのLinuxディストリビューションのドキュメントを参照してください。</block>
   <block id="63fc7b8ffa3779963d0e9e15f3827fb1" category="listing-title">Podmanの例</block>
   <block id="3402ff8bffa8ff62a7a411640fbf9267" category="listing-title">Dockerの例</block>
@@ -5853,7 +5812,6 @@
   <block id="4a45e858c46a20f0b12c22eb89c4bf5e" category="admonition">組織内の誰かが既に請求アカウントからマーケットプレイスのサブスクリプションを取得している場合は、代わりに<block ref="eeda9d490d323c6921491a4ef94ce954" category="inline-link-rx"></block>にリダイレクトされます。予期しない場合は、NetApp営業チームにお問い合わせください。Googleでは、Google請求アカウントごとに1つのサブスクリプションのみが有効です。</block>
   <block id="ca4a244a9789951f646667ad547e7eba" category="list-text">ロールを割り当てるメンバーの横にあるアクションメニュー<block ref="be3f2325aec41f7d51bd119595280fab" category="inline-image-macro-rx" type="image"></block>を選択し、*ロールを追加*を選択します。</block>
   <block id="407cb118eb4c73b0358d157028082059" category="list-text">メンバーの役割の割り当てを解除するには、役割の横にある<block ref="e7d3eb2c8040b3803a37719a0c0ad857" category="inline-image-macro-rx" type="image"></block>を選択して、メンバーから該当する役割を削除します。削除の確認を求められます。</block>
-  <block id="92ebc8b88ec7bf78397ce21f44b480e5" category="paragraph">コンソールからコンソールエージェントをデプロイする場合、IAMロールのARN、またはIAMユーザーのアクセスキーを指定する必要があります。認証方法には、AWSにコンソールエージェントをデプロイするための権限が必要です。必要な権限は<block ref="90ba5e70f609b78ed2966a8cb311c96b" category="inline-link-macro-rx"></block>に記載されています。</block>
   <block id="b62a0502738c456bdd542e9396b92ddd" category="inline-link-macro">エージェントが権限をどのように使用しているかを確認する</block>
   <block id="c4fe162c4036edff0d6ce01762682fbf" category="paragraph">ConsoleがAWSでConsole agentを起動すると、agent用のIAMロールとプロファイルが作成されます。また、そのAWSアカウント内のリソースとプロセスを管理する権限をConsole agentに付与するポリシーもアタッチされます。<block ref="e912f6cf90fec29124fef634f33fedf8" category="inline-link-macro-rx"></block>。</block>
   <block id="109a76aa4a30822be3d0a4a6162bbc73" category="paragraph">初期のAWS認証情報を使用してすべてのCloud Volumes ONTAPシステムを導入することも、認証情報を追加することもできます。</block>
@@ -5958,11 +5916,7 @@
   <block id="91d12260d1ad1dfaf6d6d9c6451488ca" category="inline-image-macro">アクションアイコンと「組織の編集」オプションが表示された組織ページのスクリーンショット。</block>
   <block id="d8d4b80e8ceacee81ae8ac803aa9544a" category="paragraph"><block ref="d8d4b80e8ceacee81ae8ac803aa9544a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3a09c67515f2086631474e15f73de6c7" category="paragraph">サービスアカウントのクレデンシャルを紛失した場合や更新する必要がある場合は、新しいクレデンシャルを作成できます。</block>
-  <block id="d1c2b78068099b6e93f011f154246f8b" category="paragraph">NetApp ConsoleのWebベースのコンソールから直接Consoleエージェントを作成します。</block>
   <block id="ed0dd9d63bd421526bd794c04a3256c0" category="list-text">*概要*ページで、*エージェントのデプロイ &gt; AWS*を選択します。</block>
-  <block id="127c02abe37c50ab3c73979251d93fb8" category="list-text">*はじめに*ページで、プロセスの概要を確認してください。</block>
-  <block id="d559b433162bbc7b74a8c8dc30b08d72" category="list-text">* AWS Credentials *ページで、AWSリージョンを指定し、認証方法を選択します。認証方法は、Consoleが引き受けることができるIAMロール、またはAWSアクセスキーとシークレットキーのいずれかです。</block>
-  <block id="30cafd7bc647a9050e47c88afcfe662c" category="list-text">*Network*ページで、エージェントのVPC、サブネット、キーペアを指定し、パブリックIPアドレスを有効にするかどうかを選択し、必要に応じてプロキシ構成を指定します。</block>
   <block id="f93188ab864d6406986c3b7aaaf18c2d" category="paragraph">使用予定のNetAppデータサービスによっては、2つ目のポリシーを作成する必要があるかもしれません。標準リージョンでは、権限は2つのポリシーに分散されています。AWSのマネージドポリシーには文字数制限があるため、2つのポリシーが必要です。<block ref="d22d28fc84a3a60208070dc479be7a49" category="inline-link-macro-rx"></block>。</block>
   <block id="194f8ad43e882b08a80a930a234a89ab" category="paragraph">Console エージェントを作成したのと同じ AWS アカウントに Amazon S3 バケットがある場合、Amazon S3 ストレージ システムが *Systems* ページに自動的に表示されます。<block ref="74eed29a16619fe7bd97e3bf2235caa0" category="inline-link-rx"></block></block>
   <block id="601b5207ae306935dd96ffd67ef100bc" category="paragraph">Azure ポータル、Azure PowerShell、Azure CLI、または REST API を使用して Azure カスタム ロールを作成できることに注意してください。以下の手順では、Azure CLI を使用してロールを作成する方法を示します。別の方法をご希望の場合は、<block ref="9dee1d16cb9c40964c81f1bda0fd9839" category="inline-link-rx"></block>を参照してください。</block>
@@ -6563,17 +6517,7 @@
   <block id="d936096dffa04e3124e5d4c80196d9de" category="paragraph">コンソールまたはAWSマーケットプレイスからコンソールエージェントをデプロイした場合は、次の点に注意してください：</block>
   <block id="0fa3a8f00ba3b038c62aebffe253e28f" category="paragraph">コンソールまたは Azure marketplace からコンソール エージェントをデプロイした場合は、次の点に注意してください：</block>
   <block id="a2323952e590356476553107e2abe98c" category="paragraph">ConsoleまたはGoogle Cloud marketplaceからConsoleエージェントをデプロイした場合は、次の点に注意してください：</block>
-  <block id="21de1b13e5efe0020aa6cdbb1d2b61d2" category="summary">手動でインストールされたエージェントのOSセキュリティアップデート、推奨されるCPUとRAMのサイジング、リソースの健全性通知、VMの起動および停止手順など、NetApp ConsoleエージェントVMを保守する方法について説明します。</block>
   <block id="035e92b8aeea6fa24a0517bf7366d1b5" category="doc">NetApp ConsoleエージェントVMの保守</block>
-  <block id="881c784605961fd632d1b333ae2b94d3" category="paragraph">手動でインストールしたエージェントにOSセキュリティアップデートを適用したり、CPU、RAM、ディスク容量のアラートに対応したり、必要に応じてVMのサイズ変更や停止、起動を行ったりして、NetApp ConsoleエージェントVMを保守します。</block>
-  <block id="a5acc2e9f80d7968826410eb8d90176a" category="paragraph">エージェントVMのリソースが不足したり、パフォーマンスの問題が発生した場合は、VMリソースをアップグレードするための適切な措置を講じる必要があります。</block>
-  <block id="a0b87bad7f7c6fb7b05dad4b5379c7f4" category="inline-link-macro">vCenter でエージェント VM を保守する方法</block>
-  <block id="f4be3684a7c70d65bbde755040eb5341" category="admonition">vCenterにエージェントをインストールした場合は、コンソールメンテナンスツールを使用してVMインスタンスのサイズを変更します。<block ref="580222f1768f95a45a989516898619e7" category="inline-link-macro-rx"></block>。</block>
-  <block id="faeff01d1eb32a62718670db7485bac5" category="section-title">手動でインストールしたエージェントホストにオペレーティングシステムのアップデートを適用します</block>
-  <block id="914d0fb4e5278e862bac0a1144be9e3a" category="section-title">VMまたはインスタンスタイプのサイズ変更</block>
-  <block id="5026ee94a3844739b7b98e26eb0afa69" category="paragraph">エージェントVMのプロビジョニングが不足しているという通知を受け取った場合は、最適なパフォーマンスを確保するために、より多くのCPUまたはRAMを備えた大規模なVMインスタンスへのアップグレードをご検討ください。</block>
-  <block id="680b19ee1d758b71ac801931567484fa" category="inline-link-macro">VCenterでエージェントVMのサイズを変更する方法</block>
-  <block id="82286d11ad0d72c2f4444465cfc607f8" category="admonition">エージェントを VCenter にインストールした場合は、コンソールメンテナンスツールを使用してVMインスタンスのサイズを変更します。<block ref="60222936a5c51d9355b2bdeed0ba0625" category="inline-link-macro-rx"></block>。</block>
   <block id="429d13a19800a749f805f159f0d1f48b" category="paragraph">エージェントVMのCPUまたはRAMを増やす必要がある場合は、クラウド プロバイダまたはオンプレミスの仮想化プラットフォームが提供する手順に従って、VMインスタンスのサイズを変更してください。NetAppは、最適なパフォーマンスを確保するために、現在のCPUとRAMの割り当てを2倍にすることを推奨しています。以下の表は推奨されるサイジング階層を示しており、各階層は前の階層のCPUとRAMの2倍になっています。</block>
   <block id="9483f17a69bd0b52dbc44f9106718634" category="cell">階層</block>
   <block id="686a4be8c9228f8a3b2888584052a87d" category="cell">CPU（コア数またはvCPU数）</block>
@@ -6591,8 +6535,6 @@
   <block id="347d20ed7ad2270153e63a9dbfe44620" category="list-text"><block ref="de92966e3a85c9672341001f96935512" category="inline-link-macro-rx"></block>。</block>
   <block id="adc4a092d7d7c679e76d2c12eaf31f06" category="inline-link-macro">Google CloudでエージェントVMのサイズを増やす方法</block>
   <block id="7aa535f489b823f460c3cb01996a277c" category="list-text"><block ref="eaf540623fa9cd9c0c91c8db62cef688" category="inline-link-macro-rx"></block>。</block>
-  <block id="f195c3b76464876e0848dadd15d334f6" category="inline-link-macro">VCenterで実行されているオンプレミスエージェントのサイズを拡張する方法について説明します</block>
-  <block id="4cbf31d3afff31a0915f41b3987e9479" category="list-text"><block ref="706e14d3d1493bd7bc93630a70dd883a" category="inline-link-macro-rx"></block>。</block>
   <block id="83ea5433d56d3644fb56d0b6b799c35e" category="sidebar">vCenterインストール済みエージェントの保守</block>
   <block id="5d9476182acf1146ab60b631fc72ec99" category="admonition">Cloud Volumes ONTAPのアクセスロールは、コンソールエージェントのバージョン4.9.0以降を実行している場合に利用可能です。</block>
   <block id="ecfb18572af1acc83bcc04e648fd570d" category="paragraph">プライベートモードのNetApp Consoleを使用する4.0.0以降</block>
@@ -6750,4 +6692,102 @@
   <block id="fad937fde933fc3f4eb6f492e83e25f7" category="sidebar">Azure marketplace で NetApp Console 制限モードを展開する</block>
   <block id="ab3aa42abeac29b26d4ae086a0bd858d" category="sidebar">NetApp Console制限モードを手動でインストールする（Google Cloudに必須）</block>
   <block id="0e5ef03889d1ef7ccf4da7c7c07d046d" category="list-text">各ユーザーに割り当てられている Cloud Volumes ONTAP ロールを確認し、そのロールがシステムを含む組織、フォルダ、またはプロジェクトレベルで割り当てられていることを確認してください。<block ref="bba8a3e7de854a3d39018c92690eeeb3" category="inline-link-macro-rx"></block>。</block>
+  <block id="0d84bfbf8029ade908132f76f14e831b" category="doc">失敗したConsoleエージェント展開のトラブルシューティング</block>
+  <block id="713b3eb46227b1661f5e6ebedf8c97e2" category="paragraph">デプロイメントレポートを使用してConsoleエージェントのデプロイをブロックした原因を確認し、再試行してください。</block>
+  <block id="94c779a7a4679f68a7e4c31292d5a8f3" category="paragraph">Consoleは、「エージェント構成の検証」チェックボックスが選択されている場合にのみレポートを提供します。デプロイが成功した場合、レポートは生成されません。</block>
+  <block id="bf9f9e6ca72a1145b43d126aa42854de" category="list-text">*エージェントの展開に失敗しました*ダイアログボックスで、*レポートをダウンロード*を選択します。</block>
+  <block id="d4ef26c88a59b925e78f907c5b94a046" category="paragraph">Consoleは、検証レポートを含むPDFファイルをダウンロードします。</block>
+  <block id="cea25356482aea58e7922fb2bfede059" category="list-text">レポートを確認し、記載されている問題を修正してください。</block>
+  <block id="f77a98f3b38ecb318dd504ab4c2e58ad" category="list-text">ダイアログボックスで「最初からやり直す」を選択し、再度デプロイを完了してください。</block>
+  <block id="6d48a0a0b0ba105d16dc85da600d8c7f" category="paragraph">もう一度試すには、最初からすべての手順をやり直す必要があります。</block>
+  <block id="61c0b8f4aae5855ed1c7905138f2dd94" category="paragraph"><block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
+  <block id="9bdb3ee516d1e515bfeeccf1df40576e" category="doc">Console エージェント 4.13.0</block>
+  <block id="d3b38c9d33046f2e3c185918b58a83ca" category="paragraph">4.13.0 リリースでは、標準モードと制限モードの両方がサポートされています。</block>
+  <block id="6ca1b90cd272b2a7ade71c2fc662e45c" category="paragraph-title">Consoleエージェントをデプロイする際に、AWSデプロイロールを自動的に作成します</block>
+  <block id="d6591183e410cea7db23b6baa5d1dea3" category="inline-link-macro">ConsoleからAWSにConsoleエージェントを展開する方法について説明します</block>
+  <block id="71567bfcfb6d698d6ccd52f047c0bbf4" category="paragraph">開始する前に、AWSにConsoleエージェントをデプロイするためのIAMロールを作成する必要はなくなりました。NetApp Consoleがロールを作成できます。<block ref="64e2803082978c21df13de1f40aff9c6" category="inline-link-macro-rx"></block></block>
+  <block id="1b5c39ac6df8c341d7385e1bee9d23db" category="inline-link-macro">AWS のエージェント展開権限</block>
+  <block id="90cd2b0314c00d85e4f9d7be2c8909f4" category="paragraph">ConsoleからConsoleエージェントを展開する際、ConsoleにIAMロールを作成させるか、IAMロールのARNまたはIAMユーザーのアクセスキーを指定することができます。認証方法には、AWSにConsoleエージェントを展開するための権限が必要です。必要な権限は<block ref="154a306387318bdf412bffca3215a542" category="inline-link-macro-rx"></block>に記載されています。</block>
+  <block id="ce04d046ff28aa8daa5816b86e857f8d" category="list-text"><block ref="ce04d046ff28aa8daa5816b86e857f8d" category="inline-link-macro-rx"></block></block>
+  <block id="bd479677918347de969ad8ecb6f4f77d" category="summary">「自分用にロールを作成する」、「ロールを引き受ける」、またはAWSキーを使用して、NetApp ConsoleからAWSにConsoleエージェントを展開します。まず、ネットワークと権限を設定してください。</block>
+  <block id="d24a8c902edf3bbc111726f6e333b162" category="paragraph">NetApp Consoleから離れることなくAWSにConsoleエージェントを展開し、AWSリソースとデータサービスの管理を開始できるようにします。</block>
+  <block id="9cbd10be121785ecc43be4bdfdd7f1de" category="paragraph">AWSにConsoleエージェントを展開すると、選択したVPC内でLinuxおよびConsoleエージェントソフトウェアを実行するEC2インスタンスが起動します。</block>
+  <block id="7411fa92d12638c448ef207962591bfd" category="section-title">ステップ 1：AWSにConsoleエージェントを展開するためのネットワークを設定する</block>
+  <block id="237745129b92b17dccca58f0ad5744fc" category="paragraph">Consoleエージェントを展開する予定のネットワークロケーションが、以下の要件を満たしていることを確認してください。これらの要件により、Consoleエージェントはハイブリッドクラウド内のリソースとプロセスを管理できるようになります。</block>
+  <block id="8c6293af17a10a6d96ece4fe7b21794b" category="section-title">ステップ2：ConsoleエージェントをデプロイするためのAWS権限を設定する</block>
+  <block id="d7e488db2483a357393631e5b14d990d" category="paragraph">選択した認証方法に基づいて、VPC内にConsoleエージェントをデプロイするために必要なAWS権限のみをConsoleに付与してください。</block>
+  <block id="df6a8d10af17f7e54fa683d0bb242ac1" category="paragraph">以下の認証方法から1つを選択し、必要な設定のみを行ってください：</block>
+  <block id="4c3880bb027f159e801041b1021e88e8" category="cell">方法</block>
+  <block id="b12c51b935d86f01d092fb23a1fa4f9f" category="cell">その機能</block>
+  <block id="e7781f3bb99b46118388d761b97e92fa" category="cell">設定内容</block>
+  <block id="4061b186661bd3fd0f37384a4fae946f" category="paragraph">*私のロールを作成してください*</block>
+  <block id="51727ed8d41f1fa22cab6d7d6127582e" category="paragraph">ConsoleはAWS CloudFormationのクイック作成を開き、Consoleが引き受けるデプロイロールを作成します。</block>
+  <block id="afbae31f70b1a3185e8e93d03365f690" category="paragraph">スタックを送信するAWS IDに対する権限。</block>
+  <block id="6d8e334d4827af36dffcd7e52ab6d06a" category="paragraph">*ロールを引き受ける*</block>
+  <block id="2d0904cede0655a943f92ad45a4c5382" category="paragraph">Consoleは、お客様のアカウント内の既存のIAMロールを引き受けます。</block>
+  <block id="07a9e3d48efc84d68abf04df418b0f36" category="paragraph">ポリシーとIAMロール。</block>
+  <block id="0cc5c59c164e5f759e4d1002c32bbba3" category="paragraph">*AWSキー*</block>
+  <block id="4dc7188d08f83aae067e7836a7ec29b3" category="paragraph">ConsoleはAWSのアクセスキーとシークレットキーを使用します。</block>
+  <block id="4ae53682de66d0721635eb1a4cd487b3" category="paragraph">ポリシーとIAMユーザー。</block>
+  <block id="e2e1b56fd184a92e24fa99f6587f7eab" category="inline-link-macro">独自のエージェントロールを使用する方法</block>
+  <block id="68d9a0350458b9c34dcccfa81bb65730" category="paragraph">*Create role for me* と *Assume role* を使用すると、ConsoleはConsoleエージェントをデプロイするために、*デプロイメントロール*と呼ばれるIAMロールを引き受けます。デプロイ後、Consoleエージェントは、EC2インスタンスにアタッチされた別のIAMロール（*エージェントロール*と呼ばれます）を使用します。デフォルトでは、Consoleがエージェントロールを作成します。<block ref="24a48228b3e573c533b7c2f3136461e2" category="inline-link-macro-rx"></block>。</block>
+  <block id="645c86b8e0271431d87daa9ee66c462e" category="section-title">Create role for me（CloudFormation クイック作成）の権限を設定します</block>
+  <block id="b82075a3b798f2fef46d0afc25adf10c" category="paragraph">CloudFormationスタックとデプロイメントロールを作成できるAWS IDを使用して、権限エラーなしでスタックが完了するようにします。</block>
+  <block id="50f698706c0c21b8040884f3ac9e0a31" category="paragraph">CloudFormation Quick Createスタックを送信するIDには、管理者権限、または以下の最小限の権限が必要です。これらの権限により、CloudFormationはデプロイメントロールを作成できます。これらはエージェントロールの権限ではありません。</block>
+  <block id="e0528e41495ccc63324c86085d8d84a3" category="section-title">ロールの引き受けまたはAWSキーの権限を設定します</block>
+  <block id="631ea36fac949b666b0cacbd0784b2a8" category="paragraph">*Assume role* または *AWS keys* を選択した場合は、Consoleエージェントをデプロイするために必要な権限のみを持つポリシーを作成し、Consoleが使用するロールまたはユーザーにアタッチします。</block>
+  <block id="2c86ddacb479ba245d17cdf2209a478b" category="inline-link-macro">エージェントロールの権限を表示する</block>
+  <block id="e6f68df2e365f5ac4300347384c90199" category="paragraph">このポリシーには、ConsoleからAWSでConsoleエージェントを起動するために必要な権限のみが含まれています。<block ref="48c929a88734384c46aa5d9a6ef49894" category="inline-link-macro-rx"></block>。</block>
+  <block id="0524bf84f37b3268ebecdd96249f91bb" category="list-text">*ロールの引き受け*：Consoleが引き受けることができるIAMロールを設定します：</block>
+  <block id="5d7999c23e9c86d76c43ff4a2c93587f" category="list-text">*AWSキー*：Consoleにアクセスキーを提供できるように、IAMユーザーの権限を設定します：</block>
+  <block id="8f978fd18a307a24790c4fa59fc260b4" category="paragraph">これで、必要な権限を持つデプロイメントロールまたはIAMユーザーが作成されました。Consoleエージェントをデプロイする際、ロールARNまたはアクセスキーを指定します。</block>
+  <block id="4babbcac9ad228f3dbcbef5366b8bd36" category="section-title">ステップ3：Consoleエージェント用の独自のIAMロールをセットアップする（オプション）</block>
+  <block id="52ccff51d6e83d755c0013ce9a2a6892" category="paragraph">Consoleがデフォルトで作成するロールの代わりに独自のロールを選択する場合は、独自のエージェントロールを作成してください。Consoleエージェントをデプロイする前に、ロールを作成してください。</block>
+  <block id="c1311701b5fea93e50ab40c8dc97e66f" category="paragraph">これで、Consoleエージェントを展開する際に、*エージェント展開の詳細*で選択できるエージェントの役割ができました。</block>
+  <block id="f651a3f0594fbae084422818f82b38d0" category="section-title">ステップ4：Consoleエージェントを展開する</block>
+  <block id="7eb86e5d1fc93e57377ab8eb5f3e53d2" category="paragraph">ConsoleがVPC内でConsoleエージェントを起動できるように、認証、デプロイ、ネットワーク、およびセキュリティグループの詳細を指定してください。</block>
+  <block id="15a6bc94fa7f909ca8c64c2821890a9c" category="list-text">デフォルトでは、Consoleはエージェントロールとそのプロファイルを作成します。独自のエージェントロールを提供する場合は、今後のリリースで新しい権限が追加されるたびに、そのロールを更新するようにしてください。<block ref="5fa58f5972b383411e34ca4f11e8af66" category="inline-link-macro-rx"></block>。</block>
+  <block id="8206f3a187e53cca39bdaa5cd96f4535" category="list-text">AWS認証方法：*自分用のロールを作成する*、*ロールを引き受ける*、または*AWSキー*。</block>
+  <block id="6f4a225b29c0975663d0e4b9e1f4547f" category="inline-link-macro">ステップ1</block>
+  <block id="b0a8dd2142da0b8b022400e6ac62d642" category="list-text">完了 <block ref="e2994d912d436fe40da18544a7526d5a" category="inline-link-macro-rx"></block>。</block>
+  <block id="e31ad1284b7618a9c10777ed99b12e64" category="inline-link-macro">ステップ2</block>
+  <block id="e6fa5cb5e8a15fee834567f80d81bc93" category="list-text">完了 <block ref="34575509f0193a6fa750fdfa092b5a55" category="inline-link-macro-rx"></block>。</block>
+  <block id="ef59a512cfcb9656276397261f27e3f1" category="list-text">「エージェントデプロイ用のAWS認証情報」セクションで、以下の認証方法のいずれかを選択してください：</block>
+  <block id="07eba5ef45a6cafc51c7decc428715d1" category="list-text">*ロールを作成*：</block>
+  <block id="c688fb8dc62a6c6f0cb734deefbfa380" category="list-text">AWSリージョンを選択し、AWSアカウントIDを入力してください。必要に応じて、外部IDを入力してください。</block>
+  <block id="15640fe1eda1ab1476d294aff63b245a" category="list-text">*CloudFormation クイック作成を開く*を選択します。</block>
+  <block id="763ff38204e7e0d506c1758fb5eb61e6" category="list-text">AWSでは、利用規約に同意して「スタックの作成」を選択します。</block>
+  <block id="24228bcfb55ce738f6eeadf2834908f0" category="list-text">AWSがロールの作成を完了したら、Consoleに戻り、ロールを確認します。</block>
+  <block id="97422a1c59e5c2c1328f27aca0f6bc9c" category="list-text">*ロールを引き受ける*：IAMロールのARNを入力し、*認証情報の検証*を選択します。</block>
+  <block id="4400e26b83b69d691b0c562a37c8d9e7" category="list-text">*AWSキー*：アクセスキーとシークレットキーを入力し、*認証情報の検証*を選択します。</block>
+  <block id="f964530e35352fd4119491068fe4a4a8" category="list-text">*エージェント展開の詳細*セクションで、Consoleエージェントに関する詳細を指定します。</block>
+  <block id="b6f96d584ec9e27436e11a87833c8151" category="inline-link-macro">自分で設定する</block>
+  <block id="5ac3e84b6d8b6552d4d10a47768109c5" category="list-text">Consoleにエージェントロールを作成させるか、お客様が<block ref="d7ceee608428f8f482000c613f8a9166" category="inline-link-macro-rx"></block>エージェントロールを選択するかを選択してください。</block>
+  <block id="6228b37bb0fc2f7fd4d51778a3837e15" category="list-text">*ネットワーク構成*セクションで、Consoleエージェント用のVPC、サブネット、キーペアを指定し、パブリックIPアドレスを有効にするかどうかを選択して、必要に応じてプロキシ構成を指定します。</block>
+  <block id="7843f0cd1218bc75c32d06106bb8ea0d" category="list-text">*セキュリティグループ*セクションで、新しいセキュリティグループを作成するか、必要なインバウンドルールとアウトバウンドルールを許可する既存のセキュリティグループを選択するかを選択します。</block>
+  <block id="d919de4ad2c5c37c921fbdd95b3a2d3e" category="paragraph">Consoleは、約10分でConsoleエージェントを展開します。処理が完了するまで、このページを開いたままお待ちください。</block>
+  <block id="267bfd7dc3651781bb44db5df04378a5" category="summary">オペレーティングシステムのアップデート、推奨されるCPUとRAMのサイズ設定、リソースの健全性通知、VMの起動と停止の手順など、NetApp ConsoleエージェントVMをメンテナンスする方法について説明します。</block>
+  <block id="ce9ac031b680338838833b14732d22e4" category="paragraph">エージェントが常に稼働状態を維持できるように、ConsoleエージェントVMにパッチを適用し、適切なサイズで正常な状態に保ってください。</block>
+  <block id="611e1867e5bba6c8303410feeb281e94" category="section-title">エージェントホストにオペレーティングシステムのアップデートを適用する</block>
+  <block id="8b25f989c2c9684662af40bc1af0d027" category="paragraph">エージェントホストのオペレーティングシステムおよび関連パッケージにセキュリティアップデートを適用して、ホストのセキュリティを維持してください。</block>
+  <block id="c645d3182af28e7cce3e171f59a1f1ce" category="paragraph">これはお客様の責任です。Consoleエージェントソフトウェアは自身をアップグレードできますが、オペレーティングシステムや関連パッケージをアップグレードすることはありません。</block>
+  <block id="2fcc5bf978e7d194ed14f4c79a896ec1" category="inline-link-macro">ISOを使用してエージェントをアップグレードします</block>
+  <block id="7043a5a6f81b9bc03cf95efe67df1d63" category="admonition">OVAを使用してvCenterにConsoleエージェントを展開した場合、オペレーティングシステムはエージェントイメージの一部となります。<block ref="e1089ca8cce620a89c37d64d468f6955" category="inline-link-macro-rx"></block>オペレーティングシステムをアップデートします。</block>
+  <block id="1cee14ffed0f3f27a79d1fcfca2f42f2" category="paragraph">オペレーティングシステムのディストリビューションについては、会社の標準手順に従ってください。OSのセキュリティパッチを適用する際に、エージェントホストサービスを停止する必要はありません。</block>
+  <block id="2f0659efc4a255f7afa0b5bfbfec4ad4" category="paragraph">OVAからデプロイしていないエージェントでは、サポートされている構成との互換性を維持するために、通常のOSパッチ適用中にDockerまたはPodmanがアップグレードされないようにしてください。これは、アップデート時にDockerまたはPodmanを一時的に除外するか、パッケージマネージャーを永続的に設定してDockerまたはPodmanのアップデートをスキップすることで実現できます。</block>
+  <block id="aefd948377a328657246c968c90b8615" category="section-title">VMまたはインスタンスタイプのサイズを変更します</block>
+  <block id="e27ffaf3640d8fc28273da853969c62f" category="paragraph">プロビジョニング不足のエージェントVMのCPUまたはRAMを増やして、エージェントが引き続き良好なパフォーマンスを発揮できるようにします。</block>
+  <block id="6f4a807d18adcacc0f8252e6d5e8e7c3" category="inline-link-macro">エージェントのデフォルト設定について詳しくはこちらをご覧ください</block>
+  <block id="ded20d9ce93b9931d00f43770bbaef6e" category="paragraph">ConsoleからConsoleエージェントを作成すると、デフォルト設定でクラウド プロバイダにVMインスタンスが展開されます。<block ref="0d4177c8f8926d5e9aa2fabe1afbc89c" category="inline-link-macro-rx"></block>。エージェントの作成後は、CPUやRAMの少ない、より小規模なVMインスタンスに切り替えないでください。</block>
+  <block id="2544bcfcb2d7e3f39fe93d79ea8a7bc4" category="paragraph">エージェントVMのプロビジョニングが不足しているという通知を受け取った場合は、より多くのCPUまたはRAMを備えた、より大規模なVMインスタンスへのアップグレードを検討してください。</block>
+  <block id="6386880b4c233814221a0ec6e2778b92" category="inline-link-macro">vCenter でエージェント VM のサイズを変更する方法</block>
+  <block id="ed6f3fca7c7a0c244038828824074ecb" category="admonition">vCenterにエージェントをインストールした場合は、コンソールメンテナンスツールを使用してVMインスタンスのサイズを変更します。<block ref="253298fadead80ed9ff2f3ea8c9cd4ab" category="inline-link-macro-rx"></block>。</block>
+  <block id="804c4273d064b5c047930d27abef5a03" category="paragraph">エージェントVM上のディスク容量、RAM、CPUの問題に関する情報を常に把握し、それらを解決できるようにしてください。</block>
+  <block id="2cfac13585404933609bdd1993b9860c" category="paragraph">インストールした場所に応じて、クラウド プロバイダまたはオンプレミスのエージェント VM の CPU サイズを増やします。あるいは、追加のエージェントを作成し、ワークロードを複数のエージェントに分散させることもできます。</block>
+  <block id="9bcbfa45d81610532c10cdf8e33562d0" category="inline-link-macro">vCenterで実行されているオンプレミスエージェントのサイズを拡張する方法について説明します。</block>
+  <block id="1b4283b531174f869b1e0cdef983d6e3" category="list-text"><block ref="ca6737d7570eb6f4ce48adf81eac58a5" category="inline-link-macro-rx"></block>。</block>
+  <block id="2cf7a5d26ce7d4d99d4c91d9a7be62a2" category="section-title">エージェントVMを停止して起動する</block>
+  <block id="b4c95a42ca3d365982b8e5cd0c5f9a12" category="paragraph">エージェントVMの停止と起動時のダウンタイムを最小限に抑えてください。管理サービスとデータサービスは、エージェントが稼働状態を維持していることに依存しているためです。</block>
+  <block id="4a818b70467076c03f2c14237204886a" category="paragraph">実行中であることを確認できるように、Linux VMからConsoleエージェントのステータスを確認します。</block>
+  <block id="e370f8f4d5db9e4f93257ac02adddec3" category="section-title">2026年11月9日</block>
 </blocks>

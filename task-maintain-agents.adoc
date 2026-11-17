@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-maintain-agents.html 
-keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
-summary: 手動でインストールされたエージェントのOSセキュリティアップデート、推奨されるCPUとRAMのサイジング、リソースの健全性通知、VMの起動および停止手順など、NetApp ConsoleエージェントVMを保守する方法について説明します。 
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, os patching, security updates, ova, marketplace, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
+summary: オペレーティングシステムのアップデート、推奨されるCPUとRAMのサイズ設定、リソースの健全性通知、VMの起動と停止の手順など、NetApp ConsoleエージェントVMをメンテナンスする方法について説明します。 
 ---
 = NetApp ConsoleエージェントVMの保守
 :hardbreaks:
@@ -14,23 +14,23 @@ summary: 手動でインストールされたエージェントのOSセキュリ
 
 
 [role="lead"]
-手動でインストールしたエージェントにOSセキュリティアップデートを適用したり、CPU、RAM、ディスク容量のアラートに対応したり、必要に応じてVMのサイズ変更や停止、起動を行ったりして、NetApp ConsoleエージェントVMを保守します。
-
-コンソールエージェントを手動でインストールする場合、エージェントホスト上のオペレーティングシステムの維持管理は、お客様の責任となります。たとえば、お客様は、自社のオペレーティングシステム配布に関する標準手順に従って、エージェントホスト上のオペレーティングシステムにセキュリティアップデートを適用する必要があります。
-
-エージェントVMのリソースが不足したり、パフォーマンスの問題が発生した場合は、VMリソースをアップグレードするための適切な措置を講じる必要があります。
-
-
-NOTE: vCenterにエージェントをインストールした場合は、コンソールメンテナンスツールを使用してVMインスタンスのサイズを変更します。link:task-agent-vm-config.html["vCenter でエージェント VM を保守する方法"^]。
+エージェントが常に稼働状態を維持できるように、ConsoleエージェントVMにパッチを適用し、適切なサイズで正常な状態に保ってください。
 
 
 
-[[apply-operating-system-updates-to-the-manually-installed-agent-hosts]]
-== 手動でインストールしたエージェントホストにオペレーティングシステムのアップデートを適用します
+[[apply-operating-system-updates-to-agent-hosts]]
+== エージェントホストにオペレーティングシステムのアップデートを適用する
 
-エージェント ホスト サービスを停止せずに OS セキュリティ パッチを適用します。
+エージェントホストのオペレーティングシステムおよび関連パッケージにセキュリティアップデートを適用して、ホストのセキュリティを維持してください。
 
-サポートされている構成との互換性を維持するため、定期的なOSパッチ適用時にDockerまたはPodmanがアップグレードされないようにしてください。これは、アップデート時にDockerまたはPodmanを一時的に除外するか、パッケージマネージャーを永続的に設定してDockerまたはPodmanのアップデートをスキップすることで実現できます。
+これはお客様の責任です。Consoleエージェントソフトウェアは自身をアップグレードできますが、オペレーティングシステムや関連パッケージをアップグレードすることはありません。
+
+
+NOTE: OVAを使用してvCenterにConsoleエージェントを展開した場合、オペレーティングシステムはエージェントイメージの一部となります。link:task-upgrade-agent.html#upgrade-a-vcenter-deployed-console-agent-using-an-iso["ISOを使用してエージェントをアップグレードします"^]オペレーティングシステムをアップデートします。
+
+オペレーティングシステムのディストリビューションについては、会社の標準手順に従ってください。OSのセキュリティパッチを適用する際に、エージェントホストサービスを停止する必要はありません。
+
+OVAからデプロイしていないエージェントでは、サポートされている構成との互換性を維持するために、通常のOSパッチ適用中にDockerまたはPodmanがアップグレードされないようにしてください。これは、アップデート時にDockerまたはPodmanを一時的に除外するか、パッケージマネージャーを永続的に設定してDockerまたはPodmanのアップデートをスキップすることで実現できます。
 
 以下は、さまざまなLinuxディストリビューションでDockerまたはPodmanのアップデートを除外する方法の例です。パッケージをアップデートから除外する方法に関する最新の手順については、お使いのLinuxディストリビューションのドキュメントを参照してください。
 
@@ -49,17 +49,17 @@ sudo apt upgrade
 ----
 
 
-[[resizing-the-vm-or-instance-type]]
-== VMまたはインスタンスタイプのサイズ変更
+[[resize-the-vm-or-instance-type]]
+== VMまたはインスタンスタイプのサイズを変更します
 
-コンソールからコンソール エージェントを作成すると、デフォルトの構成でクラウド プロバイダーに VM インスタンスがデプロイされます。エージェントを作成した後は、CPU や RAM が少ない小さな VM インスタンスに切り替えないでください。
+プロビジョニング不足のエージェントVMのCPUまたはRAMを増やして、エージェントが引き続き良好なパフォーマンスを発揮できるようにします。
 
-エージェントVMのプロビジョニングが不足しているという通知を受け取った場合は、最適なパフォーマンスを確保するために、より多くのCPUまたはRAMを備えた大規模なVMインスタンスへのアップグレードをご検討ください。
+ConsoleからConsoleエージェントを作成すると、デフォルト設定でクラウド プロバイダにVMインスタンスが展開されます。link:reference-agent-default-config.html["エージェントのデフォルト設定について詳しくはこちらをご覧ください"]。エージェントの作成後は、CPUやRAMの少ない、より小規模なVMインスタンスに切り替えないでください。
+
+エージェントVMのプロビジョニングが不足しているという通知を受け取った場合は、より多くのCPUまたはRAMを備えた、より大規模なVMインスタンスへのアップグレードを検討してください。
 
 
-NOTE: エージェントを VCenter にインストールした場合は、コンソールメンテナンスツールを使用してVMインスタンスのサイズを変更します。link:task-agent-vm-config.html["VCenterでエージェントVMのサイズを変更する方法"^]。
-
-link:reference-agent-default-config.html["エージェントのデフォルト設定について学ぶ"] 。
+NOTE: vCenterにエージェントをインストールした場合は、コンソールメンテナンスツールを使用してVMインスタンスのサイズを変更します。link:task-agent-vm-config.html["vCenter でエージェント VM のサイズを変更する方法"^]。
 
 エージェントVMのCPUまたはRAMを増やす必要がある場合は、クラウド プロバイダまたはオンプレミスの仮想化プラットフォームが提供する手順に従って、VMインスタンスのサイズを変更してください。NetAppは、最適なパフォーマンスを確保するために、現在のCPUとRAMの割り当てを2倍にすることを推奨しています。以下の表は推奨されるサイジング階層を示しており、各階層は前の階層のCPUとRAMの2倍になっています。
 
@@ -82,6 +82,8 @@ link:reference-agent-default-config.html["エージェントのデフォルト�
 [[monitor-disk-space]]
 == エージェントを監視する
 
+エージェントVM上のディスク容量、RAM、CPUの問題に関する情報を常に把握し、それらを解決できるようにしてください。
+
 コンソールは、ディスク容量、RAM、CPU の問題など、エージェント VM に異常がある場合に通知します。コンソール内の通知センターでこれらの通知を監視するか、電子メール通知を構成します。ディスク容量、メモリ、CPU 使用率が時々増加するのは正常ですが、頻繁に発生する場合は、解決するための手順を実行する必要があります。
 
 たとえば、エージェント リソース (CPU、RAM、またはディスク領域) が 30 分間連続して合計容量の 90% を超えると、コンソールから通知が届きます。その後、リソース使用量がそのしきい値を下回ると、通知センターに通知が解決済み (緑) として表示されます。
@@ -102,12 +104,12 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
  a| 
 CPU使用率が高すぎる
  a| 
-インストールした場所に応じて、クラウド プロバイダーまたはオンプレミスのエージェント VM の CPU サイズを増やします。または、追加のエージェントを作成し、ワークロードを複数のエージェントに分散します。  RAM の使用率は、環境、 ONTAPワークロード、 Cloud Volumes ONTAPシステムの数、および使用しているデータ サービスによって異なります。
+インストールした場所に応じて、クラウド プロバイダまたはオンプレミスのエージェント VM の CPU サイズを増やします。あるいは、追加のエージェントを作成し、ワークロードを複数のエージェントに分散させることもできます。
 
 * link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["AWSでエージェントVMのサイズを増やす方法を学びましょう"^]。
 * link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["AzureでエージェントVMのサイズを増やす方法"^]。
 * link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["Google CloudでエージェントVMのサイズを増やす方法"^]。
-* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["VCenterで実行されているオンプレミスエージェントのサイズを拡張する方法について説明します"]。
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["vCenterで実行されているオンプレミスエージェントのサイズを拡張する方法について説明します。"]。
 
 
 
@@ -120,14 +122,16 @@ RAM使用量が高すぎる
 * link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["AWSでエージェントVMのサイズを増やす方法を学びましょう"^]。
 * link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["AzureでエージェントVMのサイズを増やす方法"^]。
 * link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["Google CloudでエージェントVMのサイズを増やす方法"^]。
-* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["VCenterで実行されているオンプレミスエージェントのサイズを拡張する方法について説明します"]。
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["vCenterで実行されているオンプレミスエージェントのサイズを拡張する方法について説明します。"]。
 
 
 |===
 
 
-[[stopping-and-starting-the-agent-vm]]
-== エージェントVMの停止と起動
+[[stop-and-start-the-agent-vm]]
+== エージェントVMを停止して起動する
+
+エージェントVMの停止と起動時のダウンタイムを最小限に抑えてください。管理サービスとデータサービスは、エージェントが稼働状態を維持していることに依存しているためです。
 
 必要に応じて、クラウド プロバイダーのコンソールまたは標準のオンプレミス手順を使用して、エージェント VM を停止および起動します。
 
@@ -138,6 +142,8 @@ link:concept-agents.html#agents-must-be-operational-at-all-times["コンソー�
 [[connect-to-the-linux-vm]]
 [[connect-linux-host]]
 == Linux VMに接続する
+
+実行中であることを確認できるように、Linux VMからConsoleエージェントのステータスを確認します。
 
 エージェントが実行される Linux VM に接続する必要がある場合は、クラウド プロバイダーの接続オプションを使用します。
 

@@ -203,7 +203,7 @@ IAMにおけるアカウント間リソースアクセスの詳細について�
 ** コンソール エージェントを作成するために必要な権限を含むポリシーを作成します。
 +
 *** https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["FSx for ONTAPに必要な権限を表示する"^]
-*** link:task-install-agent-aws-console.html#aws-permissions-agent["エージェント展開ポリシーを表示する"]
+*** link:task-install-agent-aws-console.html#aws-permissions-assume-role-keys["エージェント展開ポリシーを表示する"]
 
 
 
