@@ -5659,8 +5659,6 @@
   <block id="630125b3287d32dddd226602e8dd6803" category="list-text">ユーザー名<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>と、OVAの導入時に指定したメンテナンスパスワードを使用して、メンテナンスコンソールにログインします。</block>
   <block id="cd975b382ffd3de432ce2ffb42508a03" category="list-text"><block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>を入力して、*システム設定*メニューを開きます。</block>
   <block id="ed9d848f40aa067619f57a0c3bdd1aa7" category="list-text"><block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block>を入力して*アップグレード*を選択し、画面の指示に従ってください。</block>
-  <block id="c017b1c0dccb6954f1ade63dff926a0c" category="paragraph">このアップグレードにより、更新されたOS、Dockerランタイム、およびConsoleエージェントサービスがインストールされます。カーネルが更新されると、VMは自動的に再起動します。</block>
-  <block id="5acb3aced6d8dac916dec3aade57b7e1" category="list-text">アップグレードが完了したら、NetApp Consoleエージェントが正しく動作していることを確認してください：</block>
   <block id="969e7ac6672c561c12855b0df5552218" category="list-text">vSphereクライアントで、VMの電源がオンになっており、Webコンソールにアクセスできることを確認します。</block>
   <block id="f1dea5408c76a6c79fe56adbe57d4bf3" category="list-text">NetApp コンソールで、*管理 &gt; サポート &gt; エージェント*に移動し、エージェントのバージョンが新しいバージョンを反映していることを確認します。</block>
   <block id="e169af5277f4f18447755957609654e2" category="list-text">VMからISOをアンマウントします：</block>
@@ -6486,7 +6484,6 @@
   <block id="a22ba5cede201b398675ddfd63c9864d" category="paragraph">4.10.0リリースには、以下のNetApp Consoleコンポーネントおよびサービスに対するアップデートが含まれています。</block>
   <block id="c1b9fde9363d4906a9e67eb0862e9fc7" category="cell">4.10.0</block>
   <block id="5ff195749703fc07b830e8ce460f4513" category="cell"><block ref="9d354d50c04a9174ec71f0d3d8410a23" category="inline-link-rx"></block>に移動し、バージョン 4.10.0 に含まれる変更を参照してください。</block>
-  <block id="669d8c7c23d7c1df9de525a93369bb8f" category="cell">1.546.0（2026年8月10日）</block>
   <block id="99eb4ee0a56c7fb9d9fef77053e43af4" category="paragraph">アプリケーション向けNetApp Backup and Recoveryを使用して、オンプレミスのONTAPクラスターからスナップショットをバックアップする機能を提供します。このロールを持つメンバーは、次のアクションを実行できます。</block>
   <block id="f44c611b4162cee5fdf2ee447ed48192" category="list-text">バックアップとリカバリ &gt; アプリケーションから任意のアクションを実行します。</block>
   <block id="e88871c7007d89688acdcb7ffa4922fe" category="list-text">権限を持つプロジェクトおよびフォルダー内のすべてのシステムを管理する</block>
@@ -6789,5 +6786,17 @@
   <block id="2cf7a5d26ce7d4d99d4c91d9a7be62a2" category="section-title">エージェントVMを停止して起動する</block>
   <block id="b4c95a42ca3d365982b8e5cd0c5f9a12" category="paragraph">エージェントVMの停止と起動時のダウンタイムを最小限に抑えてください。管理サービスとデータサービスは、エージェントが稼働状態を維持していることに依存しているためです。</block>
   <block id="4a818b70467076c03f2c14237204886a" category="paragraph">実行中であることを確認できるように、Linux VMからConsoleエージェントのステータスを確認します。</block>
-  <block id="e370f8f4d5db9e4f93257ac02adddec3" category="section-title">2026年11月9日</block>
+  <block id="daa04540ede89ebe21aa75e4bb91c101" category="cell">1.56.0（2026年8月10日）</block>
+  <block id="d68cd763bb6443bb6e7c8aa2306f8ef4" category="paragraph">Consoleエージェントのこのリリースには、セキュリティの改善とバグ修正に加え、以下の新機能が含まれています。ISOを使用してvCenterにデプロイされたConsoleエージェントを4.13.0にアップグレードする場合は、アップグレードの完了後にVMが再起動されることを確認してください。VMは自動的に再起動する場合があります。</block>
+  <block id="fb37b2b6fa74940a30d42aec5c20c8f5" category="paragraph">今回のリリースには、セキュリティの改善とバグ修正に加え、以下の新機能が含まれています。</block>
+  <block id="d2033ec1ec99f494b181d63a27d56e2d" category="section-title">Cloud Volumes ONTAP貢献者ロールを割り当てます</block>
+  <block id="cd27e9569393bf08fe35ccdf2583e61b" category="paragraph">Cloud Volumes ONTAP Contributorロールを割り当てることで、メンバーにCloud Volumes ONTAPシステムを管理するための幅広いアクセス権を付与しつつ、システム、ボリューム、アグリゲート、またはレプリケーション関係の削除は許可しないようにすることができるようになりました。<block ref="8c5db5921f383526df21d84d3b1bfd83" category="inline-link-macro-rx"></block>。</block>
+  <block id="b83ef7028571cfab72ee7ce1a1a682a0" category="list-text">*Cloud Volumes ONTAP 貢献者*：リソースの削除や除去、システムのオン / オフを切り替える操作を除き、Cloud Volumes ONTAP 管理者ロールと同様のアクセス権を提供します。貢献者は、システムの追加、レプリケーションの管理、ボリュームやシステム設定の編集などの操作を実行できますが、システム、ボリューム、アグリゲート、レプリケーション関係を削除することはできません。</block>
+  <block id="649973a0776cc2c800262363cd181d7b" category="cell">Cloud Volumes ONTAP コントリビュータ</block>
+  <block id="51633f0b535a3fc11bc6c59b67c5d18b" category="cell"><block ref="51633f0b535a3fc11bc6c59b67c5d18b" category="inline-link-macro-rx"></block></block>
+  <block id="065242fa71340bedcbcdf967d279e80b" category="cell">CVO_CONTRIBUTOR</block>
+  <block id="4e0882ff89f5aa014ab9a6d53ca4f3b1" category="cell">Cloud Volumes ONTAP管理者ロールと同様のアクセスを提供します。ただし、リソースの削除や除去、システムのオン/オフ切り替えなどの操作は除きます。</block>
+  <block id="5d97bc96e49114d0d3e6c6bac921f939" category="paragraph">アップグレードにより、更新されたOS、Dockerランタイム、およびConsoleエージェントサービスがインプレースでインストールされます。Consoleエージェント4.13.0にアップグレードする場合は、アップグレードの完了後にVMが再起動されることを確認してください。VMは自動的に再起動する場合があります。Consoleエージェントは、再起動が完了するまで利用できません。他のバージョンでは、カーネルが更新されるとVMは自動的に再起動します。</block>
+  <block id="74aaffed4ac921f25c719cb03ee18ea0" category="list-text">アップグレードが完了し、再起動が完了したら、Consoleエージェントが正常に動作していることを確認します：</block>
+  <block id="3cc38715797be469f39edd81c803bf02" category="section-title">2026年11月17日</block>
 </blocks>

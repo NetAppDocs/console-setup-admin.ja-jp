@@ -132,6 +132,9 @@ NetApp Console のアイデンティティとアクセス管理（IAM）には�
 | link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP管理者"] | CVO_ADMIN | 標準、制限付き、プライベート | すべての Cloud Volumes ONTAP 操作へのフルアクセスを提供します。 
 
 
+| link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP コントリビュータ"] | CVO_CONTRIBUTOR | 標準、制限付き、プライベート | Cloud Volumes ONTAP管理者ロールと同様のアクセスを提供します。ただし、リソースの削除や除去、システムのオン/オフ切り替えなどの操作は除きます。 
+
+
 | link:reference-iam-cvo-roles.html["Cloud Volumes ONTAPオペレーター"] | CVO_OPERATOR | 標準、制限付き、プライベート | ボリュームの追加、レプリケーションの設定、ストレージの管理など、日常的な管理タスクを可能にします。 
 
 

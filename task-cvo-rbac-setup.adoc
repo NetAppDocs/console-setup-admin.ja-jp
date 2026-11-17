@@ -57,10 +57,13 @@ NOTE: Cloud Volumes ONTAPのアクセスロールは、コンソールエージ�
 | Scope | プラットフォームの役割 | Cloud Volumes ONTAPロール | 推奨事項 
 
 
-| 組織 | 組織管理者 | Cloud Volumes ONTAPオペレーター | ユーザーがコンソールリソース（コンソールエージェント設定を含む）を管理し、Cloud Volumes ONTAPシステムを管理する必要がある場合 
+| 組織 | 組織管理者 | Cloud Volumes ONTAP管理者 | ユーザーがコンソールリソース（コンソールエージェント設定を含む）を管理し、Cloud Volumes ONTAPシステムを管理する必要がある場合 
 
 
 | フォルダーまたはプロジェクト | フォルダまたはプロジェクトの管理者 | Cloud Volumes ONTAP管理者 | ユーザーが特定のフォルダーまたはプロジェクトでコンソールリソースを管理し、Cloud Volumes ONTAPシステムを管理する必要がある場合 
+
+
+| フォルダーまたはプロジェクト | フォルダまたはプロジェクトの管理者 | Cloud Volumes ONTAP コントリビュータ | ユーザーが特定のフォルダーまたはプロジェクトでコンソールリソースを管理し、Cloud Volumes ONTAPシステムを管理する必要がある場合 
 
 
 | フォルダーまたはプロジェクト | フォルダまたはプロジェクトの管理者 | Cloud Volumes ONTAPオペレーター | ユーザーが特定のフォルダーまたはプロジェクトでコンソールリソースを管理し、Cloud Volumes ONTAPシステムを管理する必要がある場合 
